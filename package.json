@@ -2,7 +2,10 @@
     "name": "hands-on-iot",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-device-stats": "1.1.2",
+        "node-red-dashboard": "3.6.6"
+    },
     "node-red": {
         "settings": {
             "flowFile": "chapter02/app/flows/flow.json",
