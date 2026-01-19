@@ -4,12 +4,13 @@
     "version": "0.0.1",
     "dependencies": {
         "node-red-contrib-device-stats": "1.1.2",
-        "node-red-dashboard": "3.6.6"
+        "node-red-dashboard": "3.6.6",
+        "node-red-contrib-moment": "5.0.0"
     },
     "node-red": {
         "settings": {
-            "flowFile": "chapter02/app/flows/flow.json",
-            "credentialsFile": "chapter02/app/flows/flow_cred.json"
+            "flowFile": "flows/flow_solved.json",
+            "credentialsFile": "flows/flow_solved_cred.json"
         }
     }
 }

@@ -1,0 +1,216 @@
+[
+    {
+        "id": "175deebb39f536fb",
+        "type": "tab",
+        "label": "Digital Clock",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fc0b072614b4abcd",
+        "type": "ui_tab",
+        "name": "Digital Clock",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6a853bc00280776c",
+        "type": "ui_group",
+        "name": "clock",
+        "tab": "fc0b072614b4abcd",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "32897502e405140e",
+        "type": "ui_spacer",
+        "z": "175deebb39f536fb",
+        "name": "spacer",
+        "group": "6a853bc00280776c",
+        "order": 2,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "24d506db8b6cb276",
+        "type": "inject",
+        "z": "175deebb39f536fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "a43a59698ab36ecb",
+                "471a0771727bc272",
+                "7335faf2ff981f57"
+            ]
+        ]
+    },
+    {
+        "id": "a43a59698ab36ecb",
+        "type": "debug",
+        "z": "175deebb39f536fb",
+        "name": "UNIX time",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "471a0771727bc272",
+        "type": "moment",
+        "z": "175deebb39f536fb",
+        "name": "Date",
+        "topic": "",
+        "input": "payload",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "ddd Do MMM YYYY",
+        "locale": "en_GB",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Europe/Madrid",
+        "x": 550,
+        "y": 360,
+        "wires": [
+            [
+                "8643e0eb339c7f04",
+                "d6c303b3dfd66333"
+            ]
+        ]
+    },
+    {
+        "id": "8643e0eb339c7f04",
+        "type": "debug",
+        "z": "175deebb39f536fb",
+        "name": "Date",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2b575dd8d89c299d",
+        "type": "debug",
+        "z": "175deebb39f536fb",
+        "name": "Time",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "7335faf2ff981f57",
+        "type": "moment",
+        "z": "175deebb39f536fb",
+        "name": "Time",
+        "topic": "",
+        "input": "payload",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "HH:mm",
+        "locale": "en_GB",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Europe/Madrid",
+        "x": 550,
+        "y": 480,
+        "wires": [
+            [
+                "2b575dd8d89c299d",
+                "cc02cd0d3980ed0e"
+            ]
+        ]
+    },
+    {
+        "id": "d6c303b3dfd66333",
+        "type": "ui_text",
+        "z": "175deebb39f536fb",
+        "group": "6a853bc00280776c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Date",
+        "format": "<font size=6>{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 750,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "cc02cd0d3980ed0e",
+        "type": "ui_text",
+        "z": "175deebb39f536fb",
+        "group": "6a853bc00280776c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Time",
+        "format": "<font size=6>{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 750,
+        "y": 520,
+        "wires": []
+    }
+]
