@@ -1,0 +1,12 @@
+{
+    "name": "hands-on-iot",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "chapter02/app/flows/flow.json",
+            "credentialsFile": "chapter02/app/flows/flow_cred.json"
+        }
+    }
+}

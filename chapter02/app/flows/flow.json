@@ -1,0 +1,525 @@
+[
+    {
+        "id": "17bd7ae0e79d1305",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b8e108a8e252b080",
+        "type": "ui_tab",
+        "name": "Device Stats",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d298df33ec613b92",
+        "type": "ui_group",
+        "name": "Timeline",
+        "tab": "b8e108a8e252b080",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "29443d090a48c671",
+        "type": "ui_group",
+        "name": "Pie charts",
+        "tab": "b8e108a8e252b080",
+        "order": 2,
+        "disp": true,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "25e730fcf8e368db",
+        "type": "inject",
+        "z": "17bd7ae0e79d1305",
+        "name": "every 1 second",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "a96958d227a0810a"
+            ]
+        ]
+    },
+    {
+        "id": "a96958d227a0810a",
+        "type": "DeviceStats",
+        "z": "17bd7ae0e79d1305",
+        "name": "",
+        "mem": true,
+        "nw": false,
+        "load": true,
+        "hostname": false,
+        "useString": false,
+        "x": 590,
+        "y": 220,
+        "wires": [
+            [
+                "897d3e21a2631134",
+                "d44774424b5c7977",
+                "74c36fe66c7b63c7",
+                "a72dd3c5cbf635b4",
+                "4bd9861de65e6be6",
+                "f21b34ab6b35a05c",
+                "0408f297a633a6c1"
+            ]
+        ]
+    },
+    {
+        "id": "97bdc803573556a4",
+        "type": "debug",
+        "z": "17bd7ae0e79d1305",
+        "name": "mem.free",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "897d3e21a2631134",
+        "type": "change",
+        "z": "17bd7ae0e79d1305",
+        "name": "% free mem",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.mem.free/2779592*100",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 120,
+        "wires": [
+            [
+                "97bdc803573556a4"
+            ]
+        ]
+    },
+    {
+        "id": "d44774424b5c7977",
+        "type": "change",
+        "z": "17bd7ae0e79d1305",
+        "name": "% used mem",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.mem.used/2779592*100",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 200,
+        "wires": [
+            [
+                "7d3a475b2c09f8e1"
+            ]
+        ]
+    },
+    {
+        "id": "7d3a475b2c09f8e1",
+        "type": "debug",
+        "z": "17bd7ae0e79d1305",
+        "name": "mem.used",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "74c36fe66c7b63c7",
+        "type": "change",
+        "z": "17bd7ae0e79d1305",
+        "name": "1min os.loadavg()",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.load[0]*100",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 280,
+        "wires": [
+            [
+                "62e4b1641221a988"
+            ]
+        ]
+    },
+    {
+        "id": "62e4b1641221a988",
+        "type": "debug",
+        "z": "17bd7ae0e79d1305",
+        "name": "1min os.loadavg()",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a72dd3c5cbf635b4",
+        "type": "change",
+        "z": "17bd7ae0e79d1305",
+        "name": "5min os.loadavg()",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.load[0]*100",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 360,
+        "wires": [
+            [
+                "73bdbf555a9ad51c"
+            ]
+        ]
+    },
+    {
+        "id": "73bdbf555a9ad51c",
+        "type": "debug",
+        "z": "17bd7ae0e79d1305",
+        "name": "5min os.loadavg()",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "4bd9861de65e6be6",
+        "type": "change",
+        "z": "17bd7ae0e79d1305",
+        "name": "15min os.loadavg()",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.load[0]*100",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 420,
+        "wires": [
+            [
+                "b3f1ab2cd076716b"
+            ]
+        ]
+    },
+    {
+        "id": "b3f1ab2cd076716b",
+        "type": "debug",
+        "z": "17bd7ae0e79d1305",
+        "name": "15min os.loadavg()",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "f21b34ab6b35a05c",
+        "type": "function",
+        "z": "17bd7ae0e79d1305",
+        "name": "MultiChart MEM",
+        "func": "var msg1 = {}; // Free RAM\nvar msg2 = {}; // Used RAM\n\nmsg1.topic = 'Free mem';\nmsg1.payload = msg.payload.mem.free/2779592*100;\n\nmsg2.topic = \"Used mem\";\nmsg2.payload = msg.payload.mem.used/2779592*100;\n\nreturn [msg1, msg2];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 520,
+        "wires": [
+            [
+                "7dca9be705516f47",
+                "d5d87ee14e749e59"
+            ],
+            [
+                "7dca9be705516f47",
+                "d5d87ee14e749e59"
+            ]
+        ]
+    },
+    {
+        "id": "7dca9be705516f47",
+        "type": "ui_chart",
+        "z": "17bd7ae0e79d1305",
+        "name": "",
+        "group": "d298df33ec613b92",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "RAM %",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1020,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5d87ee14e749e59",
+        "type": "ui_chart",
+        "z": "17bd7ae0e79d1305",
+        "name": "",
+        "group": "29443d090a48c671",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "RAM pie",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1020,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0408f297a633a6c1",
+        "type": "function",
+        "z": "17bd7ae0e79d1305",
+        "name": "MultiChart LOAD",
+        "func": "var msg1 = {}; // 1 minute load average\nvar msg5 = {}; // 5 minutes load average\nvar msg15 = {}; // 15 minutes load average\n\nmsg1.topic = '1 min';\nmsg1.payload = msg.payload.load[0]*100;\n\nmsg5.toppic = '5 min';\nmsg5.payload = msg.payload.load[1]*100;\n\nmsg15.topic = '15 min';\nmsg15.payload = msg.payload.load[2]*100;\n\nreturn [msg1, msg5, msg15];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 620,
+        "wires": [
+            [
+                "5672750bf9326f0f",
+                "bc1adda57c2737a8"
+            ],
+            [
+                "5672750bf9326f0f"
+            ],
+            [
+                "5672750bf9326f0f"
+            ]
+        ]
+    },
+    {
+        "id": "5672750bf9326f0f",
+        "type": "ui_chart",
+        "z": "17bd7ae0e79d1305",
+        "name": "",
+        "group": "d298df33ec613b92",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Avg load %",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "400",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1050,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc1adda57c2737a8",
+        "type": "ui_gauge",
+        "z": "17bd7ae0e79d1305",
+        "name": "",
+        "group": "29443d090a48c671",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "Load % (1 min.)",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "100",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 700,
+        "wires": []
+    }
+]
