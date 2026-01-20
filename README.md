@@ -41,3 +41,26 @@ module.exports = {
 ```
 $ node-red
 ```
+
+### Saving system state in NodeRED variables
+
+There are three possible scopes for the system state in NodeRED:
+
+1. **Node scope**: The variable saved at this level is only visible to the Node from which it was saved. The following two commands allow for saving the state, and retrieving the current value, respectively:
+```
+context.set('count', 5)
+context.get('count')
+```
+
+2. **Flow scope**: The variable saved at this level is only visible to the flow from which it was saved. The corresponding commands are:
+
+```
+flow.set('count', 5)
+flow.get('count')
+```
+
+3. **Global scope**: The variable saved at this level is visible everywhere in the app, i.e., every flow and every Node. The corresponding commands are:
+```
+global.set('count', 5)
+global.set('count')
+```
