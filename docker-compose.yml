@@ -8,5 +8,25 @@ services:
     volumes:
       - ./data:/data
 
+  influxdb:
+    image: "influxdb:1.8.3"
+    ports:
+      - "8090:8086"
+      - "8088:8088"
+    volumes:
+      - "./influxdb:/etc/influxdb"
+      - "influx-data:/var/lib/influxdb"
+    environment:
+      - INFLUXDB_BIND_ADDRESS=:8088
+
+  grafana:
+    image: "grafana/grafana"
+    ports:
+      - "3090:3000"
+    volumes:
+      - "grafana-data:/var/lib/grafana"
+
 volumes:
   node-red-data:
+  influx-data:
+  grafana-data:
