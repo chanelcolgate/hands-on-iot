@@ -31,3 +31,12 @@ You can import the file from a terminal using the `influx` command with the foll
 ```
 $ influx -import -path=temperature.txt -database=environment -precision=s
 ```
+
+Now, log into InfluxDB from the command line and check the result:
+```
+$ influx
+> USE environment
+Using database environment
+> SHOW MEASUREMENTS
+> SELECT * FROM temperatures
+```
