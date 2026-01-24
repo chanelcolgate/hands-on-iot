@@ -1204,8 +1204,7 @@
         "name": "Store temperature",
         "mode": "link",
         "links": [
-            "c7301a8a8b7dd6b3",
-            "213f4219ba118831"
+            "c7301a8a8b7dd6b3"
         ],
         "x": 585,
         "y": 300,
@@ -1316,7 +1315,7 @@
         "type": "function",
         "z": "2671098f270b0cb9",
         "name": "INSERT data point",
-        "func": "msg.payload = {location: \"HANGA\", room: \"Warehouse\", temperature: msg.payload};\nreturn msg;",
+        "func": "msg.payload = [{temperature: msg.payload}, {location: \"HANGA\", room: \"Warehouse\"}];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1407,7 +1406,7 @@
         "type": "function",
         "z": "2671098f270b0cb9",
         "name": "INSERT data point",
-        "func": "msg.payload = {location: \"HANGA\", room: \"Warehouse\", temperature: msg.payload};\nreturn msg;",
+        "func": "msg.payload = [{temperature: msg.payload}, {location: \"HANGA\", room: \"Warehouse\"}];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1446,7 +1445,7 @@
         "type": "debug",
         "z": "2671098f270b0cb9",
         "name": "Averaged data",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
