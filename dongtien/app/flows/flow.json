@@ -1,0 +1,883 @@
+[
+    {
+        "id": "b109dfdff6f8e1f0",
+        "type": "tab",
+        "label": "OpenWeather",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ae869d84e3a7db78",
+        "type": "tab",
+        "label": "Convert data",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "453379017bc65c03",
+        "type": "tab",
+        "label": "Store Influxdb",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "405788186aeb4b93",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.1.30",
+        "port": "102",
+        "rack": "0",
+        "slot": "2",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "tsap",
+        "adapter": "",
+        "busaddr": 2,
+        "cycletime": 1000,
+        "timeout": 2000,
+        "name": "",
+        "vartable": [
+            {
+                "addr": "I0.0",
+                "name": "Input"
+            }
+        ]
+    },
+    {
+        "id": "a2cc72f791cf3850",
+        "type": "influxdb",
+        "hostname": "influxdb",
+        "port": 8086,
+        "protocol": "http",
+        "database": "openweather",
+        "name": "openweather",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "018e25966037d560",
+        "type": "s7 in",
+        "z": "b109dfdff6f8e1f0",
+        "d": true,
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "Input",
+        "diff": true,
+        "name": "",
+        "x": 310,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71dd3d72d6428150",
+        "type": "inject",
+        "z": "b109dfdff6f8e1f0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 360,
+        "wires": [
+            [
+                "eed585fbb13e2231"
+            ]
+        ]
+    },
+    {
+        "id": "eed585fbb13e2231",
+        "type": "openweathermap",
+        "z": "b109dfdff6f8e1f0",
+        "name": "",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "Ho Chi Minh",
+        "country": "VN",
+        "language": "en",
+        "x": 390,
+        "y": 360,
+        "wires": [
+            [
+                "45bdeb82c6417946",
+                "8710430fbd137948"
+            ]
+        ]
+    },
+    {
+        "id": "45bdeb82c6417946",
+        "type": "debug",
+        "z": "b109dfdff6f8e1f0",
+        "name": "Weather Ho Chi Minh",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "05990df2d72fc3a7",
+        "type": "openweathermap",
+        "z": "b109dfdff6f8e1f0",
+        "name": "",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "Ha Noi",
+        "country": "VN",
+        "language": "en",
+        "x": 350,
+        "y": 680,
+        "wires": [
+            [
+                "3a94465044ec57d3",
+                "8710430fbd137948"
+            ]
+        ]
+    },
+    {
+        "id": "ee5eebb4dd62b6b4",
+        "type": "inject",
+        "z": "b109dfdff6f8e1f0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 680,
+        "wires": [
+            [
+                "05990df2d72fc3a7"
+            ]
+        ]
+    },
+    {
+        "id": "3a94465044ec57d3",
+        "type": "debug",
+        "z": "b109dfdff6f8e1f0",
+        "name": "Weather Ha Noi",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "8710430fbd137948",
+        "type": "link out",
+        "z": "b109dfdff6f8e1f0",
+        "name": "Store data openweather",
+        "mode": "link",
+        "links": [
+            "78c1979854476046"
+        ],
+        "x": 595,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "78c1979854476046",
+        "type": "link in",
+        "z": "ae869d84e3a7db78",
+        "name": "link in 1",
+        "links": [
+            "8710430fbd137948"
+        ],
+        "x": 15,
+        "y": 220,
+        "wires": [
+            [
+                "e6a14b12a4536931"
+            ]
+        ]
+    },
+    {
+        "id": "e6a14b12a4536931",
+        "type": "switch",
+        "z": "ae869d84e3a7db78",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "tempc",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "humidity",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "pressure",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "windspeed",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "winddirection",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "clouds",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "b25ff0110f0ff5e5"
+            ],
+            [
+                "d4c74e42a7ff81f8"
+            ],
+            [
+                "b37d835044787d10"
+            ],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e710b0b47ab97188",
+        "type": "debug",
+        "z": "ae869d84e3a7db78",
+        "name": "Temperature Raw Data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b25ff0110f0ff5e5",
+        "type": "change",
+        "z": "ae869d84e3a7db78",
+        "name": "set temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tempc",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 180,
+        "wires": [
+            [
+                "e710b0b47ab97188",
+                "e27f36c07f9a2a3d",
+                "ba30bb1440fee420",
+                "655be27459407172"
+            ]
+        ]
+    },
+    {
+        "id": "d4c74e42a7ff81f8",
+        "type": "change",
+        "z": "ae869d84e3a7db78",
+        "name": "set humidity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 460,
+        "wires": [
+            [
+                "31e661c8d8ce9ca5",
+                "bb07caebf1451b09"
+            ]
+        ]
+    },
+    {
+        "id": "b37d835044787d10",
+        "type": "change",
+        "z": "ae869d84e3a7db78",
+        "name": "set pressure",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.pressure",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 250,
+        "y": 580,
+        "wires": [
+            [
+                "3f62c44f3736ea37",
+                "23253873a6e425ed"
+            ]
+        ]
+    },
+    {
+        "id": "31e661c8d8ce9ca5",
+        "type": "debug",
+        "z": "ae869d84e3a7db78",
+        "name": "Humidity",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3f62c44f3736ea37",
+        "type": "debug",
+        "z": "ae869d84e3a7db78",
+        "name": "Pressure",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "ba30bb1440fee420",
+        "type": "buffer-array",
+        "z": "ae869d84e3a7db78",
+        "name": "",
+        "bufferLen": "10",
+        "startWhenFilled": false,
+        "x": 550,
+        "y": 240,
+        "wires": [
+            [
+                "d0d70bfd6f770eef",
+                "78dd084dc51efe95"
+            ]
+        ]
+    },
+    {
+        "id": "e96e6624510ec51e",
+        "type": "statistics",
+        "z": "ae869d84e3a7db78",
+        "name": "Mean Temperature",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 950,
+        "y": 240,
+        "wires": [
+            [
+                "ca9fbe9d40619ed8"
+            ]
+        ]
+    },
+    {
+        "id": "d0d70bfd6f770eef",
+        "type": "function",
+        "z": "ae869d84e3a7db78",
+        "name": "Mean Function",
+        "func": "msg.topic = \"mean\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 240,
+        "wires": [
+            [
+                "e96e6624510ec51e"
+            ]
+        ]
+    },
+    {
+        "id": "ca9fbe9d40619ed8",
+        "type": "debug",
+        "z": "ae869d84e3a7db78",
+        "name": "Temperature Mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "78dd084dc51efe95",
+        "type": "function",
+        "z": "ae869d84e3a7db78",
+        "name": "stdDev Function",
+        "func": "msg.topic = \"standardDeviation\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 300,
+        "wires": [
+            [
+                "0f363ecb3dd0b3fa"
+            ]
+        ]
+    },
+    {
+        "id": "0f363ecb3dd0b3fa",
+        "type": "statistics",
+        "z": "ae869d84e3a7db78",
+        "name": "stdDev Temperature",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 960,
+        "y": 300,
+        "wires": [
+            [
+                "a98405b4702275e8"
+            ]
+        ]
+    },
+    {
+        "id": "a98405b4702275e8",
+        "type": "debug",
+        "z": "ae869d84e3a7db78",
+        "name": "Temperature stdDev",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8c660e6275a3bad9",
+        "type": "statistics",
+        "z": "ae869d84e3a7db78",
+        "name": "sum Temperature",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 990,
+        "y": 420,
+        "wires": [
+            [
+                "d1af11549f85ee59"
+            ]
+        ]
+    },
+    {
+        "id": "e27f36c07f9a2a3d",
+        "type": "buffer-array",
+        "z": "ae869d84e3a7db78",
+        "name": "",
+        "bufferLen": "2",
+        "startWhenFilled": true,
+        "x": 550,
+        "y": 360,
+        "wires": [
+            [
+                "4a70bc4d68c68892"
+            ]
+        ]
+    },
+    {
+        "id": "4a70bc4d68c68892",
+        "type": "function",
+        "z": "ae869d84e3a7db78",
+        "name": "errorFunction",
+        "func": "msg.topic = \"errorFunction\";\nmsg = {\"payload\": msg.payload[1] - msg.payload[0], \"topic\": msg.topic};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 360,
+        "wires": [
+            [
+                "888a87a926eb16de"
+            ]
+        ]
+    },
+    {
+        "id": "d1af11549f85ee59",
+        "type": "debug",
+        "z": "ae869d84e3a7db78",
+        "name": "Temperature errorFunction",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "888a87a926eb16de",
+        "type": "buffer-array",
+        "z": "ae869d84e3a7db78",
+        "name": "",
+        "bufferLen": "10",
+        "startWhenFilled": false,
+        "x": 730,
+        "y": 460,
+        "wires": [
+            [
+                "29ec19fab5593aed"
+            ]
+        ]
+    },
+    {
+        "id": "29ec19fab5593aed",
+        "type": "function",
+        "z": "ae869d84e3a7db78",
+        "name": "Sum",
+        "func": "msg.topic = \"sum\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 540,
+        "wires": [
+            [
+                "8c660e6275a3bad9"
+            ]
+        ]
+    },
+    {
+        "id": "655be27459407172",
+        "type": "link out",
+        "z": "ae869d84e3a7db78",
+        "name": "Store Temperature Raw",
+        "mode": "link",
+        "links": [
+            "831eec6828992045"
+        ],
+        "x": 645,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "bb07caebf1451b09",
+        "type": "link out",
+        "z": "ae869d84e3a7db78",
+        "name": "Store Humidity Raw",
+        "mode": "link",
+        "links": [
+            "78325e79fa03c310"
+        ],
+        "x": 365,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "23253873a6e425ed",
+        "type": "link out",
+        "z": "ae869d84e3a7db78",
+        "name": "Store Pressure Raw",
+        "mode": "link",
+        "links": [
+            "38cbf79c1c0d38c4"
+        ],
+        "x": 365,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "831eec6828992045",
+        "type": "link in",
+        "z": "453379017bc65c03",
+        "name": "link in 2",
+        "links": [
+            "655be27459407172"
+        ],
+        "x": 225,
+        "y": 260,
+        "wires": [
+            [
+                "f69e4028eb6c3bae"
+            ]
+        ]
+    },
+    {
+        "id": "f69e4028eb6c3bae",
+        "type": "function",
+        "z": "453379017bc65c03",
+        "name": "Insert Data Temperature",
+        "func": "msg.payload = [\n    {value: msg.payload},\n    {\n        lat: msg.location.lat,\n        lon: msg.location.lon,\n        city: msg.location.city,\n        country: msg.location.country\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 260,
+        "wires": [
+            [
+                "5f236101e1944710"
+            ]
+        ]
+    },
+    {
+        "id": "5f236101e1944710",
+        "type": "influxdb out",
+        "z": "453379017bc65c03",
+        "influxdb": "a2cc72f791cf3850",
+        "name": "Store temperature",
+        "measurement": "temperature",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 730,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "78325e79fa03c310",
+        "type": "link in",
+        "z": "453379017bc65c03",
+        "name": "link in 3",
+        "links": [
+            "bb07caebf1451b09"
+        ],
+        "x": 225,
+        "y": 320,
+        "wires": [
+            [
+                "e8947195c67dbfcd"
+            ]
+        ]
+    },
+    {
+        "id": "e8947195c67dbfcd",
+        "type": "function",
+        "z": "453379017bc65c03",
+        "name": "Insert Data Humidity",
+        "func": "msg.payload = [\n    {value: msg.payload},\n    {\n        lat: msg.location.lat,\n        lon: msg.location.lon,\n        city: msg.location.city,\n        country: msg.location.country\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 320,
+        "wires": [
+            [
+                "abd66ebf5060d44d"
+            ]
+        ]
+    },
+    {
+        "id": "abd66ebf5060d44d",
+        "type": "influxdb out",
+        "z": "453379017bc65c03",
+        "influxdb": "a2cc72f791cf3850",
+        "name": "Store Humidity",
+        "measurement": "humidity",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 720,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "38cbf79c1c0d38c4",
+        "type": "link in",
+        "z": "453379017bc65c03",
+        "name": "link in 4",
+        "links": [
+            "23253873a6e425ed"
+        ],
+        "x": 235,
+        "y": 380,
+        "wires": [
+            [
+                "5893777f9220b2e1"
+            ]
+        ]
+    },
+    {
+        "id": "5893777f9220b2e1",
+        "type": "function",
+        "z": "453379017bc65c03",
+        "name": "Insert Data Pressure",
+        "func": "msg.payload = [\n    {value: msg.payload},\n    {\n        lat: msg.location.lat,\n        lon: msg.location.lon,\n        city: msg.location.city,\n        country: msg.location.country\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 380,
+        "wires": [
+            [
+                "24b46b843a7b81f9"
+            ]
+        ]
+    },
+    {
+        "id": "24b46b843a7b81f9",
+        "type": "influxdb out",
+        "z": "453379017bc65c03",
+        "influxdb": "a2cc72f791cf3850",
+        "name": "Store pressure",
+        "measurement": "pressure",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 730,
+        "y": 380,
+        "wires": []
+    }
+]
