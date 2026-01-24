@@ -3,7 +3,7 @@
         "id": "ca46a7ecc95f279c",
         "type": "tab",
         "label": "SenseHAT",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -11,7 +11,7 @@
         "id": "f946d8b7bf523717",
         "type": "tab",
         "label": "Basic Statistics",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -19,7 +19,7 @@
         "id": "2671098f270b0cb9",
         "type": "tab",
         "label": " Store aggregated data",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -1246,7 +1246,7 @@
         "name": "",
         "throttleType": "time",
         "timeLimit": "5",
-        "timeLimitType": "minutes",
+        "timeLimitType": "seconds",
         "countLimit": 0,
         "blockSize": 0,
         "locked": false,
@@ -1285,7 +1285,6 @@
         "collection": "52d38e808c35a136",
         "name": "instant Temperature",
         "update": true,
-        "path": "/temperature",
         "x": 970,
         "y": 320,
         "wires": []
@@ -1389,7 +1388,7 @@
         "name": "",
         "throttleType": "time",
         "timeLimit": "5",
-        "timeLimitType": "minutes",
+        "timeLimitType": "seconds",
         "countLimit": 0,
         "blockSize": 0,
         "locked": false,
