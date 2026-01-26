@@ -1,0 +1,1473 @@
+[
+    {
+        "id": "a0eb9d8759f0d6f7",
+        "type": "tab",
+        "label": "Hệ thống thủy lực bột",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4f96d0238c546860",
+        "type": "tab",
+        "label": "Hệ thống lọc cát nồng độ cao",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "85e3b6ed06d4064d",
+        "type": "tab",
+        "label": "Hệ thống sàn thô",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "321ec63799c12083",
+        "type": "tab",
+        "label": "Hệ thống phân sợi 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "721914438132621e",
+        "type": "tab",
+        "label": "Hệ thống lọc cát nồng độ thấp",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f04122f684555d11",
+        "type": "tab",
+        "label": "Hệ thống sàng tinh",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1c970cf990e47803",
+        "type": "tab",
+        "label": "Hệ thống lọc đĩa",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e72fd5a230ded939",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.1.120",
+        "port": "102",
+        "rack": "0",
+        "slot": "2",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "tsap",
+        "adapter": "",
+        "busaddr": 2,
+        "cycletime": 1000,
+        "timeout": 2000,
+        "name": "PLC 120",
+        "vartable": [
+            {
+                "addr": "DB3220,R24",
+                "name": "motor_load_pct"
+            },
+            {
+                "addr": "DB3224,X30.0",
+                "name": "motor_running"
+            },
+            {
+                "addr": "DB3221,X142.0",
+                "name": "motor_error"
+            },
+            {
+                "addr": "DB3564,X30.0",
+                "name": "gearbox_oil_running"
+            }
+        ]
+    },
+    {
+        "id": "f0bd2e60724446a6",
+        "type": "influxdb",
+        "hostname": "influxdb",
+        "port": 8086,
+        "protocol": "http",
+        "database": "miza",
+        "name": "miza",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "199e1d2f4236805a",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.1.120",
+        "port": "102",
+        "rack": "0",
+        "slot": "2",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "tsap",
+        "adapter": "",
+        "busaddr": 2,
+        "cycletime": 1000,
+        "timeout": 2000,
+        "name": "PLC 120 2",
+        "vartable": [
+            {
+                "addr": "DB3220,R24",
+                "name": "motor_load_pct"
+            },
+            {
+                "addr": "DB3224,X30.0",
+                "name": "motor_running"
+            },
+            {
+                "addr": "DB3221,X142.0",
+                "name": "motor_error"
+            },
+            {
+                "addr": "DB3564,X30.0",
+                "name": "gearbox_oil_running"
+            },
+            {
+                "addr": "DB3562,X142.0",
+                "name": "gearbox_oil_error"
+            },
+            {
+                "addr": "DB2781,R24",
+                "name": "motor_load_pct_2"
+            },
+            {
+                "addr": "DB2785,X30.0",
+                "name": "motor_running_2"
+            },
+            {
+                "addr": "DB2782,X142.0",
+                "name": "motor_error_2"
+            },
+            {
+                "addr": "DB2490,R24",
+                "name": "motor_load_pct_3"
+            },
+            {
+                "addr": "DB2494,X30.0",
+                "name": "motor_running_3"
+            },
+            {
+                "addr": "DB2491,X142.0",
+                "name": "motor_error_3"
+            },
+            {
+                "addr": "DB2723,R24",
+                "name": "motor_load_pct_4"
+            },
+            {
+                "addr": "DB2727,X30.0",
+                "name": "motor_running_4"
+            },
+            {
+                "addr": "DB2724,X142.0",
+                "name": "motor_error_4"
+            },
+            {
+                "addr": "DB372,R86",
+                "name": "p_in_5"
+            },
+            {
+                "addr": "DB398,R86",
+                "name": "p_out_5"
+            },
+            {
+                "addr": "DB346,R392",
+                "name": "p_delta_5"
+            },
+            {
+                "addr": "DB355,R86",
+                "name": "q_backwash_5"
+            },
+            {
+                "addr": "DB285,R86",
+                "name": "p_in_6"
+            },
+            {
+                "addr": "DB2508,R24",
+                "name": "motor_load_pct_7"
+            },
+            {
+                "addr": "DB2512,X30.0",
+                "name": "motor_running_7"
+            },
+            {
+                "addr": "DB2509,X142.0",
+                "name": "motor_error_7"
+            },
+            {
+                "addr": "DB3059,X30.0",
+                "name": "motor_running_9"
+            },
+            {
+                "addr": "DB3057,X142.0",
+                "name": "motor_error_9"
+            },
+            {
+                "addr": "DB800,R24",
+                "name": "motor_load_pct_10"
+            },
+            {
+                "addr": "DB804,X30.0",
+                "name": "motor_running_10"
+            },
+            {
+                "addr": "DB801,X142.0",
+                "name": "motor_error_10"
+            },
+            {
+                "addr": "DB681,R86",
+                "name": "p_in_10"
+            },
+            {
+                "addr": "DB415,R86",
+                "name": "p_out_10"
+            },
+            {
+                "addr": "DB789,R392",
+                "name": "p_delta_10"
+            },
+            {
+                "addr": "DB646,R24",
+                "name": "motor_load_pct_11"
+            },
+            {
+                "addr": "DB650,X30.0",
+                "name": "motor_running_11"
+            },
+            {
+                "addr": "DB647,X142.0",
+                "name": "motor_error_11"
+            },
+            {
+                "addr": "DB788,R86",
+                "name": "p_in_11"
+            },
+            {
+                "addr": "DB569,R86",
+                "name": "p_out_11"
+            },
+            {
+                "addr": "DB795,R392",
+                "name": "p_delta_11"
+            },
+            {
+                "addr": "DB2854,R24",
+                "name": "motor_load_pct_12"
+            },
+            {
+                "addr": "DB2858,X30.0",
+                "name": "motor_running_12"
+            },
+            {
+                "addr": "DB2855,X142.0",
+                "name": "motor_error_12"
+            },
+            {
+                "addr": "DB1201,R86",
+                "name": "p_in_12"
+            },
+            {
+                "addr": "DB1247,R86",
+                "name": "p_out_12"
+            },
+            {
+                "addr": "DB1189,R86",
+                "name": "p_discharge_12"
+            },
+            {
+                "addr": "DB2019,R86",
+                "name": "p_backwash_12"
+            },
+            {
+                "addr": "DB3434,R24",
+                "name": "motor_load_pct_13"
+            },
+            {
+                "addr": "DB3438,X30.0",
+                "name": "motor_running_13"
+            },
+            {
+                "addr": "DB3435,X142.0",
+                "name": "motor_error_13"
+            },
+            {
+                "addr": "DB928,R24",
+                "name": "motor_load_pct_14"
+            },
+            {
+                "addr": "DB932,X30.0",
+                "name": "motor_running_14"
+            },
+            {
+                "addr": "DB929,X142.0",
+                "name": "motor_error_14"
+            },
+            {
+                "addr": "DB1466,R86",
+                "name": "p_in_14"
+            },
+            {
+                "addr": "DB1798,R86",
+                "name": "p_out_14"
+            },
+            {
+                "addr": "DB1847,R392",
+                "name": "p_delta_14"
+            },
+            {
+                "addr": "DB873,R24",
+                "name": "motor_load_pct_15"
+            },
+            {
+                "addr": "DB877,X30.0",
+                "name": "motor_running_15"
+            },
+            {
+                "addr": "DB874,X142.0",
+                "name": "motor_error_15"
+            },
+            {
+                "addr": "DB1902,R86",
+                "name": "p_in_15"
+            },
+            {
+                "addr": "DB1284,R24",
+                "name": "motor_load_pct_16"
+            },
+            {
+                "addr": "DB1288,X30.0",
+                "name": "motor_running_16"
+            },
+            {
+                "addr": "DB1285,X142.0",
+                "name": "motor_error_16"
+            },
+            {
+                "addr": "DB935,R24",
+                "name": "motor_load_pct_17"
+            },
+            {
+                "addr": "DB939,X30.0",
+                "name": "motor_running_17"
+            },
+            {
+                "addr": "DB936,X142.0",
+                "name": "motor_error_17"
+            },
+            {
+                "addr": "DB974,R86",
+                "name": "level_pulp_tank_17"
+            },
+            {
+                "addr": "DB2956,R86",
+                "name": "level_pulp_tank_18"
+            },
+            {
+                "addr": "DB2687,R24",
+                "name": "motor_load_pct_19"
+            },
+            {
+                "addr": "DB2691,X30.0",
+                "name": "motor_running_19"
+            },
+            {
+                "addr": "DB2688,X142.0",
+                "name": "motor_error_19"
+            },
+            {
+                "addr": "DB1902,R86",
+                "name": "p_out_19"
+            },
+            {
+                "addr": "DB2352,R24",
+                "name": "motor_load_pct_20"
+            },
+            {
+                "addr": "DB2356,X30.0",
+                "name": "motor_running_20"
+            },
+            {
+                "addr": "DB2353,X142.0",
+                "name": "motor_error_20"
+            },
+            {
+                "addr": "DB2127,X60.0",
+                "name": "qic_open_20"
+            },
+            {
+                "addr": "DB2134,X60.0",
+                "name": "pic_open_20"
+            },
+            {
+                "addr": "DB2994,R24",
+                "name": "motor_load_pct_21"
+            },
+            {
+                "addr": "DB2998,X30.0",
+                "name": "motor_running_21"
+            },
+            {
+                "addr": "DB2995,X142.0",
+                "name": "motor_error_21"
+            },
+            {
+                "addr": "DB3012,R24",
+                "name": "motor_load_pct_22"
+            },
+            {
+                "addr": "DB3016,X30.0",
+                "name": "motor_running_22"
+            },
+            {
+                "addr": "DB3013,X142.0",
+                "name": "motor_error_22"
+            },
+            {
+                "addr": "DB2928,X30.0",
+                "name": "motor_running_23"
+            },
+            {
+                "addr": "DB2926,X142.0",
+                "name": "motor_error_23"
+            },
+            {
+                "addr": "DB3323,R24",
+                "name": "motor_load_pct_24"
+            },
+            {
+                "addr": "DB3327,X30.0",
+                "name": "motor_running_24"
+            },
+            {
+                "addr": "DB3324,X142.0",
+                "name": "motor_error_24"
+            },
+            {
+                "addr": "DB1874,R86",
+                "name": "p_in_24"
+            },
+            {
+                "addr": "DB3286,R24",
+                "name": "motor_load_pct_25"
+            },
+            {
+                "addr": "DB3308,X30.0",
+                "name": "motor_running_25"
+            },
+            {
+                "addr": "DB3287,X142.0",
+                "name": "motor_error_25"
+            },
+            {
+                "addr": "DB3177,R24",
+                "name": "motor_load_pct_26"
+            },
+            {
+                "addr": "DB3183,X30.0",
+                "name": "motor_running_26"
+            },
+            {
+                "addr": "DB3179,X142.0",
+                "name": "motor_error_26"
+            },
+            {
+                "addr": "DB3529,R86",
+                "name": "level_pulp_tank_27"
+            },
+            {
+                "addr": "DB3543,R24",
+                "name": "motor_load_pct_27_1"
+            },
+            {
+                "addr": "DB3547,X30.0",
+                "name": "motor_running_27_1"
+            },
+            {
+                "addr": "DB3544,X142.0",
+                "name": "motor_error_27_1"
+            },
+            {
+                "addr": "DB2800,R24",
+                "name": "motor_load_pct_27_2"
+            },
+            {
+                "addr": "DB2804,X30.0",
+                "name": "motor_running_27_2"
+            },
+            {
+                "addr": "DB2801,X142.0",
+                "name": "motor_error_27_2"
+            },
+            {
+                "addr": "DB1025,R86",
+                "name": "p_in_27_1"
+            },
+            {
+                "addr": "DB3157,R24",
+                "name": "motor_load_pct_27_3"
+            },
+            {
+                "addr": "DB3162,X30.0",
+                "name": "motor_running_27_3"
+            },
+            {
+                "addr": "DB3159,X142.0",
+                "name": "motor_error_27_3"
+            },
+            {
+                "addr": "DB2231,X60.0",
+                "name": "fic_open_27"
+            },
+            {
+                "addr": "DB2190,R86",
+                "name": "p_out_27_2"
+            },
+            {
+                "addr": "DB3257,R24",
+                "name": "motor_load_pct_28"
+            },
+            {
+                "addr": "DB3261,X30.0",
+                "name": "motor_running_28"
+            },
+            {
+                "addr": "DB3258,X142.0",
+                "name": "motor_error_28"
+            },
+            {
+                "addr": "DB2123,R86",
+                "name": "p_in_28"
+            },
+            {
+                "addr": "DB2195,R86",
+                "name": "p_out_28"
+            },
+            {
+                "addr": "DB2296,R392",
+                "name": "p_delta_28"
+            },
+            {
+                "addr": "DB905,R24",
+                "name": "motor_load_pct_29_1"
+            },
+            {
+                "addr": "DB909,X30.0",
+                "name": "motor_running_29_1"
+            },
+            {
+                "addr": "DB906,X142.0",
+                "name": "motor_error_29_1"
+            },
+            {
+                "addr": "DB1054,R86",
+                "name": "level_pulp_tank_29"
+            },
+            {
+                "addr": "DB501,R24",
+                "name": "motor_load_pct_29_2"
+            },
+            {
+                "addr": "DB505,X30.0",
+                "name": "motor_running_29_2"
+            },
+            {
+                "addr": "DB502,X142.0",
+                "name": "motor_error_29_2"
+            }
+        ]
+    },
+    {
+        "id": "9d7671444843e54f",
+        "type": "comment",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Động cơ",
+        "info": "",
+        "x": 280,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "a463effd6aa9b62d",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "662a9b850893188f",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_load_pct",
+        "diff": true,
+        "name": "",
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "a5013dfe75e61a9b"
+            ]
+        ]
+    },
+    {
+        "id": "a5013dfe75e61a9b",
+        "type": "buffer-array",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 340,
+        "y": 320,
+        "wires": [
+            [
+                "b7291f3185c9609f"
+            ]
+        ]
+    },
+    {
+        "id": "b7291f3185c9609f",
+        "type": "throttle",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 490,
+        "y": 320,
+        "wires": [
+            [
+                "09885106baed5005"
+            ]
+        ]
+    },
+    {
+        "id": "cd53740803cb0335",
+        "type": "statistics",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 800,
+        "y": 320,
+        "wires": [
+            [
+                "a463effd6aa9b62d",
+                "06a9128e03732657"
+            ]
+        ]
+    },
+    {
+        "id": "09885106baed5005",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 320,
+        "wires": [
+            [
+                "cd53740803cb0335"
+            ]
+        ]
+    },
+    {
+        "id": "b687babd048efb23",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_running",
+        "diff": false,
+        "name": "",
+        "x": 290,
+        "y": 400,
+        "wires": [
+            [
+                "245dd2890e2a4ad7",
+                "5f860adcaa94a7f6"
+            ]
+        ]
+    },
+    {
+        "id": "5f860adcaa94a7f6",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "motor_running",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "4f238ca5b05b7264",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_error",
+        "diff": false,
+        "name": "",
+        "x": 290,
+        "y": 600,
+        "wires": [
+            [
+                "89183957706748ba",
+                "1f5b07113f78443c"
+            ]
+        ]
+    },
+    {
+        "id": "89183957706748ba",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "motor_error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "06a9128e03732657",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_load_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Thủy lực chữ D\",\n        device: \"Động cơ thủy lực\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 400,
+        "wires": [
+            [
+                "223b487daea4d77f"
+            ]
+        ]
+    },
+    {
+        "id": "223b487daea4d77f",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1030,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a2c2179c4f7588c7",
+        "type": "inject",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 980,
+        "wires": [
+            [
+                "83bce01c635c7021"
+            ]
+        ]
+    },
+    {
+        "id": "f94006ed31c0f41d",
+        "type": "comment",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Digital Clock",
+        "info": "",
+        "x": 270,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "83bce01c635c7021",
+        "type": "moment",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Time",
+        "topic": "",
+        "input": "payload",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "HH",
+        "locale": "en-US",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Asia/Bangkok",
+        "x": 450,
+        "y": 980,
+        "wires": [
+            [
+                "5e6e4c789ff6ac0c"
+            ]
+        ]
+    },
+    {
+        "id": "0b4a96dcd751d73c",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Time",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "5e6e4c789ff6ac0c",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "convert from time to shift",
+        "func": "let shift = \"Ca 1\";\n\nif (msg.payload >= 6 && msg.payload < 14) {\n    shift = \"Ca 1\";\n} else if (msg.payload >= 14 && msg.payload < 22) {\n    shift = \"Ca 2\";\n} else {\n    shift = \"Ca 3\";\n}\n\nglobal.set(\"shift\", shift);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 980,
+        "wires": [
+            [
+                "0b4a96dcd751d73c"
+            ]
+        ]
+    },
+    {
+        "id": "245dd2890e2a4ad7",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Thủy lực chữ D\",\n        device: \"Động cơ thủy lực\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 480,
+        "wires": [
+            [
+                "ebc6e5978cc7f607"
+            ]
+        ]
+    },
+    {
+        "id": "ebc6e5978cc7f607",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 690,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "0470a717b251e572",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "gearbox_oil_running",
+        "diff": false,
+        "name": "",
+        "x": 310,
+        "y": 740,
+        "wires": [
+            [
+                "acd31eb6f395b87e",
+                "7e4c6a305b3b09ae"
+            ]
+        ]
+    },
+    {
+        "id": "8d5838ab08b1d0b8",
+        "type": "comment",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Bơm dầu hộp số",
+        "info": "",
+        "x": 300,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "acd31eb6f395b87e",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        gearbox_oil_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Thủy lực chữ D\",\n        device: \"Bơm dầu hộp số\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 740,
+        "wires": [
+            [
+                "68c8a4274a6bb2f4"
+            ]
+        ]
+    },
+    {
+        "id": "68c8a4274a6bb2f4",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 690,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "7e4c6a305b3b09ae",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "gearbox_oil_running",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "a654dd73efc7c358",
+        "type": "comment",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Thủy lực chữ D",
+        "info": "",
+        "x": 300,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1f5b07113f78443c",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_error: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Thủy lực chữ D\",\n        device: \"Động cơ thủy lực\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 640,
+        "wires": [
+            [
+                "2e61583244e61add"
+            ]
+        ]
+    },
+    {
+        "id": "2e61583244e61add",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 659,
+        "y": 642,
+        "wires": []
+    },
+    {
+        "id": "b5bd9bc93dc2a7f8",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "d": true,
+        "endpoint": "199e1d2f4236805a",
+        "mode": "all",
+        "variable": "gearbox_oil_running",
+        "diff": true,
+        "name": "",
+        "x": 280,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "06f2da7a06e6676a",
+        "type": "comment",
+        "z": "4f96d0238c546860",
+        "name": "Sàn phân ly thải nhẹ (nghiền lại)",
+        "info": "",
+        "x": 310,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6d8e2629a1a2b786",
+        "type": "debug",
+        "z": "4f96d0238c546860",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2c58040e1d69cc16",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_load_pct",
+        "diff": true,
+        "name": "",
+        "x": 260,
+        "y": 160,
+        "wires": [
+            [
+                "1b4a51b8620bd225"
+            ]
+        ]
+    },
+    {
+        "id": "1b4a51b8620bd225",
+        "type": "buffer-array",
+        "z": "4f96d0238c546860",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "c224567044c6b296"
+            ]
+        ]
+    },
+    {
+        "id": "c224567044c6b296",
+        "type": "throttle",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 450,
+        "y": 240,
+        "wires": [
+            [
+                "7166b8e5edca9cf1"
+            ]
+        ]
+    },
+    {
+        "id": "674d8738b27de2d0",
+        "type": "statistics",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 760,
+        "y": 240,
+        "wires": [
+            [
+                "6d8e2629a1a2b786",
+                "cb9f8182d5e560d4"
+            ]
+        ]
+    },
+    {
+        "id": "7166b8e5edca9cf1",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 240,
+        "wires": [
+            [
+                "674d8738b27de2d0"
+            ]
+        ]
+    },
+    {
+        "id": "6538a3c213972ce4",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_running",
+        "diff": false,
+        "name": "",
+        "x": 250,
+        "y": 320,
+        "wires": [
+            [
+                "551ef2e07b11319a",
+                "eb3ed5cffbf4518e"
+            ]
+        ]
+    },
+    {
+        "id": "eb3ed5cffbf4518e",
+        "type": "debug",
+        "z": "4f96d0238c546860",
+        "name": "motor_running",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "5fe3d5352d370acd",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_error",
+        "diff": false,
+        "name": "",
+        "x": 250,
+        "y": 520,
+        "wires": [
+            [
+                "81eee67a7e382f63"
+            ]
+        ]
+    },
+    {
+        "id": "81eee67a7e382f63",
+        "type": "debug",
+        "z": "4f96d0238c546860",
+        "name": "motor_error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "cb9f8182d5e560d4",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_load_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Sàn phân ly thải nhẹ (nghiền lại)\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 320,
+        "wires": [
+            [
+                "2cfc45a8b887de0e"
+            ]
+        ]
+    },
+    {
+        "id": "2cfc45a8b887de0e",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 990,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "551ef2e07b11319a",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Thủy lực chữ D\",\n        device: \"Động cơ thủy lực\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 400,
+        "wires": [
+            [
+                "50f5cc8225d0fd4d"
+            ]
+        ]
+    },
+    {
+        "id": "50f5cc8225d0fd4d",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 650,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "66d137c408cb88d4",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "gearbox_oil_running",
+        "diff": false,
+        "name": "",
+        "x": 270,
+        "y": 660,
+        "wires": [
+            [
+                "6f871d5777b6bc92",
+                "8f1eaf98d6957b83"
+            ]
+        ]
+    },
+    {
+        "id": "c26e5593efa6ef69",
+        "type": "comment",
+        "z": "4f96d0238c546860",
+        "name": "Bơm dầu hộp số",
+        "info": "",
+        "x": 260,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "6f871d5777b6bc92",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        gearbox_oil_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Thủy lực chữ D\",\n        device: \"Bơm dầu hộp số\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 660,
+        "wires": [
+            [
+                "7157285acdf4e6a2"
+            ]
+        ]
+    },
+    {
+        "id": "7157285acdf4e6a2",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 650,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "8f1eaf98d6957b83",
+        "type": "debug",
+        "z": "4f96d0238c546860",
+        "name": "gearbox_oil_running",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "a9255bba43647058",
+        "type": "comment",
+        "z": "4f96d0238c546860",
+        "name": "Động cơ",
+        "info": "",
+        "x": 240,
+        "y": 120,
+        "wires": []
+    }
+]
