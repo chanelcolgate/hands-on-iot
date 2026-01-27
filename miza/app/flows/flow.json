@@ -90,7 +90,15 @@
     {
         "id": "278f7766e1536901",
         "type": "tab",
-        "label": "Truyền động hệ xeo",
+        "label": "Hệ xeo",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "965c7750b786c8eb",
+        "type": "tab",
+        "label": "Flow-dat-nho",
         "disabled": false,
         "info": "",
         "env": []
@@ -1087,6 +1095,82 @@
                 "name": "motor_error_29_2"
             }
         ]
+    },
+    {
+        "id": "cab104e5afbb58fa",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.1.101",
+        "port": "102",
+        "rack": "0",
+        "slot": "2",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "tsap",
+        "adapter": "",
+        "busaddr": 2,
+        "cycletime": 1000,
+        "timeout": 2000,
+        "name": "PLC 101",
+        "vartable": [
+            {
+                "addr": "DB4,R64",
+                "name": "speed_sp"
+            },
+            {
+                "addr": "DB4,R72",
+                "name": "speed_pv"
+            },
+            {
+                "addr": "DB4,R76",
+                "name": "motor_load_pct"
+            },
+            {
+                "addr": "DB4,R88",
+                "name": "motor_temp_c"
+            },
+            {
+                "addr": "DB4,R92",
+                "name": "vfd_temp_c"
+            },
+            {
+                "addr": "DB4,R80",
+                "name": "motor_torque_pct"
+            }
+        ]
+    },
+    {
+        "id": "e8a21669a45f89f6",
+        "type": "mqtt-broker",
+        "name": "gw-test-tb",
+        "broker": "172.26.3.7",
+        "port": 1883,
+        "clientid": "gw-test",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
     },
     {
         "id": "9d7671444843e54f",
@@ -14741,5 +14825,1261 @@
         "x": 679,
         "y": 1422,
         "wires": []
+    },
+    {
+        "id": "f10916e77785c228",
+        "type": "s7 in",
+        "z": "278f7766e1536901",
+        "endpoint": "cab104e5afbb58fa",
+        "mode": "single",
+        "variable": "speed_sp",
+        "diff": false,
+        "name": "",
+        "x": 260,
+        "y": 220,
+        "wires": [
+            [
+                "ae459f330d629aa4",
+                "14da66e3a0aedbbc"
+            ]
+        ]
+    },
+    {
+        "id": "2fe689ecf75745a4",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "name": "Động cơ",
+        "info": "",
+        "x": 260,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "b1295627f7e716b0",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "name": "Truyền động",
+        "info": "",
+        "x": 270,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "723473fa90bb18aa",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "ae459f330d629aa4",
+        "type": "buffer-array",
+        "z": "278f7766e1536901",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 400,
+        "y": 320,
+        "wires": [
+            [
+                "25f31d4c9b1129f5"
+            ]
+        ]
+    },
+    {
+        "id": "25f31d4c9b1129f5",
+        "type": "throttle",
+        "z": "278f7766e1536901",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 550,
+        "y": 320,
+        "wires": [
+            [
+                "bbaf8c7f3bdb3b01"
+            ]
+        ]
+    },
+    {
+        "id": "8a9fe734e3ccc086",
+        "type": "statistics",
+        "z": "278f7766e1536901",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 860,
+        "y": 320,
+        "wires": [
+            [
+                "723473fa90bb18aa",
+                "ae5d53d51dcf1133"
+            ]
+        ]
+    },
+    {
+        "id": "bbaf8c7f3bdb3b01",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 320,
+        "wires": [
+            [
+                "8a9fe734e3ccc086"
+            ]
+        ]
+    },
+    {
+        "id": "ae5d53d51dcf1133",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        speed_sp: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        machine: \"Truyền động\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 400,
+        "wires": [
+            [
+                "6a9753d192cd9fd2"
+            ]
+        ]
+    },
+    {
+        "id": "6a9753d192cd9fd2",
+        "type": "influxdb out",
+        "z": "278f7766e1536901",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1090,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "1712b9d8ec35d7b9",
+        "type": "s7 in",
+        "z": "278f7766e1536901",
+        "endpoint": "cab104e5afbb58fa",
+        "mode": "single",
+        "variable": "speed_pv",
+        "diff": true,
+        "name": "",
+        "x": 260,
+        "y": 460,
+        "wires": [
+            [
+                "d8cec58521d8e2df",
+                "11e847763665dddb"
+            ]
+        ]
+    },
+    {
+        "id": "6e34bcd6c99e026a",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d8cec58521d8e2df",
+        "type": "buffer-array",
+        "z": "278f7766e1536901",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 400,
+        "y": 560,
+        "wires": [
+            [
+                "9ce656762aae2b32"
+            ]
+        ]
+    },
+    {
+        "id": "9ce656762aae2b32",
+        "type": "throttle",
+        "z": "278f7766e1536901",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 550,
+        "y": 560,
+        "wires": [
+            [
+                "95762b4be94abe5f"
+            ]
+        ]
+    },
+    {
+        "id": "08da9ab4e426f549",
+        "type": "statistics",
+        "z": "278f7766e1536901",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 860,
+        "y": 560,
+        "wires": [
+            [
+                "6e34bcd6c99e026a",
+                "b8a443199f96771a"
+            ]
+        ]
+    },
+    {
+        "id": "95762b4be94abe5f",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 560,
+        "wires": [
+            [
+                "08da9ab4e426f549"
+            ]
+        ]
+    },
+    {
+        "id": "b8a443199f96771a",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        speed_pv: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        machine: \"Truyền động\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 640,
+        "wires": [
+            [
+                "b85ea567c6cfe7e4"
+            ]
+        ]
+    },
+    {
+        "id": "b85ea567c6cfe7e4",
+        "type": "influxdb out",
+        "z": "278f7766e1536901",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1090,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "9b22dc496f091724",
+        "type": "s7 in",
+        "z": "278f7766e1536901",
+        "endpoint": "cab104e5afbb58fa",
+        "mode": "single",
+        "variable": "motor_load_pct",
+        "diff": true,
+        "name": "",
+        "x": 280,
+        "y": 700,
+        "wires": [
+            [
+                "1a79135d35019c2a"
+            ]
+        ]
+    },
+    {
+        "id": "21794df4c7877ccc",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "1a79135d35019c2a",
+        "type": "buffer-array",
+        "z": "278f7766e1536901",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 400,
+        "y": 800,
+        "wires": [
+            [
+                "1eb8c42152a2616a"
+            ]
+        ]
+    },
+    {
+        "id": "1eb8c42152a2616a",
+        "type": "throttle",
+        "z": "278f7766e1536901",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 550,
+        "y": 800,
+        "wires": [
+            [
+                "f735fc08c9b33863"
+            ]
+        ]
+    },
+    {
+        "id": "1b94fd478476c1cc",
+        "type": "statistics",
+        "z": "278f7766e1536901",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 860,
+        "y": 800,
+        "wires": [
+            [
+                "21794df4c7877ccc",
+                "5370a72f697aa575"
+            ]
+        ]
+    },
+    {
+        "id": "f735fc08c9b33863",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 800,
+        "wires": [
+            [
+                "1b94fd478476c1cc"
+            ]
+        ]
+    },
+    {
+        "id": "5370a72f697aa575",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_load_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        machine: \"Truyền động\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 880,
+        "wires": [
+            [
+                "42be156276a801f6"
+            ]
+        ]
+    },
+    {
+        "id": "42be156276a801f6",
+        "type": "influxdb out",
+        "z": "278f7766e1536901",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1090,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "982555af77131daf",
+        "type": "s7 in",
+        "z": "278f7766e1536901",
+        "endpoint": "cab104e5afbb58fa",
+        "mode": "single",
+        "variable": "motor_temp_c",
+        "diff": false,
+        "name": "",
+        "x": 270,
+        "y": 920,
+        "wires": [
+            [
+                "22ae10f7b6cbf598"
+            ]
+        ]
+    },
+    {
+        "id": "30f859ad74b5b687",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "22ae10f7b6cbf598",
+        "type": "buffer-array",
+        "z": "278f7766e1536901",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 400,
+        "y": 1020,
+        "wires": [
+            [
+                "e636fcd91346de19"
+            ]
+        ]
+    },
+    {
+        "id": "e636fcd91346de19",
+        "type": "throttle",
+        "z": "278f7766e1536901",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 550,
+        "y": 1020,
+        "wires": [
+            [
+                "3868eff99784d7f8"
+            ]
+        ]
+    },
+    {
+        "id": "39de6d6ef3777c20",
+        "type": "statistics",
+        "z": "278f7766e1536901",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 860,
+        "y": 1020,
+        "wires": [
+            [
+                "30f859ad74b5b687",
+                "e1ddbcc645657313"
+            ]
+        ]
+    },
+    {
+        "id": "3868eff99784d7f8",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1020,
+        "wires": [
+            [
+                "39de6d6ef3777c20"
+            ]
+        ]
+    },
+    {
+        "id": "e1ddbcc645657313",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_temp_c: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        machine: \"Truyền động\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1100,
+        "wires": [
+            [
+                "fbdf83d8c59f18c2"
+            ]
+        ]
+    },
+    {
+        "id": "fbdf83d8c59f18c2",
+        "type": "influxdb out",
+        "z": "278f7766e1536901",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1090,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "59f96c019358e1ed",
+        "type": "s7 in",
+        "z": "278f7766e1536901",
+        "endpoint": "cab104e5afbb58fa",
+        "mode": "single",
+        "variable": "vfd_temp_c",
+        "diff": false,
+        "name": "",
+        "x": 270,
+        "y": 1140,
+        "wires": [
+            [
+                "b80b54b45aa06904"
+            ]
+        ]
+    },
+    {
+        "id": "33103f637252e05c",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "b80b54b45aa06904",
+        "type": "buffer-array",
+        "z": "278f7766e1536901",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 400,
+        "y": 1240,
+        "wires": [
+            [
+                "dc8b61f2bd49548e"
+            ]
+        ]
+    },
+    {
+        "id": "dc8b61f2bd49548e",
+        "type": "throttle",
+        "z": "278f7766e1536901",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 550,
+        "y": 1240,
+        "wires": [
+            [
+                "6b0cfcd3e0bfee28"
+            ]
+        ]
+    },
+    {
+        "id": "b7effe050798bb27",
+        "type": "statistics",
+        "z": "278f7766e1536901",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 860,
+        "y": 1240,
+        "wires": [
+            [
+                "33103f637252e05c",
+                "7816b6d8c75e1f42"
+            ]
+        ]
+    },
+    {
+        "id": "6b0cfcd3e0bfee28",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1240,
+        "wires": [
+            [
+                "b7effe050798bb27"
+            ]
+        ]
+    },
+    {
+        "id": "7816b6d8c75e1f42",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        vfd_temp_c: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        machine: \"Truyền động\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1320,
+        "wires": [
+            [
+                "1cd06d291b80e336"
+            ]
+        ]
+    },
+    {
+        "id": "1cd06d291b80e336",
+        "type": "influxdb out",
+        "z": "278f7766e1536901",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1090,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "662a6f783b51467e",
+        "type": "s7 in",
+        "z": "278f7766e1536901",
+        "endpoint": "cab104e5afbb58fa",
+        "mode": "single",
+        "variable": "motor_torque_pct",
+        "diff": true,
+        "name": "",
+        "x": 280,
+        "y": 1360,
+        "wires": [
+            [
+                "fd1105b0936e9f0b"
+            ]
+        ]
+    },
+    {
+        "id": "66a661d4d9f70fd6",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "fd1105b0936e9f0b",
+        "type": "buffer-array",
+        "z": "278f7766e1536901",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 400,
+        "y": 1460,
+        "wires": [
+            [
+                "e348622630122718"
+            ]
+        ]
+    },
+    {
+        "id": "e348622630122718",
+        "type": "throttle",
+        "z": "278f7766e1536901",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 550,
+        "y": 1460,
+        "wires": [
+            [
+                "c7240d5cf58bb24a"
+            ]
+        ]
+    },
+    {
+        "id": "b0f459c127c2df44",
+        "type": "statistics",
+        "z": "278f7766e1536901",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 860,
+        "y": 1460,
+        "wires": [
+            [
+                "66a661d4d9f70fd6",
+                "ef9ce692582759b9"
+            ]
+        ]
+    },
+    {
+        "id": "c7240d5cf58bb24a",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1460,
+        "wires": [
+            [
+                "b0f459c127c2df44"
+            ]
+        ]
+    },
+    {
+        "id": "ef9ce692582759b9",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_torque_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        machine: \"Truyền động\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1540,
+        "wires": [
+            [
+                "813b543b6892942e"
+            ]
+        ]
+    },
+    {
+        "id": "813b543b6892942e",
+        "type": "influxdb out",
+        "z": "278f7766e1536901",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1090,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "14da66e3a0aedbbc",
+        "type": "link out",
+        "z": "278f7766e1536901",
+        "name": "get speed_sp",
+        "mode": "link",
+        "links": [
+            "c70465d2fddf5cf8"
+        ],
+        "x": 495,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "11e847763665dddb",
+        "type": "link out",
+        "z": "278f7766e1536901",
+        "name": "get speed_pv",
+        "mode": "link",
+        "links": [
+            "c70465d2fddf5cf8"
+        ],
+        "x": 465,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "c70465d2fddf5cf8",
+        "type": "link in",
+        "z": "278f7766e1536901",
+        "name": "link in 1",
+        "links": [
+            "11e847763665dddb",
+            "14da66e3a0aedbbc"
+        ],
+        "x": 225,
+        "y": 1600,
+        "wires": [
+            [
+                "ab5dcaffcc005017"
+            ]
+        ]
+    },
+    {
+        "id": "ab5dcaffcc005017",
+        "type": "buffer-array",
+        "z": "278f7766e1536901",
+        "name": "Stack 2",
+        "bufferLen": "2",
+        "startWhenFilled": true,
+        "x": 350,
+        "y": 1600,
+        "wires": [
+            [
+                "7811a940245824a3"
+            ]
+        ]
+    },
+    {
+        "id": "7811a940245824a3",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "errorDeviation",
+        "func": "let dev = Math.abs(msg.payload[0] - msg.payload[1]);\nmsg.payload = dev;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1700,
+        "wires": [
+            [
+                "469dc42e77c23d3c"
+            ]
+        ]
+    },
+    {
+        "id": "dcd3148c7d93bd18",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "469dc42e77c23d3c",
+        "type": "buffer-array",
+        "z": "278f7766e1536901",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 530,
+        "y": 1700,
+        "wires": [
+            [
+                "454ae3f95c90e704"
+            ]
+        ]
+    },
+    {
+        "id": "454ae3f95c90e704",
+        "type": "throttle",
+        "z": "278f7766e1536901",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 680,
+        "y": 1700,
+        "wires": [
+            [
+                "76675be4925c8777"
+            ]
+        ]
+    },
+    {
+        "id": "d71f8f68fe64e710",
+        "type": "statistics",
+        "z": "278f7766e1536901",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 990,
+        "y": 1700,
+        "wires": [
+            [
+                "dcd3148c7d93bd18",
+                "4fc719837580ec0e"
+            ]
+        ]
+    },
+    {
+        "id": "76675be4925c8777",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 1700,
+        "wires": [
+            [
+                "d71f8f68fe64e710"
+            ]
+        ]
+    },
+    {
+        "id": "4fc719837580ec0e",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        speed_dev: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        machine: \"Truyền động\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 1780,
+        "wires": [
+            [
+                "302f92467e811a05"
+            ]
+        ]
+    },
+    {
+        "id": "302f92467e811a05",
+        "type": "influxdb out",
+        "z": "278f7766e1536901",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1220,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "e2187250e7b22b53",
+        "type": "throttle",
+        "z": "965c7750b786c8eb",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "seconds",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "08cb58802c88a954"
+            ]
+        ]
+    },
+    {
+        "id": "08cb58802c88a954",
+        "type": "function",
+        "z": "965c7750b786c8eb",
+        "name": "101-Filter",
+        "func": "let data = {\n    payload: {\n        \"D4\": [{\n            \"speed_sp\": msg.payload.speed_sp,\n            \"speed_pv\": msg.payload.speed_pv,\n            \"motor_load_pct\": msg.payload.motor_load_pct,\n            \"motor_temp_c\": msg.payload.motor_temp_c,\n            \"motor_torque_pct\": msg.payload.motor_torque_pct,\n            \"vfd_temp_c\": msg.payload.vfd_temp_c,\n        }]\n    }\n};\nreturn data;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 200,
+        "wires": [
+            [
+                "991450d3a8d91168"
+            ]
+        ]
+    },
+    {
+        "id": "991450d3a8d91168",
+        "type": "mqtt out",
+        "z": "965c7750b786c8eb",
+        "name": "gw-test",
+        "topic": "v1/gateway/telemetry",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e8a21669a45f89f6",
+        "x": 720,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "07439f725c666dc6",
+        "type": "s7 in",
+        "z": "965c7750b786c8eb",
+        "endpoint": "cab104e5afbb58fa",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 180,
+        "y": 200,
+        "wires": [
+            [
+                "e2187250e7b22b53"
+            ]
+        ]
+    },
+    {
+        "id": "d9c57e91eb407987",
+        "type": "s7 in",
+        "z": "965c7750b786c8eb",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 180,
+        "y": 360,
+        "wires": [
+            [
+                "2c0eaaa6dcc6d95d"
+            ]
+        ]
+    },
+    {
+        "id": "2c0eaaa6dcc6d95d",
+        "type": "throttle",
+        "z": "965c7750b786c8eb",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "seconds",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 330,
+        "y": 360,
+        "wires": [
+            [
+                "1120b809be4e5c0f"
+            ]
+        ]
+    },
+    {
+        "id": "1120b809be4e5c0f",
+        "type": "function",
+        "z": "965c7750b786c8eb",
+        "name": "120-Filter",
+        "func": "let data = {\n    payload: {\n        \"HTTLB-ThuyLucChuD-motor\": [{\n            \"load\": msg.payload.motor_load_pct,\n            \"running\": msg.payload.motor_running,\n            \"error\": msg.payload.motor_error,\n        }],\n        \"HTTLB-ThuyLucChuD-gearbox_oil\": [{\n            \"running\": msg.payload.gearbox_oil_running,\n            \"error\": msg.payload.gearbox_oil_error,\n        }],\n        \"HTTLB-SangPhanLyThaiNhe-motor_10207\": [{\n            \"load\": msg.payload.motor_load_pct_2,\n            \"running\": msg.payload.motor_running_2,\n            \"error\": msg.payload.motor_error_2,\n        }],\n        \"HTTLB-SangTrong-motor\": [{\n            \"load\": msg.payload.motor_load_pct_3,\n            \"running\": msg.payload.motor_running_3,\n            \"error\": msg.payload.motor_error_3,\n        }],\n        \"HTTLB-BomBotThuyLuc-motor\": [{\n            \"load\": msg.payload.motor_load_pct_4,\n            \"running\": msg.payload.motor_running_4,\n            \"error\": msg.payload.motor_error_4,\n        }],\n        \"HTLCNDC-LocCatNongDoCaoCap2-pressure\": [{\n            \"p-in\": msg.payload.p_in_5,\n            \"p-out\": msg.payload.p_out_5,\n            \"p-delta\": msg.payload.p_delta_5,\n            \"p-backwash\": msg.payload.q_backwash_5,\n        }],\n        \"HTLCNDC-BayCat-PT_102130\": [{\n            \"p-in\": msg.payload.p_in_6,\n        }],\n        \"HTLCNDC-BomBotCap2-motor_P10214\": [{\n            \"load\": msg.payload.motor_load_pct_7,\n            \"running\": msg.payload.motor_running_7,\n            \"error\": msg.payload.motor_error_7,\n        }],\n        \"HTLCNDC-VitThaiCanNang-motor_10291\": [{\n            \"running\": msg.payload.motor_running_9,\n            \"error\": msg.payload.motor_error_9,\n        }],\n        \"HTST-SangThoCap1_E10218-motor_10218\": [{\n            \"load\": msg.payload.motor_load_pct_10,\n            \"running\": msg.payload.motor_running_10,\n            \"error\": msg.payload.motor_error_10,\n        }],\n        \"HTST-SangThoCap1_E10218-pressure\": [{\n            \"p-in\": msg.payload.p_in_10,\n            \"p-out\": msg.payload.p_out_10,\n            \"p-delta\": msg.payload.p_delta_10,\n        }],\n        \"HTPS1-SangPhanSoi1-motor_10228\": [{\n            \"load\": msg.payload.motor_load_pct_11,\n            \"running\": msg.payload.motor_running_11,\n            \"error\": msg.payload.motor_error_11,\n        }],\n        \"HTPS1-SangPhanSoi1-pressure\": [{\n            \"p-in\": msg.payload.p_in_11,\n            \"p-out\": msg.payload.p_out_11,\n            \"p-delta\": msg.payload.p_delta_11,\n        }],\n        \"HTLCNDT-LocCatNongDoThapCap1-motor_10236\": [{\n            \"load\": msg.payload.motor_load_pct_12,\n            \"running\": msg.payload.motor_running_12,\n            \"error\": msg.payload.motor_error_12,\n        }],\n        \"HTLCNDT-LocCatNongDoThapCap1-pressure\": [{\n            \"p-in\": msg.payload.p_in_12,\n            \"p-out\": msg.payload.p_out_12,\n            \"p-discharge\": msg.payload.p_discharge_12,\n            \"p-backwash\": msg.payload.p_backwash_12,\n        }],\n        \"HTLCNDT-MayEpCat-motor_10293-1\": [{\n            \"load\": msg.payload.motor_load_pct_13,\n            \"running\": msg.payload.motor_running_13,\n            \"error\": msg.payload.motor_error_13,\n        }],\n        \"HTST-SangTinhCap1-motor_10252\": [{\n            \"load\": msg.payload.motor_load_pct_14,\n            \"running\": msg.payload.motor_running_14,\n            \"error\": msg.payload.motor_error_14,\n        }],\n        \"HTST-SangTinhCap1-pressure\": [{\n            \"p-in\": msg.payload.p_in_14,\n            \"p-out\": msg.payload.p_out_14,\n            \"p-delta\": msg.payload.p_delta_14,\n        }], \n        \"HTLDCD-CoDacDiaSF-motor_10231\": [{\n            \"load\": msg.payload.motor_load_pct_15,\n            \"running\": msg.payload.motor_running_15,\n            \"error\": msg.payload.motor_error_15,\n        }],\n        \"HTLDCD-CoDacDiaSF-pressure\": [{\n            \"p-in\": msg.payload.p_in_15,\n        }],\n        \"HTLDCD-BomBotLenThapSF-motor_10233\": [{\n            \"load\": msg.payload.motor_load_pct_16,\n            \"running\": msg.payload.motor_running_16,\n            \"error\": msg.payload.motor_error_16,\n        }],\n        \"HTLDCD-BeBot-motor_10233\": [{\n            \"load\": msg.payload.motor_load_pct_17,\n            \"running\": msg.payload.motor_running_17,\n            \"error\": msg.payload.motor_error_17,\n        }],\n        \"HTLDCD-BeBot-level\": [{\n            \"level\": msg.payload.level_pulp_tank_17,\n        }],\n        \"HTLDCD-BeNuocTrangt-level\": [{\n            \"level\": msg.payload.level_pulp_tank_18,\n        }],\n        \"HTLDCD-BomNuocTrangCatBotVaRuaLuoi-motor_10286\": [{\n            \"load\": msg.payload.motor_load_pct_19,\n            \"running\": msg.payload.motor_running_19,\n            \"error\": msg.payload.motor_error_19,\n        }],\n        \"HTLDCD-BomNuocTrangCatBotVaRuaLuoi-pressure\": [{\n            \"p-out\": msg.payload.p_out_19,\n        }],\n        \"HTPTN-BomBot-motor_10272\": [{\n            \"load\": msg.payload.motor_load_pct_20,\n            \"running\": msg.payload.motor_running_20,\n            \"error\": msg.payload.motor_error_20,\n        }],\n        \"HTPTN-BomBot-control\": [{\n            \"qic-open\": msg.payload.qic_open_20,\n            \"pic-open\": msg.payload.pic_open_20,\n        }],\n        \"HTPTN-TrucVitEp-motor_10265\": [{\n            \"load\": msg.payload.motor_load_pct_21,\n            \"running\": msg.payload.motor_running_21,\n            \"error\": msg.payload.motor_error_21,\n        }],\n        \"HTPTN-TrucVitChen-motor_10266\": [{\n            \"load\": msg.payload.motor_load_pct_22,\n            \"running\": msg.payload.motor_running_22,\n            \"error\": msg.payload.motor_error_22,\n        }],\n        \"HTPTN-TrucVitDanhToiVaGiaNhiet-motor_10267\": [{\n            \"running\": msg.payload.motor_running_23,\n            \"error\": msg.payload.motor_error_23,\n        }],\n        \"HTPTN-TrucVitGiaNhiet-motor_10268\": [{\n            \"load\": msg.payload.motor_load_pct_24,\n            \"running\": msg.payload.motor_running_24,\n            \"error\": msg.payload.motor_error_24,\n        }],\n        \"HTPTN-TrucVitGiaNhiet-pressure\": [{\n            \"p-in\": msg.payload.p_in_24,\n        }],\n        \"HTPTN-TrucVitCapBotVaoNghien-motor_10269\": [{\n            \"load\": msg.payload.motor_load_pct_25,\n            \"running\": msg.payload.motor_running_25,\n            \"error\": msg.payload.motor_error_25,\n        }],\n        \"HTPTN-TrucVitNghienPhanTanNhiet-motor_10270\": [{\n            \"load\": msg.payload.motor_load_pct_26,\n            \"running\": msg.payload.motor_running_26,\n            \"error\": msg.payload.motor_error_26,\n        }],\n        \"HTND_LF-NghienDia-level\": [{\n            \"level\": msg.payload.level_pulp_tank_27,\n        }],\n        \"HTND_LF-NghienDia-motor_Khuay_A-PTN\": [{\n            \"load\": msg.payload.motor_load_pct_27_1,\n            \"running\": msg.payload.motor_running_27_1,\n            \"error\": msg.payload.motor_error_27_1,\n        }],\n        \"HTND_LF-NghienDia-motor_BomBot_10229\": [{\n            \"load\": msg.payload.motor_load_pct_27_2,\n            \"running\": msg.payload.motor_running_27_2,\n            \"error\": msg.payload.motor_error_27_2,\n        }],\n        \"HTND_LF-NghienDia-pressure_PIC_102301\": [{\n            \"p-in\": msg.payload.p_in_27_1,\n        }],\n        \"HTND_LF-NghienDia-motor_10273\": [{\n            \"load\": msg.payload.motor_load_pct_27_3,\n            \"running\": msg.payload.motor_running_27_3,\n            \"error\": msg.payload.motor_error_27_3,\n        }],\n        \"HTND_LF-NghienDia-pressure_FIC_102730\": [{\n            \"p-out\": msg.payload.p_in_27_2,\n        }],\n        \"HTND_LF-NghienDia-control_PT_102731\": [{\n            \"fic-open\": msg.payload.fic_open_27,\n        }],\n        \"HTSPS2-SangPhan2-motor_10274\": [{\n            \"load\": msg.payload.motor_load_pct_28,\n            \"running\": msg.payload.motor_running_28,\n            \"error\": msg.payload.motor_error_28,\n        }],\n        \"HTSPS2-SangPhanSoi2-pressure\": [{\n            \"p-in\": msg.payload.p_in_28,\n            \"p-out\": msg.payload.p_out_28,\n            \"p-delta\": msg.payload.p_delta_28,\n        }],\n        \"TBTP-ThapBotMF-motor_Khuay\": [{\n            \"load\": msg.payload.motor_load_pct_29_1,\n            \"running\": msg.payload.motor_running_29_1,\n            \"error\": msg.payload.motor_error_29_1,\n        }],\n        \"TBTP-ThapBotMF-motor_BomBot\": [{\n            \"load\": msg.payload.motor_load_pct_29_2,\n            \"running\": msg.payload.motor_running_29_2,\n            \"error\": msg.payload.motor_error_29_2,\n        }],\n        \"TBTP-ThapBotMF-level\": [{\n            \"level\": msg.payload.level_pulp_tank_29,\n        }],\n    }\n};\nreturn data;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 360,
+        "wires": [
+            [
+                "991450d3a8d91168"
+            ]
+        ]
     }
 ]
