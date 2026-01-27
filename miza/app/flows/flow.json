@@ -11,14 +11,14 @@
         "id": "4f96d0238c546860",
         "type": "tab",
         "label": "Hệ thống lọc cát nồng độ cao",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
     {
         "id": "85e3b6ed06d4064d",
         "type": "tab",
-        "label": "Hệ thống sàn thô",
+        "label": "Hệ thống sàng thô",
         "disabled": false,
         "info": "",
         "env": []
@@ -89,6 +89,458 @@
             {
                 "addr": "DB3564,X30.0",
                 "name": "gearbox_oil_running"
+            },
+            {
+                "addr": "DB3562,X142.0",
+                "name": "gearbox_oil_error"
+            },
+            {
+                "addr": "DB2781,R24",
+                "name": "motor_load_pct_2"
+            },
+            {
+                "addr": "DB2785,X30.0",
+                "name": "motor_running_2"
+            },
+            {
+                "addr": "DB2782,X142.0",
+                "name": "motor_error_2"
+            },
+            {
+                "addr": "DB2490,R24",
+                "name": "motor_load_pct_3"
+            },
+            {
+                "addr": "DB2494,X30.0",
+                "name": "motor_running_3"
+            },
+            {
+                "addr": "DB2491,X142.0",
+                "name": "motor_error_3"
+            },
+            {
+                "addr": "DB2723,R24",
+                "name": "motor_load_pct_4"
+            },
+            {
+                "addr": "DB2727,X30.0",
+                "name": "motor_running_4"
+            },
+            {
+                "addr": "DB2724,X142.0",
+                "name": "motor_error_4"
+            },
+            {
+                "addr": "DB372,R86",
+                "name": "p_in_5"
+            },
+            {
+                "addr": "DB398,R86",
+                "name": "p_out_5"
+            },
+            {
+                "addr": "DB346,R392",
+                "name": "p_delta_5"
+            },
+            {
+                "addr": "DB355,R86",
+                "name": "q_backwash_5"
+            },
+            {
+                "addr": "DB285,R86",
+                "name": "p_in_6"
+            },
+            {
+                "addr": "DB2508,R24",
+                "name": "motor_load_pct_7"
+            },
+            {
+                "addr": "DB2512,X30.0",
+                "name": "motor_running_7"
+            },
+            {
+                "addr": "DB2509,X142.0",
+                "name": "motor_error_7"
+            },
+            {
+                "addr": "DB3059,X30.0",
+                "name": "motor_running_9"
+            },
+            {
+                "addr": "DB3057,X142.0",
+                "name": "motor_error_9"
+            },
+            {
+                "addr": "DB800,R24",
+                "name": "motor_load_pct_10"
+            },
+            {
+                "addr": "DB804,X30.0",
+                "name": "motor_running_10"
+            },
+            {
+                "addr": "DB801,X142.0",
+                "name": "motor_error_10"
+            },
+            {
+                "addr": "DB681,R86",
+                "name": "p_in_10"
+            },
+            {
+                "addr": "DB415,R86",
+                "name": "p_out_10"
+            },
+            {
+                "addr": "DB789,R392",
+                "name": "p_delta_10"
+            },
+            {
+                "addr": "DB646,R24",
+                "name": "motor_load_pct_11"
+            },
+            {
+                "addr": "DB650,X30.0",
+                "name": "motor_running_11"
+            },
+            {
+                "addr": "DB647,X142.0",
+                "name": "motor_error_11"
+            },
+            {
+                "addr": "DB788,R86",
+                "name": "p_in_11"
+            },
+            {
+                "addr": "DB569,R86",
+                "name": "p_out_11"
+            },
+            {
+                "addr": "DB795,R392",
+                "name": "p_delta_11"
+            },
+            {
+                "addr": "DB2854,R24",
+                "name": "motor_load_pct_12"
+            },
+            {
+                "addr": "DB2858,X30.0",
+                "name": "motor_running_12"
+            },
+            {
+                "addr": "DB2855,X142.0",
+                "name": "motor_error_12"
+            },
+            {
+                "addr": "DB1201,R86",
+                "name": "p_in_12"
+            },
+            {
+                "addr": "DB1247,R86",
+                "name": "p_out_12"
+            },
+            {
+                "addr": "DB1189,R86",
+                "name": "p_discharge_12"
+            },
+            {
+                "addr": "DB2019,R86",
+                "name": "p_backwash_12"
+            },
+            {
+                "addr": "DB3434,R24",
+                "name": "motor_load_pct_13"
+            },
+            {
+                "addr": "DB3438,X30.0",
+                "name": "motor_running_13"
+            },
+            {
+                "addr": "DB3435,X142.0",
+                "name": "motor_error_13"
+            },
+            {
+                "addr": "DB928,R24",
+                "name": "motor_load_pct_14"
+            },
+            {
+                "addr": "DB932,X30.0",
+                "name": "motor_running_14"
+            },
+            {
+                "addr": "DB929,X142.0",
+                "name": "motor_error_14"
+            },
+            {
+                "addr": "DB1466,R86",
+                "name": "p_in_14"
+            },
+            {
+                "addr": "DB1798,R86",
+                "name": "p_out_14"
+            },
+            {
+                "addr": "DB1847,R392",
+                "name": "p_delta_14"
+            },
+            {
+                "addr": "DB873,R24",
+                "name": "motor_load_pct_15"
+            },
+            {
+                "addr": "DB877,X30.0",
+                "name": "motor_running_15"
+            },
+            {
+                "addr": "DB874,X142.0",
+                "name": "motor_error_15"
+            },
+            {
+                "addr": "DB1902,R86",
+                "name": "p_in_15"
+            },
+            {
+                "addr": "DB1284,R24",
+                "name": "motor_load_pct_16"
+            },
+            {
+                "addr": "DB1288,X30.0",
+                "name": "motor_running_16"
+            },
+            {
+                "addr": "DB1285,X142.0",
+                "name": "motor_error_16"
+            },
+            {
+                "addr": "DB935,R24",
+                "name": "motor_load_pct_17"
+            },
+            {
+                "addr": "DB939,X30.0",
+                "name": "motor_running_17"
+            },
+            {
+                "addr": "DB936,X142.0",
+                "name": "motor_error_17"
+            },
+            {
+                "addr": "DB974,R86",
+                "name": "level_pulp_tank_17"
+            },
+            {
+                "addr": "DB2956,R86",
+                "name": "level_pulp_tank_18"
+            },
+            {
+                "addr": "DB2687,R24",
+                "name": "motor_load_pct_19"
+            },
+            {
+                "addr": "DB2691,X30.0",
+                "name": "motor_running_19"
+            },
+            {
+                "addr": "DB2688,X142.0",
+                "name": "motor_error_19"
+            },
+            {
+                "addr": "DB1902,R86",
+                "name": "p_out_19"
+            },
+            {
+                "addr": "DB2352,R24",
+                "name": "motor_load_pct_20"
+            },
+            {
+                "addr": "DB2356,X30.0",
+                "name": "motor_running_20"
+            },
+            {
+                "addr": "DB2353,X142.0",
+                "name": "motor_error_20"
+            },
+            {
+                "addr": "DB2127,X60.0",
+                "name": "qic_open_20"
+            },
+            {
+                "addr": "DB2134,X60.0",
+                "name": "pic_open_20"
+            },
+            {
+                "addr": "DB2994,R24",
+                "name": "motor_load_pct_21"
+            },
+            {
+                "addr": "DB2998,X30.0",
+                "name": "motor_running_21"
+            },
+            {
+                "addr": "DB2995,X142.0",
+                "name": "motor_error_21"
+            },
+            {
+                "addr": "DB3012,R24",
+                "name": "motor_load_pct_22"
+            },
+            {
+                "addr": "DB3016,X30.0",
+                "name": "motor_running_22"
+            },
+            {
+                "addr": "DB3013,X142.0",
+                "name": "motor_error_22"
+            },
+            {
+                "addr": "DB2928,X30.0",
+                "name": "motor_running_23"
+            },
+            {
+                "addr": "DB2926,X142.0",
+                "name": "motor_error_23"
+            },
+            {
+                "addr": "DB3323,R24",
+                "name": "motor_load_pct_24"
+            },
+            {
+                "addr": "DB3327,X30.0",
+                "name": "motor_running_24"
+            },
+            {
+                "addr": "DB3324,X142.0",
+                "name": "motor_error_24"
+            },
+            {
+                "addr": "DB1874,R86",
+                "name": "p_in_24"
+            },
+            {
+                "addr": "DB3286,R24",
+                "name": "motor_load_pct_25"
+            },
+            {
+                "addr": "DB3308,X30.0",
+                "name": "motor_running_25"
+            },
+            {
+                "addr": "DB3287,X142.0",
+                "name": "motor_error_25"
+            },
+            {
+                "addr": "DB3177,R24",
+                "name": "motor_load_pct_26"
+            },
+            {
+                "addr": "DB3183,X30.0",
+                "name": "motor_running_26"
+            },
+            {
+                "addr": "DB3179,X142.0",
+                "name": "motor_error_26"
+            },
+            {
+                "addr": "DB3529,R86",
+                "name": "level_pulp_tank_27"
+            },
+            {
+                "addr": "DB3543,R24",
+                "name": "motor_load_pct_27_1"
+            },
+            {
+                "addr": "DB3547,X30.0",
+                "name": "motor_running_27_1"
+            },
+            {
+                "addr": "DB3544,X142.0",
+                "name": "motor_error_27_1"
+            },
+            {
+                "addr": "DB2800,R24",
+                "name": "motor_load_pct_27_2"
+            },
+            {
+                "addr": "DB2804,X30.0",
+                "name": "motor_running_27_2"
+            },
+            {
+                "addr": "DB2801,X142.0",
+                "name": "motor_error_27_2"
+            },
+            {
+                "addr": "DB1025,R86",
+                "name": "p_in_27_1"
+            },
+            {
+                "addr": "DB3157,R24",
+                "name": "motor_load_pct_27_3"
+            },
+            {
+                "addr": "DB3162,X30.0",
+                "name": "motor_running_27_3"
+            },
+            {
+                "addr": "DB3159,X142.0",
+                "name": "motor_error_27_3"
+            },
+            {
+                "addr": "DB2231,X60.0",
+                "name": "fic_open_27"
+            },
+            {
+                "addr": "DB2190,R86",
+                "name": "p_out_27_2"
+            },
+            {
+                "addr": "DB3257,R24",
+                "name": "motor_load_pct_28"
+            },
+            {
+                "addr": "DB3261,X30.0",
+                "name": "motor_running_28"
+            },
+            {
+                "addr": "DB3258,X142.0",
+                "name": "motor_error_28"
+            },
+            {
+                "addr": "DB2123,R86",
+                "name": "p_in_28"
+            },
+            {
+                "addr": "DB2195,R86",
+                "name": "p_out_28"
+            },
+            {
+                "addr": "DB2296,R392",
+                "name": "p_delta_28"
+            },
+            {
+                "addr": "DB905,R24",
+                "name": "motor_load_pct_29_1"
+            },
+            {
+                "addr": "DB909,X30.0",
+                "name": "motor_running_29_1"
+            },
+            {
+                "addr": "DB906,X142.0",
+                "name": "motor_error_29_1"
+            },
+            {
+                "addr": "DB1054,R86",
+                "name": "level_pulp_tank_29"
+            },
+            {
+                "addr": "DB501,R24",
+                "name": "motor_load_pct_29_2"
+            },
+            {
+                "addr": "DB505,X30.0",
+                "name": "motor_running_29_2"
+            },
+            {
+                "addr": "DB502,X142.0",
+                "name": "motor_error_29_2"
             }
         ]
     },
@@ -846,8 +1298,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 290,
-        "y": 980,
+        "x": 930,
+        "y": 800,
         "wires": [
             [
                 "83bce01c635c7021"
@@ -860,8 +1312,8 @@
         "z": "a0eb9d8759f0d6f7",
         "name": "Digital Clock",
         "info": "",
-        "x": 270,
-        "y": 920,
+        "x": 910,
+        "y": 740,
         "wires": []
     },
     {
@@ -881,8 +1333,8 @@
         "output": "payload",
         "outputType": "msg",
         "outTz": "Asia/Bangkok",
-        "x": 450,
-        "y": 980,
+        "x": 1090,
+        "y": 800,
         "wires": [
             [
                 "5e6e4c789ff6ac0c"
@@ -902,8 +1354,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 850,
-        "y": 980,
+        "x": 1490,
+        "y": 800,
         "wires": []
     },
     {
@@ -918,8 +1370,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 980,
+        "x": 1290,
+        "y": 800,
         "wires": [
             [
                 "0b4a96dcd751d73c"
@@ -1043,8 +1495,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
-        "y": 800,
+        "x": 580,
+        "y": 700,
         "wires": []
     },
     {
@@ -1105,24 +1557,1042 @@
         "variable": "gearbox_oil_running",
         "diff": true,
         "name": "",
-        "x": 280,
-        "y": 1080,
+        "x": 920,
+        "y": 900,
         "wires": [
             []
         ]
     },
     {
-        "id": "06f2da7a06e6676a",
-        "type": "comment",
-        "z": "4f96d0238c546860",
-        "name": "Sàn phân ly thải nhẹ (nghiền lại)",
-        "info": "",
-        "x": 310,
-        "y": 80,
+        "id": "d10ba73beb30715f",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "gearbox_oil_error",
+        "diff": false,
+        "name": "",
+        "x": 300,
+        "y": 840,
+        "wires": [
+            [
+                "53d3b563bdfd68b8",
+                "2c01b3fedc56e0f0"
+            ]
+        ]
+    },
+    {
+        "id": "53d3b563bdfd68b8",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "gearbox_oil_error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 840,
         "wires": []
     },
     {
-        "id": "6d8e2629a1a2b786",
+        "id": "2c01b3fedc56e0f0",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        gearbox_oil_error: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Thủy lực chữ D\",\n        device: \"Bơm dầu hộp số\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 880,
+        "wires": [
+            [
+                "4775359aecbba744"
+            ]
+        ]
+    },
+    {
+        "id": "4775359aecbba744",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 659,
+        "y": 882,
+        "wires": []
+    },
+    {
+        "id": "e694147e6390d6e6",
+        "type": "comment",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Động cơ",
+        "info": "",
+        "x": 260,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "2e8c4c51a38255c6",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "6617d74ff22e23af",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_load_pct_2",
+        "diff": true,
+        "name": "",
+        "x": 290,
+        "y": 1120,
+        "wires": [
+            [
+                "6349ca0ff494596f"
+            ]
+        ]
+    },
+    {
+        "id": "6349ca0ff494596f",
+        "type": "buffer-array",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 320,
+        "y": 1200,
+        "wires": [
+            [
+                "6a2741c4ea660078"
+            ]
+        ]
+    },
+    {
+        "id": "6a2741c4ea660078",
+        "type": "throttle",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 470,
+        "y": 1200,
+        "wires": [
+            [
+                "ca065907ac78e415"
+            ]
+        ]
+    },
+    {
+        "id": "7ca4f45f5d4391f5",
+        "type": "statistics",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 780,
+        "y": 1200,
+        "wires": [
+            [
+                "2e8c4c51a38255c6",
+                "5df07652dcc2943f"
+            ]
+        ]
+    },
+    {
+        "id": "ca065907ac78e415",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 1200,
+        "wires": [
+            [
+                "7ca4f45f5d4391f5"
+            ]
+        ]
+    },
+    {
+        "id": "dd5f12f48caf4f41",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_running_2",
+        "diff": false,
+        "name": "",
+        "x": 280,
+        "y": 1280,
+        "wires": [
+            [
+                "5fa2a25ee820967b",
+                "9fbeeaa00b0a0289"
+            ]
+        ]
+    },
+    {
+        "id": "9fbeeaa00b0a0289",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "motor_running",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "5df07652dcc2943f",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_load_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Sàng phân ly thải nhẹ (nghiền lại)\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1280,
+        "wires": [
+            [
+                "42684c305e280f2d"
+            ]
+        ]
+    },
+    {
+        "id": "42684c305e280f2d",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1010,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "5fa2a25ee820967b",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Sàng phân ly thải nhẹ (nghiền lại)\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1360,
+        "wires": [
+            [
+                "e12358df965a0157"
+            ]
+        ]
+    },
+    {
+        "id": "e12358df965a0157",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 670,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "51267b67d9a38f9f",
+        "type": "comment",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Sàng phân ly thải nhẹ (nghiền lại)",
+        "info": "",
+        "x": 330,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "f44d0c9a4d3e9549",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_error_2",
+        "diff": false,
+        "name": "",
+        "x": 270,
+        "y": 1440,
+        "wires": [
+            [
+                "42671598db8fb5fc",
+                "1e25cbceb259d794"
+            ]
+        ]
+    },
+    {
+        "id": "42671598db8fb5fc",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "motor_error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "1e25cbceb259d794",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_error: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Sàng phân ly thải nhẹ (nghiền lại)\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1480,
+        "wires": [
+            [
+                "b0db7574a0fac73f"
+            ]
+        ]
+    },
+    {
+        "id": "b0db7574a0fac73f",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 639,
+        "y": 1482,
+        "wires": []
+    },
+    {
+        "id": "2ab471922ae90221",
+        "type": "comment",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Động cơ",
+        "info": "",
+        "x": 260,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "a543dc597568fec8",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "9b632b35e6e77379",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_load_pct_3",
+        "diff": true,
+        "name": "",
+        "x": 290,
+        "y": 1660,
+        "wires": [
+            [
+                "ea5df5757fdebc4e"
+            ]
+        ]
+    },
+    {
+        "id": "ea5df5757fdebc4e",
+        "type": "buffer-array",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 320,
+        "y": 1740,
+        "wires": [
+            [
+                "2bf963a10d66eef1"
+            ]
+        ]
+    },
+    {
+        "id": "2bf963a10d66eef1",
+        "type": "throttle",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 470,
+        "y": 1740,
+        "wires": [
+            [
+                "18378f7836f5104d"
+            ]
+        ]
+    },
+    {
+        "id": "891fd45a02a3b02a",
+        "type": "statistics",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 780,
+        "y": 1740,
+        "wires": [
+            [
+                "a543dc597568fec8",
+                "fb1e305bd40a4e3b"
+            ]
+        ]
+    },
+    {
+        "id": "18378f7836f5104d",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 1740,
+        "wires": [
+            [
+                "891fd45a02a3b02a"
+            ]
+        ]
+    },
+    {
+        "id": "da356b4bdcc1b878",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_running_3",
+        "diff": false,
+        "name": "",
+        "x": 280,
+        "y": 1820,
+        "wires": [
+            [
+                "530b492d7cc575c6",
+                "9f96eb9a878ec4fd"
+            ]
+        ]
+    },
+    {
+        "id": "9f96eb9a878ec4fd",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "motor_running",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "fb1e305bd40a4e3b",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_load_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Sàng trống\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1820,
+        "wires": [
+            [
+                "1dd4e951f705ce02"
+            ]
+        ]
+    },
+    {
+        "id": "1dd4e951f705ce02",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1010,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "530b492d7cc575c6",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Sàng trống\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1900,
+        "wires": [
+            [
+                "d38c3d47300521d3"
+            ]
+        ]
+    },
+    {
+        "id": "d38c3d47300521d3",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 670,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "532a6594a4dabf42",
+        "type": "comment",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Sàng trống",
+        "info": "",
+        "x": 260,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "05d08df5d56eb2bf",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_error_3",
+        "diff": false,
+        "name": "",
+        "x": 270,
+        "y": 1980,
+        "wires": [
+            [
+                "6e1763a3f4623e25",
+                "468fabe5cb141446"
+            ]
+        ]
+    },
+    {
+        "id": "6e1763a3f4623e25",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "motor_error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "468fabe5cb141446",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_error: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Sàng trống\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2020,
+        "wires": [
+            [
+                "ad5bb74a0442097d"
+            ]
+        ]
+    },
+    {
+        "id": "ad5bb74a0442097d",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 639,
+        "y": 2022,
+        "wires": []
+    },
+    {
+        "id": "64d7d42cb74fde5c",
+        "type": "comment",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Động cơ",
+        "info": "",
+        "x": 260,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "a543362eb1be23dd",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 2280,
+        "wires": []
+    },
+    {
+        "id": "08378a782b9f299e",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_load_pct_4",
+        "diff": true,
+        "name": "",
+        "x": 290,
+        "y": 2200,
+        "wires": [
+            [
+                "943c93d8b19f54e5"
+            ]
+        ]
+    },
+    {
+        "id": "943c93d8b19f54e5",
+        "type": "buffer-array",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 320,
+        "y": 2280,
+        "wires": [
+            [
+                "0e5bf1cf5385dc20"
+            ]
+        ]
+    },
+    {
+        "id": "0e5bf1cf5385dc20",
+        "type": "throttle",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 470,
+        "y": 2280,
+        "wires": [
+            [
+                "24e0f01096094ab3"
+            ]
+        ]
+    },
+    {
+        "id": "e46d426e2aebce27",
+        "type": "statistics",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 780,
+        "y": 2280,
+        "wires": [
+            [
+                "a543362eb1be23dd",
+                "1a5215d8d0e72e10"
+            ]
+        ]
+    },
+    {
+        "id": "24e0f01096094ab3",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 2280,
+        "wires": [
+            [
+                "e46d426e2aebce27"
+            ]
+        ]
+    },
+    {
+        "id": "42298761a1e9c445",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_running_4",
+        "diff": false,
+        "name": "",
+        "x": 280,
+        "y": 2360,
+        "wires": [
+            [
+                "ffe6101704f88214",
+                "2a31e3d18ab01b7c"
+            ]
+        ]
+    },
+    {
+        "id": "2a31e3d18ab01b7c",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "motor_running",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "1a5215d8d0e72e10",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_load_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Bơm bột thủy lực\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 2360,
+        "wires": [
+            [
+                "410f979c43e70bb0"
+            ]
+        ]
+    },
+    {
+        "id": "410f979c43e70bb0",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1010,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "ffe6101704f88214",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Bơm bột thủy lực\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 2440,
+        "wires": [
+            [
+                "418bb76e537ee5e8"
+            ]
+        ]
+    },
+    {
+        "id": "418bb76e537ee5e8",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 670,
+        "y": 2440,
+        "wires": []
+    },
+    {
+        "id": "e6596217fc9e263f",
+        "type": "comment",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Bơm bột thủy lực",
+        "info": "",
+        "x": 280,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "c56cf32c21f39d47",
+        "type": "s7 in",
+        "z": "a0eb9d8759f0d6f7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_error_4",
+        "diff": false,
+        "name": "",
+        "x": 270,
+        "y": 2520,
+        "wires": [
+            [
+                "e39e49400f962e14",
+                "91eb9a010b3e535c"
+            ]
+        ]
+    },
+    {
+        "id": "e39e49400f962e14",
+        "type": "debug",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "motor_error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 2520,
+        "wires": []
+    },
+    {
+        "id": "91eb9a010b3e535c",
+        "type": "function",
+        "z": "a0eb9d8759f0d6f7",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_error: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Bơm bột thủy lực\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2560,
+        "wires": [
+            [
+                "dc1f5026ddcfdd0f"
+            ]
+        ]
+    },
+    {
+        "id": "dc1f5026ddcfdd0f",
+        "type": "influxdb out",
+        "z": "a0eb9d8759f0d6f7",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 639,
+        "y": 2562,
+        "wires": []
+    },
+    {
+        "id": "56a3ddc5b6090137",
+        "type": "comment",
+        "z": "4f96d0238c546860",
+        "name": "Áp",
+        "info": "",
+        "x": 230,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "2269b3fe38999c69",
         "type": "debug",
         "z": "4f96d0238c546860",
         "name": "motor_load_pct_mean",
@@ -1135,43 +2605,43 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 960,
-        "y": 240,
+        "y": 320,
         "wires": []
     },
     {
-        "id": "2c58040e1d69cc16",
+        "id": "f9053b4be0c17248",
         "type": "s7 in",
         "z": "4f96d0238c546860",
         "endpoint": "e72fd5a230ded939",
         "mode": "single",
-        "variable": "motor_load_pct",
+        "variable": "p_in_5",
         "diff": true,
         "name": "",
-        "x": 260,
-        "y": 160,
+        "x": 230,
+        "y": 240,
         "wires": [
             [
-                "1b4a51b8620bd225"
+                "46d50b5a7dd4fef5"
             ]
         ]
     },
     {
-        "id": "1b4a51b8620bd225",
+        "id": "46d50b5a7dd4fef5",
         "type": "buffer-array",
         "z": "4f96d0238c546860",
         "name": "Stack 10",
         "bufferLen": "10",
         "startWhenFilled": true,
         "x": 300,
-        "y": 240,
+        "y": 320,
         "wires": [
             [
-                "c224567044c6b296"
+                "3e0469eac1352d89"
             ]
         ]
     },
     {
-        "id": "c224567044c6b296",
+        "id": "3e0469eac1352d89",
         "type": "throttle",
         "z": "4f96d0238c546860",
         "name": "",
@@ -1182,15 +2652,15 @@
         "blockSize": 0,
         "locked": false,
         "x": 450,
-        "y": 240,
+        "y": 320,
         "wires": [
             [
-                "7166b8e5edca9cf1"
+                "d7ac87078319941c"
             ]
         ]
     },
     {
-        "id": "674d8738b27de2d0",
+        "id": "b683a522e5a0aa23",
         "type": "statistics",
         "z": "4f96d0238c546860",
         "name": "",
@@ -1204,16 +2674,16 @@
         "stripFunction": false,
         "resultOnly": true,
         "x": 760,
-        "y": 240,
+        "y": 320,
         "wires": [
             [
-                "6d8e2629a1a2b786",
-                "cb9f8182d5e560d4"
+                "2269b3fe38999c69",
+                "3fff4f9f28f4cc70"
             ]
         ]
     },
     {
-        "id": "7166b8e5edca9cf1",
+        "id": "d7ac87078319941c",
         "type": "function",
         "z": "4f96d0238c546860",
         "name": "mean",
@@ -1225,88 +2695,19 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 240,
-        "wires": [
-            [
-                "674d8738b27de2d0"
-            ]
-        ]
-    },
-    {
-        "id": "6538a3c213972ce4",
-        "type": "s7 in",
-        "z": "4f96d0238c546860",
-        "endpoint": "e72fd5a230ded939",
-        "mode": "single",
-        "variable": "motor_running",
-        "diff": false,
-        "name": "",
-        "x": 250,
         "y": 320,
         "wires": [
             [
-                "551ef2e07b11319a",
-                "eb3ed5cffbf4518e"
+                "b683a522e5a0aa23"
             ]
         ]
     },
     {
-        "id": "eb3ed5cffbf4518e",
-        "type": "debug",
-        "z": "4f96d0238c546860",
-        "name": "motor_running",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 500,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "5fe3d5352d370acd",
-        "type": "s7 in",
-        "z": "4f96d0238c546860",
-        "endpoint": "e72fd5a230ded939",
-        "mode": "single",
-        "variable": "motor_error",
-        "diff": false,
-        "name": "",
-        "x": 250,
-        "y": 520,
-        "wires": [
-            [
-                "81eee67a7e382f63"
-            ]
-        ]
-    },
-    {
-        "id": "81eee67a7e382f63",
-        "type": "debug",
-        "z": "4f96d0238c546860",
-        "name": "motor_error",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 550,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "cb9f8182d5e560d4",
+        "id": "3fff4f9f28f4cc70",
         "type": "function",
         "z": "4f96d0238c546860",
         "name": "Insert data",
-        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_load_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Sàn phân ly thải nhẹ (nghiền lại)\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_in: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Lọc cát nồng độ cao cấp 2\",\n        device: \"Áp đầu vào\",\n        shift: shift,\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1314,15 +2715,15 @@
         "finalize": "",
         "libs": [],
         "x": 790,
-        "y": 320,
+        "y": 400,
         "wires": [
             [
-                "2cfc45a8b887de0e"
+                "e454c2fec9b857fa"
             ]
         ]
     },
     {
-        "id": "2cfc45a8b887de0e",
+        "id": "e454c2fec9b857fa",
         "type": "influxdb out",
         "z": "4f96d0238c546860",
         "influxdb": "f0bd2e60724446a6",
@@ -1336,97 +2737,152 @@
         "org": "organisation",
         "bucket": "bucket",
         "x": 990,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "551ef2e07b11319a",
-        "type": "function",
-        "z": "4f96d0238c546860",
-        "name": "Insert data",
-        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Thủy lực chữ D\",\n        device: \"Động cơ thủy lực\",\n        shift: shift,\n    }\n];\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 470,
-        "y": 400,
-        "wires": [
-            [
-                "50f5cc8225d0fd4d"
-            ]
-        ]
-    },
-    {
-        "id": "50f5cc8225d0fd4d",
-        "type": "influxdb out",
-        "z": "4f96d0238c546860",
-        "influxdb": "f0bd2e60724446a6",
-        "name": "miza",
-        "measurement": "miza_realtime",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 650,
         "y": 400,
         "wires": []
     },
     {
-        "id": "66d137c408cb88d4",
+        "id": "7510444e7a273732",
+        "type": "comment",
+        "z": "4f96d0238c546860",
+        "name": "Lọc cát nồng độ cao cấp 2",
+        "info": "",
+        "x": 290,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "caa6f786f7d6b170",
+        "type": "debug",
+        "z": "4f96d0238c546860",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "f05d5f731cc0c737",
         "type": "s7 in",
         "z": "4f96d0238c546860",
         "endpoint": "e72fd5a230ded939",
         "mode": "single",
-        "variable": "gearbox_oil_running",
-        "diff": false,
+        "variable": "p_out_5",
+        "diff": true,
         "name": "",
-        "x": 270,
-        "y": 660,
+        "x": 240,
+        "y": 440,
         "wires": [
             [
-                "6f871d5777b6bc92",
-                "8f1eaf98d6957b83"
+                "9ef6d7d13b018c23"
             ]
         ]
     },
     {
-        "id": "c26e5593efa6ef69",
-        "type": "comment",
+        "id": "9ef6d7d13b018c23",
+        "type": "buffer-array",
         "z": "4f96d0238c546860",
-        "name": "Bơm dầu hộp số",
-        "info": "",
-        "x": 260,
-        "y": 600,
-        "wires": []
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 300,
+        "y": 520,
+        "wires": [
+            [
+                "881ffe144addbac4"
+            ]
+        ]
     },
     {
-        "id": "6f871d5777b6bc92",
+        "id": "881ffe144addbac4",
+        "type": "throttle",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 450,
+        "y": 520,
+        "wires": [
+            [
+                "4e60f16fe152c89d"
+            ]
+        ]
+    },
+    {
+        "id": "72afb47c9ad192f8",
+        "type": "statistics",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 760,
+        "y": 520,
+        "wires": [
+            [
+                "caa6f786f7d6b170",
+                "86404d6d9751c232"
+            ]
+        ]
+    },
+    {
+        "id": "4e60f16fe152c89d",
         "type": "function",
         "z": "4f96d0238c546860",
-        "name": "Insert data",
-        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        gearbox_oil_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Thủy lực chữ D\",\n        device: \"Bơm dầu hộp số\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 660,
+        "x": 590,
+        "y": 520,
         "wires": [
             [
-                "7157285acdf4e6a2"
+                "72afb47c9ad192f8"
             ]
         ]
     },
     {
-        "id": "7157285acdf4e6a2",
+        "id": "86404d6d9751c232",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_out: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Lọc cát nồng độ cao cấp 2\",\n        device: \"Áp đầu ra\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 600,
+        "wires": [
+            [
+                "e3fdc4d39df0612e"
+            ]
+        ]
+    },
+    {
+        "id": "e3fdc4d39df0612e",
         "type": "influxdb out",
         "z": "4f96d0238c546860",
         "influxdb": "f0bd2e60724446a6",
@@ -1439,15 +2895,631 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 650,
-        "y": 660,
+        "x": 990,
+        "y": 600,
         "wires": []
     },
     {
-        "id": "8f1eaf98d6957b83",
+        "id": "0717341afaef58d3",
         "type": "debug",
         "z": "4f96d0238c546860",
-        "name": "gearbox_oil_running",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "c47c2040fc97bcce",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_delta_5",
+        "diff": true,
+        "name": "",
+        "x": 220,
+        "y": 600,
+        "wires": [
+            [
+                "931ead312f5b0202"
+            ]
+        ]
+    },
+    {
+        "id": "931ead312f5b0202",
+        "type": "buffer-array",
+        "z": "4f96d0238c546860",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 280,
+        "y": 680,
+        "wires": [
+            [
+                "70f467bf33bfefc1"
+            ]
+        ]
+    },
+    {
+        "id": "70f467bf33bfefc1",
+        "type": "throttle",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 430,
+        "y": 680,
+        "wires": [
+            [
+                "b79b15b39ba899ad"
+            ]
+        ]
+    },
+    {
+        "id": "1c8dc4562fdcf749",
+        "type": "statistics",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 740,
+        "y": 680,
+        "wires": [
+            [
+                "0717341afaef58d3",
+                "022a1bdc0c4faa26"
+            ]
+        ]
+    },
+    {
+        "id": "b79b15b39ba899ad",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 680,
+        "wires": [
+            [
+                "1c8dc4562fdcf749"
+            ]
+        ]
+    },
+    {
+        "id": "022a1bdc0c4faa26",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_delta: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Lọc cát nồng độ cao cấp 2\",\n        device: \"Chênh áp\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 760,
+        "wires": [
+            [
+                "9bfb3f20dd6c9b0a"
+            ]
+        ]
+    },
+    {
+        "id": "9bfb3f20dd6c9b0a",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 970,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "87b8f4850d0c8973",
+        "type": "debug",
+        "z": "4f96d0238c546860",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "c87b1b603a6f461a",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "q_backwash_5",
+        "diff": true,
+        "name": "",
+        "x": 220,
+        "y": 780,
+        "wires": [
+            [
+                "c91336d406f75fbc"
+            ]
+        ]
+    },
+    {
+        "id": "c91336d406f75fbc",
+        "type": "buffer-array",
+        "z": "4f96d0238c546860",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 260,
+        "y": 860,
+        "wires": [
+            [
+                "d1b2530b55ca89ee"
+            ]
+        ]
+    },
+    {
+        "id": "d1b2530b55ca89ee",
+        "type": "throttle",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 410,
+        "y": 860,
+        "wires": [
+            [
+                "e0f728dfaa0e5243"
+            ]
+        ]
+    },
+    {
+        "id": "d56bd0fc44110ece",
+        "type": "statistics",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 720,
+        "y": 860,
+        "wires": [
+            [
+                "87b8f4850d0c8973",
+                "fa6f6b72da83b9ed"
+            ]
+        ]
+    },
+    {
+        "id": "e0f728dfaa0e5243",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 860,
+        "wires": [
+            [
+                "d56bd0fc44110ece"
+            ]
+        ]
+    },
+    {
+        "id": "fa6f6b72da83b9ed",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        q_backwash: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Lọc cát nồng độ cao cấp 2\",\n        device: \"Điều khiển Lưu lượng nước sục rửa đầu thải\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 940,
+        "wires": [
+            [
+                "edb8cf53b85717c3"
+            ]
+        ]
+    },
+    {
+        "id": "edb8cf53b85717c3",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 950,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "a7208d81e104d1c7",
+        "type": "comment",
+        "z": "4f96d0238c546860",
+        "name": "Lọc cát nồng độ cao cấp 2",
+        "info": "",
+        "x": 250,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "3b8d03c1c1b1f9b5",
+        "type": "comment",
+        "z": "4f96d0238c546860",
+        "name": "Lưu lượng ",
+        "info": "",
+        "x": 200,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "0b4f7bf2f6054f50",
+        "type": "comment",
+        "z": "4f96d0238c546860",
+        "name": "Áp bẫy cát",
+        "info": "",
+        "x": 200,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "97a97994ccedf56f",
+        "type": "debug",
+        "z": "4f96d0238c546860",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "396d0ad2c79ab82c",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_in_6",
+        "diff": true,
+        "name": "",
+        "x": 190,
+        "y": 1120,
+        "wires": [
+            [
+                "edeee3c826c827ea"
+            ]
+        ]
+    },
+    {
+        "id": "edeee3c826c827ea",
+        "type": "buffer-array",
+        "z": "4f96d0238c546860",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 260,
+        "y": 1200,
+        "wires": [
+            [
+                "3c56419827678677"
+            ]
+        ]
+    },
+    {
+        "id": "3c56419827678677",
+        "type": "throttle",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 410,
+        "y": 1200,
+        "wires": [
+            [
+                "3e9399784c467c30"
+            ]
+        ]
+    },
+    {
+        "id": "b167da722bd5457d",
+        "type": "statistics",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 720,
+        "y": 1200,
+        "wires": [
+            [
+                "97a97994ccedf56f",
+                "b2ed04061a11bb75"
+            ]
+        ]
+    },
+    {
+        "id": "3e9399784c467c30",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 1200,
+        "wires": [
+            [
+                "b167da722bd5457d"
+            ]
+        ]
+    },
+    {
+        "id": "b2ed04061a11bb75",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        q_backwash: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Bẫy cát\",\n        device: \"Áp bẫy cát\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 1280,
+        "wires": [
+            [
+                "f8681d3c43528d0f"
+            ]
+        ]
+    },
+    {
+        "id": "f8681d3c43528d0f",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 950,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "6299f208a9b4181b",
+        "type": "comment",
+        "z": "4f96d0238c546860",
+        "name": "Bơm bột cấp 2",
+        "info": "",
+        "x": 220,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "2a7594020223b343",
+        "type": "debug",
+        "z": "4f96d0238c546860",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "f20e6d3b376a7911",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_load_pct_7",
+        "diff": true,
+        "name": "",
+        "x": 230,
+        "y": 1380,
+        "wires": [
+            [
+                "5eedabbe8b8be2e6"
+            ]
+        ]
+    },
+    {
+        "id": "5eedabbe8b8be2e6",
+        "type": "buffer-array",
+        "z": "4f96d0238c546860",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 260,
+        "y": 1460,
+        "wires": [
+            [
+                "4bf67b61defe79ca"
+            ]
+        ]
+    },
+    {
+        "id": "4bf67b61defe79ca",
+        "type": "throttle",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 410,
+        "y": 1460,
+        "wires": [
+            [
+                "9757a6de64a05de3"
+            ]
+        ]
+    },
+    {
+        "id": "f755a0cbb67e6de4",
+        "type": "statistics",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 720,
+        "y": 1460,
+        "wires": [
+            [
+                "2a7594020223b343",
+                "7b4b0773e77953a3"
+            ]
+        ]
+    },
+    {
+        "id": "9757a6de64a05de3",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 1460,
+        "wires": [
+            [
+                "f755a0cbb67e6de4"
+            ]
+        ]
+    },
+    {
+        "id": "251bfd308b773b79",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_running_7",
+        "diff": false,
+        "name": "",
+        "x": 220,
+        "y": 1540,
+        "wires": [
+            [
+                "0d08dae40c19c88a",
+                "63d267eb81b8af59"
+            ]
+        ]
+    },
+    {
+        "id": "63d267eb81b8af59",
+        "type": "debug",
+        "z": "4f96d0238c546860",
+        "name": "motor_running",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -1456,18 +3528,3875 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 720,
+        "x": 460,
+        "y": 1540,
         "wires": []
     },
     {
-        "id": "a9255bba43647058",
+        "id": "42ab097b6beddf7f",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_error_7",
+        "diff": false,
+        "name": "",
+        "x": 210,
+        "y": 1740,
+        "wires": [
+            [
+                "be4273a2544b956e",
+                "8b361d8ff17a4f66"
+            ]
+        ]
+    },
+    {
+        "id": "be4273a2544b956e",
+        "type": "debug",
+        "z": "4f96d0238c546860",
+        "name": "motor_error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "7b4b0773e77953a3",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_load_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Bơm bột cấp 2\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 1540,
+        "wires": [
+            [
+                "511b6d6b5d4620e3"
+            ]
+        ]
+    },
+    {
+        "id": "511b6d6b5d4620e3",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 950,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "0d08dae40c19c88a",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Bơm bột cấp 2\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1620,
+        "wires": [
+            [
+                "bf9a6c7af6f5046c"
+            ]
+        ]
+    },
+    {
+        "id": "bf9a6c7af6f5046c",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 610,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "8b361d8ff17a4f66",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_error: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Bơm bột cấp 2\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1780,
+        "wires": [
+            [
+                "cca3d0ab53ca4269"
+            ]
+        ]
+    },
+    {
+        "id": "cca3d0ab53ca4269",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 579,
+        "y": 1782,
+        "wires": []
+    },
+    {
+        "id": "e8846c09272a84e2",
         "type": "comment",
         "z": "4f96d0238c546860",
-        "name": "Động cơ",
+        "name": "Động cơ trục vít",
+        "info": "",
+        "x": 180,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "2aea3b9cd568ad4d",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_running_9",
+        "diff": false,
+        "name": "",
+        "x": 180,
+        "y": 1940,
+        "wires": [
+            [
+                "52e0d123ed1f619b",
+                "c3613159ed6e604c"
+            ]
+        ]
+    },
+    {
+        "id": "c3613159ed6e604c",
+        "type": "debug",
+        "z": "4f96d0238c546860",
+        "name": "motor_running",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "e4eb7ccce634afad",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_error_9",
+        "diff": false,
+        "name": "",
+        "x": 170,
+        "y": 2140,
+        "wires": [
+            [
+                "3d75769ebe127585",
+                "ed4f2419a0933e3d"
+            ]
+        ]
+    },
+    {
+        "id": "3d75769ebe127585",
+        "type": "debug",
+        "z": "4f96d0238c546860",
+        "name": "motor_error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "52e0d123ed1f619b",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Vít thải cặn nặng\",\n        device: \"Động cơ trục vít\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 2020,
+        "wires": [
+            [
+                "930cc32ce79e5956"
+            ]
+        ]
+    },
+    {
+        "id": "930cc32ce79e5956",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 570,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "ed4f2419a0933e3d",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_error: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Vít thải cặn nặng\",\n        device: \"Động cơ trục vít\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 2180,
+        "wires": [
+            [
+                "190e9fbfb9b280b9"
+            ]
+        ]
+    },
+    {
+        "id": "190e9fbfb9b280b9",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 539,
+        "y": 2182,
+        "wires": []
+    },
+    {
+        "id": "53a7302635ad73bc",
+        "type": "comment",
+        "z": "4f96d0238c546860",
+        "name": "Vít thải cặn nặng",
+        "info": "",
+        "x": 180,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "4b1465feb46a113b",
+        "type": "comment",
+        "z": "85e3b6ed06d4064d",
+        "name": "Động cơ sàng",
+        "info": "",
+        "x": 190,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "79c8c832240ac2af",
+        "type": "debug",
+        "z": "85e3b6ed06d4064d",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3a84abe67e601fa8",
+        "type": "s7 in",
+        "z": "85e3b6ed06d4064d",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_load_pct_10",
+        "diff": true,
+        "name": "",
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "f878ae28dd7226bd"
+            ]
+        ]
+    },
+    {
+        "id": "f878ae28dd7226bd",
+        "type": "buffer-array",
+        "z": "85e3b6ed06d4064d",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 240,
+        "y": 320,
+        "wires": [
+            [
+                "7f0190cb57318ed2"
+            ]
+        ]
+    },
+    {
+        "id": "7f0190cb57318ed2",
+        "type": "throttle",
+        "z": "85e3b6ed06d4064d",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 390,
+        "y": 320,
+        "wires": [
+            [
+                "ca5ddef1a049ea37"
+            ]
+        ]
+    },
+    {
+        "id": "9d3aefe6ea1954c8",
+        "type": "statistics",
+        "z": "85e3b6ed06d4064d",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 700,
+        "y": 320,
+        "wires": [
+            [
+                "79c8c832240ac2af",
+                "19fb4998da897894"
+            ]
+        ]
+    },
+    {
+        "id": "ca5ddef1a049ea37",
+        "type": "function",
+        "z": "85e3b6ed06d4064d",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 320,
+        "wires": [
+            [
+                "9d3aefe6ea1954c8"
+            ]
+        ]
+    },
+    {
+        "id": "a6afd72311c26bc5",
+        "type": "s7 in",
+        "z": "85e3b6ed06d4064d",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_running_10",
+        "diff": false,
+        "name": "",
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "8711c38ea8280551",
+                "d58451ebbc7c0209"
+            ]
+        ]
+    },
+    {
+        "id": "d58451ebbc7c0209",
+        "type": "debug",
+        "z": "85e3b6ed06d4064d",
+        "name": "motor_running",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "19fb4998da897894",
+        "type": "function",
+        "z": "85e3b6ed06d4064d",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_load_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống sàng thô\",\n        machine: \"Hệ thống sàng thô cấp 1\",\n        device: \"Động cơ sàng\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 400,
+        "wires": [
+            [
+                "b34b6e79250250e8"
+            ]
+        ]
+    },
+    {
+        "id": "b34b6e79250250e8",
+        "type": "influxdb out",
+        "z": "85e3b6ed06d4064d",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 930,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8711c38ea8280551",
+        "type": "function",
+        "z": "85e3b6ed06d4064d",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống sàng thô\",\n        machine: \"Hệ thống sàng thô cấp 1\",\n        device: \"Động cơ sàng\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 480,
+        "wires": [
+            [
+                "3ba528db8cda9607"
+            ]
+        ]
+    },
+    {
+        "id": "3ba528db8cda9607",
+        "type": "influxdb out",
+        "z": "85e3b6ed06d4064d",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 590,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "1cd21c69facc0dd5",
+        "type": "comment",
+        "z": "85e3b6ed06d4064d",
+        "name": "Hệ thống sàng thô cấp 1",
+        "info": "",
+        "x": 230,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "48599c127b52607b",
+        "type": "s7 in",
+        "z": "85e3b6ed06d4064d",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_error_10",
+        "diff": false,
+        "name": "",
+        "x": 200,
+        "y": 560,
+        "wires": [
+            [
+                "8e2301385012a14b",
+                "45371bccf534d5f8"
+            ]
+        ]
+    },
+    {
+        "id": "8e2301385012a14b",
+        "type": "debug",
+        "z": "85e3b6ed06d4064d",
+        "name": "motor_error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "45371bccf534d5f8",
+        "type": "function",
+        "z": "85e3b6ed06d4064d",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_error: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống sàng thô\",\n        machine: \"Hệ thống sàng thô cấp 1\",\n        device: \"Động cơ sàng\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 600,
+        "wires": [
+            [
+                "d3160e88872110ae"
+            ]
+        ]
+    },
+    {
+        "id": "d3160e88872110ae",
+        "type": "influxdb out",
+        "z": "85e3b6ed06d4064d",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 559,
+        "y": 602,
+        "wires": []
+    },
+    {
+        "id": "a8619d17938ed729",
+        "type": "comment",
+        "z": "85e3b6ed06d4064d",
+        "name": "Áp",
+        "info": "",
+        "x": 170,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "74206614cf919a88",
+        "type": "debug",
+        "z": "85e3b6ed06d4064d",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "f384c386e4ed53fd",
+        "type": "s7 in",
+        "z": "85e3b6ed06d4064d",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_in_10",
+        "diff": true,
+        "name": "",
+        "x": 170,
+        "y": 760,
+        "wires": [
+            [
+                "18531ed916d8d2a9"
+            ]
+        ]
+    },
+    {
+        "id": "18531ed916d8d2a9",
+        "type": "buffer-array",
+        "z": "85e3b6ed06d4064d",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 240,
+        "y": 840,
+        "wires": [
+            [
+                "ed110cbfe735c6e7"
+            ]
+        ]
+    },
+    {
+        "id": "ed110cbfe735c6e7",
+        "type": "throttle",
+        "z": "85e3b6ed06d4064d",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 390,
+        "y": 840,
+        "wires": [
+            [
+                "8cd2b688a25ec488"
+            ]
+        ]
+    },
+    {
+        "id": "86e0761c17137881",
+        "type": "statistics",
+        "z": "85e3b6ed06d4064d",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 700,
+        "y": 840,
+        "wires": [
+            [
+                "74206614cf919a88",
+                "847a2deef1344c52"
+            ]
+        ]
+    },
+    {
+        "id": "8cd2b688a25ec488",
+        "type": "function",
+        "z": "85e3b6ed06d4064d",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 840,
+        "wires": [
+            [
+                "86e0761c17137881"
+            ]
+        ]
+    },
+    {
+        "id": "847a2deef1344c52",
+        "type": "function",
+        "z": "85e3b6ed06d4064d",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_in: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống sàng thô\",\n        machine: \"Hệ thống sàng thô cấp 1\",\n        device: \"Áp đầu vào\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 920,
+        "wires": [
+            [
+                "c71a35bacb729747"
+            ]
+        ]
+    },
+    {
+        "id": "c71a35bacb729747",
+        "type": "influxdb out",
+        "z": "85e3b6ed06d4064d",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 930,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "3a5c25e988444adc",
+        "type": "debug",
+        "z": "85e3b6ed06d4064d",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "6342cb5c9de55f99",
+        "type": "s7 in",
+        "z": "85e3b6ed06d4064d",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_out_10",
+        "diff": true,
+        "name": "",
+        "x": 180,
+        "y": 960,
+        "wires": [
+            [
+                "01695e89d6e3f73a"
+            ]
+        ]
+    },
+    {
+        "id": "01695e89d6e3f73a",
+        "type": "buffer-array",
+        "z": "85e3b6ed06d4064d",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 240,
+        "y": 1040,
+        "wires": [
+            [
+                "f59bda5430c43e7a"
+            ]
+        ]
+    },
+    {
+        "id": "f59bda5430c43e7a",
+        "type": "throttle",
+        "z": "85e3b6ed06d4064d",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 390,
+        "y": 1040,
+        "wires": [
+            [
+                "2f0f4a499b06966c"
+            ]
+        ]
+    },
+    {
+        "id": "ee6cee6319b33071",
+        "type": "statistics",
+        "z": "85e3b6ed06d4064d",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 700,
+        "y": 1040,
+        "wires": [
+            [
+                "3a5c25e988444adc",
+                "10bab52ed1233529"
+            ]
+        ]
+    },
+    {
+        "id": "2f0f4a499b06966c",
+        "type": "function",
+        "z": "85e3b6ed06d4064d",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1040,
+        "wires": [
+            [
+                "ee6cee6319b33071"
+            ]
+        ]
+    },
+    {
+        "id": "10bab52ed1233529",
+        "type": "function",
+        "z": "85e3b6ed06d4064d",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_out: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống sàng thô\",\n        machine: \"Hệ thống sàng thô cấp 1\",\n        device: \"Áp đầu ra\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1120,
+        "wires": [
+            [
+                "70e2d409a978237f"
+            ]
+        ]
+    },
+    {
+        "id": "70e2d409a978237f",
+        "type": "influxdb out",
+        "z": "85e3b6ed06d4064d",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 930,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "0ccf9e5ada4b242d",
+        "type": "debug",
+        "z": "85e3b6ed06d4064d",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "b0b45b9f2442e457",
+        "type": "s7 in",
+        "z": "85e3b6ed06d4064d",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_delta_10",
+        "diff": true,
+        "name": "",
+        "x": 180,
+        "y": 1120,
+        "wires": [
+            [
+                "10d7d330b2d32824"
+            ]
+        ]
+    },
+    {
+        "id": "10d7d330b2d32824",
+        "type": "buffer-array",
+        "z": "85e3b6ed06d4064d",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 240,
+        "y": 1200,
+        "wires": [
+            [
+                "077d7f6be7676811"
+            ]
+        ]
+    },
+    {
+        "id": "077d7f6be7676811",
+        "type": "throttle",
+        "z": "85e3b6ed06d4064d",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 390,
+        "y": 1200,
+        "wires": [
+            [
+                "db3fab5eb3e7c3cd"
+            ]
+        ]
+    },
+    {
+        "id": "1a925576cf2b33bb",
+        "type": "statistics",
+        "z": "85e3b6ed06d4064d",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 680,
+        "y": 1200,
+        "wires": [
+            [
+                "0ccf9e5ada4b242d",
+                "bf4a22d1e67c6ed3"
+            ]
+        ]
+    },
+    {
+        "id": "db3fab5eb3e7c3cd",
+        "type": "function",
+        "z": "85e3b6ed06d4064d",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1200,
+        "wires": [
+            [
+                "1a925576cf2b33bb"
+            ]
+        ]
+    },
+    {
+        "id": "bf4a22d1e67c6ed3",
+        "type": "function",
+        "z": "85e3b6ed06d4064d",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_delta: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống sàng thô\",\n        machine: \"Hệ thống sàng thô cấp 1\",\n        device: \"Chênh áp\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1280,
+        "wires": [
+            [
+                "2e26efd238e39bf6"
+            ]
+        ]
+    },
+    {
+        "id": "2e26efd238e39bf6",
+        "type": "influxdb out",
+        "z": "85e3b6ed06d4064d",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 910,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "fab9c885ebb87cb9",
+        "type": "comment",
+        "z": "321ec63799c12083",
+        "name": "Động cơ sàng",
+        "info": "",
+        "x": 230,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7f4423d72ee9c928",
+        "type": "debug",
+        "z": "321ec63799c12083",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "08cf7a2c54343f08",
+        "type": "s7 in",
+        "z": "321ec63799c12083",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_load_pct_11",
+        "diff": true,
+        "name": "",
+        "x": 250,
+        "y": 180,
+        "wires": [
+            [
+                "acd71d57c23d0c9e"
+            ]
+        ]
+    },
+    {
+        "id": "acd71d57c23d0c9e",
+        "type": "buffer-array",
+        "z": "321ec63799c12083",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 280,
+        "y": 260,
+        "wires": [
+            [
+                "320c9f5a4a8ffcb9"
+            ]
+        ]
+    },
+    {
+        "id": "320c9f5a4a8ffcb9",
+        "type": "throttle",
+        "z": "321ec63799c12083",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "2af743cc56b0dd45"
+            ]
+        ]
+    },
+    {
+        "id": "a8845df6524ee494",
+        "type": "statistics",
+        "z": "321ec63799c12083",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 740,
+        "y": 260,
+        "wires": [
+            [
+                "7f4423d72ee9c928",
+                "b81dfb9a50f0b31f"
+            ]
+        ]
+    },
+    {
+        "id": "2af743cc56b0dd45",
+        "type": "function",
+        "z": "321ec63799c12083",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 260,
+        "wires": [
+            [
+                "a8845df6524ee494"
+            ]
+        ]
+    },
+    {
+        "id": "79cf52f4af62b905",
+        "type": "s7 in",
+        "z": "321ec63799c12083",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_running_11",
+        "diff": false,
+        "name": "",
+        "x": 250,
+        "y": 340,
+        "wires": [
+            [
+                "f1788b687fb4232e",
+                "5f30471e6659ed67"
+            ]
+        ]
+    },
+    {
+        "id": "5f30471e6659ed67",
+        "type": "debug",
+        "z": "321ec63799c12083",
+        "name": "motor_running",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "b81dfb9a50f0b31f",
+        "type": "function",
+        "z": "321ec63799c12083",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_load_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống phân sợi 1\",\n        machine: \"Sàng phân sợi 1\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 340,
+        "wires": [
+            [
+                "7e542627f4609846"
+            ]
+        ]
+    },
+    {
+        "id": "7e542627f4609846",
+        "type": "influxdb out",
+        "z": "321ec63799c12083",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 970,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f1788b687fb4232e",
+        "type": "function",
+        "z": "321ec63799c12083",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống phân sợi 1\",\n        machine: \"Sàng phân sợi 1\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 420,
+        "wires": [
+            [
+                "a8a69905c3e14191"
+            ]
+        ]
+    },
+    {
+        "id": "a8a69905c3e14191",
+        "type": "influxdb out",
+        "z": "321ec63799c12083",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 630,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1b9c1c6044f99b45",
+        "type": "comment",
+        "z": "321ec63799c12083",
+        "name": "Sàng phân sợi 1",
         "info": "",
         "x": 240,
-        "y": 120,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "8c014e295fd6131e",
+        "type": "s7 in",
+        "z": "321ec63799c12083",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_error_11",
+        "diff": false,
+        "name": "",
+        "x": 240,
+        "y": 500,
+        "wires": [
+            [
+                "381b9598f8da7012",
+                "c1c2e6ccdc6acb0c"
+            ]
+        ]
+    },
+    {
+        "id": "381b9598f8da7012",
+        "type": "debug",
+        "z": "321ec63799c12083",
+        "name": "motor_error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "c1c2e6ccdc6acb0c",
+        "type": "function",
+        "z": "321ec63799c12083",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_error: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống phân sợi 1\",\n        machine: \"Sàng phân sợi 1\",\n        device: \"Động cơ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 540,
+        "wires": [
+            [
+                "862d5327ac207e25"
+            ]
+        ]
+    },
+    {
+        "id": "862d5327ac207e25",
+        "type": "influxdb out",
+        "z": "321ec63799c12083",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 599,
+        "y": 542,
+        "wires": []
+    },
+    {
+        "id": "eb683b7a19e93120",
+        "type": "comment",
+        "z": "321ec63799c12083",
+        "name": "Áp",
+        "info": "",
+        "x": 210,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "4a182ab43146c013",
+        "type": "debug",
+        "z": "321ec63799c12083",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "d24c258e7ed0ef3c",
+        "type": "s7 in",
+        "z": "321ec63799c12083",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_in_11",
+        "diff": true,
+        "name": "",
+        "x": 210,
+        "y": 700,
+        "wires": [
+            [
+                "36b896df374a0cb9"
+            ]
+        ]
+    },
+    {
+        "id": "36b896df374a0cb9",
+        "type": "buffer-array",
+        "z": "321ec63799c12083",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 280,
+        "y": 780,
+        "wires": [
+            [
+                "04278e134768e954"
+            ]
+        ]
+    },
+    {
+        "id": "04278e134768e954",
+        "type": "throttle",
+        "z": "321ec63799c12083",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 430,
+        "y": 780,
+        "wires": [
+            [
+                "8dcb5c200e9f1438"
+            ]
+        ]
+    },
+    {
+        "id": "289d01c3bfbe731b",
+        "type": "statistics",
+        "z": "321ec63799c12083",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 740,
+        "y": 780,
+        "wires": [
+            [
+                "4a182ab43146c013",
+                "c7d1db0d8dd5488c"
+            ]
+        ]
+    },
+    {
+        "id": "8dcb5c200e9f1438",
+        "type": "function",
+        "z": "321ec63799c12083",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 780,
+        "wires": [
+            [
+                "289d01c3bfbe731b"
+            ]
+        ]
+    },
+    {
+        "id": "c7d1db0d8dd5488c",
+        "type": "function",
+        "z": "321ec63799c12083",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_in: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống phân sợi 1\",\n        machine: \"Sàng phân sợi 1\",\n        device: \"Áp đầu vào\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 860,
+        "wires": [
+            [
+                "eb41c577a0d8397c"
+            ]
+        ]
+    },
+    {
+        "id": "eb41c577a0d8397c",
+        "type": "influxdb out",
+        "z": "321ec63799c12083",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 970,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "dd280b7a0865de57",
+        "type": "debug",
+        "z": "321ec63799c12083",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "dfea8bb83d6e5aaf",
+        "type": "s7 in",
+        "z": "321ec63799c12083",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_out_11",
+        "diff": true,
+        "name": "",
+        "x": 220,
+        "y": 900,
+        "wires": [
+            [
+                "4e1f6ba6a1cf658a"
+            ]
+        ]
+    },
+    {
+        "id": "4e1f6ba6a1cf658a",
+        "type": "buffer-array",
+        "z": "321ec63799c12083",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 280,
+        "y": 980,
+        "wires": [
+            [
+                "4c945304a711bbaf"
+            ]
+        ]
+    },
+    {
+        "id": "4c945304a711bbaf",
+        "type": "throttle",
+        "z": "321ec63799c12083",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 430,
+        "y": 980,
+        "wires": [
+            [
+                "b996da4de61f8128"
+            ]
+        ]
+    },
+    {
+        "id": "6d994585de63ada1",
+        "type": "statistics",
+        "z": "321ec63799c12083",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 740,
+        "y": 980,
+        "wires": [
+            [
+                "dd280b7a0865de57",
+                "2e7bb34b0463791b"
+            ]
+        ]
+    },
+    {
+        "id": "b996da4de61f8128",
+        "type": "function",
+        "z": "321ec63799c12083",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 980,
+        "wires": [
+            [
+                "6d994585de63ada1"
+            ]
+        ]
+    },
+    {
+        "id": "2e7bb34b0463791b",
+        "type": "function",
+        "z": "321ec63799c12083",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_out: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống phân sợi 1\",\n        machine: \"Sàng phân sợi 1\",\n        device: \"Áp đầu ra\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1060,
+        "wires": [
+            [
+                "90b2fd19e707d26a"
+            ]
+        ]
+    },
+    {
+        "id": "90b2fd19e707d26a",
+        "type": "influxdb out",
+        "z": "321ec63799c12083",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 970,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "9ed16c2170a874f7",
+        "type": "debug",
+        "z": "321ec63799c12083",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "6daf6d907c5ccbc4",
+        "type": "s7 in",
+        "z": "321ec63799c12083",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_delta_11",
+        "diff": true,
+        "name": "",
+        "x": 220,
+        "y": 1060,
+        "wires": [
+            [
+                "09506663080f323c"
+            ]
+        ]
+    },
+    {
+        "id": "09506663080f323c",
+        "type": "buffer-array",
+        "z": "321ec63799c12083",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 280,
+        "y": 1140,
+        "wires": [
+            [
+                "aa572fdb5583f9a4"
+            ]
+        ]
+    },
+    {
+        "id": "aa572fdb5583f9a4",
+        "type": "throttle",
+        "z": "321ec63799c12083",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 430,
+        "y": 1140,
+        "wires": [
+            [
+                "08a5014bccd83edc"
+            ]
+        ]
+    },
+    {
+        "id": "686a2748e94f93de",
+        "type": "statistics",
+        "z": "321ec63799c12083",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 720,
+        "y": 1140,
+        "wires": [
+            [
+                "9ed16c2170a874f7",
+                "f3f036e5276137d8"
+            ]
+        ]
+    },
+    {
+        "id": "08a5014bccd83edc",
+        "type": "function",
+        "z": "321ec63799c12083",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 1140,
+        "wires": [
+            [
+                "686a2748e94f93de"
+            ]
+        ]
+    },
+    {
+        "id": "f3f036e5276137d8",
+        "type": "function",
+        "z": "321ec63799c12083",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_delta: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống phân sợi 1\",\n        machine: \"Sàng phân sợi 1\",\n        device: \"Chênh áp\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 1220,
+        "wires": [
+            [
+                "bbe1ba65811ffbfe"
+            ]
+        ]
+    },
+    {
+        "id": "bbe1ba65811ffbfe",
+        "type": "influxdb out",
+        "z": "321ec63799c12083",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 950,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "c36530cbcf2c1669",
+        "type": "comment",
+        "z": "721914438132621e",
+        "name": "Động cơ bơm bột",
+        "info": "",
+        "x": 260,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "95d52f8c9387dc04",
+        "type": "debug",
+        "z": "721914438132621e",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "479be58b00f59b25",
+        "type": "s7 in",
+        "z": "721914438132621e",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_load_pct_12",
+        "diff": true,
+        "name": "",
+        "x": 270,
+        "y": 220,
+        "wires": [
+            [
+                "042efa9921d403fe"
+            ]
+        ]
+    },
+    {
+        "id": "042efa9921d403fe",
+        "type": "buffer-array",
+        "z": "721914438132621e",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 300,
+        "y": 300,
+        "wires": [
+            [
+                "f5c6c1ff43ff6bd9"
+            ]
+        ]
+    },
+    {
+        "id": "f5c6c1ff43ff6bd9",
+        "type": "throttle",
+        "z": "721914438132621e",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 450,
+        "y": 300,
+        "wires": [
+            [
+                "55ef7438103c88dd"
+            ]
+        ]
+    },
+    {
+        "id": "31e5a4dd139e4624",
+        "type": "statistics",
+        "z": "721914438132621e",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 760,
+        "y": 300,
+        "wires": [
+            [
+                "95d52f8c9387dc04",
+                "27086e04aec4bd0c"
+            ]
+        ]
+    },
+    {
+        "id": "55ef7438103c88dd",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 300,
+        "wires": [
+            [
+                "31e5a4dd139e4624"
+            ]
+        ]
+    },
+    {
+        "id": "56e19aa50a776d74",
+        "type": "s7 in",
+        "z": "721914438132621e",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_running_12",
+        "diff": false,
+        "name": "",
+        "x": 270,
+        "y": 380,
+        "wires": [
+            [
+                "51ad4811ccf2b2f5",
+                "54717d40eaaf0821"
+            ]
+        ]
+    },
+    {
+        "id": "54717d40eaaf0821",
+        "type": "debug",
+        "z": "721914438132621e",
+        "name": "motor_running",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "27086e04aec4bd0c",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_load_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ thấp\",\n        machine: \"Hệ thống lọc cát nồng độ thấp cấp 1\",\n        device: \"Động cơ bơm bột\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 380,
+        "wires": [
+            [
+                "a33617dea0833588"
+            ]
+        ]
+    },
+    {
+        "id": "a33617dea0833588",
+        "type": "influxdb out",
+        "z": "721914438132621e",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 990,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "51ad4811ccf2b2f5",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ thấp\",\n        machine: \"Hệ thống lọc cát nồng độ thấp cấp 1\",\n        device: \"Động cơ bơm bột\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 460,
+        "wires": [
+            [
+                "8aae0c23f8b1f685"
+            ]
+        ]
+    },
+    {
+        "id": "8aae0c23f8b1f685",
+        "type": "influxdb out",
+        "z": "721914438132621e",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 650,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "314fe73e9362c6d9",
+        "type": "comment",
+        "z": "721914438132621e",
+        "name": "Hệ thống lọc cát nồng độ thấp cấp 1",
+        "info": "",
+        "x": 320,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "2b35621d5c548eb6",
+        "type": "s7 in",
+        "z": "721914438132621e",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_error_12",
+        "diff": false,
+        "name": "",
+        "x": 260,
+        "y": 540,
+        "wires": [
+            [
+                "06f59d23fee46e53",
+                "d6b4fbe9accd3eb4"
+            ]
+        ]
+    },
+    {
+        "id": "06f59d23fee46e53",
+        "type": "debug",
+        "z": "721914438132621e",
+        "name": "motor_error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d6b4fbe9accd3eb4",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_error: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ thấp\",\n        machine: \"Hệ thống lọc cát nồng độ thấp cấp 1\",\n        device: \"Động cơ bơm bột\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [
+                "abbd1a374bf6d9cd"
+            ]
+        ]
+    },
+    {
+        "id": "abbd1a374bf6d9cd",
+        "type": "influxdb out",
+        "z": "721914438132621e",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 619,
+        "y": 582,
+        "wires": []
+    },
+    {
+        "id": "8bdbdbec5cf345c9",
+        "type": "comment",
+        "z": "721914438132621e",
+        "name": "Áp",
+        "info": "",
+        "x": 230,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "5f1cd3169fd39d5d",
+        "type": "debug",
+        "z": "721914438132621e",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "299be5f67a8ae1e5",
+        "type": "s7 in",
+        "z": "721914438132621e",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_in_12",
+        "diff": true,
+        "name": "",
+        "x": 230,
+        "y": 720,
+        "wires": [
+            [
+                "aefcf1ba018bdfc3"
+            ]
+        ]
+    },
+    {
+        "id": "aefcf1ba018bdfc3",
+        "type": "buffer-array",
+        "z": "721914438132621e",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 300,
+        "y": 800,
+        "wires": [
+            [
+                "59464a3694634a87"
+            ]
+        ]
+    },
+    {
+        "id": "59464a3694634a87",
+        "type": "throttle",
+        "z": "721914438132621e",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 450,
+        "y": 800,
+        "wires": [
+            [
+                "b6b2092b82a11717"
+            ]
+        ]
+    },
+    {
+        "id": "2fa00c9b66f9e831",
+        "type": "statistics",
+        "z": "721914438132621e",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 760,
+        "y": 800,
+        "wires": [
+            [
+                "5f1cd3169fd39d5d",
+                "c4e717c38b994bfd"
+            ]
+        ]
+    },
+    {
+        "id": "b6b2092b82a11717",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 800,
+        "wires": [
+            [
+                "2fa00c9b66f9e831"
+            ]
+        ]
+    },
+    {
+        "id": "c4e717c38b994bfd",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_in: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ thấp\",\n        machine: \"Hệ thống lọc cát nồng độ thấp cấp 1\",\n        device: \"Áp đầu vào\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 880,
+        "wires": [
+            [
+                "d588089ddaff338b"
+            ]
+        ]
+    },
+    {
+        "id": "d588089ddaff338b",
+        "type": "influxdb out",
+        "z": "721914438132621e",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 990,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "fc0c49d323f4285d",
+        "type": "debug",
+        "z": "721914438132621e",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "3135566a6b46f6bf",
+        "type": "s7 in",
+        "z": "721914438132621e",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_out_12",
+        "diff": true,
+        "name": "",
+        "x": 240,
+        "y": 920,
+        "wires": [
+            [
+                "bf80a0db7d6aa0d3"
+            ]
+        ]
+    },
+    {
+        "id": "bf80a0db7d6aa0d3",
+        "type": "buffer-array",
+        "z": "721914438132621e",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 300,
+        "y": 1000,
+        "wires": [
+            [
+                "1b9840f5926b5c77"
+            ]
+        ]
+    },
+    {
+        "id": "1b9840f5926b5c77",
+        "type": "throttle",
+        "z": "721914438132621e",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 450,
+        "y": 1000,
+        "wires": [
+            [
+                "ca18b75ff34bfca5"
+            ]
+        ]
+    },
+    {
+        "id": "3adab6ca2a6611bd",
+        "type": "statistics",
+        "z": "721914438132621e",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 760,
+        "y": 1000,
+        "wires": [
+            [
+                "fc0c49d323f4285d",
+                "5b72542ab5724e40"
+            ]
+        ]
+    },
+    {
+        "id": "ca18b75ff34bfca5",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1000,
+        "wires": [
+            [
+                "3adab6ca2a6611bd"
+            ]
+        ]
+    },
+    {
+        "id": "5b72542ab5724e40",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_out: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ thấp\",\n        machine: \"Hệ thống lọc cát nồng độ thấp cấp 1\",\n        device: \"Áp đầu ra\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1080,
+        "wires": [
+            [
+                "f2f0938016014b22"
+            ]
+        ]
+    },
+    {
+        "id": "f2f0938016014b22",
+        "type": "influxdb out",
+        "z": "721914438132621e",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 990,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "521020c66e04250e",
+        "type": "debug",
+        "z": "721914438132621e",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "1e575c148d3b78c6",
+        "type": "s7 in",
+        "z": "721914438132621e",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_discharge_12",
+        "diff": true,
+        "name": "",
+        "x": 260,
+        "y": 1080,
+        "wires": [
+            [
+                "da7ceb88da64654d"
+            ]
+        ]
+    },
+    {
+        "id": "da7ceb88da64654d",
+        "type": "buffer-array",
+        "z": "721914438132621e",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 300,
+        "y": 1160,
+        "wires": [
+            [
+                "fe8b1cbb398802cb"
+            ]
+        ]
+    },
+    {
+        "id": "fe8b1cbb398802cb",
+        "type": "throttle",
+        "z": "721914438132621e",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 450,
+        "y": 1160,
+        "wires": [
+            [
+                "917768cf7e12bbe3"
+            ]
+        ]
+    },
+    {
+        "id": "0d5de816e3a83788",
+        "type": "statistics",
+        "z": "721914438132621e",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 740,
+        "y": 1160,
+        "wires": [
+            [
+                "521020c66e04250e",
+                "ec600027d9c6b95f"
+            ]
+        ]
+    },
+    {
+        "id": "917768cf7e12bbe3",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 1160,
+        "wires": [
+            [
+                "0d5de816e3a83788"
+            ]
+        ]
+    },
+    {
+        "id": "ec600027d9c6b95f",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_discharge: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ thấp\",\n        machine: \"Hệ thống lọc cát nồng độ thấp cấp 1\",\n        device: \"Áp thải\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1240,
+        "wires": [
+            [
+                "1f672a7e4e6d4fe8"
+            ]
+        ]
+    },
+    {
+        "id": "1f672a7e4e6d4fe8",
+        "type": "influxdb out",
+        "z": "721914438132621e",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 970,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "272b2116bc48d00a",
+        "type": "debug",
+        "z": "721914438132621e",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "a08eb6d3003168dc",
+        "type": "s7 in",
+        "z": "721914438132621e",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_backwash_12",
+        "diff": true,
+        "name": "",
+        "x": 260,
+        "y": 1280,
+        "wires": [
+            [
+                "9ede6cbe86ac0bcb"
+            ]
+        ]
+    },
+    {
+        "id": "9ede6cbe86ac0bcb",
+        "type": "buffer-array",
+        "z": "721914438132621e",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 300,
+        "y": 1360,
+        "wires": [
+            [
+                "51d3e04ee4def393"
+            ]
+        ]
+    },
+    {
+        "id": "51d3e04ee4def393",
+        "type": "throttle",
+        "z": "721914438132621e",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 450,
+        "y": 1360,
+        "wires": [
+            [
+                "a2d0682aa2b46207"
+            ]
+        ]
+    },
+    {
+        "id": "f6790af5b68cdb31",
+        "type": "statistics",
+        "z": "721914438132621e",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 760,
+        "y": 1360,
+        "wires": [
+            [
+                "272b2116bc48d00a",
+                "0bf6a21036f9a2e0"
+            ]
+        ]
+    },
+    {
+        "id": "a2d0682aa2b46207",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1360,
+        "wires": [
+            [
+                "f6790af5b68cdb31"
+            ]
+        ]
+    },
+    {
+        "id": "0bf6a21036f9a2e0",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_backwash: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ thấp\",\n        machine: \"Hệ thống lọc cát nồng độ thấp cấp 1\",\n        device: \"Áp nước sục rửa và pha loãng\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1440,
+        "wires": [
+            [
+                "859bdedcd08ea044"
+            ]
+        ]
+    },
+    {
+        "id": "859bdedcd08ea044",
+        "type": "influxdb out",
+        "z": "721914438132621e",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 990,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "e22a63880c3571f5",
+        "type": "comment",
+        "z": "721914438132621e",
+        "name": "Động cơ trục vít",
+        "info": "",
+        "x": 280,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "dae2f795301e0fdd",
+        "type": "debug",
+        "z": "721914438132621e",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "d6ca4e8b2beaa5da",
+        "type": "s7 in",
+        "z": "721914438132621e",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_load_pct_13",
+        "diff": true,
+        "name": "",
+        "x": 290,
+        "y": 1620,
+        "wires": [
+            [
+                "56be70b15f39c69a"
+            ]
+        ]
+    },
+    {
+        "id": "56be70b15f39c69a",
+        "type": "buffer-array",
+        "z": "721914438132621e",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 320,
+        "y": 1700,
+        "wires": [
+            [
+                "cc22d93f8987201b"
+            ]
+        ]
+    },
+    {
+        "id": "cc22d93f8987201b",
+        "type": "throttle",
+        "z": "721914438132621e",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 470,
+        "y": 1700,
+        "wires": [
+            [
+                "f81bd11650ee779b"
+            ]
+        ]
+    },
+    {
+        "id": "3857461498dff721",
+        "type": "statistics",
+        "z": "721914438132621e",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 780,
+        "y": 1700,
+        "wires": [
+            [
+                "dae2f795301e0fdd",
+                "0905d1f82dfeb26b"
+            ]
+        ]
+    },
+    {
+        "id": "f81bd11650ee779b",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 1700,
+        "wires": [
+            [
+                "3857461498dff721"
+            ]
+        ]
+    },
+    {
+        "id": "4e057cbd13c3f376",
+        "type": "s7 in",
+        "z": "721914438132621e",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_running_13",
+        "diff": false,
+        "name": "",
+        "x": 290,
+        "y": 1780,
+        "wires": [
+            [
+                "9336ae2c81e66344",
+                "5332e1698c5899c2"
+            ]
+        ]
+    },
+    {
+        "id": "5332e1698c5899c2",
+        "type": "debug",
+        "z": "721914438132621e",
+        "name": "motor_running",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "0905d1f82dfeb26b",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_load_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ thấp\",\n        machine: \"Máy ép cát\",\n        device: \"Động cơ trục vít\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1780,
+        "wires": [
+            [
+                "2e192fa73902f7d3"
+            ]
+        ]
+    },
+    {
+        "id": "2e192fa73902f7d3",
+        "type": "influxdb out",
+        "z": "721914438132621e",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1010,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "9336ae2c81e66344",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ thấp\",\n        machine: \"Máy ép cát\",\n        device: \"Động cơ trục vít\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1860,
+        "wires": [
+            [
+                "bb013fb1807dc9af"
+            ]
+        ]
+    },
+    {
+        "id": "bb013fb1807dc9af",
+        "type": "influxdb out",
+        "z": "721914438132621e",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 670,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "a1c8419346649097",
+        "type": "comment",
+        "z": "721914438132621e",
+        "name": "Máy ép cát",
+        "info": "",
+        "x": 260,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "2e195d0f206acfa0",
+        "type": "s7 in",
+        "z": "721914438132621e",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_error_13",
+        "diff": false,
+        "name": "",
+        "x": 280,
+        "y": 1940,
+        "wires": [
+            [
+                "34c378b8cc1ffe12",
+                "0acb5ebd1630f3c3"
+            ]
+        ]
+    },
+    {
+        "id": "34c378b8cc1ffe12",
+        "type": "debug",
+        "z": "721914438132621e",
+        "name": "motor_error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "0acb5ebd1630f3c3",
+        "type": "function",
+        "z": "721914438132621e",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_error: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ thấp\",\n        machine: \"Máy ép cát\",\n        device: \"Động cơ trục vít\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1980,
+        "wires": [
+            [
+                "7ea95448f81f902d"
+            ]
+        ]
+    },
+    {
+        "id": "7ea95448f81f902d",
+        "type": "influxdb out",
+        "z": "721914438132621e",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 639,
+        "y": 1982,
+        "wires": []
+    },
+    {
+        "id": "1828ee2c24327898",
+        "type": "comment",
+        "z": "f04122f684555d11",
+        "name": "Động cơ sàng",
+        "info": "",
+        "x": 270,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "275baf3e9408251a",
+        "type": "debug",
+        "z": "f04122f684555d11",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "fefd4694b6f5cf58",
+        "type": "s7 in",
+        "z": "f04122f684555d11",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_load_pct_14",
+        "diff": true,
+        "name": "",
+        "x": 290,
+        "y": 180,
+        "wires": [
+            [
+                "ccfab1ee7d9160e5"
+            ]
+        ]
+    },
+    {
+        "id": "ccfab1ee7d9160e5",
+        "type": "buffer-array",
+        "z": "f04122f684555d11",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "136281ee45e06bfd"
+            ]
+        ]
+    },
+    {
+        "id": "136281ee45e06bfd",
+        "type": "throttle",
+        "z": "f04122f684555d11",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 470,
+        "y": 260,
+        "wires": [
+            [
+                "63568416190e9514"
+            ]
+        ]
+    },
+    {
+        "id": "6854b820ed91ce03",
+        "type": "statistics",
+        "z": "f04122f684555d11",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 780,
+        "y": 260,
+        "wires": [
+            [
+                "275baf3e9408251a",
+                "e118f431286bebea"
+            ]
+        ]
+    },
+    {
+        "id": "63568416190e9514",
+        "type": "function",
+        "z": "f04122f684555d11",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 260,
+        "wires": [
+            [
+                "6854b820ed91ce03"
+            ]
+        ]
+    },
+    {
+        "id": "1f248714908b8de7",
+        "type": "s7 in",
+        "z": "f04122f684555d11",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_running_14",
+        "diff": false,
+        "name": "",
+        "x": 290,
+        "y": 340,
+        "wires": [
+            [
+                "f0fc09ceb1dde542",
+                "ed8b14730792eb80"
+            ]
+        ]
+    },
+    {
+        "id": "ed8b14730792eb80",
+        "type": "debug",
+        "z": "f04122f684555d11",
+        "name": "motor_running",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "e118f431286bebea",
+        "type": "function",
+        "z": "f04122f684555d11",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_load_pct: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống sàng tinh\",\n        machine: \"Hệ thống sàng tinh cấp 1\",\n        device: \"Động cơ sàng\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 340,
+        "wires": [
+            [
+                "a771dd904b4c3c6e"
+            ]
+        ]
+    },
+    {
+        "id": "a771dd904b4c3c6e",
+        "type": "influxdb out",
+        "z": "f04122f684555d11",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1010,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f0fc09ceb1dde542",
+        "type": "function",
+        "z": "f04122f684555d11",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_running: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống sàng tinh\",\n        machine: \"Hệ thống sàng tinh cấp 1\",\n        device: \"Động cơ sàng\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 420,
+        "wires": [
+            [
+                "5f3c512c25559451"
+            ]
+        ]
+    },
+    {
+        "id": "5f3c512c25559451",
+        "type": "influxdb out",
+        "z": "f04122f684555d11",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 670,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "e7d20181160d9488",
+        "type": "comment",
+        "z": "f04122f684555d11",
+        "name": "Hệ thống sàng tinh cấp 1",
+        "info": "",
+        "x": 310,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "78fdd023d16d242f",
+        "type": "s7 in",
+        "z": "f04122f684555d11",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "motor_error_14",
+        "diff": false,
+        "name": "",
+        "x": 280,
+        "y": 500,
+        "wires": [
+            [
+                "8beacca0a9e73827",
+                "efb14fb400bea758"
+            ]
+        ]
+    },
+    {
+        "id": "8beacca0a9e73827",
+        "type": "debug",
+        "z": "f04122f684555d11",
+        "name": "motor_error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "efb14fb400bea758",
+        "type": "function",
+        "z": "f04122f684555d11",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        motor_error: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống sàng tinh\",\n        machine: \"Hệ thống sàng tinh cấp 1\",\n        device: \"Động cơ sàng\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 540,
+        "wires": [
+            [
+                "0ea331f1b0819615"
+            ]
+        ]
+    },
+    {
+        "id": "0ea331f1b0819615",
+        "type": "influxdb out",
+        "z": "f04122f684555d11",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 639,
+        "y": 542,
+        "wires": []
+    },
+    {
+        "id": "102982a69a163e67",
+        "type": "comment",
+        "z": "f04122f684555d11",
+        "name": "Áp",
+        "info": "",
+        "x": 250,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "5418bb9e3098a679",
+        "type": "debug",
+        "z": "f04122f684555d11",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "c6559bd26865c4d0",
+        "type": "s7 in",
+        "z": "f04122f684555d11",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_in_14",
+        "diff": true,
+        "name": "",
+        "x": 250,
+        "y": 700,
+        "wires": [
+            [
+                "021a964255e80b1a"
+            ]
+        ]
+    },
+    {
+        "id": "021a964255e80b1a",
+        "type": "buffer-array",
+        "z": "f04122f684555d11",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 320,
+        "y": 780,
+        "wires": [
+            [
+                "c529c013c518a315"
+            ]
+        ]
+    },
+    {
+        "id": "c529c013c518a315",
+        "type": "throttle",
+        "z": "f04122f684555d11",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 470,
+        "y": 780,
+        "wires": [
+            [
+                "82730d35b53fe27d"
+            ]
+        ]
+    },
+    {
+        "id": "9f6d4daecb5357a5",
+        "type": "statistics",
+        "z": "f04122f684555d11",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 780,
+        "y": 780,
+        "wires": [
+            [
+                "5418bb9e3098a679",
+                "aa57eb5a83d17c3e"
+            ]
+        ]
+    },
+    {
+        "id": "82730d35b53fe27d",
+        "type": "function",
+        "z": "f04122f684555d11",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 780,
+        "wires": [
+            [
+                "9f6d4daecb5357a5"
+            ]
+        ]
+    },
+    {
+        "id": "aa57eb5a83d17c3e",
+        "type": "function",
+        "z": "f04122f684555d11",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_in: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống sàng tinh\",\n        machine: \"Hệ thống sàng tinh cấp 1\",\n        device: \"Áp đầu vào\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 860,
+        "wires": [
+            [
+                "d041c2fc4bcec463"
+            ]
+        ]
+    },
+    {
+        "id": "d041c2fc4bcec463",
+        "type": "influxdb out",
+        "z": "f04122f684555d11",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1010,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "9e512d4589a6ef6a",
+        "type": "debug",
+        "z": "f04122f684555d11",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "614b97dfcae791bf",
+        "type": "s7 in",
+        "z": "f04122f684555d11",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_out_14",
+        "diff": true,
+        "name": "",
+        "x": 260,
+        "y": 900,
+        "wires": [
+            [
+                "b05f4c754fcfe68a"
+            ]
+        ]
+    },
+    {
+        "id": "b05f4c754fcfe68a",
+        "type": "buffer-array",
+        "z": "f04122f684555d11",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 320,
+        "y": 980,
+        "wires": [
+            [
+                "199f3b7ab8e84c44"
+            ]
+        ]
+    },
+    {
+        "id": "199f3b7ab8e84c44",
+        "type": "throttle",
+        "z": "f04122f684555d11",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 470,
+        "y": 980,
+        "wires": [
+            [
+                "1f0dcb0730da6291"
+            ]
+        ]
+    },
+    {
+        "id": "e845c143a1ee3c3f",
+        "type": "statistics",
+        "z": "f04122f684555d11",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 780,
+        "y": 980,
+        "wires": [
+            [
+                "9e512d4589a6ef6a",
+                "b69467f251d07732"
+            ]
+        ]
+    },
+    {
+        "id": "1f0dcb0730da6291",
+        "type": "function",
+        "z": "f04122f684555d11",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 980,
+        "wires": [
+            [
+                "e845c143a1ee3c3f"
+            ]
+        ]
+    },
+    {
+        "id": "b69467f251d07732",
+        "type": "function",
+        "z": "f04122f684555d11",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_out: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống sàng tinh\",\n        machine: \"Hệ thống sàng tinh cấp 1\",\n        device: \"Áp đầu ra\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1060,
+        "wires": [
+            [
+                "b5e7cf2e0ed0662c"
+            ]
+        ]
+    },
+    {
+        "id": "b5e7cf2e0ed0662c",
+        "type": "influxdb out",
+        "z": "f04122f684555d11",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1010,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "a8b336735192813b",
+        "type": "debug",
+        "z": "f04122f684555d11",
+        "name": "motor_load_pct_mean",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "d2be0766f0cb5049",
+        "type": "s7 in",
+        "z": "f04122f684555d11",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_delta_14",
+        "diff": true,
+        "name": "",
+        "x": 260,
+        "y": 1060,
+        "wires": [
+            [
+                "0b4dd85dcefcde0c"
+            ]
+        ]
+    },
+    {
+        "id": "0b4dd85dcefcde0c",
+        "type": "buffer-array",
+        "z": "f04122f684555d11",
+        "name": "Stack 10",
+        "bufferLen": "10",
+        "startWhenFilled": true,
+        "x": 320,
+        "y": 1140,
+        "wires": [
+            [
+                "49ff14411866186d"
+            ]
+        ]
+    },
+    {
+        "id": "49ff14411866186d",
+        "type": "throttle",
+        "z": "f04122f684555d11",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 470,
+        "y": 1140,
+        "wires": [
+            [
+                "07ff32307279ec18"
+            ]
+        ]
+    },
+    {
+        "id": "cbe1089f3e7320ba",
+        "type": "statistics",
+        "z": "f04122f684555d11",
+        "name": "",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "name",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 760,
+        "y": 1140,
+        "wires": [
+            [
+                "a8b336735192813b",
+                "aaac554f208bc474"
+            ]
+        ]
+    },
+    {
+        "id": "07ff32307279ec18",
+        "type": "function",
+        "z": "f04122f684555d11",
+        "name": "mean",
+        "func": "msg.topic = 'mean';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1140,
+        "wires": [
+            [
+                "cbe1089f3e7320ba"
+            ]
+        ]
+    },
+    {
+        "id": "aaac554f208bc474",
+        "type": "function",
+        "z": "f04122f684555d11",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_delta: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống sàng tinh\",\n        machine: \"Hệ thống sàng tinh cấp 1\",\n        device: \"Chênh áp\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1220,
+        "wires": [
+            [
+                "a3ad5f3442c18261"
+            ]
+        ]
+    },
+    {
+        "id": "a3ad5f3442c18261",
+        "type": "influxdb out",
+        "z": "f04122f684555d11",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 990,
+        "y": 1220,
         "wires": []
     }
 ]
