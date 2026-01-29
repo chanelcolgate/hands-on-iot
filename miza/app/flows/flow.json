@@ -183,12 +183,52 @@
                 "name": "p_in_5"
             },
             {
+                "addr": "DB371,R140",
+                "name": "p_in_h_alarm_5"
+            },
+            {
+                "addr": "DB371,R144",
+                "name": "p_in_h_warning_5"
+            },
+            {
+                "addr": "DB371,R156",
+                "name": "p_in_l_warning_5"
+            },
+            {
+                "addr": "DB371,R160",
+                "name": "p_in_l_alarm_5"
+            },
+            {
                 "addr": "DB398,R86",
                 "name": "p_out_5"
             },
             {
+                "addr": "DB394,R10",
+                "name": "p_out_h_alarm_5"
+            },
+            {
+                "addr": "DB394,R14",
+                "name": "p_out_h_warning_5"
+            },
+            {
+                "addr": "DB394,R30",
+                "name": "p_out_l_alarm_5"
+            },
+            {
+                "addr": "DB394,R26",
+                "name": "p_out_l_warning_5"
+            },
+            {
                 "addr": "DB346,R392",
                 "name": "p_delta_5"
+            },
+            {
+                "addr": "DB346,R10",
+                "name": "p_delta_h_alarm_5"
+            },
+            {
+                "addr": "DB346,R14",
+                "name": "p_delta_h_warning_5"
             },
             {
                 "addr": "DB355,R86",
@@ -235,12 +275,52 @@
                 "name": "p_in_10"
             },
             {
+                "addr": "DB680,R140",
+                "name": "p_in_h_alarm_10"
+            },
+            {
+                "addr": "DB680,R144",
+                "name": "p_in_h_warning_10"
+            },
+            {
+                "addr": "DB680,R156",
+                "name": "p_in_l_warning_10"
+            },
+            {
+                "addr": "DB680,R160",
+                "name": "p_in_l_alarm_10"
+            },
+            {
                 "addr": "DB415,R86",
                 "name": "p_out_10"
             },
             {
+                "addr": "DB411,R10",
+                "name": "p_out_h_alarm_10"
+            },
+            {
+                "addr": "DB411,R14",
+                "name": "p_out_h_warning_10"
+            },
+            {
+                "addr": "DB411,R30",
+                "name": "p_out_l_alarm_10"
+            },
+            {
+                "addr": "DB411,R26",
+                "name": "p_out_l_warning_10"
+            },
+            {
                 "addr": "DB789,R392",
                 "name": "p_delta_10"
+            },
+            {
+                "addr": "DB789,R10",
+                "name": "p_delta_h_alarm_10"
+            },
+            {
+                "addr": "DB786,R14",
+                "name": "p_delta_h_warning_10"
             },
             {
                 "addr": "DB646,R24",
@@ -259,12 +339,52 @@
                 "name": "p_in_11"
             },
             {
+                "addr": "DB784,R10",
+                "name": "p_in_h_alarm_11"
+            },
+            {
+                "addr": "DB784,R14",
+                "name": "p_in_h_warning_11"
+            },
+            {
+                "addr": "DB784,R30",
+                "name": "p_in_l_alarm_11"
+            },
+            {
+                "addr": "DB784,R26",
+                "name": "p_in_l_warning_11"
+            },
+            {
                 "addr": "DB569,R86",
                 "name": "p_out_11"
             },
             {
+                "addr": "DB565,R10",
+                "name": "p_out_h_alarm_11"
+            },
+            {
+                "addr": "DB565,R14",
+                "name": "p_out_h_warning_11"
+            },
+            {
+                "addr": "DB565,R30",
+                "name": "p_out_l_alarm_11"
+            },
+            {
+                "addr": "DB565,R26",
+                "name": "p_out_l_warning_11"
+            },
+            {
                 "addr": "DB795,R392",
                 "name": "p_delta_11"
+            },
+            {
+                "addr": "DB795,R10",
+                "name": "p_delta_h_alarm_11"
+            },
+            {
+                "addr": "DB795,R14",
+                "name": "p_delta_h_warning_11"
             },
             {
                 "addr": "DB2854,R24",
@@ -283,16 +403,72 @@
                 "name": "p_in_12"
             },
             {
+                "addr": "DB1200,R140",
+                "name": "p_in_h_alarm_12"
+            },
+            {
+                "addr": "DB1200,R144",
+                "name": "p_in_h_warning_12"
+            },
+            {
+                "addr": "DB1200,R156",
+                "name": "p_in_l_warning_12"
+            },
+            {
+                "addr": "DB1200,R160",
+                "name": "p_in_l_alarm_12"
+            },
+            {
                 "addr": "DB1247,R86",
                 "name": "p_out_12"
+            },
+            {
+                "addr": "DB1246,R140",
+                "name": "p_out_h_alarm_12"
+            },
+            {
+                "addr": "DB1246,R144",
+                "name": "p_out_h_warning_12"
+            },
+            {
+                "addr": "DB1246,R156",
+                "name": "p_out_l_warning_12"
+            },
+            {
+                "addr": "DB1246,R160",
+                "name": "p_out_l_alarm_12"
             },
             {
                 "addr": "DB1189,R86",
                 "name": "p_discharge_12"
             },
             {
+                "addr": "DB1185,R10",
+                "name": "p_discharge_h_alarm_12"
+            },
+            {
+                "addr": "DB1185,R14",
+                "name": "p_discharge_h_warning_12"
+            },
+            {
                 "addr": "DB2019,R86",
                 "name": "p_backwash_12"
+            },
+            {
+                "addr": "DB2018,R140",
+                "name": "p_backwash_h_alarm_12"
+            },
+            {
+                "addr": "DB2018,R144",
+                "name": "p_backwash_h_warning_12"
+            },
+            {
+                "addr": "DB2018,R156",
+                "name": "p_backwash_l_warning_12"
+            },
+            {
+                "addr": "DB2018,R160",
+                "name": "p_backwash_l_alarm_12"
             },
             {
                 "addr": "DB3434,R24",
@@ -323,12 +499,52 @@
                 "name": "p_in_14"
             },
             {
+                "addr": "DB1462,R10",
+                "name": "p_in_h_alarm_14"
+            },
+            {
+                "addr": "DB1462,R14",
+                "name": "p_in_h_warning_14"
+            },
+            {
+                "addr": "DB1462,R30",
+                "name": "p_in_l_alarm_14"
+            },
+            {
+                "addr": "DB1462,R26",
+                "name": "p_in_l_warning_14"
+            },
+            {
                 "addr": "DB1798,R86",
                 "name": "p_out_14"
             },
             {
+                "addr": "DB1794,R10",
+                "name": "p_out_h_alarm_14"
+            },
+            {
+                "addr": "DB1794,R14",
+                "name": "p_out_h_warning_14"
+            },
+            {
+                "addr": "DB1794,R30",
+                "name": "p_out_l_alarm_14"
+            },
+            {
+                "addr": "DB1794,R26",
+                "name": "p_out_l_warning_14"
+            },
+            {
                 "addr": "DB1847,R392",
                 "name": "p_delta_14"
+            },
+            {
+                "addr": "DB1847,R10",
+                "name": "p_delta_h_alarm_14"
+            },
+            {
+                "addr": "DB1847,R14",
+                "name": "p_delta_h_warning_14"
             },
             {
                 "addr": "DB873,R24",
@@ -345,6 +561,22 @@
             {
                 "addr": "DB1902,R86",
                 "name": "p_in_15"
+            },
+            {
+                "addr": "DB1901,R140",
+                "name": "p_in_h_alarm_15"
+            },
+            {
+                "addr": "DB1901,R144",
+                "name": "p_in_h_warning_15"
+            },
+            {
+                "addr": "DB1901,R156",
+                "name": "p_in_l_warning_15"
+            },
+            {
+                "addr": "DB1901,R160",
+                "name": "p_in_l_alarm_15"
             },
             {
                 "addr": "DB1284,R24",
@@ -375,8 +607,40 @@
                 "name": "level_pulp_tank_17"
             },
             {
+                "addr": "DB968,R10",
+                "name": "level_pulp_tank_h_alarm_17"
+            },
+            {
+                "addr": "DB968,R14",
+                "name": "level_pulp_tank_h_warning_17"
+            },
+            {
+                "addr": "DB968,R30",
+                "name": "level_pulp_tank_l_alarm_17"
+            },
+            {
+                "addr": "DB968,R26",
+                "name": "level_pulp_tank_l_warning_17"
+            },
+            {
                 "addr": "DB2956,R86",
                 "name": "level_pulp_tank_18"
+            },
+            {
+                "addr": "DB2160,R10",
+                "name": "level_pulp_tank_h_alarm_18"
+            },
+            {
+                "addr": "DB2160,R14",
+                "name": "level_pulp_tank_h_warning_18"
+            },
+            {
+                "addr": "DB2160,R30",
+                "name": "level_pulp_tank_l_alarm_18"
+            },
+            {
+                "addr": "DB2160,R26",
+                "name": "level_pulp_tank_l_warning_18"
             },
             {
                 "addr": "DB2687,R24",
@@ -393,6 +657,22 @@
             {
                 "addr": "DB1902,R86",
                 "name": "p_out_19"
+            },
+            {
+                "addr": "DB1901,R140",
+                "name": "p_out_h_alarm_19"
+            },
+            {
+                "addr": "DB1901,R144",
+                "name": "p_out_h_warning_19"
+            },
+            {
+                "addr": "DB1901,R156",
+                "name": "p_out_l_warning_19"
+            },
+            {
+                "addr": "DB1901,R160",
+                "name": "p_out_l_alarm_19"
             },
             {
                 "addr": "DB2352,R24",
@@ -463,6 +743,22 @@
                 "name": "p_in_24"
             },
             {
+                "addr": "DB1873,R140",
+                "name": "p_in_h_alarm_24"
+            },
+            {
+                "addr": "DB1873,R144",
+                "name": "p_in_h_warning_24"
+            },
+            {
+                "addr": "DB1873,R156",
+                "name": "p_in_l_warning_24"
+            },
+            {
+                "addr": "DB1873,R160",
+                "name": "p_in_l_alarm_24"
+            },
+            {
                 "addr": "DB3286,R24",
                 "name": "motor_load_pct_25"
             },
@@ -489,6 +785,22 @@
             {
                 "addr": "DB3529,R86",
                 "name": "level_pulp_tank_27"
+            },
+            {
+                "addr": "DB3522,R10",
+                "name": "level_pulp_tank_h_alarm_27"
+            },
+            {
+                "addr": "DB3522,R14",
+                "name": "level_pulp_tank_h_warning_27"
+            },
+            {
+                "addr": "DB3522,R30",
+                "name": "level_pulp_tank_l_alarm_27"
+            },
+            {
+                "addr": "DB3522,R26",
+                "name": "level_pulp_tank_l_warning_27"
             },
             {
                 "addr": "DB3543,R24",
@@ -539,6 +851,22 @@
                 "name": "p_out_27_2"
             },
             {
+                "addr": "DB2186,R10",
+                "name": "p_out_h_alarm_27_2"
+            },
+            {
+                "addr": "DB2186,R14",
+                "name": "p_out_h_warning_27_2"
+            },
+            {
+                "addr": "DB2186,R30",
+                "name": "p_out_l_alarm_27_2"
+            },
+            {
+                "addr": "DB2186,R26",
+                "name": "p_out_l_warning_27_2"
+            },
+            {
                 "addr": "DB3257,R24",
                 "name": "motor_load_pct_28"
             },
@@ -555,12 +883,52 @@
                 "name": "p_in_28"
             },
             {
+                "addr": "DB2119,R10",
+                "name": "p_in_h_alarm_28"
+            },
+            {
+                "addr": "DB2119,R14",
+                "name": "p_in_h_warning_28"
+            },
+            {
+                "addr": "DB2119,R30",
+                "name": "p_in_l_alarm_28"
+            },
+            {
+                "addr": "DB2119,R26",
+                "name": "p_in_l_warning_28"
+            },
+            {
                 "addr": "DB2195,R86",
                 "name": "p_out_28"
             },
             {
+                "addr": "DB2191,R10",
+                "name": "p_out_h_alarm_28"
+            },
+            {
+                "addr": "DB2191,R14",
+                "name": "p_out_h_warning_28"
+            },
+            {
+                "addr": "DB2191,R30",
+                "name": "p_out_l_alarm_28"
+            },
+            {
+                "addr": "DB2191,R26",
+                "name": "p_out_l_warning_28"
+            },
+            {
                 "addr": "DB2296,R392",
                 "name": "p_delta_28"
+            },
+            {
+                "addr": "DB2296,R10",
+                "name": "p_delta_h_alarm_28"
+            },
+            {
+                "addr": "DB2296,R14",
+                "name": "p_delta_h_warning_28"
             },
             {
                 "addr": "DB905,R24",
@@ -577,6 +945,22 @@
             {
                 "addr": "DB1054,R86",
                 "name": "level_pulp_tank_29"
+            },
+            {
+                "addr": "DB1048,R10",
+                "name": "level_pulp_tank_h_alarm_29"
+            },
+            {
+                "addr": "DB1048,R14",
+                "name": "level_pulp_tank_h_warning_29"
+            },
+            {
+                "addr": "DB1048,R30",
+                "name": "level_pulp_tank_l_alarm_29"
+            },
+            {
+                "addr": "DB1048,R26",
+                "name": "level_pulp_tank_l_warning_29"
             },
             {
                 "addr": "DB501,R24",
@@ -687,12 +1071,52 @@
                 "name": "p_in_5"
             },
             {
+                "addr": "DB371,R140",
+                "name": "p_in_h_alarm_5"
+            },
+            {
+                "addr": "DB371,R144",
+                "name": "p_in_h_warning_5"
+            },
+            {
+                "addr": "DB371,R156",
+                "name": "p_in_l_warning_5"
+            },
+            {
+                "addr": "DB371,R160",
+                "name": "p_in_l_alarm_5"
+            },
+            {
                 "addr": "DB398,R86",
                 "name": "p_out_5"
             },
             {
+                "addr": "DB394,R10",
+                "name": "p_out_h_alarm_5"
+            },
+            {
+                "addr": "DB394,R14",
+                "name": "p_out_h_warning_5"
+            },
+            {
+                "addr": "DB394,R30",
+                "name": "p_out_l_alarm_5"
+            },
+            {
+                "addr": "DB394,R26",
+                "name": "_out_l_warning_5"
+            },
+            {
                 "addr": "DB346,R392",
                 "name": "p_delta_5"
+            },
+            {
+                "addr": "DB346,R10",
+                "name": "p_delta_h_alarm_5"
+            },
+            {
+                "addr": "DB346,R14",
+                "name": "p_delta_h_warning_5"
             },
             {
                 "addr": "DB355,R86",
@@ -739,12 +1163,52 @@
                 "name": "p_in_10"
             },
             {
+                "addr": "DB680,R140",
+                "name": "p_in_h_alarm_10"
+            },
+            {
+                "addr": "DB680,R144",
+                "name": "p_in_h_warning_10"
+            },
+            {
+                "addr": "DB680,R156",
+                "name": "p_in_l_warning_10"
+            },
+            {
+                "addr": "DB680,R160",
+                "name": "p_in_l_alarm_10"
+            },
+            {
                 "addr": "DB415,R86",
                 "name": "p_out_10"
             },
             {
+                "addr": "DB411,R10",
+                "name": "p_out_h_alarm_10"
+            },
+            {
+                "addr": "DB411,R14",
+                "name": "p_out_h_warning_10"
+            },
+            {
+                "addr": "DB411,R30",
+                "name": "p_out_l_alarm_10"
+            },
+            {
+                "addr": "DB411,R26",
+                "name": "p_out_l_warning_10"
+            },
+            {
                 "addr": "DB789,R392",
                 "name": "p_delta_10"
+            },
+            {
+                "addr": "DB789,R10",
+                "name": "p_delta_h_alarm_10"
+            },
+            {
+                "addr": "DB786,R14",
+                "name": "p_delta_h_warning_10"
             },
             {
                 "addr": "DB646,R24",
@@ -763,12 +1227,52 @@
                 "name": "p_in_11"
             },
             {
+                "addr": "DB784,R10",
+                "name": "p_in_h_alarm_11"
+            },
+            {
+                "addr": "DB784,R14",
+                "name": "p_in_h_warning_11"
+            },
+            {
+                "addr": "DB784,R30",
+                "name": "p_in_l_alarm_11"
+            },
+            {
+                "addr": "DB784,R26",
+                "name": "p_in_l_warning_11"
+            },
+            {
                 "addr": "DB569,R86",
                 "name": "p_out_11"
             },
             {
+                "addr": "DB565,R10",
+                "name": "p_out_h_alarm_11"
+            },
+            {
+                "addr": "DB565,R14",
+                "name": "p_out_h_warning_11"
+            },
+            {
+                "addr": "DB565,R30",
+                "name": "p_out_l_alarm_11"
+            },
+            {
+                "addr": "DB565,R26",
+                "name": "p_out_l_warning_11"
+            },
+            {
                 "addr": "DB795,R392",
                 "name": "p_delta_11"
+            },
+            {
+                "addr": "DB795,R10",
+                "name": "p_delta_h_alarm_11"
+            },
+            {
+                "addr": "DB795,R14",
+                "name": "p_delta_h_warning_11"
             },
             {
                 "addr": "DB2854,R24",
@@ -787,16 +1291,72 @@
                 "name": "p_in_12"
             },
             {
+                "addr": "DB1200,R140",
+                "name": "p_in_h_alarm_12"
+            },
+            {
+                "addr": "DB1200,R144",
+                "name": "p_in_h_warning_12"
+            },
+            {
+                "addr": "DB1200,R156",
+                "name": "p_in_l_warning_12"
+            },
+            {
+                "addr": "DB1200,R160",
+                "name": "p_in_l_alarm_12"
+            },
+            {
                 "addr": "DB1247,R86",
                 "name": "p_out_12"
+            },
+            {
+                "addr": "DB1246,R140",
+                "name": "p_out_h_alarm_12"
+            },
+            {
+                "addr": "DB1246,R144",
+                "name": "p_out_h_warning_12"
+            },
+            {
+                "addr": "DB1246,R156",
+                "name": "p_out_l_warning_12"
+            },
+            {
+                "addr": "DB1246,R160",
+                "name": "p_out_l_alarm_12"
             },
             {
                 "addr": "DB1189,R86",
                 "name": "p_discharge_12"
             },
             {
+                "addr": "DB1185,R10",
+                "name": "p_discharge_h_alarm_12"
+            },
+            {
+                "addr": "DB1185,R14",
+                "name": "p_discharge_h_warning_12"
+            },
+            {
                 "addr": "DB2019,R86",
                 "name": "p_backwash_12"
+            },
+            {
+                "addr": "DB2018,R140",
+                "name": "p_backwash_h_alarm_12"
+            },
+            {
+                "addr": "DB2018,R144",
+                "name": "p_backwash_h_warning_12"
+            },
+            {
+                "addr": "DB2018,R156",
+                "name": "p_backwash_l_warning_12"
+            },
+            {
+                "addr": "DB2018,R160",
+                "name": "p_backwash_l_alarm_12"
             },
             {
                 "addr": "DB3434,R24",
@@ -827,12 +1387,52 @@
                 "name": "p_in_14"
             },
             {
+                "addr": "DB1462,R10",
+                "name": "p_in_h_alarm_14"
+            },
+            {
+                "addr": "DB1462,R14",
+                "name": "p_in_h_warning_14"
+            },
+            {
+                "addr": "DB1462,R30",
+                "name": "p_in_l_alarm_14"
+            },
+            {
+                "addr": "DB1462,R26",
+                "name": "p_in_l_warning_14"
+            },
+            {
                 "addr": "DB1798,R86",
                 "name": "p_out_14"
             },
             {
+                "addr": "DB1794,R10",
+                "name": "p_out_h_alarm_14"
+            },
+            {
+                "addr": "DB1794,R14",
+                "name": "p_out_h_warning_14"
+            },
+            {
+                "addr": "DB1794,R30",
+                "name": "p_out_l_alarm_14"
+            },
+            {
+                "addr": "DB1794,R26",
+                "name": "p_out_l_warning_14"
+            },
+            {
                 "addr": "DB1847,R392",
                 "name": "p_delta_14"
+            },
+            {
+                "addr": "DB1847,R10",
+                "name": "p_delta_h_alarm_14"
+            },
+            {
+                "addr": "DB1847,R14",
+                "name": "p_delta_h_warning_14"
             },
             {
                 "addr": "DB873,R24",
@@ -849,6 +1449,22 @@
             {
                 "addr": "DB1902,R86",
                 "name": "p_in_15"
+            },
+            {
+                "addr": "DB1901,R140",
+                "name": "p_in_h_alarm_15"
+            },
+            {
+                "addr": "DB1901,R144",
+                "name": "p_in_h_warning_15"
+            },
+            {
+                "addr": "DB1901,R156",
+                "name": "p_in_l_warning_15"
+            },
+            {
+                "addr": "DB1901,R160",
+                "name": "p_in_l_alarm_15"
             },
             {
                 "addr": "DB1284,R24",
@@ -879,8 +1495,40 @@
                 "name": "level_pulp_tank_17"
             },
             {
+                "addr": "DB968,R10",
+                "name": "level_pulp_tank_h_alarm_17"
+            },
+            {
+                "addr": "DB968,R14",
+                "name": "level_pulp_tank_h_warning_17"
+            },
+            {
+                "addr": "DB968,R30",
+                "name": "level_pulp_tank_l_alarm_17"
+            },
+            {
+                "addr": "DB968,R26",
+                "name": "level_pulp_tank_l_warning_17"
+            },
+            {
                 "addr": "DB2956,R86",
                 "name": "level_pulp_tank_18"
+            },
+            {
+                "addr": "DB2160,R10",
+                "name": "level_pulp_tank_h_alarm_18"
+            },
+            {
+                "addr": "DB2160,R14",
+                "name": "level_pulp_tank_h_warning_18"
+            },
+            {
+                "addr": "DB2160,R30",
+                "name": "level_pulp_tank_l_alarm_18"
+            },
+            {
+                "addr": "DB2160,R26",
+                "name": "level_pulp_tank_l_warning_18"
             },
             {
                 "addr": "DB2687,R24",
@@ -897,6 +1545,22 @@
             {
                 "addr": "DB1902,R86",
                 "name": "p_out_19"
+            },
+            {
+                "addr": "DB1901,R140",
+                "name": "p_out_h_alarm_19"
+            },
+            {
+                "addr": "DB1901,R144",
+                "name": "p_out_h_warning_19"
+            },
+            {
+                "addr": "DB1901,R156",
+                "name": "p_out_l_warning_19"
+            },
+            {
+                "addr": "DB1901,R160",
+                "name": "p_out_l_alarm_19"
             },
             {
                 "addr": "DB2352,R24",
@@ -967,6 +1631,22 @@
                 "name": "p_in_24"
             },
             {
+                "addr": "DB1873,R140",
+                "name": "p_in_h_alarm_24"
+            },
+            {
+                "addr": "DB1873,R144",
+                "name": "p_in_h_warning_24"
+            },
+            {
+                "addr": "DB1873,R156",
+                "name": "p_in_l_warning_24"
+            },
+            {
+                "addr": "DB1873,R160",
+                "name": "p_in_l_alarm_24"
+            },
+            {
                 "addr": "DB3286,R24",
                 "name": "motor_load_pct_25"
             },
@@ -993,6 +1673,22 @@
             {
                 "addr": "DB3529,R86",
                 "name": "level_pulp_tank_27"
+            },
+            {
+                "addr": "DB3522,R10",
+                "name": "level_pulp_tank_h_alarm_27"
+            },
+            {
+                "addr": "DB3522,R14",
+                "name": "level_pulp_tank_h_warning_27"
+            },
+            {
+                "addr": "DB3522,R30",
+                "name": "level_pulp_tank_l_alarm_27"
+            },
+            {
+                "addr": "DB3522,R26",
+                "name": "level_pulp_tank_l_warning_27"
             },
             {
                 "addr": "DB3543,R24",
@@ -1043,6 +1739,22 @@
                 "name": "p_out_27_2"
             },
             {
+                "addr": "DB2186,R10",
+                "name": "p_out_h_alarm_27_2"
+            },
+            {
+                "addr": "DB2186,R14",
+                "name": "p_out_h_warning_27_2"
+            },
+            {
+                "addr": "DB2186,R30",
+                "name": "p_out_l_alarm_27_2"
+            },
+            {
+                "addr": "DB2186,R26",
+                "name": "p_out_l_warning_27_2"
+            },
+            {
                 "addr": "DB3257,R24",
                 "name": "motor_load_pct_28"
             },
@@ -1059,12 +1771,52 @@
                 "name": "p_in_28"
             },
             {
+                "addr": "DB2119,R10",
+                "name": "p_in_h_alarm_28"
+            },
+            {
+                "addr": "DB2119,R14",
+                "name": "p_in_h_warning_28"
+            },
+            {
+                "addr": "DB2119,R30",
+                "name": "p_in_l_alarm_28"
+            },
+            {
+                "addr": "DB2119,R26",
+                "name": "p_in_l_warning_28"
+            },
+            {
                 "addr": "DB2195,R86",
                 "name": "p_out_28"
             },
             {
+                "addr": "DB2191,R10",
+                "name": "p_out_h_alarm_28"
+            },
+            {
+                "addr": "DB2191,R14",
+                "name": "p_out_h_warning_28"
+            },
+            {
+                "addr": "DB2191,R30",
+                "name": "p_out_l_alarm_28"
+            },
+            {
+                "addr": "DB2191,R26",
+                "name": "p_out_l_warning_28"
+            },
+            {
                 "addr": "DB2296,R392",
                 "name": "p_delta_28"
+            },
+            {
+                "addr": "DB2296,R10",
+                "name": "p_delta_h_alarm_28"
+            },
+            {
+                "addr": "DB2296,R14",
+                "name": "p_delta_h_warning_28"
             },
             {
                 "addr": "DB905,R24",
@@ -1081,6 +1833,22 @@
             {
                 "addr": "DB1054,R86",
                 "name": "level_pulp_tank_29"
+            },
+            {
+                "addr": "DB1048,R10",
+                "name": "level_pulp_tank_h_alarm_29"
+            },
+            {
+                "addr": "DB1048,R14",
+                "name": "level_pulp_tank_h_warning_29"
+            },
+            {
+                "addr": "DB1048,R30",
+                "name": "level_pulp_tank_l_alarm_29"
+            },
+            {
+                "addr": "DB1048,R26",
+                "name": "level_pulp_tank_l_warning_29"
             },
             {
                 "addr": "DB501,R24",
@@ -3969,6 +4737,376 @@
         "info": "",
         "x": 180,
         "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "9d5edb4cadd69b5d",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_in_h_warning_5",
+        "diff": false,
+        "name": "",
+        "x": 1230,
+        "y": 220,
+        "wires": [
+            [
+                "3ee0f80bfcf567ae"
+            ]
+        ]
+    },
+    {
+        "id": "3ee0f80bfcf567ae",
+        "type": "throttle",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 1410,
+        "y": 220,
+        "wires": [
+            [
+                "b88148889b11d413"
+            ]
+        ]
+    },
+    {
+        "id": "b88148889b11d413",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_in_h_warning: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ cao\",\n        machine: \"Lọc cát nồng độ cao cấp 2\",\n        device: \"Áp đầu vào\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 220,
+        "wires": [
+            [
+                "28116d721334f64a"
+            ]
+        ]
+    },
+    {
+        "id": "28116d721334f64a",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1790,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "4aca72240d6b0a52",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_in_l_warning_5",
+        "diff": false,
+        "name": "",
+        "x": 1220,
+        "y": 280,
+        "wires": [
+            [
+                "f942d4ccd8b5b0ad"
+            ]
+        ]
+    },
+    {
+        "id": "f942d4ccd8b5b0ad",
+        "type": "throttle",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 1410,
+        "y": 280,
+        "wires": [
+            [
+                "1b9bef8574383fe0"
+            ]
+        ]
+    },
+    {
+        "id": "1b9bef8574383fe0",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_in_l_warning: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ cao\",\n        machine: \"Lọc cát nồng độ cao cấp 2\",\n        device: \"Áp đầu vào\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 280,
+        "wires": [
+            [
+                "677e28555d996ac1"
+            ]
+        ]
+    },
+    {
+        "id": "677e28555d996ac1",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1790,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f379cb9ced8a1df3",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_out_h_warning_5",
+        "diff": false,
+        "name": "",
+        "x": 1230,
+        "y": 440,
+        "wires": [
+            [
+                "a3ead26f0e18721c"
+            ]
+        ]
+    },
+    {
+        "id": "a3ead26f0e18721c",
+        "type": "throttle",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 1410,
+        "y": 440,
+        "wires": [
+            [
+                "d3407519742c16ed"
+            ]
+        ]
+    },
+    {
+        "id": "d3407519742c16ed",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_out_h_warning: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ cao\",\n        machine: \"Lọc cát nồng độ cao cấp 2\",\n        device: \"Áp đầu ra\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 440,
+        "wires": [
+            [
+                "5b4438a27d2c6971"
+            ]
+        ]
+    },
+    {
+        "id": "5b4438a27d2c6971",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1790,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "79a0d196ef56d9b4",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_out_l_warning_5",
+        "diff": false,
+        "name": "",
+        "x": 1230,
+        "y": 500,
+        "wires": [
+            [
+                "d5b54b62227c7d8c"
+            ]
+        ]
+    },
+    {
+        "id": "d5b54b62227c7d8c",
+        "type": "throttle",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 1410,
+        "y": 500,
+        "wires": [
+            [
+                "927229f4ca60b1b9"
+            ]
+        ]
+    },
+    {
+        "id": "927229f4ca60b1b9",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_out_l_warning: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ cao\",\n        machine: \"Lọc cát nồng độ cao cấp 2\",\n        device: \"Áp đầu ra\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 500,
+        "wires": [
+            [
+                "1f2ba66a3ed9767d"
+            ]
+        ]
+    },
+    {
+        "id": "1f2ba66a3ed9767d",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1790,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "3f05556f5b11cec8",
+        "type": "s7 in",
+        "z": "4f96d0238c546860",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "p_delta_h_alarm_5",
+        "diff": false,
+        "name": "",
+        "x": 1230,
+        "y": 580,
+        "wires": [
+            [
+                "ddbc11a730ea3006"
+            ]
+        ]
+    },
+    {
+        "id": "ddbc11a730ea3006",
+        "type": "throttle",
+        "z": "4f96d0238c546860",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 1410,
+        "y": 580,
+        "wires": [
+            [
+                "8fbd38bb7b937786"
+            ]
+        ]
+    },
+    {
+        "id": "8fbd38bb7b937786",
+        "type": "function",
+        "z": "4f96d0238c546860",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_delta_h_warning: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ thống lọc cát nồng độ cao\",\n        machine: \"Lọc cát nồng độ cao cấp 2\",\n        device: \"Chênh áp\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 580,
+        "wires": [
+            [
+                "18f0f0d4f863fc8b"
+            ]
+        ]
+    },
+    {
+        "id": "18f0f0d4f863fc8b",
+        "type": "influxdb out",
+        "z": "4f96d0238c546860",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1790,
+        "y": 580,
         "wires": []
     },
     {
@@ -15976,7 +17114,7 @@
         "type": "function",
         "z": "965c7750b786c8eb",
         "name": "101-Filter",
-        "func": "let data = {\n    payload: {\n        \"D4\": [{\n            \"speed_sp\": msg.payload.speed_sp,\n            \"speed_pv\": msg.payload.speed_pv,\n            \"motor_load_pct\": msg.payload.motor_load_pct,\n            \"motor_temp_c\": msg.payload.motor_temp_c,\n            \"motor_torque_pct\": msg.payload.motor_torque_pct,\n            \"vfd_temp_c\": msg.payload.vfd_temp_c,\n        }]\n    }\n};\nreturn data;",
+        "func": "let data = {\n    payload: {\n        \"D4\": [{\n            \"speed_sp\": msg.payload.speed_sp,\n            \"speed_pv\": msg.payload.speed_pv+0,\n            \"motor_load_pct\": msg.payload.motor_load_pct,\n            \"motor_temp_c\": msg.payload.motor_temp_c,\n            \"motor_torque_pct\": msg.payload.motor_torque_pct-0,\n            \"vfd_temp_c\": msg.payload.vfd_temp_c,\n        }]\n    }\n};\nreturn data;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -16067,7 +17205,7 @@
         "type": "function",
         "z": "965c7750b786c8eb",
         "name": "120-Filter",
-        "func": "let data = {\n    payload: {\n        \"HTTLB-ThuyLucChuD-motor\": [{\n            \"load\": msg.payload.motor_load_pct,\n            \"running\": msg.payload.motor_running,\n            \"error\": msg.payload.motor_error,\n        }],\n        \"HTTLB-ThuyLucChuD-gearbox_oil\": [{\n            \"running\": msg.payload.gearbox_oil_running,\n            \"error\": msg.payload.gearbox_oil_error,\n        }],\n        \"HTTLB-SangPhanLyThaiNhe-motor_10207\": [{\n            \"load\": msg.payload.motor_load_pct_2,\n            \"running\": msg.payload.motor_running_2,\n            \"error\": msg.payload.motor_error_2,\n        }],\n        \"HTTLB-SangTrong-motor\": [{\n            \"load\": msg.payload.motor_load_pct_3,\n            \"running\": msg.payload.motor_running_3,\n            \"error\": msg.payload.motor_error_3,\n        }],\n        \"HTTLB-BomBotThuyLuc-motor\": [{\n            \"load\": msg.payload.motor_load_pct_4,\n            \"running\": msg.payload.motor_running_4,\n            \"error\": msg.payload.motor_error_4,\n        }],\n        \"HTLCNDC-LocCatNongDoCaoCap2-pressure\": [{\n            \"p-in\": msg.payload.p_in_5,\n            \"p-out\": msg.payload.p_out_5,\n            \"p-delta\": msg.payload.p_delta_5,\n            \"p-backwash\": msg.payload.q_backwash_5,\n        }],\n        \"HTLCNDC-BayCat-PT_102130\": [{\n            \"p-in\": msg.payload.p_in_6,\n        }],\n        \"HTLCNDC-BomBotCap2-motor_P10214\": [{\n            \"load\": msg.payload.motor_load_pct_7,\n            \"running\": msg.payload.motor_running_7,\n            \"error\": msg.payload.motor_error_7,\n        }],\n        \"HTLCNDC-VitThaiCanNang-motor_10291\": [{\n            \"running\": msg.payload.motor_running_9,\n            \"error\": msg.payload.motor_error_9,\n        }],\n        \"HTST-SangThoCap1_E10218-motor_10218\": [{\n            \"load\": msg.payload.motor_load_pct_10,\n            \"running\": msg.payload.motor_running_10,\n            \"error\": msg.payload.motor_error_10,\n        }],\n        \"HTST-SangThoCap1_E10218-pressure\": [{\n            \"p-in\": msg.payload.p_in_10,\n            \"p-out\": msg.payload.p_out_10,\n            \"p-delta\": msg.payload.p_delta_10,\n        }],\n        \"HTPS1-SangPhanSoi1-motor_10228\": [{\n            \"load\": msg.payload.motor_load_pct_11,\n            \"running\": msg.payload.motor_running_11,\n            \"error\": msg.payload.motor_error_11,\n        }],\n        \"HTPS1-SangPhanSoi1-pressure\": [{\n            \"p-in\": msg.payload.p_in_11,\n            \"p-out\": msg.payload.p_out_11,\n            \"p-delta\": msg.payload.p_delta_11,\n        }],\n        \"HTLCNDT-LocCatNongDoThapCap1-motor_10236\": [{\n            \"load\": msg.payload.motor_load_pct_12,\n            \"running\": msg.payload.motor_running_12,\n            \"error\": msg.payload.motor_error_12,\n        }],\n        \"HTLCNDT-LocCatNongDoThapCap1-pressure\": [{\n            \"p-in\": msg.payload.p_in_12,\n            \"p-out\": msg.payload.p_out_12,\n            \"p-discharge\": msg.payload.p_discharge_12,\n            \"p-backwash\": msg.payload.p_backwash_12,\n        }],\n        \"HTLCNDT-MayEpCat-motor_10293-1\": [{\n            \"load\": msg.payload.motor_load_pct_13,\n            \"running\": msg.payload.motor_running_13,\n            \"error\": msg.payload.motor_error_13,\n        }],\n        \"HTST-SangTinhCap1-motor_10252\": [{\n            \"load\": msg.payload.motor_load_pct_14,\n            \"running\": msg.payload.motor_running_14,\n            \"error\": msg.payload.motor_error_14,\n        }],\n        \"HTST-SangTinhCap1-pressure\": [{\n            \"p-in\": msg.payload.p_in_14,\n            \"p-out\": msg.payload.p_out_14,\n            \"p-delta\": msg.payload.p_delta_14,\n        }], \n        \"HTLDCD-CoDacDiaSF-motor_10231\": [{\n            \"load\": msg.payload.motor_load_pct_15,\n            \"running\": msg.payload.motor_running_15,\n            \"error\": msg.payload.motor_error_15,\n        }],\n        \"HTLDCD-CoDacDiaSF-pressure\": [{\n            \"p-in\": msg.payload.p_in_15,\n        }],\n        \"HTLDCD-BomBotLenThapSF-motor_10233\": [{\n            \"load\": msg.payload.motor_load_pct_16,\n            \"running\": msg.payload.motor_running_16,\n            \"error\": msg.payload.motor_error_16,\n        }],\n        \"HTLDCD-BeBot-motor_10233\": [{\n            \"load\": msg.payload.motor_load_pct_17,\n            \"running\": msg.payload.motor_running_17,\n            \"error\": msg.payload.motor_error_17,\n        }],\n        \"HTLDCD-BeBot-level\": [{\n            \"level\": msg.payload.level_pulp_tank_17,\n        }],\n        \"HTLDCD-BeNuocTrangt-level\": [{\n            \"level\": msg.payload.level_pulp_tank_18,\n        }],\n        \"HTLDCD-BomNuocTrangCatBotVaRuaLuoi-motor_10286\": [{\n            \"load\": msg.payload.motor_load_pct_19,\n            \"running\": msg.payload.motor_running_19,\n            \"error\": msg.payload.motor_error_19,\n        }],\n        \"HTLDCD-BomNuocTrangCatBotVaRuaLuoi-pressure\": [{\n            \"p-out\": msg.payload.p_out_19,\n        }],\n        \"HTPTN-BomBot-motor_10272\": [{\n            \"load\": msg.payload.motor_load_pct_20,\n            \"running\": msg.payload.motor_running_20,\n            \"error\": msg.payload.motor_error_20,\n        }],\n        \"HTPTN-BomBot-control\": [{\n            \"qic-open\": msg.payload.qic_open_20,\n            \"pic-open\": msg.payload.pic_open_20,\n        }],\n        \"HTPTN-TrucVitEp-motor_10265\": [{\n            \"load\": msg.payload.motor_load_pct_21,\n            \"running\": msg.payload.motor_running_21,\n            \"error\": msg.payload.motor_error_21,\n        }],\n        \"HTPTN-TrucVitChen-motor_10266\": [{\n            \"load\": msg.payload.motor_load_pct_22,\n            \"running\": msg.payload.motor_running_22,\n            \"error\": msg.payload.motor_error_22,\n        }],\n        \"HTPTN-TrucVitDanhToiVaGiaNhiet-motor_10267\": [{\n            \"running\": msg.payload.motor_running_23,\n            \"error\": msg.payload.motor_error_23,\n        }],\n        \"HTPTN-TrucVitGiaNhiet-motor_10268\": [{\n            \"load\": msg.payload.motor_load_pct_24,\n            \"running\": msg.payload.motor_running_24,\n            \"error\": msg.payload.motor_error_24,\n        }],\n        \"HTPTN-TrucVitGiaNhiet-pressure\": [{\n            \"p-in\": msg.payload.p_in_24,\n        }],\n        \"HTPTN-TrucVitCapBotVaoNghien-motor_10269\": [{\n            \"load\": msg.payload.motor_load_pct_25,\n            \"running\": msg.payload.motor_running_25,\n            \"error\": msg.payload.motor_error_25,\n        }],\n        \"HTPTN-TrucVitNghienPhanTanNhiet-motor_10270\": [{\n            \"load\": msg.payload.motor_load_pct_26,\n            \"running\": msg.payload.motor_running_26,\n            \"error\": msg.payload.motor_error_26,\n        }],\n        \"HTND_LF-NghienDia-level\": [{\n            \"level\": msg.payload.level_pulp_tank_27,\n        }],\n        \"HTND_LF-NghienDia-motor_Khuay_A-PTN\": [{\n            \"load\": msg.payload.motor_load_pct_27_1,\n            \"running\": msg.payload.motor_running_27_1,\n            \"error\": msg.payload.motor_error_27_1,\n        }],\n        \"HTND_LF-NghienDia-motor_BomBot_10229\": [{\n            \"load\": msg.payload.motor_load_pct_27_2,\n            \"running\": msg.payload.motor_running_27_2,\n            \"error\": msg.payload.motor_error_27_2,\n        }],\n        \"HTND_LF-NghienDia-pressure_PIC_102301\": [{\n            \"p-in\": msg.payload.p_in_27_1,\n        }],\n        \"HTND_LF-NghienDia-motor_10273\": [{\n            \"load\": msg.payload.motor_load_pct_27_3,\n            \"running\": msg.payload.motor_running_27_3,\n            \"error\": msg.payload.motor_error_27_3,\n        }],\n        \"HTND_LF-NghienDia-pressure_FIC_102730\": [{\n            \"p-out\": msg.payload.p_in_27_2,\n        }],\n        \"HTND_LF-NghienDia-control_PT_102731\": [{\n            \"fic-open\": msg.payload.fic_open_27,\n        }],\n        \"HTSPS2-SangPhan2-motor_10274\": [{\n            \"load\": msg.payload.motor_load_pct_28,\n            \"running\": msg.payload.motor_running_28,\n            \"error\": msg.payload.motor_error_28,\n        }],\n        \"HTSPS2-SangPhanSoi2-pressure\": [{\n            \"p-in\": msg.payload.p_in_28,\n            \"p-out\": msg.payload.p_out_28,\n            \"p-delta\": msg.payload.p_delta_28,\n        }],\n        \"TBTP-ThapBotMF-motor_Khuay\": [{\n            \"load\": msg.payload.motor_load_pct_29_1,\n            \"running\": msg.payload.motor_running_29_1,\n            \"error\": msg.payload.motor_error_29_1,\n        }],\n        \"TBTP-ThapBotMF-motor_BomBot\": [{\n            \"load\": msg.payload.motor_load_pct_29_2,\n            \"running\": msg.payload.motor_running_29_2,\n            \"error\": msg.payload.motor_error_29_2,\n        }],\n        \"TBTP-ThapBotMF-level\": [{\n            \"level\": msg.payload.level_pulp_tank_29,\n        }],\n    }\n};\nreturn data;",
+        "func": "let data = {\n    payload: {\n        \"HTTLB-ThuyLucChuD-motor\": [{\n            \"load\": msg.payload.motor_load_pct,\n            \"running\": msg.payload.motor_running,\n            \"error\": msg.payload.motor_error,\n        }],\n        \"HTTLB-ThuyLucChuD-motor_gearbox_oil\": [{\n            \"running\": msg.payload.gearbox_oil_running,\n            \"error\": msg.payload.gearbox_oil_error,\n        }],\n        \"HTTLB-SangPhanLyThaiNhe-motor_10207\": [{\n            \"load\": msg.payload.motor_load_pct_2,\n            \"running\": msg.payload.motor_running_2,\n            \"error\": msg.payload.motor_error_2,\n        }],\n        \"HTTLB-SangTrong-motor\": [{\n            \"load\": msg.payload.motor_load_pct_3,\n            \"running\": msg.payload.motor_running_3,\n            \"error\": msg.payload.motor_error_3,\n        }],\n        \"HTTLB-BomBotThuyLuc-motor\": [{\n            \"load\": msg.payload.motor_load_pct_4,\n            \"running\": msg.payload.motor_running_4,\n            \"error\": msg.payload.motor_error_4,\n        }],\n        \"HTLCNDC-LocCatNongDoCaoCap2-pressure\": [{\n            \"p-in\": msg.payload.p_in_5,\n            \"p-out\": msg.payload.p_out_5,\n            \"p-delta\": msg.payload.p_delta_5,\n            \"p-backwash\": msg.payload.q_backwash_5,\n        }],\n        \"HTLCNDC-BayCat-pressure_PT_102130\": [{\n            \"p-in\": msg.payload.p_in_6,\n        }],\n        \"HTLCNDC-BomBotCap2-motor_P10214\": [{\n            \"load\": msg.payload.motor_load_pct_7,\n            \"running\": msg.payload.motor_running_7,\n            \"error\": msg.payload.motor_error_7,\n        }],\n        \"HTLCNDC-VitThaiCanNang-motor_10291\": [{\n            \"running\": msg.payload.motor_running_9,\n            \"error\": msg.payload.motor_error_9,\n        }],\n        \"HTST-SangThoCap1_E10218-motor_10218\": [{\n            \"load\": msg.payload.motor_load_pct_10,\n            \"running\": msg.payload.motor_running_10,\n            \"error\": msg.payload.motor_error_10,\n        }],\n        \"HTST-SangThoCap1_E10218-pressure\": [{\n            \"p-in\": msg.payload.p_in_10,\n            \"p-out\": msg.payload.p_out_10,\n            \"p-delta\": msg.payload.p_delta_10,\n        }],\n        \"HTPS1-SangPhanSoi1-motor_10228\": [{\n            \"load\": msg.payload.motor_load_pct_11,\n            \"running\": msg.payload.motor_running_11,\n            \"error\": msg.payload.motor_error_11,\n        }],\n        \"HTPS1-SangPhanSoi1-pressure\": [{\n            \"p-in\": msg.payload.p_in_11,\n            \"p-out\": msg.payload.p_out_11,\n            \"p-delta\": msg.payload.p_delta_11,\n        }],\n        \"HTLCNDT-LocCatNongDoThapCap1-motor_10236\": [{\n            \"load\": msg.payload.motor_load_pct_12,\n            \"running\": msg.payload.motor_running_12,\n            \"error\": msg.payload.motor_error_12,\n        }],\n        \"HTLCNDT-LocCatNongDoThapCap1-pressure\": [{\n            \"p-in\": msg.payload.p_in_12,\n            \"p-out\": msg.payload.p_out_12,\n            \"p-discharge\": msg.payload.p_discharge_12,\n            \"p-backwash\": msg.payload.p_backwash_12,\n        }],\n        \"HTLCNDT-MayEpCat-motor_10293-1\": [{\n            \"load\": msg.payload.motor_load_pct_13,\n            \"running\": msg.payload.motor_running_13,\n            \"error\": msg.payload.motor_error_13,\n        }],\n        \"HTST-SangTinhCap1-motor_10252\": [{\n            \"load\": msg.payload.motor_load_pct_14,\n            \"running\": msg.payload.motor_running_14,\n            \"error\": msg.payload.motor_error_14,\n        }],\n        \"HTST-SangTinhCap1-pressure\": [{\n            \"p-in\": msg.payload.p_in_14,\n            \"p-out\": msg.payload.p_out_14,\n            \"p-delta\": msg.payload.p_delta_14,\n        }], \n        \"HTLDCD-CoDacDiaSF-motor_10231\": [{\n            \"load\": msg.payload.motor_load_pct_15,\n            \"running\": msg.payload.motor_running_15,\n            \"error\": msg.payload.motor_error_15,\n        }],\n        \"HTLDCD-CoDacDiaSF-pressure\": [{\n            \"p-in\": msg.payload.p_in_15,\n        }],\n        \"HTLDCD-BomBotLenThapSF-motor_10233\": [{\n            \"load\": msg.payload.motor_load_pct_16,\n            \"running\": msg.payload.motor_running_16,\n            \"error\": msg.payload.motor_error_16,\n        }],\n        \"HTLDCD-BeBot-motor_10233\": [{\n            \"load\": msg.payload.motor_load_pct_17,\n            \"running\": msg.payload.motor_running_17,\n            \"error\": msg.payload.motor_error_17,\n        }],\n        \"HTLDCD-BeBot-level\": [{\n            \"level\": msg.payload.level_pulp_tank_17,\n        }],\n        \"HTLDCD-BeNuocTrangt-level\": [{\n            \"level\": msg.payload.level_pulp_tank_18,\n        }],\n        \"HTLDCD-BomNuocTrangCatBotVaRuaLuoi-motor_10286\": [{\n            \"load\": msg.payload.motor_load_pct_19,\n            \"running\": msg.payload.motor_running_19,\n            \"error\": msg.payload.motor_error_19,\n        }],\n        \"HTLDCD-BomNuocTrangCatBotVaRuaLuoi-pressure\": [{\n            \"p-out\": msg.payload.p_out_19,\n        }],\n        \"HTPTN-BomBot-motor_10272\": [{\n            \"load\": msg.payload.motor_load_pct_20,\n            \"running\": msg.payload.motor_running_20,\n            \"error\": msg.payload.motor_error_20,\n        }],\n        \"HTPTN-BomBot-control\": [{\n            \"qic-open\": msg.payload.qic_open_20,\n            \"pic-open\": msg.payload.pic_open_20,\n        }],\n        \"HTPTN-TrucVitEp-motor_10265\": [{\n            \"load\": msg.payload.motor_load_pct_21,\n            \"running\": msg.payload.motor_running_21,\n            \"error\": msg.payload.motor_error_21,\n        }],\n        \"HTPTN-TrucVitChen-motor_10266\": [{\n            \"load\": msg.payload.motor_load_pct_22,\n            \"running\": msg.payload.motor_running_22,\n            \"error\": msg.payload.motor_error_22,\n        }],\n        \"HTPTN-TrucVitDanhToiVaGiaNhiet-motor_10267\": [{\n            \"running\": msg.payload.motor_running_23,\n            \"error\": msg.payload.motor_error_23,\n        }],\n        \"HTPTN-TrucVitGiaNhiet-motor_10268\": [{\n            \"load\": msg.payload.motor_load_pct_24,\n            \"running\": msg.payload.motor_running_24,\n            \"error\": msg.payload.motor_error_24,\n        }],\n        \"HTPTN-TrucVitGiaNhiet-pressure\": [{\n            \"p-in\": msg.payload.p_in_24,\n        }],\n        \"HTPTN-TrucVitCapBotVaoNghien-motor_10269\": [{\n            \"load\": msg.payload.motor_load_pct_25,\n            \"running\": msg.payload.motor_running_25,\n            \"error\": msg.payload.motor_error_25,\n        }],\n        \"HTPTN-TrucVitNghienPhanTanNhiet-motor_10270\": [{\n            \"load\": msg.payload.motor_load_pct_26,\n            \"running\": msg.payload.motor_running_26,\n            \"error\": msg.payload.motor_error_26,\n        }],\n        \"HTND_LF-NghienDia-level\": [{\n            \"level\": msg.payload.level_pulp_tank_27,\n        }],\n        \"HTND_LF-NghienDia-motor_Khuay_A-PTN\": [{\n            \"load\": msg.payload.motor_load_pct_27_1,\n            \"running\": msg.payload.motor_running_27_1,\n            \"error\": msg.payload.motor_error_27_1,\n        }],\n        \"HTND_LF-NghienDia-motor_BomBot_10229\": [{\n            \"load\": msg.payload.motor_load_pct_27_2,\n            \"running\": msg.payload.motor_running_27_2,\n            \"error\": msg.payload.motor_error_27_2,\n        }],\n        \"HTND_LF-NghienDia-pressure_PIC_102301\": [{\n            \"p-in\": msg.payload.p_in_27_1,\n        }],\n        \"HTND_LF-NghienDia-motor_10273\": [{\n            \"load\": msg.payload.motor_load_pct_27_3,\n            \"running\": msg.payload.motor_running_27_3,\n            \"error\": msg.payload.motor_error_27_3,\n        }],\n        \"HTND_LF-NghienDia-pressure_FIC_102730\": [{\n            \"p-out\": msg.payload.p_out_27_2,\n        }],\n        \"HTND_LF-NghienDia-control_PT_102731\": [{\n            \"fic-open\": msg.payload.fic_open_27,\n        }],\n        \"HTSPS2-SangPhan2-motor_10274\": [{\n            \"load\": msg.payload.motor_load_pct_28,\n            \"running\": msg.payload.motor_running_28,\n            \"error\": msg.payload.motor_error_28,\n        }],\n        \"HTSPS2-SangPhanSoi2-pressure\": [{\n            \"p-in\": msg.payload.p_in_28,\n            \"p-out\": msg.payload.p_out_28,\n            \"p-delta\": msg.payload.p_delta_28,\n        }],\n        \"TBTP-ThapBotMF-motor_Khuay\": [{\n            \"load\": msg.payload.motor_load_pct_29_1,\n            \"running\": msg.payload.motor_running_29_1,\n            \"error\": msg.payload.motor_error_29_1,\n        }],\n        \"TBTP-ThapBotMF-motor_BomBot\": [{\n            \"load\": msg.payload.motor_load_pct_29_2,\n            \"running\": msg.payload.motor_running_29_2,\n            \"error\": msg.payload.motor_error_29_2,\n        }],\n        \"TBTP-ThapBotMF-level\": [{\n            \"level\": msg.payload.level_pulp_tank_29,\n        }],\n    }\n};\nreturn data;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
