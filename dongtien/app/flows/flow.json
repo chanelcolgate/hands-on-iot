@@ -67,7 +67,6 @@
         "id": "018e25966037d560",
         "type": "s7 in",
         "z": "b109dfdff6f8e1f0",
-        "d": true,
         "endpoint": "405788186aeb4b93",
         "mode": "single",
         "variable": "Input",
