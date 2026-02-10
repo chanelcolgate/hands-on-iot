@@ -1,0 +1,16 @@
+{
+    "node-red": {
+        "settings": {
+            "flowFile": "flows/flow.json",
+            "credentialsFile": "flows/flow_cred.json"
+        }
+    },
+    "dependencies": {
+        "node-red-contrib-buffer-array": "1.1.0",
+        "node-red-contrib-influxdb": "0.7.0",
+        "node-red-contrib-moment": "5.0.0",
+        "node-red-contrib-s7": "3.1.1",
+        "node-red-contrib-statistics": "2.2.2",
+        "node-red-contrib-throttle": "0.1.7"
+    }
+}
