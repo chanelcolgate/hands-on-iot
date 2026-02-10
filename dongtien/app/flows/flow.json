@@ -40,11 +40,263 @@
         "busaddr": 2,
         "cycletime": 1000,
         "timeout": 2000,
-        "name": "",
+        "name": "PLC 30",
         "vartable": [
             {
-                "addr": "I0.0",
-                "name": "Input"
+                "addr": "DB700,R0",
+                "name": "pressure_in_1"
+            },
+            {
+                "addr": "DB700,R4",
+                "name": "pressure_out_1"
+            },
+            {
+                "addr": "DB700,R8",
+                "name": "flow_meter_1"
+            },
+            {
+                "addr": "DB700,R12",
+                "name": "pressure_in_2"
+            },
+            {
+                "addr": "DB700,R16",
+                "name": "pressure_out_2"
+            },
+            {
+                "addr": "DB700,R20",
+                "name": "flow_meter_2"
+            },
+            {
+                "addr": "DB700,R24",
+                "name": "pump_stage_2"
+            },
+            {
+                "addr": "DB700,R28",
+                "name": "pressure_in_3"
+            },
+            {
+                "addr": "DB700,R32",
+                "name": "pressure_out_3"
+            },
+            {
+                "addr": "DB700,R36",
+                "name": "flow_meter_3"
+            },
+            {
+                "addr": "DB700,R40",
+                "name": "pressure_in_4"
+            },
+            {
+                "addr": "DB700,R44",
+                "name": "pressure_out_4"
+            },
+            {
+                "addr": "DB700,R48",
+                "name": "flow_meter_4"
+            },
+            {
+                "addr": "DB700,R52",
+                "name": "pressure_in_5"
+            },
+            {
+                "addr": "DB700,R56",
+                "name": "pressure_out_5"
+            },
+            {
+                "addr": "DB700,R60",
+                "name": "pressure_in_6"
+            },
+            {
+                "addr": "DB700,R64",
+                "name": "pressure_out_6"
+            },
+            {
+                "addr": "DB700,R68",
+                "name": "pressure_in_7"
+            },
+            {
+                "addr": "DB700,R72",
+                "name": "pressure_out_7"
+            },
+            {
+                "addr": "DB700,R76",
+                "name": "pressure_in_8"
+            },
+            {
+                "addr": "DB700,R80",
+                "name": "pressure_out_8"
+            },
+            {
+                "addr": "DB700,R84",
+                "name": "pressure_in_9"
+            },
+            {
+                "addr": "DB700,R88",
+                "name": "pressure_out_9"
+            },
+            {
+                "addr": "DB700,R92",
+                "name": "flow_meter_9"
+            },
+            {
+                "addr": "DB700,R96",
+                "name": "pump_9"
+            },
+            {
+                "addr": "DB700,R100",
+                "name": "pressure_in_10"
+            },
+            {
+                "addr": "DB700,R104",
+                "name": "pressure_out_10"
+            },
+            {
+                "addr": "DB700,R108",
+                "name": "flow_meter_10"
+            },
+            {
+                "addr": "DB700,R112",
+                "name": "pressure_in_11"
+            },
+            {
+                "addr": "DB700,R116",
+                "name": "pressure_out_11"
+            },
+            {
+                "addr": "DB700,R120",
+                "name": "flow_meter_11"
+            },
+            {
+                "addr": "DB700,R124",
+                "name": "pressure_in_12"
+            },
+            {
+                "addr": "DB700,R128",
+                "name": "pressure_out_12"
+            },
+            {
+                "addr": "DB700,R132",
+                "name": "flow_meter_12"
+            },
+            {
+                "addr": "DB700,R136",
+                "name": "pressure_in_13"
+            },
+            {
+                "addr": "DB700,X320.0",
+                "name": "pressure_out_13"
+            },
+            {
+                "addr": "DB700,R144",
+                "name": "power_13_1"
+            },
+            {
+                "addr": "DB700,R148",
+                "name": "plug_screw_13"
+            },
+            {
+                "addr": "DB700,R152",
+                "name": "shredder_screw_13"
+            },
+            {
+                "addr": "DB700,R156",
+                "name": "heating_screw_13"
+            },
+            {
+                "addr": "DB700,R160",
+                "name": "disperser_dis_13"
+            },
+            {
+                "addr": "DB700,X320.1",
+                "name": "start_position_13"
+            },
+            {
+                "addr": "DB700,X320.2",
+                "name": "open_position_13"
+            },
+            {
+                "addr": "DB700,R168",
+                "name": "power_13_2"
+            },
+            {
+                "addr": "DB700,R172",
+                "name": "concentraion_14"
+            },
+            {
+                "addr": "DB700,R176",
+                "name": "pressure_out_14"
+            },
+            {
+                "addr": "DB700,X320.3",
+                "name": "start_position_14"
+            },
+            {
+                "addr": "DB700,X320.4",
+                "name": "open_position_14"
+            },
+            {
+                "addr": "DB700,X320.5",
+                "name": "safety_position_14"
+            },
+            {
+                "addr": "DB700,R184",
+                "name": "load_current_pct_14"
+            },
+            {
+                "addr": "DB700,R188",
+                "name": "power_14"
+            },
+            {
+                "addr": "DB700,R192",
+                "name": "level_15"
+            },
+            {
+                "addr": "DB700,R196",
+                "name": "consistency_15"
+            },
+            {
+                "addr": "DB700,R200",
+                "name": "level_16"
+            },
+            {
+                "addr": "DB700,R204",
+                "name": "consistency_16"
+            },
+            {
+                "addr": "DB700,R208",
+                "name": "level_17"
+            },
+            {
+                "addr": "DB700,R212",
+                "name": "consistency_17"
+            },
+            {
+                "addr": "DB700,R224",
+                "name": "flow_meter_19_1"
+            },
+            {
+                "addr": "DB700,R228",
+                "name": "flow_meter_19_2"
+            },
+            {
+                "addr": "DB700,R232",
+                "name": "flow_meter_19_3"
+            },
+            {
+                "addr": "DB700,R236",
+                "name": "level_19"
+            },
+            {
+                "addr": "DB700,R240",
+                "name": "flow_meter_24_1"
+            },
+            {
+                "addr": "DB700,R244",
+                "name": "flow_meter_24_2"
+            },
+            {
+                "addr": "DB700,R248",
+                "name": "level_24"
             }
         ]
     },
@@ -64,18 +316,157 @@
         "rejectUnauthorized": true
     },
     {
+        "id": "f51cf276bed06857",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.1.40",
+        "port": "102",
+        "rack": "0",
+        "slot": "2",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "tsap",
+        "adapter": "",
+        "busaddr": 2,
+        "cycletime": 1000,
+        "timeout": 2000,
+        "name": "PLC 40",
+        "vartable": [
+            {
+                "addr": "DB700,R0",
+                "name": "level_18"
+            },
+            {
+                "addr": "DB700,R4",
+                "name": "consistency_18"
+            },
+            {
+                "addr": "DB700,R8",
+                "name": "flow_meter_19"
+            },
+            {
+                "addr": "DB700,R12",
+                "name": "consistency_19"
+            },
+            {
+                "addr": "DB700,R16",
+                "name": "level_20"
+            },
+            {
+                "addr": "DB700,R20",
+                "name": "consistency_20"
+            },
+            {
+                "addr": "DB700,R24",
+                "name": "flow_meter_20"
+            },
+            {
+                "addr": "DB700,R28",
+                "name": "pressure_in_21"
+            },
+            {
+                "addr": "DB700,R32",
+                "name": "pressure_out_21"
+            },
+            {
+                "addr": "DB700,R36",
+                "name": "flow_meter_22"
+            },
+            {
+                "addr": "DB700,R40",
+                "name": "pressure_in_22"
+            },
+            {
+                "addr": "DB700,R44",
+                "name": "pressure_in_23"
+            },
+            {
+                "addr": "DB700,R48",
+                "name": "pressure_out_23"
+            },
+            {
+                "addr": "DB700,R52",
+                "name": "consistency_24"
+            },
+            {
+                "addr": "DB700,R56",
+                "name": "level_25"
+            },
+            {
+                "addr": "DB700,R60",
+                "name": "consistency_25"
+            },
+            {
+                "addr": "DB700,R64",
+                "name": "flow_meter_25"
+            },
+            {
+                "addr": "DB700,R68",
+                "name": "pressure_in_26"
+            },
+            {
+                "addr": "DB700,R72",
+                "name": "pressure_out_26"
+            },
+            {
+                "addr": "DB700,R76",
+                "name": "flow_meter_27"
+            },
+            {
+                "addr": "DB700,R80",
+                "name": "pressure_in_27"
+            },
+            {
+                "addr": "DB700,R84",
+                "name": "pressure_in_28"
+            },
+            {
+                "addr": "DB700,R88",
+                "name": "pressure_out_28"
+            },
+            {
+                "addr": "DB700,R92",
+                "name": "pressure_in_29"
+            },
+            {
+                "addr": "DB700,R96",
+                "name": "pressure_out_29"
+            },
+            {
+                "addr": "DB700,R100",
+                "name": "pressure_in_30"
+            },
+            {
+                "addr": "DB700,R104",
+                "name": "pressure_out_30"
+            },
+            {
+                "addr": "DB700,R108",
+                "name": "pressure_in_31"
+            },
+            {
+                "addr": "DB700,R112",
+                "name": "pressure_out_31"
+            }
+        ]
+    },
+    {
         "id": "018e25966037d560",
         "type": "s7 in",
         "z": "b109dfdff6f8e1f0",
         "endpoint": "405788186aeb4b93",
-        "mode": "single",
+        "mode": "all",
         "variable": "Input",
-        "diff": true,
+        "diff": false,
         "name": "",
         "x": 310,
         "y": 140,
         "wires": [
-            []
+            [
+                "232030e3a32d4bf1"
+            ]
         ]
     },
     {
@@ -224,6 +615,93 @@
         "wires": []
     },
     {
+        "id": "2ff0e0bf9082b97b",
+        "type": "debug",
+        "z": "b109dfdff6f8e1f0",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "232030e3a32d4bf1",
+        "type": "throttle",
+        "z": "b109dfdff6f8e1f0",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "2ff0e0bf9082b97b"
+            ]
+        ]
+    },
+    {
+        "id": "4fdb5cb588669d7f",
+        "type": "s7 in",
+        "z": "b109dfdff6f8e1f0",
+        "endpoint": "f51cf276bed06857",
+        "mode": "all",
+        "variable": "Input",
+        "diff": false,
+        "name": "",
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "b941cba11b283df1"
+            ]
+        ]
+    },
+    {
+        "id": "793ed7edb9417d01",
+        "type": "debug",
+        "z": "b109dfdff6f8e1f0",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b941cba11b283df1",
+        "type": "throttle",
+        "z": "b109dfdff6f8e1f0",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 470,
+        "y": 200,
+        "wires": [
+            [
+                "793ed7edb9417d01"
+            ]
+        ]
+    },
+    {
         "id": "78c1979854476046",
         "type": "link in",
         "z": "ae869d84e3a7db78",
@@ -303,7 +781,7 @@
         "type": "debug",
         "z": "ae869d84e3a7db78",
         "name": "Temperature Raw Data",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
