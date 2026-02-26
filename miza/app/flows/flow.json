@@ -3,7 +3,7 @@
         "id": "a0eb9d8759f0d6f7",
         "type": "tab",
         "label": "Hệ thống thủy lực bột",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -11,7 +11,7 @@
         "id": "4f96d0238c546860",
         "type": "tab",
         "label": "Hệ thống lọc cát nồng độ cao",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -19,7 +19,7 @@
         "id": "85e3b6ed06d4064d",
         "type": "tab",
         "label": "Hệ thống sàng thô",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -27,7 +27,7 @@
         "id": "321ec63799c12083",
         "type": "tab",
         "label": "Hệ thống phân sợi 1",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -35,7 +35,7 @@
         "id": "721914438132621e",
         "type": "tab",
         "label": "Hệ thống lọc cát nồng độ thấp",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -43,7 +43,7 @@
         "id": "f04122f684555d11",
         "type": "tab",
         "label": "Hệ thống sàng tinh",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -51,7 +51,7 @@
         "id": "1c970cf990e47803",
         "type": "tab",
         "label": "Hệ thống lọc đĩa cô đặc",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -59,7 +59,7 @@
         "id": "bf0bd9fe4c32e0fd",
         "type": "tab",
         "label": "Hệ thống phân tán nhiệt",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -67,7 +67,7 @@
         "id": "342864f9d9ede8d2",
         "type": "tab",
         "label": "Hệ thống nghiền đĩa LF",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -75,7 +75,7 @@
         "id": "d5f3b088727522b3",
         "type": "tab",
         "label": "Hệ thống sàng phân sợi 2",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -83,7 +83,7 @@
         "id": "f369cb854e9e6bde",
         "type": "tab",
         "label": "Tháp bột thành phẩm",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -104,6 +104,14 @@
         "env": []
     },
     {
+        "id": "4bd5bacd36374413",
+        "type": "tab",
+        "label": "Telegram",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "e72fd5a230ded939",
         "type": "s7 endpoint",
         "transport": "iso-on-tcp",
@@ -119,7 +127,7 @@
         "adapter": "",
         "busaddr": 2,
         "cycletime": 1000,
-        "timeout": 2000,
+        "timeout": "200000",
         "name": "PLC 120",
         "vartable": [
             {
@@ -994,6 +1002,7 @@
     {
         "id": "199e1d2f4236805a",
         "type": "s7 endpoint",
+        "d": true,
         "transport": "iso-on-tcp",
         "address": "192.168.1.120",
         "port": "102",
@@ -1939,6 +1948,113 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
+    },
+    {
+        "id": "1483bf96ee7dbe4d",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "timescaledb",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "monitoring",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "user": "odoo",
+        "userFieldType": "str",
+        "password": "odoo",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "62a633c8986a8112",
+        "type": "telegram bot",
+        "botname": "Sunshine",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": true
+    },
+    {
+        "id": "19f02f8b.fa0c5",
+        "type": "telegram bot",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "botname": "HeinzBot",
+        "usernames": "Windhose",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "188.40.170.80",
+        "socksport": "1080",
+        "socksusername": "anonymous",
+        "sockspassword": "none",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "",
+        "localbotport": "",
+        "publicbotport": "",
+        "privatekey": "C:\\\\Temp\\\\SSL\\\\PRIVATE.key",
+        "certificate": "C:\\\\Temp\\\\SSL\\\\PUBLIC.pem",
+        "useselfsignedcertificate": true,
+        "sslterminated": false,
+        "verboselogging": true
+    },
+    {
+        "id": "ff78bc5a.00874",
+        "type": "telegram bot",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "botname": "HeinzBot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "pollinterval": "",
+        "usesocks": false,
+        "sockshost": "",
+        "socksport": "",
+        "socksusername": "",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "",
+        "localbotport": "",
+        "publicbotport": "",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
     },
     {
         "id": "9d7671444843e54f",
@@ -17091,6 +17207,338 @@
         "wires": []
     },
     {
+        "id": "0f87eac296ab1190",
+        "type": "http in",
+        "z": "278f7766e1536901",
+        "name": "",
+        "url": "/grafana-alert",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 1790,
+        "y": 240,
+        "wires": [
+            [
+                "841dd930225ddab3",
+                "dee6c3afc8b496fd"
+            ]
+        ]
+    },
+    {
+        "id": "841dd930225ddab3",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1900,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "811f6876433ab89e",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Enable Timescale Extension",
+        "query": "CREATE EXTENSION IF NOT EXISTS timescaledb;",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 2000,
+        "y": 400,
+        "wires": [
+            [
+                "be18ade5774a1c28"
+            ]
+        ]
+    },
+    {
+        "id": "808a059e8bb277b0",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1780,
+        "y": 400,
+        "wires": [
+            [
+                "811f6876433ab89e"
+            ]
+        ]
+    },
+    {
+        "id": "be18ade5774a1c28",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "Enable Timescale Extension",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2280,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a4abd3d5344015a3",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "name": "Enable Timescale Extension",
+        "info": "",
+        "x": 1820,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "66d075b8400338a9",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Table Incident",
+        "query": "CREATE TABLE incidents (\n    id SERIAL PRIMARY KEY,\n    alert_name TEXT,\n    sensor TEXT,\n    severity TEXT,\n\n    firing_time TIMESTAMP,\n    resolve_time TIMESTAMP,\n\n    status TEXT, -- ACTIVE / RESOLVED\n    handling_mode TEXT,\n\n    assigned_level INT DEFAULT 1,\n    assigned_user TEXT\n);",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1960,
+        "y": 480,
+        "wires": [
+            [
+                "3eb75388f0ea73e5"
+            ]
+        ]
+    },
+    {
+        "id": "ffdf96405da31c11",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Table Escalation Level",
+        "query": "CREATE TABLE escalation_levels (\n    level INT,\n    role TEXT,\n    telegram_chat_id TEXT,\n    response_timeout_minutes INT\n);",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1980,
+        "y": 540,
+        "wires": [
+            [
+                "bf349439e7402f91"
+            ]
+        ]
+    },
+    {
+        "id": "8fea41e419f8e944",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Table Incident Logs",
+        "query": "CREATE TABLE incident_logs (\n    id SERIAL PRIMARY KEY,\n    incident_id INT,\n    action TEXT,\n    user_name TEXT,\n    note TEXT,\n    created_at TIMESTAMP DEFAULT NOW()\n);",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1970,
+        "y": 600,
+        "wires": [
+            [
+                "3f7611c1c8bd9eb3"
+            ]
+        ]
+    },
+    {
+        "id": "b3a63f060fe7a6fe",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1780,
+        "y": 480,
+        "wires": [
+            [
+                "66d075b8400338a9"
+            ]
+        ]
+    },
+    {
+        "id": "579a6ecb019cf955",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1780,
+        "y": 540,
+        "wires": [
+            [
+                "ffdf96405da31c11"
+            ]
+        ]
+    },
+    {
+        "id": "38bed7d0d6ac12db",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1780,
+        "y": 600,
+        "wires": [
+            [
+                "8fea41e419f8e944"
+            ]
+        ]
+    },
+    {
+        "id": "3eb75388f0ea73e5",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "Table Incident",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2200,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "bf349439e7402f91",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "Table Escalation Level",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2240,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "3f7611c1c8bd9eb3",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "Table Incident Logs",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2230,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "dee6c3afc8b496fd",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "function 1",
+        "func": "msg.payload = { status: \"received\" };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1980,
+        "y": 240,
+        "wires": [
+            [
+                "bd4d24a991f05d8b"
+            ]
+        ]
+    },
+    {
+        "id": "bd4d24a991f05d8b",
+        "type": "http response",
+        "z": "278f7766e1536901",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 2170,
+        "y": 240,
+        "wires": []
+    },
+    {
         "id": "e2187250e7b22b53",
         "type": "throttle",
         "z": "965c7750b786c8eb",
@@ -17114,7 +17562,7 @@
         "type": "function",
         "z": "965c7750b786c8eb",
         "name": "101-Filter",
-        "func": "let data = {\n    payload: {\n        \"D4\": [{\n            \"speed_sp\": msg.payload.speed_sp,\n            \"speed_pv\": msg.payload.speed_pv+0,\n            \"motor_load_pct\": msg.payload.motor_load_pct,\n            \"motor_temp_c\": msg.payload.motor_temp_c,\n            \"motor_torque_pct\": msg.payload.motor_torque_pct-0,\n            \"vfd_temp_c\": msg.payload.vfd_temp_c,\n        }]\n    }\n};\nreturn data;",
+        "func": "let data = {\n    payload: {\n        \"Truyền động lưới\": [{\n            \"speed_sp\": msg.payload.speed_sp,\n            \"speed_pv\": msg.payload.speed_pv+0,\n            \"motor_load_pct\": msg.payload.motor_load_pct,\n            \"motor_temp_c\": msg.payload.motor_temp_c,\n            \"motor_torque_pct\": msg.payload.motor_torque_pct-0,\n            \"vfd_temp_c\": msg.payload.vfd_temp_c,\n        }]\n    }\n};\nreturn data;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -17219,5 +17667,2227 @@
                 "991450d3a8d91168"
             ]
         ]
+    },
+    {
+        "id": "3ad24649634862a2",
+        "type": "telegram receiver",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "Sunshine Receiver",
+        "bot": "62a633c8986a8112",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": false,
+        "inputs": 0,
+        "handleallupdates": false,
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "898b356b150646a8"
+            ],
+            [
+                "e00f17a569b1b9cf"
+            ]
+        ]
+    },
+    {
+        "id": "898b356b150646a8",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e00f17a569b1b9cf",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "59aeb36e.a6514c",
+        "type": "telegram receiver",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": false,
+        "inputs": 0,
+        "handleallupdates": false,
+        "x": 173,
+        "y": 380,
+        "wires": [
+            [
+                "ec7432bc.138bd"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ec7432bc.138bd",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fbcbaf0f.1a4c3",
+        "type": "catch",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 140,
+        "y": 500,
+        "wires": [
+            [
+                "dab98e0e.f83fb"
+            ]
+        ]
+    },
+    {
+        "id": "cc0d5363.33275",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 374,
+        "y": 560,
+        "wires": [
+            [
+                "8a49c6d5.37ccf8"
+            ]
+        ]
+    },
+    {
+        "id": "80ba48a1.4af1e8",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 554,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "8a49c6d5.37ccf8",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 574,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "dab98e0e.f83fb",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "fc55722d.e837c",
+        "type": "inject",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "error",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"chatId\":\"138708568\",\"type\":\"action\",\"content\":\"This will be handled by the catch-all error node.\"}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 560,
+        "wires": [
+            [
+                "cc0d5363.33275"
+            ]
+        ]
+    },
+    {
+        "id": "35318513.23421a",
+        "type": "inject",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "error",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"chatId\":\"138708568\",\"type\":\"action\",\"content\":\"This will be handled by the second output of the sender node.\"}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 740,
+        "wires": [
+            [
+                "ff53180b.fc6bf8"
+            ]
+        ]
+    },
+    {
+        "id": "ff53180b.fc6bf8",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": true,
+        "outputs": 2,
+        "x": 374,
+        "y": 740,
+        "wires": [
+            [
+                "cfb0ed56.6673"
+            ],
+            [
+                "80ba48a1.4af1e8"
+            ]
+        ]
+    },
+    {
+        "id": "cfb0ed56.6673",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 574,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "6a07e213.40bd6c",
+        "type": "comment",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "Example 1: errors are handled in \"catch all\"",
+        "info": "",
+        "x": 240,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "33a85a47.7ed9d6",
+        "type": "comment",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "Example 2: errors are handled using second output",
+        "info": "",
+        "x": 274,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "8ab80062.2a838",
+        "type": "inject",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "success",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"chatId\":\"138708568\",\"type\":\"message\",\"content\":\"This should be successful.\"}",
+        "payloadType": "json",
+        "x": 144,
+        "y": 600,
+        "wires": [
+            [
+                "cc0d5363.33275"
+            ]
+        ]
+    },
+    {
+        "id": "39defe26.6a5382",
+        "type": "inject",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "success",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"chatId\":\"138708568\",\"type\":\"message\",\"content\":\"This should be successful.\"}",
+        "payloadType": "json",
+        "x": 144,
+        "y": 780,
+        "wires": [
+            [
+                "ff53180b.fc6bf8"
+            ]
+        ]
+    },
+    {
+        "id": "21e19a0e7b231297",
+        "type": "telegram receiver",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": true,
+        "inputs": 1,
+        "handleallupdates": false,
+        "x": 730,
+        "y": 1020,
+        "wires": [
+            [
+                "31b70ebc109e1528"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "31b70ebc109e1528",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "debug 56",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "55179d7f45e11a59",
+        "type": "http request",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 980,
+        "wires": [
+            [
+                "d3ea80fac1a34577",
+                "21e19a0e7b231297",
+                "4907bf64279072ba"
+            ]
+        ]
+    },
+    {
+        "id": "d3ea80fac1a34577",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "debug 57",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "925ad86cbee184a6",
+        "type": "inject",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 980,
+        "wires": [
+            [
+                "20f92b7829f272e3"
+            ]
+        ]
+    },
+    {
+        "id": "20f92b7829f272e3",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "create request",
+        "func": "let offset = flow.get(\"offset\");\nlet timeout = 10;\nlet token = \"5013368740:AAETUkix8RTXAZMHj5Fkp6NjfCoL3noONEA\";\nmsg.method = \"POST\";\nmsg.url = \"https://api.telegram.org/bot\" + token + \"/getUpdates?offset=\"+offset+\"&timeout=\" + timeout;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 980,
+        "wires": [
+            [
+                "55179d7f45e11a59",
+                "13c46adfbf916ea0"
+            ]
+        ]
+    },
+    {
+        "id": "4907bf64279072ba",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "update offset",
+        "func": "if(msg.payload.ok === true) {\n    let msgOffset = msg.payload.result.length - 1;\n    if(msgOffset >= 0) {\n        let offset = msg.payload.result[msgOffset].update_id + 1;\n        flow.set(\"offset\", offset);\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 920,
+        "wires": [
+            [
+                "20f92b7829f272e3"
+            ]
+        ]
+    },
+    {
+        "id": "13c46adfbf916ea0",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "debug 58",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "726a7e63c79777fc",
+        "type": "inject",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "Initialization",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 880,
+        "wires": [
+            [
+                "04a640784be8d59c"
+            ]
+        ]
+    },
+    {
+        "id": "04a640784be8d59c",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "initialize offset",
+        "func": "flow.set(\"offset\", 0)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a18dc3fa.71502",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "a9816fa8.102ee",
+        "type": "catch",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "scope": null,
+        "x": 120,
+        "y": 1120,
+        "wires": [
+            [
+                "a18dc3fa.71502"
+            ]
+        ]
+    },
+    {
+        "id": "9666af3d.3da7e",
+        "type": "telegram event",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "event": "callback_query",
+        "autoanswer": true,
+        "x": 140,
+        "y": 1180,
+        "wires": [
+            [
+                "92ee3303.4cd04"
+            ]
+        ]
+    },
+    {
+        "id": "78034690.513038",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "show inline keyboard",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 680,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "74e8cf35.a5ba8",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "inline keyboard message",
+        "func": "var opts = {\n  reply_to_message_id: msg.payload.messageId,\n  reply_markup: JSON.stringify({\n    \"inline_keyboard\": [[\n                {\n                    \"text\": \"Yes\",\n                    \"callback_data\": \"FOO YES\"            \n                }, \n                {\n                    \"text\": \"No\",\n                    \"callback_data\": \"FOO NO\"            \n                }]\n            ]\n  })\n};\n\nmsg.payload.content = 'Are you sure?';\nmsg.payload.options = opts;\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1260,
+        "wires": [
+            [
+                "78034690.513038"
+            ]
+        ]
+    },
+    {
+        "id": "67692ad7.9de0d4",
+        "type": "telegram command",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "/foo",
+        "command": "/foo",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "bot": "62a633c8986a8112",
+        "strict": false,
+        "hasresponse": false,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 1,
+        "x": 110,
+        "y": 1260,
+        "wires": [
+            [
+                "74e8cf35.a5ba8"
+            ]
+        ]
+    },
+    {
+        "id": "92ee3303.4cd04",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "set  answer options",
+        "func": "var show_alert = true; // you can set this to true to open a dialog with the answer in the client.\n\n// msg.payload.content contains the callback data from the keyboard.\n// You may change this value here.\nmsg.payload.options = show_alert;\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1180,
+        "wires": [
+            [
+                "18bd53db.5ba47c"
+            ]
+        ]
+    },
+    {
+        "id": "18bd53db.5ba47c",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "answer callback query",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 680,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d84b5890b57e3c20",
+        "type": "telegram control",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "outputs": 1,
+        "checkconnection": false,
+        "hostname": "",
+        "interval": "",
+        "timeout": "",
+        "x": 350,
+        "y": 1380,
+        "wires": [
+            [
+                "79bd4f875c7c41af"
+            ]
+        ]
+    },
+    {
+        "id": "79bd4f875c7c41af",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "07bdd839635f4012",
+        "type": "inject",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "start",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"command\":\"start\"}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 1340,
+        "wires": [
+            [
+                "d84b5890b57e3c20"
+            ]
+        ]
+    },
+    {
+        "id": "c75ee8c58e5f3338",
+        "type": "inject",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "stop",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"command\":\"stop\"}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 1400,
+        "wires": [
+            [
+                "d84b5890b57e3c20"
+            ]
+        ]
+    },
+    {
+        "id": "8054c09af5ba8a3a",
+        "type": "inject",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "restart",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"command\":\"restart\",\"delay\":1000}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 1460,
+        "wires": [
+            [
+                "d84b5890b57e3c20"
+            ]
+        ]
+    },
+    {
+        "id": "80211883.fcf5f",
+        "type": "telegram receiver",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": false,
+        "inputs": 0,
+        "handleallupdates": false,
+        "x": 170,
+        "y": 1680,
+        "wires": [
+            [
+                "d719b18b.da75f8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d719b18b.da75f8",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 350,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "cd98abdd.e338f",
+        "type": "inject",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload.content",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 150,
+        "y": 1580,
+        "wires": [
+            [
+                "2c2e5956.54b846"
+            ]
+        ]
+    },
+    {
+        "id": "c8a8015.60267",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 650,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c2e5956.54b846",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "build keyboard",
+        "func": "var opts = {\n  reply_markup: JSON.stringify({\n    keyboard: [\n      ['A1'],\n      ['A2']],\n      'resize_keyboard' : true, \n      'one_time_keyboard' : true\n  })\n};\n\n\nmsg.error = false;\n// Dialogaufbau\nmsg.payload.content = 'Selection?';\nmsg.payload.options = opts;\n\n\nmsg.payload.chatId = 5024552335;\nmsg.payload.messageId = 99;\nmsg.payload.sentMessageId = 99;\nmsg.payload.type = \"message\";\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1580,
+        "wires": [
+            [
+                "c8a8015.60267",
+                "17b67c4e.c4738c"
+            ]
+        ]
+    },
+    {
+        "id": "17b67c4e.c4738c",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "4f9f29f7.8abc78",
+        "type": "comment",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "Custom keyboard: Reply with \"Telegram receiver\"",
+        "info": "",
+        "x": 270,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "f7c18f49.063c4",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 650,
+        "y": 1820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f97878f7.de1bf8",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "build keyboard",
+        "func": "var opts = {\n  reply_markup: JSON.stringify({\n    \"inline_keyboard\": [[\n                {\n                    \"text\": \"A1\",\n                    \"callback_data\": \"1\"            \n                }, \n                {\n                    \"text\": \"A2\",\n                    \"callback_data\": \"2\"            \n                }]\n            ]\n  })\n};\n\nmsg.payload.content = \"Selection?\";\nmsg.payload.options = opts;\nmsg.payload.chatId = 5024552335;\nmsg.payload.messageId = 29;\nmsg.payload.sentMessageId = 29;\nmsg.payload.type = \"message\";\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1820,
+        "wires": [
+            [
+                "f7c18f49.063c4",
+                "67925ff5.4c7c9"
+            ]
+        ]
+    },
+    {
+        "id": "67925ff5.4c7c9",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "e1a6a394.269598",
+        "type": "inject",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload.content",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 150,
+        "y": 1820,
+        "wires": [
+            [
+                "f97878f7.de1bf8"
+            ]
+        ]
+    },
+    {
+        "id": "981d4537.1ced18",
+        "type": "telegram event",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "event": "callback_query",
+        "autoanswer": false,
+        "x": 160,
+        "y": 1902,
+        "wires": [
+            [
+                "385615779f4b3364"
+            ]
+        ]
+    },
+    {
+        "id": "93430912.0f4f4",
+        "type": "comment",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "Inline keyboard: Reply with \"callback_query\"",
+        "info": "",
+        "x": 270,
+        "y": 1762,
+        "wires": []
+    },
+    {
+        "id": "385615779f4b3364",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "answerCallbackQuery",
+        "func": "var text = \"You clicked \" + msg.payload.content;\nvar options = {\n    // text : text, <-- you can set the text here or use msg.payload.content \n    show_alert : true,\n    cache_time : 10\n};\n\nmsg.payload.content = text;\nmsg.payload.options = options;\nmsg.payload.type = \"answerCallbackQuery\";\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1900,
+        "wires": [
+            [
+                "f7c18f49.063c4",
+                "55dfaeee7abc5b61"
+            ]
+        ]
+    },
+    {
+        "id": "55dfaeee7abc5b61",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "7ae934e9.94a1d4",
+        "type": "telegram command",
+        "z": "4bd5bacd36374413",
+        "name": "/help",
+        "command": "/help",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "bot": "62a633c8986a8112",
+        "strict": false,
+        "hasresponse": false,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 1,
+        "x": 130,
+        "y": 2060,
+        "wires": [
+            [
+                "11b04bce.b00ed4"
+            ]
+        ]
+    },
+    {
+        "id": "11b04bce.b00ed4",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "create help text",
+        "func": "var helpMessage = \"/help - shows help\";\n\nhelpMessage += \"\\r\\n/bar - opens a dialog\";\nhelpMessage += \"\\r\\n/foo - opens a dialog 2\";\n\nhelpMessage += \"\\r\\n\";\nhelpMessage += \"\\r\\nYou are welcome: \"+msg.originalMessage.from.username;\nhelpMessage += \"\\r\\nYour chat id is \" + msg.payload.chatId;\nhelpMessage += \"\\r\\n\";\n\nmsg.payload.content = helpMessage;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 2060,
+        "wires": [
+            [
+                "2b5fd25.13e2c2e"
+            ]
+        ]
+    },
+    {
+        "id": "2b5fd25.13e2c2e",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "name": "send response",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 560,
+        "y": 2060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "985be05d0f053c95",
+        "type": "comment",
+        "z": "4bd5bacd36374413",
+        "name": "Implementing a /help command",
+        "info": "",
+        "x": 210,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "e8ce557a.c772a8",
+        "type": "catch",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "x": 140,
+        "y": 2340,
+        "wires": [
+            [
+                "cd3e5352.717538"
+            ]
+        ]
+    },
+    {
+        "id": "cd3e5352.717538",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "Debug",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 590,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "cfe3317f.d2ce7",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "show keyboard",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 2180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db28aeae.a44ba8",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "confirmation message",
+        "func": "context.global.keyboard = { pending : true };\n\nvar opts = {\n  reply_to_message_id: msg.payload.messageId,\n  reply_markup: JSON.stringify({\n    keyboard: [\n      ['Yes'],\n      ['No']],\n      'resize_keyboard' : true, \n      'one_time_keyboard' : true\n  })\n};\n\nmsg.payload.content = 'Really?';\nmsg.payload.options = opts;\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 2180,
+        "wires": [
+            [
+                "cfe3317f.d2ce7"
+            ]
+        ]
+    },
+    {
+        "id": "cc400aac.97c5f8",
+        "type": "telegram command",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "/foo",
+        "command": "/foo",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "bot": "62a633c8986a8112",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 130,
+        "y": 2220,
+        "wires": [
+            [
+                "db28aeae.a44ba8"
+            ],
+            [
+                "469a1a73.b143cc"
+            ]
+        ]
+    },
+    {
+        "id": "469a1a73.b143cc",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "create response",
+        "func": "if (context.global.keyboard.pending) {\n    context.global.keyboard.pending = false;\n    \n    if(msg.payload.content === 'Yes') {\n        msg.payload.content = 'Yes';\n        return [msg, null];   \n    }\n    else     {\n        msg.payload.content = 'No';\n        return [null, msg];   \n    }\n}",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 2260,
+        "wires": [
+            [
+                "d044e1c5.953458"
+            ],
+            [
+                "cd3e5352.717538"
+            ]
+        ]
+    },
+    {
+        "id": "d044e1c5.953458",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "send response",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 2240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77f55002f0d92eb1",
+        "type": "comment",
+        "z": "4bd5bacd36374413",
+        "name": "Implementing a custom keyboard",
+        "info": "",
+        "x": 210,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "f0f40237.40f438",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "create question",
+        "func": "// msg.payload.type = 'message';\nmsg.payload.content = 'Really?';\nmsg.payload.options = {\n    reply_to_message_id : msg.payload.messageId,\n    reply_markup: JSON.stringify({\n        keyboard: [\n            ['Yes'], ['No']\n        ],\n        'resize_keyboard': true,\n        'one_time_keyboard': true,\n        'force_reply': true\n    })\n};\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 2460,
+        "wires": [
+            [
+                "7705422f.822834"
+            ]
+        ]
+    },
+    {
+        "id": "4c7274da.77331c",
+        "type": "telegram command",
+        "z": "4bd5bacd36374413",
+        "name": "/bar",
+        "command": "/bar",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "bot": "62a633c8986a8112",
+        "strict": false,
+        "hasresponse": false,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 1,
+        "x": 130,
+        "y": 2460,
+        "wires": [
+            [
+                "f0f40237.40f438"
+            ]
+        ]
+    },
+    {
+        "id": "7705422f.822834",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "name": "send question",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 520,
+        "y": 2460,
+        "wires": [
+            [
+                "b84786d5.195848"
+            ]
+        ]
+    },
+    {
+        "id": "b84786d5.195848",
+        "type": "telegram reply",
+        "z": "4bd5bacd36374413",
+        "name": "get reply",
+        "bot": "62a633c8986a8112",
+        "x": 695,
+        "y": 2460,
+        "wires": [
+            [
+                "29d8ebcb.f400fc",
+                "e9e76172d67607c5"
+            ]
+        ]
+    },
+    {
+        "id": "29d8ebcb.f400fc",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "switch answer",
+        "func": "if(msg.payload.content === 'Yes')\n{\n    return [msg, null];   \n}\nelse\n{\n    return [null, msg];   \n}\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 2460,
+        "wires": [
+            [
+                "6a50edd.6235114"
+            ],
+            [
+                "b599b2a2.4b0278"
+            ]
+        ]
+    },
+    {
+        "id": "6a50edd.6235114",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "name": "Yes",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "complete": "payload",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1113,
+        "y": 2440,
+        "wires": []
+    },
+    {
+        "id": "b599b2a2.4b0278",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "name": "No",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 1113,
+        "y": 2480,
+        "wires": []
+    },
+    {
+        "id": "e9e76172d67607c5",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 2540,
+        "wires": []
+    },
+    {
+        "id": "124112bad44b75e0",
+        "type": "comment",
+        "z": "4bd5bacd36374413",
+        "name": "Implementing an on reply node",
+        "info": "",
+        "x": 210,
+        "y": 2400,
+        "wires": []
+    },
+    {
+        "id": "63b89f479b4fbff1",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 370,
+        "y": 2660,
+        "wires": []
+    },
+    {
+        "id": "0c682311e3f310b3",
+        "type": "catch",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "scope": null,
+        "x": 140,
+        "y": 2660,
+        "wires": [
+            [
+                "63b89f479b4fbff1"
+            ]
+        ]
+    },
+    {
+        "id": "87feda154c6c63ef",
+        "type": "telegram event",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "event": "callback_query",
+        "autoanswer": true,
+        "x": 160,
+        "y": 2720,
+        "wires": [
+            [
+                "b3a715160e3ab809"
+            ]
+        ]
+    },
+    {
+        "id": "828165fcc8b976f5",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "name": "show inline keyboard",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 700,
+        "y": 2800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "727e97e68839abca",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "inline keyboard message",
+        "func": "var opts = {\n  reply_to_message_id: msg.payload.messageId,\n  reply_markup: JSON.stringify({\n    \"inline_keyboard\": [[\n                {\n                    \"text\": \"Yes\",\n                    \"callback_data\": \"FOO YES\"            \n                }, \n                {\n                    \"text\": \"No\",\n                    \"callback_data\": \"FOO NO\"            \n                }]\n            ]\n  })\n};\n\nmsg.payload.content = 'Are you sure?';\nmsg.payload.options = opts;\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 2800,
+        "wires": [
+            [
+                "828165fcc8b976f5"
+            ]
+        ]
+    },
+    {
+        "id": "844cfddb040666d8",
+        "type": "telegram command",
+        "z": "4bd5bacd36374413",
+        "name": "/foo",
+        "command": "/foo",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "bot": "62a633c8986a8112",
+        "strict": false,
+        "hasresponse": false,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 1,
+        "x": 130,
+        "y": 2800,
+        "wires": [
+            [
+                "727e97e68839abca"
+            ]
+        ]
+    },
+    {
+        "id": "b3a715160e3ab809",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "set  answer options",
+        "func": "var show_alert = true; // you can set this to true to open a dialog with the answer in the client.\n\n// msg.payload.content contains the callback data from the keyboard.\n// You may change this value here.\nmsg.payload.options = show_alert;\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 2720,
+        "wires": [
+            [
+                "9e40d5ed4e1f9e76"
+            ]
+        ]
+    },
+    {
+        "id": "9e40d5ed4e1f9e76",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "name": "answer callback query",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 700,
+        "y": 2720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4472bc9d2926024",
+        "type": "comment",
+        "z": "4bd5bacd36374413",
+        "name": "Implementing an inline keyboard",
+        "info": "An inline keyboard contains buttons that can\nsend a callback query back to the bot to trigger\nany kind of function.\n\nWhen the command is received the first output\nis triggered and a inline keyboard is shown:\n\nThe callback query is received by the event node.\nIt must be answered like shown as follows. There\nyou can add your code to trigger the desired bot\ncommand. The answer contains the callback query data in\nmsg.payload.content",
+        "x": 210,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "85a9192396a63cf4",
+        "type": "comment",
+        "z": "4bd5bacd36374413",
+        "name": "Edit an inline keyboard",
+        "info": "An inline keyboard can be modified using the\n'editMessageReplyMarkup' instruction. To be\nable to modify an existing message you need\nto know the messageId of the message of the\nkeyboard. A sample flow is provided in the\nexamples folder and could look like this:\n\nThe mesage id needs to be saved in the flow\nor global context (via node save messageId).\nThis is just a demo assuming that there is only\none single chat.\n\nAs next the initial keyboard has to be replaced\nwith a modified one using the api command editMessageReplyMarkup\ncommand as type (via node edit inline keyboard message).\n\nAs an alternative to 'editMessageReplyMarkup' you can also use\nthe api command editMessageText to relace the keyboard\nand also the text as given in the function example edit message\ntext\n\nThe switchnode evaluate callback query just handles the\nresponse and hides the keyboard using another api\ncommand deleteMessage.\n",
+        "x": 180,
+        "y": 2880,
+        "wires": []
+    },
+    {
+        "id": "20636f59.fed13",
+        "type": "telegram event",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "event": "callback_query",
+        "autoanswer": true,
+        "x": 160,
+        "y": 3040,
+        "wires": [
+            [
+                "f0a3c788.7bbb18"
+            ]
+        ]
+    },
+    {
+        "id": "d0ae190d.071828",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "name": "show inline keyboard",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 602.7594223022461,
+        "y": 2933.303310394287,
+        "wires": [
+            [
+                "23220303.4a427c"
+            ]
+        ]
+    },
+    {
+        "id": "3426758a.a2d09a",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "initial inline keyboard message",
+        "func": "context.global.keyboard = { messageId : msg.payload.messageId };\n\nvar opts = {\n  reply_to_message_id: msg.payload.messageId,\n  reply_markup: JSON.stringify({\n    \"inline_keyboard\": [[\n                {\n                    \"text\": \"Yes\",\n                    \"callback_data\": \"FOO YES\"            \n                }, \n                {\n                    \"text\": \"No\",\n                    \"callback_data\": \"FOO NO\"            \n                }]\n            ]\n  })\n};\n\nmsg.payload.content = 'Do you want to hide the inline keyboard?';\nmsg.payload.options = opts;\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 341.7592468261719,
+        "y": 2934.303228378296,
+        "wires": [
+            [
+                "d0ae190d.071828"
+            ]
+        ]
+    },
+    {
+        "id": "d7bfbd4.da4e34",
+        "type": "telegram command",
+        "z": "4bd5bacd36374413",
+        "name": "/tar",
+        "command": "/tar",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "bot": "62a633c8986a8112",
+        "strict": false,
+        "hasresponse": false,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 1,
+        "x": 122.75931549072266,
+        "y": 2940.303210258484,
+        "wires": [
+            [
+                "3426758a.a2d09a"
+            ]
+        ]
+    },
+    {
+        "id": "43cecef5.e2e93",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "YES REALLY",
+        "func": "// Hide the keyboard and forget the messageId\nmsg.payload.type = 'deleteMessage';\nmsg.payload.content = context.global.keyboard.messageId;\ncontext.global.keyboard.messageId = null;\n\n// You could also send a editMessageReplyMarkup with an empty reply_markup here\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 3040,
+        "wires": [
+            [
+                "8e746981.f48368"
+            ]
+        ]
+    },
+    {
+        "id": "8e746981.f48368",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 830,
+        "y": 3040,
+        "wires": [
+            [
+                "2e9b911.c6c726e"
+            ]
+        ]
+    },
+    {
+        "id": "2c6089c4.883006",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "YES",
+        "func": "// This is the message id of the initial keyboard that is simply exchanged by a new one.\nvar messageId = context.global.keyboard.messageId;\n\n// This is a sample of how to send a second inline keyboard with modified buttons\nvar reply_markup = JSON.stringify({\n    \"inline_keyboard\": [[\n                {\n                    \"text\": \"Are you really sure?\",\n                    \"callback_data\": \"FOO YES REALLY\"            \n                }, \n                {\n                    \"text\": \"No\",\n                    \"callback_data\": \"FOO NO\"            \n                }]\n            ]\n  });\n\n\nvar options = {\n    chat_id : msg.payload.chatId,\n    reply_markup : reply_markup,\n    message_id : messageId\n};\n\nmsg.payload.type = 'editMessageReplyMarkup';\nmsg.payload.content = reply_markup;\nmsg.payload.options = options;\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 3000,
+        "wires": [
+            [
+                "8e746981.f48368"
+            ]
+        ]
+    },
+    {
+        "id": "23220303.4a427c",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "save messageId",
+        "func": "// We store the messageId to be able to edit this reply in the callback query. \ncontext.global.keyboard.messageId = msg.payload.sentMessageId;\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 820.6667861938477,
+        "y": 2933.6667127609253,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2e9b911.c6c726e",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 3040,
+        "wires": []
+    },
+    {
+        "id": "f0a3c788.7bbb18",
+        "type": "switch",
+        "z": "4bd5bacd36374413",
+        "name": "check callback data",
+        "property": "payload.content",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "FOO YES",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "FOO YES REALLY",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "FOO NO",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 370,
+        "y": 3040,
+        "wires": [
+            [
+                "2c6089c4.883006"
+            ],
+            [
+                "43cecef5.e2e93"
+            ],
+            [
+                "8e23029e.001b7"
+            ]
+        ]
+    },
+    {
+        "id": "8e23029e.001b7",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "NO",
+        "func": "msg.payload.type = 'answerCallbackQuery';\nmsg.payload.options = {\n    text : msg.payload.content,\n    show_alert : true,  // you can set this to true to open a dialog with the answer in the client.\n};\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 3080,
+        "wires": [
+            [
+                "8e746981.f48368"
+            ]
+        ]
+    },
+    {
+        "id": "5fb5e66e.d8ebe8",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 390,
+        "y": 3180,
+        "wires": []
+    },
+    {
+        "id": "ebf5edfa.8c331",
+        "type": "catch",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "scope": null,
+        "x": 140,
+        "y": 3180,
+        "wires": [
+            [
+                "5fb5e66e.d8ebe8"
+            ]
+        ]
+    },
+    {
+        "id": "65b3afb9.8d92",
+        "type": "telegram event",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "event": "inline_query",
+        "autoanswer": true,
+        "x": 150,
+        "y": 3240,
+        "wires": [
+            [
+                "c7f9eaaa.0207c8"
+            ]
+        ]
+    },
+    {
+        "id": "c7f9eaaa.0207c8",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "create results",
+        "func": "// we have to set the results propery with the answer(s)\n// see https://core.telegram.org/bots/api#inlinequeryresult\nvar results = [\n    // result 1 is InlineQueryResultArticle\n    {\n        type : \"article\",\n        id : \"1\",\n        title : \"Result 1\",\n        \n        // InputTextMessageContent see https://core.telegram.org/bots/api#inputmessagecontent\n        input_message_content : {\n            message_text : \"The message 1\",\n            parse_mode : \"Markdown\",\n            disable_web_page_preview : true\n        }\n    },\n    \n    // result 2 is InlineQueryResultArticle\n    {\n        type : \"article\",\n        id : \"2\",\n        title : \"Result 2\",\n        \n        // InputTextMessageContent see https://core.telegram.org/bots/api#inputmessagecontent\n        input_message_content : {\n            message_text : \"The message 2\",\n            parse_mode : \"Markdown\",\n            disable_web_page_preview : false\n        }\n    }\n    ];\n\n\nmsg.payload.results = results;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 3240,
+        "wires": [
+            [
+                "2c870509.1e08ca"
+            ]
+        ]
+    },
+    {
+        "id": "2c870509.1e08ca",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 3240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b24f9455c0051669",
+        "type": "comment",
+        "z": "4bd5bacd36374413",
+        "d": true,
+        "name": "Implementing an inline_query",
+        "info": "Bots can be called from any chat via inline_query\nwhen the bot is set to inline mode in botfather via\n/setinline\n",
+        "x": 200,
+        "y": 3120,
+        "wires": []
+    },
+    {
+        "id": "e206652bdea3c8c6",
+        "type": "comment",
+        "z": "4bd5bacd36374413",
+        "name": "Receiving location",
+        "info": "Locations can be send to the chat. The bot\ncan receive the longitude and latitude\n",
+        "x": 170,
+        "y": 3320,
+        "wires": []
+    },
+    {
+        "id": "7654a517.757b84",
+        "type": "telegram event",
+        "z": "4bd5bacd36374413",
+        "name": "live location receiver",
+        "bot": "62a633c8986a8112",
+        "event": "edited_message",
+        "autoanswer": "",
+        "x": 170,
+        "y": 3380,
+        "wires": [
+            [
+                "365556c8.2d4362",
+                "9a872ebdd1ce96fd"
+            ]
+        ]
+    },
+    {
+        "id": "365556c8.2d4362",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "create location message",
+        "func": "if(msg.payload.location)\n{\n    var lat = msg.payload.location.latitude;\n    var lng = msg.payload.location.longitude;\n    var user = msg.payload.from.username;\n    \n    msg.payload.type = 'message';\n    msg.payload.content = user + ' moved to lat=' + lat + ' lon=' + lng;\n    \n    return msg;\n}\nelse\n{\n    return null;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 450,
+        "y": 3380,
+        "wires": [
+            [
+                "0dffd97fbdc656be"
+            ]
+        ]
+    },
+    {
+        "id": "0dffd97fbdc656be",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 690,
+        "y": 3380,
+        "wires": []
+    },
+    {
+        "id": "9a872ebdd1ce96fd",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 410,
+        "y": 3460,
+        "wires": []
+    },
+    {
+        "id": "8369d2d4.722d7",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 561,
+        "y": 3561.9999771118164,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "49cf240b.2ca1ac",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "send markdown",
+        "func": "var message = 'You can also send *markdown* formatted messages.';\nmsg.payload = { chatId: -1003248391667, type : 'message', content : message};\n\n// activate markdown\nmsg.payload.options = {disable_web_page_preview : true, parse_mode : \"Markdown\"};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 3560,
+        "wires": [
+            [
+                "8369d2d4.722d7"
+            ]
+        ]
+    },
+    {
+        "id": "df89602b.3cc31",
+        "type": "inject",
+        "z": "4bd5bacd36374413",
+        "name": "Trigger",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 3560,
+        "wires": [
+            [
+                "49cf240b.2ca1ac"
+            ]
+        ]
+    },
+    {
+        "id": "1999e0af296fc2bb",
+        "type": "comment",
+        "z": "4bd5bacd36374413",
+        "name": "Sending messages to a specified chat",
+        "info": "Locations can be send to the chat. The bot\ncan receive the longitude and latitude\n",
+        "x": 230,
+        "y": 3520,
+        "wires": []
+    },
+    {
+        "id": "99ee972c.22d088",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 3700,
+        "wires": [
+            [
+                "72b71335.355a9c"
+            ]
+        ]
+    },
+    {
+        "id": "58e78fc.dd0b27",
+        "type": "telegram command",
+        "z": "4bd5bacd36374413",
+        "name": "/fromfile",
+        "command": "/fromfile",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "bot": "62a633c8986a8112",
+        "strict": false,
+        "hasresponse": false,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 1,
+        "x": 130,
+        "y": 3700,
+        "wires": [
+            [
+                "7c8090ca.00c02"
+            ]
+        ]
+    },
+    {
+        "id": "72b71335.355a9c",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 3700,
+        "wires": []
+    },
+    {
+        "id": "2058d729.1a3a48",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "send image",
+        "func": "var buffer = msg.payload;\nvar payload = {\n  content: buffer,\n  message: 'The requested image',\n  type : 'photo',\n  chatId: msg.originalMessage.chat.id,\n  chat: msg.originalMessage.chat,\n  from: msg.originalMessage.from,\n  message_id : msg.originalMessage.message_id\n}\n\nmsg.payload = payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 3700,
+        "wires": [
+            [
+                "99ee972c.22d088"
+            ]
+        ]
+    },
+    {
+        "id": "7c8090ca.00c02",
+        "type": "file in",
+        "z": "4bd5bacd36374413",
+        "name": "image from file",
+        "filename": "C:\\Users\\MIND_SUPPORT\\Pictures\\77536961.2164260940.jpg",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 420,
+        "y": 3700,
+        "wires": [
+            [
+                "2058d729.1a3a48",
+                "959c0404.742708"
+            ]
+        ]
+    },
+    {
+        "id": "dec15032.19344",
+        "type": "http request",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "https://picsum.photos/200/300",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 430,
+        "y": 3780,
+        "wires": [
+            [
+                "959c0404.742708",
+                "2058d729.1a3a48"
+            ]
+        ]
+    },
+    {
+        "id": "db7296d38fa309cf",
+        "type": "telegram command",
+        "z": "4bd5bacd36374413",
+        "name": "/frominternet",
+        "command": "/frominternet",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "bot": "62a633c8986a8112",
+        "strict": false,
+        "hasresponse": false,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 1,
+        "x": 150,
+        "y": 3780,
+        "wires": [
+            [
+                "dec15032.19344"
+            ]
+        ]
+    },
+    {
+        "id": "2da41ceac90ece65",
+        "type": "comment",
+        "z": "4bd5bacd36374413",
+        "name": "Sending photos, videos, ...",
+        "info": "# Flow demonstrates sending a photo as buffer.\nAs few people do not know that image files can also be sent directly from within memory this example flow was created.\nThe complete description can be found here:\nhttps://core.telegram.org/bots/api#sending-files\n\n## pic1\nFile is loaded from a local file and sent as buffer.\n\n## pic2\nFile is downloaded from internet and directly sent as buffer.\n\nCredits:\nflow was derived from see also:\nhttps://discourse.nodered.org/t/taking-a-picture-and-sending-it-via-telegram/27905/4\n",
+        "x": 190,
+        "y": 3640,
+        "wires": []
+    },
+    {
+        "id": "959c0404.742708",
+        "type": "image",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "outputs": 0,
+        "x": 660,
+        "y": 3780,
+        "wires": []
     }
 ]
