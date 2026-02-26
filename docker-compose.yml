@@ -18,12 +18,20 @@ services:
     environment:
       - INFLUXDB_BIND_ADDRESS=:8088
 
+  renderer:
+    image: grafana/grafana-image-renderer:latest
+
   grafana:
     image: "grafana/grafana"
     ports:
       - "3090:3000"
     volumes:
       - "grafana-data:/var/lib/grafana"
+      - "./grafana:/etc/grafana"
+    environment:
+      GF_RENDERING_SERVER_URL: http://renderer:8081/render
+      GF_RENDERING_CALLBACK_URL: http://grafana:3000/
+      GF_SERVER_ROOT_URL: https://miza1.mindfc.net
 
   timescaledb:
     image: timescale/timescaledb:latest-pg15
