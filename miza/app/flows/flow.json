@@ -2002,54 +2002,52 @@
         "verboselogging": true
     },
     {
-        "id": "19f02f8b.fa0c5",
-        "type": "telegram bot",
-        "z": "4bd5bacd36374413",
+        "id": "20ae1e52d1eef983",
+        "type": "postgreSQLConfig",
         "d": true,
-        "botname": "HeinzBot",
-        "usernames": "Windhose",
-        "chatids": "",
-        "baseapiurl": "",
-        "testenvironment": false,
-        "updatemode": "polling",
-        "pollinterval": "300",
-        "usesocks": false,
-        "sockshost": "188.40.170.80",
-        "socksport": "1080",
-        "socksusername": "anonymous",
-        "sockspassword": "none",
-        "bothost": "",
-        "botpath": "",
-        "localbothost": "",
-        "localbotport": "",
-        "publicbotport": "",
-        "privatekey": "C:\\\\Temp\\\\SSL\\\\PRIVATE.key",
-        "certificate": "C:\\\\Temp\\\\SSL\\\\PUBLIC.pem",
-        "useselfsignedcertificate": true,
-        "sslterminated": false,
-        "verboselogging": true
+        "name": "myuser@timescale:5432/iot",
+        "host": "timescale",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "iot",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "myuser",
+        "userFieldType": "str",
+        "password": "???",
+        "passwordFieldType": "str"
     },
     {
-        "id": "ff78bc5a.00874",
+        "id": "99c9caea1b8c1a86",
         "type": "telegram bot",
-        "z": "4bd5bacd36374413",
-        "d": true,
-        "botname": "HeinzBot",
+        "botname": "Matilda",
         "usernames": "",
         "chatids": "",
         "baseapiurl": "",
         "testenvironment": false,
-        "pollinterval": "",
+        "updatemode": "polling",
+        "pollinterval": 300,
         "usesocks": false,
         "sockshost": "",
-        "socksport": "",
-        "socksusername": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
         "sockspassword": "",
         "bothost": "",
         "botpath": "",
-        "localbothost": "",
-        "localbotport": "",
-        "publicbotport": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
         "privatekey": "",
         "certificate": "",
         "useselfsignedcertificate": false,
@@ -2289,6 +2287,7 @@
         "id": "a2c2179c4f7588c7",
         "type": "inject",
         "z": "a0eb9d8759f0d6f7",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -2318,6 +2317,7 @@
         "id": "f94006ed31c0f41d",
         "type": "comment",
         "z": "a0eb9d8759f0d6f7",
+        "d": true,
         "name": "Digital Clock",
         "info": "",
         "x": 910,
@@ -2328,6 +2328,7 @@
         "id": "83bce01c635c7021",
         "type": "moment",
         "z": "a0eb9d8759f0d6f7",
+        "d": true,
         "name": "Time",
         "topic": "",
         "input": "payload",
@@ -2353,6 +2354,7 @@
         "id": "0b4a96dcd751d73c",
         "type": "debug",
         "z": "a0eb9d8759f0d6f7",
+        "d": true,
         "name": "Time",
         "active": false,
         "tosidebar": true,
@@ -2370,6 +2372,7 @@
         "id": "5e6e4c789ff6ac0c",
         "type": "function",
         "z": "a0eb9d8759f0d6f7",
+        "d": true,
         "name": "convert from time to shift",
         "func": "let shift = \"Ca 1\";\n\nif (msg.payload >= 6 && msg.payload < 14) {\n    shift = \"Ca 1\";\n} else if (msg.payload >= 14 && msg.payload < 22) {\n    shift = \"Ca 2\";\n} else {\n    shift = \"Ca 3\";\n}\n\nglobal.set(\"shift\", shift);\nreturn msg;",
         "outputs": 1,
@@ -17216,12 +17219,13 @@
         "upload": false,
         "skipBodyParsing": false,
         "swaggerDoc": "",
-        "x": 1790,
-        "y": 240,
+        "x": 2610,
+        "y": 480,
         "wires": [
             [
                 "841dd930225ddab3",
-                "dee6c3afc8b496fd"
+                "dee6c3afc8b496fd",
+                "c2a9c27c476a1bee"
             ]
         ]
     },
@@ -17237,8 +17241,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1900,
-        "y": 160,
+        "x": 2800,
+        "y": 400,
         "wires": []
     },
     {
@@ -17320,7 +17324,7 @@
         "type": "postgresql",
         "z": "278f7766e1536901",
         "name": "Table Incident",
-        "query": "CREATE TABLE incidents (\n    id SERIAL PRIMARY KEY,\n    alert_name TEXT,\n    sensor TEXT,\n    severity TEXT,\n\n    firing_time TIMESTAMP,\n    resolve_time TIMESTAMP,\n\n    status TEXT, -- ACTIVE / RESOLVED\n    handling_mode TEXT,\n\n    assigned_level INT DEFAULT 1,\n    assigned_user TEXT\n);",
+        "query": "CREATE TABLE incidents (\n    id SERIAL PRIMARY KEY,\n    fingerprint TEXT UNIQUE,\n\n    alert_name TEXT,\n    system TEXT,\n    \n    status TEXT, -- OPEN / ACK / IN_PROGRESS / RESOLVED\n\n    start_time TIMESTAMP,\n    end_time TIMESTAMP,\n\n    ack_time TIMESTAMP,\n    resolved_time TIMESTAMP,\n\n    -- duration_seconds INT,\n    -- duration_seconds = EXTRACT(EPOCH FROM (\n    --     '2026-02-24T18:15:30Z'::timestamp - start_time\n    -- ))\n    \n    -- severity TEXT,\n    resolution_type TEXT, -- AUTO / MANUAL\n\n    created_at TIMESTAMP DEFAULT NOW(),\n    updated_at TIMESTAMP DEFAULT NOW()\n);",
         "postgreSQLConfig": "1483bf96ee7dbe4d",
         "split": false,
         "rowsPerMsg": 1,
@@ -17338,13 +17342,13 @@
         "type": "postgresql",
         "z": "278f7766e1536901",
         "name": "Table Escalation Level",
-        "query": "CREATE TABLE escalation_levels (\n    level INT,\n    role TEXT,\n    telegram_chat_id TEXT,\n    response_timeout_minutes INT\n);",
+        "query": "CREATE TABLE escalation_levels (\n    id SERIAL PRIMARY KEY,\n    fingerprint TEXT,\n\n    level INT,\n    role TEXT,\n\n    user_name TEXT,\n    telegram_id TEXT,\n\n    notified_at TIMESTAMP,\n    acknowledged_at TIMESTAMP\n);",
         "postgreSQLConfig": "1483bf96ee7dbe4d",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
         "x": 1980,
-        "y": 540,
+        "y": 600,
         "wires": [
             [
                 "bf349439e7402f91"
@@ -17356,13 +17360,13 @@
         "type": "postgresql",
         "z": "278f7766e1536901",
         "name": "Table Incident Logs",
-        "query": "CREATE TABLE incident_logs (\n    id SERIAL PRIMARY KEY,\n    incident_id INT,\n    action TEXT,\n    user_name TEXT,\n    note TEXT,\n    created_at TIMESTAMP DEFAULT NOW()\n);",
+        "query": "CREATE TABLE incident_logs (\n    id SERIAL PRIMARY KEY,\n    fingerprint TEXT,\n\n    event_type TEXT, -- FIRING / ACK / ESCALATE / RESOLVED\n    \n    message TEXT,\n    -- value_string TEXT,\n    \n    created_at TIMESTAMP\n);",
         "postgreSQLConfig": "1483bf96ee7dbe4d",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
         "x": 1970,
-        "y": 600,
+        "y": 540,
         "wires": [
             [
                 "3f7611c1c8bd9eb3"
@@ -17420,7 +17424,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 1780,
-        "y": 540,
+        "y": 600,
         "wires": [
             [
                 "ffdf96405da31c11"
@@ -17449,7 +17453,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 1780,
-        "y": 600,
+        "y": 540,
         "wires": [
             [
                 "8fea41e419f8e944"
@@ -17487,7 +17491,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2240,
-        "y": 540,
+        "y": 600,
         "wires": []
     },
     {
@@ -17504,14 +17508,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2230,
-        "y": 600,
+        "y": 540,
         "wires": []
     },
     {
         "id": "dee6c3afc8b496fd",
         "type": "function",
         "z": "278f7766e1536901",
-        "name": "function 1",
+        "name": "response webhook",
         "func": "msg.payload = { status: \"received\" };\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -17519,8 +17523,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1980,
-        "y": 240,
+        "x": 2910,
+        "y": 480,
         "wires": [
             [
                 "bd4d24a991f05d8b"
@@ -17534,9 +17538,1345 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 2170,
-        "y": 240,
+        "x": 3150,
+        "y": 480,
         "wires": []
+    },
+    {
+        "id": "447620892ed624d5",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1770,
+        "y": 80,
+        "wires": [
+            [
+                "2d88c2d998ea3d7f"
+            ]
+        ]
+    },
+    {
+        "id": "41c170998ad26af4",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "name": "Digital Clock",
+        "info": "",
+        "x": 1750,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "2d88c2d998ea3d7f",
+        "type": "moment",
+        "z": "278f7766e1536901",
+        "name": "Time",
+        "topic": "",
+        "input": "payload",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "HH",
+        "locale": "en-US",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Asia/Bangkok",
+        "x": 1930,
+        "y": 80,
+        "wires": [
+            [
+                "d921dff3531102c4"
+            ]
+        ]
+    },
+    {
+        "id": "4e5990d6cdc1a031",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "Time",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2330,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d921dff3531102c4",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "convert from time to shift",
+        "func": "let shift = \"Ca 1\";\n\nif (msg.payload >= 6 && msg.payload < 14) {\n    shift = \"Ca 1\";\n} else if (msg.payload >= 14 && msg.payload < 22) {\n    shift = \"Ca 2\";\n} else {\n    shift = \"Ca 3\";\n}\n\nglobal.set(\"shift\", shift);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2130,
+        "y": 80,
+        "wires": [
+            [
+                "4e5990d6cdc1a031"
+            ]
+        ]
+    },
+    {
+        "id": "5aa8e4579409957a",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "name": "Receive Alert",
+        "info": "",
+        "x": 2590,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "c2a9c27c476a1bee",
+        "type": "switch",
+        "z": "278f7766e1536901",
+        "name": "Check status",
+        "property": "payload.status",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "firing",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "resolved",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2770,
+        "y": 560,
+        "wires": [
+            [
+                "bf73cce77daeb370",
+                "5609b3b17074d328",
+                "ba992903a9ede6ad"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "03039a6a788a58d2",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Create incident",
+        "query": "INSERT INTO incidents (\n  fingerprint,\n  alert_name,\n  system,\n  status,\n  start_time\n)\nVALUES {{{msg.payload}}}\nON CONFLICT (fingerprint) DO NOTHING;",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 3260,
+        "y": 560,
+        "wires": [
+            [
+                "b4c03d22f3d6eaf3"
+            ]
+        ]
+    },
+    {
+        "id": "bf73cce77daeb370",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Insert Incident khi Firing",
+        "func": "// msg.payload = {\n//     fingerprint: msg.payload.alerts[0].fingerprint,\n//     alertname: msg.payload.alerts[0].labels.alertname,\n//     system: msg.payload.alerts[0].labels.grafana_folder,\n//     status: 'OPEN',\n//     start_time: msg.payload.alerts[0].startsAt\n// };\n\nmsg.payload = `(\n    '${msg.payload.alerts[0].fingerprint}',\n    '${msg.payload.alerts[0].labels.alertname}',\n    '${msg.payload.alerts[0].labels.grafana_folder}',\n    'OPEN',\n    '${msg.payload.alerts[0].startsAt}'\n)`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3030,
+        "y": 560,
+        "wires": [
+            [
+                "03039a6a788a58d2"
+            ]
+        ]
+    },
+    {
+        "id": "36d7a2e7.38e4de",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 2570,
+        "y": 200,
+        "wires": [
+            [
+                "1b00f74dc3098005"
+            ]
+        ]
+    },
+    {
+        "id": "ee38d447.1c13a8",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Done",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "complete",
+        "statusType": "msg",
+        "x": 3590,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "12f229bfef5ad2a5",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Ready for next lines",
+        "func": "return [\n    msg.complete || msg.abort ? msg : null,\n    { tick: true },\n];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3360,
+        "y": 140,
+        "wires": [
+            [
+                "ee38d447.1c13a8"
+            ],
+            [
+                "1b00f74dc3098005"
+            ]
+        ]
+    },
+    {
+        "id": "178252a8d3c54b16",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "",
+        "func": "let payload = `(0, FALSE),`;\nif (msg.payload && msg.payload.length > 0) {\n    for (const line of msg.payload) {\n        const valid = 'TRUE'; // Call some kind of test\n        payload += `(${line['id']}, ${valid}),`;\n    }\n}\nmsg.payload = payload.slice(0, - 1);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2940,
+        "y": 200,
+        "wires": [
+            [
+                "6d2073ec4db26f2f"
+            ]
+        ]
+    },
+    {
+        "id": "4fd30ba36702842a",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Progress",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "parts.index",
+        "statusType": "msg",
+        "x": 3320,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1b00f74dc3098005",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "SELECT many",
+        "query": "SELECT * FROM mytable\nORDER BY id ASC\nLIMIT 2000;\n",
+        "postgreSQLConfig": "20ae1e52d1eef983",
+        "split": true,
+        "rowsPerMsg": "100",
+        "outputs": 1,
+        "x": 2760,
+        "y": 200,
+        "wires": [
+            [
+                "178252a8d3c54b16"
+            ]
+        ]
+    },
+    {
+        "id": "6d2073ec4db26f2f",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "UPDATE many",
+        "query": "UPDATE mytable AS c\nSET validity = v.validity\nFROM (VALUES\n\t{{{ msg.payload }}}\n) AS v (id, validity)\nWHERE v.id = c.id;\n",
+        "postgreSQLConfig": "20ae1e52d1eef983",
+        "split": false,
+        "rowsPerMsg": "1",
+        "outputs": 1,
+        "x": 3120,
+        "y": 200,
+        "wires": [
+            [
+                "12f229bfef5ad2a5",
+                "4fd30ba36702842a"
+            ]
+        ]
+    },
+    {
+        "id": "64a657de3954a4b5",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Results",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "pgsql.rowCount",
+        "statusType": "msg",
+        "x": 2940,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "adf069475c5e0ba3",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "SELECT",
+        "query": "SELECT * FROM mytable\nWHERE id < 100;\n",
+        "postgreSQLConfig": "20ae1e52d1eef983",
+        "split": false,
+        "rowsPerMsg": "1",
+        "outputs": 1,
+        "x": 2740,
+        "y": 280,
+        "wires": [
+            [
+                "64a657de3954a4b5"
+            ]
+        ]
+    },
+    {
+        "id": "3134bfc0f12e13c3",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 2570,
+        "y": 280,
+        "wires": [
+            [
+                "adf069475c5e0ba3"
+            ]
+        ]
+    },
+    {
+        "id": "d04c65ee97e3a273",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Prepare",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 2560,
+        "y": 100,
+        "wires": [
+            [
+                "82b7c689d6682f72"
+            ]
+        ]
+    },
+    {
+        "id": "c5f0b4b2442e3137",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Done",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "pgsql",
+        "statusType": "msg",
+        "x": 2930,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "82b7c689d6682f72",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "ADD COLUMN",
+        "query": "ALTER TABLE mytable\n    DROP COLUMN IF EXISTS validity;\n\nALTER TABLE mytable\n    ADD COLUMN validity BOOLEAN;\n",
+        "postgreSQLConfig": "20ae1e52d1eef983",
+        "split": false,
+        "rowsPerMsg": "10",
+        "outputs": 1,
+        "x": 2760,
+        "y": 100,
+        "wires": [
+            [
+                "c5f0b4b2442e3137"
+            ]
+        ]
+    },
+    {
+        "id": "b4c03d22f3d6eaf3",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "Done",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3450,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "9322524707c9b99c",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "Alert Firing",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"receiver\":\"webhook node-red\",\"status\":\"firing\",\"alerts\":[{\"status\":\"firing\",\"labels\":{\"alertname\":\"Quá tải động cơ D4 node-red\",\"device\":\"Động cơ\",\"grafana_folder\":\"Miza Nghi Sơn/12_Hệ xeo\"},\"annotations\":{\"description\":\"Cảnh báo vượt ngưỡng\\nDCS: Kiểm tra tham số chạy\\nBáo nhân viên hiện trường kiểm tra hiện trạng bất thường và thiết bị\",\"summary\":\"Tải động cơ trên 40%\"},\"startsAt\":\"2026-02-26T09:19:20Z\",\"endsAt\":\"0001-01-01T00:00:00Z\",\"generatorURL\":\"https://miza1.mindfc.net/alerting/grafana/cfee5sqg0a6m8f/view?orgId=1\",\"fingerprint\":\"13218e74566e8ee5\",\"silenceURL\":\"https://miza1.mindfc.net/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3Dcfee5sqg0a6m8f&matcher=device%3D%C4%90%E1%BB%99ng+c%C6%A1&orgId=1\",\"dashboardURL\":\"https://miza1.mindfc.net/d/adzn4sv?from=1772093960000&orgId=1&to=1772097599652\",\"panelURL\":\"https://miza1.mindfc.net/d/adzn4sv?from=1772093960000&orgId=1&to=1772097599652&viewPanel=3\",\"values\":{\"B\":49.0310676574707,\"C\":1},\"valueString\":\"[ var='B' labels={device=Động cơ} value=49.0310676574707 ], [ var='C' labels={device=Động cơ} value=1 ]\",\"orgId\":1}],\"groupLabels\":{\"alertname\":\"Quá tải động cơ D4 node-red\",\"grafana_folder\":\"Miza Nghi Sơn/12_Hệ xeo\"},\"commonLabels\":{\"alertname\":\"Quá tải động cơ D4 node-red\",\"device\":\"Động cơ\",\"grafana_folder\":\"Miza Nghi Sơn/12_Hệ xeo\"},\"commonAnnotations\":{\"description\":\"Cảnh báo vượt ngưỡng\\nDCS: Kiểm tra tham số chạy\\nBáo nhân viên hiện trường kiểm tra hiện trạng bất thường và thiết bị\",\"summary\":\"Tải động cơ trên 40%\"},\"externalURL\":\"https://miza1.mindfc.net/\",\"version\":\"1\",\"groupKey\":\"{}/{__grafana_autogenerated__=\\\"true\\\"}/{__grafana_receiver__=\\\"webhook node-red\\\"}:{alertname=\\\"Quá tải động cơ D4 node-red\\\", grafana_folder=\\\"Miza Nghi Sơn/12_Hệ xeo\\\"}\",\"truncatedAlerts\":0,\"orgId\":1,\"title\":\"[FIRING:1] Quá tải động cơ D4 node-red Miza Nghi Sơn/12_Hệ xeo (Động cơ)\",\"state\":\"alerting\",\"message\":\"**Firing**\\n\\nValue: B=49.0310676574707, C=1\\nLabels:\\n - alertname = Quá tải động cơ D4 node-red\\n - device = Động cơ\\n - grafana_folder = Miza Nghi Sơn/12_Hệ xeo\\nAnnotations:\\n - description = Cảnh báo vượt ngưỡng\\nDCS: Kiểm tra tham số chạy\\nBáo nhân viên hiện trường kiểm tra hiện trạng bất thường và thiết bị\\n - summary = Tải động cơ trên 40%\\nSource: https://miza1.mindfc.net/alerting/grafana/cfee5sqg0a6m8f/view?orgId=1\\nSilence: https://miza1.mindfc.net/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3Dcfee5sqg0a6m8f&matcher=device%3D%C4%90%E1%BB%99ng+c%C6%A1&orgId=1\\nDashboard: https://miza1.mindfc.net/d/adzn4sv?from=1772093960000&orgId=1&to=1772097599652\\nPanel: https://miza1.mindfc.net/d/adzn4sv?from=1772093960000&orgId=1&to=1772097599652&viewPanel=3\\n\"}",
+        "payloadType": "json",
+        "x": 2580,
+        "y": 580,
+        "wires": [
+            [
+                "4359b3e82808310e",
+                "ba992903a9ede6ad"
+            ]
+        ]
+    },
+    {
+        "id": "9b3435c4e7210cc5",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "Alert Resolve",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"receiver\":\"webhook node-red\",\"status\":\"resolved\",\"alerts\":[{\"status\":\"resolved\",\"labels\":{\"alertname\":\"Quá tải động cơ D4 node-red\",\"device\":\"Động cơ\",\"grafana_folder\":\"Miza Nghi Sơn/12_Hệ xeo\"},\"annotations\":{\"description\":\"Cảnh báo vượt ngưỡng\\nDCS: Kiểm tra tham số chạy\\nBáo nhân viên hiện trường kiểm tra hiện trạng bất thường và thiết bị\",\"grafana_state_reason\":\"Updated\",\"summary\":\"Tải động cơ trên 40%\"},\"startsAt\":\"2026-02-26T09:19:20Z\",\"endsAt\":\"2026-02-26T09:22:30.029237291Z\",\"generatorURL\":\"https://miza1.mindfc.net/alerting/grafana/cfee5sqg0a6m8f/view?orgId=1\",\"fingerprint\":\"13218e74566e8ee5\",\"silenceURL\":\"https://miza1.mindfc.net/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3Dcfee5sqg0a6m8f&matcher=device%3D%C4%90%E1%BB%99ng+c%C6%A1&orgId=1\",\"dashboardURL\":\"https://miza1.mindfc.net/d/adzn4sv?from=1772093960000&orgId=1&to=1772097750029\",\"panelURL\":\"https://miza1.mindfc.net/d/adzn4sv?from=1772093960000&orgId=1&to=1772097750029&viewPanel=3\",\"values\":null,\"valueString\":\"[ var='B' labels={device=Động cơ} value=49.788207626342775 ], [ var='C' labels={device=Động cơ} value=1 ]\",\"orgId\":1}],\"groupLabels\":{\"alertname\":\"Quá tải động cơ D4 node-red\",\"grafana_folder\":\"Miza Nghi Sơn/12_Hệ xeo\"},\"commonLabels\":{\"alertname\":\"Quá tải động cơ D4 node-red\",\"device\":\"Động cơ\",\"grafana_folder\":\"Miza Nghi Sơn/12_Hệ xeo\"},\"commonAnnotations\":{\"description\":\"Cảnh báo vượt ngưỡng\\nDCS: Kiểm tra tham số chạy\\nBáo nhân viên hiện trường kiểm tra hiện trạng bất thường và thiết bị\",\"grafana_state_reason\":\"Updated\",\"summary\":\"Tải động cơ trên 40%\"},\"externalURL\":\"https://miza1.mindfc.net/\",\"version\":\"1\",\"groupKey\":\"{}/{__grafana_autogenerated__=\\\"true\\\"}/{__grafana_receiver__=\\\"webhook node-red\\\"}:{alertname=\\\"Quá tải động cơ D4 node-red\\\", grafana_folder=\\\"Miza Nghi Sơn/12_Hệ xeo\\\"}\",\"truncatedAlerts\":0,\"orgId\":1,\"title\":\"[RESOLVED] Quá tải động cơ D4 node-red Miza Nghi Sơn/12_Hệ xeo (Động cơ)\",\"state\":\"ok\",\"message\":\"\\r\\n\\r\\n\\r\\nAlerts Resolved:\\r\\n\\r\\nValue: [no value]\\r\\n  \\r\\nLabels:\\r\\n - alertname = Quá tải động cơ D4 node-red\\r\\n - device = Động cơ\\r\\n - grafana_folder = Miza Nghi Sơn/12_Hệ xeo\\r\\nAnnotations:\\r\\n - description = Cảnh báo vượt ngưỡng\\nDCS: Kiểm tra tham số chạy\\nBáo nhân viên hiện trường kiểm tra hiện trạng bất thường và thiết bị\\r\\n - grafana_state_reason = Updated\\r\\n - summary = Tải động cơ trên 40%\\r\\nSilence: https://miza1.mindfc.net/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3Dcfee5sqg0a6m8f&matcher=device%3D%C4%90%E1%BB%99ng+c%C6%A1&orgId=1\\r\\nDashboard: https://miza1.mindfc.net/d/adzn4sv?from=1772093960000&orgId=1&to=1772097750029\\r\\nPanel: https://miza1.mindfc.net/d/adzn4sv?from=1772093960000&orgId=1&to=1772097750029&viewPanel=3\\r\\n\\r\\n\\r\\n\"}",
+        "payloadType": "json",
+        "x": 2590,
+        "y": 640,
+        "wires": [
+            [
+                "c2a9c27c476a1bee"
+            ]
+        ]
+    },
+    {
+        "id": "029b35f58912d504",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Insert Incident Logs",
+        "query": "INSERT INTO incidents_logs (\n  fingerprint,\n  event_type,\n  message,\n  value_string,\n  created_at\n)\nVALUES (\n  '096c7dcc7ecaa66a',\n  'FIRING',\n  '\n\n\nAlerts Resolved:\n\nValue: [no value]\n  \nLabels:\n - alertname = Quá tải động cơ D4 node-red\n - device = Động cơ\n - grafana_folder = Miza Nghi Sơn/12_Hệ xeo\nAnnotations:\n - description = Cảnh báo vượt ngưỡng\nDCS: Kiểm tra tham số chạy\nBáo nhân viên hiện trường kiểm tra hiện trạng bất thường và thiết bị\n - grafana_state_reason = Updated\n - summary = Tải động cơ trên 40%\nSilence: https://miza1.mindfc.net/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3Dcfee5sqg0a6m8f&matcher=device%3D%C4%90%E1%BB%99ng+c%C6%A1&orgId=1\nDashboard: https://miza1.mindfc.net/d/adzn4sv?from=1772093960000&orgId=1&to=1772097750029\nPanel: https://miza1.mindfc.net/d/adzn4sv?from=1772093960000&orgId=1&to=1772097750029&viewPanel=3\n\n\n',\n  '2026-02-24T18:13:20Z'\n);",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 3990,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c02e3489b2186593",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "name": "Insert Incidents",
+        "info": "",
+        "x": 3000,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "4ac7d5254a470b52",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Create incident",
+        "query": "INSERT INTO incidents (\n  fingerprint,\n  alert_name,\n  system,\n  status,\n  start_time\n)\nVALUES {{{msg.payload}}}\nON CONFLICT (fingerprint) DO NOTHING;",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 3960,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8462bb0bd68df5f2",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Insert Incident khi Firing",
+        "func": "// msg.payload = {\n//     fingerprint: msg.payload.alerts[0].fingerprint,\n//     alertname: msg.payload.alerts[0].labels.alertname,\n//     system: msg.payload.alerts[0].labels.grafana_folder,\n//     status: 'OPEN',\n//     start_time: msg.payload.alerts[0].startsAt\n// };\n\nmsg.payload = `(\n    '${msg.payload.alerts[0].fingerprint}',\n    '${msg.payload.alerts[0].labels.alertname}',\n    '${msg.payload.alerts[0].labels.grafana_folder}',\n    'OPEN',\n    '${msg.payload.alerts[0].startsAt}'\n)`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3730,
+        "y": 320,
+        "wires": [
+            [
+                "4ac7d5254a470b52"
+            ]
+        ]
+    },
+    {
+        "id": "f903edb5a59e92df",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Insert Incidents",
+        "info": "",
+        "x": 3700,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "8d6349e80d4c71ee",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Update Incident khi resolved",
+        "func": "// msg.payload = {\n//     fingerprint: msg.payload.alerts[0].fingerprint,\n//     alertname: msg.payload.alerts[0].labels.alertname,\n//     system: msg.payload.alerts[0].labels.grafana_folder,\n//     status: 'OPEN',\n//     start_time: msg.payload.alerts[0].startsAt\n// };\n\nmsg.payload = `(\n    '${msg.payload.alerts[0].fingerprint}',\n    '${msg.payload.alerts[0].labels.alertname}',\n    '${msg.payload.alerts[0].labels.grafana_folder}',\n    'OPEN',\n    '${msg.payload.alerts[0].startsAt}'\n)`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3740,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b7a394e15ef58ddf",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Update incident",
+        "query": "UPDATE incidents\nSET\n  status = 'CLOSED',\n  end_time = '2026-02-24T18:15:30Z',\n  updated_at = NOW()\nWHERE fingerprint = '096c7dcc7ecaa66a';",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 3980,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0b59767b8e19b09",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Update Incidents",
+        "info": "",
+        "x": 3700,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "5aa659fab35547bc",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Insert Incidents Logs when Firing",
+        "info": "",
+        "x": 3750,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "19265269734f54ca",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Insert Incidents Logs when Resolved",
+        "info": "",
+        "x": 3760,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "e33d2981158510f0",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Insert Incident Logs",
+        "query": "INSERT INTO incidents_logs (\n  fingerprint,\n  event_type,\n  message,\n  value_string,\n  created_at\n)\nVALUES (\n  '096c7dcc7ecaa66a',\n  'RESOLVED',\n  'Resolved',\n  '[no value]',\n  '2026-02-24T18:15:30Z'\n);",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 3990,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c1e9fee4d145077",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Insert Escalation Levels",
+        "query": "INSERT INTO escalation_levels (\n  fingerprint,\n  level,\n  role,\n  user_name,\n  telegram_id,\n  notified_at\n)\nVALUES (\n  '096c7dcc7ecaa66a',\n  1\n  'operator',\n  'Nguyễn Văn A',\n  '123456',\n  NOW()\n);",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 4010,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "37ee5d1f87ed6783",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "d": true,
+        "name": "Insert Escalation Levels",
+        "info": "",
+        "x": 3720,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "03a552e481b80b16",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Create Incident Logs",
+        "query": "INSERT INTO incident_logs (\n  fingerprint,\n  event_type,\n  message,\n  created_at\n)\nVALUES {{{msg.payload}}};",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 3260,
+        "y": 640,
+        "wires": [
+            [
+                "f6ccd9b34372c956"
+            ]
+        ]
+    },
+    {
+        "id": "5609b3b17074d328",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Insert Incident Log khi Firing",
+        "func": "msg.payload = `(\n    '${msg.payload.alerts[0].fingerprint}',\n    'FIRING',\n    '${msg.payload.message}',\n    '${msg.payload.alerts[0].startsAt}'\n)`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3000,
+        "y": 640,
+        "wires": [
+            [
+                "03a552e481b80b16"
+            ]
+        ]
+    },
+    {
+        "id": "f6ccd9b34372c956",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "Done",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3470,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "9b428c928be41581",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "name": "Insert Incident logs",
+        "info": "",
+        "x": 2970,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "6ac3c8090c4994c4",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Table Shift OnCall",
+        "query": "CREATE TABLE shift_oncall (\n    id SERIAL PRIMARY KEY,\n    full_name TEXT,\n    role TEXT,\n    telegram_id TEXT\n);",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1970,
+        "y": 660,
+        "wires": [
+            [
+                "2b40ded76518d7d6"
+            ]
+        ]
+    },
+    {
+        "id": "0993528b134f411a",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1780,
+        "y": 660,
+        "wires": [
+            [
+                "6ac3c8090c4994c4"
+            ]
+        ]
+    },
+    {
+        "id": "2b40ded76518d7d6",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "Table Escalation Level",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2180,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "f66484efecebe75a",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Table Shift OnCall",
+        "query": "INSERT INTO shift_oncall (full_name, role, telegram_id) VALUES\n\n-- GIÁM ĐỐC\n('Trần Công Thượng', 'Giám đốc sản xuất', NULL),\n\n-- PHỤ TRÁCH TỰ ĐỘNG HÓA\n('Đào Quang Huy', 'Phụ trách tự động hóa', NULL),\n\n-- TRƯỞNG BỘ PHẬN\n('Nguyễn Văn Ninh', 'Trưởng bộ phận xeo', NULL),\n\n-- QUẢN LÝ\n('Lê Quảng Cảnh', 'Quản lý hệ xeo', NULL),\n('Quách Ngọc Huy', 'Quản lý điện', NULL),\n('Nguyễn Đức Anh', 'Quản lý cơ khí', NULL),\n('Phạm Xuân Quân', 'Quản lý bột', NULL),\n\n-- TRƯỞNG CA\n('Đặng Hữu Hùng', 'Trưởng ca', NULL),\n('Lê Đăng Hùng', 'Trưởng ca', NULL),\n('Nguyễn Bá Hoàng', 'Trưởng ca', NULL),\n('Ninh Văn Sơn', 'Trưởng ca', NULL),\n('Phan Văn Trường Giang', 'Trưởng ca', NULL),\n('Nguyễn Khắc Cừ', 'Trưởng ca', NULL),\n('Lê Thế Hạnh', 'Trưởng ca', NULL),\n('Nguyễn Bá Định', 'Trưởng ca', NULL),\n('Lê Văn Hùng', 'Trưởng ca', NULL),\n('Lê Năng Các', 'Trưởng ca', NULL),\n('Lê Thế Bảo', 'Trưởng ca', NULL);",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1970,
+        "y": 740,
+        "wires": [
+            [
+                "7dc46a7962b693ba"
+            ]
+        ]
+    },
+    {
+        "id": "7dc46a7962b693ba",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "Table Escalation Level",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2200,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "7e31d7d8fce3ad76",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1780,
+        "y": 740,
+        "wires": [
+            [
+                "f66484efecebe75a"
+            ]
+        ]
+    },
+    {
+        "id": "ba992903a9ede6ad",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Read Shift OnCall",
+        "query": "SELECT full_name\nFROM shift_oncall\nWHERE role = 'Trưởng ca';",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 2970,
+        "y": 700,
+        "wires": [
+            [
+                "d369908f841a46ab"
+            ]
+        ]
+    },
+    {
+        "id": "b063e017d940253b",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3480,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "4359b3e82808310e",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Initial inline keyboard message",
+        "func": "var opts = {\n    reply_to_message_id: null,\n    reply_markup: JSON.stringify({\n        \"inline_keyboard\": [[\n            {\n                \"text\": \"ACK\",\n                \"callback_data\": \"ACK_\" + msg.payload.alerts[0].fingerprint\n            }\n        ]]\n    })\n};\n\nmsg.payload.content = \"👉 Vui lòng ACK để nhận xử lý\";\nmsg.payload.options = opts;\nmsg.payload.type = \"message\";\nmsg.payload.chatId = -1003248391667;\nglobal.set('content', msg.payload.content);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2950,
+        "y": 780,
+        "wires": [
+            [
+                "818c9ab49848ed3e"
+            ]
+        ]
+    },
+    {
+        "id": "818c9ab49848ed3e",
+        "type": "telegram sender",
+        "z": "278f7766e1536901",
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 3250,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "672ee7045261091e",
+        "type": "telegram event",
+        "z": "278f7766e1536901",
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "event": "callback_query",
+        "autoanswer": true,
+        "x": 2600,
+        "y": 860,
+        "wires": [
+            [
+                "89fe3da3e14c2661"
+            ]
+        ]
+    },
+    {
+        "id": "89fe3da3e14c2661",
+        "type": "switch",
+        "z": "278f7766e1536901",
+        "name": "check callback data",
+        "property": "payload.content",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "ACK_",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "PAGE_",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "SELECT_",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 2850,
+        "y": 860,
+        "wires": [
+            [
+                "0a4426c905721cdf",
+                "3806dcaa8bd3b077"
+            ],
+            [
+                "626de60808cd13d5"
+            ],
+            [
+                "4ec3a7cfa5ee08cd",
+                "1e0f3850b22f5fb4",
+                "282cbc2489f4f329"
+            ]
+        ]
+    },
+    {
+        "id": "0a4426c905721cdf",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "ACK",
+        "func": "msg.fingerprint = msg.payload.content.split('_')[1];\n// ====== DATA ======\nvar users = context.global.shift_oncall;\n\n// ====== PAGINATION ======\nvar page = msg.page || 0; // trang hiện tại\nvar perPage = 4;\n\nvar totalPages = Math.ceil(users.length / perPage);\n\nvar start = page * perPage;\nvar end = start + perPage;\n\nvar currentUsers = users.slice(start, end);\n\n// ====== BUILD BUTTONS ======\nvar keyboard = [];\n\n// Mỗi người 1 hàng\ncurrentUsers.forEach(u => {\n    keyboard.push([{\n        text: u.full_name,\n        callback_data: \"SELECT_\" + msg.fingerprint + \"_\" + u.full_name\n    }]);\n});\n\n// ====== NAVIGATION BUTTONS ======\nvar navButtons = [];\n\nif (page > 0) {\n    navButtons.push({\n        text: \"⬅ Trước\",\n        callback_data: \"PAGE_\" + (page - 1)\n    });\n}\n\nif (page < totalPages - 1) {\n    navButtons.push({\n        text: \"Tiếp ➡\",\n        callback_data: \"PAGE_\" + (page + 1)\n    });\n}\n\nif (navButtons.length > 0) {\n    keyboard.push(navButtons);\n}\n\nvar reply_markup = JSON.stringify({\n    \"inline_keyboard\": keyboard\n})\n\n// var reply_markup = JSON.stringify({\n//     \"inline_keyboard\": [[\n//         {\n//             \"text\":\"Đặng Hữu Hùng\",\n//             \"callback_data\":\"SELECT_Đặng Hữu Hùng\"\n//         },\n//         {\n//             \"text\":\"Lê Đăng Hùng\",\n//             \"callback_data\":\"SELECT_Lê Đăng Hùng\"\n//         },\n//         {\n//             \"text\":\"Nguyễn Bá Hoàng\",\n//             \"callback_data\":\"SELECT_Nguyễn Bá Hoàng\"\n//         },\n//         {\n//             \"text\":\"Ninh Văn Sơn\",\n//             \"callback_data\":\"SELECT_Ninh Văn Sơn\"\n//         }],\n//         [\n//             {\"text\":\"Tiếp ➡\",\"callback_data\":\"PAGE_1\"}\n//         ]\n//     ]\n// })\n// ====== OUTPUT ======\nvar options = {\n    chat_id: msg.payload.chatId,\n    reply_markup: reply_markup,\n    message_id: msg.payload.messageId\n};\n\nmsg.payload.type = 'editMessageReplyMarkup';\nmsg.payload.content = reply_markup;\nmsg.payload.options = options;\n\nreturn [msg];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3150,
+        "y": 860,
+        "wires": [
+            [
+                "ecfebf3ff7daf32a",
+                "308f9da60fef95b4"
+            ]
+        ]
+    },
+    {
+        "id": "d369908f841a46ab",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Store Shift OnCall",
+        "func": "global.set(\"shift_oncall\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3250,
+        "y": 700,
+        "wires": [
+            [
+                "b063e017d940253b"
+            ]
+        ]
+    },
+    {
+        "id": "ecfebf3ff7daf32a",
+        "type": "telegram sender",
+        "z": "278f7766e1536901",
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 3370,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "308f9da60fef95b4",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Edit Message Text",
+        "func": "if (global.get('content') !== 'Trưởng ca?') {\n    msg.payload.type = 'editMessageText';\n    msg.payload.content = 'Trưởng ca nhận ' + msg.fingerprint + '?';\n    global.set('content', 'Trưởng ca?');\n    return [msg];\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3190,
+        "y": 940,
+        "wires": [
+            [
+                "ecfebf3ff7daf32a"
+            ]
+        ]
+    },
+    {
+        "id": "626de60808cd13d5",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "PAGE",
+        "func": "msg.page = parseInt(msg.payload.content.split(\"_\")[1]);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3150,
+        "y": 1020,
+        "wires": [
+            [
+                "0a4426c905721cdf"
+            ]
+        ]
+    },
+    {
+        "id": "70e363b8dadd3eaf",
+        "type": "catch",
+        "z": "278f7766e1536901",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 2560,
+        "y": 1340,
+        "wires": [
+            [
+                "b9aa8b7fec23bb32"
+            ]
+        ]
+    },
+    {
+        "id": "b9aa8b7fec23bb32",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2760,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "4ec3a7cfa5ee08cd",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "SELECT",
+        "func": "// var name = msg.payload.content.replace(\"SELECT_\", \"\");\nvar fingerprint = msg.payload.content.split(\"_\")[1];\nvar name = msg.payload.content.split(\"_\")[2];\n\nmsg.payload.type = 'editMessageText';\nmsg.payload.content = '✔ Trưởng ca: ' + name + ' đã nhận ' + fingerprint + '.';\nmsg.payload.options = {\n    chat_id: msg.payload.chatId,\n    message_id: msg.payload.messageId\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3160,
+        "y": 1080,
+        "wires": [
+            [
+                "ecfebf3ff7daf32a"
+            ]
+        ]
+    },
+    {
+        "id": "1e0f3850b22f5fb4",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2800,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "e6eb5ba6d7cfb47f",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Update incident",
+        "query": "UPDATE incidents\nSET ack_time = now(),\n    status = 'ACK'\nWHERE fingerprint = '{{msg.fingerprint}}'\nAND ack_time IS NULL\nRETURNING *;",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 3000,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3806dcaa8bd3b077",
+        "type": "link out",
+        "z": "278f7766e1536901",
+        "name": "ACK",
+        "mode": "link",
+        "links": [
+            "66a9f76ef1ac1887"
+        ],
+        "x": 3035,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "66a9f76ef1ac1887",
+        "type": "link in",
+        "z": "278f7766e1536901",
+        "name": "link in 2",
+        "links": [
+            "3806dcaa8bd3b077"
+        ],
+        "x": 2635,
+        "y": 1200,
+        "wires": [
+            [
+                "f4af57021ac50ea0"
+            ]
+        ]
+    },
+    {
+        "id": "f4af57021ac50ea0",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "create query update",
+        "func": "msg.fingerprint = msg.payload.content.split('_')[1];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2780,
+        "y": 1200,
+        "wires": [
+            [
+                "e6eb5ba6d7cfb47f"
+            ]
+        ]
+    },
+    {
+        "id": "282cbc2489f4f329",
+        "type": "link out",
+        "z": "278f7766e1536901",
+        "name": "IN_PROGRESS",
+        "mode": "link",
+        "links": [
+            "34528da67706c056"
+        ],
+        "x": 3015,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "34528da67706c056",
+        "type": "link in",
+        "z": "278f7766e1536901",
+        "name": "IN_PROGRESS",
+        "links": [
+            "282cbc2489f4f329"
+        ],
+        "x": 2635,
+        "y": 1260,
+        "wires": [
+            [
+                "8ebf30f588e8df4e"
+            ]
+        ]
+    },
+    {
+        "id": "8ebf30f588e8df4e",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "create query update",
+        "func": "var fingerprint = msg.payload.content.split(\"_\")[1];\nvar name = msg.payload.content.split(\"_\")[2];\n\nmsg.fingerprint = fingerprint;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2800,
+        "y": 1260,
+        "wires": [
+            [
+                "a1b8031e580dcc37"
+            ]
+        ]
+    },
+    {
+        "id": "a1b8031e580dcc37",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Update incident",
+        "query": "UPDATE incidents\nSET status = 'IN_PROGRESS'\nWHERE fingerprint = '{{msg.fingerprint}}';",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 3040,
+        "y": 1260,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "e2187250e7b22b53",
@@ -17553,7 +18893,8 @@
         "y": 200,
         "wires": [
             [
-                "08cb58802c88a954"
+                "08cb58802c88a954",
+                "87272c4ffe62cf0b"
             ]
         ]
     },
@@ -17562,7 +18903,7 @@
         "type": "function",
         "z": "965c7750b786c8eb",
         "name": "101-Filter",
-        "func": "let data = {\n    payload: {\n        \"Truyền động lưới\": [{\n            \"speed_sp\": msg.payload.speed_sp,\n            \"speed_pv\": msg.payload.speed_pv+0,\n            \"motor_load_pct\": msg.payload.motor_load_pct,\n            \"motor_temp_c\": msg.payload.motor_temp_c,\n            \"motor_torque_pct\": msg.payload.motor_torque_pct-0,\n            \"vfd_temp_c\": msg.payload.vfd_temp_c,\n        }]\n    }\n};\nreturn data;",
+        "func": "let data = {\n    payload: {\n        \"Truyền động lưới (D4)\": [{\n            \"speed_sp\": msg.payload.speed_sp,\n            \"speed_pv\": msg.payload.speed_pv+0,\n            \"motor_load_pct\": msg.payload.motor_load_pct,\n            \"motor_temp_c\": msg.payload.motor_temp_c,\n            \"motor_torque_pct\": msg.payload.motor_torque_pct,\n            // \"motor_torque_pct\": 15,\n            \"vfd_temp_c\": msg.payload.vfd_temp_c,\n        }]\n    }\n};\nreturn data;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -17573,6 +18914,7 @@
         "y": 200,
         "wires": [
             [
+                "3b5ca9087004a42d",
                 "991450d3a8d91168"
             ]
         ]
@@ -17667,6 +19009,59 @@
                 "991450d3a8d91168"
             ]
         ]
+    },
+    {
+        "id": "87272c4ffe62cf0b",
+        "type": "debug",
+        "z": "965c7750b786c8eb",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "3b5ca9087004a42d",
+        "type": "debug",
+        "z": "965c7750b786c8eb",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "51bd2a1176d2c71e",
+        "type": "comment",
+        "z": "965c7750b786c8eb",
+        "name": "Nhánh ai thì chơi nhánh người đó đi, đừng có qua nhánh Hệ xeo",
+        "info": "",
+        "x": 410,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "741d26832e32a2cd",
+        "type": "comment",
+        "z": "965c7750b786c8eb",
+        "name": "Còn không thì mở riêng node-red của mình á",
+        "info": "",
+        "x": 350,
+        "y": 620,
+        "wires": []
     },
     {
         "id": "3ad24649634862a2",
@@ -18377,7 +19772,6 @@
         "id": "d84b5890b57e3c20",
         "type": "telegram control",
         "z": "4bd5bacd36374413",
-        "d": true,
         "name": "",
         "bot": "62a633c8986a8112",
         "outputs": 1,
@@ -18397,7 +19791,6 @@
         "id": "79bd4f875c7c41af",
         "type": "debug",
         "z": "4bd5bacd36374413",
-        "d": true,
         "name": "debug 5",
         "active": false,
         "tosidebar": true,
@@ -18415,7 +19808,6 @@
         "id": "07bdd839635f4012",
         "type": "inject",
         "z": "4bd5bacd36374413",
-        "d": true,
         "name": "start",
         "props": [
             {
@@ -18441,7 +19833,6 @@
         "id": "c75ee8c58e5f3338",
         "type": "inject",
         "z": "4bd5bacd36374413",
-        "d": true,
         "name": "stop",
         "props": [
             {
@@ -18467,7 +19858,6 @@
         "id": "8054c09af5ba8a3a",
         "type": "inject",
         "z": "4bd5bacd36374413",
-        "d": true,
         "name": "restart",
         "props": [
             {
@@ -18779,13 +20169,13 @@
         "description": "",
         "registercommand": false,
         "language": "",
-        "bot": "62a633c8986a8112",
+        "bot": "99c9caea1b8c1a86",
         "strict": false,
         "hasresponse": false,
         "useregex": false,
         "removeregexcommand": false,
         "outputs": 1,
-        "x": 130,
+        "x": 150,
         "y": 2060,
         "wires": [
             [
@@ -18818,10 +20208,10 @@
         "type": "telegram sender",
         "z": "4bd5bacd36374413",
         "name": "send response",
-        "bot": "62a633c8986a8112",
+        "bot": "99c9caea1b8c1a86",
         "haserroroutput": false,
         "outputs": 1,
-        "x": 560,
+        "x": 580,
         "y": 2060,
         "wires": [
             []
@@ -19591,6 +20981,7 @@
         "id": "e206652bdea3c8c6",
         "type": "comment",
         "z": "4bd5bacd36374413",
+        "d": true,
         "name": "Receiving location",
         "info": "Locations can be send to the chat. The bot\ncan receive the longitude and latitude\n",
         "x": 170,
@@ -19602,8 +20993,8 @@
         "type": "telegram event",
         "z": "4bd5bacd36374413",
         "name": "live location receiver",
-        "bot": "62a633c8986a8112",
-        "event": "edited_message",
+        "bot": "99c9caea1b8c1a86",
+        "event": "message",
         "autoanswer": "",
         "x": 170,
         "y": 3380,
@@ -19656,6 +21047,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
         "x": 410,
         "y": 3460,
         "wires": []
@@ -19889,5 +21282,177 @@
         "x": 660,
         "y": 3780,
         "wires": []
+    },
+    {
+        "id": "09ba32490d619cf4",
+        "type": "telegram receiver",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "bot": "99c9caea1b8c1a86",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": false,
+        "inputs": 0,
+        "handleallupdates": false,
+        "x": 190,
+        "y": 4140,
+        "wires": [
+            [
+                "af08e882b685115c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "af08e882b685115c",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 4140,
+        "wires": []
+    },
+    {
+        "id": "40826272a35c2508",
+        "type": "inject",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.content",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 140,
+        "y": 4000,
+        "wires": [
+            [
+                "e3ad1fff5c9fc025"
+            ]
+        ]
+    },
+    {
+        "id": "0237fe7d2c37cdcf",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 4000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e3ad1fff5c9fc025",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "build keyboard",
+        "func": "var opts = {\n  reply_markup: JSON.stringify({\n    keyboard: [\n      ['A1'],\n      ['A2']],\n      'resize_keyboard' : true, \n      'one_time_keyboard' : true\n  })\n};\n\n\nmsg.error = false;\n// Dialogaufbau\nmsg.payload.content = 'Selection?';\nmsg.payload.options = opts;\n\n\nmsg.payload.chatId = -1003248391667;\nmsg.payload.messageId = 99;\nmsg.payload.sentMessageId = 99;\nmsg.payload.type = \"message\";\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 4000,
+        "wires": [
+            [
+                "0237fe7d2c37cdcf",
+                "e7ad60dd8aa9bd0e"
+            ]
+        ]
+    },
+    {
+        "id": "e7ad60dd8aa9bd0e",
+        "type": "debug",
+        "z": "4bd5bacd36374413",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 4060,
+        "wires": []
+    },
+    {
+        "id": "79de64d296f77beb",
+        "type": "telegram command",
+        "z": "4bd5bacd36374413",
+        "name": "/help",
+        "command": "/help",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "bot": "62a633c8986a8112",
+        "strict": false,
+        "hasresponse": false,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 1,
+        "x": 830,
+        "y": 2060,
+        "wires": [
+            [
+                "2bf79124f516eb34"
+            ]
+        ]
+    },
+    {
+        "id": "2bf79124f516eb34",
+        "type": "function",
+        "z": "4bd5bacd36374413",
+        "name": "create help text",
+        "func": "var helpMessage = \"/help - shows help\";\n\nhelpMessage += \"\\r\\n/bar - opens a dialog\";\nhelpMessage += \"\\r\\n/foo - opens a dialog 2\";\n\nhelpMessage += \"\\r\\n\";\nhelpMessage += \"\\r\\nYou are welcome: \"+msg.originalMessage.from.username;\nhelpMessage += \"\\r\\nYour chat id is \" + msg.payload.chatId;\nhelpMessage += \"\\r\\n\";\n\nmsg.payload.content = helpMessage;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 2060,
+        "wires": [
+            [
+                "6be2ec64a5d00d67"
+            ]
+        ]
+    },
+    {
+        "id": "6be2ec64a5d00d67",
+        "type": "telegram sender",
+        "z": "4bd5bacd36374413",
+        "name": "send response",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1240,
+        "y": 2060,
+        "wires": [
+            []
+        ]
     }
 ]
