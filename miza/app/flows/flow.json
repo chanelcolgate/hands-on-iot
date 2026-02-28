@@ -17234,7 +17234,7 @@
         "type": "debug",
         "z": "278f7766e1536901",
         "name": "debug 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -17679,48 +17679,10 @@
         "y": 560,
         "wires": [
             [
-                "bf73cce77daeb370",
-                "5609b3b17074d328",
-                "ba992903a9ede6ad"
+                "81580936cd0501cf"
             ],
-            []
-        ]
-    },
-    {
-        "id": "03039a6a788a58d2",
-        "type": "postgresql",
-        "z": "278f7766e1536901",
-        "name": "Create incident",
-        "query": "INSERT INTO incidents (\n  fingerprint,\n  alert_name,\n  system,\n  status,\n  start_time\n)\nVALUES {{{msg.payload}}}\nON CONFLICT (fingerprint) DO NOTHING;",
-        "postgreSQLConfig": "1483bf96ee7dbe4d",
-        "split": false,
-        "rowsPerMsg": 1,
-        "outputs": 1,
-        "x": 3260,
-        "y": 560,
-        "wires": [
             [
-                "b4c03d22f3d6eaf3"
-            ]
-        ]
-    },
-    {
-        "id": "bf73cce77daeb370",
-        "type": "function",
-        "z": "278f7766e1536901",
-        "name": "Insert Incident khi Firing",
-        "func": "// msg.payload = {\n//     fingerprint: msg.payload.alerts[0].fingerprint,\n//     alertname: msg.payload.alerts[0].labels.alertname,\n//     system: msg.payload.alerts[0].labels.grafana_folder,\n//     status: 'OPEN',\n//     start_time: msg.payload.alerts[0].startsAt\n// };\n\nmsg.payload = `(\n    '${msg.payload.alerts[0].fingerprint}',\n    '${msg.payload.alerts[0].labels.alertname}',\n    '${msg.payload.alerts[0].labels.grafana_folder}',\n    'OPEN',\n    '${msg.payload.alerts[0].startsAt}'\n)`;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 3030,
-        "y": 560,
-        "wires": [
-            [
-                "03039a6a788a58d2"
+                "88ba1ad9d1bfb16b"
             ]
         ]
     },
@@ -18004,23 +17966,6 @@
         ]
     },
     {
-        "id": "b4c03d22f3d6eaf3",
-        "type": "debug",
-        "z": "278f7766e1536901",
-        "name": "Done",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3450,
-        "y": 560,
-        "wires": []
-    },
-    {
         "id": "9322524707c9b99c",
         "type": "inject",
         "z": "278f7766e1536901",
@@ -18045,8 +17990,7 @@
         "y": 580,
         "wires": [
             [
-                "4359b3e82808310e",
-                "ba992903a9ede6ad"
+                "c2a9c27c476a1bee"
             ]
         ]
     },
@@ -18091,16 +18035,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "c02e3489b2186593",
-        "type": "comment",
-        "z": "278f7766e1536901",
-        "name": "Insert Incidents",
-        "info": "",
-        "x": 3000,
-        "y": 520,
-        "wires": []
     },
     {
         "id": "4ac7d5254a470b52",
@@ -18266,76 +18200,11 @@
         "wires": []
     },
     {
-        "id": "03a552e481b80b16",
-        "type": "postgresql",
-        "z": "278f7766e1536901",
-        "name": "Create Incident Logs",
-        "query": "INSERT INTO incident_logs (\n  fingerprint,\n  event_type,\n  message,\n  created_at\n)\nVALUES {{{msg.payload}}};",
-        "postgreSQLConfig": "1483bf96ee7dbe4d",
-        "split": false,
-        "rowsPerMsg": 1,
-        "outputs": 1,
-        "x": 3260,
-        "y": 640,
-        "wires": [
-            [
-                "f6ccd9b34372c956"
-            ]
-        ]
-    },
-    {
-        "id": "5609b3b17074d328",
-        "type": "function",
-        "z": "278f7766e1536901",
-        "name": "Insert Incident Log khi Firing",
-        "func": "msg.payload = `(\n    '${msg.payload.alerts[0].fingerprint}',\n    'FIRING',\n    '${msg.payload.message}',\n    '${msg.payload.alerts[0].startsAt}'\n)`;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 3000,
-        "y": 640,
-        "wires": [
-            [
-                "03a552e481b80b16"
-            ]
-        ]
-    },
-    {
-        "id": "f6ccd9b34372c956",
-        "type": "debug",
-        "z": "278f7766e1536901",
-        "name": "Done",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3470,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "9b428c928be41581",
-        "type": "comment",
-        "z": "278f7766e1536901",
-        "name": "Insert Incident logs",
-        "info": "",
-        "x": 2970,
-        "y": 600,
-        "wires": []
-    },
-    {
         "id": "6ac3c8090c4994c4",
         "type": "postgresql",
         "z": "278f7766e1536901",
         "name": "Table Shift OnCall",
-        "query": "CREATE TABLE shift_oncall (\n    id SERIAL PRIMARY KEY,\n    full_name TEXT,\n    role TEXT,\n    telegram_id TEXT\n);",
+        "query": "CREATE TABLE shift_oncall (\n    id SERIAL PRIMARY KEY,\n    full_name TEXT,\n    role TEXT,\n    level INT,\n    telegram_id TEXT\n);",
         "postgreSQLConfig": "1483bf96ee7dbe4d",
         "split": false,
         "rowsPerMsg": 1,
@@ -18399,7 +18268,7 @@
         "type": "postgresql",
         "z": "278f7766e1536901",
         "name": "Table Shift OnCall",
-        "query": "INSERT INTO shift_oncall (full_name, role, telegram_id) VALUES\n\n-- GIÁM ĐỐC\n('Trần Công Thượng', 'Giám đốc sản xuất', NULL),\n\n-- PHỤ TRÁCH TỰ ĐỘNG HÓA\n('Đào Quang Huy', 'Phụ trách tự động hóa', NULL),\n\n-- TRƯỞNG BỘ PHẬN\n('Nguyễn Văn Ninh', 'Trưởng bộ phận xeo', NULL),\n\n-- QUẢN LÝ\n('Lê Quảng Cảnh', 'Quản lý hệ xeo', NULL),\n('Quách Ngọc Huy', 'Quản lý điện', NULL),\n('Nguyễn Đức Anh', 'Quản lý cơ khí', NULL),\n('Phạm Xuân Quân', 'Quản lý bột', NULL),\n\n-- TRƯỞNG CA\n('Đặng Hữu Hùng', 'Trưởng ca', NULL),\n('Lê Đăng Hùng', 'Trưởng ca', NULL),\n('Nguyễn Bá Hoàng', 'Trưởng ca', NULL),\n('Ninh Văn Sơn', 'Trưởng ca', NULL),\n('Phan Văn Trường Giang', 'Trưởng ca', NULL),\n('Nguyễn Khắc Cừ', 'Trưởng ca', NULL),\n('Lê Thế Hạnh', 'Trưởng ca', NULL),\n('Nguyễn Bá Định', 'Trưởng ca', NULL),\n('Lê Văn Hùng', 'Trưởng ca', NULL),\n('Lê Năng Các', 'Trưởng ca', NULL),\n('Lê Thế Bảo', 'Trưởng ca', NULL);",
+        "query": "INSERT INTO shift_oncall (full_name, role, level, telegram_id) VALUES\n\n-- LEVEL 5: GIÁM ĐỐC\n('Trần Công Thượng', 'Giám đốc sản xuất', 5, NULL),\n\n-- LEVEL 4: PHỤ TRÁCH TỰ ĐỘNG HÓA\n('Đào Quang Huy', 'Phụ trách tự động hóa', 4, NULL),\n\n-- LEVEL 3: TRƯỞNG BỘ PHẬN\n('Nguyễn Văn Ninh', 'Trưởng bộ phận xeo', 3, NULL),\n\n-- LEVEL 2: QUẢN LÝ\n('Lê Quảng Cảnh', 'Quản lý hệ xeo', 2, NULL),\n('Quách Ngọc Huy', 'Quản lý điện', 2, NULL),\n('Nguyễn Đức Anh', 'Quản lý cơ khí', 2, NULL),\n('Phạm Xuân Quân', 'Quản lý bột', 2, NULL),\n\n-- LEVEL 1: TRƯỞNG CA\n('Đặng Hữu Hùng', 'Trưởng ca', 1, NULL),\n('Lê Đăng Hùng', 'Trưởng ca', 1, NULL),\n('Nguyễn Bá Hoàng', 'Trưởng ca', 1, NULL),\n('Ninh Văn Sơn', 'Trưởng ca', 1, NULL),\n('Phan Văn Trường Giang', 'Trưởng ca', 1, NULL),\n('Nguyễn Khắc Cừ', 'Trưởng ca', 1, NULL),\n('Lê Thế Hạnh', 'Trưởng ca', 1, NULL),\n('Nguyễn Bá Định', 'Trưởng ca', 1, NULL),\n('Lê Văn Hùng', 'Trưởng ca', 1, NULL),\n('Lê Năng Các', 'Trưởng ca', 1, NULL),\n('Lê Thế Bảo', 'Trưởng ca', 1, NULL);",
         "postgreSQLConfig": "1483bf96ee7dbe4d",
         "split": false,
         "rowsPerMsg": 1,
@@ -18459,74 +18328,6 @@
         ]
     },
     {
-        "id": "ba992903a9ede6ad",
-        "type": "postgresql",
-        "z": "278f7766e1536901",
-        "name": "Read Shift OnCall",
-        "query": "SELECT full_name\nFROM shift_oncall\nWHERE role = 'Trưởng ca';",
-        "postgreSQLConfig": "1483bf96ee7dbe4d",
-        "split": false,
-        "rowsPerMsg": 1,
-        "outputs": 1,
-        "x": 2970,
-        "y": 700,
-        "wires": [
-            [
-                "d369908f841a46ab"
-            ]
-        ]
-    },
-    {
-        "id": "b063e017d940253b",
-        "type": "debug",
-        "z": "278f7766e1536901",
-        "name": "debug 4",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3480,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "4359b3e82808310e",
-        "type": "function",
-        "z": "278f7766e1536901",
-        "name": "Initial inline keyboard message",
-        "func": "var opts = {\n    reply_to_message_id: null,\n    reply_markup: JSON.stringify({\n        \"inline_keyboard\": [[\n            {\n                \"text\": \"ACK\",\n                \"callback_data\": \"ACK_\" + msg.payload.alerts[0].fingerprint\n            }\n        ]]\n    })\n};\n\nmsg.payload.content = \"👉 Vui lòng ACK để nhận xử lý\";\nmsg.payload.options = opts;\nmsg.payload.type = \"message\";\nmsg.payload.chatId = -1003248391667;\nglobal.set('content', msg.payload.content);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2950,
-        "y": 780,
-        "wires": [
-            [
-                "818c9ab49848ed3e"
-            ]
-        ]
-    },
-    {
-        "id": "818c9ab49848ed3e",
-        "type": "telegram sender",
-        "z": "278f7766e1536901",
-        "name": "",
-        "bot": "62a633c8986a8112",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 3250,
-        "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "672ee7045261091e",
         "type": "telegram event",
         "z": "278f7766e1536901",
@@ -18534,8 +18335,8 @@
         "bot": "62a633c8986a8112",
         "event": "callback_query",
         "autoanswer": true,
-        "x": 2600,
-        "y": 860,
+        "x": 2640,
+        "y": 1020,
         "wires": [
             [
                 "89fe3da3e14c2661"
@@ -18564,13 +18365,23 @@
                 "t": "cont",
                 "v": "SELECT_",
                 "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ESC",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "DONE",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 3,
-        "x": 2850,
-        "y": 860,
+        "outputs": 5,
+        "x": 2890,
+        "y": 1020,
         "wires": [
             [
                 "0a4426c905721cdf",
@@ -18580,9 +18391,15 @@
                 "626de60808cd13d5"
             ],
             [
-                "4ec3a7cfa5ee08cd",
-                "1e0f3850b22f5fb4",
-                "282cbc2489f4f329"
+                "282cbc2489f4f329",
+                "fa3f42a522abfa6a"
+            ],
+            [
+                "9d82563cb00af70b",
+                "361ff59c09d36571"
+            ],
+            [
+                "6bb3c37c83c1dd63"
             ]
         ]
     },
@@ -18591,39 +18408,19 @@
         "type": "function",
         "z": "278f7766e1536901",
         "name": "ACK",
-        "func": "msg.fingerprint = msg.payload.content.split('_')[1];\n// ====== DATA ======\nvar users = context.global.shift_oncall;\n\n// ====== PAGINATION ======\nvar page = msg.page || 0; // trang hiện tại\nvar perPage = 4;\n\nvar totalPages = Math.ceil(users.length / perPage);\n\nvar start = page * perPage;\nvar end = start + perPage;\n\nvar currentUsers = users.slice(start, end);\n\n// ====== BUILD BUTTONS ======\nvar keyboard = [];\n\n// Mỗi người 1 hàng\ncurrentUsers.forEach(u => {\n    keyboard.push([{\n        text: u.full_name,\n        callback_data: \"SELECT_\" + msg.fingerprint + \"_\" + u.full_name\n    }]);\n});\n\n// ====== NAVIGATION BUTTONS ======\nvar navButtons = [];\n\nif (page > 0) {\n    navButtons.push({\n        text: \"⬅ Trước\",\n        callback_data: \"PAGE_\" + (page - 1)\n    });\n}\n\nif (page < totalPages - 1) {\n    navButtons.push({\n        text: \"Tiếp ➡\",\n        callback_data: \"PAGE_\" + (page + 1)\n    });\n}\n\nif (navButtons.length > 0) {\n    keyboard.push(navButtons);\n}\n\nvar reply_markup = JSON.stringify({\n    \"inline_keyboard\": keyboard\n})\n\n// var reply_markup = JSON.stringify({\n//     \"inline_keyboard\": [[\n//         {\n//             \"text\":\"Đặng Hữu Hùng\",\n//             \"callback_data\":\"SELECT_Đặng Hữu Hùng\"\n//         },\n//         {\n//             \"text\":\"Lê Đăng Hùng\",\n//             \"callback_data\":\"SELECT_Lê Đăng Hùng\"\n//         },\n//         {\n//             \"text\":\"Nguyễn Bá Hoàng\",\n//             \"callback_data\":\"SELECT_Nguyễn Bá Hoàng\"\n//         },\n//         {\n//             \"text\":\"Ninh Văn Sơn\",\n//             \"callback_data\":\"SELECT_Ninh Văn Sơn\"\n//         }],\n//         [\n//             {\"text\":\"Tiếp ➡\",\"callback_data\":\"PAGE_1\"}\n//         ]\n//     ]\n// })\n// ====== OUTPUT ======\nvar options = {\n    chat_id: msg.payload.chatId,\n    reply_markup: reply_markup,\n    message_id: msg.payload.messageId\n};\n\nmsg.payload.type = 'editMessageReplyMarkup';\nmsg.payload.content = reply_markup;\nmsg.payload.options = options;\n\nreturn [msg];",
+        "func": "msg.fingerprint = msg.payload.content.split('_')[1];\n// ====== DATA ======\nvar users = global.get('shift_oncall');\n\n// ====== PAGINATION ======\nvar page = msg.page || 0; // trang hiện tại\nvar perPage = 4;\n\nvar totalPages = Math.ceil(users.length / perPage);\n\nvar start = page * perPage;\nvar end = start + perPage;\n\nvar currentUsers = users.slice(start, end);\n\n// ====== BUILD BUTTONS ======\nvar keyboard = [];\n\n// Mỗi người 1 hàng\ncurrentUsers.forEach(u => {\n    keyboard.push([{\n        text: u.full_name,\n        callback_data: \"SELECT_\" + msg.fingerprint + \"_\" + u.full_name\n    }]);\n});\n\n// ====== NAVIGATION BUTTONS ======\nvar navButtons = [];\n\nif (page > 0) {\n    navButtons.push({\n        text: \"⬅ Trước\",\n        callback_data: \"PAGE_\" + msg.fingerprint + \"_\" + (page - 1)\n    });\n}\n\nif (page < totalPages - 1) {\n    navButtons.push({\n        text: \"Tiếp ➡\",\n        callback_data: \"PAGE_\" + msg.fingerprint + \"_\" + (page + 1)\n    });\n}\n\nif (navButtons.length > 0) {\n    keyboard.push(navButtons);\n}\n\nvar reply_markup = JSON.stringify({\n    \"inline_keyboard\": keyboard\n})\n\n// var reply_markup = JSON.stringify({\n//     \"inline_keyboard\": [[\n//         {\n//             \"text\":\"Đặng Hữu Hùng\",\n//             \"callback_data\":\"SELECT_Đặng Hữu Hùng\"\n//         },\n//         {\n//             \"text\":\"Lê Đăng Hùng\",\n//             \"callback_data\":\"SELECT_Lê Đăng Hùng\"\n//         },\n//         {\n//             \"text\":\"Nguyễn Bá Hoàng\",\n//             \"callback_data\":\"SELECT_Nguyễn Bá Hoàng\"\n//         },\n//         {\n//             \"text\":\"Ninh Văn Sơn\",\n//             \"callback_data\":\"SELECT_Ninh Văn Sơn\"\n//         }],\n//         [\n//             {\"text\":\"Tiếp ➡\",\"callback_data\":\"PAGE_1\"}\n//         ]\n//     ]\n// })\n// ====== OUTPUT ======\nvar options = {\n    chat_id: msg.payload.chatId,\n    reply_markup: reply_markup,\n    message_id: msg.payload.messageId\n};\n\nmsg.payload.type = 'editMessageReplyMarkup';\nmsg.payload.content = reply_markup;\nmsg.payload.options = options;\n\nreturn [msg];",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3150,
-        "y": 860,
+        "x": 3190,
+        "y": 1020,
         "wires": [
             [
                 "ecfebf3ff7daf32a",
                 "308f9da60fef95b4"
-            ]
-        ]
-    },
-    {
-        "id": "d369908f841a46ab",
-        "type": "function",
-        "z": "278f7766e1536901",
-        "name": "Store Shift OnCall",
-        "func": "global.set(\"shift_oncall\", msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 3250,
-        "y": 700,
-        "wires": [
-            [
-                "b063e017d940253b"
             ]
         ]
     },
@@ -18635,8 +18432,8 @@
         "bot": "62a633c8986a8112",
         "haserroroutput": false,
         "outputs": 1,
-        "x": 3370,
-        "y": 860,
+        "x": 3550,
+        "y": 1140,
         "wires": [
             []
         ]
@@ -18646,15 +18443,15 @@
         "type": "function",
         "z": "278f7766e1536901",
         "name": "Edit Message Text",
-        "func": "if (global.get('content') !== 'Trưởng ca?') {\n    msg.payload.type = 'editMessageText';\n    msg.payload.content = 'Trưởng ca nhận ' + msg.fingerprint + '?';\n    global.set('content', 'Trưởng ca?');\n    return [msg];\n}\nreturn null;",
+        "func": "if (global.get('role') === 'Trưởng ca') {\n    msg.payload.type = 'editMessageText';\n    msg.payload.content = global.get('role') + ' nhận ' + msg.fingerprint + '?';\n    global.set('role', null);\n    return [msg];\n}\nreturn null;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3190,
-        "y": 940,
+        "x": 3230,
+        "y": 1100,
         "wires": [
             [
                 "ecfebf3ff7daf32a"
@@ -18666,15 +18463,15 @@
         "type": "function",
         "z": "278f7766e1536901",
         "name": "PAGE",
-        "func": "msg.page = parseInt(msg.payload.content.split(\"_\")[1]);\nreturn msg;",
+        "func": "msg.page = parseInt(msg.payload.content.split(\"_\")[2]);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3150,
-        "y": 1020,
+        "x": 3190,
+        "y": 1180,
         "wires": [
             [
                 "0a4426c905721cdf"
@@ -18688,8 +18485,8 @@
         "name": "",
         "scope": null,
         "uncaught": false,
-        "x": 2560,
-        "y": 1340,
+        "x": 1740,
+        "y": 140,
         "wires": [
             [
                 "b9aa8b7fec23bb32"
@@ -18708,15 +18505,16 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2760,
-        "y": 1340,
+        "x": 1940,
+        "y": 140,
         "wires": []
     },
     {
         "id": "4ec3a7cfa5ee08cd",
         "type": "function",
         "z": "278f7766e1536901",
-        "name": "SELECT",
+        "d": true,
+        "name": "SELECT OLD",
         "func": "// var name = msg.payload.content.replace(\"SELECT_\", \"\");\nvar fingerprint = msg.payload.content.split(\"_\")[1];\nvar name = msg.payload.content.split(\"_\")[2];\n\nmsg.payload.type = 'editMessageText';\nmsg.payload.content = '✔ Trưởng ca: ' + name + ' đã nhận ' + fingerprint + '.';\nmsg.payload.options = {\n    chat_id: msg.payload.chatId,\n    message_id: msg.payload.messageId\n};\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -18724,29 +18522,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3160,
-        "y": 1080,
+        "x": 3500,
+        "y": 300,
         "wires": [
-            [
-                "ecfebf3ff7daf32a"
-            ]
+            []
         ]
-    },
-    {
-        "id": "1e0f3850b22f5fb4",
-        "type": "debug",
-        "z": "278f7766e1536901",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2800,
-        "y": 980,
-        "wires": []
     },
     {
         "id": "e6eb5ba6d7cfb47f",
@@ -18758,8 +18538,8 @@
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 3000,
-        "y": 1200,
+        "x": 3020,
+        "y": 1420,
         "wires": [
             []
         ]
@@ -18773,8 +18553,8 @@
         "links": [
             "66a9f76ef1ac1887"
         ],
-        "x": 3035,
-        "y": 820,
+        "x": 3075,
+        "y": 980,
         "wires": []
     },
     {
@@ -18785,8 +18565,8 @@
         "links": [
             "3806dcaa8bd3b077"
         ],
-        "x": 2635,
-        "y": 1200,
+        "x": 2535,
+        "y": 1420,
         "wires": [
             [
                 "f4af57021ac50ea0"
@@ -18805,8 +18585,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2780,
-        "y": 1200,
+        "x": 2720,
+        "y": 1420,
         "wires": [
             [
                 "e6eb5ba6d7cfb47f"
@@ -18822,8 +18602,8 @@
         "links": [
             "34528da67706c056"
         ],
-        "x": 3015,
-        "y": 1060,
+        "x": 3055,
+        "y": 1220,
         "wires": []
     },
     {
@@ -18834,8 +18614,8 @@
         "links": [
             "282cbc2489f4f329"
         ],
-        "x": 2635,
-        "y": 1260,
+        "x": 2535,
+        "y": 1480,
         "wires": [
             [
                 "8ebf30f588e8df4e"
@@ -18854,8 +18634,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2800,
-        "y": 1260,
+        "x": 2720,
+        "y": 1480,
         "wires": [
             [
                 "a1b8031e580dcc37"
@@ -18872,10 +18652,547 @@
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 3040,
-        "y": 1260,
+        "x": 3020,
+        "y": 1480,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "fa3f42a522abfa6a",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "SELECT",
+        "func": "// var name = msg.payload.content.replace(\"SELECT_\", \"\");\nvar fingerprint = msg.payload.content.split(\"_\")[1];\nvar name = msg.payload.content.split(\"_\")[2];\nvar level = global.get('level');\n\nvar reply_markup = JSON.stringify({\n    \"inline_keyboard\": [[\n        {\n            \"text\": \"Esc\",\n            \"callback_data\": \"ESC_\" + fingerprint + \"_\" + name + \"_\" + level\n        },\n        {\n            \"text\": \"Done\",\n            \"callback_data\": \"DONE_\" + fingerprint + \"_\" + name + \"_\" + level\n        }\n    ]]\n});\n\nif (level == 4) {\n   reply_markup = JSON.stringify({\n    \"inline_keyboard\": [[\n        {\n            \"text\": \"Done\",\n            \"callback_data\": \"DONE_\" + fingerprint + \"_\" + name + \"_\" + level\n        }\n    ]]\n}); \n}\n\nmsg.payload.type = 'editMessageText';\nmsg.payload.content = '✔ ' + name + ' đã nhận ' + fingerprint + '.';\nmsg.payload.options = {\n    chat_id: msg.payload.chatId,\n    message_id: msg.payload.messageId,\n    reply_markup: reply_markup\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3200,
+        "y": 1240,
+        "wires": [
+            [
+                "ecfebf3ff7daf32a"
+            ]
+        ]
+    },
+    {
+        "id": "6546f82c7a873cef",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Lấy trưởng ca",
+        "query": "SELECT full_name\nFROM shift_oncall\nWHERE level = {{{msg.next_level}}};",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 2700,
+        "y": 1540,
+        "wires": [
+            [
+                "8facce46cc31c215"
+            ]
+        ]
+    },
+    {
+        "id": "8facce46cc31c215",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Store Shift OnCall",
+        "func": "global.set(\"shift_oncall\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3030,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1e415e6c6d434978",
+        "type": "link out",
+        "z": "278f7766e1536901",
+        "name": "ESC",
+        "mode": "link",
+        "links": [
+            "a36de7fe5fe95a15"
+        ],
+        "x": 3325,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "a36de7fe5fe95a15",
+        "type": "link in",
+        "z": "278f7766e1536901",
+        "name": "ESC",
+        "links": [
+            "1e415e6c6d434978"
+        ],
+        "x": 2535,
+        "y": 1540,
+        "wires": [
+            [
+                "6546f82c7a873cef",
+                "e13b64cdea519b7a"
+            ]
+        ]
+    },
+    {
+        "id": "9d82563cb00af70b",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "ESC",
+        "func": "var fingerprint = msg.payload.content.split(\"_\")[1];\nvar name = msg.payload.content.split(\"_\")[2];\n\nmsg.payload.type = 'editMessageText';\nmsg.payload.content = name + ' nâng cấp xử lý ' + fingerprint + '.';\nmsg.payload.options = {\n    chat_id: msg.payload.chatId,\n    message_id: msg.payload.messageId\n};\nvar level = global.get('level');\nif (level < 4) {\n    msg.next_level = parseInt(level) + 1;\n} else {\n    msg.next_level = 4;\n}\nmsg.fingerprint = fingerprint;\nreturn [msg];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3190,
+        "y": 1300,
+        "wires": [
+            [
+                "ecfebf3ff7daf32a",
+                "1e415e6c6d434978"
+            ]
+        ]
+    },
+    {
+        "id": "361ff59c09d36571",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2860,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "e13b64cdea519b7a",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Initial inline keyboard message",
+        "func": "// var fingerprint = msg.payload.content.split(\"_\")[1];\nvar opts = {\n    reply_to_message_id: null,\n    reply_markup: JSON.stringify({\n        \"inline_keyboard\": [[\n            {\n                \"text\": \"ACK\",\n                \"callback_data\": \"ACK_\" + msg.fingerprint\n            }\n        ]]\n    })\n};\n\nvar level = global.get('level');\n\nif (level == 1) {\n    msg.payload.content = \"👉 Quản lý vui lòng ACK để nhận xử lý\";\n} else if (level == 2) {\n    msg.payload.content = \"👉 Trưởng bộ phận vui lòng ACK để nhận xử lý\";\n} else if (level == 3) {\n    msg.payload.content = \"👉 Giám đốc sản xuất vui lòng ACK để nhận xử lý\";\n}\nmsg.payload.options = opts;\nmsg.payload.type = \"message\";\nmsg.payload.chatId = -1003248391667;\nglobal.set('role', 'Quản lý');\nglobal.set('level', msg.next_level);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2750,
+        "y": 1620,
+        "wires": [
+            [
+                "168ffff244ac0f72"
+            ]
+        ]
+    },
+    {
+        "id": "168ffff244ac0f72",
+        "type": "telegram sender",
+        "z": "278f7766e1536901",
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 3030,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6bb3c37c83c1dd63",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "DONE",
+        "func": "var fingerprint = msg.payload.content.split(\"_\")[1];\nvar name = msg.payload.content.split(\"_\")[2];\n\nmsg.payload.type = 'editMessageText';\nmsg.payload.content = '✔ ' + name + ' đã xử lý ' + fingerprint + '.';\nmsg.payload.options = {\n    chat_id: msg.payload.chatId,\n    message_id: msg.payload.messageId\n};\n\nmsg.fingerprint = fingerprint;\nreturn [msg];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3190,
+        "y": 1380,
+        "wires": [
+            [
+                "ecfebf3ff7daf32a",
+                "dfab2c556c917601"
+            ]
+        ]
+    },
+    {
+        "id": "dfab2c556c917601",
+        "type": "link out",
+        "z": "278f7766e1536901",
+        "name": "DONE",
+        "mode": "link",
+        "links": [
+            "f8b10ac8b36b9b32"
+        ],
+        "x": 3325,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "f8b10ac8b36b9b32",
+        "type": "link in",
+        "z": "278f7766e1536901",
+        "name": "link in 3",
+        "links": [
+            "dfab2c556c917601"
+        ],
+        "x": 2535,
+        "y": 1700,
+        "wires": [
+            [
+                "bdbfde6cc60412ac"
+            ]
+        ]
+    },
+    {
+        "id": "bdbfde6cc60412ac",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Update incident",
+        "query": "UPDATE incidents\nSET resolved_time = now(),\n    status = 'RESOLVED',\n    resolution_type = 'MANUAL'\nWHERE fingerprint = '{{msg.fingerprint}}'\nAND resolved_time IS NULL\nAND resolution_type IS NULL\nRETURNING *;",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 2700,
+        "y": 1700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5455860d5ef5a4dd",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Create incident",
+        "query": "INSERT INTO incidents (\n  fingerprint,\n  alert_name,\n  system,\n  status,\n  start_time\n)\nVALUES {{{msg.payload}}}\nON CONFLICT (fingerprint) DO NOTHING;",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 3040,
+        "y": 1820,
+        "wires": [
+            [
+                "b5df72a7a3bca4d2"
+            ]
+        ]
+    },
+    {
+        "id": "92d9a58f17c59eb5",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Insert Incident khi Firing",
+        "func": "// msg.payload = {\n//     fingerprint: msg.payload.alerts[0].fingerprint,\n//     alertname: msg.payload.alerts[0].labels.alertname,\n//     system: msg.payload.alerts[0].labels.grafana_folder,\n//     status: 'OPEN',\n//     start_time: msg.payload.alerts[0].startsAt\n// };\n\nmsg.payload = `(\n    '${msg.payload.alerts[0].fingerprint}',\n    '${msg.payload.alerts[0].labels.alertname}',\n    '${msg.payload.alerts[0].labels.grafana_folder}',\n    'OPEN',\n    '${msg.payload.alerts[0].startsAt}'\n)`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2770,
+        "y": 1820,
+        "wires": [
+            [
+                "5455860d5ef5a4dd"
+            ]
+        ]
+    },
+    {
+        "id": "b5df72a7a3bca4d2",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "Done",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3230,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "cfc0c10321c950fc",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "name": "Insert Incidents",
+        "info": "",
+        "x": 2740,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "5363aeb8858caa08",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Create Incident Logs",
+        "query": "INSERT INTO incident_logs (\n  fingerprint,\n  event_type,\n  message,\n  created_at\n)\nVALUES {{{msg.payload}}};",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 3040,
+        "y": 1900,
+        "wires": [
+            [
+                "ab18378a67281b35"
+            ]
+        ]
+    },
+    {
+        "id": "01fdf7d522a88a85",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Insert Incident Log khi Firing",
+        "func": "msg.payload = `(\n    '${msg.payload.alerts[0].fingerprint}',\n    'FIRING',\n    '${msg.payload.message}',\n    '${msg.payload.alerts[0].startsAt}'\n)`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2780,
+        "y": 1900,
+        "wires": [
+            [
+                "5363aeb8858caa08"
+            ]
+        ]
+    },
+    {
+        "id": "ab18378a67281b35",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "Done",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3250,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "8775bd2173358613",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "name": "Insert Incident logs",
+        "info": "",
+        "x": 2750,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "fc598b70d22ca4ee",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Lấy trưởng ca",
+        "query": "SELECT full_name\nFROM shift_oncall\nWHERE level = 1;",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 2740,
+        "y": 1960,
+        "wires": [
+            [
+                "047bb5036b077a15"
+            ]
+        ]
+    },
+    {
+        "id": "1494aabc147317d9",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Initial inline keyboard message",
+        "func": "var opts = {\n    reply_to_message_id: null,\n    reply_markup: JSON.stringify({\n        \"inline_keyboard\": [[\n            {\n                \"text\": \"ACK\",\n                \"callback_data\": \"ACK_\" + msg.payload.alerts[0].fingerprint\n            }\n        ]]\n    })\n};\n\nmsg.payload.content = \"👉 Trưởng ca vui lòng ACK để nhận xử lý\";\nmsg.payload.options = opts;\nmsg.payload.type = \"message\";\nmsg.payload.chatId = -1003248391667;\nglobal.set('role', 'Trưởng ca');\nglobal.set('level', 1);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2790,
+        "y": 2040,
+        "wires": [
+            [
+                "ed878e2be50b3ec2"
+            ]
+        ]
+    },
+    {
+        "id": "ed878e2be50b3ec2",
+        "type": "telegram sender",
+        "z": "278f7766e1536901",
+        "name": "",
+        "bot": "62a633c8986a8112",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 3050,
+        "y": 2040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "047bb5036b077a15",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Store Shift OnCall",
+        "func": "global.set(\"shift_oncall\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3030,
+        "y": 1960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "81580936cd0501cf",
+        "type": "link out",
+        "z": "278f7766e1536901",
+        "name": "FIRING",
+        "mode": "link",
+        "links": [
+            "b58bf51ae0522b9e"
+        ],
+        "x": 2945,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "88ba1ad9d1bfb16b",
+        "type": "link out",
+        "z": "278f7766e1536901",
+        "name": "RESOLVE",
+        "mode": "link",
+        "links": [
+            "e2ad47304373bb63"
+        ],
+        "x": 2945,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "b58bf51ae0522b9e",
+        "type": "link in",
+        "z": "278f7766e1536901",
+        "name": "link in 4",
+        "links": [
+            "81580936cd0501cf"
+        ],
+        "x": 2535,
+        "y": 1880,
+        "wires": [
+            [
+                "92d9a58f17c59eb5",
+                "01fdf7d522a88a85",
+                "fc598b70d22ca4ee",
+                "1494aabc147317d9"
+            ]
+        ]
+    },
+    {
+        "id": "e2ad47304373bb63",
+        "type": "link in",
+        "z": "278f7766e1536901",
+        "name": "link in 5",
+        "links": [
+            "88ba1ad9d1bfb16b"
+        ],
+        "x": 2535,
+        "y": 2160,
+        "wires": [
+            [
+                "8192d27fafdee599",
+                "c019a12414409885"
+            ]
+        ]
+    },
+    {
+        "id": "47717deede067122",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Update incident",
+        "query": "UPDATE incidents\nSET resolved_time = COALESCE(resolved_time, NOW()),\n    status = 'RESOLVED',\n    resolution_type = COALESCE(resolution_type, 'AUTO'),\n    end_time = '{{msg.end_time}}'\nWHERE fingerprint = '{{msg.fingerprint}}';",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 3040,
+        "y": 2160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8192d27fafdee599",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3040,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "c019a12414409885",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Insert Incident khi Firing",
+        "func": "msg.fingerprint = msg.payload.alerts[0].fingerprint;\nmsg.end_time = msg.payload.alerts[0].endsAt;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2790,
+        "y": 2160,
+        "wires": [
+            [
+                "47717deede067122"
+            ]
         ]
     },
     {
@@ -19031,7 +19348,7 @@
         "type": "debug",
         "z": "965c7750b786c8eb",
         "name": "debug 7",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
