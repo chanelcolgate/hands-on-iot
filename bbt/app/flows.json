@@ -2,7 +2,15 @@
     {
         "id": "547a59bae597a065",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "4 máy không PLC",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "43146d25428b1e63",
+        "type": "tab",
+        "label": "Máy bông tẩy trang 6x6",
         "disabled": false,
         "info": "",
         "env": []
@@ -389,7 +397,7 @@
         "type": "debug",
         "z": "547a59bae597a065",
         "name": "[counter]Máy bông tẩy trang 6cm x 6cm/ 01",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
