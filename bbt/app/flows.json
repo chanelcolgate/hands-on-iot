@@ -430,8 +430,54 @@
         "y": 700,
         "wires": [
             [
-                "d0a21c096750bf13"
+                "d0a21c096750bf13",
+                "893fa4221c0ca49c"
             ]
         ]
+    },
+    {
+        "id": "893fa4221c0ca49c",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "máy bông 6x6 in",
+        "mode": "link",
+        "links": [
+            "1e3de0ed69b7f6b5"
+        ],
+        "x": 995,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "1e3de0ed69b7f6b5",
+        "type": "link in",
+        "z": "43146d25428b1e63",
+        "name": "máy bông 6x6 out",
+        "links": [
+            "893fa4221c0ca49c"
+        ],
+        "x": 215,
+        "y": 300,
+        "wires": [
+            [
+                "429afe6c6503134f"
+            ]
+        ]
+    },
+    {
+        "id": "429afe6c6503134f",
+        "type": "debug",
+        "z": "43146d25428b1e63",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 300,
+        "wires": []
     }
 ]
