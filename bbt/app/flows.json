@@ -16,6 +16,30 @@
         "env": []
     },
     {
+        "id": "42948bc9125c490d",
+        "type": "tab",
+        "label": "Máy cắt bông 01",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3285a4c8af3a7c07",
+        "type": "tab",
+        "label": "Máy cắt bông 02",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7555dfac4acb6bb1",
+        "type": "tab",
+        "label": "Máy xỏ ngón",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "7198ec6c91eaea78",
         "type": "mqtt-broker",
         "name": "admin",
@@ -45,6 +69,21 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
+    },
+    {
+        "id": "3ba38ac2ba59e1ab",
+        "type": "influxdb",
+        "hostname": "influxdb",
+        "port": 8086,
+        "protocol": "http",
+        "database": "bbt",
+        "name": "bbt",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
     },
     {
         "id": "51f705db47c816b7",
@@ -126,11 +165,19 @@
                 "t": "cont",
                 "v": "TFFhYnxQrkwdShFLYlpz",
                 "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "VBksVgeTGQjmQcZdctck",
+                "vt": "str"
+            },
+            {
+                "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 7,
+        "outputs": 9,
         "x": 550,
         "y": 360,
         "wires": [
@@ -154,6 +201,12 @@
             ],
             [
                 "4f7c77d8924a76b2"
+            ],
+            [
+                "5d44e4b837fe7f03"
+            ],
+            [
+                "97a20664557f96a0"
             ]
         ]
     },
@@ -229,7 +282,8 @@
         "y": 340,
         "wires": [
             [
-                "ed0cf66aa9a56ca0"
+                "ed0cf66aa9a56ca0",
+                "ce457a9d73c39d34"
             ]
         ]
     },
@@ -254,7 +308,8 @@
         "y": 400,
         "wires": [
             [
-                "5dfa9bea8de0cd23"
+                "5dfa9bea8de0cd23",
+                "1ffd2c184f7b25c1"
             ]
         ]
     },
@@ -279,7 +334,8 @@
         "y": 460,
         "wires": [
             [
-                "b5475bf788fe686d"
+                "b5475bf788fe686d",
+                "27f6ed9249e5db17"
             ]
         ]
     },
@@ -304,7 +360,8 @@
         "y": 520,
         "wires": [
             [
-                "9a6f63523b378939"
+                "9a6f63523b378939",
+                "abb503bd41d54535"
             ]
         ]
     },
@@ -346,7 +403,8 @@
         "y": 580,
         "wires": [
             [
-                "876be8e9661d7ac7"
+                "876be8e9661d7ac7",
+                "48fe8e2267566509"
             ]
         ]
     },
@@ -388,7 +446,8 @@
         "y": 640,
         "wires": [
             [
-                "d541aa825f07beed"
+                "d541aa825f07beed",
+                "184384a868fdb0d2"
             ]
         ]
     },
@@ -439,7 +498,7 @@
         "id": "893fa4221c0ca49c",
         "type": "link out",
         "z": "547a59bae597a065",
-        "name": "máy bông 6x6 in",
+        "name": "[counter[máy bông 6x6 in",
         "mode": "link",
         "links": [
             "1e3de0ed69b7f6b5"
@@ -449,18 +508,361 @@
         "wires": []
     },
     {
+        "id": "ce457a9d73c39d34",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "[delta]máy bông 6x6 in",
+        "mode": "link",
+        "links": [
+            "939c021d1ba7bcc3"
+        ],
+        "x": 925,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "1ffd2c184f7b25c1",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "[delta]bong-tay-trang-tui-xo-ngon",
+        "mode": "link",
+        "links": [
+            "9aa02056435a1dfe"
+        ],
+        "x": 1245,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "27f6ed9249e5db17",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "[delta]may-cat-bong-01",
+        "mode": "link",
+        "links": [
+            "507220fcb1c28dda"
+        ],
+        "x": 1255,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "abb503bd41d54535",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "[delta]may-cat-bong-02",
+        "mode": "link",
+        "links": [
+            "14d4bf1b6f24174c"
+        ],
+        "x": 1255,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "48fe8e2267566509",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "[counter]Máy bông cắt/ 01",
+        "mode": "link",
+        "links": [
+            "01555a02169097f5"
+        ],
+        "x": 1255,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "184384a868fdb0d2",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "[counter]Máy bông cắt/ 02",
+        "mode": "link",
+        "links": [
+            "f3e7040a0e3cad35"
+        ],
+        "x": 1255,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "8cbcc18a780e9306",
+        "type": "debug",
+        "z": "547a59bae597a065",
+        "name": "[counter]Máy xỏ ngón",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "5d44e4b837fe7f03",
+        "type": "switch",
+        "z": "547a59bae597a065",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "devices/me/telemetry",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 820,
+        "wires": [
+            [
+                "8cbcc18a780e9306",
+                "d3695ce7fd387660"
+            ]
+        ]
+    },
+    {
+        "id": "d3695ce7fd387660",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "[counter[máy xỏ ngón",
+        "mode": "link",
+        "links": [
+            "9952f790071a7c23"
+        ],
+        "x": 995,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "97a20664557f96a0",
+        "type": "debug",
+        "z": "547a59bae597a065",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "6196219162f67e42",
+        "type": "function",
+        "z": "547a59bae597a065",
+        "name": "insert data production",
+        "func": "msg.payload = [\n    {\n        strokes_per_cycle: msg.payload[0].strokes_per_cycle,\n        pieces_avg: msg.payload[0].pieces_avg,\n        pieces_max: msg.payload[0].pieces_max,\n        n_factor_avg: parseFloat((msg.payload[0].pieces_avg / msg.payload[0].strokes_per_cycle).toFixed(4)),\n        n_factor_max: parseFloat((msg.payload[0].pieces_max / msg.payload[0].strokes_per_cycle).toFixed(4)),\n    },\n    {\n        product_name: msg.payload[1].product_name,\n        machine_id: msg.payload[1].machine_id,\n        machine_name: msg.payload[1].machine_name,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1040,
+        "wires": [
+            [
+                "5ce08e41f8cc0842",
+                "26ceea35abe492c7"
+            ]
+        ]
+    },
+    {
+        "id": "26ceea35abe492c7",
+        "type": "influxdb out",
+        "z": "547a59bae597a065",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "production_metrics",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 730,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "9a20843b47f3133c",
+        "type": "split",
+        "z": "547a59bae597a065",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 590,
+        "y": 1200,
+        "wires": [
+            [
+                "6196219162f67e42"
+            ]
+        ]
+    },
+    {
+        "id": "3887da38f971fb5a",
+        "type": "inject",
+        "z": "547a59bae597a065",
+        "name": "3 máy bông 6x6",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[[{\"strokes_per_cycle\":3,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Sạch sâu - 30 miếng\",\"machine_id\":\"MMTB052\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":82,\"pieces_max\":83.2},{\"product_name\":\"BTT Calla Sạch sâu - 80 miếng\",\"machine_id\":\"MMTB052\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":153,\"pieces_max\":156},{\"product_name\":\"BTT Calla Sạch sâu - 150 miếng\",\"machine_id\":\"MMTB052\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":302,\"pieces_max\":323},{\"product_name\":\"BTT Calla Sạch sâu - 250g\",\"machine_id\":\"MMTB052\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":604,\"pieces_max\":646},{\"product_name\":\"BTT Calla Sạch sâu - 500g\",\"machine_id\":\"MMTB052\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":1208,\"pieces_max\":1292},{\"product_name\":\"BTT Calla Sạch sâu - 1kg\",\"machine_id\":\"MMTB052\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Sạch sâu - 30 miếng\",\"machine_id\":\"MMTB200\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 2\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":82,\"pieces_max\":83.2},{\"product_name\":\"BTT Calla Sạch sâu - 80 miếng\",\"machine_id\":\"MMTB200\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 2\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":153,\"pieces_max\":156},{\"product_name\":\"BTT Calla Sạch sâu - 150 miếng\",\"machine_id\":\"MMTB200\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 2\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":302,\"pieces_max\":323},{\"product_name\":\"BTT Calla Sạch sâu - 250g\",\"machine_id\":\"MMTB200\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 2\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":604,\"pieces_max\":646},{\"product_name\":\"BTT Calla Sạch sâu - 500g\",\"machine_id\":\"MMTB200\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 2\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":1208,\"pieces_max\":1292},{\"product_name\":\"BTT Calla Sạch sâu - 1kg\",\"machine_id\":\"MMTB200\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 2\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Sạch sâu - 30 miếng\",\"machine_id\":\"MMTB224\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 3\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":82,\"pieces_max\":83.2},{\"product_name\":\"BTT Calla Sạch sâu - 80 miếng\",\"machine_id\":\"MMTB224\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 3\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":153,\"pieces_max\":156},{\"product_name\":\"BTT Calla Sạch sâu - 150 miếng\",\"machine_id\":\"MMTB224\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 3\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":302,\"pieces_max\":323},{\"product_name\":\"BTT Calla Sạch sâu - 250g\",\"machine_id\":\"MMTB224\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 3\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":604,\"pieces_max\":646},{\"product_name\":\"BTT Calla Sạch sâu - 500g\",\"machine_id\":\"MMTB224\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 3\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":1208,\"pieces_max\":1292},{\"product_name\":\"BTT Calla Sạch sâu - 1kg\",\"machine_id\":\"MMTB224\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 3\"}]]",
+        "payloadType": "json",
+        "x": 420,
+        "y": 1200,
+        "wires": [
+            [
+                "9a20843b47f3133c"
+            ]
+        ]
+    },
+    {
+        "id": "5ce08e41f8cc0842",
+        "type": "debug",
+        "z": "547a59bae597a065",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "222f1f1416a7c6a8",
+        "type": "inject",
+        "z": "547a59bae597a065",
+        "name": "4 máy cắt",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[[{\"strokes_per_cycle\":18,\"pieces_avg\":286,\"pieces_max\":308},{\"product_name\":\"BTT Calla Mềm Mịn - 180 miếng\",\"machine_id\":\"MMTB066\",\"machine_name\":\"Máy Bông Cắt 1\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":397,\"pieces_max\":427},{\"product_name\":\"BTT Calla Mềm Mịn - 250g\",\"machine_id\":\"MMTB066\",\"machine_name\":\"Máy Bông Cắt 1\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":794,\"pieces_max\":855},{\"product_name\":\"BTT Calla Mềm Mịn - 500g\",\"machine_id\":\"MMTB066\",\"machine_name\":\"Máy Bông Cắt 1\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":1587,\"pieces_max\":1709},{\"product_name\":\"BTT Calla Mềm Mịn - 1kg\",\"machine_id\":\"MMTB066\",\"machine_name\":\"Máy Bông Cắt 1\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":286,\"pieces_max\":308},{\"product_name\":\"BTT Calla Mềm Mịn - 180 miếng\",\"machine_id\":\"MMTB067\",\"machine_name\":\"Máy Bông Cắt 2\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":397,\"pieces_max\":427},{\"product_name\":\"BTT Calla Mềm Mịn - 250g\",\"machine_id\":\"MMTB067\",\"machine_name\":\"Máy Bông Cắt 2\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":794,\"pieces_max\":855},{\"product_name\":\"BTT Calla Mềm Mịn - 500g\",\"machine_id\":\"MMTB067\",\"machine_name\":\"Máy Bông Cắt 2\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":1587,\"pieces_max\":1709},{\"product_name\":\"BTT Calla Mềm Mịn - 1kg\",\"machine_id\":\"MMTB067\",\"machine_name\":\"Máy Bông Cắt 2\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":286,\"pieces_max\":308},{\"product_name\":\"BTT Calla Mềm Mịn - 180 miếng\",\"machine_id\":\"MMTB274\",\"machine_name\":\"Máy Bông Cắt 3\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":397,\"pieces_max\":427},{\"product_name\":\"BTT Calla Mềm Mịn - 250g\",\"machine_id\":\"MMTB274\",\"machine_name\":\"Máy Bông Cắt 3\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":794,\"pieces_max\":855},{\"product_name\":\"BTT Calla Mềm Mịn - 500g\",\"machine_id\":\"MMTB274\",\"machine_name\":\"Máy Bông Cắt 3\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":1587,\"pieces_max\":1709},{\"product_name\":\"BTT Calla Mềm Mịn - 1kg\",\"machine_id\":\"MMTB274\",\"machine_name\":\"Máy Bông Cắt 3\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":286,\"pieces_max\":308},{\"product_name\":\"BTT Calla Mềm Mịn - 180 miếng\",\"machine_id\":\"MMTB293\",\"machine_name\":\"Máy Bông Cắt 4\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":397,\"pieces_max\":427},{\"product_name\":\"BTT Calla Mềm Mịn - 250g\",\"machine_id\":\"MMTB293\",\"machine_name\":\"Máy Bông Cắt 4\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":794,\"pieces_max\":855},{\"product_name\":\"BTT Calla Mềm Mịn - 500g\",\"machine_id\":\"MMTB293\",\"machine_name\":\"Máy Bông Cắt 4\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":1587,\"pieces_max\":1709},{\"product_name\":\"BTT Calla Mềm Mịn - 1kg\",\"machine_id\":\"MMTB293\",\"machine_name\":\"Máy Bông Cắt 4\"}]]",
+        "payloadType": "json",
+        "x": 400,
+        "y": 1260,
+        "wires": [
+            [
+                "9a20843b47f3133c"
+            ]
+        ]
+    },
+    {
+        "id": "90665c3388eb72b3",
+        "type": "inject",
+        "z": "547a59bae597a065",
+        "name": "4 máy tẩy trang tròn",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[[{\"strokes_per_cycle\":3,\"pieces_avg\":102,\"pieces_max\":104},{\"product_name\":\"BTT Calla Velvet - 100 miếng\",\"machine_id\":\"MMTB178\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":306,\"pieces_max\":312},{\"product_name\":\"BTT Calla Velvet - 300 miếng\",\"machine_id\":\"MMTB178\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":510,\"pieces_max\":520},{\"product_name\":\"BTT Calla Velvet - 500 miếng\",\"machine_id\":\"MMTB178\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 1\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Tròn Mịn - 30 miếng\",\"machine_id\":\"MMTB195\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 2\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":153,\"pieces_max\":156},{\"product_name\":\"BTT Calla Tròn Mịn - 150 miếng\",\"machine_id\":\"MMTB195\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 2\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Tròn 3D - 30 miếng\",\"machine_id\":\"MMTB195\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 2\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":122,\"pieces_max\":124.8},{\"product_name\":\"BTT Calla Tròn 3D - 120 miếng\",\"machine_id\":\"MMTB195\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 2\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":204,\"pieces_max\":208},{\"product_name\":\"BTT Calla Tròn 3D - 200 miếng\",\"machine_id\":\"MMTB195\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 2\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":842,\"pieces_max\":907},{\"product_name\":\"BTT Calla Tròn 3D - 500g\",\"machine_id\":\"MMTB195\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 2\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Tròn Mịn - 30 miếng\",\"machine_id\":\"MMTB228\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 3\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":153,\"pieces_max\":156},{\"product_name\":\"BTT Calla Tròn Mịn - 150 miếng\",\"machine_id\":\"MMTB228\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 3\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Tròn 3D - 30 miếng\",\"machine_id\":\"MMTB228\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 3\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":122,\"pieces_max\":124.8},{\"product_name\":\"BTT Calla Tròn 3D - 120 miếng\",\"machine_id\":\"MMTB228\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 3\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":204,\"pieces_max\":208},{\"product_name\":\"BTT Calla Tròn 3D - 200 miếng\",\"machine_id\":\"MMTB228\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 3\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":842,\"pieces_max\":907},{\"product_name\":\"BTT Calla Tròn 3D - 500g\",\"machine_id\":\"MMTB228\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 3\"}],[{\"strokes_per_cycle\":5,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Tròn Mịn - 30 miếng\",\"machine_id\":\"MMTB294\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 4\"}],[{\"strokes_per_cycle\":5,\"pieces_avg\":153,\"pieces_max\":156},{\"product_name\":\"BTT Calla Tròn Mịn - 150 miếng\",\"machine_id\":\"MMTB294\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 4\"}],[{\"strokes_per_cycle\":5,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Tròn 3D - 30 miếng\",\"machine_id\":\"MMTB294\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 4\"}],[{\"strokes_per_cycle\":5,\"pieces_avg\":122,\"pieces_max\":124.8},{\"product_name\":\"BTT Calla Tròn 3D - 120 miếng\",\"machine_id\":\"MMTB294\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 4\"}],[{\"strokes_per_cycle\":5,\"pieces_avg\":204,\"pieces_max\":208},{\"product_name\":\"BTT Calla Tròn 3D - 200 miếng\",\"machine_id\":\"MMTB294\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 4\"}],[{\"strokes_per_cycle\":5,\"pieces_avg\":842,\"pieces_max\":907},{\"product_name\":\"BTT Calla Tròn 3D - 500g\",\"machine_id\":\"MMTB294\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 4\"}]]",
+        "payloadType": "json",
+        "x": 430,
+        "y": 1320,
+        "wires": [
+            [
+                "9a20843b47f3133c"
+            ]
+        ]
+    },
+    {
+        "id": "27c657744fafb333",
+        "type": "inject",
+        "z": "547a59bae597a065",
+        "name": "1 máy tẩy trang túi - xỏ ngón",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[[{\"strokes_per_cycle\":1,\"pieces_avg\":10,\"pieces_max\":11},{\"product_name\":\"BTT Calla Dạng Túi - 10 miếng\",\"machine_id\":\"MMTB179\",\"machine_name\":\"Máy Bông Tẩy Trang Túi - Xỏ Ngón\"}],[{\"strokes_per_cycle\":1,\"pieces_avg\":82,\"pieces_max\":88},{\"product_name\":\"BTT Calla Dạng Túi - 80 miếng\",\"machine_id\":\"MMTB179\",\"machine_name\":\"Máy Bông Tẩy Trang Túi - Xỏ Ngón\"}],[{\"strokes_per_cycle\":1,\"pieces_avg\":257,\"pieces_max\":276},{\"product_name\":\"BTT Calla Dạng Túi - 250g\",\"machine_id\":\"MMTB179\",\"machine_name\":\"Máy Bông Tẩy Trang Túi - Xỏ Ngón\"}]]",
+        "payloadType": "json",
+        "x": 460,
+        "y": 1380,
+        "wires": [
+            [
+                "9a20843b47f3133c"
+            ]
+        ]
+    },
+    {
         "id": "1e3de0ed69b7f6b5",
         "type": "link in",
         "z": "43146d25428b1e63",
-        "name": "máy bông 6x6 out",
+        "name": "[counter]máy bông 6x6 out",
         "links": [
             "893fa4221c0ca49c"
         ],
-        "x": 215,
+        "x": 115,
         "y": 300,
         "wires": [
             [
-                "429afe6c6503134f"
+                "429afe6c6503134f",
+                "2619406ed6f52e0a",
+                "aaaa63dfef633b20"
             ]
         ]
     },
@@ -469,15 +871,869 @@
         "type": "debug",
         "z": "43146d25428b1e63",
         "name": "debug 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
         "x": 400,
         "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2619406ed6f52e0a",
+        "type": "function",
+        "z": "43146d25428b1e63",
+        "name": "insert data counter",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.counter\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB052',\n        device: 'CT01W'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 400,
+        "wires": [
+            [
+                "5038311338f78bdf"
+            ]
+        ]
+    },
+    {
+        "id": "5038311338f78bdf",
+        "type": "influxdb out",
+        "z": "43146d25428b1e63",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 510,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "aaaa63dfef633b20",
+        "type": "function",
+        "z": "43146d25428b1e63",
+        "name": "insert data status",
+        "func": "msg.payload = [\n    {\n        status: msg.payload.D3_status\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB052',\n        device: 'CT01W'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 480,
+        "wires": [
+            [
+                "1bdaf842d17b189b"
+            ]
+        ]
+    },
+    {
+        "id": "1bdaf842d17b189b",
+        "type": "influxdb out",
+        "z": "43146d25428b1e63",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 510,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "939c021d1ba7bcc3",
+        "type": "link in",
+        "z": "43146d25428b1e63",
+        "name": "[delta]máy bông 6x6 out",
+        "links": [
+            "ce457a9d73c39d34"
+        ],
+        "x": 105,
+        "y": 560,
+        "wires": [
+            [
+                "dd20095c9d72a7d0",
+                "646d77c84f6e2f73",
+                "bb4bdb97ce8e3b85"
+            ]
+        ]
+    },
+    {
+        "id": "dd20095c9d72a7d0",
+        "type": "debug",
+        "z": "43146d25428b1e63",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "646d77c84f6e2f73",
+        "type": "function",
+        "z": "43146d25428b1e63",
+        "name": "insert data actual",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload[\"may-bong-6x6-01\"][0].values.actual\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB052',\n        device: 'ESP485_WG'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 640,
+        "wires": [
+            [
+                "281fb756d7400b20"
+            ]
+        ]
+    },
+    {
+        "id": "281fb756d7400b20",
+        "type": "influxdb out",
+        "z": "43146d25428b1e63",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 510,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "bb4bdb97ce8e3b85",
+        "type": "function",
+        "z": "43146d25428b1e63",
+        "name": "insert data target",
+        "func": "msg.payload = [\n    {\n        target: msg.payload[\"may-bong-6x6-01\"][0].values.target\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB052',\n        device: 'ESP485_WG'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 720,
+        "wires": [
+            [
+                "224f7399e6845c2f"
+            ]
+        ]
+    },
+    {
+        "id": "224f7399e6845c2f",
+        "type": "influxdb out",
+        "z": "43146d25428b1e63",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 510,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "01555a02169097f5",
+        "type": "link in",
+        "z": "42948bc9125c490d",
+        "name": "[counter]Máy bông cắt/01 out",
+        "links": [
+            "48fe8e2267566509"
+        ],
+        "x": 195,
+        "y": 180,
+        "wires": [
+            [
+                "8736b9b3481b1795",
+                "21a0ac8275e202dd",
+                "1757c461474b810f"
+            ]
+        ]
+    },
+    {
+        "id": "8736b9b3481b1795",
+        "type": "debug",
+        "z": "42948bc9125c490d",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "21a0ac8275e202dd",
+        "type": "function",
+        "z": "42948bc9125c490d",
+        "name": "insert data counter",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.counter\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB066',\n        device: 'CT01W'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "4a60cb347d385ad2"
+            ]
+        ]
+    },
+    {
+        "id": "4a60cb347d385ad2",
+        "type": "influxdb out",
+        "z": "42948bc9125c490d",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 590,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "1757c461474b810f",
+        "type": "function",
+        "z": "42948bc9125c490d",
+        "name": "insert data status",
+        "func": "msg.payload = [\n    {\n        status: msg.payload.D3_status\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB066',\n        device: 'CT01W'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 360,
+        "wires": [
+            [
+                "86643d15689764c8"
+            ]
+        ]
+    },
+    {
+        "id": "86643d15689764c8",
+        "type": "influxdb out",
+        "z": "42948bc9125c490d",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 590,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "507220fcb1c28dda",
+        "type": "link in",
+        "z": "42948bc9125c490d",
+        "name": "[delta]may-cat-bong-01-out",
+        "links": [
+            "27f6ed9249e5db17"
+        ],
+        "x": 185,
+        "y": 440,
+        "wires": [
+            [
+                "14d2059a401ef62c",
+                "9ab3be8960597a40",
+                "c88435ec1c0ffd53"
+            ]
+        ]
+    },
+    {
+        "id": "14d2059a401ef62c",
+        "type": "debug",
+        "z": "42948bc9125c490d",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "9ab3be8960597a40",
+        "type": "function",
+        "z": "42948bc9125c490d",
+        "name": "insert data actual",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload[\"may-cat-bong-01\"][0].values.actual\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB066',\n        device: 'ESP485_WG'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 520,
+        "wires": [
+            [
+                "c5dbde5ddf1d2948"
+            ]
+        ]
+    },
+    {
+        "id": "c5dbde5ddf1d2948",
+        "type": "influxdb out",
+        "z": "42948bc9125c490d",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 590,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "c88435ec1c0ffd53",
+        "type": "function",
+        "z": "42948bc9125c490d",
+        "name": "insert data target",
+        "func": "msg.payload = [\n    {\n        target: msg.payload[\"may-cat-bong-01\"][0].values.target\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB066',\n        device: 'ESP485_WG'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 600,
+        "wires": [
+            [
+                "afd03a19d9bcbf2b"
+            ]
+        ]
+    },
+    {
+        "id": "afd03a19d9bcbf2b",
+        "type": "influxdb out",
+        "z": "42948bc9125c490d",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 590,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f3e7040a0e3cad35",
+        "type": "link in",
+        "z": "3285a4c8af3a7c07",
+        "name": "[counter]Máy bông cắt/02 out",
+        "links": [
+            "184384a868fdb0d2"
+        ],
+        "x": 325,
+        "y": 200,
+        "wires": [
+            [
+                "25688a21f15e5aa0",
+                "7a170016f13afe0e",
+                "719770162beac85f"
+            ]
+        ]
+    },
+    {
+        "id": "25688a21f15e5aa0",
+        "type": "debug",
+        "z": "3285a4c8af3a7c07",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "7a170016f13afe0e",
+        "type": "function",
+        "z": "3285a4c8af3a7c07",
+        "name": "insert data counter",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.counter\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB067',\n        device: 'CT01W'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 300,
+        "wires": [
+            [
+                "d5e31b5b84bec48a"
+            ]
+        ]
+    },
+    {
+        "id": "d5e31b5b84bec48a",
+        "type": "influxdb out",
+        "z": "3285a4c8af3a7c07",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 720,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "719770162beac85f",
+        "type": "function",
+        "z": "3285a4c8af3a7c07",
+        "name": "insert data status",
+        "func": "msg.payload = [\n    {\n        status: msg.payload.D3_status\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB067',\n        device: 'CT01W'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 380,
+        "wires": [
+            [
+                "f510b4dc0f5f4e8a"
+            ]
+        ]
+    },
+    {
+        "id": "f510b4dc0f5f4e8a",
+        "type": "influxdb out",
+        "z": "3285a4c8af3a7c07",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 720,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "14d4bf1b6f24174c",
+        "type": "link in",
+        "z": "3285a4c8af3a7c07",
+        "name": "[delta]may-cat-bong-02-out",
+        "links": [
+            "abb503bd41d54535"
+        ],
+        "x": 315,
+        "y": 460,
+        "wires": [
+            [
+                "2ee8647c18024c0c",
+                "0cdecbec644fec59",
+                "dba16af58c9d078e"
+            ]
+        ]
+    },
+    {
+        "id": "2ee8647c18024c0c",
+        "type": "debug",
+        "z": "3285a4c8af3a7c07",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "0cdecbec644fec59",
+        "type": "function",
+        "z": "3285a4c8af3a7c07",
+        "name": "insert data actual",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload[\"may-cat-bong-02\"][0].values.actual\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB067',\n        device: 'ESP485_WG'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 540,
+        "wires": [
+            [
+                "25baef058cde280e"
+            ]
+        ]
+    },
+    {
+        "id": "25baef058cde280e",
+        "type": "influxdb out",
+        "z": "3285a4c8af3a7c07",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 720,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "dba16af58c9d078e",
+        "type": "function",
+        "z": "3285a4c8af3a7c07",
+        "name": "insert data target",
+        "func": "msg.payload = [\n    {\n        target: msg.payload[\"may-cat-bong-02\"][0].values.target\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB067',\n        device: 'ESP485_WG'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 620,
+        "wires": [
+            [
+                "3428b295956ec3a1"
+            ]
+        ]
+    },
+    {
+        "id": "3428b295956ec3a1",
+        "type": "influxdb out",
+        "z": "3285a4c8af3a7c07",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 720,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "9952f790071a7c23",
+        "type": "link in",
+        "z": "7555dfac4acb6bb1",
+        "name": "[counter]máy bông 6x6 out",
+        "links": [
+            "d3695ce7fd387660"
+        ],
+        "x": 315,
+        "y": 180,
+        "wires": [
+            [
+                "b1844ea084bbd9a7",
+                "ec89041774f95423",
+                "775dd27f18a9be2d"
+            ]
+        ]
+    },
+    {
+        "id": "b1844ea084bbd9a7",
+        "type": "debug",
+        "z": "7555dfac4acb6bb1",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ec89041774f95423",
+        "type": "function",
+        "z": "7555dfac4acb6bb1",
+        "name": "insert data counter",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.counter\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB179',\n        device: 'CT01W'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 280,
+        "wires": [
+            [
+                "158ae4020b5a89da"
+            ]
+        ]
+    },
+    {
+        "id": "158ae4020b5a89da",
+        "type": "influxdb out",
+        "z": "7555dfac4acb6bb1",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 710,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "775dd27f18a9be2d",
+        "type": "function",
+        "z": "7555dfac4acb6bb1",
+        "name": "insert data status",
+        "func": "msg.payload = [\n    {\n        status: msg.payload.D3_status\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB179',\n        device: 'CT01W'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 360,
+        "wires": [
+            [
+                "7f4f2feaa9633edc"
+            ]
+        ]
+    },
+    {
+        "id": "7f4f2feaa9633edc",
+        "type": "influxdb out",
+        "z": "7555dfac4acb6bb1",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 710,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "9aa02056435a1dfe",
+        "type": "link in",
+        "z": "7555dfac4acb6bb1",
+        "name": "[delta]máy xỏ ngón",
+        "links": [
+            "1ffd2c184f7b25c1"
+        ],
+        "x": 305,
+        "y": 440,
+        "wires": [
+            [
+                "d1265c21835cbed7",
+                "1338db9246938b5b",
+                "019a6cd16cd62558"
+            ]
+        ]
+    },
+    {
+        "id": "d1265c21835cbed7",
+        "type": "debug",
+        "z": "7555dfac4acb6bb1",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1338db9246938b5b",
+        "type": "function",
+        "z": "7555dfac4acb6bb1",
+        "name": "insert data actual",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload[\"bong-tay-trang-tui-xo-ngon\"][0].values.actual\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB179',\n        device: 'ESP485_WG'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 520,
+        "wires": [
+            [
+                "003fec952b51f687"
+            ]
+        ]
+    },
+    {
+        "id": "003fec952b51f687",
+        "type": "influxdb out",
+        "z": "7555dfac4acb6bb1",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 710,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "019a6cd16cd62558",
+        "type": "function",
+        "z": "7555dfac4acb6bb1",
+        "name": "insert data target",
+        "func": "msg.payload = [\n    {\n        target: msg.payload[\"bong-tay-trang-tui-xo-ngon\"][0].values.target\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB179',\n        device: 'ESP485_WG'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 600,
+        "wires": [
+            [
+                "22e5c02daebc3052"
+            ]
+        ]
+    },
+    {
+        "id": "22e5c02daebc3052",
+        "type": "influxdb out",
+        "z": "7555dfac4acb6bb1",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 710,
+        "y": 600,
         "wires": []
     }
 ]
