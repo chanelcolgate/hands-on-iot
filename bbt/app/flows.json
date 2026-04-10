@@ -172,12 +172,57 @@
                 "vt": "str"
             },
             {
+                "t": "cont",
+                "v": "mNowIJQLgunvumObvGUZ",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "NkrqAfekAPrYlRdjUbyY",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "HtxysOzcxuCtvErsWviF",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "TWkYtIJlZCqqdUFTAcNv",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "TjPDBbkdrTggtUnWsoSR",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ynOYXkZZPmiXfkDMpBHZ",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "isSIDBhnNtHCZuXIpuES",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "isSIDBhnNtHCZuXIpuES",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "dnDwjnUsRHkBiQnVOCID",
+                "vt": "str"
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 9,
+        "outputs": 18,
         "x": 550,
         "y": 360,
         "wires": [
@@ -204,6 +249,31 @@
             ],
             [
                 "5d44e4b837fe7f03"
+            ],
+            [
+                "18e0a8db53dbdabe"
+            ],
+            [
+                "65359193867ba6bf"
+            ],
+            [
+                "7b80637cabb78b0a"
+            ],
+            [
+                "4d0f3a77d13afaf1"
+            ],
+            [
+                "901cfcaaa163bef2"
+            ],
+            [
+                "af0bfad9123a3db3"
+            ],
+            [
+                "a31bf607f768fcdd"
+            ],
+            [],
+            [
+                "9919aa77f97419d8"
             ],
             [
                 "97a20664557f96a0"
@@ -653,8 +723,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 620,
+        "x": 440,
+        "y": 700,
         "wires": []
     },
     {
@@ -669,8 +739,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 1040,
+        "x": 240,
+        "y": 100,
         "wires": [
             [
                 "5ce08e41f8cc0842",
@@ -692,8 +762,8 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 730,
-        "y": 1040,
+        "x": 450,
+        "y": 100,
         "wires": []
     },
     {
@@ -708,8 +778,8 @@
         "stream": false,
         "addname": "",
         "property": "payload",
-        "x": 590,
-        "y": 1200,
+        "x": 310,
+        "y": 260,
         "wires": [
             [
                 "6196219162f67e42"
@@ -737,8 +807,8 @@
         "topic": "",
         "payload": "[[{\"strokes_per_cycle\":3,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Sạch sâu - 30 miếng\",\"machine_id\":\"MMTB052\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":82,\"pieces_max\":83.2},{\"product_name\":\"BTT Calla Sạch sâu - 80 miếng\",\"machine_id\":\"MMTB052\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":153,\"pieces_max\":156},{\"product_name\":\"BTT Calla Sạch sâu - 150 miếng\",\"machine_id\":\"MMTB052\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":302,\"pieces_max\":323},{\"product_name\":\"BTT Calla Sạch sâu - 250g\",\"machine_id\":\"MMTB052\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":604,\"pieces_max\":646},{\"product_name\":\"BTT Calla Sạch sâu - 500g\",\"machine_id\":\"MMTB052\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":1208,\"pieces_max\":1292},{\"product_name\":\"BTT Calla Sạch sâu - 1kg\",\"machine_id\":\"MMTB052\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Sạch sâu - 30 miếng\",\"machine_id\":\"MMTB200\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 2\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":82,\"pieces_max\":83.2},{\"product_name\":\"BTT Calla Sạch sâu - 80 miếng\",\"machine_id\":\"MMTB200\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 2\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":153,\"pieces_max\":156},{\"product_name\":\"BTT Calla Sạch sâu - 150 miếng\",\"machine_id\":\"MMTB200\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 2\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":302,\"pieces_max\":323},{\"product_name\":\"BTT Calla Sạch sâu - 250g\",\"machine_id\":\"MMTB200\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 2\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":604,\"pieces_max\":646},{\"product_name\":\"BTT Calla Sạch sâu - 500g\",\"machine_id\":\"MMTB200\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 2\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":1208,\"pieces_max\":1292},{\"product_name\":\"BTT Calla Sạch sâu - 1kg\",\"machine_id\":\"MMTB200\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 2\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Sạch sâu - 30 miếng\",\"machine_id\":\"MMTB224\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 3\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":82,\"pieces_max\":83.2},{\"product_name\":\"BTT Calla Sạch sâu - 80 miếng\",\"machine_id\":\"MMTB224\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 3\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":153,\"pieces_max\":156},{\"product_name\":\"BTT Calla Sạch sâu - 150 miếng\",\"machine_id\":\"MMTB224\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 3\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":302,\"pieces_max\":323},{\"product_name\":\"BTT Calla Sạch sâu - 250g\",\"machine_id\":\"MMTB224\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 3\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":604,\"pieces_max\":646},{\"product_name\":\"BTT Calla Sạch sâu - 500g\",\"machine_id\":\"MMTB224\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 3\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":1208,\"pieces_max\":1292},{\"product_name\":\"BTT Calla Sạch sâu - 1kg\",\"machine_id\":\"MMTB224\",\"machine_name\":\"Máy Bông Tẩy Trang 6cmx6cm 3\"}]]",
         "payloadType": "json",
-        "x": 420,
-        "y": 1200,
+        "x": 140,
+        "y": 260,
         "wires": [
             [
                 "9a20843b47f3133c"
@@ -757,8 +827,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 1200,
+        "x": 580,
+        "y": 180,
         "wires": []
     },
     {
@@ -782,8 +852,8 @@
         "topic": "",
         "payload": "[[{\"strokes_per_cycle\":18,\"pieces_avg\":286,\"pieces_max\":308},{\"product_name\":\"BTT Calla Mềm Mịn - 180 miếng\",\"machine_id\":\"MMTB066\",\"machine_name\":\"Máy Bông Cắt 1\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":397,\"pieces_max\":427},{\"product_name\":\"BTT Calla Mềm Mịn - 250g\",\"machine_id\":\"MMTB066\",\"machine_name\":\"Máy Bông Cắt 1\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":794,\"pieces_max\":855},{\"product_name\":\"BTT Calla Mềm Mịn - 500g\",\"machine_id\":\"MMTB066\",\"machine_name\":\"Máy Bông Cắt 1\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":1587,\"pieces_max\":1709},{\"product_name\":\"BTT Calla Mềm Mịn - 1kg\",\"machine_id\":\"MMTB066\",\"machine_name\":\"Máy Bông Cắt 1\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":286,\"pieces_max\":308},{\"product_name\":\"BTT Calla Mềm Mịn - 180 miếng\",\"machine_id\":\"MMTB067\",\"machine_name\":\"Máy Bông Cắt 2\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":397,\"pieces_max\":427},{\"product_name\":\"BTT Calla Mềm Mịn - 250g\",\"machine_id\":\"MMTB067\",\"machine_name\":\"Máy Bông Cắt 2\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":794,\"pieces_max\":855},{\"product_name\":\"BTT Calla Mềm Mịn - 500g\",\"machine_id\":\"MMTB067\",\"machine_name\":\"Máy Bông Cắt 2\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":1587,\"pieces_max\":1709},{\"product_name\":\"BTT Calla Mềm Mịn - 1kg\",\"machine_id\":\"MMTB067\",\"machine_name\":\"Máy Bông Cắt 2\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":286,\"pieces_max\":308},{\"product_name\":\"BTT Calla Mềm Mịn - 180 miếng\",\"machine_id\":\"MMTB274\",\"machine_name\":\"Máy Bông Cắt 3\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":397,\"pieces_max\":427},{\"product_name\":\"BTT Calla Mềm Mịn - 250g\",\"machine_id\":\"MMTB274\",\"machine_name\":\"Máy Bông Cắt 3\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":794,\"pieces_max\":855},{\"product_name\":\"BTT Calla Mềm Mịn - 500g\",\"machine_id\":\"MMTB274\",\"machine_name\":\"Máy Bông Cắt 3\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":1587,\"pieces_max\":1709},{\"product_name\":\"BTT Calla Mềm Mịn - 1kg\",\"machine_id\":\"MMTB274\",\"machine_name\":\"Máy Bông Cắt 3\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":286,\"pieces_max\":308},{\"product_name\":\"BTT Calla Mềm Mịn - 180 miếng\",\"machine_id\":\"MMTB293\",\"machine_name\":\"Máy Bông Cắt 4\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":397,\"pieces_max\":427},{\"product_name\":\"BTT Calla Mềm Mịn - 250g\",\"machine_id\":\"MMTB293\",\"machine_name\":\"Máy Bông Cắt 4\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":794,\"pieces_max\":855},{\"product_name\":\"BTT Calla Mềm Mịn - 500g\",\"machine_id\":\"MMTB293\",\"machine_name\":\"Máy Bông Cắt 4\"}],[{\"strokes_per_cycle\":18,\"pieces_avg\":1587,\"pieces_max\":1709},{\"product_name\":\"BTT Calla Mềm Mịn - 1kg\",\"machine_id\":\"MMTB293\",\"machine_name\":\"Máy Bông Cắt 4\"}]]",
         "payloadType": "json",
-        "x": 400,
-        "y": 1260,
+        "x": 120,
+        "y": 320,
         "wires": [
             [
                 "9a20843b47f3133c"
@@ -811,8 +881,8 @@
         "topic": "",
         "payload": "[[{\"strokes_per_cycle\":3,\"pieces_avg\":102,\"pieces_max\":104},{\"product_name\":\"BTT Calla Velvet - 100 miếng\",\"machine_id\":\"MMTB178\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":306,\"pieces_max\":312},{\"product_name\":\"BTT Calla Velvet - 300 miếng\",\"machine_id\":\"MMTB178\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 1\"}],[{\"strokes_per_cycle\":3,\"pieces_avg\":510,\"pieces_max\":520},{\"product_name\":\"BTT Calla Velvet - 500 miếng\",\"machine_id\":\"MMTB178\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 1\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Tròn Mịn - 30 miếng\",\"machine_id\":\"MMTB195\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 2\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":153,\"pieces_max\":156},{\"product_name\":\"BTT Calla Tròn Mịn - 150 miếng\",\"machine_id\":\"MMTB195\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 2\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Tròn 3D - 30 miếng\",\"machine_id\":\"MMTB195\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 2\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":122,\"pieces_max\":124.8},{\"product_name\":\"BTT Calla Tròn 3D - 120 miếng\",\"machine_id\":\"MMTB195\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 2\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":204,\"pieces_max\":208},{\"product_name\":\"BTT Calla Tròn 3D - 200 miếng\",\"machine_id\":\"MMTB195\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 2\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":842,\"pieces_max\":907},{\"product_name\":\"BTT Calla Tròn 3D - 500g\",\"machine_id\":\"MMTB195\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 2\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Tròn Mịn - 30 miếng\",\"machine_id\":\"MMTB228\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 3\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":153,\"pieces_max\":156},{\"product_name\":\"BTT Calla Tròn Mịn - 150 miếng\",\"machine_id\":\"MMTB228\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 3\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Tròn 3D - 30 miếng\",\"machine_id\":\"MMTB228\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 3\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":122,\"pieces_max\":124.8},{\"product_name\":\"BTT Calla Tròn 3D - 120 miếng\",\"machine_id\":\"MMTB228\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 3\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":204,\"pieces_max\":208},{\"product_name\":\"BTT Calla Tròn 3D - 200 miếng\",\"machine_id\":\"MMTB228\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 3\"}],[{\"strokes_per_cycle\":4,\"pieces_avg\":842,\"pieces_max\":907},{\"product_name\":\"BTT Calla Tròn 3D - 500g\",\"machine_id\":\"MMTB228\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 3\"}],[{\"strokes_per_cycle\":5,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Tròn Mịn - 30 miếng\",\"machine_id\":\"MMTB294\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 4\"}],[{\"strokes_per_cycle\":5,\"pieces_avg\":153,\"pieces_max\":156},{\"product_name\":\"BTT Calla Tròn Mịn - 150 miếng\",\"machine_id\":\"MMTB294\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 4\"}],[{\"strokes_per_cycle\":5,\"pieces_avg\":31,\"pieces_max\":31.2},{\"product_name\":\"BTT Calla Tròn 3D - 30 miếng\",\"machine_id\":\"MMTB294\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 4\"}],[{\"strokes_per_cycle\":5,\"pieces_avg\":122,\"pieces_max\":124.8},{\"product_name\":\"BTT Calla Tròn 3D - 120 miếng\",\"machine_id\":\"MMTB294\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 4\"}],[{\"strokes_per_cycle\":5,\"pieces_avg\":204,\"pieces_max\":208},{\"product_name\":\"BTT Calla Tròn 3D - 200 miếng\",\"machine_id\":\"MMTB294\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 4\"}],[{\"strokes_per_cycle\":5,\"pieces_avg\":842,\"pieces_max\":907},{\"product_name\":\"BTT Calla Tròn 3D - 500g\",\"machine_id\":\"MMTB294\",\"machine_name\":\"Máy Bông Tẩy Trang Tròn 4\"}]]",
         "payloadType": "json",
-        "x": 430,
-        "y": 1320,
+        "x": 150,
+        "y": 380,
         "wires": [
             [
                 "9a20843b47f3133c"
@@ -840,11 +910,347 @@
         "topic": "",
         "payload": "[[{\"strokes_per_cycle\":1,\"pieces_avg\":10,\"pieces_max\":11},{\"product_name\":\"BTT Calla Dạng Túi - 10 miếng\",\"machine_id\":\"MMTB179\",\"machine_name\":\"Máy Bông Tẩy Trang Túi - Xỏ Ngón\"}],[{\"strokes_per_cycle\":1,\"pieces_avg\":82,\"pieces_max\":88},{\"product_name\":\"BTT Calla Dạng Túi - 80 miếng\",\"machine_id\":\"MMTB179\",\"machine_name\":\"Máy Bông Tẩy Trang Túi - Xỏ Ngón\"}],[{\"strokes_per_cycle\":1,\"pieces_avg\":257,\"pieces_max\":276},{\"product_name\":\"BTT Calla Dạng Túi - 250g\",\"machine_id\":\"MMTB179\",\"machine_name\":\"Máy Bông Tẩy Trang Túi - Xỏ Ngón\"}]]",
         "payloadType": "json",
-        "x": 460,
-        "y": 1380,
+        "x": 180,
+        "y": 440,
         "wires": [
             [
                 "9a20843b47f3133c"
+            ]
+        ]
+    },
+    {
+        "id": "cd2cea98711125a6",
+        "type": "debug",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông tẩy trang dạng tròn 01",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "18e0a8db53dbdabe",
+        "type": "switch",
+        "z": "547a59bae597a065",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "devices/me/telemetry",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 960,
+        "wires": [
+            [
+                "cd2cea98711125a6"
+            ]
+        ]
+    },
+    {
+        "id": "6574421fac696658",
+        "type": "debug",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông tẩy trang dạng tròn 02",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "65359193867ba6bf",
+        "type": "switch",
+        "z": "547a59bae597a065",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "devices/me/telemetry",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 1040,
+        "wires": [
+            [
+                "6574421fac696658"
+            ]
+        ]
+    },
+    {
+        "id": "0ef75b23eeabfcbe",
+        "type": "debug",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông tẩy trang dạng tròn 03",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "7b80637cabb78b0a",
+        "type": "switch",
+        "z": "547a59bae597a065",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "devices/me/telemetry",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 1120,
+        "wires": [
+            [
+                "0ef75b23eeabfcbe"
+            ]
+        ]
+    },
+    {
+        "id": "24d5a892f0123924",
+        "type": "debug",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông tẩy trang dạng tròn 04",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "4d0f3a77d13afaf1",
+        "type": "switch",
+        "z": "547a59bae597a065",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "devices/me/telemetry",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 1200,
+        "wires": [
+            [
+                "24d5a892f0123924"
+            ]
+        ]
+    },
+    {
+        "id": "93bc28752058eb05",
+        "type": "debug",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông tẩy trang 6cm x 6cm/ 03",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "901cfcaaa163bef2",
+        "type": "switch",
+        "z": "547a59bae597a065",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "devices/me/telemetry",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 1300,
+        "wires": [
+            [
+                "93bc28752058eb05"
+            ]
+        ]
+    },
+    {
+        "id": "e7e6cbf56868b652",
+        "type": "debug",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông tẩy trang 6cm x 6cm/ 02",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "af0bfad9123a3db3",
+        "type": "switch",
+        "z": "547a59bae597a065",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "devices/me/telemetry",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 1380,
+        "wires": [
+            [
+                "e7e6cbf56868b652"
+            ]
+        ]
+    },
+    {
+        "id": "9bf91c028776357a",
+        "type": "debug",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông cắt/ 03",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "a31bf607f768fcdd",
+        "type": "switch",
+        "z": "547a59bae597a065",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "devices/me/telemetry",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 1460,
+        "wires": [
+            [
+                "9bf91c028776357a"
+            ]
+        ]
+    },
+    {
+        "id": "3e470a6277ad6f8e",
+        "type": "debug",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông cắt/ 04",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "9919aa77f97419d8",
+        "type": "switch",
+        "z": "547a59bae597a065",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "devices/me/telemetry",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 1520,
+        "wires": [
+            [
+                "3e470a6277ad6f8e"
             ]
         ]
     },
@@ -1520,7 +1926,8 @@
         "z": "7555dfac4acb6bb1",
         "name": "[counter]máy bông 6x6 out",
         "links": [
-            "d3695ce7fd387660"
+            "d3695ce7fd387660",
+            "9c6f0e4cb5f8cbdb"
         ],
         "x": 315,
         "y": 180,
@@ -1648,7 +2055,7 @@
         "type": "debug",
         "z": "7555dfac4acb6bb1",
         "name": "debug 8",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
