@@ -40,6 +40,46 @@
         "env": []
     },
     {
+        "id": "c05ce6de134a9170",
+        "type": "tab",
+        "label": "[ECU-1051]Máy bông tẩy trang dạng tròn 01",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5c7160247c5d11a7",
+        "type": "tab",
+        "label": "[ECU-1051]Máy bông tẩy trang dạng tròn 03",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8d09205ba1926ae5",
+        "type": "tab",
+        "label": "[ECU-1051]Máy bông cắt/ 03",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a61be07d8a581ec2",
+        "type": "tab",
+        "label": "[ECU-1051]Máy bông cắt/ 04",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8d38d595ca3f424b",
+        "type": "tab",
+        "label": "[ECU-1051]Máy bông tẩy trang 6cm x 6cm/ 03",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "7198ec6c91eaea78",
         "type": "mqtt-broker",
         "name": "admin",
@@ -86,12 +126,43 @@
         "rejectUnauthorized": true
     },
     {
+        "id": "b83544967f39d2a6",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "176.76.1.41",
+        "port": "8893",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
         "id": "51f705db47c816b7",
         "type": "mqtt in",
         "z": "547a59bae597a065",
         "name": "",
         "topic": "#",
-        "qos": "2",
+        "qos": "1",
         "datatype": "auto-detect",
         "broker": "7198ec6c91eaea78",
         "nl": false,
@@ -102,7 +173,8 @@
         "y": 360,
         "wires": [
             [
-                "16ebd0e78bc77495"
+                "16ebd0e78bc77495",
+                "05419768802dcf43"
             ]
         ]
     },
@@ -213,7 +285,7 @@
             },
             {
                 "t": "cont",
-                "v": "dnDwjnUsRHkBiQnVOCID",
+                "v": "gSSFAzlLxwMlrcJypWSs",
                 "vt": "str"
             },
             {
@@ -716,7 +788,7 @@
         "type": "debug",
         "z": "547a59bae597a065",
         "name": "debug 9",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -956,7 +1028,8 @@
         "y": 960,
         "wires": [
             [
-                "cd2cea98711125a6"
+                "cd2cea98711125a6",
+                "b41f4cd9ba60f806"
             ]
         ]
     },
@@ -1040,7 +1113,8 @@
         "y": 1120,
         "wires": [
             [
-                "0ef75b23eeabfcbe"
+                "0ef75b23eeabfcbe",
+                "3224fddfcac631da"
             ]
         ]
     },
@@ -1124,7 +1198,8 @@
         "y": 1300,
         "wires": [
             [
-                "93bc28752058eb05"
+                "93bc28752058eb05",
+                "4e9a1ef36c0b6ee8"
             ]
         ]
     },
@@ -1208,7 +1283,8 @@
         "y": 1460,
         "wires": [
             [
-                "9bf91c028776357a"
+                "9bf91c028776357a",
+                "6f8a03da3b1c1584"
             ]
         ]
     },
@@ -1250,9 +1326,158 @@
         "y": 1520,
         "wires": [
             [
-                "3e470a6277ad6f8e"
+                "3e470a6277ad6f8e",
+                "5546c3356fd64826"
             ]
         ]
+    },
+    {
+        "id": "fd829f4321bf38df",
+        "type": "comment",
+        "z": "547a59bae597a065",
+        "name": "Kiểm tra bảng tin MQTT của 8 ECU",
+        "info": "",
+        "x": 460,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "01f08b3d9a1d4808",
+        "type": "comment",
+        "z": "547a59bae597a065",
+        "name": "Kiểm tra điều khiển 8 ECU",
+        "info": "",
+        "x": 430,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "9937f95f225f7b40",
+        "type": "comment",
+        "z": "547a59bae597a065",
+        "name": "json { \"w\":[ { \"tag\":\"AO_1\", \"value\":12.88 }, { \"tag\":\"AO_2\", \"value\":18.76 } ], \"ts\":\"2017-12-28T12:22:21+0000\" }",
+        "info": "",
+        "x": 690,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "88880b6bbeb02dc4",
+        "type": "mqtt in",
+        "z": "547a59bae597a065",
+        "name": "",
+        "topic": "#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b83544967f39d2a6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 370,
+        "y": 1760,
+        "wires": [
+            [
+                "30d6445618c068ec"
+            ]
+        ]
+    },
+    {
+        "id": "30d6445618c068ec",
+        "type": "debug",
+        "z": "547a59bae597a065",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "05419768802dcf43",
+        "type": "debug",
+        "z": "547a59bae597a065",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "b41f4cd9ba60f806",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông tẩy trang dạng tròn 01 out",
+        "mode": "link",
+        "links": [
+            "d824527877604506"
+        ],
+        "x": 935,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "3224fddfcac631da",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông tẩy trang dạng tròn 03 out",
+        "mode": "link",
+        "links": [
+            "8d0aae6ff28dd8bd"
+        ],
+        "x": 935,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "6f8a03da3b1c1584",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông cắt 03 out",
+        "mode": "link",
+        "links": [
+            "49ad0e6c316f1f9d"
+        ],
+        "x": 925,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "4e9a1ef36c0b6ee8",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông tẩy trang 6x6 03 out",
+        "mode": "link",
+        "links": [
+            "1acc9c65683cbf82"
+        ],
+        "x": 925,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "5546c3356fd64826",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông cắt 04 out",
+        "mode": "link",
+        "links": [
+            "78801094b93468a6"
+        ],
+        "x": 925,
+        "y": 1560,
+        "wires": []
     },
     {
         "id": "1e3de0ed69b7f6b5",
@@ -1926,8 +2151,7 @@
         "z": "7555dfac4acb6bb1",
         "name": "[counter]máy bông 6x6 out",
         "links": [
-            "d3695ce7fd387660",
-            "9c6f0e4cb5f8cbdb"
+            "d3695ce7fd387660"
         ],
         "x": 315,
         "y": 180,
@@ -2142,5 +2366,716 @@
         "x": 710,
         "y": 600,
         "wires": []
+    },
+    {
+        "id": "d824527877604506",
+        "type": "link in",
+        "z": "c05ce6de134a9170",
+        "name": "[ECU-1051]Máy bông tẩy trang dạng tròn 03 in",
+        "links": [
+            "b41f4cd9ba60f806"
+        ],
+        "x": 165,
+        "y": 160,
+        "wires": [
+            [
+                "a95fec7bf41b212c"
+            ]
+        ]
+    },
+    {
+        "id": "a95fec7bf41b212c",
+        "type": "debug",
+        "z": "c05ce6de134a9170",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "8d0aae6ff28dd8bd",
+        "type": "link in",
+        "z": "5c7160247c5d11a7",
+        "name": "[ECU-1051]Máy bông tẩy trang dạng tròn 03 in",
+        "links": [
+            "3224fddfcac631da",
+            "27182e05ce6cda4d"
+        ],
+        "x": 115,
+        "y": 160,
+        "wires": [
+            [
+                "ac582ba8894ee467",
+                "cd2f9a1d16531788",
+                "8240790ce426fe74",
+                "2ade601d559a7b69",
+                "387334cff279d9ee",
+                "88b1191b6f820e7e"
+            ]
+        ]
+    },
+    {
+        "id": "ac582ba8894ee467",
+        "type": "debug",
+        "z": "5c7160247c5d11a7",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "9ec4334e1fa4cb54",
+        "type": "inject",
+        "z": "5c7160247c5d11a7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"ts\":1775965050000,\"values\":{\"#DISABLE_DEVICE_PLC_DELTA\":0,\"#BATCH_WRITE_PLC_DELTA\":1,\"#DEVICE_ERROR_PLC_DELTA\":0,\"PLC_DELTA:target\":1080,\"PLC_DELTA:actual\":392,\"PLC_DELTA:reset_actual\":392,\"#DISABLE_PORT_COM1\":0,\"#DISABLE_DEVICE_PLC_MITSU_FX3U\":0,\"#BATCH_WRITE_PLC_MITSU_FX3U\":0,\"#DEVICE_ERROR_PLC_MITSU_FX3U\":0,\"PLC_MITSU_FX3U:green_light\":1,\"PLC_MITSU_FX3U:yellow_light\":0,\"PLC_MITSU_FX3U:red_light\":0,\"PLC_MITSU_FX3U:err_ems_cabin\":1,\"PLC_MITSU_FX3U:err_ems_ops\":1,\"PLC_MITSU_FX3U:err_ejector_pin\":0,\"PLC_MITSU_FX3U:err_cutter\":0,\"PLC_MITSU_FX3U:err_forming\":0,\"PLC_MITSU_FX3U:speed_ppm\":400,\"PLC_MITSU_FX3U:total_pcs_count\":49908,\"PLC_MITSU_FX3U:cotton_sep_qty\":11,\"PLC_MITSU_FX3U:reset_total\":0}}",
+        "payloadType": "json",
+        "x": 110,
+        "y": 380,
+        "wires": [
+            [
+                "ac582ba8894ee467",
+                "cd2f9a1d16531788",
+                "8240790ce426fe74",
+                "2ade601d559a7b69",
+                "387334cff279d9ee",
+                "88b1191b6f820e7e"
+            ]
+        ]
+    },
+    {
+        "id": "cd2f9a1d16531788",
+        "type": "function",
+        "z": "5c7160247c5d11a7",
+        "name": "insert data counter",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.values[\"PLC_MITSU_FX3U:total_pcs_count\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 240,
+        "wires": [
+            [
+                "464aee4b6973bb94"
+            ]
+        ]
+    },
+    {
+        "id": "464aee4b6973bb94",
+        "type": "influxdb out",
+        "z": "5c7160247c5d11a7",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 610,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8240790ce426fe74",
+        "type": "function",
+        "z": "5c7160247c5d11a7",
+        "name": "insert data status",
+        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.values[\"PLC_MITSU_FX3U:green_light\"]) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 320,
+        "wires": [
+            [
+                "464aee4b6973bb94"
+            ]
+        ]
+    },
+    {
+        "id": "2ade601d559a7b69",
+        "type": "function",
+        "z": "5c7160247c5d11a7",
+        "name": "insert data state code",
+        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.values;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[\"PLC_MITSU_FX3U:err_ems_cabin\"])   error_mask += 1;\nif (v[\"PLC_MITSU_FX3U:err_ems_ops\"])     error_mask += 2;\nif (v[\"PLC_MITSU_FX3U:err_ejector_pin\"]) error_mask += 4;\nif (v[\"PLC_MITSU_FX3U:err_cutter\"])      error_mask += 8;\nif (v[\"PLC_MITSU_FX3U:err_forming\"])     error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[\"PLC_MITSU_FX3U:green_light\"]) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[\"PLC_MITSU_FX3U:yellow_light\"]) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[\"PLC_MITSU_FX3U:red_light\"] || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 400,
+        "wires": [
+            [
+                "a8e8021f31ccb59d",
+                "464aee4b6973bb94"
+            ]
+        ]
+    },
+    {
+        "id": "a8e8021f31ccb59d",
+        "type": "debug",
+        "z": "5c7160247c5d11a7",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "387334cff279d9ee",
+        "type": "function",
+        "z": "5c7160247c5d11a7",
+        "name": "insert data actual",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload.values[\"PLC_DELTA:actual\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 520,
+        "wires": [
+            [
+                "464aee4b6973bb94"
+            ]
+        ]
+    },
+    {
+        "id": "88b1191b6f820e7e",
+        "type": "function",
+        "z": "5c7160247c5d11a7",
+        "name": "insert data target",
+        "func": "msg.payload = [\n    {\n        target: msg.payload.values[\"PLC_DELTA:target\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 600,
+        "wires": [
+            [
+                "464aee4b6973bb94"
+            ]
+        ]
+    },
+    {
+        "id": "49ad0e6c316f1f9d",
+        "type": "link in",
+        "z": "8d09205ba1926ae5",
+        "name": "[ECU-1051]Máy bông cắt 03 in",
+        "links": [
+            "6f8a03da3b1c1584"
+        ],
+        "x": 355,
+        "y": 140,
+        "wires": [
+            [
+                "f06ff3bc4fc7d46e",
+                "fc205457031e23aa",
+                "0d81d2c1baf277f6",
+                "4da55166ed7361ac",
+                "3011608c6d215f2c"
+            ]
+        ]
+    },
+    {
+        "id": "622ca673f970370d",
+        "type": "debug",
+        "z": "8d09205ba1926ae5",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "22c5dac25e38cc56",
+        "type": "inject",
+        "z": "8d09205ba1926ae5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"ts\":1775965245000,\"values\":{\"#DISABLE_DEVICE_PLC_DELTA\":0,\"#BATCH_WRITE_PLC_DELTA\":1,\"#DEVICE_ERROR_PLC_DELTA\":0,\"PLC_DELTA:target\":500,\"PLC_DELTA:actual\":60,\"PLC_DELTA:reset_actual\":60,\"#DISABLE_PORT_COM1\":0,\"#DISABLE_DEVICE_PLC_MITSU_FX5U\":0,\"#BATCH_WRITE_PLC_MITSU_FX5U\":0,\"#DEVICE_ERROR_PLC_MITSU_FX5U\":0,\"PLC_MITSU_FX5U:green_light\":1,\"PLC_MITSU_FX5U:yellow_light\":0,\"PLC_MITSU_FX5U:red_light\":0,\"PLC_MITSU_FX5U:err_servo_pattern_1\":0,\"PLC_MITSU_FX5U:err_servo_pattern_2\":0,\"PLC_MITSU_FX5U:err_servo_film_splitter\":0,\"PLC_MITSU_FX5U:err_servo_film_pull\":0,\"PLC_MITSU_FX5U:err_motor_film_cut\":0,\"PLC_MITSU_FX5U:sen_cutter_count\":0,\"PLC_MITSU_FX5U:counter\":2747,\"PLC_MITSU_FX5U:rst_counter\":0,\"#WLAN0_AP_MAC\":39970243761608}}",
+        "payloadType": "json",
+        "x": 330,
+        "y": 220,
+        "wires": [
+            [
+                "622ca673f970370d",
+                "f06ff3bc4fc7d46e",
+                "fc205457031e23aa",
+                "0d81d2c1baf277f6",
+                "4da55166ed7361ac",
+                "3011608c6d215f2c"
+            ]
+        ]
+    },
+    {
+        "id": "f06ff3bc4fc7d46e",
+        "type": "function",
+        "z": "8d09205ba1926ae5",
+        "name": "insert data counter",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.values[\"PLC_MITSU_FX5U:counter\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 220,
+        "wires": [
+            [
+                "22183e533d69a17c"
+            ]
+        ]
+    },
+    {
+        "id": "22183e533d69a17c",
+        "type": "influxdb out",
+        "z": "8d09205ba1926ae5",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 830,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "fc205457031e23aa",
+        "type": "function",
+        "z": "8d09205ba1926ae5",
+        "name": "insert data status",
+        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.values[\"PLC_MITSU_FX5U:green_light\"]) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 300,
+        "wires": [
+            [
+                "22183e533d69a17c"
+            ]
+        ]
+    },
+    {
+        "id": "0d81d2c1baf277f6",
+        "type": "function",
+        "z": "8d09205ba1926ae5",
+        "name": "insert data state code",
+        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.values;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[\"PLC_MITSU_FX5U:err_servo_pattern_1\"])   error_mask += 1;\nif (v[\"PLC_MITSU_FX5U:err_servo_pattern_2\"])     error_mask += 2;\nif (v[\"PLC_MITSU_FX5U:err_servo_film_splitter\"]) error_mask += 4;\nif (v[\"PLC_MITSU_FX5U:err_servo_film_pull\"])      error_mask += 8;\nif (v[\"PLC_MITSU_FX5U:err_motor_film_cut\"])     error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[\"PLC_MITSU_FX5U:green_light\"]) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[\"PLC_MITSU_FX5U:yellow_light\"]) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[\"PLC_MITSU_FX5U:red_light\"] || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 380,
+        "wires": [
+            [
+                "22183e533d69a17c",
+                "4dcd092c50ed9979"
+            ]
+        ]
+    },
+    {
+        "id": "4dcd092c50ed9979",
+        "type": "debug",
+        "z": "8d09205ba1926ae5",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "4da55166ed7361ac",
+        "type": "function",
+        "z": "8d09205ba1926ae5",
+        "name": "insert data actual",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload.values[\"PLC_DELTA:actual\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 500,
+        "wires": [
+            [
+                "22183e533d69a17c"
+            ]
+        ]
+    },
+    {
+        "id": "3011608c6d215f2c",
+        "type": "function",
+        "z": "8d09205ba1926ae5",
+        "name": "insert data target",
+        "func": "msg.payload = [\n    {\n        target: msg.payload.values[\"PLC_DELTA:target\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 580,
+        "wires": [
+            [
+                "22183e533d69a17c"
+            ]
+        ]
+    },
+    {
+        "id": "78801094b93468a6",
+        "type": "link in",
+        "z": "a61be07d8a581ec2",
+        "name": "[ECU-1051]Máy bông cắt 04 in",
+        "links": [
+            "5546c3356fd64826"
+        ],
+        "x": 355,
+        "y": 120,
+        "wires": [
+            [
+                "913678c928e090cb",
+                "cc36deb59b44ed31",
+                "47eb259f705de06c",
+                "f4d2b45ffc3366cf",
+                "0bc62513ef46c1c8"
+            ]
+        ]
+    },
+    {
+        "id": "710179ce77250d0c",
+        "type": "debug",
+        "z": "a61be07d8a581ec2",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8fefd7299e961685",
+        "type": "inject",
+        "z": "a61be07d8a581ec2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"ts\":1775965245000,\"values\":{\"#DISABLE_DEVICE_PLC_DELTA\":0,\"#BATCH_WRITE_PLC_DELTA\":1,\"#DEVICE_ERROR_PLC_DELTA\":0,\"PLC_DELTA:target\":500,\"PLC_DELTA:actual\":60,\"PLC_DELTA:reset_actual\":60,\"#DISABLE_PORT_COM1\":0,\"#DISABLE_DEVICE_PLC_MITSU_FX5U\":0,\"#BATCH_WRITE_PLC_MITSU_FX5U\":0,\"#DEVICE_ERROR_PLC_MITSU_FX5U\":0,\"PLC_MITSU_FX5U:green_light\":1,\"PLC_MITSU_FX5U:yellow_light\":0,\"PLC_MITSU_FX5U:red_light\":0,\"PLC_MITSU_FX5U:err_servo_pattern_1\":0,\"PLC_MITSU_FX5U:err_servo_pattern_2\":0,\"PLC_MITSU_FX5U:err_servo_film_splitter\":0,\"PLC_MITSU_FX5U:err_servo_film_pull\":0,\"PLC_MITSU_FX5U:err_motor_film_cut\":0,\"PLC_MITSU_FX5U:sen_cutter_count\":0,\"PLC_MITSU_FX5U:counter\":2747,\"PLC_MITSU_FX5U:rst_counter\":0,\"#WLAN0_AP_MAC\":39970243761608}}",
+        "payloadType": "json",
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "710179ce77250d0c",
+                "913678c928e090cb",
+                "cc36deb59b44ed31",
+                "47eb259f705de06c",
+                "f4d2b45ffc3366cf",
+                "0bc62513ef46c1c8"
+            ]
+        ]
+    },
+    {
+        "id": "913678c928e090cb",
+        "type": "function",
+        "z": "a61be07d8a581ec2",
+        "name": "insert data counter",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.values[\"PLC_MITSU_FX5U:counter\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 200,
+        "wires": [
+            [
+                "bf484a651d052565"
+            ]
+        ]
+    },
+    {
+        "id": "bf484a651d052565",
+        "type": "influxdb out",
+        "z": "a61be07d8a581ec2",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 830,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "cc36deb59b44ed31",
+        "type": "function",
+        "z": "a61be07d8a581ec2",
+        "name": "insert data status",
+        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.values[\"PLC_MITSU_FX5U:green_light\"]) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 280,
+        "wires": [
+            [
+                "bf484a651d052565"
+            ]
+        ]
+    },
+    {
+        "id": "47eb259f705de06c",
+        "type": "function",
+        "z": "a61be07d8a581ec2",
+        "name": "insert data state code",
+        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.values;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[\"PLC_MITSU_FX5U:err_servo_pattern_1\"])   error_mask += 1;\nif (v[\"PLC_MITSU_FX5U:err_servo_pattern_2\"])     error_mask += 2;\nif (v[\"PLC_MITSU_FX5U:err_servo_film_splitter\"]) error_mask += 4;\nif (v[\"PLC_MITSU_FX5U:err_servo_film_pull\"])      error_mask += 8;\nif (v[\"PLC_MITSU_FX5U:err_motor_film_cut\"])     error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[\"PLC_MITSU_FX5U:green_light\"]) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[\"PLC_MITSU_FX5U:yellow_light\"]) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[\"PLC_MITSU_FX5U:red_light\"] || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 360,
+        "wires": [
+            [
+                "bf484a651d052565",
+                "91a3ba09c88341b9"
+            ]
+        ]
+    },
+    {
+        "id": "91a3ba09c88341b9",
+        "type": "debug",
+        "z": "a61be07d8a581ec2",
+        "name": "debug 20",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f4d2b45ffc3366cf",
+        "type": "function",
+        "z": "a61be07d8a581ec2",
+        "name": "insert data actual",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload.values[\"PLC_DELTA:actual\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 480,
+        "wires": [
+            [
+                "bf484a651d052565"
+            ]
+        ]
+    },
+    {
+        "id": "0bc62513ef46c1c8",
+        "type": "function",
+        "z": "a61be07d8a581ec2",
+        "name": "insert data target",
+        "func": "msg.payload = [\n    {\n        target: msg.payload.values[\"PLC_DELTA:target\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 560,
+        "wires": [
+            [
+                "bf484a651d052565"
+            ]
+        ]
+    },
+    {
+        "id": "1acc9c65683cbf82",
+        "type": "link in",
+        "z": "8d38d595ca3f424b",
+        "name": "[ECU-1051]Máy bông tẩy trang 6x6 03 in",
+        "links": [
+            "4e9a1ef36c0b6ee8"
+        ],
+        "x": 235,
+        "y": 220,
+        "wires": [
+            [
+                "91db14c8cc5888c7"
+            ]
+        ]
+    },
+    {
+        "id": "91db14c8cc5888c7",
+        "type": "debug",
+        "z": "8d38d595ca3f424b",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "7ff63c9c5baaad24",
+        "type": "inject",
+        "z": "8d38d595ca3f424b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"ts\":1775966240000,\"values\":{\"#DISABLE_DEVICE_PLC_DELTA\":0,\"#BATCH_WRITE_PLC_DELTA\":1,\"#DEVICE_ERROR_PLC_DELTA\":0,\"PLC_DELTA:target\":360,\"PLC_DELTA:actual\":200,\"PLC_DELTA:reset_actual\":200,\"#DISABLE_DEVICE_PLC_MITSU_FX3U_2\":0,\"#BATCH_WRITE_PLC_MITSU_FX3U_2\":0,\"#DEVICE_ERROR_PLC_MITSU_FX3U_2\":-32764,\"PLC_MITSU_FX3U_2:green_light\":0,\"PLC_MITSU_FX3U_2:yellow_light\":0,\"PLC_MITSU_FX3U_2:red_light\":0,\"PLC_MITSU_FX3U_2:err_ems\":0,\"PLC_MITSU_FX3U_2:err_servo\":0,\"PLC_MITSU_FX3U_2:err_inv\":0,\"PLC_MITSU_FX3U_2:speed_ppm\":441,\"PLC_MITSU_FX3U_2:total_pcs_count\":23253,\"PLC_MITSU_FX3U_2:reset_total\":0}}",
+        "payloadType": "json",
+        "x": 250,
+        "y": 320,
+        "wires": [
+            []
+        ]
     }
 ]
