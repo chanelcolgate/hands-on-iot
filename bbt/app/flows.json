@@ -88,6 +88,14 @@
         "env": []
     },
     {
+        "id": "b3fb1ccd54f8e30d",
+        "type": "tab",
+        "label": "[ECU-1051]Máy bông tẩy trang 6cm x 6cm/ 02",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "8d38d595ca3f424b",
         "type": "tab",
         "label": "[ECU-1051]Máy bông tẩy trang 6cm x 6cm/ 03",
@@ -140,37 +148,6 @@
         "url": "http://localhost:8086",
         "timeout": 10,
         "rejectUnauthorized": true
-    },
-    {
-        "id": "b83544967f39d2a6",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "176.76.1.41",
-        "port": "8893",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
     },
     {
         "id": "51f705db47c816b7",
@@ -1259,7 +1236,8 @@
         "y": 1380,
         "wires": [
             [
-                "e7e6cbf56868b652"
+                "e7e6cbf56868b652",
+                "76b73a02594759f8"
             ]
         ]
     },
@@ -1380,43 +1358,6 @@
         "wires": []
     },
     {
-        "id": "88880b6bbeb02dc4",
-        "type": "mqtt in",
-        "z": "547a59bae597a065",
-        "name": "",
-        "topic": "#",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "b83544967f39d2a6",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 370,
-        "y": 1760,
-        "wires": [
-            [
-                "30d6445618c068ec"
-            ]
-        ]
-    },
-    {
-        "id": "30d6445618c068ec",
-        "type": "debug",
-        "z": "547a59bae597a065",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 1760,
-        "wires": []
-    },
-    {
         "id": "05419768802dcf43",
         "type": "debug",
         "z": "547a59bae597a065",
@@ -1465,7 +1406,7 @@
         "name": "[ECU-1051]Máy bông cắt 03 out",
         "mode": "link",
         "links": [
-            "49ad0e6c316f1f9d"
+            "ef1db4741d6a92c0"
         ],
         "x": 925,
         "y": 1420,
@@ -1521,6 +1462,66 @@
         ],
         "x": 985,
         "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "4a2a0a172c8a67f0",
+        "type": "inject",
+        "z": "547a59bae597a065",
+        "name": "Command",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"w\":[{\"tag\":\"PLC_DELTA:target\",\"value\":360},{\"tag\":\"PLC_DELTA:reset_actual\",\"value\":100},{\"tag\":\"PLC_MITSU_FX3U_2:reset_total\",\"value\":0}]}",
+        "payloadType": "json",
+        "x": 380,
+        "y": 1760,
+        "wires": [
+            [
+                "86eda2d93c8f360f"
+            ]
+        ]
+    },
+    {
+        "id": "86eda2d93c8f360f",
+        "type": "mqtt out",
+        "z": "547a59bae597a065",
+        "name": "",
+        "topic": "system/ynOYXkZZPmiXfkDMpBHZ/v1/devices/me/attributes",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "7198ec6c91eaea78",
+        "x": 780,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "76b73a02594759f8",
+        "type": "link out",
+        "z": "547a59bae597a065",
+        "name": "[ECU-1051]Máy bông tẩy trang 6x6 02 out",
+        "mode": "link",
+        "links": [
+            "bac3b716846f358a"
+        ],
+        "x": 925,
+        "y": 1340,
         "wires": []
     },
     {
@@ -1879,7 +1880,7 @@
         "type": "debug",
         "z": "42948bc9125c490d",
         "name": "debug 4",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2190,6 +2191,37 @@
         "wires": []
     },
     {
+        "id": "efe6d28a1dc209dc",
+        "type": "catch",
+        "z": "3285a4c8af3a7c07",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 820,
+        "y": 180,
+        "wires": [
+            [
+                "b2601d8e48218843"
+            ]
+        ]
+    },
+    {
+        "id": "b2601d8e48218843",
+        "type": "debug",
+        "z": "3285a4c8af3a7c07",
+        "name": "debug 25",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 180,
+        "wires": []
+    },
+    {
         "id": "9952f790071a7c23",
         "type": "link in",
         "z": "7555dfac4acb6bb1",
@@ -2412,6 +2444,37 @@
         "wires": []
     },
     {
+        "id": "b182f9ecd8795c17",
+        "type": "catch",
+        "z": "7555dfac4acb6bb1",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 829,
+        "y": 149,
+        "wires": [
+            [
+                "ba1060970d3eea0a"
+            ]
+        ]
+    },
+    {
+        "id": "ba1060970d3eea0a",
+        "type": "debug",
+        "z": "7555dfac4acb6bb1",
+        "name": "debug 24",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1009,
+        "y": 149,
+        "wires": []
+    },
+    {
         "id": "d824527877604506",
         "type": "link in",
         "z": "c05ce6de134a9170",
@@ -2454,7 +2517,7 @@
         "type": "function",
         "z": "c05ce6de134a9170",
         "name": "insert data counter",
-        "func": "msg.payload = [\n    {\n        counter: msg.payload.values[\"PLC_MITSU_FX3U:total_pcs_count\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB178',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.d[18].value,\n        speed_ppm: msg.payload.d[17].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB178',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2492,7 +2555,7 @@
         "type": "function",
         "z": "c05ce6de134a9170",
         "name": "insert data status",
-        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.values[\"PLC_MITSU_FX3U:green_light\"]) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB178',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.d[9].value) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB178',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2512,7 +2575,7 @@
         "type": "function",
         "z": "c05ce6de134a9170",
         "name": "insert data state code",
-        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.values;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[\"PLC_MITSU_FX3U:err_ems_cabin\"])   error_mask += 1;\nif (v[\"PLC_MITSU_FX3U:err_ems_ops\"])     error_mask += 2;\nif (v[\"PLC_MITSU_FX3U:err_ejector_pin\"]) error_mask += 4;\nif (v[\"PLC_MITSU_FX3U:err_cutter\"])      error_mask += 8;\nif (v[\"PLC_MITSU_FX3U:err_forming\"])     error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[\"PLC_MITSU_FX3U:green_light\"]) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[\"PLC_MITSU_FX3U:yellow_light\"]) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[\"PLC_MITSU_FX3U:red_light\"] || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB178',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
+        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.d;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[12].value)      error_mask += 1;\nif (v[13].value)      error_mask += 2;\nif (v[14].value)      error_mask += 4;\nif (v[15].value)      error_mask += 8;\nif (v[16].value)      error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[9].value) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[10].value) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[11].value || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB178',\n        device: 'ECU1051-PLCMITSU',\n        error_mask: error_mask\n    }\n];\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2520,7 +2583,7 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 420,
+        "y": 440,
         "wires": [
             [
                 "3eb2173c13fcf09b"
@@ -2532,7 +2595,7 @@
         "type": "function",
         "z": "c05ce6de134a9170",
         "name": "insert data actual",
-        "func": "msg.payload = [\n    {\n        actual: msg.payload.values[\"PLC_DELTA:actual\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB178',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload.d[4].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB178',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2552,7 +2615,7 @@
         "type": "function",
         "z": "c05ce6de134a9170",
         "name": "insert data target",
-        "func": "msg.payload = [\n    {\n        target: msg.payload.values[\"PLC_DELTA:target\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB178',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        target: msg.payload.d[3].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB178',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2566,6 +2629,37 @@
                 "3eb2173c13fcf09b"
             ]
         ]
+    },
+    {
+        "id": "a67991173574a7cf",
+        "type": "catch",
+        "z": "c05ce6de134a9170",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 520,
+        "y": 160,
+        "wires": [
+            [
+                "9d258ace48e24a87"
+            ]
+        ]
+    },
+    {
+        "id": "9d258ace48e24a87",
+        "type": "debug",
+        "z": "c05ce6de134a9170",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 160,
+        "wires": []
     },
     {
         "id": "eba3c404d16081d5",
@@ -2610,7 +2704,7 @@
         "type": "function",
         "z": "dbad7decedbfed39",
         "name": "insert data counter",
-        "func": "msg.payload = [\n    {\n        counter: msg.payload.values[\"PLC_MITSU_FX3U:total_pcs_count\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB195',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.d[18].value,\n        speed_ppm: msg.payload.d[17].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB195',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2648,7 +2742,7 @@
         "type": "function",
         "z": "dbad7decedbfed39",
         "name": "insert data status",
-        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.values[\"PLC_MITSU_FX3U:green_light\"]) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB195',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.d[9].value) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB195',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2668,7 +2762,7 @@
         "type": "function",
         "z": "dbad7decedbfed39",
         "name": "insert data state code",
-        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.values;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[\"PLC_MITSU_FX3U:err_ems_cabin\"])   error_mask += 1;\nif (v[\"PLC_MITSU_FX3U:err_ems_ops\"])     error_mask += 2;\nif (v[\"PLC_MITSU_FX3U:err_ejector_pin\"]) error_mask += 4;\nif (v[\"PLC_MITSU_FX3U:err_cutter\"])      error_mask += 8;\nif (v[\"PLC_MITSU_FX3U:err_forming\"])     error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[\"PLC_MITSU_FX3U:green_light\"]) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[\"PLC_MITSU_FX3U:yellow_light\"]) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[\"PLC_MITSU_FX3U:red_light\"] || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB195',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
+        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.d;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[12].value)      error_mask += 1;\nif (v[13].value)      error_mask += 2;\nif (v[14].value)      error_mask += 4;\nif (v[15].value)      error_mask += 8;\nif (v[16].value)      error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[9].value) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[10].value) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[11].value || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB195',\n        device: 'ECU1051-PLCMITSU',\n        error_mask: error_mask\n    }\n];\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2688,7 +2782,7 @@
         "type": "function",
         "z": "dbad7decedbfed39",
         "name": "insert data actual",
-        "func": "msg.payload = [\n    {\n        actual: msg.payload.values[\"PLC_DELTA:actual\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB195',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload.d[4].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB195',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2708,7 +2802,7 @@
         "type": "function",
         "z": "dbad7decedbfed39",
         "name": "insert data target",
-        "func": "msg.payload = [\n    {\n        target: msg.payload.values[\"PLC_DELTA:target\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB195',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        target: msg.payload.d[3].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB195',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2800,7 +2894,7 @@
         "type": "function",
         "z": "5c7160247c5d11a7",
         "name": "insert data counter",
-        "func": "msg.payload = [\n    {\n        counter: msg.payload.values[\"PLC_MITSU_FX3U:total_pcs_count\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.d[18].value,\n        speed_ppm: msg.payload.d[17].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2838,7 +2932,7 @@
         "type": "function",
         "z": "5c7160247c5d11a7",
         "name": "insert data status",
-        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.values[\"PLC_MITSU_FX3U:green_light\"]) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.d[9].value) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2858,7 +2952,7 @@
         "type": "function",
         "z": "5c7160247c5d11a7",
         "name": "insert data state code",
-        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.values;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[\"PLC_MITSU_FX3U:err_ems_cabin\"])   error_mask += 1;\nif (v[\"PLC_MITSU_FX3U:err_ems_ops\"])     error_mask += 2;\nif (v[\"PLC_MITSU_FX3U:err_ejector_pin\"]) error_mask += 4;\nif (v[\"PLC_MITSU_FX3U:err_cutter\"])      error_mask += 8;\nif (v[\"PLC_MITSU_FX3U:err_forming\"])     error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[\"PLC_MITSU_FX3U:green_light\"]) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[\"PLC_MITSU_FX3U:yellow_light\"]) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[\"PLC_MITSU_FX3U:red_light\"] || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
+        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.d;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[12].value)      error_mask += 1;\nif (v[13].value)      error_mask += 2;\nif (v[14].value)      error_mask += 4;\nif (v[15].value)      error_mask += 8;\nif (v[16].value)      error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[9].value) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[10].value) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[11].value || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCMITSU',\n        error_mask: error_mask\n    }\n];\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2895,7 +2989,7 @@
         "type": "function",
         "z": "5c7160247c5d11a7",
         "name": "insert data actual",
-        "func": "msg.payload = [\n    {\n        actual: msg.payload.values[\"PLC_DELTA:actual\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload.d[4].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2915,7 +3009,7 @@
         "type": "function",
         "z": "5c7160247c5d11a7",
         "name": "insert data target",
-        "func": "msg.payload = [\n    {\n        target: msg.payload.values[\"PLC_DELTA:target\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        target: msg.payload.d[3].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB228',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2973,7 +3067,7 @@
         "type": "function",
         "z": "7de2743b8bbf540a",
         "name": "insert data counter",
-        "func": "msg.payload = [\n    {\n        counter: msg.payload.values[\"PLC_MITSU_FX3U:total_pcs_count\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB294',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.d[18].value,\n        speed_ppm: msg.payload.d[17].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB294',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3011,7 +3105,7 @@
         "type": "function",
         "z": "7de2743b8bbf540a",
         "name": "insert data status",
-        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.values[\"PLC_MITSU_FX3U:green_light\"]) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB294',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.d[9].value) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB294',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3031,7 +3125,7 @@
         "type": "function",
         "z": "7de2743b8bbf540a",
         "name": "insert data state code",
-        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.values;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[\"PLC_MITSU_FX3U:err_ems_cabin\"])   error_mask += 1;\nif (v[\"PLC_MITSU_FX3U:err_ems_ops\"])     error_mask += 2;\nif (v[\"PLC_MITSU_FX3U:err_ejector_pin\"]) error_mask += 4;\nif (v[\"PLC_MITSU_FX3U:err_cutter\"])      error_mask += 8;\nif (v[\"PLC_MITSU_FX3U:err_forming\"])     error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[\"PLC_MITSU_FX3U:green_light\"]) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[\"PLC_MITSU_FX3U:yellow_light\"]) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[\"PLC_MITSU_FX3U:red_light\"] || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB294',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
+        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.d;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[12].value)      error_mask += 1;\nif (v[13].value)      error_mask += 2;\nif (v[14].value)      error_mask += 4;\nif (v[15].value)      error_mask += 8;\nif (v[16].value)      error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[9].value) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[10].value) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[11].value || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB294',\n        device: 'ECU1051-PLCMITSU',\n        error_mask: error_mask\n    }\n];\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3051,7 +3145,7 @@
         "type": "function",
         "z": "7de2743b8bbf540a",
         "name": "insert data actual",
-        "func": "msg.payload = [\n    {\n        actual: msg.payload.values[\"PLC_DELTA:actual\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB294',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload.d[4].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB294',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3071,7 +3165,7 @@
         "type": "function",
         "z": "7de2743b8bbf540a",
         "name": "insert data target",
-        "func": "msg.payload = [\n    {\n        target: msg.payload.values[\"PLC_DELTA:target\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB294',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        target: msg.payload.d[3].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB294',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3087,27 +3181,27 @@
         ]
     },
     {
-        "id": "49ad0e6c316f1f9d",
+        "id": "ef1db4741d6a92c0",
         "type": "link in",
         "z": "8d09205ba1926ae5",
         "name": "[ECU-1051]Máy bông cắt 03 in",
         "links": [
             "6f8a03da3b1c1584"
         ],
-        "x": 355,
-        "y": 140,
+        "x": 515,
+        "y": 180,
         "wires": [
             [
-                "f06ff3bc4fc7d46e",
-                "fc205457031e23aa",
-                "0d81d2c1baf277f6",
-                "4da55166ed7361ac",
-                "3011608c6d215f2c"
+                "8f0bbf10423addc5",
+                "8b08fe6d80e2eb7d",
+                "9d57018e3014e8fd",
+                "308124cc35678c41",
+                "1b2239d3680ea199"
             ]
         ]
     },
     {
-        "id": "622ca673f970370d",
+        "id": "45806e7fbcc5228c",
         "type": "debug",
         "z": "8d09205ba1926ae5",
         "name": "debug 15",
@@ -3118,12 +3212,12 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
-        "y": 140,
+        "x": 660,
+        "y": 180,
         "wires": []
     },
     {
-        "id": "22c5dac25e38cc56",
+        "id": "af0584aaf1314515",
         "type": "inject",
         "z": "8d09205ba1926ae5",
         "name": "",
@@ -3143,41 +3237,41 @@
         "topic": "",
         "payload": "{\"ts\":1775965245000,\"values\":{\"#DISABLE_DEVICE_PLC_DELTA\":0,\"#BATCH_WRITE_PLC_DELTA\":1,\"#DEVICE_ERROR_PLC_DELTA\":0,\"PLC_DELTA:target\":500,\"PLC_DELTA:actual\":60,\"PLC_DELTA:reset_actual\":60,\"#DISABLE_PORT_COM1\":0,\"#DISABLE_DEVICE_PLC_MITSU_FX5U\":0,\"#BATCH_WRITE_PLC_MITSU_FX5U\":0,\"#DEVICE_ERROR_PLC_MITSU_FX5U\":0,\"PLC_MITSU_FX5U:green_light\":1,\"PLC_MITSU_FX5U:yellow_light\":0,\"PLC_MITSU_FX5U:red_light\":0,\"PLC_MITSU_FX5U:err_servo_pattern_1\":0,\"PLC_MITSU_FX5U:err_servo_pattern_2\":0,\"PLC_MITSU_FX5U:err_servo_film_splitter\":0,\"PLC_MITSU_FX5U:err_servo_film_pull\":0,\"PLC_MITSU_FX5U:err_motor_film_cut\":0,\"PLC_MITSU_FX5U:sen_cutter_count\":0,\"PLC_MITSU_FX5U:counter\":2747,\"PLC_MITSU_FX5U:rst_counter\":0,\"#WLAN0_AP_MAC\":39970243761608}}",
         "payloadType": "json",
-        "x": 330,
-        "y": 220,
+        "x": 490,
+        "y": 260,
         "wires": [
             [
-                "622ca673f970370d",
-                "f06ff3bc4fc7d46e",
-                "fc205457031e23aa",
-                "0d81d2c1baf277f6",
-                "4da55166ed7361ac",
-                "3011608c6d215f2c"
+                "45806e7fbcc5228c",
+                "8f0bbf10423addc5",
+                "8b08fe6d80e2eb7d",
+                "9d57018e3014e8fd",
+                "308124cc35678c41",
+                "1b2239d3680ea199"
             ]
         ]
     },
     {
-        "id": "f06ff3bc4fc7d46e",
+        "id": "8f0bbf10423addc5",
         "type": "function",
         "z": "8d09205ba1926ae5",
         "name": "insert data counter",
-        "func": "msg.payload = [\n    {\n        counter: msg.payload.values[\"PLC_MITSU_FX5U:counter\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.d[18].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 220,
+        "x": 770,
+        "y": 260,
         "wires": [
             [
-                "22183e533d69a17c"
+                "774011a2bd625b93"
             ]
         ]
     },
     {
-        "id": "22183e533d69a17c",
+        "id": "774011a2bd625b93",
         "type": "influxdb out",
         "z": "8d09205ba1926ae5",
         "influxdb": "3ba38ac2ba59e1ab",
@@ -3190,56 +3284,56 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 830,
-        "y": 220,
+        "x": 990,
+        "y": 260,
         "wires": []
     },
     {
-        "id": "fc205457031e23aa",
+        "id": "8b08fe6d80e2eb7d",
         "type": "function",
         "z": "8d09205ba1926ae5",
         "name": "insert data status",
-        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.values[\"PLC_MITSU_FX5U:green_light\"]) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.d[9].value) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 300,
+        "x": 770,
+        "y": 340,
         "wires": [
             [
-                "22183e533d69a17c"
+                "774011a2bd625b93"
             ]
         ]
     },
     {
-        "id": "0d81d2c1baf277f6",
+        "id": "9d57018e3014e8fd",
         "type": "function",
         "z": "8d09205ba1926ae5",
         "name": "insert data state code",
-        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.values;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[\"PLC_MITSU_FX5U:err_servo_pattern_1\"])   error_mask += 1;\nif (v[\"PLC_MITSU_FX5U:err_servo_pattern_2\"])     error_mask += 2;\nif (v[\"PLC_MITSU_FX5U:err_servo_film_splitter\"]) error_mask += 4;\nif (v[\"PLC_MITSU_FX5U:err_servo_film_pull\"])      error_mask += 8;\nif (v[\"PLC_MITSU_FX5U:err_motor_film_cut\"])     error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[\"PLC_MITSU_FX5U:green_light\"]) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[\"PLC_MITSU_FX5U:yellow_light\"]) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[\"PLC_MITSU_FX5U:red_light\"] || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
+        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.d;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[12].value) error_mask += 1;\nif (v[13].value) error_mask += 2;\nif (v[14].value) error_mask += 4;\nif (v[15].value) error_mask += 8;\nif (v[16].value) error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[9].value) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[10].value) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[11].value || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 380,
+        "x": 780,
+        "y": 420,
         "wires": [
             [
-                "22183e533d69a17c",
-                "4dcd092c50ed9979"
+                "774011a2bd625b93",
+                "ff9e8fc816b4179f"
             ]
         ]
     },
     {
-        "id": "4dcd092c50ed9979",
+        "id": "ff9e8fc816b4179f",
         "type": "debug",
         "z": "8d09205ba1926ae5",
-        "name": "debug 18",
+        "name": "debug 16",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -3247,47 +3341,47 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
-        "y": 380,
+        "x": 1020,
+        "y": 420,
         "wires": []
     },
     {
-        "id": "4da55166ed7361ac",
+        "id": "308124cc35678c41",
         "type": "function",
         "z": "8d09205ba1926ae5",
         "name": "insert data actual",
-        "func": "msg.payload = [\n    {\n        actual: msg.payload.values[\"PLC_DELTA:actual\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload.d[4].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 500,
+        "x": 770,
+        "y": 540,
         "wires": [
             [
-                "22183e533d69a17c"
+                "774011a2bd625b93"
             ]
         ]
     },
     {
-        "id": "3011608c6d215f2c",
+        "id": "1b2239d3680ea199",
         "type": "function",
         "z": "8d09205ba1926ae5",
         "name": "insert data target",
-        "func": "msg.payload = [\n    {\n        target: msg.payload.values[\"PLC_DELTA:target\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        target: msg.payload.d[3].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB274',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 580,
+        "x": 770,
+        "y": 620,
         "wires": [
             [
-                "22183e533d69a17c"
+                "774011a2bd625b93"
             ]
         ]
     },
@@ -3366,7 +3460,7 @@
         "type": "function",
         "z": "a61be07d8a581ec2",
         "name": "insert data counter",
-        "func": "msg.payload = [\n    {\n        counter: msg.payload.values[\"PLC_MITSU_FX5U:counter\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.d[18].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3404,7 +3498,7 @@
         "type": "function",
         "z": "a61be07d8a581ec2",
         "name": "insert data status",
-        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.values[\"PLC_MITSU_FX5U:green_light\"]) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.d[9].value) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3424,7 +3518,7 @@
         "type": "function",
         "z": "a61be07d8a581ec2",
         "name": "insert data state code",
-        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.values;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[\"PLC_MITSU_FX5U:err_servo_pattern_1\"])   error_mask += 1;\nif (v[\"PLC_MITSU_FX5U:err_servo_pattern_2\"])     error_mask += 2;\nif (v[\"PLC_MITSU_FX5U:err_servo_film_splitter\"]) error_mask += 4;\nif (v[\"PLC_MITSU_FX5U:err_servo_film_pull\"])      error_mask += 8;\nif (v[\"PLC_MITSU_FX5U:err_motor_film_cut\"])     error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[\"PLC_MITSU_FX5U:green_light\"]) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[\"PLC_MITSU_FX5U:yellow_light\"]) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[\"PLC_MITSU_FX5U:red_light\"] || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
+        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.d;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[12].value) error_mask += 1;\nif (v[13].value) error_mask += 2;\nif (v[14].value) error_mask += 4;\nif (v[15].value) error_mask += 8;\nif (v[16].value) error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[9].value) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[10].value) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[11].value || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3461,7 +3555,7 @@
         "type": "function",
         "z": "a61be07d8a581ec2",
         "name": "insert data actual",
-        "func": "msg.payload = [\n    {\n        actual: msg.payload.values[\"PLC_DELTA:actual\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload.d[4].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3481,7 +3575,7 @@
         "type": "function",
         "z": "a61be07d8a581ec2",
         "name": "insert data target",
-        "func": "msg.payload = [\n    {\n        target: msg.payload.values[\"PLC_DELTA:target\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        target: msg.payload.d[3].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB293',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3497,6 +3591,208 @@
         ]
     },
     {
+        "id": "bac3b716846f358a",
+        "type": "link in",
+        "z": "b3fb1ccd54f8e30d",
+        "name": "[ECU-1051]Máy bông tẩy trang 6x6 02 in",
+        "links": [
+            "76b73a02594759f8"
+        ],
+        "x": 275,
+        "y": 200,
+        "wires": [
+            [
+                "916156e5237e082a",
+                "13c80e15d4a9145e",
+                "f3395351afa0d1f2",
+                "2630240d35a03af6",
+                "2ba2f3f0872c4358",
+                "7e3d0f308dc3858b"
+            ]
+        ]
+    },
+    {
+        "id": "916156e5237e082a",
+        "type": "debug",
+        "z": "b3fb1ccd54f8e30d",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "bcc9240a09b82674",
+        "type": "inject",
+        "z": "b3fb1ccd54f8e30d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"d\":[{\"tag\":\"#DISABLE_DEVICE_PLC_DELTA\",\"value\":0},{\"tag\":\"#BATCH_WRITE_PLC_DELTA\",\"value\":1},{\"tag\":\"#DEVICE_ERROR_PLC_DELTA\",\"value\":0},{\"tag\":\"PLC_DELTA:target\",\"value\":250},{\"tag\":\"PLC_DELTA:actual\",\"value\":325},{\"tag\":\"PLC_DELTA:reset_actual\",\"value\":325},{\"tag\":\"#DISABLE_DEVICE_PLC_MITSU_FX5U\",\"value\":0},{\"tag\":\"#BATCH_WRITE_PLC_MITSU_FX5U\",\"value\":0},{\"tag\":\"#DEVICE_ERROR_PLC_MITSU_FX5U\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:green_light\",\"value\":1},{\"tag\":\"PLC_MITSU_FX5U:yellow_light\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:red_light\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:err_servo_pattern_1\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:err_servo_pattern_2\",\"value\":1},{\"tag\":\"PLC_MITSU_FX5U:err_servo_film_splitter\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:err_servo_film_pull\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:err_motor_film_cut\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:sen_cutter_count\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:counter\",\"value\":27839},{\"tag\":\"PLC_MITSU_FX5U:reset_counter\",\"value\":0}],\"ts\":\"2026-04-15T00:46:35Z\",\"type\":0}",
+        "payloadType": "json",
+        "x": 290,
+        "y": 300,
+        "wires": [
+            [
+                "916156e5237e082a"
+            ]
+        ]
+    },
+    {
+        "id": "13c80e15d4a9145e",
+        "type": "function",
+        "z": "b3fb1ccd54f8e30d",
+        "name": "insert data counter",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.d[16].value,\n        speed_ppm: msg.payload.d[15].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB200',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "75df466807ec6e2a"
+            ]
+        ]
+    },
+    {
+        "id": "75df466807ec6e2a",
+        "type": "influxdb out",
+        "z": "b3fb1ccd54f8e30d",
+        "influxdb": "3ba38ac2ba59e1ab",
+        "name": "bbt",
+        "measurement": "bbt_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 730,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f3395351afa0d1f2",
+        "type": "function",
+        "z": "b3fb1ccd54f8e30d",
+        "name": "insert data status",
+        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.d[18].value) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB200',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 360,
+        "wires": [
+            [
+                "75df466807ec6e2a"
+            ]
+        ]
+    },
+    {
+        "id": "2630240d35a03af6",
+        "type": "function",
+        "z": "b3fb1ccd54f8e30d",
+        "name": "insert data state code",
+        "func": "let error_mask = 0;\nconst v = msg.payload.d;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[12].value)      error_mask += 1;\nif (v[13].value)      error_mask += 2;\nif (v[14].value)      error_mask += 4;\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB200',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 440,
+        "wires": [
+            [
+                "75df466807ec6e2a",
+                "0fb499c94cc9bc07"
+            ]
+        ]
+    },
+    {
+        "id": "0fb499c94cc9bc07",
+        "type": "debug",
+        "z": "b3fb1ccd54f8e30d",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "2ba2f3f0872c4358",
+        "type": "function",
+        "z": "b3fb1ccd54f8e30d",
+        "name": "insert data actual",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload.d[4].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB200',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 560,
+        "wires": [
+            [
+                "75df466807ec6e2a"
+            ]
+        ]
+    },
+    {
+        "id": "7e3d0f308dc3858b",
+        "type": "function",
+        "z": "b3fb1ccd54f8e30d",
+        "name": "insert data target",
+        "func": "msg.payload = [\n    {\n        target: msg.payload.d[3].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB200',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 640,
+        "wires": [
+            [
+                "75df466807ec6e2a"
+            ]
+        ]
+    },
+    {
         "id": "1acc9c65683cbf82",
         "type": "link in",
         "z": "8d38d595ca3f424b",
@@ -3508,7 +3804,12 @@
         "y": 220,
         "wires": [
             [
-                "91db14c8cc5888c7"
+                "91db14c8cc5888c7",
+                "6b9e34d65b54657d",
+                "65549419e91af830",
+                "805328e30537a338",
+                "9e229cc2d1f324b3",
+                "6c7641a62db29d43"
             ]
         ]
     },
@@ -3548,7 +3849,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{\"ts\":1775966240000,\"values\":{\"#DISABLE_DEVICE_PLC_DELTA\":0,\"#BATCH_WRITE_PLC_DELTA\":1,\"#DEVICE_ERROR_PLC_DELTA\":0,\"PLC_DELTA:target\":360,\"PLC_DELTA:actual\":200,\"PLC_DELTA:reset_actual\":200,\"#DISABLE_DEVICE_PLC_MITSU_FX3U_2\":0,\"#BATCH_WRITE_PLC_MITSU_FX3U_2\":0,\"#DEVICE_ERROR_PLC_MITSU_FX3U_2\":-32764,\"PLC_MITSU_FX3U_2:green_light\":0,\"PLC_MITSU_FX3U_2:yellow_light\":0,\"PLC_MITSU_FX3U_2:red_light\":0,\"PLC_MITSU_FX3U_2:err_ems\":0,\"PLC_MITSU_FX3U_2:err_servo\":0,\"PLC_MITSU_FX3U_2:err_inv\":0,\"PLC_MITSU_FX3U_2:speed_ppm\":441,\"PLC_MITSU_FX3U_2:total_pcs_count\":23253,\"PLC_MITSU_FX3U_2:reset_total\":0}}",
+        "payload": "{\"d\":[{\"tag\":\"#DISABLE_DEVICE_PLC_DELTA\",\"value\":0},{\"tag\":\"#BATCH_WRITE_PLC_DELTA\",\"value\":1},{\"tag\":\"#DEVICE_ERROR_PLC_DELTA\",\"value\":0},{\"tag\":\"PLC_DELTA:target\",\"value\":250},{\"tag\":\"PLC_DELTA:actual\",\"value\":325},{\"tag\":\"PLC_DELTA:reset_actual\",\"value\":325},{\"tag\":\"#DISABLE_DEVICE_PLC_MITSU_FX5U\",\"value\":0},{\"tag\":\"#BATCH_WRITE_PLC_MITSU_FX5U\",\"value\":0},{\"tag\":\"#DEVICE_ERROR_PLC_MITSU_FX5U\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:green_light\",\"value\":1},{\"tag\":\"PLC_MITSU_FX5U:yellow_light\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:red_light\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:err_servo_pattern_1\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:err_servo_pattern_2\",\"value\":1},{\"tag\":\"PLC_MITSU_FX5U:err_servo_film_splitter\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:err_servo_film_pull\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:err_motor_film_cut\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:sen_cutter_count\",\"value\":0},{\"tag\":\"PLC_MITSU_FX5U:counter\",\"value\":27839},{\"tag\":\"PLC_MITSU_FX5U:reset_counter\",\"value\":0}],\"ts\":\"2026-04-15T00:46:35Z\",\"type\":0}",
         "payloadType": "json",
         "x": 250,
         "y": 320,
@@ -3563,7 +3864,7 @@
         "type": "function",
         "z": "8d38d595ca3f424b",
         "name": "insert data counter",
-        "func": "msg.payload = [\n    {\n        counter: msg.payload.values[\"PLC_MITSU_FX3U_2:counter\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB224',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        counter: msg.payload.d[16].value,\n        speed_ppm: msg.payload.d[15].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB224',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3601,7 +3902,7 @@
         "type": "function",
         "z": "8d38d595ca3f424b",
         "name": "insert data status",
-        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.values[\"PLC_MITSU_FX3U_2:green_light\"]) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB224',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        status: (Number(msg.payload.d[18].value) === 1) ? 0 : 1\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB224',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3621,7 +3922,7 @@
         "type": "function",
         "z": "8d38d595ca3f424b",
         "name": "insert data state code",
-        "func": "let state_code;\nlet error_mask = 0;\nconst v = msg.payload.values;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[\"PLC_MITSU_FX3U_2:err_servo_pattern_1\"])   error_mask += 1;\nif (v[\"PLC_MITSU_FX3U_2:err_servo_pattern_2\"])     error_mask += 2;\nif (v[\"PLC_MITSU_FX3U_2:err_servo_film_splitter\"]) error_mask += 4;\nif (v[\"PLC_MITSU_FX3U_2:err_servo_film_pull\"])      error_mask += 8;\nif (v[\"PLC_MITSU_FX3U_2:err_motor_film_cut\"])     error_mask += 16;\n\n// 2. Xác định state_code ưu tiên ĐÈN XANH (theo ý bạn)\nif (v[\"PLC_MITSU_FX3U_2:green_light\"]) {\n    state_code = 1; // Ưu tiên hiển thị Xanh\n} else if (v[\"PLC_MITSU_FX3U_2:yellow_light\"]) {\n    state_code = 2; // Ưu tiên hiển thị Vàng\n} else if (v[\"PLC_MITSU_FX3U_2:red_light\"] || error_mask > 0) {\n    state_code = 3; // Chỉ hiện Đỏ khi không Xanh/Vàng mà có lỗi\n} else {\n    state_code = -1;\n}\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        state_code: state_code,      // Biến này để làm màu sắc Dashboard (Xanh/Vàng)\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB224',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
+        "func": "let error_mask = 0;\nconst v = msg.payload.d;\n\n// 1. Luôn tính toán error_mask độc lập để thống kê\nif (v[12].value)      error_mask += 1;\nif (v[13].value)      error_mask += 2;\nif (v[14].value)      error_mask += 4;\n\n// 3. Đóng gói dữ liệu để gửi lên InfluxDB\nmsg.payload = [\n    {\n        error_mask: error_mask,      // Biến này ĐỘC LẬP để vẽ biểu đồ tròn lỗi\n        has_error: error_mask > 0 ? 1 : 0 // Cờ báo hiệu có lỗi tiềm ẩn\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB224',\n        device: 'ECU1051-PLCMITSU'\n    }\n];\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3658,7 +3959,7 @@
         "type": "function",
         "z": "8d38d595ca3f424b",
         "name": "insert data actual",
-        "func": "msg.payload = [\n    {\n        actual: msg.payload.values[\"PLC_MITSU_FX3U_2:actual\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB224',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        actual: msg.payload.d[4].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB224',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3678,7 +3979,7 @@
         "type": "function",
         "z": "8d38d595ca3f424b",
         "name": "insert data target",
-        "func": "msg.payload = [\n    {\n        target: msg.payload.values[\"PLC_MITSU_FX3U_2:target\"]\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB224',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
+        "func": "msg.payload = [\n    {\n        target: msg.payload.d[3].value\n    },\n    {\n        factory: 'Bông Bạch Tuyết Vĩnh Lộc',\n        system: 'Công đoạn thành phẩm',\n        machine: 'MMTB224',\n        device: 'ECU1051-PLCDELTA'\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
