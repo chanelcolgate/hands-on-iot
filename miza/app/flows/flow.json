@@ -3230,8 +3230,550 @@
             {
                 "addr": "DB354,R160",
                 "name": "r_low_alarm_14"
+            },
+            {
+                "addr": "DB242,R392",
+                "name": "r_pressure_actual_15"
+            },
+            {
+                "addr": "DB242,R432",
+                "name": "r_high_alarm_15"
+            },
+            {
+                "addr": "DB242,R436",
+                "name": "r_high_warning_15"
+            },
+            {
+                "addr": "DB242,R448",
+                "name": "r_low_warning_15"
+            },
+            {
+                "addr": "DB242,R452",
+                "name": "r_low_alarm_15"
+            },
+            {
+                "addr": "DB2413,R338",
+                "name": "r_fill_tm_16"
+            },
+            {
+                "addr": "DB2413,R342",
+                "name": "r_sludge_tm_16"
+            },
+            {
+                "addr": "DB2413,R346",
+                "name": "r_drain_tm_16"
+            },
+            {
+                "addr": "DB2511,X0.0",
+                "name": "b_ready_17"
+            },
+            {
+                "addr": "DB2516,X394.0",
+                "name": "b_run_17"
+            },
+            {
+                "addr": "DB2516,X164.0",
+                "name": "b_fault_17"
+            },
+            {
+                "addr": "DB2515,R88",
+                "name": "r_motor_current_17"
+            },
+            {
+                "addr": "DB2515,R120",
+                "name": "r_high_warning_17"
+            },
+            {
+                "addr": "DB2515,R116",
+                "name": "r_high_alarm_17"
+            },
+            {
+                "addr": "DB371,R772",
+                "name": "r_pressure_actual_18"
+            },
+            {
+                "addr": "DB371,R726",
+                "name": "r_pressure_setpoint_18"
+            },
+            {
+                "addr": "DB371,R670",
+                "name": "r_valve_setpoint_18"
+            },
+            {
+                "addr": "DB371,R794",
+                "name": "r_high_alarm_18"
+            },
+            {
+                "addr": "DB371,R798",
+                "name": "r_high_warning_18"
+            },
+            {
+                "addr": "DB371,R810",
+                "name": "r_low_warning_18"
+            },
+            {
+                "addr": "DB371,R814",
+                "name": "r_low_alarm_18"
+            },
+            {
+                "addr": "DB394,R392",
+                "name": "r_pressure_actual_19"
+            },
+            {
+                "addr": "DB394,R432",
+                "name": "r_high_alarm_19"
+            },
+            {
+                "addr": "DB394,R436",
+                "name": "r_high_warning_19"
+            },
+            {
+                "addr": "DB394,R448",
+                "name": "r_low_warning_19"
+            },
+            {
+                "addr": "DB394,R452",
+                "name": "r_low_alarm_19"
+            },
+            {
+                "addr": "DB346,R392",
+                "name": "r_pressure_delta_20"
+            },
+            {
+                "addr": "DB3091,R338",
+                "name": "r_fill_tm_21"
+            },
+            {
+                "addr": "DB3091,R342",
+                "name": "r_sludge_tm_21"
+            },
+            {
+                "addr": "DB3091,R346",
+                "name": "r_drain_tm_21"
             }
         ]
+    },
+    {
+        "id": "a65e47561aad34a5",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.1.120",
+        "port": "102",
+        "rack": "0",
+        "slot": "2",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "tsap",
+        "adapter": "",
+        "busaddr": 2,
+        "cycletime": 1000,
+        "timeout": 2000,
+        "name": "PLC Hệ Bột",
+        "vartable": [
+            {
+                "addr": "DB179,X0.0",
+                "name": "b_ready_1"
+            },
+            {
+                "addr": "DB522,X424.0",
+                "name": "b_run_1"
+            },
+            {
+                "addr": "DB522,X186.0",
+                "name": "b_fault_1"
+            },
+            {
+                "addr": "DB3223,X0.0",
+                "name": "b_ready_2"
+            },
+            {
+                "addr": "DB3230,X394.0",
+                "name": "b_run_2"
+            },
+            {
+                "addr": "DB3230,X164.0",
+                "name": "b_fault_2"
+            },
+            {
+                "addr": "DB3228,R88",
+                "name": "r_motor_current_2"
+            },
+            {
+                "addr": "DB3228,R120",
+                "name": "r_high_warning_2"
+            },
+            {
+                "addr": "DB3228,R116",
+                "name": "r_high_alarm_2"
+            },
+            {
+                "addr": "DB3563,X0.0",
+                "name": "b_ready_3"
+            },
+            {
+                "addr": "DB3568,X394.0",
+                "name": "b_run_3"
+            },
+            {
+                "addr": "DB3568,X164.0",
+                "name": "b_fault_3"
+            },
+            {
+                "addr": "DB191,R478",
+                "name": "r_valve_setpoint_4"
+            },
+            {
+                "addr": "DB191,R584",
+                "name": "r_valve_actual_4"
+            },
+            {
+                "addr": "DB1213,R478",
+                "name": "r_valve_setpoint_5"
+            },
+            {
+                "addr": "DB1213,R584",
+                "name": "r_valve_actual_5"
+            },
+            {
+                "addr": "DB2784,X0.0",
+                "name": "b_ready_6"
+            },
+            {
+                "addr": "DB2789,X394.0",
+                "name": "b_run_6"
+            },
+            {
+                "addr": "DB2789,X164.0",
+                "name": "b_fault_6"
+            },
+            {
+                "addr": "DB2788,R88",
+                "name": "r_motor_current_6"
+            },
+            {
+                "addr": "DB2788,R120",
+                "name": "r_high_warning_6"
+            },
+            {
+                "addr": "DB2788,R116",
+                "name": "r_high_alarm_6"
+            },
+            {
+                "addr": "DB1031,R772",
+                "name": "r_pressure_actual_7"
+            },
+            {
+                "addr": "DB1031,R726",
+                "name": "r_pressure_setpoint_7"
+            },
+            {
+                "addr": "DB1031,R670",
+                "name": "r_valve_setpoint_7"
+            },
+            {
+                "addr": "DB1031,R794",
+                "name": "r_high_alarm_7"
+            },
+            {
+                "addr": "DB1031,R798",
+                "name": "r_high_warning_7"
+            },
+            {
+                "addr": "DB1031,R810",
+                "name": "r_low_warning_7"
+            },
+            {
+                "addr": "DB1031,R814",
+                "name": "r_low_alarm_7"
+            },
+            {
+                "addr": "DB2493,X0.0",
+                "name": "b_ready_8"
+            },
+            {
+                "addr": "DB2498,X394.0",
+                "name": "b_run_8"
+            },
+            {
+                "addr": "DB2498,X164.0",
+                "name": "b_fault_8"
+            },
+            {
+                "addr": "DB2497,R88",
+                "name": "r_motor_current_8"
+            },
+            {
+                "addr": "DB2497,R120",
+                "name": "r_high_warning_8"
+            },
+            {
+                "addr": "DB2497,R116",
+                "name": "r_high_alarm_8"
+            },
+            {
+                "addr": "DB2777,R478",
+                "name": "r_valve_setpoint_9"
+            },
+            {
+                "addr": "DB2777,R584",
+                "name": "r_valve_actual_9"
+            },
+            {
+                "addr": "DB229,X310.0",
+                "name": "b_control_10"
+            },
+            {
+                "addr": "DB229,X326.0",
+                "name": "b_open_10"
+            },
+            {
+                "addr": "DB229,X328.0",
+                "name": "b_close_10"
+            },
+            {
+                "addr": "DB2726,X0.0",
+                "name": "b_ready_11"
+            },
+            {
+                "addr": "DB2731,X394.0",
+                "name": "b_run_11"
+            },
+            {
+                "addr": "DB2731,X164.0",
+                "name": "b_fault_11"
+            },
+            {
+                "addr": "DB2730,R88",
+                "name": "r_motor_current_11"
+            },
+            {
+                "addr": "DB2730,R120",
+                "name": "r_high_warning_11"
+            },
+            {
+                "addr": "DB2730,R116",
+                "name": "r_high_alarm_11"
+            },
+            {
+                "addr": "DB290,R772",
+                "name": "r_pressure_actual_12"
+            },
+            {
+                "addr": "DB290,R726",
+                "name": "r_pressure_setpoint_12"
+            },
+            {
+                "addr": "DB290,R670",
+                "name": "r_valve_setpoint_12"
+            },
+            {
+                "addr": "DB290,R794",
+                "name": "r_high_alarm_12"
+            },
+            {
+                "addr": "DB290,R798",
+                "name": "r_high_warning_12"
+            },
+            {
+                "addr": "DB290,R810",
+                "name": "r_low_warning_12"
+            },
+            {
+                "addr": "DB290,R814",
+                "name": "r_low_alarm_12"
+            },
+            {
+                "addr": "DB298,R772",
+                "name": "r_pressure_actual_13"
+            },
+            {
+                "addr": "DB298,R726",
+                "name": "r_pressure_setpoint_13"
+            },
+            {
+                "addr": "DB298,R670",
+                "name": "r_valve_setpoint_13"
+            },
+            {
+                "addr": "DB298,R794",
+                "name": "r_high_alarm_13"
+            },
+            {
+                "addr": "DB298,R798",
+                "name": "r_high_warning_13"
+            },
+            {
+                "addr": "DB298,R810",
+                "name": "r_low_warning_13"
+            },
+            {
+                "addr": "DB298,R814",
+                "name": "r_low_alarm_13"
+            },
+            {
+                "addr": "DB354,R772",
+                "name": "r_flow_actual_14"
+            },
+            {
+                "addr": "DB354,R726",
+                "name": "r_flow_setpoint_14"
+            },
+            {
+                "addr": "DB354,R670",
+                "name": "r_valve_setpoint_14"
+            },
+            {
+                "addr": "DB354,R140",
+                "name": "r_high_alarm_14"
+            },
+            {
+                "addr": "DB354,R144",
+                "name": "r_high_warning_14"
+            },
+            {
+                "addr": "DB354,R156",
+                "name": "r_low_warning_14"
+            },
+            {
+                "addr": "DB354,R160",
+                "name": "r_low_alarm_14"
+            },
+            {
+                "addr": "DB242,R392",
+                "name": "r_pressure_actual_15"
+            },
+            {
+                "addr": "DB242,R432",
+                "name": "r_high_alarm_15"
+            },
+            {
+                "addr": "DB242,R436",
+                "name": "r_high_warning_15"
+            },
+            {
+                "addr": "DB242,R448",
+                "name": "r_low_warning_15"
+            },
+            {
+                "addr": "DB242,R452",
+                "name": "r_low_alarm_15"
+            },
+            {
+                "addr": "DB2413,R338",
+                "name": "r_fill_tm_16"
+            },
+            {
+                "addr": "DB2413,R342",
+                "name": "r_sludge_tm_16"
+            },
+            {
+                "addr": "DB2413,R346",
+                "name": "r_drain_tm_16"
+            },
+            {
+                "addr": "DB2511,X0.0",
+                "name": "b_ready_17"
+            },
+            {
+                "addr": "DB2516,X394.0",
+                "name": "b_run_17"
+            },
+            {
+                "addr": "DB2516,X164.0",
+                "name": "b_fault_17"
+            },
+            {
+                "addr": "DB2515,R88",
+                "name": "r_motor_current_17"
+            },
+            {
+                "addr": "DB2515,R120",
+                "name": "r_high_warning_17"
+            },
+            {
+                "addr": "DB2515,R116",
+                "name": "r_high_alarm_17"
+            },
+            {
+                "addr": "DB371,R772",
+                "name": "r_pressure_actual_18"
+            },
+            {
+                "addr": "DB371,R726",
+                "name": "r_pressure_setpoint_18"
+            },
+            {
+                "addr": "DB371,R670",
+                "name": "r_valve_setpoint_18"
+            },
+            {
+                "addr": "DB371,R794",
+                "name": "r_high_alarm_18"
+            },
+            {
+                "addr": "DB371,R798",
+                "name": "r_high_warning_18"
+            },
+            {
+                "addr": "DB371,R810",
+                "name": "r_low_warning_18"
+            },
+            {
+                "addr": "DB371,R814",
+                "name": "r_low_alarm_18"
+            },
+            {
+                "addr": "DB394,R392",
+                "name": "r_pressure_actual_19"
+            },
+            {
+                "addr": "DB394,R432",
+                "name": "r_high_alarm_19"
+            },
+            {
+                "addr": "DB394,R436",
+                "name": "r_high_warning_19"
+            },
+            {
+                "addr": "DB394,R448",
+                "name": "r_low_warning_19"
+            },
+            {
+                "addr": "DB394,R452",
+                "name": "r_low_alarm_19"
+            },
+            {
+                "addr": "DB346,R392",
+                "name": "r_pressure_delta_20"
+            },
+            {
+                "addr": "DB3091,R338",
+                "name": "r_fill_tm_21"
+            },
+            {
+                "addr": "DB3091,R342",
+                "name": "r_sludge_tm_21"
+            },
+            {
+                "addr": "DB3091,R346",
+                "name": "r_drain_tm_21"
+            }
+        ]
+    },
+    {
+        "id": "ade87f31c9e37a95",
+        "type": "miza-group-template",
+        "name": "Áp vào PIC102151",
+        "color": "#a8c8e8",
+        "mappings": "[{\"field\":\"pressure_in\",\"s7prefix\":\"r_pressure_actual\",\"useStats\":true},{\"field\":\"pressure_setpoint\",\"s7prefix\":\"r_pressure_setpoint\",\"useStats\":true},{\"field\":\"valve_setpoint\",\"s7prefix\":\"r_valve_setpoint\",\"useStats\":true},{\"field\":\"high_alarm\",\"s7prefix\":\"r_high_alarm\",\"useStats\":true},{\"field\":\"high_warning\",\"s7prefix\":\"r_high_warning\",\"useStats\":true},{\"field\":\"low_warning\",\"s7prefix\":\"r_low_warning\",\"useStats\":true},{\"field\":\"low_alarm\",\"s7prefix\":\"r_low_alarm\",\"useStats\":true}]"
+    },
+    {
+        "id": "b103f4e2283f8471",
+        "type": "miza-config",
+        "name": "MIZA Config Bơm Vào",
+        "tableData": "[{\"fieldName\":\"pressure_in\",\"factory\":\"MIZA Nghi Sơn\",\"system\":\"Hệ bột\",\"subsystem\":\"Hệ PULPER\",\"section\":\"Hệ thống lọc cát nồng độ cao\",\"line\":\"Lọc cát nồng độ cao cấp 2\",\"machine\":\"Áp Bơm PIC102151\",\"label\":\"Áp suất vào\"},{\"fieldName\":\"pressure_setpoint\",\"factory\":\"MIZA Nghi Sơn\",\"system\":\"Hệ bột\",\"subsystem\":\"Hệ PULPER\",\"section\":\"Hệ thống lọc cát nồng độ cao\",\"line\":\"Lọc cát nồng độ cao cấp 2\",\"machine\":\"Áp Bơm PIC102151\",\"label\":\"Áp suất cài đặt\"},{\"fieldName\":\"valve_setpoint\",\"factory\":\"MIZA Nghi Sơn\",\"system\":\"Hệ bột\",\"subsystem\":\"Hệ PULPER\",\"section\":\"Hệ thống lọc cát nồng độ cao\",\"line\":\"Lọc cát nồng độ cao cấp 2\",\"machine\":\"Áp Bơm PIC102151\",\"label\":\"Van điều khiển\"},{\"fieldName\":\"high_alarm\",\"factory\":\"MIZA Nghi Sơn\",\"system\":\"Hệ bột\",\"subsystem\":\"Hệ PULPER\",\"section\":\"Hệ thống lọc cát nồng độ cao\",\"line\":\"Lọc cát nồng độ cao cấp 2\",\"machine\":\"Áp Bơm PIC102151\",\"label\":\"Cảnh báo đỏ trên\"},{\"fieldName\":\"high_warning\",\"factory\":\"MIZA Nghi Sơn\",\"system\":\"Hệ bột\",\"subsystem\":\"Hệ PULPER\",\"section\":\"Hệ thống lọc cát nồng độ cao\",\"line\":\"Lọc cát nồng độ cao cấp 2\",\"machine\":\"Áp Bơm PIC102151\",\"label\":\"Cảnh báo vàng trên\"},{\"fieldName\":\"low_warning\",\"factory\":\"MIZA Nghi Sơn\",\"system\":\"Hệ bột\",\"subsystem\":\"Hệ PULPER\",\"section\":\"Hệ thống lọc cát nồng độ cao\",\"line\":\"Lọc cát nồng độ cao cấp 2\",\"machine\":\"Áp Bơm PIC102151\",\"label\":\"Cảnh báo vàng dưới\"},{\"fieldName\":\"low_alarm\",\"factory\":\"MIZA Nghi Sơn\",\"system\":\"Hệ bột\",\"subsystem\":\"Hệ PULPER\",\"section\":\"Hệ thống lọc cát nồng độ cao\",\"line\":\"Lọc cát nồng độ cao cấp 2\",\"machine\":\"Áp Bơm PIC102151\",\"label\":\"Cảnh báo đỏ dưới\"}]"
     },
     {
         "id": "b70436aa2c9e6eae",
@@ -6130,7 +6672,8 @@
         "y": 4280,
         "wires": [
             [
-                "c3fa4e6a6c573322"
+                "c3fa4e6a6c573322",
+                "f6160250efd31f6c"
             ]
         ]
     },
@@ -6508,7 +7051,8 @@
         "y": 4780,
         "wires": [
             [
-                "0d3eecdcfbda04cc"
+                "0d3eecdcfbda04cc",
+                "833921e661831d55"
             ]
         ]
     },
@@ -6862,6 +7406,1911 @@
                 "bb0a3df34ecbcc68"
             ]
         ]
+    },
+    {
+        "id": "fcd85fdb890f8081",
+        "type": "link in",
+        "z": "98133cbdfd78e5b3",
+        "name": "link in 1",
+        "links": [
+            "833921e661831d55",
+            "f6160250efd31f6c"
+        ],
+        "x": 155,
+        "y": 5280,
+        "wires": [
+            [
+                "981fd15a6589899c"
+            ]
+        ]
+    },
+    {
+        "id": "981fd15a6589899c",
+        "type": "buffer-array",
+        "z": "98133cbdfd78e5b3",
+        "name": "Stack 2",
+        "bufferLen": "2",
+        "startWhenFilled": true,
+        "x": 250,
+        "y": 5280,
+        "wires": [
+            [
+                "6c3e2c1cf144e6e0"
+            ]
+        ]
+    },
+    {
+        "id": "6c3e2c1cf144e6e0",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "errorDeviation",
+        "func": "let dev = Math.abs(msg.payload[0] - msg.payload[1]);\nmsg.payload = dev;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 5280,
+        "wires": [
+            [
+                "a9def61c341ef9f6"
+            ]
+        ]
+    },
+    {
+        "id": "b2d48a65f8812480",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        pressure_delta: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Lọc cát nồng độ cao cấp 1\",\n        machine: \"Áp Bơm PIC102101 và PIC102101\",\n        name: \"Chênh áp\",\n        shift: shift\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 5280,
+        "wires": [
+            [
+                "00e32baf9d31d11a"
+            ]
+        ]
+    },
+    {
+        "id": "ff361db3bd86fe5e",
+        "type": "comment",
+        "z": "98133cbdfd78e5b3",
+        "name": "Chênh áp",
+        "info": "",
+        "x": 200,
+        "y": 5200,
+        "wires": []
+    },
+    {
+        "id": "a9def61c341ef9f6",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 650,
+        "y": 5280,
+        "wires": [
+            [
+                "b2d48a65f8812480"
+            ]
+        ]
+    },
+    {
+        "id": "833921e661831d55",
+        "type": "link out",
+        "z": "98133cbdfd78e5b3",
+        "name": "pressure_out",
+        "mode": "link",
+        "links": [
+            "fcd85fdb890f8081"
+        ],
+        "x": 435,
+        "y": 4740,
+        "wires": []
+    },
+    {
+        "id": "f6160250efd31f6c",
+        "type": "link out",
+        "z": "98133cbdfd78e5b3",
+        "name": "pressure_in",
+        "mode": "link",
+        "links": [
+            "fcd85fdb890f8081"
+        ],
+        "x": 415,
+        "y": 4240,
+        "wires": []
+    },
+    {
+        "id": "00e32baf9d31d11a",
+        "type": "influxdb out",
+        "z": "98133cbdfd78e5b3",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1010,
+        "y": 5280,
+        "wires": []
+    },
+    {
+        "id": "bfd5e31c80a2d798",
+        "type": "comment",
+        "z": "98133cbdfd78e5b3",
+        "name": "Lưu lượng FIC102100",
+        "info": "",
+        "x": 240,
+        "y": 5360,
+        "wires": []
+    },
+    {
+        "id": "1cd6d757086cb250",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_flow_actual_14",
+        "diff": false,
+        "name": "",
+        "x": 240,
+        "y": 5420,
+        "wires": [
+            [
+                "487f68238cb13048"
+            ]
+        ]
+    },
+    {
+        "id": "21aa07adbcc24d31",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        flow_actual: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Lọc cát nồng độ cao cấp 1\",\n        machine: \"Lưu lượng FIC102100\",\n        name: \"Lưu lượng thực tế\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 5420,
+        "wires": [
+            [
+                "30615c47311d7c40"
+            ]
+        ]
+    },
+    {
+        "id": "30615c47311d7c40",
+        "type": "influxdb out",
+        "z": "98133cbdfd78e5b3",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 910,
+        "y": 5520,
+        "wires": []
+    },
+    {
+        "id": "e31ea809554c9322",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_flow_setpoint_14",
+        "diff": false,
+        "name": "",
+        "x": 250,
+        "y": 5480,
+        "wires": [
+            [
+                "da2ab407d5b1ae40"
+            ]
+        ]
+    },
+    {
+        "id": "7f5229f06a2d74cb",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        flow_setpoint: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Lọc cát nồng độ cao cấp 1\",\n        machine: \"Lưu lượng FIC102100\",\n        name: \"Lưu lượng cài đặt\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 5480,
+        "wires": [
+            [
+                "30615c47311d7c40"
+            ]
+        ]
+    },
+    {
+        "id": "6b2f38a70a803403",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_valve_setpoint_14",
+        "diff": false,
+        "name": "",
+        "x": 270,
+        "y": 5540,
+        "wires": [
+            [
+                "57b307a28607d0bc"
+            ]
+        ]
+    },
+    {
+        "id": "c7e93a4df618ca99",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        valve_setpoint: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Lọc cát nồng độ cao cấp 1\",\n        machine: \"Lưu lượng FIC102100\",\n        name: \"Van điều khiển\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 5540,
+        "wires": [
+            [
+                "30615c47311d7c40"
+            ]
+        ]
+    },
+    {
+        "id": "1361c4cfa90bc053",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_high_alarm_14",
+        "diff": false,
+        "name": "",
+        "x": 280,
+        "y": 5600,
+        "wires": [
+            [
+                "fe3a6cafe7d42ed6"
+            ]
+        ]
+    },
+    {
+        "id": "68d729e21bf3d729",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        high_alarm: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Lọc cát nồng độ cao cấp 1\",\n        machine: \"Lưu lượng FIC102100\",\n        name: \"Cảnh báo đỏ trên\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 5600,
+        "wires": [
+            [
+                "30615c47311d7c40"
+            ]
+        ]
+    },
+    {
+        "id": "c3bee9d65979d704",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_high_warning_14",
+        "diff": false,
+        "name": "",
+        "x": 290,
+        "y": 5660,
+        "wires": [
+            [
+                "f09bb846c14c2ef7"
+            ]
+        ]
+    },
+    {
+        "id": "621c0fa8b2d9aac9",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        high_warning: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Lọc cát nồng độ cao cấp 1\",\n        machine: \"Lưu lượng FIC102100\",\n        name: \"Cảnh báo vàng trên\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 5660,
+        "wires": [
+            [
+                "30615c47311d7c40"
+            ]
+        ]
+    },
+    {
+        "id": "7a9c727a459d0176",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_low_warning_14",
+        "diff": false,
+        "name": "",
+        "x": 290,
+        "y": 5720,
+        "wires": [
+            [
+                "283f9d0a02e72b49"
+            ]
+        ]
+    },
+    {
+        "id": "225bfe7a2f394293",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        low_warning: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Lọc cát nồng độ cao cấp 1\",\n        machine: \"Lưu lượng FIC102100\",\n        name: \"Cảnh báo vàng dưới\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 5720,
+        "wires": [
+            [
+                "30615c47311d7c40"
+            ]
+        ]
+    },
+    {
+        "id": "2956abc0043c454b",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_low_alarm_14",
+        "diff": false,
+        "name": "",
+        "x": 280,
+        "y": 5780,
+        "wires": [
+            [
+                "3d916e0ef9906881"
+            ]
+        ]
+    },
+    {
+        "id": "45f6b74eefb6abd1",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        low_alarm: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Lọc cát nồng độ cao cấp 1\",\n        machine: \"Lưu lượng FIC102100\",\n        name: \"Cảnh báo đỏ dưới\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 5780,
+        "wires": [
+            [
+                "30615c47311d7c40"
+            ]
+        ]
+    },
+    {
+        "id": "3d916e0ef9906881",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 490,
+        "y": 5780,
+        "wires": [
+            [
+                "45f6b74eefb6abd1"
+            ]
+        ]
+    },
+    {
+        "id": "283f9d0a02e72b49",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 490,
+        "y": 5720,
+        "wires": [
+            [
+                "225bfe7a2f394293"
+            ]
+        ]
+    },
+    {
+        "id": "f09bb846c14c2ef7",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 510,
+        "y": 5660,
+        "wires": [
+            [
+                "621c0fa8b2d9aac9"
+            ]
+        ]
+    },
+    {
+        "id": "fe3a6cafe7d42ed6",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 510,
+        "y": 5600,
+        "wires": [
+            [
+                "68d729e21bf3d729"
+            ]
+        ]
+    },
+    {
+        "id": "57b307a28607d0bc",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 510,
+        "y": 5540,
+        "wires": [
+            [
+                "c7e93a4df618ca99"
+            ]
+        ]
+    },
+    {
+        "id": "da2ab407d5b1ae40",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 510,
+        "y": 5480,
+        "wires": [
+            [
+                "7f5229f06a2d74cb"
+            ]
+        ]
+    },
+    {
+        "id": "487f68238cb13048",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 510,
+        "y": 5420,
+        "wires": [
+            [
+                "21aa07adbcc24d31"
+            ]
+        ]
+    },
+    {
+        "id": "f79e2be09d1ff2cc",
+        "type": "comment",
+        "z": "98133cbdfd78e5b3",
+        "name": "Bẫy cát",
+        "info": "",
+        "x": 190,
+        "y": 5880,
+        "wires": []
+    },
+    {
+        "id": "bc500416ee76e04a",
+        "type": "comment",
+        "z": "98133cbdfd78e5b3",
+        "name": "Áp bẫy cát PT102130",
+        "info": "",
+        "x": 240,
+        "y": 5920,
+        "wires": []
+    },
+    {
+        "id": "a712b0bcfae46a76",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_pressure_actual_15",
+        "diff": false,
+        "name": "",
+        "x": 260,
+        "y": 5980,
+        "wires": [
+            [
+                "ff9708d0e7ee9c36"
+            ]
+        ]
+    },
+    {
+        "id": "d348edb718c3f615",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        pressure_actual: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bẫy cát\",\n        machine: \"Áp PT102130\",\n        name: \"Áp thực tế\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 5980,
+        "wires": [
+            [
+                "f462eee2bef49b95"
+            ]
+        ]
+    },
+    {
+        "id": "f462eee2bef49b95",
+        "type": "influxdb out",
+        "z": "98133cbdfd78e5b3",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 910,
+        "y": 6080,
+        "wires": []
+    },
+    {
+        "id": "d3fe630aa985283c",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_high_alarm_15",
+        "diff": false,
+        "name": "",
+        "x": 280,
+        "y": 6040,
+        "wires": [
+            [
+                "b3c953b20678c49b"
+            ]
+        ]
+    },
+    {
+        "id": "83e7a45f9ee25ee3",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        high_alarm: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bẫy cát\",\n        machine: \"Áp PT102130\",\n        name: \"Cảnh báo đỏ trên\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 6040,
+        "wires": [
+            [
+                "f462eee2bef49b95"
+            ]
+        ]
+    },
+    {
+        "id": "96f08f2ade060975",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_high_warning_15",
+        "diff": false,
+        "name": "",
+        "x": 290,
+        "y": 6100,
+        "wires": [
+            [
+                "7ff2b5b5857ecfb7"
+            ]
+        ]
+    },
+    {
+        "id": "e7acfd476892686f",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        high_warning: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bẫy cát\",\n        machine: \"Áp PT102130\",\n        name: \"Cảnh báo vàng trên\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 6100,
+        "wires": [
+            [
+                "f462eee2bef49b95"
+            ]
+        ]
+    },
+    {
+        "id": "299a72e63ba0169a",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_low_warning_15",
+        "diff": false,
+        "name": "",
+        "x": 290,
+        "y": 6160,
+        "wires": [
+            [
+                "b9962c8b312f3c92"
+            ]
+        ]
+    },
+    {
+        "id": "759efa1d57e0a127",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        low_warning: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bẫy cát\",\n        machine: \"Áp PT102130\",\n        name: \"Cảnh báo vàng dưới\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 6160,
+        "wires": [
+            [
+                "f462eee2bef49b95"
+            ]
+        ]
+    },
+    {
+        "id": "3478afd0f447d0f1",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_low_alarm_15",
+        "diff": false,
+        "name": "",
+        "x": 280,
+        "y": 6220,
+        "wires": [
+            [
+                "844b8d864ad8a346"
+            ]
+        ]
+    },
+    {
+        "id": "d23579b04736e722",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        low_alarm: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bẫy cát\",\n        machine: \"Áp PT102130\",\n        name: \"Cảnh báo đỏ dưới\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 6220,
+        "wires": [
+            [
+                "f462eee2bef49b95"
+            ]
+        ]
+    },
+    {
+        "id": "844b8d864ad8a346",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 490,
+        "y": 6220,
+        "wires": [
+            [
+                "d23579b04736e722"
+            ]
+        ]
+    },
+    {
+        "id": "b9962c8b312f3c92",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 490,
+        "y": 6160,
+        "wires": [
+            [
+                "759efa1d57e0a127"
+            ]
+        ]
+    },
+    {
+        "id": "7ff2b5b5857ecfb7",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 510,
+        "y": 6100,
+        "wires": [
+            [
+                "e7acfd476892686f"
+            ]
+        ]
+    },
+    {
+        "id": "b3c953b20678c49b",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 510,
+        "y": 6040,
+        "wires": [
+            [
+                "83e7a45f9ee25ee3"
+            ]
+        ]
+    },
+    {
+        "id": "ff9708d0e7ee9c36",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 510,
+        "y": 5980,
+        "wires": [
+            [
+                "d348edb718c3f615"
+            ]
+        ]
+    },
+    {
+        "id": "04454f78bfeb88c2",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_fill_tm_16",
+        "diff": false,
+        "name": "",
+        "x": 250,
+        "y": 6340,
+        "wires": [
+            [
+                "5880dbd59b50c925"
+            ]
+        ]
+    },
+    {
+        "id": "86d516df67063d72",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        fill_tm: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bẫy cát\",\n        machine: \"Xả cát và sục phần lắng cát\",\n        name: \"Thời gian lấp đầy\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 6340,
+        "wires": [
+            [
+                "3934cf60f94ad4bb"
+            ]
+        ]
+    },
+    {
+        "id": "3934cf60f94ad4bb",
+        "type": "influxdb out",
+        "z": "98133cbdfd78e5b3",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 890,
+        "y": 6400,
+        "wires": []
+    },
+    {
+        "id": "863ef92eeb5aef4f",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_sludge_tm_16",
+        "diff": false,
+        "name": "",
+        "x": 240,
+        "y": 6400,
+        "wires": [
+            [
+                "1f356c33d344064f"
+            ]
+        ]
+    },
+    {
+        "id": "c6292f2a5c0edaa1",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        sludge_tm: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bẫy cát\",\n        machine: \"Xả cát và sục phần lắng cát\",\n        name: \"Thời gian thu gom xỉ\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 6400,
+        "wires": [
+            [
+                "3934cf60f94ad4bb"
+            ]
+        ]
+    },
+    {
+        "id": "e6d61cccf7e4abb2",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_drain_tm_16",
+        "diff": false,
+        "name": "",
+        "x": 250,
+        "y": 6460,
+        "wires": [
+            [
+                "1d69ba9456bb7473"
+            ]
+        ]
+    },
+    {
+        "id": "ebe9b7443712b4d6",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        drain_tm: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bẫy cát\",\n        machine: \"Xả cát và sục phần lắng cát\",\n        name: \"Thời gian xả nước\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 6460,
+        "wires": [
+            [
+                "3934cf60f94ad4bb"
+            ]
+        ]
+    },
+    {
+        "id": "1d69ba9456bb7473",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 470,
+        "y": 6460,
+        "wires": [
+            [
+                "ebe9b7443712b4d6"
+            ]
+        ]
+    },
+    {
+        "id": "1f356c33d344064f",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 470,
+        "y": 6400,
+        "wires": [
+            [
+                "c6292f2a5c0edaa1"
+            ]
+        ]
+    },
+    {
+        "id": "5880dbd59b50c925",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 470,
+        "y": 6340,
+        "wires": [
+            [
+                "86d516df67063d72"
+            ]
+        ]
+    },
+    {
+        "id": "bbbb6369f12822b5",
+        "type": "comment",
+        "z": "98133cbdfd78e5b3",
+        "name": "Bơm bột cấp 2",
+        "info": "",
+        "x": 220,
+        "y": 6560,
+        "wires": []
+    },
+    {
+        "id": "444ecd650ecf9679",
+        "type": "comment",
+        "z": "98133cbdfd78e5b3",
+        "name": "Động Cơ P10214",
+        "info": "",
+        "x": 220,
+        "y": 6620,
+        "wires": []
+    },
+    {
+        "id": "797668724292b8b1",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "b_ready_17",
+        "diff": false,
+        "name": "",
+        "x": 390,
+        "y": 6560,
+        "wires": [
+            [
+                "a4a39ff59de0b750"
+            ]
+        ]
+    },
+    {
+        "id": "a4a39ff59de0b750",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        b_ready: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bơm bột cấp 2\",\n        machine: \"Động Cơ P10214\",\n        name: \"Trạng thái sẵn sàng\",\n        shift: shift\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 6560,
+        "wires": [
+            [
+                "7cac0797a4eeba46"
+            ]
+        ]
+    },
+    {
+        "id": "0b223807b3eabe19",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "b_run_17",
+        "diff": false,
+        "name": "",
+        "x": 380,
+        "y": 6620,
+        "wires": [
+            [
+                "a5f31392c0d89fa2"
+            ]
+        ]
+    },
+    {
+        "id": "a5f31392c0d89fa2",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        b_run: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bơm bột cấp 2\",\n        machine: \"Động Cơ P10214\",\n        name: \"Trạng thái động cơ\",\n        shift: shift\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 6620,
+        "wires": [
+            [
+                "7cac0797a4eeba46"
+            ]
+        ]
+    },
+    {
+        "id": "5e09a21969811d82",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "b_fault_17",
+        "diff": false,
+        "name": "",
+        "x": 380,
+        "y": 6680,
+        "wires": [
+            [
+                "59b1175a16bd99bf"
+            ]
+        ]
+    },
+    {
+        "id": "59b1175a16bd99bf",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        b_fault: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bơm bột cấp 2\",\n        machine: \"Động Cơ P10214\",\n        name: \"Lỗi động cơ\",\n        shift: shift\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 6680,
+        "wires": [
+            [
+                "7cac0797a4eeba46"
+            ]
+        ]
+    },
+    {
+        "id": "7cac0797a4eeba46",
+        "type": "influxdb out",
+        "z": "98133cbdfd78e5b3",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 970,
+        "y": 6680,
+        "wires": []
+    },
+    {
+        "id": "118c02947e0de427",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_motor_current_17",
+        "diff": false,
+        "name": "",
+        "x": 310,
+        "y": 6740,
+        "wires": [
+            [
+                "d3b5baff4edc6797"
+            ]
+        ]
+    },
+    {
+        "id": "559e32e61824d564",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        motor_current: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bơm bột cấp 2\",\n        machine: \"Động Cơ P10214\",\n        name: \"Tải động cơ\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 6740,
+        "wires": [
+            [
+                "7cac0797a4eeba46"
+            ]
+        ]
+    },
+    {
+        "id": "ab8899c8acff2722",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_high_warning_17",
+        "diff": false,
+        "name": "",
+        "x": 310,
+        "y": 6800,
+        "wires": [
+            [
+                "0f95533a9f7f216d"
+            ]
+        ]
+    },
+    {
+        "id": "07ab3355590e8848",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        high_warning: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bơm bột cấp 2\",\n        machine: \"Động Cơ P10214\",\n        name: \"Cảnh báo vàng\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 6800,
+        "wires": [
+            [
+                "7cac0797a4eeba46"
+            ]
+        ]
+    },
+    {
+        "id": "b2af8cb17908e3f5",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_high_alarm_17",
+        "diff": false,
+        "name": "",
+        "x": 300,
+        "y": 6860,
+        "wires": [
+            [
+                "d91b1240e4ef8b6d"
+            ]
+        ]
+    },
+    {
+        "id": "7737f6ca7f8f9395",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        high_alarm: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bơm bột cấp 2\",\n        machine: \"Động Cơ P10214\",\n        name: \"Cảnh báo đỏ\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 6860,
+        "wires": [
+            [
+                "7cac0797a4eeba46"
+            ]
+        ]
+    },
+    {
+        "id": "07a0b3ea3fdce443",
+        "type": "comment",
+        "z": "98133cbdfd78e5b3",
+        "name": "Truyền động P10214",
+        "info": "",
+        "x": 230,
+        "y": 6660,
+        "wires": []
+    },
+    {
+        "id": "d91b1240e4ef8b6d",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 530,
+        "y": 6860,
+        "wires": [
+            [
+                "7737f6ca7f8f9395"
+            ]
+        ]
+    },
+    {
+        "id": "0f95533a9f7f216d",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 530,
+        "y": 6800,
+        "wires": [
+            [
+                "07ab3355590e8848"
+            ]
+        ]
+    },
+    {
+        "id": "d3b5baff4edc6797",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 530,
+        "y": 6740,
+        "wires": [
+            [
+                "559e32e61824d564"
+            ]
+        ]
+    },
+    {
+        "id": "37a23c414adb0531",
+        "type": "comment",
+        "z": "98133cbdfd78e5b3",
+        "name": "Áp bơm PIC102151",
+        "info": "",
+        "x": 230,
+        "y": 6940,
+        "wires": []
+    },
+    {
+        "id": "766e1e03ee33dff7",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_pressure_actual_18",
+        "diff": false,
+        "name": "",
+        "x": 260,
+        "y": 7000,
+        "wires": [
+            [
+                "41ef371f62857e61"
+            ]
+        ]
+    },
+    {
+        "id": "d42608b165ade46c",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        pressure_actual: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bơm bột cấp 2\",\n        machine: \"Áp Bơm PIC102151\",\n        name: \"Áp suất thực tế\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 7000,
+        "wires": [
+            [
+                "10e5f214c6befd9c"
+            ]
+        ]
+    },
+    {
+        "id": "10e5f214c6befd9c",
+        "type": "influxdb out",
+        "z": "98133cbdfd78e5b3",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 910,
+        "y": 7100,
+        "wires": []
+    },
+    {
+        "id": "4bc2615362e2a0ca",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_pressure_setpoint_18",
+        "diff": false,
+        "name": "",
+        "x": 260,
+        "y": 7060,
+        "wires": [
+            [
+                "3fe3d9ca3d65e2d5"
+            ]
+        ]
+    },
+    {
+        "id": "884168610878ac62",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        pressure_setpoint: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bơm bột cấp 2\",\n        machine: \"Áp Bơm PIC102151\",\n        name: \"Áp suất cài đặt\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 7060,
+        "wires": [
+            [
+                "10e5f214c6befd9c"
+            ]
+        ]
+    },
+    {
+        "id": "6d6fa92d226a2166",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_valve_setpoint_18",
+        "diff": false,
+        "name": "",
+        "x": 270,
+        "y": 7120,
+        "wires": [
+            [
+                "82ce89ae2b095bb3"
+            ]
+        ]
+    },
+    {
+        "id": "037406a5934b23e6",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        valve_setpoint: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bơm bột cấp 2\",\n        machine: \"Áp Bơm PIC102151\",\n        name: \"Van điều khiển\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 7120,
+        "wires": [
+            [
+                "10e5f214c6befd9c"
+            ]
+        ]
+    },
+    {
+        "id": "f6080b6df8bbe56b",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_high_alarm_18",
+        "diff": false,
+        "name": "",
+        "x": 280,
+        "y": 7180,
+        "wires": [
+            [
+                "c347a76da16bb76e"
+            ]
+        ]
+    },
+    {
+        "id": "e68aa3ec8f1411b3",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        high_alarm: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bơm bột cấp 2\",\n        machine: \"Áp Bơm PIC102151\",\n        name: \"Cảnh báo đỏ trên\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 7180,
+        "wires": [
+            [
+                "10e5f214c6befd9c"
+            ]
+        ]
+    },
+    {
+        "id": "2e03e1d16452a660",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_high_warning_18",
+        "diff": false,
+        "name": "",
+        "x": 290,
+        "y": 7240,
+        "wires": [
+            [
+                "11e3477a7fc94a09"
+            ]
+        ]
+    },
+    {
+        "id": "90e736929f2c38c5",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        high_warning: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bơm bột cấp 2\",\n        machine: \"Áp Bơm PIC102151\",\n        name: \"Cảnh báo vàng trên\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 7240,
+        "wires": [
+            [
+                "10e5f214c6befd9c"
+            ]
+        ]
+    },
+    {
+        "id": "0dba506c82e8fb83",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_low_warning_18",
+        "diff": false,
+        "name": "",
+        "x": 290,
+        "y": 7300,
+        "wires": [
+            [
+                "373a691fb2296959"
+            ]
+        ]
+    },
+    {
+        "id": "fb160f5b56f192da",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        low_warning: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bơm bột cấp 2\",\n        machine: \"Áp Bơm PIC102151\",\n        name: \"Cảnh báo vàng dưới\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 7300,
+        "wires": [
+            [
+                "10e5f214c6befd9c"
+            ]
+        ]
+    },
+    {
+        "id": "407e5fe8d052a59e",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "single",
+        "variable": "r_low_alarm_18",
+        "diff": false,
+        "name": "",
+        "x": 280,
+        "y": 7360,
+        "wires": [
+            [
+                "a1b7d84272653355"
+            ]
+        ]
+    },
+    {
+        "id": "a966e760dcc292b6",
+        "type": "function",
+        "z": "98133cbdfd78e5b3",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\nmsg.payload = [\n    {\n        low_alarm: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ bột\",\n        subsystem: \"Hệ PULPER\",\n        section: \"Hệ thống lọc cát nồng độ cao\",\n        line: \"Bơm bột cấp 2\",\n        machine: \"Áp Bơm PIC102151\",\n        name: \"Cảnh báo đỏ dưới\",\n        shift: shift\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 7360,
+        "wires": [
+            [
+                "10e5f214c6befd9c"
+            ]
+        ]
+    },
+    {
+        "id": "a1b7d84272653355",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 490,
+        "y": 7360,
+        "wires": [
+            [
+                "a966e760dcc292b6"
+            ]
+        ]
+    },
+    {
+        "id": "373a691fb2296959",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 490,
+        "y": 7300,
+        "wires": [
+            [
+                "fb160f5b56f192da"
+            ]
+        ]
+    },
+    {
+        "id": "11e3477a7fc94a09",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 510,
+        "y": 7240,
+        "wires": [
+            [
+                "90e736929f2c38c5"
+            ]
+        ]
+    },
+    {
+        "id": "c347a76da16bb76e",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 510,
+        "y": 7180,
+        "wires": [
+            [
+                "e68aa3ec8f1411b3"
+            ]
+        ]
+    },
+    {
+        "id": "82ce89ae2b095bb3",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 510,
+        "y": 7120,
+        "wires": [
+            [
+                "037406a5934b23e6"
+            ]
+        ]
+    },
+    {
+        "id": "3fe3d9ca3d65e2d5",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 510,
+        "y": 7060,
+        "wires": [
+            [
+                "884168610878ac62"
+            ]
+        ]
+    },
+    {
+        "id": "41ef371f62857e61",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "x": 510,
+        "y": 7000,
+        "wires": [
+            [
+                "d42608b165ade46c"
+            ]
+        ]
+    },
+    {
+        "id": "aca15715322fe734",
+        "type": "miza-s7-group",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "endpoint": "a65e47561aad34a5",
+        "templateNode": "ade87f31c9e37a95",
+        "groupIndex": "18",
+        "bufferLen": "10",
+        "throttle": "60",
+        "x": 340,
+        "y": 7580,
+        "wires": [
+            [
+                "aeb5bf220902b545"
+            ],
+            [
+                "7585b433dfacc968"
+            ],
+            [
+                "072d4f42978b45b4"
+            ],
+            [
+                "0f58b7d897bf6875"
+            ],
+            [
+                "2e9fbcc693fb2b5e"
+            ],
+            [
+                "134813d035b71c86"
+            ],
+            [
+                "b561edbcd1ae245c"
+            ]
+        ]
+    },
+    {
+        "id": "8e56cbf5fade422c",
+        "type": "comment",
+        "z": "98133cbdfd78e5b3",
+        "name": "Bơm bột cấp 2",
+        "info": "",
+        "x": 180,
+        "y": 7460,
+        "wires": []
+    },
+    {
+        "id": "081cde1598c68606",
+        "type": "comment",
+        "z": "98133cbdfd78e5b3",
+        "name": "Áp vào PIC102151",
+        "info": "",
+        "x": 390,
+        "y": 7460,
+        "wires": []
+    },
+    {
+        "id": "e834e6c05e5bb766",
+        "type": "s7 in",
+        "z": "98133cbdfd78e5b3",
+        "endpoint": "225494695b8dbe85",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 110,
+        "y": 7580,
+        "wires": [
+            [
+                "aca15715322fe734"
+            ]
+        ]
+    },
+    {
+        "id": "aeb5bf220902b545",
+        "type": "miza-insert",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "configNode": "b103f4e2283f8471",
+        "fieldName": "pressure_in",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ bột",
+        "subsystem": "Hệ PULPER",
+        "section": "Hệ thống lọc cát nồng độ cao",
+        "line": "Lọc cát nồng độ cao cấp 2",
+        "machine": "Áp Bơm PIC102151",
+        "label": "Áp suất vào",
+        "x": 650,
+        "y": 7540,
+        "wires": [
+            [
+                "b7bd63f3ba9c2e93"
+            ]
+        ]
+    },
+    {
+        "id": "7585b433dfacc968",
+        "type": "miza-insert",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "configNode": "b103f4e2283f8471",
+        "fieldName": "pressure_setpoint",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ bột",
+        "subsystem": "Hệ PULPER",
+        "section": "Hệ thống lọc cát nồng độ cao",
+        "line": "Lọc cát nồng độ cao cấp 2",
+        "machine": "Áp Bơm PIC102151",
+        "label": "Áp suất cài đặt",
+        "x": 670,
+        "y": 7580,
+        "wires": [
+            [
+                "b7bd63f3ba9c2e93"
+            ]
+        ]
+    },
+    {
+        "id": "072d4f42978b45b4",
+        "type": "miza-insert",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "configNode": "b103f4e2283f8471",
+        "fieldName": "valve_setpoint",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ bột",
+        "subsystem": "Hệ PULPER",
+        "section": "Hệ thống lọc cát nồng độ cao",
+        "line": "Lọc cát nồng độ cao cấp 2",
+        "machine": "Áp Bơm PIC102151",
+        "label": "Van điều khiển",
+        "x": 660,
+        "y": 7620,
+        "wires": [
+            [
+                "b7bd63f3ba9c2e93"
+            ]
+        ]
+    },
+    {
+        "id": "0f58b7d897bf6875",
+        "type": "miza-insert",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "configNode": "b103f4e2283f8471",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ bột",
+        "subsystem": "Hệ PULPER",
+        "section": "Hệ thống lọc cát nồng độ cao",
+        "line": "Lọc cát nồng độ cao cấp 2",
+        "machine": "Áp Bơm PIC102151",
+        "label": "Cảnh báo đỏ trên",
+        "x": 650,
+        "y": 7660,
+        "wires": [
+            [
+                "b7bd63f3ba9c2e93"
+            ]
+        ]
+    },
+    {
+        "id": "2e9fbcc693fb2b5e",
+        "type": "miza-insert",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "configNode": "b103f4e2283f8471",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ bột",
+        "subsystem": "Hệ PULPER",
+        "section": "Hệ thống lọc cát nồng độ cao",
+        "line": "Lọc cát nồng độ cao cấp 2",
+        "machine": "Áp Bơm PIC102151",
+        "label": "Cảnh báo vàng trên",
+        "x": 650,
+        "y": 7700,
+        "wires": [
+            [
+                "b7bd63f3ba9c2e93"
+            ]
+        ]
+    },
+    {
+        "id": "134813d035b71c86",
+        "type": "miza-insert",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "configNode": "b103f4e2283f8471",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ bột",
+        "subsystem": "Hệ PULPER",
+        "section": "Hệ thống lọc cát nồng độ cao",
+        "line": "Lọc cát nồng độ cao cấp 2",
+        "machine": "Áp Bơm PIC102151",
+        "label": "Cảnh báo vàng dưới",
+        "x": 650,
+        "y": 7740,
+        "wires": [
+            [
+                "b7bd63f3ba9c2e93"
+            ]
+        ]
+    },
+    {
+        "id": "b561edbcd1ae245c",
+        "type": "miza-insert",
+        "z": "98133cbdfd78e5b3",
+        "name": "",
+        "configNode": "b103f4e2283f8471",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ bột",
+        "subsystem": "Hệ PULPER",
+        "section": "Hệ thống lọc cát nồng độ cao",
+        "line": "Lọc cát nồng độ cao cấp 2",
+        "machine": "Áp Bơm PIC102151",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 650,
+        "y": 7780,
+        "wires": [
+            [
+                "b7bd63f3ba9c2e93"
+            ]
+        ]
+    },
+    {
+        "id": "b7bd63f3ba9c2e93",
+        "type": "influxdb out",
+        "z": "98133cbdfd78e5b3",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 890,
+        "y": 7640,
+        "wires": []
     },
     {
         "id": "0f87eac296ab1190",
