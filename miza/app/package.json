@@ -14,6 +14,8 @@
         "node-red-contrib-throttle": "0.1.7",
         "node-red-contrib-image-output": "0.6.4",
         "node-red-contrib-postgresql": "0.15.4",
-        "node-red-contrib-telegrambot": "17.0.5"
+        "node-red-contrib-telegrambot": "17.0.5",
+        "node-red-contrib-miza": "1.0.0",
+        "@sieumayman/node-red-contrib-miza": "1.0.9"
     }
 }
