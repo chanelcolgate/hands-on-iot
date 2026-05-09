@@ -3,23 +3,10 @@
   "kind": "Dashboard",
   "metadata": {
     "name": "adjwxsd",
-    "namespace": "default",
-    "uid": "33c9d8e4-9885-4e13-b59f-bf64cfe7d0e2",
-    "resourceVersion": "1778297814958012",
     "generation": 21,
     "creationTimestamp": "2026-04-22T07:56:52Z",
-    "labels": {
-      "grafana.app/deprecatedInternalID": "2226543403462656"
-    },
-    "annotations": {
-      "grafana.app/createdBy": "user:afb1x6w50nojkb",
-      "grafana.app/folder": "efjtcg12o4ttsa",
-      "grafana.app/saved-from-ui": "Grafana v13.0.1 (a100054f)",
-      "grafana.app/updatedBy": "user:afb1x6w50nojkb",
-      "grafana.app/updatedTimestamp": "2026-05-09T03:36:54Z",
-      "grafana.app/folderTitle": "Hệ Bột",
-      "grafana.app/folderUrl": "/dashboards/f/efjtcg12o4ttsa/he-bot"
-    }
+    "labels": {},
+    "annotations": {}
   },
   "spec": {
     "annotations": [
@@ -30,10 +17,10 @@
             "kind": "DataQuery",
             "group": "grafana",
             "version": "v0",
-            "datasource": {
-              "name": "-- Grafana --"
-            },
-            "spec": {}
+            "spec": {},
+            "labels": {
+              "grafana.app/export-label": "grafana-1"
+            }
           },
           "enable": true,
           "hide": true,
@@ -64,9 +51,6 @@
                       "kind": "DataQuery",
                       "group": "influxdb",
                       "version": "v0",
-                      "datasource": {
-                        "name": "ffbbihey2q70gc"
-                      },
                       "spec": {
                         "alias": "$tag_name",
                         "groupBy": [
@@ -123,6 +107,9 @@
                             "value": "Trạng thái động cơ"
                           }
                         ]
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "influxdb-1"
                       }
                     },
                     "refId": "A",
@@ -136,9 +123,6 @@
                       "kind": "DataQuery",
                       "group": "influxdb",
                       "version": "v0",
-                      "datasource": {
-                        "name": "ffbbihey2q70gc"
-                      },
                       "spec": {
                         "alias": "$tag_name",
                         "groupBy": [
@@ -193,6 +177,9 @@
                             "value": "Lỗi động cơ"
                           }
                         ]
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "influxdb-1"
                       }
                     },
                     "refId": "B",
@@ -617,8 +604,8 @@
         "spec": {
           "name": "line",
           "current": {
-            "text": "Băng tải",
-            "value": "Băng tải"
+            "text": "",
+            "value": ""
           },
           "label": "line",
           "hide": "dontHide",
@@ -628,12 +615,12 @@
             "kind": "DataQuery",
             "group": "influxdb",
             "version": "v0",
-            "datasource": {
-              "name": "ffbbihey2q70gc"
-            },
             "spec": {
               "query": "show tag values from \"miza_realtime\" with key = \"line\"",
               "refId": "InfluxVariableQueryEditor-VariableQuery"
+            },
+            "labels": {
+              "grafana.app/export-label": "influxdb-1"
             }
           },
           "regex": "",
