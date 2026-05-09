@@ -6,6 +6,11 @@ services:
       - "1890:1880"
     volumes:
       - ./data:/data
+      - /home/mind/Documents/workspaces/node-red-contrib-miza:/workspace/node-red-contrib-miza
+    networks:
+      inet_network:
+      plc_network:
+        ipv4_address: 192.168.1.174
 
   influxdb:
     image: "influxdb:1.8.3"
@@ -17,9 +22,16 @@ services:
       - "influx-data:/var/lib/influxdb"
     environment:
       - INFLUXDB_BIND_ADDRESS=:8088
+    networks:
+      inet_network:
+      # plc_network:
+      #   ipv4_address: 192.168.1.175
+    
 
   renderer:
     image: grafana/grafana-image-renderer:latest
+    environment:
+      - AUTH_TOKEN=mind
 
   grafana:
     image: "grafana/grafana"
@@ -28,10 +40,14 @@ services:
     volumes:
       - "grafana-data:/var/lib/grafana"
       - "./grafana:/etc/grafana"
+      - "./grafana/dashboards:/var/lib/grafana/dashboards"
     environment:
-      GF_RENDERING_SERVER_URL: http://renderer:8081/render
-      GF_RENDERING_CALLBACK_URL: http://grafana:3000/
-      GF_SERVER_ROOT_URL: https://miza1.mindfc.net
+      - GF_RENDERING_SERVER_URL=http://renderer:8081/render
+      - GF_RENDERING_CALLBACK_URL=http://grafana:3000/
+      - GF_SERVER_ROOT_URL=https://miza1.mindfc.net
+      - GF_RENDERING_RENDERER_TOKEN=mind
+    networks:
+      inet_network: {}
 
   timescaledb:
     image: timescale/timescaledb:latest-pg15
@@ -48,11 +64,35 @@ services:
 
     volumes:
       - timescaledb-data:/var/lib/postgresql/data
+    networks:
+      inet_network: {}
 
   adminer:
     image: adminer
     ports:
       - "8080:8080"
+    networks:
+      inet_network: {}
+
+networks:
+  plc_network:
+    driver: macvlan
+    driver_opts:
+      parent: enp0s31f6  # The physical interface you want to use
+    ipam:
+      config:
+      - subnet: 192.168.1.0/24
+      #     gateway: 192.168.1.1
+  plc_network2:
+    driver: macvlan
+    driver_opts:
+      parent: enx00e04c70b7bd
+    ipam:
+      config:
+      - subnet: 192.168.0.0/24
+  inet_network:
+    driver: bridge
+      
 
 volumes:
   node-red-data:
