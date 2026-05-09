@@ -1,0 +1,662 @@
+{
+  "apiVersion": "dashboard.grafana.app/v2",
+  "kind": "Dashboard",
+  "metadata": {
+    "name": "adjwxsd",
+    "namespace": "default",
+    "uid": "33c9d8e4-9885-4e13-b59f-bf64cfe7d0e2",
+    "resourceVersion": "1778297814958012",
+    "generation": 21,
+    "creationTimestamp": "2026-04-22T07:56:52Z",
+    "labels": {
+      "grafana.app/deprecatedInternalID": "2226543403462656"
+    },
+    "annotations": {
+      "grafana.app/createdBy": "user:afb1x6w50nojkb",
+      "grafana.app/folder": "efjtcg12o4ttsa",
+      "grafana.app/saved-from-ui": "Grafana v13.0.1 (a100054f)",
+      "grafana.app/updatedBy": "user:afb1x6w50nojkb",
+      "grafana.app/updatedTimestamp": "2026-05-09T03:36:54Z",
+      "grafana.app/folderTitle": "Hệ Bột",
+      "grafana.app/folderUrl": "/dashboards/f/efjtcg12o4ttsa/he-bot"
+    }
+  },
+  "spec": {
+    "annotations": [
+      {
+        "kind": "AnnotationQuery",
+        "spec": {
+          "query": {
+            "kind": "DataQuery",
+            "group": "grafana",
+            "version": "v0",
+            "datasource": {
+              "name": "-- Grafana --"
+            },
+            "spec": {}
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "builtIn": true
+        }
+      }
+    ],
+    "cursorSync": "Off",
+    "editable": true,
+    "elements": {
+      "panel-2": {
+        "kind": "Panel",
+        "spec": {
+          "id": 2,
+          "title": "Trạng thái động cơ",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "influxdb",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "ffbbihey2q70gc"
+                      },
+                      "spec": {
+                        "alias": "$tag_name",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "name::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "null"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "miza_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "query": "SELECT last(\"b_run\") FROM \"miza_realtime\" WHERE (\"machine\"::tag =~ /^$machine$/ AND \"name\"::tag = 'Trạng thái động cơ') AND $timeFilter GROUP BY time($__interval), \"name\"::tag fill(null)",
+                        "rawQuery": false,
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "b_run"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "last"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "condition": "AND",
+                            "key": "line::tag",
+                            "operator": "=~",
+                            "value": "/^$line$/"
+                          },
+                          {
+                            "condition": "AND",
+                            "key": "name::tag",
+                            "operator": "=",
+                            "value": "Trạng thái động cơ"
+                          }
+                        ]
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "influxdb",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "ffbbihey2q70gc"
+                      },
+                      "spec": {
+                        "alias": "$tag_name",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "name::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "null"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "miza_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "b_fault"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "last"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "condition": "AND",
+                            "key": "line::tag",
+                            "operator": "=~",
+                            "value": "/^$line$/"
+                          },
+                          {
+                            "condition": "AND",
+                            "key": "name::tag",
+                            "operator": "=",
+                            "value": "Lỗi động cơ"
+                          }
+                        ]
+                      }
+                    },
+                    "refId": "B",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [],
+              "queryOptions": {
+                "interval": "1m"
+              }
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "state-timeline",
+            "version": "13.0.1",
+            "spec": {
+              "options": {
+                "alignValue": "left",
+                "annotations": {
+                  "clustering": -1,
+                  "multiLane": false
+                },
+                "legend": {
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "mergeValues": true,
+                "rowHeight": 0.9,
+                "showValue": "auto",
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "single",
+                  "sort": "none"
+                }
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "mappings": [
+                    {
+                      "type": "value",
+                      "options": {
+                        "0": {
+                          "text": "STOP",
+                          "color": "red",
+                          "index": 4
+                        },
+                        "1": {
+                          "text": "RUN",
+                          "color": "green",
+                          "index": 3
+                        }
+                      }
+                    },
+                    {
+                      "type": "special",
+                      "options": {
+                        "match": "true",
+                        "result": {
+                          "text": "RUN",
+                          "color": "green",
+                          "index": 0
+                        }
+                      }
+                    },
+                    {
+                      "type": "special",
+                      "options": {
+                        "match": "false",
+                        "result": {
+                          "text": "STOP",
+                          "color": "red",
+                          "index": 1
+                        }
+                      }
+                    },
+                    {
+                      "type": "special",
+                      "options": {
+                        "match": "null+nan",
+                        "result": {
+                          "text": "IDLE",
+                          "color": "text",
+                          "index": 2
+                        }
+                      }
+                    }
+                  ],
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "green"
+                      },
+                      {
+                        "value": 80,
+                        "color": "red"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "mode": "continuous-GrYlRd"
+                  },
+                  "custom": {
+                    "axisPlacement": "auto",
+                    "fillOpacity": 70,
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "insertNulls": false,
+                    "lineWidth": 0,
+                    "spanNulls": false
+                  }
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "scope": "series",
+                      "options": "Lỗi động cơ"
+                    },
+                    "properties": [
+                      {
+                        "id": "mappings",
+                        "value": [
+                          {
+                            "options": {
+                              "0": {
+                                "color": "green",
+                                "index": 3,
+                                "text": "NO ERROR"
+                              },
+                              "1": {
+                                "color": "red",
+                                "index": 2,
+                                "text": "ERROR"
+                              }
+                            },
+                            "type": "value"
+                          },
+                          {
+                            "options": {
+                              "match": "true",
+                              "result": {
+                                "color": "red",
+                                "index": 0,
+                                "text": "ERROR"
+                              }
+                            },
+                            "type": "special"
+                          },
+                          {
+                            "options": {
+                              "match": "false",
+                              "result": {
+                                "color": "green",
+                                "index": 1,
+                                "text": "NO ERROR"
+                              }
+                            },
+                            "type": "special"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "layout": {
+      "kind": "TabsLayout",
+      "spec": {
+        "tabs": [
+          {
+            "kind": "TabsLayoutTab",
+            "spec": {
+              "title": "Động Cơ M10201",
+              "layout": {
+                "kind": "AutoGridLayout",
+                "spec": {
+                  "maxColumnCount": 3,
+                  "columnWidthMode": "standard",
+                  "rowHeightMode": "standard",
+                  "items": [
+                    {
+                      "kind": "AutoGridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-2"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "links": [
+      {
+        "title": "01_Nguyên liệu đầu vào",
+        "type": "dashboards",
+        "icon": "external link",
+        "tooltip": "",
+        "url": "",
+        "tags": [
+          "Nguyên liệu đầu vào"
+        ],
+        "asDropdown": true,
+        "targetBlank": false,
+        "includeVars": false,
+        "keepTime": true,
+        "placement": "inControlsMenu"
+      },
+      {
+        "title": "02_Thủy lực bột",
+        "type": "dashboards",
+        "icon": "external link",
+        "tooltip": "",
+        "url": "",
+        "tags": [
+          "Thủy lực bột"
+        ],
+        "asDropdown": true,
+        "targetBlank": false,
+        "includeVars": false,
+        "keepTime": true,
+        "placement": "inControlsMenu"
+      },
+      {
+        "title": "03_Lọc cát nồng độ cao",
+        "type": "dashboards",
+        "icon": "external link",
+        "tooltip": "",
+        "url": "",
+        "tags": [
+          "Lọc cát nồng độ cao"
+        ],
+        "asDropdown": true,
+        "targetBlank": false,
+        "includeVars": false,
+        "keepTime": true,
+        "placement": "inControlsMenu"
+      },
+      {
+        "title": "04_Hệ thống sàng thô",
+        "type": "dashboards",
+        "icon": "external link",
+        "tooltip": "",
+        "url": "",
+        "tags": [
+          "Hệ thống sàng thô"
+        ],
+        "asDropdown": true,
+        "targetBlank": false,
+        "includeVars": false,
+        "keepTime": true,
+        "placement": "inControlsMenu"
+      },
+      {
+        "title": "05_Hệ thống sàng phân sợi 1",
+        "type": "dashboards",
+        "icon": "external link",
+        "tooltip": "",
+        "url": "",
+        "tags": [
+          "Hệ thống sàng phân sợi 1"
+        ],
+        "asDropdown": true,
+        "targetBlank": false,
+        "includeVars": false,
+        "keepTime": true,
+        "placement": "inControlsMenu"
+      },
+      {
+        "title": "06_Hệ thống lọc cát nồng độ thấp",
+        "type": "dashboards",
+        "icon": "external link",
+        "tooltip": "",
+        "url": "",
+        "tags": [
+          "Hệ thống lọc cát nồng độ thấp"
+        ],
+        "asDropdown": true,
+        "targetBlank": false,
+        "includeVars": false,
+        "keepTime": true,
+        "placement": "inControlsMenu"
+      },
+      {
+        "title": "07_Hệ thống sàng tinh",
+        "type": "dashboards",
+        "icon": "external link",
+        "tooltip": "",
+        "url": "",
+        "tags": [
+          "Hệ thống sàng tinh"
+        ],
+        "asDropdown": true,
+        "targetBlank": false,
+        "includeVars": false,
+        "keepTime": true,
+        "placement": "inControlsMenu"
+      },
+      {
+        "title": "08_Hệ thống lọc đĩa cô đặc",
+        "type": "dashboards",
+        "icon": "external link",
+        "tooltip": "",
+        "url": "",
+        "tags": [
+          "Hệ thống lọc đĩa cô đặc"
+        ],
+        "asDropdown": true,
+        "targetBlank": false,
+        "includeVars": false,
+        "keepTime": true,
+        "placement": "inControlsMenu"
+      },
+      {
+        "title": "09_Hệ thống phân tán nhiệt",
+        "type": "dashboards",
+        "icon": "external link",
+        "tooltip": "",
+        "url": "",
+        "tags": [
+          "Hệ thống phân tán nhiệt"
+        ],
+        "asDropdown": true,
+        "targetBlank": false,
+        "includeVars": false,
+        "keepTime": true,
+        "placement": "inControlsMenu"
+      },
+      {
+        "title": "10_Hệ thống nghiền đĩa LF",
+        "type": "dashboards",
+        "icon": "external link",
+        "tooltip": "",
+        "url": "",
+        "tags": [
+          "Hệ thống nghiền đĩa LF"
+        ],
+        "asDropdown": true,
+        "targetBlank": false,
+        "includeVars": false,
+        "keepTime": true,
+        "placement": "inControlsMenu"
+      },
+      {
+        "title": "11_Hệ thống sàng phân sợi 2",
+        "type": "dashboards",
+        "icon": "external link",
+        "tooltip": "",
+        "url": "",
+        "tags": [
+          "Hệ thống sàng phân sợi 2"
+        ],
+        "asDropdown": true,
+        "targetBlank": false,
+        "includeVars": false,
+        "keepTime": true,
+        "placement": "inControlsMenu"
+      },
+      {
+        "title": "12_Tháp bột thành phẩm",
+        "type": "dashboards",
+        "icon": "external link",
+        "tooltip": "",
+        "url": "",
+        "tags": [
+          "Tháp bột thành phẩm"
+        ],
+        "asDropdown": true,
+        "targetBlank": false,
+        "includeVars": false,
+        "keepTime": true,
+        "placement": "inControlsMenu"
+      }
+    ],
+    "liveNow": false,
+    "preload": false,
+    "tags": [
+      "Nguyên liệu đầu vào"
+    ],
+    "timeSettings": {
+      "timezone": "browser",
+      "from": "now/d",
+      "to": "now",
+      "autoRefresh": "auto",
+      "autoRefreshIntervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "hideTimepicker": false,
+      "fiscalYearStartMonth": 0
+    },
+    "title": "01_Nguyên Liệu Đầu Vào",
+    "variables": [
+      {
+        "kind": "QueryVariable",
+        "spec": {
+          "name": "line",
+          "current": {
+            "text": "Băng tải",
+            "value": "Băng tải"
+          },
+          "label": "line",
+          "hide": "dontHide",
+          "refresh": "onDashboardLoad",
+          "skipUrlSync": false,
+          "query": {
+            "kind": "DataQuery",
+            "group": "influxdb",
+            "version": "v0",
+            "datasource": {
+              "name": "ffbbihey2q70gc"
+            },
+            "spec": {
+              "query": "show tag values from \"miza_realtime\" with key = \"line\"",
+              "refId": "InfluxVariableQueryEditor-VariableQuery"
+            }
+          },
+          "regex": "",
+          "regexApplyTo": "value",
+          "sort": "disabled",
+          "definition": "show tag values from \"miza_realtime\" with key = \"line\"",
+          "options": [],
+          "multi": false,
+          "includeAll": false,
+          "allowCustomValue": true
+        }
+      }
+    ],
+    "preferences": {
+      "layout": {
+        "kind": "AutoGridLayout",
+        "spec": {
+          "maxColumnCount": 3,
+          "columnWidthMode": "standard",
+          "rowHeightMode": "standard",
+          "items": []
+        }
+      }
+    }
+  }
+}
