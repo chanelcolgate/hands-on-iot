@@ -2,7 +2,7 @@
   "apiVersion": "dashboard.grafana.app/v2",
   "kind": "Dashboard",
   "metadata": {
-    "name": "adjwxsd",
+    "name": "01_Nguyen_Lieu_Dau_Vao",
     "generation": 21,
     "creationTimestamp": "2026-04-22T07:56:52Z",
     "labels": {},
