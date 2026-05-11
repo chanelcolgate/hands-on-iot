@@ -64,3 +64,11 @@ flow.get('count')
 global.set('count', 5)
 global.set('count')
 ```
+
+## Backup Grafana Dashboard
+
+Use Provisioning + GitHub for Grafana:
+1. Dashboard on Grafana
+2. Save as copy at Dashboard
+3. Commit to GitHub
+4. Grafana auto pull dashboard in provisioning
