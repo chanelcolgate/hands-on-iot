@@ -4401,6 +4401,18 @@
     },
     "links": [
       {
+        "asDropdown": false,
+        "icon": "external link",
+        "includeVars": false,
+        "keepTime": false,
+        "tags": [],
+        "targetBlank": true,
+        "title": "Source (GitHub)",
+        "tooltip": "View source file in repository",
+        "type": "link",
+        "url": "https://github.com/chanelcolgate/hands-on-iot/blob/folder/2026-05-11-9h0xg/grafana/dashboards/HE_BOT/06_He_thong_loc_cat_nong_do_thap/04_He_thong_loc_cat_nong_do_thap_cap_4.json"
+      },
+      {
         "asDropdown": true,
         "icon": "external link",
         "includeVars": false,
@@ -4626,7 +4638,7 @@
       "timezone": "browser",
       "to": "now"
     },
-    "title": "04_Hệ thống lọc cát nồng độ thấp cấp 4 Copy",
+    "title": "04_Hệ thống lọc cát nồng độ thấp cấp 4",
     "variables": [
       {
         "kind": "QueryVariable",
