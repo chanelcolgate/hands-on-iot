@@ -3410,6 +3410,18 @@
     },
     "links": [
       {
+        "asDropdown": false,
+        "icon": "external link",
+        "includeVars": false,
+        "keepTime": false,
+        "tags": [],
+        "targetBlank": true,
+        "title": "Source (GitHub)",
+        "tooltip": "View source file in repository",
+        "type": "link",
+        "url": "https://github.com/chanelcolgate/hands-on-iot/blob/folder/2026-05-11-9h0xg/grafana/dashboards/HE_BOT/04_He_thong_sang_phan_soi_1/02_He_thong_sang_tho_cap_2_E10220.json"
+      },
+      {
         "asDropdown": true,
         "icon": "external link",
         "includeVars": false,
@@ -3638,7 +3650,7 @@
       "timezone": "browser",
       "to": "now"
     },
-    "title": "02_Hệ thống sàng thô cấp 2 E10220 Copy",
+    "title": "02_Hệ thống sàng thô cấp 2 E10220 ",
     "variables": [
       {
         "kind": "QueryVariable",
