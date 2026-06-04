@@ -12,6 +12,11 @@ services:
       inet_network:
       plc_network:
         ipv4_address: 192.168.1.174
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2m"
+        max-file: "1"
 
   influxdb:
     image: "influxdb:1.8.3"
@@ -27,7 +32,13 @@ services:
     networks:
       inet_network:
       # plc_network:
-      #   ipv4_address: 192.168.1.175
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2m"
+        max-file: "1"
+
+ #   ipv4_address: 192.168.1.175
 
   grafana:
     image: "grafana/grafana"
@@ -47,6 +58,11 @@ services:
       - renderer
     networks:
       inet_network: {}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2m"
+        max-file: "1"
 
   renderer:
     image: grafana/grafana-image-renderer:latest
@@ -56,10 +72,14 @@ services:
       - AUTH_TOKEN=mind
     networks:
       inet_network: {}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2m"
+        max-file: "1"
 
   timescaledb:
     image: timescale/timescaledb:latest-pg15
-    restart: always
     container_name: timescaledb
     restart: unless-stopped
 
@@ -75,6 +95,11 @@ services:
       - timescaledb-data:/var/lib/postgresql/data
     networks:
       inet_network: {}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2m"
+        max-file: "1"
 
   adminer:
     image: adminer
