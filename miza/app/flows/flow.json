@@ -6153,6 +6153,138 @@
             {
                 "addr": "DB103,R80",
                 "name": "r_bp_total_filber_283"
+            },
+            {
+                "addr": "DB1877,R392",
+                "name": "r_flow_actual_284"
+            },
+            {
+                "addr": "DB1877,R432",
+                "name": "r_high_alarm_284"
+            },
+            {
+                "addr": "DB1877,R436",
+                "name": "r_high_warning_284"
+            },
+            {
+                "addr": "DB1877,R452",
+                "name": "r_low_alarm_284"
+            },
+            {
+                "addr": "DB1877,R448",
+                "name": "r_low_warning_284"
+            },
+            {
+                "addr": "DB3505,R392",
+                "name": "r_temp_actual_285"
+            },
+            {
+                "addr": "DB3505,R432",
+                "name": "r_high_alarm_285"
+            },
+            {
+                "addr": "DB3505,R436",
+                "name": "r_high_warning_285"
+            },
+            {
+                "addr": "DB3505,R452",
+                "name": "r_low_alarm_285"
+            },
+            {
+                "addr": "DB3505,R448",
+                "name": "r_low_warning_285"
+            },
+            {
+                "addr": "DB3490,R392",
+                "name": "r_temp_actual_286"
+            },
+            {
+                "addr": "DB3490,R432",
+                "name": "r_high_alarm_286"
+            },
+            {
+                "addr": "DB3490,R436",
+                "name": "r_high_warning_286"
+            },
+            {
+                "addr": "DB3490,R452",
+                "name": "r_low_alarm_286"
+            },
+            {
+                "addr": "DB3490,R448",
+                "name": "r_low_warning_286"
+            },
+            {
+                "addr": "DB2365,R392",
+                "name": "r_steam_flow_287"
+            },
+            {
+                "addr": "DB2370,R392",
+                "name": "r_steam_flow_288"
+            },
+            {
+                "addr": "DB2366,R344",
+                "name": "r_steam_total_289"
+            },
+            {
+                "addr": "DB2377,R344",
+                "name": "r_steam_total_290"
+            },
+            {
+                "addr": "DB9608,R134",
+                "name": "r_pressure_actual_291"
+            },
+            {
+                "addr": "DB9608,R726",
+                "name": "r_pressure_setpoint_291"
+            },
+            {
+                "addr": "DB9608,R670",
+                "name": "r_valve_setpoint_291"
+            },
+            {
+                "addr": "DB9608,R794",
+                "name": "r_high_alarm_291"
+            },
+            {
+                "addr": "DB9608,R798",
+                "name": "r_high_warning_291"
+            },
+            {
+                "addr": "DB9608,R814",
+                "name": "r_low_alarm_291"
+            },
+            {
+                "addr": "DB9608,R810",
+                "name": "r_low_warning_291"
+            },
+            {
+                "addr": "DB9622,R134",
+                "name": "r_pressure_actual_292"
+            },
+            {
+                "addr": "DB9622,R726",
+                "name": "r_pressure_setpoint_292"
+            },
+            {
+                "addr": "DB9622,R670",
+                "name": "r_valve_setpoint_292"
+            },
+            {
+                "addr": "DB9622,R794",
+                "name": "r_high_alarm_292"
+            },
+            {
+                "addr": "DB9622,R798",
+                "name": "r_high_warning_292"
+            },
+            {
+                "addr": "DB9622,R814",
+                "name": "r_low_alarm_292"
+            },
+            {
+                "addr": "DB9622,R810",
+                "name": "r_low_warning_292"
             }
         ]
     },
@@ -22242,7 +22374,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 280,
-        "y": 180,
+        "y": 120,
         "wires": []
     },
     {
@@ -75676,7 +75808,7 @@
         "type": "function",
         "z": "278f7766e1536901",
         "name": "Insert data",
-        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        speed_actual: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        subsystem: \"Hệ truyền động\",\n        section: \"Hệ truyền động đầu cuộn\",\n        machine: \"Động cơ D31\",\n        name: \"Tốc độ thực tế\",\n        shift: shift\n    }\n];\nreturn msg;",
+        "func": "let shift = global.get(\"shift\");\nglobal.set(\"speed_actual\", msg.payload);\nmsg.payload = [\n    {\n        speed_actual: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        subsystem: \"Hệ truyền động\",\n        section: \"Hệ truyền động đầu cuộn\",\n        machine: \"Động cơ D31\",\n        name: \"Tốc độ thực tế\",\n        shift: shift\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -76376,7 +76508,7 @@
         "type": "function",
         "z": "278f7766e1536901",
         "name": "Insert data",
-        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        b_run: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        subsystem: \"Hệ truyền động\",\n        section: \"Hệ truyền động đầu cuộn\",\n        machine: \"Động cơ D31\",\n        name: \"Trạng thái động cơ\",\n        shift: shift\n    }\n];\nreturn msg;",
+        "func": "let shift = global.get(\"shift\");\nlet speed_actual = global.get(\"speed_actual\");\n\nlet b_run = 0;\nif (speed_actual > 20 && speed_actual < 200) {\n    b_run = 1;\n} else if (speed_actual >= 200) {\n    b_run = 2;\n}\n\nmsg.payload = [\n    {\n        b_run: msg.payload,\n        b_run_2: b_run\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        subsystem: \"Hệ truyền động\",\n        section: \"Hệ truyền động đầu cuộn\",\n        machine: \"Động cơ D31\",\n        name: \"Trạng thái động cơ\",\n        shift: shift\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -76450,7 +76582,7 @@
         "type": "function",
         "z": "278f7766e1536901",
         "name": "Insert data",
-        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        b_status: msg.payload ? 1 : 0\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        subsystem: \"Hệ truyền động\",\n        section: \"Hệ truyền động đầu cuộn\",\n        machine: \"Động cơ D31\",\n        name: \"Trạng thái động cơ\",\n        shift: shift\n    }\n];\nreturn msg;",
+        "func": "let shift = global.get(\"shift\");\nlet speed_actual = global.get(\"speed_actual\");\n\nlet b_run = 0;\nif (speed_actual > 20 && speed_actual < 200) {\n    b_run = 1;\n} else if (speed_actual >= 200) {\n    b_run = 2;\n}\n\nmsg.payload = [\n    {\n        b_status: b_run == 2 ? 1 : 0,\n        shift_value: shift\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        subsystem: \"Hệ truyền động\",\n        section: \"Hệ truyền động đầu cuộn\",\n        machine: \"Động cơ D31\",\n        name: \"Trạng thái động cơ\",\n        shift: shift\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -76840,6 +76972,346 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "32cb8ee12006925a",
+        "type": "telegram receiver",
+        "z": "278f7766e1536901",
+        "name": "",
+        "bot": "99c9caea1b8c1a86",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": false,
+        "inputs": 0,
+        "handleallupdates": false,
+        "x": 3950,
+        "y": 1000,
+        "wires": [
+            [
+                "da1ca72f249f68e5",
+                "e8bc51b3e4859aba"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "da1ca72f249f68e5",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "debug 152",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4150,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "e8bc51b3e4859aba",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "create parameter",
+        "func": "msg.payload = {\n    file_id: msg.payload.content\n};\n\nmsg.headers = {\n    \"accept\": \"application/json\",\n    \"Content-Type\": \"application/json\"\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4150,
+        "y": 1040,
+        "wires": [
+            [
+                "797f7e5253b4d09d"
+            ]
+        ]
+    },
+    {
+        "id": "797f7e5253b4d09d",
+        "type": "http request",
+        "z": "278f7766e1536901",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://192.168.10.2:8000/excel/read",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 4330,
+        "y": 1080,
+        "wires": [
+            [
+                "0a5f1bcec8a7576d"
+            ]
+        ]
+    },
+    {
+        "id": "0a5f1bcec8a7576d",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "debug 153",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4510,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "c97d76f3c73b3bf9",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"results\":[{\"statement_id\":0,\"series\":[{\"name\":\"miza_realtime\",\"columns\":[\"time\",\"integral\"],\"values\":[[\"2026-05-30T06:00:00+07:00\",245.73216692317175],[\"2026-05-31T06:00:00+07:00\",388.0309631885877],[\"2026-06-01T06:00:00+07:00\",440.34251837485374],[\"2026-06-02T06:00:00+07:00\",27.537683826833224],[\"2026-06-03T06:00:00+07:00\",181.8267359168871],[\"2026-06-04T06:00:00+07:00\",414.5533940858482],[\"2026-06-05T06:00:00+07:00\",175.4451225612346]]}]}]}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 300,
+        "wires": [
+            [
+                "ec7450de4ddefd19"
+            ]
+        ]
+    },
+    {
+        "id": "ec7450de4ddefd19",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "debug 154",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f8a79d4db2b335e2",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "name": "Nước",
+        "info": "",
+        "x": 3850,
+        "y": 3280,
+        "wires": []
+    },
+    {
+        "id": "3f5ba454608d28b3",
+        "type": "s7 in",
+        "z": "278f7766e1536901",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 3850,
+        "y": 3380,
+        "wires": [
+            [
+                "b3a86a7151ca5907"
+            ]
+        ]
+    },
+    {
+        "id": "120327e4d3b480c3",
+        "type": "influxdb out",
+        "z": "278f7766e1536901",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4590,
+        "y": 3380,
+        "wires": []
+    },
+    {
+        "id": "b3a86a7151ca5907",
+        "type": "miza-s7-group",
+        "z": "278f7766e1536901",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dfdcb4d60656b644",
+        "groupIndex": "284",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4090,
+        "y": 3380,
+        "wires": [
+            [
+                "1f882b08059f57cf"
+            ],
+            [],
+            [],
+            [
+                "a9cb4d9df25f1338"
+            ],
+            [
+                "dc079277a9a72373"
+            ],
+            [
+                "82fe60f9889a9df9"
+            ],
+            [
+                "7c0497a3c061d2ea"
+            ]
+        ]
+    },
+    {
+        "id": "1f882b08059f57cf",
+        "type": "miza-insert",
+        "z": "278f7766e1536901",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "flow_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "WATER3",
+        "line": "WATER3",
+        "machine": "Fresh water",
+        "label": "Lưu lượng thực tế",
+        "x": 4410,
+        "y": 3320,
+        "wires": [
+            [
+                "120327e4d3b480c3"
+            ]
+        ]
+    },
+    {
+        "id": "a9cb4d9df25f1338",
+        "type": "miza-insert",
+        "z": "278f7766e1536901",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Lọc đĩa",
+        "line": "Bơm cấp nước đầu vào",
+        "machine": "Van + bộ đo lưu lượng FIC109162",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4410,
+        "y": 3360,
+        "wires": [
+            [
+                "120327e4d3b480c3"
+            ]
+        ]
+    },
+    {
+        "id": "dc079277a9a72373",
+        "type": "miza-insert",
+        "z": "278f7766e1536901",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Lọc đĩa",
+        "line": "Bơm cấp nước đầu vào",
+        "machine": "Van + bộ đo lưu lượng FIC109162",
+        "label": "Cảnh báo vàng trên",
+        "x": 4410,
+        "y": 3400,
+        "wires": [
+            [
+                "120327e4d3b480c3"
+            ]
+        ]
+    },
+    {
+        "id": "82fe60f9889a9df9",
+        "type": "miza-insert",
+        "z": "278f7766e1536901",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Lọc đĩa",
+        "line": "Bơm cấp nước đầu vào",
+        "machine": "Van + bộ đo lưu lượng FIC109162",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4410,
+        "y": 3440,
+        "wires": [
+            [
+                "120327e4d3b480c3"
+            ]
+        ]
+    },
+    {
+        "id": "7c0497a3c061d2ea",
+        "type": "miza-insert",
+        "z": "278f7766e1536901",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Lọc đĩa",
+        "line": "Bơm cấp nước đầu vào",
+        "machine": "Van + bộ đo lưu lượng FIC109162",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4410,
+        "y": 3480,
+        "wires": [
+            [
+                "120327e4d3b480c3"
+            ]
+        ]
+    },
+    {
+        "id": "c4db2c88caa21710",
+        "type": "comment",
+        "z": "278f7766e1536901",
+        "name": "Hơi",
+        "info": "",
+        "x": 3850,
+        "y": 3520,
+        "wires": []
     },
     {
         "id": "e2187250e7b22b53",
@@ -112654,6 +113126,522 @@
         ]
     },
     {
+        "id": "f6efc98966e0fd82",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Ép keo",
+        "info": "",
+        "x": 6110,
+        "y": 4400,
+        "wires": []
+    },
+    {
+        "id": "e06ea1a7dcd59f6c",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "ade87f31c9e37a95",
+        "groupIndex": "291",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 6310,
+        "y": 4560,
+        "wires": [
+            [
+                "61c1cd42c9b26f88"
+            ],
+            [
+                "ae831f3040f8cfbb"
+            ],
+            [
+                "f5603ab4ac9fb632"
+            ],
+            [
+                "9d1f9dae3f34ac2c"
+            ],
+            [
+                "3d2aa293e12d8549"
+            ],
+            [
+                "e4df4046f50238fb"
+            ],
+            [
+                "71d14c2b17b0e6e8"
+            ]
+        ]
+    },
+    {
+        "id": "ae509ae30895183f",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 6110,
+        "y": 4560,
+        "wires": [
+            [
+                "e06ea1a7dcd59f6c",
+                "ed1932fed2d38bbc"
+            ]
+        ]
+    },
+    {
+        "id": "61c1cd42c9b26f88",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size DS",
+        "label": "Áp suất thực tế",
+        "x": 6640,
+        "y": 4520,
+        "wires": [
+            [
+                "23896ea862f4dc66"
+            ]
+        ]
+    },
+    {
+        "id": "23896ea862f4dc66",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 6870,
+        "y": 4560,
+        "wires": []
+    },
+    {
+        "id": "9d1f9dae3f34ac2c",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size DS",
+        "label": "Cảnh báo đỏ trên",
+        "x": 6630,
+        "y": 4640,
+        "wires": [
+            [
+                "23896ea862f4dc66"
+            ]
+        ]
+    },
+    {
+        "id": "3d2aa293e12d8549",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size DS",
+        "label": "Cảnh báo vàng trên",
+        "x": 6630,
+        "y": 4680,
+        "wires": [
+            [
+                "23896ea862f4dc66"
+            ]
+        ]
+    },
+    {
+        "id": "e4df4046f50238fb",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size DS",
+        "label": "Cảnh báo vàng dưới",
+        "x": 6630,
+        "y": 4720,
+        "wires": [
+            [
+                "23896ea862f4dc66"
+            ]
+        ]
+    },
+    {
+        "id": "ed1932fed2d38bbc",
+        "type": "debug",
+        "z": "57b5da103676d68f",
+        "name": "debug 155",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 6270,
+        "y": 4660,
+        "wires": []
+    },
+    {
+        "id": "71d14c2b17b0e6e8",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size DS",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 6630,
+        "y": 4760,
+        "wires": [
+            [
+                "23896ea862f4dc66"
+            ]
+        ]
+    },
+    {
+        "id": "9dbfb1a187a8326b",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Pressure PID Size DS",
+        "info": "",
+        "x": 6500,
+        "y": 4460,
+        "wires": []
+    },
+    {
+        "id": "ae831f3040f8cfbb",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "pressure_setpoint",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size DS",
+        "label": "Áp cài đặt",
+        "x": 6650,
+        "y": 4560,
+        "wires": [
+            [
+                "23896ea862f4dc66"
+            ]
+        ]
+    },
+    {
+        "id": "f5603ab4ac9fb632",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "valve_setpoint",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size DS",
+        "label": "Van điều khiển",
+        "x": 6640,
+        "y": 4600,
+        "wires": [
+            [
+                "23896ea862f4dc66"
+            ]
+        ]
+    },
+    {
+        "id": "d881bc3338ef2c2a",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Trạm bơm dầu ép ướt",
+        "info": "",
+        "x": 6160,
+        "y": 4460,
+        "wires": []
+    },
+    {
+        "id": "4046edbd899f6c23",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "ade87f31c9e37a95",
+        "groupIndex": "292",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 6310,
+        "y": 4860,
+        "wires": [
+            [
+                "c7bceccdbee5014f"
+            ],
+            [
+                "a41b648f95821548"
+            ],
+            [
+                "47753c7bc2d4b969"
+            ],
+            [
+                "1792d5db6396d968"
+            ],
+            [
+                "57e375c22f752af4"
+            ],
+            [
+                "73bdf64c8153c4d0"
+            ],
+            [
+                "712d8e541842eb92"
+            ]
+        ]
+    },
+    {
+        "id": "bbb7b60059dc8104",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 6110,
+        "y": 4860,
+        "wires": [
+            [
+                "4046edbd899f6c23",
+                "1a8cf9fed9c16234"
+            ]
+        ]
+    },
+    {
+        "id": "c7bceccdbee5014f",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size TS",
+        "label": "Áp suất thực tế",
+        "x": 6640,
+        "y": 4820,
+        "wires": [
+            [
+                "4d2dc0145e23f7aa"
+            ]
+        ]
+    },
+    {
+        "id": "4d2dc0145e23f7aa",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 6870,
+        "y": 4860,
+        "wires": []
+    },
+    {
+        "id": "1792d5db6396d968",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size TS",
+        "label": "Cảnh báo đỏ trên",
+        "x": 6630,
+        "y": 4940,
+        "wires": [
+            [
+                "4d2dc0145e23f7aa"
+            ]
+        ]
+    },
+    {
+        "id": "57e375c22f752af4",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size TS",
+        "label": "Cảnh báo vàng trên",
+        "x": 6630,
+        "y": 4980,
+        "wires": [
+            [
+                "4d2dc0145e23f7aa"
+            ]
+        ]
+    },
+    {
+        "id": "73bdf64c8153c4d0",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size TS",
+        "label": "Cảnh báo vàng dưới",
+        "x": 6630,
+        "y": 5020,
+        "wires": [
+            [
+                "4d2dc0145e23f7aa"
+            ]
+        ]
+    },
+    {
+        "id": "1a8cf9fed9c16234",
+        "type": "debug",
+        "z": "57b5da103676d68f",
+        "name": "debug 156",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 6270,
+        "y": 4960,
+        "wires": []
+    },
+    {
+        "id": "712d8e541842eb92",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size TS",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 6630,
+        "y": 5060,
+        "wires": [
+            [
+                "4d2dc0145e23f7aa"
+            ]
+        ]
+    },
+    {
+        "id": "a41b648f95821548",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "pressure_setpoint",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size TS",
+        "label": "Áp cài đặt",
+        "x": 6650,
+        "y": 4860,
+        "wires": [
+            [
+                "4d2dc0145e23f7aa"
+            ]
+        ]
+    },
+    {
+        "id": "47753c7bc2d4b969",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "valve_setpoint",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Ép keo",
+        "line": "Trạm bơm dầu ép ướt",
+        "machine": "Pressure PID Size TS",
+        "label": "Van điều khiển",
+        "x": 6640,
+        "y": 4900,
+        "wires": [
+            [
+                "4d2dc0145e23f7aa"
+            ]
+        ]
+    },
+    {
         "id": "7a32b90280b436ee",
         "type": "comment",
         "z": "b4215a89b53cb506",
@@ -134096,6 +135084,676 @@
         "x": 5050,
         "y": 6600,
         "wires": []
+    },
+    {
+        "id": "632965860eba5a6c",
+        "type": "s7 in",
+        "z": "ce2270c0395db8fa",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "r_steam_total_289",
+        "diff": false,
+        "name": "",
+        "x": 6130,
+        "y": 3800,
+        "wires": [
+            [
+                "d5f1338656a822e5"
+            ]
+        ]
+    },
+    {
+        "id": "fd722e6bbfc876a6",
+        "type": "function",
+        "z": "ce2270c0395db8fa",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        steam_total: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        subsystem: \"Hệ\",\n        section: \"Hệ thống sấy\",\n        line: \"Lô sấy\",\n        machine: \"Đường hơi 1\",\n        name: \"Tổng hơi tích lũy\",\n        shift: shift\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 6610,
+        "y": 3800,
+        "wires": [
+            [
+                "edabb5e34c39d0c0"
+            ]
+        ]
+    },
+    {
+        "id": "d5f1338656a822e5",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "x": 6390,
+        "y": 3800,
+        "wires": [
+            [
+                "fd722e6bbfc876a6"
+            ]
+        ]
+    },
+    {
+        "id": "edabb5e34c39d0c0",
+        "type": "influxdb out",
+        "z": "ce2270c0395db8fa",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 6810,
+        "y": 3700,
+        "wires": []
+    },
+    {
+        "id": "ad65c1cddc6b8848",
+        "type": "s7 in",
+        "z": "ce2270c0395db8fa",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "r_steam_total_290",
+        "diff": false,
+        "name": "",
+        "x": 6130,
+        "y": 3860,
+        "wires": [
+            [
+                "191292e8ec3fa768"
+            ]
+        ]
+    },
+    {
+        "id": "4207542f29600dc8",
+        "type": "function",
+        "z": "ce2270c0395db8fa",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        steam_total: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        subsystem: \"Hệ\",\n        section: \"Hệ thống sấy\",\n        line: \"Lô sấy\",\n        machine: \"Đường hơi 2\",\n        name: \"Tổng hơi tích lũy\",\n        shift: shift\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 6610,
+        "y": 3860,
+        "wires": [
+            [
+                "edabb5e34c39d0c0"
+            ]
+        ]
+    },
+    {
+        "id": "191292e8ec3fa768",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "x": 6390,
+        "y": 3860,
+        "wires": [
+            [
+                "4207542f29600dc8"
+            ]
+        ]
+    },
+    {
+        "id": "52cb06f2dd6886a2",
+        "type": "s7 in",
+        "z": "ce2270c0395db8fa",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "r_steam_flow_287",
+        "diff": false,
+        "name": "",
+        "x": 6130,
+        "y": 3680,
+        "wires": [
+            [
+                "8fa13503b8674780"
+            ]
+        ]
+    },
+    {
+        "id": "e1992fea733f4e09",
+        "type": "function",
+        "z": "ce2270c0395db8fa",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        steam_flow: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        subsystem: \"Hệ\",\n        section: \"Hệ thống sấy\",\n        line: \"Lô sấy\",\n        machine: \"Đường hơi 1\",\n        name: \"Lưu lượng hơi tức thời\",\n        shift: shift\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 6610,
+        "y": 3680,
+        "wires": [
+            [
+                "edabb5e34c39d0c0"
+            ]
+        ]
+    },
+    {
+        "id": "8fa13503b8674780",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "x": 6390,
+        "y": 3680,
+        "wires": [
+            [
+                "e1992fea733f4e09"
+            ]
+        ]
+    },
+    {
+        "id": "4a9b358f22a5f6e3",
+        "type": "s7 in",
+        "z": "ce2270c0395db8fa",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "single",
+        "variable": "r_steam_flow_288",
+        "diff": false,
+        "name": "",
+        "x": 6130,
+        "y": 3740,
+        "wires": [
+            [
+                "74e48bd31a4a37ad"
+            ]
+        ]
+    },
+    {
+        "id": "923ed95129e8f926",
+        "type": "function",
+        "z": "ce2270c0395db8fa",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        steam_flow: msg.payload\n    },\n    {\n        factory: \"MIZA Nghi Sơn\",\n        system: \"Hệ xeo\",\n        subsystem: \"Hệ\",\n        section: \"Hệ thống sấy\",\n        line: \"Lô sấy\",\n        machine: \"Đường hơi 2\",\n        name: \"Lưu lượng hơi tức thời\",\n        shift: shift\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 6610,
+        "y": 3740,
+        "wires": [
+            [
+                "edabb5e34c39d0c0"
+            ]
+        ]
+    },
+    {
+        "id": "74e48bd31a4a37ad",
+        "type": "subflow:8973786ac9022d0f",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "x": 6390,
+        "y": 3740,
+        "wires": [
+            [
+                "923ed95129e8f926"
+            ]
+        ]
+    },
+    {
+        "id": "9f42e037c8132087",
+        "type": "comment",
+        "z": "ce2270c0395db8fa",
+        "name": "Hệ thống sấy",
+        "info": "",
+        "x": 6110,
+        "y": 3940,
+        "wires": []
+    },
+    {
+        "id": "411212aeba6e3fb8",
+        "type": "comment",
+        "z": "ce2270c0395db8fa",
+        "name": "Lô sấy",
+        "info": "",
+        "x": 6350,
+        "y": 3940,
+        "wires": []
+    },
+    {
+        "id": "9abf64d9df7dfbc5",
+        "type": "s7 in",
+        "z": "ce2270c0395db8fa",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 6090,
+        "y": 4040,
+        "wires": [
+            [
+                "00f7f348a20867e2",
+                "69a43789995209d9"
+            ]
+        ]
+    },
+    {
+        "id": "44349e9fbffbb58e",
+        "type": "miza-insert",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "temp_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Hệ thống sấy",
+        "line": "Lô sấy",
+        "machine": "Nhiệt độ đường hơi 1",
+        "label": "Nhiệt độ thực tế",
+        "x": 6630,
+        "y": 4000,
+        "wires": [
+            [
+                "0a07863e6b0332c8"
+            ]
+        ]
+    },
+    {
+        "id": "a53cc3f2b4381ee6",
+        "type": "miza-insert",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Hệ thống sấy",
+        "line": "Lô sấy",
+        "machine": "Nhiệt độ đường hơi 1",
+        "label": "Cảnh báo đỏ trên",
+        "x": 6630,
+        "y": 4040,
+        "wires": [
+            [
+                "0a07863e6b0332c8"
+            ]
+        ]
+    },
+    {
+        "id": "2f9aa13f855ea63c",
+        "type": "miza-insert",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Hệ thống sấy",
+        "line": "Lô sấy",
+        "machine": "Nhiệt độ đường hơi 1",
+        "label": "Cảnh báo vàng trên",
+        "x": 6630,
+        "y": 4080,
+        "wires": [
+            [
+                "0a07863e6b0332c8"
+            ]
+        ]
+    },
+    {
+        "id": "c97d359fe9513f15",
+        "type": "miza-insert",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Hệ thống sấy",
+        "line": "Lô sấy",
+        "machine": "Nhiệt độ đường hơi 1",
+        "label": "Cảnh báo vàng dưới",
+        "x": 6630,
+        "y": 4160,
+        "wires": [
+            [
+                "0a07863e6b0332c8"
+            ]
+        ]
+    },
+    {
+        "id": "e28e402f47524326",
+        "type": "miza-insert",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Hệ thống sấy",
+        "line": "Lô sấy",
+        "machine": "Nhiệt độ đường hơi 1",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 6630,
+        "y": 4120,
+        "wires": [
+            [
+                "0a07863e6b0332c8"
+            ]
+        ]
+    },
+    {
+        "id": "0a07863e6b0332c8",
+        "type": "influxdb out",
+        "z": "ce2270c0395db8fa",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 6890,
+        "y": 4060,
+        "wires": []
+    },
+    {
+        "id": "00f7f348a20867e2",
+        "type": "debug",
+        "z": "ce2270c0395db8fa",
+        "name": "debug ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 6230,
+        "y": 4180,
+        "wires": []
+    },
+    {
+        "id": "05daa9d5c31ad18c",
+        "type": "comment",
+        "z": "ce2270c0395db8fa",
+        "name": "Nhiệt độ đường hơi 1",
+        "info": "",
+        "x": 6620,
+        "y": 3940,
+        "wires": []
+    },
+    {
+        "id": "69a43789995209d9",
+        "type": "miza-s7-group",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "fa1816cc8df575c8",
+        "groupIndex": "285",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 6320,
+        "y": 4040,
+        "wires": [
+            [
+                "44349e9fbffbb58e"
+            ],
+            [],
+            [],
+            [
+                "a53cc3f2b4381ee6"
+            ],
+            [
+                "2f9aa13f855ea63c"
+            ],
+            [
+                "c97d359fe9513f15"
+            ],
+            [
+                "e28e402f47524326"
+            ]
+        ]
+    },
+    {
+        "id": "bd7794e89a5caa47",
+        "type": "comment",
+        "z": "ce2270c0395db8fa",
+        "name": "Hệ thống sấy",
+        "info": "",
+        "x": 6110,
+        "y": 4240,
+        "wires": []
+    },
+    {
+        "id": "db1c82cc49b36ceb",
+        "type": "comment",
+        "z": "ce2270c0395db8fa",
+        "name": "Lô sấy",
+        "info": "",
+        "x": 6350,
+        "y": 4240,
+        "wires": []
+    },
+    {
+        "id": "988514a8c8225e59",
+        "type": "s7 in",
+        "z": "ce2270c0395db8fa",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 6090,
+        "y": 4340,
+        "wires": [
+            [
+                "7cb4e8ebe704ac82",
+                "d6870177cdd5a004"
+            ]
+        ]
+    },
+    {
+        "id": "c50996801c432f5d",
+        "type": "miza-insert",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "temp_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Hệ thống sấy",
+        "line": "Lô sấy",
+        "machine": "Nhiệt độ đường hơi 2",
+        "label": "Nhiệt độ thực tế",
+        "x": 6630,
+        "y": 4300,
+        "wires": [
+            [
+                "e4bbcafb5c43e15e"
+            ]
+        ]
+    },
+    {
+        "id": "559f1b2ee3fe4b00",
+        "type": "miza-insert",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Hệ thống sấy",
+        "line": "Lô sấy",
+        "machine": "Nhiệt độ đường hơi 2",
+        "label": "Cảnh báo đỏ trên",
+        "x": 6630,
+        "y": 4340,
+        "wires": [
+            [
+                "e4bbcafb5c43e15e"
+            ]
+        ]
+    },
+    {
+        "id": "408f48266c9f47ab",
+        "type": "miza-insert",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Hệ thống sấy",
+        "line": "Lô sấy",
+        "machine": "Nhiệt độ đường hơi 2",
+        "label": "Cảnh báo vàng trên",
+        "x": 6630,
+        "y": 4380,
+        "wires": [
+            [
+                "e4bbcafb5c43e15e"
+            ]
+        ]
+    },
+    {
+        "id": "915d473a0f25d03d",
+        "type": "miza-insert",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Hệ thống sấy",
+        "line": "Lô sấy",
+        "machine": "Nhiệt độ đường hơi 2",
+        "label": "Cảnh báo vàng dưới",
+        "x": 6630,
+        "y": 4460,
+        "wires": [
+            [
+                "e4bbcafb5c43e15e"
+            ]
+        ]
+    },
+    {
+        "id": "9c61b2b79fc745da",
+        "type": "miza-insert",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "configNode": "685eeb5b41c9b340",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Hệ thống sấy",
+        "line": "Lô sấy",
+        "machine": "Nhiệt độ đường hơi 2",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 6630,
+        "y": 4420,
+        "wires": [
+            [
+                "e4bbcafb5c43e15e"
+            ]
+        ]
+    },
+    {
+        "id": "e4bbcafb5c43e15e",
+        "type": "influxdb out",
+        "z": "ce2270c0395db8fa",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 6890,
+        "y": 4360,
+        "wires": []
+    },
+    {
+        "id": "7cb4e8ebe704ac82",
+        "type": "debug",
+        "z": "ce2270c0395db8fa",
+        "name": "debug ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 6230,
+        "y": 4480,
+        "wires": []
+    },
+    {
+        "id": "0beaea201b2e0995",
+        "type": "comment",
+        "z": "ce2270c0395db8fa",
+        "name": "Nhiệt độ đường hơi 2",
+        "info": "",
+        "x": 6620,
+        "y": 4240,
+        "wires": []
+    },
+    {
+        "id": "d6870177cdd5a004",
+        "type": "miza-s7-group",
+        "z": "ce2270c0395db8fa",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "fa1816cc8df575c8",
+        "groupIndex": "286",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 6320,
+        "y": 4340,
+        "wires": [
+            [
+                "c50996801c432f5d"
+            ],
+            [],
+            [],
+            [
+                "559f1b2ee3fe4b00"
+            ],
+            [
+                "408f48266c9f47ab"
+            ],
+            [
+                "915d473a0f25d03d"
+            ],
+            [
+                "9c61b2b79fc745da"
+            ]
+        ]
     },
     {
         "id": "2115bbc3d5ea6f50",
