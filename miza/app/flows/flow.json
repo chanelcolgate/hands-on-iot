@@ -6285,6 +6285,294 @@
             {
                 "addr": "DB9622,R810",
                 "name": "r_low_warning_292"
+            },
+            {
+                "addr": "DB1845,R392",
+                "name": "r_pressure_actual_293"
+            },
+            {
+                "addr": "DB1845,R432",
+                "name": "r_high_alarm_293"
+            },
+            {
+                "addr": "DB1845,R436",
+                "name": "r_high_warning_293"
+            },
+            {
+                "addr": "DB1845,R452",
+                "name": "r_low_alarm_293"
+            },
+            {
+                "addr": "DB1845,R448",
+                "name": "r_low_warning_293"
+            },
+            {
+                "addr": "DB2152,R392",
+                "name": "r_pressure_actual_294"
+            },
+            {
+                "addr": "DB2152,R432",
+                "name": "r_high_alarm_294"
+            },
+            {
+                "addr": "DB2152,R436",
+                "name": "r_high_warning_294"
+            },
+            {
+                "addr": "DB2152,R452",
+                "name": "r_low_alarm_294"
+            },
+            {
+                "addr": "DB2152,R448",
+                "name": "r_low_warning_294"
+            },
+            {
+                "addr": "DB2157,R392",
+                "name": "r_pressure_actual_295"
+            },
+            {
+                "addr": "DB2157,R432",
+                "name": "r_high_alarm_295"
+            },
+            {
+                "addr": "DB2157,R436",
+                "name": "r_high_warning_295"
+            },
+            {
+                "addr": "DB2157,R452",
+                "name": "r_low_alarm_295"
+            },
+            {
+                "addr": "DB2157,R448",
+                "name": "r_low_warning_295"
+            },
+            {
+                "addr": "DB2167,R392",
+                "name": "r_pressure_actual_296"
+            },
+            {
+                "addr": "DB2167,R432",
+                "name": "r_high_alarm_296"
+            },
+            {
+                "addr": "DB2167,R436",
+                "name": "r_high_warning_296"
+            },
+            {
+                "addr": "DB2167,R452",
+                "name": "r_low_alarm_296"
+            },
+            {
+                "addr": "DB2167,R448",
+                "name": "r_low_warning_296"
+            },
+            {
+                "addr": "DB2172,R392",
+                "name": "r_pressure_actual_297"
+            },
+            {
+                "addr": "DB2172,R432",
+                "name": "r_high_alarm_297"
+            },
+            {
+                "addr": "DB2172,R436",
+                "name": "r_high_warning_297"
+            },
+            {
+                "addr": "DB2172,R452",
+                "name": "r_low_alarm_297"
+            },
+            {
+                "addr": "DB2172,R448",
+                "name": "r_low_warning_297"
+            },
+            {
+                "addr": "DB2177,R392",
+                "name": "r_pressure_actual_298"
+            },
+            {
+                "addr": "DB2177,R432",
+                "name": "r_high_alarm_298"
+            },
+            {
+                "addr": "DB2177,R436",
+                "name": "r_high_warning_298"
+            },
+            {
+                "addr": "DB2177,R452",
+                "name": "r_low_alarm_298"
+            },
+            {
+                "addr": "DB2177,R448",
+                "name": "r_low_warning_298"
+            },
+            {
+                "addr": "DB2182,R392",
+                "name": "r_pressure_actual_300"
+            },
+            {
+                "addr": "DB2182,R432",
+                "name": "r_high_alarm_300"
+            },
+            {
+                "addr": "DB2182,R436",
+                "name": "r_high_warning_300"
+            },
+            {
+                "addr": "DB2182,R452",
+                "name": "r_low_alarm_300"
+            },
+            {
+                "addr": "DB2182,R448",
+                "name": "r_low_warning_300"
+            },
+            {
+                "addr": "DB2187,R392",
+                "name": "r_pressure_actual_301"
+            },
+            {
+                "addr": "DB2187,R432",
+                "name": "r_high_alarm_301"
+            },
+            {
+                "addr": "DB2187,R436",
+                "name": "r_high_warning_301"
+            },
+            {
+                "addr": "DB2187,R452",
+                "name": "r_low_alarm_301"
+            },
+            {
+                "addr": "DB2187,R448",
+                "name": "r_low_warning_301"
+            },
+            {
+                "addr": "DB2192,R392",
+                "name": "r_pressure_actual_302"
+            },
+            {
+                "addr": "DB2192,R432",
+                "name": "r_high_alarm_302"
+            },
+            {
+                "addr": "DB2192,R436",
+                "name": "r_high_warning_302"
+            },
+            {
+                "addr": "DB2192,R452",
+                "name": "r_low_alarm_302"
+            },
+            {
+                "addr": "DB2192,R448",
+                "name": "r_low_warning_302"
+            },
+            {
+                "addr": "DB2197,R392",
+                "name": "r_pressure_actual_303"
+            },
+            {
+                "addr": "DB2197,R432",
+                "name": "r_high_alarm_303"
+            },
+            {
+                "addr": "DB2197,R436",
+                "name": "r_high_warning_303"
+            },
+            {
+                "addr": "DB2197,R452",
+                "name": "r_low_alarm_303"
+            },
+            {
+                "addr": "DB2197,R448",
+                "name": "r_low_warning_303"
+            },
+            {
+                "addr": "DB2202,R392",
+                "name": "r_pressure_actual_304"
+            },
+            {
+                "addr": "DB2202,R432",
+                "name": "r_high_alarm_304"
+            },
+            {
+                "addr": "DB2202,R436",
+                "name": "r_high_warning_304"
+            },
+            {
+                "addr": "DB2202,R452",
+                "name": "r_low_alarm_304"
+            },
+            {
+                "addr": "DB2202,R448",
+                "name": "r_low_warning_304"
+            },
+            {
+                "addr": "DB2207,R392",
+                "name": "r_pressure_actual_305"
+            },
+            {
+                "addr": "DB2207,R432",
+                "name": "r_high_alarm_305"
+            },
+            {
+                "addr": "DB2207,R436",
+                "name": "r_high_warning_305"
+            },
+            {
+                "addr": "DB2207,R452",
+                "name": "r_low_alarm_305"
+            },
+            {
+                "addr": "DB2207,R448",
+                "name": "r_low_warning_305"
+            },
+            {
+                "addr": "DB2477,R134",
+                "name": "r_pressure_actual_306"
+            },
+            {
+                "addr": "DB2477,R726",
+                "name": "r_pressure_setpoint_306"
+            },
+            {
+                "addr": "DB2477,R670",
+                "name": "r_valve_setpoint_306"
+            },
+            {
+                "addr": "DB2477,R794",
+                "name": "r_high_alarm_306"
+            },
+            {
+                "addr": "DB2477,R798",
+                "name": "r_high_warning_306"
+            },
+            {
+                "addr": "DB2477,R814",
+                "name": "r_low_alarm_306"
+            },
+            {
+                "addr": "DB2477,R810",
+                "name": "r_low_warning_306"
+            },
+            {
+                "addr": "DB1485,R392",
+                "name": "r_pressure_actual_307"
+            },
+            {
+                "addr": "DB1485,R432",
+                "name": "r_high_alarm_307"
+            },
+            {
+                "addr": "DB1485,R436",
+                "name": "r_high_warning_307"
+            },
+            {
+                "addr": "DB1485,R452",
+                "name": "r_low_alarm_307"
+            },
+            {
+                "addr": "DB1485,R448",
+                "name": "r_low_warning_307"
             }
         ]
     },
@@ -76988,8 +77276,7 @@
         "y": 1000,
         "wires": [
             [
-                "da1ca72f249f68e5",
-                "e8bc51b3e4859aba"
+                "e34a7737415aa169"
             ],
             []
         ]
@@ -77006,8 +77293,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4150,
-        "y": 980,
+        "x": 4170,
+        "y": 1160,
         "wires": []
     },
     {
@@ -77022,8 +77309,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4150,
-        "y": 1040,
+        "x": 4190,
+        "y": 1100,
         "wires": [
             [
                 "797f7e5253b4d09d"
@@ -77046,8 +77333,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 4330,
-        "y": 1080,
+        "x": 4370,
+        "y": 1140,
         "wires": [
             [
                 "0a5f1bcec8a7576d"
@@ -77066,8 +77353,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4510,
-        "y": 1080,
+        "x": 4550,
+        "y": 1140,
         "wires": []
     },
     {
@@ -77312,6 +77599,37 @@
         "x": 3850,
         "y": 3520,
         "wires": []
+    },
+    {
+        "id": "e34a7737415aa169",
+        "type": "switch",
+        "z": "278f7766e1536901",
+        "name": "",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "document",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 4110,
+        "y": 1040,
+        "wires": [
+            [
+                "e8bc51b3e4859aba"
+            ],
+            [
+                "da1ca72f249f68e5"
+            ]
+        ]
     },
     {
         "id": "e2187250e7b22b53",
@@ -109418,7 +109736,7 @@
         "line": "Sàng áp lực lớp mặt",
         "machine": "Chênh áp PDI105070",
         "label": "Chênh áp",
-        "x": 3980,
+        "x": 3920,
         "y": 5040,
         "wires": [
             [
@@ -109453,7 +109771,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3540,
+        "x": 3520,
         "y": 5040,
         "wires": [
             [
@@ -109466,7 +109784,7 @@
         "type": "subflow:8973786ac9022d0f",
         "z": "57b5da103676d68f",
         "name": "",
-        "x": 3760,
+        "x": 3730,
         "y": 5040,
         "wires": [
             [
@@ -109488,7 +109806,7 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 3990,
+        "x": 3930,
         "y": 5120,
         "wires": []
     },
@@ -113638,6 +113956,2828 @@
         "wires": [
             [
                 "4d2dc0145e23f7aa"
+            ]
+        ]
+    },
+    {
+        "id": "1b0a6ad90f2aad52",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Áp khí nén PIA 114010",
+        "info": "",
+        "x": 4320,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "f6fb2852cd0ba739",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4870,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "fe80c1999e78517b",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114010",
+        "label": "Áp thực tế",
+        "x": 4700,
+        "y": 1820,
+        "wires": [
+            [
+                "f6fb2852cd0ba739"
+            ]
+        ]
+    },
+    {
+        "id": "df36cff99339704b",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114010",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4690,
+        "y": 1860,
+        "wires": [
+            [
+                "f6fb2852cd0ba739"
+            ]
+        ]
+    },
+    {
+        "id": "4b3546edade54be0",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114010",
+        "label": "Cảnh báo vàng trên",
+        "x": 4690,
+        "y": 1900,
+        "wires": [
+            [
+                "f6fb2852cd0ba739"
+            ]
+        ]
+    },
+    {
+        "id": "f319683c97d61821",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114010",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4690,
+        "y": 1940,
+        "wires": [
+            [
+                "f6fb2852cd0ba739"
+            ]
+        ]
+    },
+    {
+        "id": "087300c44bab37b2",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114010",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4690,
+        "y": 1980,
+        "wires": [
+            [
+                "f6fb2852cd0ba739"
+            ]
+        ]
+    },
+    {
+        "id": "a5f43c230693dbe0",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dea8e5bad9aaae14",
+        "groupIndex": "293",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4360,
+        "y": 1880,
+        "wires": [
+            [
+                "fe80c1999e78517b"
+            ],
+            [
+                "df36cff99339704b"
+            ],
+            [
+                "4b3546edade54be0"
+            ],
+            [
+                "f319683c97d61821"
+            ],
+            [
+                "087300c44bab37b2"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "58cade5de7602174",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 1880,
+        "wires": [
+            [
+                "a5f43c230693dbe0"
+            ]
+        ]
+    },
+    {
+        "id": "50408c1fde0110b0",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "5bb220e7a7c61513",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Áp khí nén PIA 114020",
+        "info": "",
+        "x": 4320,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "9e8472a687d92a1e",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Áp khí nén PIA 114030",
+        "info": "",
+        "x": 4320,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "e4d39569464341fa",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Áp khí nén PIA 114040",
+        "info": "",
+        "x": 4320,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "c9287b1d2e2f6e63",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Áp khí nén PIA 114050",
+        "info": "",
+        "x": 4320,
+        "y": 2880,
+        "wires": []
+    },
+    {
+        "id": "85762f8ec8bb454f",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Áp khí nén PIA 114080",
+        "info": "",
+        "x": 4320,
+        "y": 3160,
+        "wires": []
+    },
+    {
+        "id": "4c0bbb7552a51783",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Áp khí nén PIA 114091",
+        "info": "",
+        "x": 4320,
+        "y": 3440,
+        "wires": []
+    },
+    {
+        "id": "a46b3045e7cd886d",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Áp khí nén PIA 114092",
+        "info": "",
+        "x": 4320,
+        "y": 3720,
+        "wires": []
+    },
+    {
+        "id": "a55ebb82c0e2315e",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Áp khí nén PIA 114121",
+        "info": "",
+        "x": 4320,
+        "y": 4000,
+        "wires": []
+    },
+    {
+        "id": "26d077418213a1e2",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Áp khí nén PIA 114122 (Bột)",
+        "info": "",
+        "x": 4340,
+        "y": 4280,
+        "wires": []
+    },
+    {
+        "id": "3b55515e0b8c423d",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Áp khí nén PIA 114122 (Xeo)",
+        "info": "",
+        "x": 4340,
+        "y": 4580,
+        "wires": []
+    },
+    {
+        "id": "1c4dcb250784e11b",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Áp khí nén PIA 114131",
+        "info": "",
+        "x": 4320,
+        "y": 4860,
+        "wires": []
+    },
+    {
+        "id": "f9b6fb5aa2a769d5",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Áp khí nén PIA 114132",
+        "info": "",
+        "x": 4320,
+        "y": 5140,
+        "wires": [],
+        "icon": "node-red/alert.svg"
+    },
+    {
+        "id": "00d4530320f02183",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Nhiệt độ TIA 114040",
+        "info": "",
+        "x": 4310,
+        "y": 5500,
+        "wires": [],
+        "icon": "node-red/alert.svg"
+    },
+    {
+        "id": "6ce055bc618ca228",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "7021bfdbf4cef7a8",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4870,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "11e4e53a06daff53",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114020",
+        "label": "Áp thực tế",
+        "x": 4700,
+        "y": 2100,
+        "wires": [
+            [
+                "7021bfdbf4cef7a8"
+            ]
+        ]
+    },
+    {
+        "id": "927675e668baaca9",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114020",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4690,
+        "y": 2140,
+        "wires": [
+            [
+                "7021bfdbf4cef7a8"
+            ]
+        ]
+    },
+    {
+        "id": "01a9ea40f9c72367",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114020",
+        "label": "Cảnh báo vàng trên",
+        "x": 4690,
+        "y": 2180,
+        "wires": [
+            [
+                "7021bfdbf4cef7a8"
+            ]
+        ]
+    },
+    {
+        "id": "dbb160d43403d2bc",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114020",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4690,
+        "y": 2220,
+        "wires": [
+            [
+                "7021bfdbf4cef7a8"
+            ]
+        ]
+    },
+    {
+        "id": "e97b8c5fb241852f",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114020",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4690,
+        "y": 2260,
+        "wires": [
+            [
+                "7021bfdbf4cef7a8"
+            ]
+        ]
+    },
+    {
+        "id": "7b7fa49f76aa9669",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dea8e5bad9aaae14",
+        "groupIndex": "294",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4360,
+        "y": 2160,
+        "wires": [
+            [
+                "11e4e53a06daff53"
+            ],
+            [
+                "927675e668baaca9"
+            ],
+            [
+                "01a9ea40f9c72367"
+            ],
+            [
+                "dbb160d43403d2bc"
+            ],
+            [
+                "e97b8c5fb241852f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "16a29b4a3252d088",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 2160,
+        "wires": [
+            [
+                "7b7fa49f76aa9669"
+            ]
+        ]
+    },
+    {
+        "id": "dff564120ea92250",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "56822587c7efe6e4",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4870,
+        "y": 2440,
+        "wires": []
+    },
+    {
+        "id": "a65624319fc57410",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114030",
+        "label": "Áp thực tế",
+        "x": 4700,
+        "y": 2380,
+        "wires": [
+            [
+                "56822587c7efe6e4"
+            ]
+        ]
+    },
+    {
+        "id": "dcbeb1a445fb8604",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114030",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4690,
+        "y": 2420,
+        "wires": [
+            [
+                "56822587c7efe6e4"
+            ]
+        ]
+    },
+    {
+        "id": "143a0cfe8c803a01",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114030",
+        "label": "Cảnh báo vàng trên",
+        "x": 4690,
+        "y": 2460,
+        "wires": [
+            [
+                "56822587c7efe6e4"
+            ]
+        ]
+    },
+    {
+        "id": "09b93bccb53de6b9",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114030",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4690,
+        "y": 2500,
+        "wires": [
+            [
+                "56822587c7efe6e4"
+            ]
+        ]
+    },
+    {
+        "id": "ec0fe9f056636327",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114030",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4690,
+        "y": 2540,
+        "wires": [
+            [
+                "56822587c7efe6e4"
+            ]
+        ]
+    },
+    {
+        "id": "1aaf0339b5b37596",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dea8e5bad9aaae14",
+        "groupIndex": "295",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4360,
+        "y": 2440,
+        "wires": [
+            [
+                "a65624319fc57410"
+            ],
+            [
+                "dcbeb1a445fb8604"
+            ],
+            [
+                "143a0cfe8c803a01"
+            ],
+            [
+                "09b93bccb53de6b9"
+            ],
+            [
+                "ec0fe9f056636327"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "0d5c4bf1a3b13f03",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 2440,
+        "wires": [
+            [
+                "1aaf0339b5b37596"
+            ]
+        ]
+    },
+    {
+        "id": "8e77154c24f54f1a",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "526e041330fab3d5",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4870,
+        "y": 2720,
+        "wires": []
+    },
+    {
+        "id": "485f02353611da03",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114040",
+        "label": "Áp thực tế",
+        "x": 4700,
+        "y": 2660,
+        "wires": [
+            [
+                "526e041330fab3d5"
+            ]
+        ]
+    },
+    {
+        "id": "265315ef694c5f72",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114040",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4690,
+        "y": 2700,
+        "wires": [
+            [
+                "526e041330fab3d5"
+            ]
+        ]
+    },
+    {
+        "id": "3e1e17d8334c914c",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114040",
+        "label": "Cảnh báo vàng trên",
+        "x": 4690,
+        "y": 2740,
+        "wires": [
+            [
+                "526e041330fab3d5"
+            ]
+        ]
+    },
+    {
+        "id": "d32717a1fd38f8f8",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114040",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4690,
+        "y": 2780,
+        "wires": [
+            [
+                "526e041330fab3d5"
+            ]
+        ]
+    },
+    {
+        "id": "f82acda0721eba0f",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114040",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4690,
+        "y": 2820,
+        "wires": [
+            [
+                "526e041330fab3d5"
+            ]
+        ]
+    },
+    {
+        "id": "f4f021ab900aa20f",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dea8e5bad9aaae14",
+        "groupIndex": "296",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4360,
+        "y": 2720,
+        "wires": [
+            [
+                "485f02353611da03"
+            ],
+            [
+                "265315ef694c5f72"
+            ],
+            [
+                "3e1e17d8334c914c"
+            ],
+            [
+                "d32717a1fd38f8f8"
+            ],
+            [
+                "f82acda0721eba0f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "615b9275b241bcc7",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 2720,
+        "wires": [
+            [
+                "f4f021ab900aa20f"
+            ]
+        ]
+    },
+    {
+        "id": "efdcab7f3722e1dc",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 2880,
+        "wires": []
+    },
+    {
+        "id": "786c2c2eca1f9d62",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4870,
+        "y": 3000,
+        "wires": []
+    },
+    {
+        "id": "a4b31cc69911aa1c",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114050",
+        "label": "Áp thực tế",
+        "x": 4700,
+        "y": 2940,
+        "wires": [
+            [
+                "786c2c2eca1f9d62"
+            ]
+        ]
+    },
+    {
+        "id": "de27f1342bc4f478",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114050",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4690,
+        "y": 2980,
+        "wires": [
+            [
+                "786c2c2eca1f9d62"
+            ]
+        ]
+    },
+    {
+        "id": "9f2fb58b237946e2",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114050",
+        "label": "Cảnh báo vàng trên",
+        "x": 4690,
+        "y": 3020,
+        "wires": [
+            [
+                "786c2c2eca1f9d62"
+            ]
+        ]
+    },
+    {
+        "id": "75058d3fd3770097",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114050",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4690,
+        "y": 3060,
+        "wires": [
+            [
+                "786c2c2eca1f9d62"
+            ]
+        ]
+    },
+    {
+        "id": "30131694627ac8a1",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114050",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4690,
+        "y": 3100,
+        "wires": [
+            [
+                "786c2c2eca1f9d62"
+            ]
+        ]
+    },
+    {
+        "id": "3a3597b9bbb77e81",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dea8e5bad9aaae14",
+        "groupIndex": "297",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4360,
+        "y": 3000,
+        "wires": [
+            [
+                "a4b31cc69911aa1c"
+            ],
+            [
+                "de27f1342bc4f478"
+            ],
+            [
+                "9f2fb58b237946e2"
+            ],
+            [
+                "75058d3fd3770097"
+            ],
+            [
+                "30131694627ac8a1"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "88a27482d186a8fc",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 3000,
+        "wires": [
+            [
+                "3a3597b9bbb77e81"
+            ]
+        ]
+    },
+    {
+        "id": "4092e2c8461cd4be",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 3160,
+        "wires": []
+    },
+    {
+        "id": "2760e0ebfdcc0c43",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4870,
+        "y": 3280,
+        "wires": []
+    },
+    {
+        "id": "c5f45b6257ce0a6a",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114080",
+        "label": "Áp thực tế",
+        "x": 4700,
+        "y": 3220,
+        "wires": [
+            [
+                "2760e0ebfdcc0c43"
+            ]
+        ]
+    },
+    {
+        "id": "a41edd06b915b846",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114080",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4690,
+        "y": 3260,
+        "wires": [
+            [
+                "2760e0ebfdcc0c43"
+            ]
+        ]
+    },
+    {
+        "id": "acf2d63095911959",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114080",
+        "label": "Cảnh báo vàng trên",
+        "x": 4690,
+        "y": 3300,
+        "wires": [
+            [
+                "2760e0ebfdcc0c43"
+            ]
+        ]
+    },
+    {
+        "id": "315410597556a60d",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114080",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4690,
+        "y": 3340,
+        "wires": [
+            [
+                "2760e0ebfdcc0c43"
+            ]
+        ]
+    },
+    {
+        "id": "59a1a1146b6b2a13",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114080",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4690,
+        "y": 3380,
+        "wires": [
+            [
+                "2760e0ebfdcc0c43"
+            ]
+        ]
+    },
+    {
+        "id": "4019fa7a858dd0c3",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dea8e5bad9aaae14",
+        "groupIndex": "298",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4360,
+        "y": 3280,
+        "wires": [
+            [
+                "c5f45b6257ce0a6a"
+            ],
+            [
+                "a41edd06b915b846"
+            ],
+            [
+                "acf2d63095911959"
+            ],
+            [
+                "315410597556a60d"
+            ],
+            [
+                "59a1a1146b6b2a13"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "382dbb1e851f0463",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 3280,
+        "wires": [
+            [
+                "4019fa7a858dd0c3"
+            ]
+        ]
+    },
+    {
+        "id": "04a13ed562a85fb7",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 3440,
+        "wires": []
+    },
+    {
+        "id": "e862ba1798985aca",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4870,
+        "y": 3560,
+        "wires": []
+    },
+    {
+        "id": "eb84bff5c9b79ac4",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114091",
+        "label": "Áp thực tế",
+        "x": 4700,
+        "y": 3500,
+        "wires": [
+            [
+                "e862ba1798985aca"
+            ]
+        ]
+    },
+    {
+        "id": "5626b637df0f12d9",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114091",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4690,
+        "y": 3540,
+        "wires": [
+            [
+                "e862ba1798985aca"
+            ]
+        ]
+    },
+    {
+        "id": "e28e5b4c14810534",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114091",
+        "label": "Cảnh báo vàng trên",
+        "x": 4690,
+        "y": 3580,
+        "wires": [
+            [
+                "e862ba1798985aca"
+            ]
+        ]
+    },
+    {
+        "id": "19f5a65a07bcab74",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114091",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4690,
+        "y": 3620,
+        "wires": [
+            [
+                "e862ba1798985aca"
+            ]
+        ]
+    },
+    {
+        "id": "3efda8608182aa79",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114091",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4690,
+        "y": 3660,
+        "wires": [
+            [
+                "e862ba1798985aca"
+            ]
+        ]
+    },
+    {
+        "id": "f71a24eb12427303",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dea8e5bad9aaae14",
+        "groupIndex": "300",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4360,
+        "y": 3560,
+        "wires": [
+            [
+                "eb84bff5c9b79ac4"
+            ],
+            [
+                "5626b637df0f12d9"
+            ],
+            [
+                "e28e5b4c14810534"
+            ],
+            [
+                "19f5a65a07bcab74"
+            ],
+            [
+                "3efda8608182aa79"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "39bd26bf3aecf481",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 3560,
+        "wires": [
+            [
+                "f71a24eb12427303"
+            ]
+        ]
+    },
+    {
+        "id": "ddfe172df7b78bf5",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 3720,
+        "wires": []
+    },
+    {
+        "id": "6ce01d087b7de141",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4870,
+        "y": 3840,
+        "wires": []
+    },
+    {
+        "id": "d49b03bec9dfdcc4",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114092",
+        "label": "Áp thực tế",
+        "x": 4700,
+        "y": 3780,
+        "wires": [
+            [
+                "6ce01d087b7de141"
+            ]
+        ]
+    },
+    {
+        "id": "357d7e7e092b1759",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114092",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4690,
+        "y": 3820,
+        "wires": [
+            [
+                "6ce01d087b7de141"
+            ]
+        ]
+    },
+    {
+        "id": "8d18e6d9952b9aa3",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114092",
+        "label": "Cảnh báo vàng trên",
+        "x": 4690,
+        "y": 3860,
+        "wires": [
+            [
+                "6ce01d087b7de141"
+            ]
+        ]
+    },
+    {
+        "id": "feff8df8112541b6",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114092",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4690,
+        "y": 3900,
+        "wires": [
+            [
+                "6ce01d087b7de141"
+            ]
+        ]
+    },
+    {
+        "id": "f13b935a8752dfc0",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114092",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4690,
+        "y": 3940,
+        "wires": [
+            [
+                "6ce01d087b7de141"
+            ]
+        ]
+    },
+    {
+        "id": "8eb816baf2c5d8c2",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dea8e5bad9aaae14",
+        "groupIndex": "301",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4360,
+        "y": 3840,
+        "wires": [
+            [
+                "d49b03bec9dfdcc4"
+            ],
+            [
+                "357d7e7e092b1759"
+            ],
+            [
+                "8d18e6d9952b9aa3"
+            ],
+            [
+                "feff8df8112541b6"
+            ],
+            [
+                "f13b935a8752dfc0"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "71709484496f7f8d",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 3840,
+        "wires": [
+            [
+                "8eb816baf2c5d8c2"
+            ]
+        ]
+    },
+    {
+        "id": "349861213ca3a6a7",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 4000,
+        "wires": []
+    },
+    {
+        "id": "3b2c1ae94c32eb1e",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4870,
+        "y": 4120,
+        "wires": []
+    },
+    {
+        "id": "9cb281e0cad1f735",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114121",
+        "label": "Áp thực tế",
+        "x": 4700,
+        "y": 4060,
+        "wires": [
+            [
+                "3b2c1ae94c32eb1e"
+            ]
+        ]
+    },
+    {
+        "id": "e61caf2af53933ba",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114121",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4690,
+        "y": 4100,
+        "wires": [
+            [
+                "3b2c1ae94c32eb1e"
+            ]
+        ]
+    },
+    {
+        "id": "23c93a6335b5ec4a",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114121",
+        "label": "Cảnh báo vàng trên",
+        "x": 4690,
+        "y": 4140,
+        "wires": [
+            [
+                "3b2c1ae94c32eb1e"
+            ]
+        ]
+    },
+    {
+        "id": "5d777758b366dde9",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114121",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4690,
+        "y": 4180,
+        "wires": [
+            [
+                "3b2c1ae94c32eb1e"
+            ]
+        ]
+    },
+    {
+        "id": "50440cd11607f8bb",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114121",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4690,
+        "y": 4220,
+        "wires": [
+            [
+                "3b2c1ae94c32eb1e"
+            ]
+        ]
+    },
+    {
+        "id": "b93f4760d850c791",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dea8e5bad9aaae14",
+        "groupIndex": "302",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4360,
+        "y": 4120,
+        "wires": [
+            [
+                "9cb281e0cad1f735"
+            ],
+            [
+                "e61caf2af53933ba"
+            ],
+            [
+                "23c93a6335b5ec4a"
+            ],
+            [
+                "5d777758b366dde9"
+            ],
+            [
+                "50440cd11607f8bb"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a4b2a2a505248f48",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 4120,
+        "wires": [
+            [
+                "b93f4760d850c791"
+            ]
+        ]
+    },
+    {
+        "id": "08a3f96b84b70d50",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 4280,
+        "wires": []
+    },
+    {
+        "id": "9c3f7b936978c3ef",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4870,
+        "y": 4400,
+        "wires": []
+    },
+    {
+        "id": "99546df0653b61fa",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114122_Bot",
+        "label": "Áp thực tế",
+        "x": 4700,
+        "y": 4340,
+        "wires": [
+            [
+                "9c3f7b936978c3ef"
+            ]
+        ]
+    },
+    {
+        "id": "e4f2521f595550e0",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114122_Bot",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4690,
+        "y": 4380,
+        "wires": [
+            [
+                "9c3f7b936978c3ef"
+            ]
+        ]
+    },
+    {
+        "id": "954093b5ce9ad053",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114122_Bot",
+        "label": "Cảnh báo vàng trên",
+        "x": 4690,
+        "y": 4420,
+        "wires": [
+            [
+                "9c3f7b936978c3ef"
+            ]
+        ]
+    },
+    {
+        "id": "59e1e9dd54f3f973",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114122_Bot",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4690,
+        "y": 4460,
+        "wires": [
+            [
+                "9c3f7b936978c3ef"
+            ]
+        ]
+    },
+    {
+        "id": "efc9cab9be236d59",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114122_Bot",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4690,
+        "y": 4500,
+        "wires": [
+            [
+                "9c3f7b936978c3ef"
+            ]
+        ]
+    },
+    {
+        "id": "8c69c0d45a823253",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dea8e5bad9aaae14",
+        "groupIndex": "303",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4360,
+        "y": 4400,
+        "wires": [
+            [
+                "99546df0653b61fa"
+            ],
+            [
+                "e4f2521f595550e0"
+            ],
+            [
+                "954093b5ce9ad053"
+            ],
+            [
+                "59e1e9dd54f3f973"
+            ],
+            [
+                "efc9cab9be236d59"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "54754adb832b6608",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 4400,
+        "wires": [
+            [
+                "8c69c0d45a823253"
+            ]
+        ]
+    },
+    {
+        "id": "e9e7053a08b08112",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 4580,
+        "wires": []
+    },
+    {
+        "id": "7e50f1efb4a174f0",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4870,
+        "y": 4700,
+        "wires": []
+    },
+    {
+        "id": "8127c9f0b6e719bc",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114122_Xeo",
+        "label": "Áp thực tế",
+        "x": 4700,
+        "y": 4640,
+        "wires": [
+            [
+                "7e50f1efb4a174f0"
+            ]
+        ]
+    },
+    {
+        "id": "bf9f4ca48aa1bdbf",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114122_Xeo",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4690,
+        "y": 4680,
+        "wires": [
+            [
+                "7e50f1efb4a174f0"
+            ]
+        ]
+    },
+    {
+        "id": "0a298fa118a13ed2",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114122_Xeo",
+        "label": "Cảnh báo vàng trên",
+        "x": 4690,
+        "y": 4720,
+        "wires": [
+            [
+                "7e50f1efb4a174f0"
+            ]
+        ]
+    },
+    {
+        "id": "edcbdd205fa597c0",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114122_Xeo",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4690,
+        "y": 4760,
+        "wires": [
+            [
+                "7e50f1efb4a174f0"
+            ]
+        ]
+    },
+    {
+        "id": "424d09778bf9bde6",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114122_Xeo",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4690,
+        "y": 4800,
+        "wires": [
+            [
+                "7e50f1efb4a174f0"
+            ]
+        ]
+    },
+    {
+        "id": "0163bac328b8d353",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dea8e5bad9aaae14",
+        "groupIndex": "304",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4360,
+        "y": 4700,
+        "wires": [
+            [
+                "8127c9f0b6e719bc"
+            ],
+            [
+                "bf9f4ca48aa1bdbf"
+            ],
+            [
+                "0a298fa118a13ed2"
+            ],
+            [
+                "edcbdd205fa597c0"
+            ],
+            [
+                "424d09778bf9bde6"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6fe0e35cf9f5aa33",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 4700,
+        "wires": [
+            [
+                "0163bac328b8d353"
+            ]
+        ]
+    },
+    {
+        "id": "2f42479eaf55f9e8",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 4860,
+        "wires": []
+    },
+    {
+        "id": "2fa6f1ab72125be3",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4870,
+        "y": 4980,
+        "wires": []
+    },
+    {
+        "id": "8d3721fc3803e8aa",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114131",
+        "label": "Áp thực tế",
+        "x": 4700,
+        "y": 4920,
+        "wires": [
+            [
+                "2fa6f1ab72125be3"
+            ]
+        ]
+    },
+    {
+        "id": "fd60a39e7c3d38d5",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114131",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4690,
+        "y": 4960,
+        "wires": [
+            [
+                "2fa6f1ab72125be3"
+            ]
+        ]
+    },
+    {
+        "id": "ccd4941dd5f09986",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114131",
+        "label": "Cảnh báo vàng trên",
+        "x": 4690,
+        "y": 5000,
+        "wires": [
+            [
+                "2fa6f1ab72125be3"
+            ]
+        ]
+    },
+    {
+        "id": "eb2f97bea99a0511",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114131",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4690,
+        "y": 5040,
+        "wires": [
+            [
+                "2fa6f1ab72125be3"
+            ]
+        ]
+    },
+    {
+        "id": "e0e0c64f50804657",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114131",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4690,
+        "y": 5080,
+        "wires": [
+            [
+                "2fa6f1ab72125be3"
+            ]
+        ]
+    },
+    {
+        "id": "0fbcf1785b191836",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dea8e5bad9aaae14",
+        "groupIndex": "305",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4360,
+        "y": 4980,
+        "wires": [
+            [
+                "8d3721fc3803e8aa"
+            ],
+            [
+                "fd60a39e7c3d38d5"
+            ],
+            [
+                "ccd4941dd5f09986"
+            ],
+            [
+                "eb2f97bea99a0511"
+            ],
+            [
+                "e0e0c64f50804657"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "0d7de6fd79a10680",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 4980,
+        "wires": [
+            [
+                "0fbcf1785b191836"
+            ]
+        ]
+    },
+    {
+        "id": "2d7c3368ea9d6146",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 5140,
+        "wires": []
+    },
+    {
+        "id": "4096302aa61dc2c3",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 5010,
+        "y": 5260,
+        "wires": []
+    },
+    {
+        "id": "d6136abd41e3e165",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114132",
+        "label": "Áp thực tế",
+        "x": 4780,
+        "y": 5200,
+        "wires": [
+            [
+                "4096302aa61dc2c3"
+            ]
+        ]
+    },
+    {
+        "id": "796f49044889b1cf",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114132",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4770,
+        "y": 5320,
+        "wires": [
+            [
+                "4096302aa61dc2c3"
+            ]
+        ]
+    },
+    {
+        "id": "b6143363280775cb",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114132",
+        "label": "Cảnh báo vàng trên",
+        "x": 4770,
+        "y": 5360,
+        "wires": [
+            [
+                "4096302aa61dc2c3"
+            ]
+        ]
+    },
+    {
+        "id": "58aa67fd109d2742",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114132",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4770,
+        "y": 5400,
+        "wires": [
+            [
+                "4096302aa61dc2c3"
+            ]
+        ]
+    },
+    {
+        "id": "e7d7825a5f16f8bf",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114132",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4770,
+        "y": 5440,
+        "wires": [
+            [
+                "4096302aa61dc2c3"
+            ]
+        ]
+    },
+    {
+        "id": "565cf1442c71fa3b",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "5c9791cb41b6917c",
+        "groupIndex": "306",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4440,
+        "y": 5260,
+        "wires": [
+            [
+                "d6136abd41e3e165"
+            ],
+            [
+                "1685600517672064"
+            ],
+            [
+                "94b92467b45cd5ce"
+            ],
+            [
+                "796f49044889b1cf"
+            ],
+            [
+                "b6143363280775cb"
+            ],
+            [
+                "58aa67fd109d2742"
+            ],
+            [
+                "e7d7825a5f16f8bf"
+            ]
+        ]
+    },
+    {
+        "id": "c1975b95ec6e2e16",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 5260,
+        "wires": [
+            [
+                "565cf1442c71fa3b"
+            ]
+        ]
+    },
+    {
+        "id": "1685600517672064",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_setpoint",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114132",
+        "label": "Áp cài đặt",
+        "x": 4790,
+        "y": 5240,
+        "wires": [
+            [
+                "4096302aa61dc2c3"
+            ]
+        ]
+    },
+    {
+        "id": "94b92467b45cd5ce",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "valve_setpoint",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Áp khí nén PIA 114132",
+        "label": "Van điều khiển",
+        "x": 4780,
+        "y": 5280,
+        "wires": [
+            [
+                "4096302aa61dc2c3"
+            ]
+        ]
+    },
+    {
+        "id": "95f5f5823329fa94",
+        "type": "comment",
+        "z": "57b5da103676d68f",
+        "name": "Air",
+        "info": "",
+        "x": 4130,
+        "y": 5500,
+        "wires": []
+    },
+    {
+        "id": "7a8331411915d27e",
+        "type": "influxdb out",
+        "z": "57b5da103676d68f",
+        "influxdb": "7bae9558da570038",
+        "name": "miza",
+        "measurement": "miza_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 4930,
+        "y": 5620,
+        "wires": []
+    },
+    {
+        "id": "957db8a5fbbd02d6",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "pressure_actual",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Nhiệt độ TIA 114040",
+        "label": "Áp thực tế",
+        "x": 4700,
+        "y": 5560,
+        "wires": [
+            [
+                "7a8331411915d27e"
+            ]
+        ]
+    },
+    {
+        "id": "36601e3575a8608a",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Nhiệt độ TIA 114040",
+        "label": "Cảnh báo đỏ trên",
+        "x": 4690,
+        "y": 5600,
+        "wires": [
+            [
+                "7a8331411915d27e"
+            ]
+        ]
+    },
+    {
+        "id": "4d7c4e116c7484f0",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Nhiệt độ TIA 114040",
+        "label": "Cảnh báo vàng trên",
+        "x": 4690,
+        "y": 5640,
+        "wires": [
+            [
+                "7a8331411915d27e"
+            ]
+        ]
+    },
+    {
+        "id": "f272eea32a0fa2e3",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Nhiệt độ TIA 114040",
+        "label": "Cảnh báo vàng dưới",
+        "x": 4690,
+        "y": 5680,
+        "wires": [
+            [
+                "7a8331411915d27e"
+            ]
+        ]
+    },
+    {
+        "id": "d7c945bdd5259f39",
+        "type": "miza-insert",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ xeo",
+        "subsystem": "Hệ",
+        "section": "Air",
+        "line": "Air",
+        "machine": "Nhiệt độ TIA 114040",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 4690,
+        "y": 5720,
+        "wires": [
+            [
+                "7a8331411915d27e"
+            ]
+        ]
+    },
+    {
+        "id": "b6c779947d91fe6f",
+        "type": "miza-s7-group",
+        "z": "57b5da103676d68f",
+        "name": "",
+        "endpoint": "e72fd5a230ded939",
+        "templateNode": "dea8e5bad9aaae14",
+        "groupIndex": "307",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 4360,
+        "y": 5620,
+        "wires": [
+            [
+                "957db8a5fbbd02d6"
+            ],
+            [
+                "36601e3575a8608a"
+            ],
+            [
+                "4d7c4e116c7484f0"
+            ],
+            [
+                "f272eea32a0fa2e3"
+            ],
+            [
+                "d7c945bdd5259f39"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "62766759f9d7f81f",
+        "type": "s7 in",
+        "z": "57b5da103676d68f",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "",
+        "diff": true,
+        "name": "",
+        "x": 4130,
+        "y": 5620,
+        "wires": [
+            [
+                "b6c779947d91fe6f"
             ]
         ]
     },
