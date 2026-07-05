@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "06c2b55e1c9ea8bc",
+        "type": "tab",
+        "label": "DTLA Sub MQTT - DEMO",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "547a59bae597a065",
         "type": "tab",
         "label": "IoT Mind",
@@ -601,6 +609,645 @@
         "url": "http://localhost:8086",
         "timeout": 10,
         "rejectUnauthorized": true
+    },
+    {
+        "id": "e9ea600f3237128c",
+        "type": "mqtt-broker",
+        "name": "MQTT-AIOT-MINDFC",
+        "broker": "mqtt.aiot.mindfc.net",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "578d22bf66e35f57",
+        "type": "dongtien-meter-config",
+        "name": "iLEC MFM300",
+        "device": "iLEC MFM300",
+        "metrics": [
+            {
+                "key": "Ua",
+                "name": "Phase A Voltage",
+                "unit": "V",
+                "div": 10000
+            },
+            {
+                "key": "Ub",
+                "name": "Phase B Voltage",
+                "unit": "V",
+                "div": 10000
+            },
+            {
+                "key": "Uc",
+                "name": "Phase C Voltage",
+                "unit": "V",
+                "div": 10000
+            },
+            {
+                "key": "Uab",
+                "name": "Line Voltage AB",
+                "unit": "V",
+                "div": 10000
+            },
+            {
+                "key": "Ubc",
+                "name": "Line Voltage BC",
+                "unit": "V",
+                "div": 10000
+            },
+            {
+                "key": "Uca",
+                "name": "Line Voltage CA",
+                "unit": "V",
+                "div": 10000
+            },
+            {
+                "key": "Ia",
+                "name": "Phase A Current",
+                "unit": "A",
+                "div": 10000
+            },
+            {
+                "key": "Ib",
+                "name": "Phase B Current",
+                "unit": "A",
+                "div": 10000
+            },
+            {
+                "key": "Ic",
+                "name": "Phase C Current",
+                "unit": "A",
+                "div": 10000
+            },
+            {
+                "key": "Pa",
+                "name": "Phase A Active Power",
+                "unit": "kW",
+                "div": 10000
+            },
+            {
+                "key": "Pb",
+                "name": "Phase B Active Power",
+                "unit": "kW",
+                "div": 10000
+            },
+            {
+                "key": "Pc",
+                "name": "Phase C Active Power",
+                "unit": "kW",
+                "div": 10000
+            },
+            {
+                "key": "Pt",
+                "name": "Total Active Power",
+                "unit": "kW",
+                "div": 10000
+            },
+            {
+                "key": "Qa",
+                "name": "Phase A Reactive Power",
+                "unit": "kVAR",
+                "div": 10000
+            },
+            {
+                "key": "Qb",
+                "name": "Phase B Reactive Power",
+                "unit": "kVAR",
+                "div": 10000
+            },
+            {
+                "key": "Qc",
+                "name": "Phase C Reactive Power",
+                "unit": "kVAR",
+                "div": 10000
+            },
+            {
+                "key": "Qt",
+                "name": "Total Reactive Power",
+                "unit": "kVAR",
+                "div": 10000
+            },
+            {
+                "key": "Sa",
+                "name": "Phase A Apparent Power",
+                "unit": "kVA",
+                "div": 10000
+            },
+            {
+                "key": "Sb",
+                "name": "Phase B Apparent Power",
+                "unit": "kVA",
+                "div": 10000
+            },
+            {
+                "key": "Sc",
+                "name": "Phase C Apparent Power",
+                "unit": "kVA",
+                "div": 10000
+            },
+            {
+                "key": "St",
+                "name": "Total Apparent Power",
+                "unit": "kVA",
+                "div": 10000
+            },
+            {
+                "key": "PFa",
+                "name": "Phase A Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFb",
+                "name": "Phase B Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFc",
+                "name": "Phase C Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFt",
+                "name": "Total Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "Freq",
+                "name": "Frequency",
+                "unit": "Hz",
+                "div": 100
+            },
+            {
+                "key": "ImpEp",
+                "name": "Total Import Active Energy",
+                "unit": "kWh",
+                "div": 1000
+            },
+            {
+                "key": "ImpEq",
+                "name": "Total Import Reactive Energy",
+                "unit": "kVARh",
+                "div": 1000
+            }
+        ]
+    },
+    {
+        "id": "4ee69f320815a52c",
+        "type": "dongtien-meter-config",
+        "name": "Arcel ACM 96L E4",
+        "device": "Arcel ACM 96L E4",
+        "metrics": [
+            {
+                "key": "Ua",
+                "name": "Phase A Voltage",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Ub",
+                "name": "Phase B Voltage",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Uc",
+                "name": "Phase C Voltage",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Uab",
+                "name": "Line Voltage AB",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Ubc",
+                "name": "Line Voltage BC",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Uca",
+                "name": "Line Voltage CA",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Ia",
+                "name": "Phase A Current",
+                "unit": "A",
+                "div": 1000
+            },
+            {
+                "key": "Ib",
+                "name": "Phase B Current",
+                "unit": "A",
+                "div": 1000
+            },
+            {
+                "key": "Ic",
+                "name": "Phase C Current",
+                "unit": "A",
+                "div": 1000
+            },
+            {
+                "key": "Pa",
+                "name": "Phase A Active Power",
+                "unit": "kW",
+                "div": 1000
+            },
+            {
+                "key": "Pb",
+                "name": "Phase B Active Power",
+                "unit": "kW",
+                "div": 1000
+            },
+            {
+                "key": "Pc",
+                "name": "Phase C Active Power",
+                "unit": "kW",
+                "div": 1000
+            },
+            {
+                "key": "Pt",
+                "name": "Total Active Power",
+                "unit": "kW",
+                "div": 1000
+            },
+            {
+                "key": "Qa",
+                "name": "Phase A Reactive Power",
+                "unit": "kVAR",
+                "div": 1000
+            },
+            {
+                "key": "Qb",
+                "name": "Phase B Reactive Power",
+                "unit": "kVAR",
+                "div": 1000
+            },
+            {
+                "key": "Qc",
+                "name": "Phase C Reactive Power",
+                "unit": "kVAR",
+                "div": 1000
+            },
+            {
+                "key": "Qt",
+                "name": "Total Reactive Power",
+                "unit": "kVAR",
+                "div": 1000
+            },
+            {
+                "key": "Sa",
+                "name": "Phase A Apparent Power",
+                "unit": "kVA",
+                "div": 1000
+            },
+            {
+                "key": "Sb",
+                "name": "Phase B Apparent Power",
+                "unit": "kVA",
+                "div": 1000
+            },
+            {
+                "key": "Sc",
+                "name": "Phase C Apparent Power",
+                "unit": "kVA",
+                "div": 1000
+            },
+            {
+                "key": "St",
+                "name": "Total Apparent Power",
+                "unit": "kVA",
+                "div": 1000
+            },
+            {
+                "key": "PFa",
+                "name": "Phase A Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFb",
+                "name": "Phase B Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFc",
+                "name": "Phase C Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFt",
+                "name": "Total Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "Freq",
+                "name": "Frequency",
+                "unit": "Hz",
+                "div": 100
+            },
+            {
+                "key": "ImpEp",
+                "name": "Total Import Active Energy",
+                "unit": "kWh",
+                "div": 1000
+            },
+            {
+                "key": "ExpEp",
+                "name": "Total Export Active Energy",
+                "unit": "kWh",
+                "div": 1000
+            }
+        ]
+    },
+    {
+        "id": "e4e795a54279aa8a",
+        "type": "dongtien-meter-config",
+        "name": "CHINT PD7777",
+        "device": "CHINT PD7777",
+        "metrics": [
+            {
+                "key": "Ua",
+                "name": "Phase A Voltage",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Ub",
+                "name": "Phase B Voltage",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Uc",
+                "name": "Phase C Voltage",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Uab",
+                "name": "Line Voltage AB",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Ubc",
+                "name": "Line Voltage BC",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Uca",
+                "name": "Line Voltage CA",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Ia",
+                "name": "Phase A Current",
+                "unit": "A",
+                "div": 1000
+            },
+            {
+                "key": "Ib",
+                "name": "Phase B Current",
+                "unit": "A",
+                "div": 1000
+            },
+            {
+                "key": "Ic",
+                "name": "Phase C Current",
+                "unit": "A",
+                "div": 1000
+            },
+            {
+                "key": "Pa",
+                "name": "Phase A Active Power",
+                "unit": "kW",
+                "div": 10000
+            },
+            {
+                "key": "Pb",
+                "name": "Phase B Active Power",
+                "unit": "kW",
+                "div": 10000
+            },
+            {
+                "key": "Pc",
+                "name": "Phase C Active Power",
+                "unit": "kW",
+                "div": 10000
+            },
+            {
+                "key": "Pt",
+                "name": "Total Active Power",
+                "unit": "kW",
+                "div": 10000
+            },
+            {
+                "key": "Qa",
+                "name": "Phase A Reactive Power",
+                "unit": "kVAR",
+                "div": 10000
+            },
+            {
+                "key": "Qb",
+                "name": "Phase B Reactive Power",
+                "unit": "kVAR",
+                "div": 10000
+            },
+            {
+                "key": "Qc",
+                "name": "Phase C Reactive Power",
+                "unit": "kVAR",
+                "div": 10000
+            },
+            {
+                "key": "Qt",
+                "name": "Total Reactive Power",
+                "unit": "kVAR",
+                "div": 10000
+            },
+            {
+                "key": "Sa",
+                "name": "Phase A Apparent Power",
+                "unit": "kVA",
+                "div": 10000
+            },
+            {
+                "key": "Sb",
+                "name": "Phase B Apparent Power",
+                "unit": "kVA",
+                "div": 10000
+            },
+            {
+                "key": "Sc",
+                "name": "Phase C Apparent Power",
+                "unit": "kVA",
+                "div": 10000
+            },
+            {
+                "key": "St",
+                "name": "Total Apparent Power",
+                "unit": "kVA",
+                "div": 10000
+            },
+            {
+                "key": "PFa",
+                "name": "Phase A Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFb",
+                "name": "Phase B Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFc",
+                "name": "Phase C Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFt",
+                "name": "Total Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "Freq",
+                "name": "Frequency",
+                "unit": "Hz",
+                "div": 100
+            },
+            {
+                "key": "ImpEp",
+                "name": "Total Import Active Energy",
+                "unit": "kWh",
+                "div": 1
+            }
+        ]
+    },
+    {
+        "id": "adb714bfbd202f11",
+        "type": "dongtien-meter-config",
+        "name": "Vibration & Temperature Sensor",
+        "device": "Vibration & Temperature Sensor",
+        "metrics": [
+            {
+                "key": "temperature",
+                "name": "Temperature",
+                "unit": "°C",
+                "div": 10
+            },
+            {
+                "key": "x-sped",
+                "name": "Velocity X",
+                "unit": "mm/s",
+                "div": 10
+            },
+            {
+                "key": "y-sped",
+                "name": "Velocity Y",
+                "unit": "mm/s",
+                "div": 10
+            },
+            {
+                "key": "z-sped",
+                "name": "Velocity Z",
+                "unit": "mm/s",
+                "div": 10
+            },
+            {
+                "key": "x-disp",
+                "name": "Displacement X",
+                "unit": "um",
+                "div": 1
+            },
+            {
+                "key": "y-disp",
+                "name": "Displacement Y",
+                "unit": "um",
+                "div": 1
+            },
+            {
+                "key": "z-disp",
+                "name": "Displacement Z",
+                "unit": "um",
+                "div": 1
+            },
+            {
+                "key": "x-accel",
+                "name": "Acceleration X",
+                "unit": "g",
+                "div": 100
+            },
+            {
+                "key": "y-accel",
+                "name": "Acceleration Y",
+                "unit": "g",
+                "div": 100
+            },
+            {
+                "key": "z-accel",
+                "name": "Acceleration Z",
+                "unit": "g",
+                "div": 100
+            },
+            {
+                "key": "x-freq",
+                "name": "Frequency X",
+                "unit": "Hz",
+                "div": 1
+            },
+            {
+                "key": "y-freq",
+                "name": "Frequency Y",
+                "unit": "Hz",
+                "div": 1
+            },
+            {
+                "key": "z-freq",
+                "name": "Frequency Z",
+                "unit": "Hz",
+                "div": 1
+            }
+        ]
     },
     {
         "id": "b456d74cc49da9e0",
@@ -7670,6 +8317,2838 @@
             [
                 "ce487ed28faa0fb8"
             ]
+        ]
+    },
+    {
+        "id": "9d9caf91fa2a534a",
+        "type": "mqtt in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "MINDFC",
+        "topic": "+/v1/gateway/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e9ea600f3237128c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 660,
+        "y": 680,
+        "wires": [
+            [
+                "1916a9394ebbb1d1"
+            ]
+        ]
+    },
+    {
+        "id": "a56a941621d692b1",
+        "type": "function",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        p_in: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống lọc nồng độ cao\",\n        machine: \"61B03S1\",\n        device: \"Áp suất vào\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1916a9394ebbb1d1",
+        "type": "switch",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "VGSVTeJqOoStTCKhBXxr",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "oDMxjCAMYYyISkQuErtz",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ZNHEFdsXmfIiRxYwAUlW",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "YiMjhCKsUClUaQffYvOr",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "krXZKmuzxlpEHEXgPyfC",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 830,
+        "y": 680,
+        "wires": [
+            [
+                "b32c13e9a351e19c"
+            ],
+            [
+                "1e482c11e3c6d72c"
+            ],
+            [
+                "6c96288eb003eccd"
+            ],
+            [
+                "c9f243702db1cb63"
+            ],
+            [
+                "bc558b51688a3b2f"
+            ]
+        ]
+    },
+    {
+        "id": "b32c13e9a351e19c",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"T24 MCC1.4\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "4",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1250,
+        "y": 340,
+        "wires": [
+            [
+                "5a6d4dafaae1fdc6",
+                "cc98bab27d60c648"
+            ]
+        ]
+    },
+    {
+        "id": "5a6d4dafaae1fdc6",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T24 MCC 1.4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1430,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "94a954afa779c5dd",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"T22 Thuy luc\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "4",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1270,
+        "y": 640,
+        "wires": [
+            [
+                "e7288964f85b890b",
+                "3373d3fd71b8395e"
+            ]
+        ]
+    },
+    {
+        "id": "e7288964f85b890b",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T22 Thuy luc",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1470,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "1d04676a42cb9417",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T50 Truyen dong XEO",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1480,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "2f4032fe9ea5f75e",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"T50 Truyen dong XEO\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1270,
+        "y": 720,
+        "wires": [
+            [
+                "1d04676a42cb9417",
+                "405861cc19e4fdd5"
+            ]
+        ]
+    },
+    {
+        "id": "7bea19a41acfde31",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T92 Sang cuon",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1460,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "bba4d4c2e5169838",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"T92 Sang cuon\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1270,
+        "y": 600,
+        "wires": [
+            [
+                "7bea19a41acfde31",
+                "0c38979bd6f31261"
+            ]
+        ]
+    },
+    {
+        "id": "c548a42acdd3bebb",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"T18 MCC 1.3\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1250,
+        "y": 300,
+        "wires": [
+            [
+                "31562e1915edc948",
+                "92da7ec13fb4cca0"
+            ]
+        ]
+    },
+    {
+        "id": "31562e1915edc948",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T18 MCC 1.3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1430,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "acd0cb67e426cf44",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T35 MCC XEO",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1440,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d2d8989be5f3e1f0",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"T35 MCC XEO\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1250,
+        "y": 380,
+        "wires": [
+            [
+                "acd0cb67e426cf44",
+                "05ef4f617b28c08c"
+            ]
+        ]
+    },
+    {
+        "id": "91db6c33336ada66",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T41 Chan khong 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1450,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "19e9ffee2a670486",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"T41 Chan khong 1\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1250,
+        "y": 420,
+        "wires": [
+            [
+                "91db6c33336ada66",
+                "f8a30e5c59188bf0"
+            ]
+        ]
+    },
+    {
+        "id": "7be9b3f86bcd457b",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T42 Chan khong 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1450,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "5af8a9cea78e094f",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"T42 Chan khong 2\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1250,
+        "y": 460,
+        "wires": [
+            [
+                "7be9b3f86bcd457b",
+                "77f6be208a18f3e5"
+            ]
+        ]
+    },
+    {
+        "id": "54b2e1297e9f2584",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T43 Chan khong 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1450,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7952cedec2ae04f7",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"T43 Chan khong 3\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1250,
+        "y": 500,
+        "wires": [
+            [
+                "54b2e1297e9f2584",
+                "8ebada47e4214bc0"
+            ]
+        ]
+    },
+    {
+        "id": "1e482c11e3c6d72c",
+        "type": "switch",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "T22 Thuy luc",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "T18 MCC 1.3",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1070,
+        "y": 600,
+        "wires": [
+            [
+                "94a954afa779c5dd"
+            ],
+            [
+                "c548a42acdd3bebb"
+            ]
+        ]
+    },
+    {
+        "id": "6c96288eb003eccd",
+        "type": "switch",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "T35 MCC XEO",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "T50 Truyen dong XEO",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "T41 Chan khong 1",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "T42 Chan khong 2",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "T43 Chan khong 3",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 1070,
+        "y": 680,
+        "wires": [
+            [
+                "d2d8989be5f3e1f0"
+            ],
+            [
+                "2f4032fe9ea5f75e"
+            ],
+            [
+                "19e9ffee2a670486"
+            ],
+            [
+                "5af8a9cea78e094f"
+            ],
+            [
+                "7952cedec2ae04f7"
+            ]
+        ]
+    },
+    {
+        "id": "c9f243702db1cb63",
+        "type": "switch",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "T92 Sang cuon",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1050,
+        "y": 780,
+        "wires": [
+            [
+                "bba4d4c2e5169838"
+            ]
+        ]
+    },
+    {
+        "id": "bc558b51688a3b2f",
+        "type": "switch",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "EP04-duoi-trong-rung",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "EP04-duoi-ngoai-rung",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "EP04-duoi-trong-nhiet",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "EP04-duoi-ngoai-nhiet",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "EP04-tren-trong-rung",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "EP04-tren-ngoai-nhiet",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "EP04-tren-ngoai-rung",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "EP04-tren-trong-nhiet",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "DA-trong-rung",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "DA-ngoai-rung",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "DA-ngoai-nhiet",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "DA-trong-nhiet",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 12,
+        "x": 1070,
+        "y": 960,
+        "wires": [
+            [
+                "2427e10e5ce183ed"
+            ],
+            [
+                "93d02b72ea713e52"
+            ],
+            [
+                "486b497f5c41a723"
+            ],
+            [
+                "0f0fb67435f5f552"
+            ],
+            [
+                "b3b0c41bf18388ba"
+            ],
+            [
+                "375b6891cc01c4e9"
+            ],
+            [
+                "1de1f46274a7d64b"
+            ],
+            [
+                "ba907d8198075902"
+            ],
+            [
+                "fd8c448dbb82cc97"
+            ],
+            [
+                "47a809ea2c995d7f"
+            ],
+            [
+                "d702d6c19cf104cd"
+            ],
+            [
+                "49cb397f416bad20"
+            ]
+        ]
+    },
+    {
+        "id": "2427e10e5ce183ed",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"EP04-duoi-trong-rung\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1270,
+        "y": 880,
+        "wires": [
+            [
+                "31540def25bc724f",
+                "5e4cd7d884aa292b"
+            ]
+        ]
+    },
+    {
+        "id": "93d02b72ea713e52",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"EP04-duoi-ngoai-rung\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1270,
+        "y": 920,
+        "wires": [
+            [
+                "0ba8fa38d695ac32"
+            ]
+        ]
+    },
+    {
+        "id": "b3b0c41bf18388ba",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"EP04-tren-trong-rung\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1270,
+        "y": 960,
+        "wires": [
+            [
+                "af43092f06f14e92"
+            ]
+        ]
+    },
+    {
+        "id": "1de1f46274a7d64b",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"EP04-tren-ngoai-rung\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1269.2000122070312,
+        "y": 995.800048828125,
+        "wires": [
+            [
+                "903692bc24e95c80"
+            ]
+        ]
+    },
+    {
+        "id": "fd8c448dbb82cc97",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"DA-trong-rung\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1270,
+        "y": 1040,
+        "wires": [
+            [
+                "b6349511cbfafb6a"
+            ]
+        ]
+    },
+    {
+        "id": "47a809ea2c995d7f",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"DA-ngoai-rung\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1270,
+        "y": 1080,
+        "wires": [
+            [
+                "6e65722f2505c495"
+            ]
+        ]
+    },
+    {
+        "id": "31540def25bc724f",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat EP04-duoi-trong-rung",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1550,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "0ba8fa38d695ac32",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heatEP04-duoi-ngoai-rung",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "486b497f5c41a723",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temp Sensor EP04-duoi-trong-nhiet",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "0f0fb67435f5f552",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temp Sensor EP04-duoi-ngoai-nhiet",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1510,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "af43092f06f14e92",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat EP04-tren-trong-rung",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "903692bc24e95c80",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat EP04-tren-ngoai-rung",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1530,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "375b6891cc01c4e9",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temp Sensor EP04-tren-ngoai-nhiet",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "ba907d8198075902",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temp Sensor EP04-tren-trong-nhiet",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "b6349511cbfafb6a",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat DA-trong-rung",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "6e65722f2505c495",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat DA-ngoai-rung",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "d702d6c19cf104cd",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temp Sensor DA-ngoai-nhiet",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1480,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "49cb397f416bad20",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temp Sensor DA-trong-nhiet",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1480,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "6c64f7c9355fffed",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "iLEC MFM300",
+        "info": "",
+        "x": 1270,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2ed2c6d9aeb1719b",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Acrel ACM 96L E4",
+        "info": "",
+        "x": 1310,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "9e60f02354fb0c1a",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "CHINT PD7777",
+        "info": "",
+        "x": 1300,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "ba8162fdfea972c3",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nhiệt Rung",
+        "info": "",
+        "x": 1280,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "3adcee226704756c",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nhiệt Không TIếp Xúc",
+        "info": "",
+        "x": 1460,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "edfa8e648a93f466",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T18 MCC 1.3",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"T18 MCC 1.3\":[{\"ts\":1783010242000,\"values\":{\"Uab\":3782580,\"Ubc\":3790975,\"Uca\":3793083,\"ULLavg\":3788879,\"Zero-Seq-Vol\":0,\"ULLubn\":0,\"Ia\":11809600,\"Ib\":11862000,\"Ic\":12306400,\"Iavg\":12596933,\"Zero-Seq-Cur\":0,\"Iubn\":919,\"Pa\":2406400,\"Pb\":2457200,\"Pc\":2561200,\"Pt\":7424800,\"Qa\":942400,\"Qb\":828400,\"Qc\":856800,\"Qt\":2627600,\"Sa\":2628400,\"Sb\":2655200,\"Sc\":2700800,\"St\":7878400,\"PFa\":983,\"PFb\":996,\"PFc\":948,\"PFt\":942,\"Freq\":5004,\"ImpEp-1\":7160181,\"ExpEp-1\":0,\"ImpEq-1\":3087378,\"ExpEq-1\":0,\"ImpEp\":2864072000,\"ExpEp\":0,\"ImpEq\":1234951000,\"ExpEq\":0,\"Ua\":2185092,\"Ub\":2182656,\"Uc\":2194780,\"ULNavg\":2187509,\"ULNubn\":55}}]}",
+        "payloadType": "json",
+        "x": 1730,
+        "y": 300,
+        "wires": [
+            [
+                "b2160ab7df62277b"
+            ]
+        ]
+    },
+    {
+        "id": "038ebd1bfe67c140",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T24 MCC 1.4",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"T24 MCC1.4\":[{\"ts\":1783010208000,\"values\":{\"Ua\":2251018,\"Ub\":2267372,\"Uc\":2267097,\"ULNavg\":2259415,\"ULNubn\":86,\"Uab\":3913049,\"Ubc\":3926965,\"Uca\":3912810,\"ULLavg\":3917608,\"Zero-Seq-Vol\":0,\"ULLubn\":0,\"Ia\":4252480,\"Ib\":4355520,\"Ic\":4345280,\"Iavg\":4313386,\"Zero-Seq-Cur\":0,\"Iubn\":231,\"Pa\":851840,\"Pb\":884480,\"Pc\":869760,\"Pt\":2606080,\"Qa\":433280,\"Qb\":435520,\"Qc\":462080,\"Qt\":1330880,\"Sa\":957120,\"Sb\":985920,\"Sc\":984960,\"St\":2926720,\"PFa\":884,\"PFb\":897,\"PFc\":883,\"PFt\":890,\"Freq\":5009,\"ImpEp-1\":3651223,\"ExpEp-1\":0,\"ImpEq-1\":2135435,\"ExpEq-1\":1,\"ImpEp\":1168391000,\"ExpEp\":0,\"ImpEq\":683339200,\"ExpEq\":320}}]}",
+        "payloadType": "json",
+        "x": 1730,
+        "y": 340,
+        "wires": [
+            [
+                "c37b27482c5c6123"
+            ]
+        ]
+    },
+    {
+        "id": "a7ae5e10cc66b60e",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T35 MCC XEO",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"T35 MCC XEO\":[{\"ts\":1783010203000,\"values\":{\"Ua\":2259368,\"Ub\":2258916,\"Uc\":2265978,\"ULNavg\":2261420,\"ULNubn\":31,\"Uab\":3912948,\"Ubc\":3918674,\"Uca\":3919065,\"ULLavg\":3916895,\"Zero-Seq-Vol\":0,\"ULLubn\":0,\"Ia\":13220800,\"Ib\":13480000,\"Ic\":13484000,\"Iavg\":13388266,\"Zero-Seq-Cur\":0,\"Iubn\":192,\"Pa\":2803200,\"Pb\":2876000,\"Pc\":2848000,\"Pt\":8522400,\"Qa\":1029600,\"Qb\":999200,\"Qc\":1092000,\"Qt\":3124000,\"Sa\":2986400,\"Sb\":3044800,\"Sc\":3055200,\"St\":9086400,\"PFa\":938,\"PFb\":944,\"PFc\":933,\"PFt\":938,\"Freq\":5012,\"ImpEp-1\":5324413,\"ExpEp-1\":0,\"ImpEq-1\":1691123,\"ExpEq-1\":72892,\"ImpEp\":4259530000,\"ExpEp\":0,\"ImpEq\":1352898000,\"ExpEq\":58313600}}]}",
+        "payloadType": "json",
+        "x": 1730,
+        "y": 380,
+        "wires": [
+            [
+                "75e0703392ed67b7"
+            ]
+        ]
+    },
+    {
+        "id": "fabead63dd7db5fa",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T41 Chan khong 1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"T41 Chan khong 1\":[{\"ts\":1783011043000,\"values\":{\"Uab\":3925197,\"Ubc\":3916593,\"Uca\":3923261,\"ULLavg\":3921683,\"Zero-Seq-Vol\":0,\"ULLubn\":0,\"Ia\":4687800,\"Ib\":4646800,\"Ic\":4629200,\"Iavg\":4655133,\"Zero-Seq-Cur\":0,\"Iubn\":121,\"Pa\":1014000,\"Pb\":995600,\"Pc\":1002200,\"Pt\":3010200,\"Qa\":-322200,\"Qb\":-337200,\"Qc\":-301600,\"Qt\":-961400,\"Sa\":1064000,\"Sb\":1052400,\"Sc\":1046200,\"St\":3161400,\"PFa\":953,\"PFb\":947,\"PFc\":956,\"PFt\":952,\"Freq\":5014,\"ImpEp-1\":7298306,\"ExpEp-1\":0,\"ImpEq-1\":1305,\"ExpEq-1\":1455309,\"ImpEp\":1459661000,\"ExpEp\":0,\"ImpEq\":261000,\"ExpEq\":291061800,\"Ua\":2270061,\"Ub\":2262364,\"Uc\":2260128,\"ULNavg\":2264184,\"ULNubn\":43}}]}",
+        "payloadType": "json",
+        "x": 1740,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "de0b0e3e971bff33",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T22 Thuy luc",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"ts\":1783010962000,\"values\":{\"Ua\":2178,\"Ub\":2175,\"Uc\":2197,\"Uab\":3771,\"Ubc\":3791,\"Uca\":3781,\"Ia\":281,\"Ib\":276,\"Ic\":287,\"Ivs\":0,\"Pa\":529,\"Pb\":522,\"Pc\":558,\"Pt\":1608,\"Qa\":0,\"Qb\":0,\"Qc\":0,\"Qt\":0,\"Sa\":549,\"Sb\":536,\"Sc\":572,\"St\":1658,\"PFa\":965,\"PFb\":977,\"PFc\":978,\"PFt\":974,\"Freq\":5014,\"TotalEp\":508868,\"ImpEp\":508868,\"ExpEp\":0,\"ImpEq\":113773,\"ExpEq\":13}}]",
+        "payloadType": "json",
+        "x": 1750,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "91c4b20a8ffce8ef",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T50 Truyen dong XEO",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"T50 Truyen dong XEO\":[{\"ts\":1783186090000,\"values\":{\"Uab\":3949,\"Ubc\":3957,\"Uca\":3956,\"Ua\":2280,\"Ub\":2281,\"Uc\":2289,\"Ia\":1061,\"Ib\":1064,\"Ic\":1085,\"Pt\":6869,\"Pa\":2262,\"Pb\":2273,\"Pc\":2333,\"Qt\":962,\"Qa\":347,\"Qb\":285,\"Qc\":328,\"St\":7345,\"Sa\":2426,\"Sb\":2431,\"Sc\":2487,\"PFt\":935,\"PFa\":933,\"PFb\":934,\"PFc\":938,\"UWDa\":1000,\"UWDb\":1014,\"UWDc\":995,\"IWDa\":2900,\"IWDb\":2967,\"IWDc\":2778,\"Freq\":4986,\"DmPt\":0,\"ImpEp\":2713.59,\"ExpEp\":0,\"Q1Eq\":290.61,\"Q2Eq\":0,\"Q3Eq\":0,\"Q4Eq\":7.18}}]}",
+        "payloadType": "json",
+        "x": 1780,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7eb5a1494c09b7de",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T42 Chan khong 2",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"T42 Chan khong 2\":[{\"ts\":1783011043000,\"values\":{\"Ua\":2275244,\"Ub\":2274300,\"Uc\":2283408,\"ULNavg\":2277650,\"ULNubn\":39,\"Uab\":3940020,\"Ubc\":3947093,\"Uca\":3947910,\"ULLavg\":3945007,\"Zero-Seq-Vol\":0,\"ULLubn\":0,\"Ia\":3032600,\"Ib\":3039400,\"Ic\":2935200,\"Iavg\":3013933,\"Zero-Seq-Cur\":0,\"Iubn\":217,\"Pa\":652400,\"Pb\":642800,\"Pc\":636200,\"Pt\":1931400,\"Qa\":224000,\"Qb\":-254000,\"Qc\":-210600,\"Qt\":-240600,\"Sa\":689800,\"Sb\":691200,\"Sc\":670200,\"St\":2051200,\"PFa\":945,\"PFb\":929,\"PFc\":949,\"PFt\":941,\"Freq\":5014,\"ImpEp-1\":4400393,\"ExpEp-1\":0,\"ImpEq-1\":459,\"ExpEq-1\":578466,\"ImpEp\":880078600,\"ExpEp\":0,\"ImpEq\":91800,\"ExpEq\":115693200}}]}",
+        "payloadType": "json",
+        "x": 1740,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "66c0e8d6da5108f7",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T43 Chan khong 3",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"T43 Chan khong 3\":[{\"ts\":1783011043000,\"values\":{\"Ua\":2272470,\"Ub\":2262513,\"Uc\":2258454,\"ULNavg\":2264479,\"ULNubn\":61,\"Uab\":3927413,\"Ubc\":3915272,\"Uca\":3923901,\"ULLavg\":3922195,\"Zero-Seq-Vol\":0,\"ULLubn\":0,\"Ia\":3440400,\"Ib\":3400600,\"Ic\":3366000,\"Iavg\":3405066,\"Zero-Seq-Cur\":0,\"Iubn\":239,\"Pa\":741600,\"Pb\":723600,\"Pc\":728000,\"Pt\":2193200,\"Qa\":-247400,\"Qb\":-260800,\"Qc\":-219600,\"Qt\":-727800,\"Sa\":781800,\"Sb\":769200,\"Sc\":760400,\"St\":2311400,\"PFa\":950,\"PFb\":940,\"PFc\":957,\"PFt\":948,\"Freq\":5014,\"ImpEp-1\":5631019,\"ExpEp-1\":0,\"ImpEq-1\":2603,\"ExpEq-1\":1783186,\"ImpEp\":1126204000,\"ExpEp\":0,\"ImpEq\":520600,\"ExpEq\":356637200}}]}",
+        "payloadType": "json",
+        "x": 1740,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "91db5308c6b19472",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T50 Truyen dong XEO",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"EP04-duoi-trong-rung\":[{\"ts\":1783011450000,\"values\":{\"temperature\":395,\"x-sped\":17,\"y-sped\":31,\"z-sped\":8,\"x-disp\":142,\"y-disp\":240,\"z-disp\":121,\"x-accel\":12,\"y-accel\":22,\"z-accel\":5,\"x-freq\":0,\"y-freq\":0,\"z-freq\":0}}]}",
+        "payloadType": "json",
+        "x": 1880,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f61462a28d43c83",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T50 Truyen dong XEO",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"EP04-duoi-ngoai-rung\":[{\"ts\":1783011450000,\"values\":{\"temperature\":330,\"x-sped\":33,\"y-sped\":26,\"z-sped\":6,\"x-disp\":245,\"y-disp\":191,\"z-disp\":37,\"x-accel\":19,\"y-accel\":18,\"z-accel\":3,\"x-freq\":0,\"y-freq\":0,\"z-freq\":0}}]}",
+        "payloadType": "json",
+        "x": 1880,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "469ec7eb306dc69a",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T50 Truyen dong XEO",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"EP04-tren-trong-rung\":[{\"ts\":1783011450000,\"values\":{\"temperature\":427,\"x-sped\":16,\"y-sped\":13,\"z-sped\":4,\"x-disp\":97,\"y-disp\":103,\"z-disp\":18,\"x-accel\":17,\"y-accel\":14,\"z-accel\":7,\"x-freq\":0,\"y-freq\":0,\"z-freq\":0}}]}",
+        "payloadType": "json",
+        "x": 1880,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ba1366a9fb1bd35",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T50 Truyen dong XEO",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"EP04-tren-ngoai-rung\":[{\"ts\":1783011450000,\"values\":{\"temperature\":350,\"x-sped\":8,\"y-sped\":16,\"z-sped\":2,\"x-disp\":48,\"y-disp\":142,\"z-disp\":14,\"x-accel\":10,\"y-accel\":16,\"z-accel\":4,\"x-freq\":0,\"y-freq\":0,\"z-freq\":0}}]}",
+        "payloadType": "json",
+        "x": 1880,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33ff019f3b36dd79",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T50 Truyen dong XEO",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"DA-trong-rung\":[{\"ts\":1783011420000,\"values\":{\"temperature\":399,\"x-sped\":10,\"y-sped\":15,\"z-sped\":7,\"x-disp\":62,\"y-disp\":116,\"z-disp\":37,\"x-accel\":13,\"y-accel\":14,\"z-accel\":6,\"x-freq\":0,\"y-freq\":0,\"z-freq\":0}}]}",
+        "payloadType": "json",
+        "x": 1880,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "83eb25f1a4ade36c",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T50 Truyen dong XEO",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"DA-ngoai-rung\":[{\"ts\":1783011420000,\"values\":{\"temperature\":401,\"x-sped\":10,\"y-sped\":15,\"z-sped\":4,\"x-disp\":49,\"y-disp\":104,\"z-disp\":33,\"x-accel\":17,\"y-accel\":18,\"z-accel\":3,\"x-freq\":0,\"y-freq\":0,\"z-freq\":0}}]}",
+        "payloadType": "json",
+        "x": 1880,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b371b95f114cbd82",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temp Sensor EP04-tren-trong-nhiet",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"EP04-tren-trong-nhiet\":[{\"ts\":1783011210000,\"values\":{\"temperature\":505}}]}",
+        "payloadType": "json",
+        "x": 1900,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0c523b3712254ab3",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temp Sensor EP04-tren-ngoai-nhiet",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"EP04-tren-ngoai-nhiet\":[{\"ts\":1783011180000,\"values\":{\"temperature\":474}}]}",
+        "payloadType": "json",
+        "x": 1900,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d471d75d55b37617",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temp Sensor EP04-duoi-ngoai-nhiet",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"EP04-duoi-ngoai-nhiet\":[{\"ts\":1783011210000,\"values\":{\"temperature\":577}}]}",
+        "payloadType": "json",
+        "x": 1900,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7aac34ba71bcb128",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temp Sensor EP04-duoi-trong-nhiet",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"EP04-duoi-trong-nhiet\":[{\"ts\":1783011210000,\"values\":{\"temperature\":536}}]}",
+        "payloadType": "json",
+        "x": 1900,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5ec37227a734879",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T50 Truyen dong XEO",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"DA-ngoai-nhiet\":[{\"ts\":1783011210000,\"values\":{\"temperature\":547}}]}",
+        "payloadType": "json",
+        "x": 1880,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa37e68746791b4c",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T50 Truyen dong XEO",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"DA-trong-nhiet\":[{\"ts\":1783011210000,\"values\":{\"temperature\":6000}}]}",
+        "payloadType": "json",
+        "x": 1880,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf8b590116557f2a",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T92 Sang cuon",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"T92 Sang cuon\":[{\"ts\":1783011227000,\"values\":{\"ImpEp-1\":168687,\"ExpEp-1\":13422,\"EqL-1\":97675,\"EqC-1\":1,\"ImpEp\":26989920,\"ExpEp\":2147520,\"EqL\":15628000,\"EqC\":160,\"Ua\":2257,\"Ub\":2264,\"Uc\":2251,\"Uab\":3916,\"Ubc\":3911,\"Uca\":3904,\"Ia\":22,\"Ib\":15,\"Ic\":17,\"Pa\":2,\"Pb\":0,\"Pc\":1,\"Pt\":4,\"Qa\":0,\"Qb\":0,\"Qc\":0,\"Qt\":1,\"PFa\":406,\"PFb\":246,\"PFc\":397,\"PFt\":359,\"Sa\":5,\"Sb\":3,\"Sc\":3,\"St\":12,\"Freq\":5009}}]}",
+        "payloadType": "json",
+        "x": 1750,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b731d1f8274ff33",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Lô ép 4 trên gối trong",
+        "info": "",
+        "x": 2140,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "faa44351a8a63e45",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Lô đá gối trong",
+        "info": "",
+        "x": 2120,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "d9f92a78b7a26b06",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Lô đá gối ngoài",
+        "info": "",
+        "x": 2120,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "608a4ce073fb79fb",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Lô ép 4 trên gối ngoài",
+        "info": "",
+        "x": 2140,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "63ef42068f208e07",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Lô ép 4 dưới gối trong",
+        "info": "",
+        "x": 2140,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "259e920ca58a38c1",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Lô ép 4 dưới gối ngoài",
+        "info": "",
+        "x": 2140,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "b275bb1d909a8e44",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Lô ép 4 trên gối trong",
+        "info": "",
+        "x": 2180,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "864e95285c3a7f88",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Lô ép 4 trên gối ngoài",
+        "info": "",
+        "x": 2180,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "5fabc546ef277303",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Lô ép 4 dưới gối ngoài",
+        "info": "",
+        "x": 2180,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "7712f694a45c0760",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Lô ép 4 dưới gối trong",
+        "info": "",
+        "x": 2180,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "419dc9a2cfa405df",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Lô ép 4 gối ngoài",
+        "info": "",
+        "x": 2160,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "1847f936cdebc742",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Lô ép 4 gối trong",
+        "info": "",
+        "x": 2160,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "ac1e2ce4a1dc7f07",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Create Database",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"q\":\"CREATE DATABASE electric_measurement\"}",
+        "payloadType": "json",
+        "x": 1280,
+        "y": 40,
+        "wires": [
+            [
+                "48ae0e7eeecefa7a"
+            ]
+        ]
+    },
+    {
+        "id": "48ae0e7eeecefa7a",
+        "type": "http request",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Create Database",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/query?q={{ payload.q }}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1490,
+        "y": 40,
+        "wires": [
+            [
+                "c4e008645c83c626"
+            ]
+        ]
+    },
+    {
+        "id": "c4e008645c83c626",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1730,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "af9ef6129a12ecdc",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Drop Database",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "db",
+                "v": "dongtien",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{     \"q\": \"DROP MEASUREMENT electric_measurement\" }",
+        "payloadType": "json",
+        "x": 1280,
+        "y": 120,
+        "wires": [
+            [
+                "b858cef8affa16b7"
+            ]
+        ]
+    },
+    {
+        "id": "b858cef8affa16b7",
+        "type": "http request",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Drop Database",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/query?db={{db}}&q={{ payload.q }}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1480,
+        "y": 120,
+        "wires": [
+            [
+                "012bac25e347815a"
+            ]
+        ]
+    },
+    {
+        "id": "012bac25e347815a",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1730,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "69cebc575d4b4c92",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1750,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "03859ece56097b6c",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "pu_load_short,host=server02,region=us-west value=0.55 1422568543702900257",
+        "payloadType": "str",
+        "x": 1260,
+        "y": 200,
+        "wires": [
+            [
+                "a6a7e03f2c2626c7"
+            ]
+        ]
+    },
+    {
+        "id": "a6a7e03f2c2626c7",
+        "type": "http request",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Add Database",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db=electric_measurement&precision=ns",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1480,
+        "y": 200,
+        "wires": [
+            [
+                "69cebc575d4b4c92"
+            ]
+        ]
+    },
+    {
+        "id": "b2160ab7df62277b",
+        "type": "function",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Dump data",
+        "func": "/**\n * Escapes special characters for InfluxDB Line Protocol.\n */\nfunction escape_string(string) {\n    if (string === undefined || string === null) return \"Unknown\";\n    return string.toString()\n        .replace(/\\s/ig, '\\\\ ')\n        .replace(/\\,/g, '\\\\,')\n        .replace(/\\=/g, '\\\\=');\n}\n\nconst shift = global.get(\"shift\") || \"Unassigned\";\nconst raw_payload = msg.payload;\nconst machine_key = Object.keys(raw_payload)[0]; \n\nif (!machine_key || !raw_payload[machine_key][0]) return null;\n\nconst data_node = raw_payload[machine_key][0];\nconst timestamp = (data_node.ts || Date.now()) * 1000000;\nconst raw_data = data_node.values || {};\n\n// Định nghĩa metrics cho iLEC MFM300\n// Dữ liệu này được chia cho 1000 để chuyển từ mili-đơn vị về đơn vị chuẩn (V, A, kW...)\nconst metrics_definition = {\n    \"Ua\": { name: \"Phase A Voltage\", unit: \"V\", div: 1000 },\n    \"Ub\": { name: \"Phase B Voltage\", unit: \"V\", div: 1000 },\n    \"Uc\": { name: \"Phase C Voltage\", unit: \"V\", div: 1000 },\n    \"Uab\": { name: \"Line Voltage AB\", unit: \"V\", div: 1000 },\n    \"Ubc\": { name: \"Line Voltage BC\", unit: \"V\", div: 1000 },\n    \"Uca\": { name: \"Line Voltage CA\", unit: \"V\", div: 1000 },\n    \"Ia\": { name: \"Phase A Current\", unit: \"A\", div: 1000 },\n    \"Ib\": { name: \"Phase B Current\", unit: \"A\", div: 1000 },\n    \"Ic\": { name: \"Phase C Current\", unit: \"A\", div: 1000 },\n    \"Pa\": { name: \"Phase A Active Power\", unit: \"kW\", div: 1000 },\n    \"Pb\": { name: \"Phase B Active Power\", unit: \"kW\", div: 1000 },\n    \"Pc\": { name: \"Phase C Active Power\", unit: \"kW\", div: 1000 },\n    \"Pt\": { name: \"Total Active Power\", unit: \"kW\", div: 1000 },\n    \"Qa\": { name: \"Phase A Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Qb\": { name: \"Phase B Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Qc\": { name: \"Phase C Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Qt\": { name: \"Total Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Sa\": { name: \"Phase A Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"Sb\": { name: \"Phase B Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"Sc\": { name: \"Phase C Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"St\": { name: \"Total Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"PFa\": { name: \"Phase A Power Factor\", unit: \"None\", div: 1000 },\n    \"PFb\": { name: \"Phase B Power Factor\", unit: \"None\", div: 1000 },\n    \"PFc\": { name: \"Phase C Power Factor\", unit: \"None\", div: 1000 },\n    \"PFt\": { name: \"Total Power Factor\", unit: \"None\", div: 1000 },\n    \"Freq\": { name: \"Frequency\", unit: \"Hz\", div: 100 },\n    \"ImpEp\": { name: \"Total Import Active Energy\", unit: \"kWh\", div: 1000 },\n    \"ImpEq\": { name: \"Total Import Reactive Energy\", unit: \"kVARh\", div: 1000 }\n};\n\nconst data = [];\nconst device_info = {\n    factory: \"Dong Tien Paper Long An\",\n    transformer: \"3000KVA\",\n    parent_system: \"MCC XEO\",\n    sub_system: \"MCC_1.3\",\n    device: \"iLEC MFM300\"\n};\n\nfor (let key in raw_data) {\n    if (metrics_definition.hasOwnProperty(key)) {\n        const metric = metrics_definition[key];\n        const field_value = Number(raw_data[key]) / metric.div;\n\n        const tags = [\n            `factory=${escape_string(device_info.factory)}`,\n            `transformer=${escape_string(device_info.transformer)}`,\n            `parent_system=${escape_string(device_info.parent_system)}`,\n            `sub_system=${escape_string(device_info.sub_system)}`,\n            `machine=${escape_string(machine_key)}`,\n            `device=${escape_string(device_info.device)}`,\n            `name=${escape_string(metric.name)}`,\n            `unit=${escape_string(metric.unit)}`,\n            `shift=${escape_string(shift)}`\n        ];\n        \n        data.push(`electric_measurement,${tags.join(',')} value=${field_value} ${timestamp}`);\n    }\n}\n\nmsg.payload = data.join('\\n');\nmsg.db = 'dongtien';\nmsg.precision = 'ns';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1990,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c14480de3a256b68",
+        "type": "http request",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2190,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c37b27482c5c6123",
+        "type": "function",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Dump data",
+        "func": "/**\n * Escapes special characters for InfluxDB Line Protocol.\n */\nfunction escape_string(string) {\n    if (string === undefined || string === null) return \"Unknown\";\n    return string.toString()\n        .replace(/\\s/ig, '\\\\ ')\n        .replace(/\\,/g, '\\\\,')\n        .replace(/\\=/g, '\\\\=');\n}\n\nconst shift = global.get(\"shift\") || \"Unassigned\";\nconst raw_payload = msg.payload;\nconst machine_key = Object.keys(raw_payload)[0]; \n\nif (!machine_key || !raw_payload[machine_key][0]) return null;\n\nconst data_node = raw_payload[machine_key][0];\nconst timestamp = (data_node.ts || Date.now()) * 1000000;\nconst raw_data = data_node.values || {};\n\n// Định nghĩa metrics cho iLEC MFM300\n// Dữ liệu này được chia cho 1000 để chuyển từ mili-đơn vị về đơn vị chuẩn (V, A, kW...)\nconst metrics_definition = {\n    \"Ua\": { name: \"Phase A Voltage\", unit: \"V\", div: 1000 },\n    \"Ub\": { name: \"Phase B Voltage\", unit: \"V\", div: 1000 },\n    \"Uc\": { name: \"Phase C Voltage\", unit: \"V\", div: 1000 },\n    \"Uab\": { name: \"Line Voltage AB\", unit: \"V\", div: 1000 },\n    \"Ubc\": { name: \"Line Voltage BC\", unit: \"V\", div: 1000 },\n    \"Uca\": { name: \"Line Voltage CA\", unit: \"V\", div: 1000 },\n    \"Ia\": { name: \"Phase A Current\", unit: \"A\", div: 1000 },\n    \"Ib\": { name: \"Phase B Current\", unit: \"A\", div: 1000 },\n    \"Ic\": { name: \"Phase C Current\", unit: \"A\", div: 1000 },\n    \"Pa\": { name: \"Phase A Active Power\", unit: \"kW\", div: 1000 },\n    \"Pb\": { name: \"Phase B Active Power\", unit: \"kW\", div: 1000 },\n    \"Pc\": { name: \"Phase C Active Power\", unit: \"kW\", div: 1000 },\n    \"Pt\": { name: \"Total Active Power\", unit: \"kW\", div: 1000 },\n    \"Qa\": { name: \"Phase A Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Qb\": { name: \"Phase B Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Qc\": { name: \"Phase C Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Qt\": { name: \"Total Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Sa\": { name: \"Phase A Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"Sb\": { name: \"Phase B Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"Sc\": { name: \"Phase C Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"St\": { name: \"Total Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"PFa\": { name: \"Phase A Power Factor\", unit: \"None\", div: 1000 },\n    \"PFb\": { name: \"Phase B Power Factor\", unit: \"None\", div: 1000 },\n    \"PFc\": { name: \"Phase C Power Factor\", unit: \"None\", div: 1000 },\n    \"PFt\": { name: \"Total Power Factor\", unit: \"None\", div: 1000 },\n    \"Freq\": { name: \"Frequency\", unit: \"Hz\", div: 100 },\n    \"ImpEp\": { name: \"Total Import Active Energy\", unit: \"kWh\", div: 1000 },\n    \"ImpEq\": { name: \"Total Import Reactive Energy\", unit: \"kVARh\", div: 1000 }\n};\n\nconst data = [];\nconst device_info = {\n    factory: \"Dong Tien Paper Long An\",\n    transformer: \"3000KVA\",\n    parent_system: \"MCC XEO\",\n    sub_system: \"MCC_1.3\",\n    device: \"iLEC MFM300\"\n};\n\nfor (let key in raw_data) {\n    if (metrics_definition.hasOwnProperty(key)) {\n        const metric = metrics_definition[key];\n        const field_value = Number(raw_data[key]) / metric.div;\n\n        const tags = [\n            `factory=${escape_string(device_info.factory)}`,\n            `transformer=${escape_string(device_info.transformer)}`,\n            `parent_system=${escape_string(device_info.parent_system)}`,\n            `sub_system=${escape_string(device_info.sub_system)}`,\n            `machine=${escape_string(machine_key)}`,\n            `device=${escape_string(device_info.device)}`,\n            `name=${escape_string(metric.name)}`,\n            `unit=${escape_string(metric.unit)}`,\n            `shift=${escape_string(shift)}`\n        ];\n        \n        data.push(`electric_measurement,${tags.join(',')} value=${field_value} ${timestamp}`);\n    }\n}\n\nmsg.payload = data.join('\\n');\nmsg.db = 'dongtien';\nmsg.precision = 'ns';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1990,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e28476d19d01503d",
+        "type": "function",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Dump data",
+        "func": "/**\n * Escapes special characters for InfluxDB Line Protocol.\n */\nfunction escape_string(string) {\n    if (string === undefined || string === null) return \"Unknown\";\n    return string.toString()\n        .replace(/\\s/ig, '\\\\ ')\n        .replace(/\\,/g, '\\\\,')\n        .replace(/\\=/g, '\\\\=');\n}\n\nconst shift = global.get(\"shift\") || \"Unassigned\";\nconst raw_payload = msg.payload;\nconst machine_key = Object.keys(raw_payload)[0]; \n\nif (!machine_key || !raw_payload[machine_key][0]) return null;\n\nconst data_node = raw_payload[machine_key][0];\nconst timestamp = (data_node.ts || Date.now()) * 1000000;\nconst raw_data = data_node.values || {};\n\n// Định nghĩa metrics cho Arcel ACM 96L E4\nconst metrics_definition = {\n    \"Ua\": { name: \"Phase A Voltage\", unit: \"V\", div: 10 },\n    \"Ub\": { name: \"Phase B Voltage\", unit: \"V\", div: 10 },\n    \"Uc\": { name: \"Phase C Voltage\", unit: \"V\", div: 10 },\n    \"Uab\": { name: \"Line Voltage AB\", unit: \"V\", div: 10 },\n    \"Ubc\": { name: \"Line Voltage BC\", unit: \"V\", div: 10 },\n    \"Uca\": { name: \"Line Voltage CA\", unit: \"V\", div: 10 },\n    \"Ia\": { name: \"Phase A Current\", unit: \"A\", div: 1000 },\n    \"Ib\": { name: \"Phase B Current\", unit: \"A\", div: 1000 },\n    \"Ic\": { name: \"Phase C Current\", unit: \"A\", div: 1000 },\n    \"Pa\": { name: \"Phase A Active Power\", unit: \"kW\", div: 1000 },\n    \"Pb\": { name: \"Phase B Active Power\", unit: \"kW\", div: 1000 },\n    \"Pc\": { name: \"Phase C Active Power\", unit: \"kW\", div: 1000 },\n    \"Pt\": { name: \"Total Active Power\", unit: \"kW\", div: 1000 },\n    \"Qa\": { name: \"Phase A Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Qb\": { name: \"Phase B Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Qc\": { name: \"Phase C Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Qt\": { name: \"Total Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Sa\": { name: \"Phase A Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"Sb\": { name: \"Phase B Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"Sc\": { name: \"Phase C Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"St\": { name: \"Total Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"PFa\": { name: \"Phase A Power Factor\", unit: \"None\", div: 1000 },\n    \"PFb\": { name: \"Phase B Power Factor\", unit: \"None\", div: 1000 },\n    \"PFc\": { name: \"Phase C Power Factor\", unit: \"None\", div: 1000 },\n    \"PFt\": { name: \"Total Power Factor\", unit: \"None\", div: 1000 },\n    \"Freq\": { name: \"Frequency\", unit: \"Hz\", div: 100 },\n    \"ImpEp\": { name: \"Total Import Active Energy\", unit: \"kWh\", div: 1000 },\n    \"ExpEp\": { name: \"Total Export Active Energy\", unit: \"kWh\", div: 1000 }\n};\n\nconst data = [];\nconst device_info = {\n    factory: \"Dong Tien Paper Long An\",\n    transformer: \"3000KVA\",\n    parent_system: \"MCC XEO\",\n    sub_system: \"Sang_Cuon\",\n    device: \"Arcel ACM 96L E4\"\n};\n\nfor (let key in raw_data) {\n    if (metrics_definition.hasOwnProperty(key)) {\n        const metric = metrics_definition[key];\n        const field_value = Number(raw_data[key]) / metric.div;\n\n        const tags = [\n            `factory=${escape_string(device_info.factory)}`,\n            `transformer=${escape_string(device_info.transformer)}`,\n            `parent_system=${escape_string(device_info.parent_system)}`,\n            `sub_system=${escape_string(device_info.sub_system)}`,\n            `machine=${escape_string(machine_key)}`,\n            `device=${escape_string(device_info.device)}`,\n            `name=${escape_string(metric.name)}`,\n            `unit=${escape_string(metric.unit)}`,\n            `shift=${escape_string(shift)}`\n        ];\n        \n        data.push(`electric_measurement,${tags.join(',')} value=${field_value} ${timestamp}`);\n    }\n}\n\nmsg.payload = data.join('\\n');\nmsg.db = 'dongtien';\nmsg.precision = 'ns';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1970,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "684ebf6ec6ea9261",
+        "type": "function",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Dump data",
+        "func": "/**\n * Escapes special characters for InfluxDB Line Protocol\n */\nfunction escape_string(string) {\n    if (string === undefined || string === null) return \"Unknown\";\n    return string.toString()\n        .replace(/\\s/ig, '\\\\ ')\n        .replace(/\\,/g, '\\\\,')\n        .replace(/\\=/g, '\\\\=');\n}\n\n// Cấu hình cố định cho CHINT PD7777\nconst device_info = {\n    factory: \"Dong Tien Paper Long An\",\n    transformer: \"3000KVA\",\n    parent_system: \"MCC XEO\",\n    sub_system: \"Truyen_dong\",\n    device: \"CHINT PD7777\"\n};\n\nconst shift = global.get(\"shift\") || \"Unassigned\";\nconst raw_payload = msg.payload;\nconst machine_key = Object.keys(raw_payload)[0]; \n\nif (!machine_key || !raw_payload[machine_key][0]) return null;\n\nconst data_node = raw_payload[machine_key][0];\nconst timestamp = (data_node.ts || Date.now()) * 1000000;\nconst raw_values = data_node.values || {};\n\n// Định nghĩa metrics kèm đơn vị (Unit) để làm tag\nconst metrics_config = {\n    \"Ia\": { name: \"Phase A Current\", unit: \"A\", div: 100 },\n    \"Ib\": { name: \"Phase B Current\", unit: \"A\", div: 100 },\n    \"Ic\": { name: \"Phase C Current\", unit: \"A\", div: 100 },\n    \"Pt\": { name: \"Total Active Power\", unit: \"kW\", div: 1000 },\n    \"Pa\": { name: \"Phase A Active Power\", unit: \"kW\", div: 1000 },\n    \"Pb\": { name: \"Phase B Active Power\", unit: \"kW\", div: 1000 },\n    \"Pc\": { name: \"Phase C Active Power\", unit: \"kW\", div: 1000 },\n    \"Qt\": { name: \"Total Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Qa\": { name: \"Phase A Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Qb\": { name: \"Phase B Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"Qc\": { name: \"Phase C Reactive Power\", unit: \"kVAR\", div: 1000 },\n    \"St\": { name: \"Total Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"Sa\": { name: \"Phase A Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"Sb\": { name: \"Phase B Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"Sc\": { name: \"Phase C Apparent Power\", unit: \"kVA\", div: 1000 },\n    \"PFt\": { name: \"Total Power Factor\", unit: \"None\", div: 1000 },\n    \"PFa\": { name: \"Phase A Power Factor\", unit: \"None\", div: 1000 },\n    \"PFb\": { name: \"Phase B Power Factor\", unit: \"None\", div: 1000 },\n    \"PFc\": { name: \"Phase C Power Factor\", unit: \"None\", div: 1000 },\n    \"UWDa\": { name: \"Phase A Voltage\", unit: \"V\", div: 10 },\n    \"UWDb\": { name: \"Phase B Voltage\", unit: \"V\", div: 10 },\n    \"UWDc\": { name: \"Phase C Voltage\", unit: \"V\", div: 10 },\n    \"Freq\": { name: \"Frequency\", unit: \"Hz\", div: 100 },\n    \"ImpEp\": { name: \"Total Import Active Energy\", unit: \"kWh\", div: 1 }\n};\n\nconst data = [];\n\nfor (let key in raw_values) {\n    if (metrics_config.hasOwnProperty(key)) {\n        const conf = metrics_config[key];\n        const field_value = Number(raw_values[key]) / conf.div;\n\n        const tags = [\n            `factory=${escape_string(device_info.factory)}`,\n            `machine=${escape_string(machine_key)}`,\n            `device=${escape_string(device_info.device)}`,\n            `name=${escape_string(conf.name)}`,\n            `unit=${escape_string(conf.unit)}`, // Thêm tag đơn vị ở đây\n            `shift=${escape_string(shift)}`\n        ];\n        \n        data.push(`electric_measurement,${tags.join(',')} value=${field_value} ${timestamp}`);\n    }\n}\n\nmsg.payload = data.join('\\n');\nmsg.db = 'dongtien';\nmsg.precision = 'ns';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2050,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1d0a9213c76a310f",
+        "type": "function",
+        "z": "06c2b55e1c9ea8bc",
+        "d": true,
+        "name": "Dump data",
+        "func": "import { NodeAPI, Node, NodeDef, NodeMessage } from 'node-red';\n\n/**\n * Ghi chú: kiểu `Node.on('input', ...)` trong gói @types/node-red không ổn định\n * giữa các phiên bản (phụ thuộc @node-red/registry đôi khi thiếu .d.ts và làm\n * overload resolution bị lệch). Để tránh phụ thuộc vào tiểu tiết đó, ta khai\n * báo kiểu tường minh cho callback rồi ép kiểu khi đăng ký listener, thay vì\n * dựa vào overload suy luận tự động của thư viện.\n */\ntype DongtienInputListener = (\n    msg: NodeMessage & { payload: unknown; db?: string; precision?: string },\n    send: (msg: NodeMessage) => void,\n    done: (err?: Error | null) => void,\n) => void;\n\n/**\n * dongtien-insert\n * ----------------\n * Node dùng chung cho các loại đồng hồ đo điện (iLEC MFM300, Arcel ACM 96L E4,\n * CHINT PD7777, hoặc tuỳ chỉnh khác). Thay vì viết cứng metrics_definition và\n * device_info trong từng file function-node riêng lẻ (ilec_mfm300.ts,\n * arcel_acm.ts, chint_pd7777.ts), toàn bộ mapping \"biến -> tên/đơn vị/độ chia\"\n * và thông tin thiết bị (factory/transformer/parent_system/sub_system/device)\n * được cấu hình trực tiếp trên UI của node (xem node.html).\n *\n * Input  : msg.payload = { [machine_key]: [{ ts, values: { Ua: 220000, ... } }] }\n * Output : msg.payload = chuỗi Line Protocol (nhiều dòng, mỗi dòng 1 field \"value\")\n *          msg.db, msg.precision để node influxdb-batch / dongtien insert phía sau dùng.\n */\n\nexport interface MetricDefinition {\n    /** Tên biến kỹ thuật trong raw_data, vd: \"Ua\", \"Ib\", \"Pt\" */\n    key: string;\n    /** Tên hiển thị / mô tả, vd: \"Phase A Voltage\" -> đưa vào tag \"name\" */\n    name: string;\n    /** Đơn vị đo, vd: \"V\", \"A\", \"kW\" -> đưa vào tag \"unit\" */\n    unit: string;\n    /** Độ chia (chia raw value để ra giá trị chuẩn), vd: 1000, 100, 10 */\n    div: number;\n}\n\nexport interface DongtienInsertNodeDef extends NodeDef {\n    deviceType: string;\n    factory: string;\n    transformer: string;\n    parentSystem: string;\n    subSystem: string;\n    device: string;\n    measurement: string;\n    db: string;\n    precision: string;\n    shiftVar: string;\n    metrics: MetricDefinition[];\n}\n\ninterface DongtienInsertNode extends Node {\n    deviceType: string;\n    factory: string;\n    transformer: string;\n    parentSystem: string;\n    subSystem: string;\n    device: string;\n    measurement: string;\n    db: string;\n    precision: string;\n    shiftVar: string;\n    metricsMap: Record<string, MetricDefinition>;\n}\n\n/**\n * Escape ký tự đặc biệt cho InfluxDB Line Protocol (giữ đúng logic gốc trong\n * ilec_mfm300.ts / arcel_acm.ts / chint_pd7777.ts).\n */\nfunction escapeString(value: unknown): string {\n    if (value === undefined || value === null || value === '') return 'Unknown';\n    return String(value)\n        .replace(/\\s/g, '\\\\ ')\n        .replace(/,/g, '\\\\,')\n        .replace(/=/g, '\\\\=');\n}\n\nmodule.exports = function (RED: NodeAPI) {\n    function DongtienInsertNode(\n        this: DongtienInsertNode,\n        config: DongtienInsertNodeDef,\n    ) {\n        RED.nodes.createNode(this, config);\n        const node = this;\n\n        node.deviceType = config.deviceType || 'custom';\n        node.factory = config.factory || '';\n        node.transformer = config.transformer || '';\n        node.parentSystem = config.parentSystem || '';\n        node.subSystem = config.subSystem || '';\n        node.device = config.device || '';\n        node.measurement = config.measurement || 'electric_measurement';\n        node.db = config.db || 'dongtien';\n        node.precision = config.precision || 'ns';\n        node.shiftVar = config.shiftVar || 'shift';\n\n        // Chuẩn hoá danh sách metrics đã cấu hình trên UI thành map để tra cứu O(1)\n        const rawMetrics: MetricDefinition[] = Array.isArray(config.metrics)\n            ? config.metrics\n            : [];\n\n        node.metricsMap = {};\n        for (const m of rawMetrics) {\n            if (!m || !m.key) continue;\n            const div = Number(m.div);\n            node.metricsMap[m.key] = {\n                key: m.key,\n                name: m.name && m.name.trim() ? m.name : m.key,\n                unit: m.unit || '',\n                div: Number.isFinite(div) && div !== 0 ? div : 1,\n            };\n        }\n\n        if (Object.keys(node.metricsMap).length === 0) {\n            node.warn(\n                'Chưa cấu hình biến nào (metrics rỗng). Node sẽ không xuất ra dữ liệu nào.',\n            );\n        }\n\n        const onInput: DongtienInputListener = function (msg, send, done) {\n            send = send || ((m: NodeMessage) => node.send(m));\n            done =\n                done ||\n                ((err?: Error | null) => {\n                    if (err) node.error(err, msg);\n                });\n\n            try {\n                const shift =\n                    (node.context().global.get(node.shiftVar) as string) ||\n                    'Unassigned';\n\n                const rawPayload = msg.payload as\n                    | Record<string, Array<{ ts?: number; values?: Record<string, unknown> }>>\n                    | undefined;\n\n                if (!rawPayload || typeof rawPayload !== 'object') {\n                    node.status({ fill: 'yellow', shape: 'ring', text: 'payload không hợp lệ' });\n                    return done();\n                }\n\n                const machineKey = Object.keys(rawPayload)[0];\n                const dataNode = machineKey ? rawPayload[machineKey]?.[0] : undefined;\n\n                if (!machineKey || !dataNode) {\n                    node.status({ fill: 'yellow', shape: 'ring', text: 'không có machine_key' });\n                    return done();\n                }\n\n                // Giữ nguyên logic gốc: ts (giây hoặc ms tuỳ nguồn) * 1e6 -> ns\n                const timestamp = (dataNode.ts || Date.now()) * 1000000;\n                const rawData = dataNode.values || {};\n\n                const lines: string[] = [];\n\n                for (const key of Object.keys(rawData)) {\n                    const metric = node.metricsMap[key];\n                    if (!metric) continue;\n\n                    const fieldValue = Number(rawData[key]) / metric.div;\n                    if (Number.isNaN(fieldValue)) continue;\n\n                    const tags = [\n                        `factory=${escapeString(node.factory)}`,\n                        `transformer=${escapeString(node.transformer)}`,\n                        `parent_system=${escapeString(node.parentSystem)}`,\n                        `sub_system=${escapeString(node.subSystem)}`,\n                        `machine=${escapeString(machineKey)}`,\n                        `device=${escapeString(node.device)}`,\n                        `name=${escapeString(metric.name)}`,\n                        `unit=${escapeString(metric.unit)}`,\n                        `shift=${escapeString(shift)}`,\n                    ];\n\n                    lines.push(\n                        `${node.measurement},${tags.join(',')} value=${fieldValue} ${timestamp}`,\n                    );\n                }\n\n                if (lines.length === 0) {\n                    node.status({\n                        fill: 'yellow',\n                        shape: 'ring',\n                        text: 'không có biến nào khớp cấu hình',\n                    });\n                    return done();\n                }\n\n                msg.payload = lines.join('\\n');\n                msg.db = node.db;\n                msg.precision = node.precision;\n\n                node.status({\n                    fill: 'green',\n                    shape: 'dot',\n                    text: `${lines.length} điểm dữ liệu`,\n                });\n\n                send(msg);\n                done();\n            } catch (err) {\n                node.status({ fill: 'red', shape: 'ring', text: 'lỗi xử lý' });\n                done(err as Error);\n            }\n        };\n\n        // Ép kiểu khi đăng ký để tránh phụ thuộc overload không ổn định của\n        // @types/node-red giữa các phiên bản (xem ghi chú DongtienInputListener).\n        (node.on as (event: string, listener: DongtienInputListener) => Node).call(\n            node,\n            'input',\n            onInput,\n        );\n\n        node.on('close', function () {\n            node.status({});\n        });\n    }\n\n    RED.nodes.registerType('dongtien-insert', DongtienInsertNode as never);\n};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 22,
+        "initialize": "<script type=\"text/javascript\">\n  (function () {\n    // ------------------------------------------------------------------\n    // Template mặc định cho từng loại đồng hồ, đồng bộ với\n    // src/ilec_mfm300.ts, src/arcel_acm.ts, src/chint_pd7777.ts\n    // Người dùng chọn \"Loại đồng hồ\" trên UI rồi bấm \"Nạp mặc định\" để\n    // điền nhanh bảng mapping; sau đó vẫn có thể sửa/thêm/xoá tuỳ ý.\n    // ------------------------------------------------------------------\n    var DONGTIEN_DEVICE_TEMPLATES = {\n      ilec_mfm300: {\n        device: 'iLEC MFM300',\n        metrics: [\n          { key: 'Ua', name: 'Phase A Voltage', unit: 'V', div: 1000 },\n          { key: 'Ub', name: 'Phase B Voltage', unit: 'V', div: 1000 },\n          { key: 'Uc', name: 'Phase C Voltage', unit: 'V', div: 1000 },\n          { key: 'Uab', name: 'Line Voltage AB', unit: 'V', div: 1000 },\n          { key: 'Ubc', name: 'Line Voltage BC', unit: 'V', div: 1000 },\n          { key: 'Uca', name: 'Line Voltage CA', unit: 'V', div: 1000 },\n          { key: 'Ia', name: 'Phase A Current', unit: 'A', div: 1000 },\n          { key: 'Ib', name: 'Phase B Current', unit: 'A', div: 1000 },\n          { key: 'Ic', name: 'Phase C Current', unit: 'A', div: 1000 },\n          { key: 'Pa', name: 'Phase A Active Power', unit: 'kW', div: 1000 },\n          { key: 'Pb', name: 'Phase B Active Power', unit: 'kW', div: 1000 },\n          { key: 'Pc', name: 'Phase C Active Power', unit: 'kW', div: 1000 },\n          { key: 'Pt', name: 'Total Active Power', unit: 'kW', div: 1000 },\n          { key: 'Qa', name: 'Phase A Reactive Power', unit: 'kVAR', div: 1000 },\n          { key: 'Qb', name: 'Phase B Reactive Power', unit: 'kVAR', div: 1000 },\n          { key: 'Qc', name: 'Phase C Reactive Power', unit: 'kVAR', div: 1000 },\n          { key: 'Qt', name: 'Total Reactive Power', unit: 'kVAR', div: 1000 },\n          { key: 'Sa', name: 'Phase A Apparent Power', unit: 'kVA', div: 1000 },\n          { key: 'Sb', name: 'Phase B Apparent Power', unit: 'kVA', div: 1000 },\n          { key: 'Sc', name: 'Phase C Apparent Power', unit: 'kVA', div: 1000 },\n          { key: 'St', name: 'Total Apparent Power', unit: 'kVA', div: 1000 },\n          { key: 'PFa', name: 'Phase A Power Factor', unit: 'None', div: 1000 },\n          { key: 'PFb', name: 'Phase B Power Factor', unit: 'None', div: 1000 },\n          { key: 'PFc', name: 'Phase C Power Factor', unit: 'None', div: 1000 },\n          { key: 'PFt', name: 'Total Power Factor', unit: 'None', div: 1000 },\n          { key: 'Freq', name: 'Frequency', unit: 'Hz', div: 100 },\n          { key: 'ImpEp', name: 'Total Import Active Energy', unit: 'kWh', div: 1000 },\n          { key: 'ImpEq', name: 'Total Import Reactive Energy', unit: 'kVARh', div: 1000 },\n        ],\n      },\n      arcel_acm96l_e4: {\n        device: 'Arcel ACM 96L E4',\n        metrics: [\n          { key: 'Ua', name: 'Phase A Voltage', unit: 'V', div: 10 },\n          { key: 'Ub', name: 'Phase B Voltage', unit: 'V', div: 10 },\n          { key: 'Uc', name: 'Phase C Voltage', unit: 'V', div: 10 },\n          { key: 'Uab', name: 'Line Voltage AB', unit: 'V', div: 10 },\n          { key: 'Ubc', name: 'Line Voltage BC', unit: 'V', div: 10 },\n          { key: 'Uca', name: 'Line Voltage CA', unit: 'V', div: 10 },\n          { key: 'Ia', name: 'Phase A Current', unit: 'A', div: 1000 },\n          { key: 'Ib', name: 'Phase B Current', unit: 'A', div: 1000 },\n          { key: 'Ic', name: 'Phase C Current', unit: 'A', div: 1000 },\n          { key: 'Pa', name: 'Phase A Active Power', unit: 'kW', div: 1000 },\n          { key: 'Pb', name: 'Phase B Active Power', unit: 'kW', div: 1000 },\n          { key: 'Pc', name: 'Phase C Active Power', unit: 'kW', div: 1000 },\n          { key: 'Pt', name: 'Total Active Power', unit: 'kW', div: 1000 },\n          { key: 'Qa', name: 'Phase A Reactive Power', unit: 'kVAR', div: 1000 },\n          { key: 'Qb', name: 'Phase B Reactive Power', unit: 'kVAR', div: 1000 },\n          { key: 'Qc', name: 'Phase C Reactive Power', unit: 'kVAR', div: 1000 },\n          { key: 'Qt', name: 'Total Reactive Power', unit: 'kVAR', div: 1000 },\n          { key: 'Sa', name: 'Phase A Apparent Power', unit: 'kVA', div: 1000 },\n          { key: 'Sb', name: 'Phase B Apparent Power', unit: 'kVA', div: 1000 },\n          { key: 'Sc', name: 'Phase C Apparent Power', unit: 'kVA', div: 1000 },\n          { key: 'St', name: 'Total Apparent Power', unit: 'kVA', div: 1000 },\n          { key: 'PFa', name: 'Phase A Power Factor', unit: 'None', div: 1000 },\n          { key: 'PFb', name: 'Phase B Power Factor', unit: 'None', div: 1000 },\n          { key: 'PFc', name: 'Phase C Power Factor', unit: 'None', div: 1000 },\n          { key: 'PFt', name: 'Total Power Factor', unit: 'None', div: 1000 },\n          { key: 'Freq', name: 'Frequency', unit: 'Hz', div: 100 },\n          { key: 'ImpEp', name: 'Total Import Active Energy', unit: 'kWh', div: 1000 },\n          { key: 'ExpEp', name: 'Total Export Active Energy', unit: 'kWh', div: 1000 },\n        ],\n      },\n      chint_pd7777: {\n        device: 'CHINT PD7777',\n        metrics: [\n          { key: 'Ua', name: 'Phase A Voltage', unit: 'V', div: 10 },\n          { key: 'Ub', name: 'Phase B Voltage', unit: 'V', div: 10 },\n          { key: 'Uc', name: 'Phase C Voltage', unit: 'V', div: 10 },\n          { key: 'Uab', name: 'Line Voltage AB', unit: 'V', div: 10 },\n          { key: 'Ubc', name: 'Line Voltage BC', unit: 'V', div: 10 },\n          { key: 'Uca', name: 'Line Voltage CA', unit: 'V', div: 10 },\n          { key: 'Ia', name: 'Phase A Current', unit: 'A', div: 100 },\n          { key: 'Ib', name: 'Phase B Current', unit: 'A', div: 100 },\n          { key: 'Ic', name: 'Phase C Current', unit: 'A', div: 100 },\n          { key: 'Pa', name: 'Phase A Active Power', unit: 'kW', div: 1000 },\n          { key: 'Pb', name: 'Phase B Active Power', unit: 'kW', div: 1000 },\n          { key: 'Pc', name: 'Phase C Active Power', unit: 'kW', div: 1000 },\n          { key: 'Pt', name: 'Total Active Power', unit: 'kW', div: 1000 },\n          { key: 'Qa', name: 'Phase A Reactive Power', unit: 'kVAR', div: 1000 },\n          { key: 'Qb', name: 'Phase B Reactive Power', unit: 'kVAR', div: 1000 },\n          { key: 'Qc', name: 'Phase C Reactive Power', unit: 'kVAR', div: 1000 },\n          { key: 'Qt', name: 'Total Reactive Power', unit: 'kVAR', div: 1000 },\n          { key: 'Sa', name: 'Phase A Apparent Power', unit: 'kVA', div: 1000 },\n          { key: 'Sb', name: 'Phase B Apparent Power', unit: 'kVA', div: 1000 },\n          { key: 'Sc', name: 'Phase C Apparent Power', unit: 'kVA', div: 1000 },\n          { key: 'St', name: 'Total Apparent Power', unit: 'kVA', div: 1000 },\n          { key: 'PFa', name: 'Phase A Power Factor', unit: 'None', div: 1000 },\n          { key: 'PFb', name: 'Phase B Power Factor', unit: 'None', div: 1000 },\n          { key: 'PFc', name: 'Phase C Power Factor', unit: 'None', div: 1000 },\n          { key: 'PFt', name: 'Total Power Factor', unit: 'None', div: 1000 },\n          { key: 'Freq', name: 'Frequency', unit: 'Hz', div: 100 },\n          { key: 'ImpEp', name: 'Total Import Active Energy', unit: 'kWh', div: 1 },\n        ],\n      },\n      custom: {\n        device: '',\n        metrics: [],\n      },\n    };\n\n    function metricsListInit($list, metrics) {\n      $list.editableList({\n        addButton: 'Thêm biến',\n        removable: true,\n        sortable: true,\n        height: 260,\n        header: $('<div/>').css({ display: 'flex' }).append(\n          $('<div/>').css({ width: '18%', display: 'inline-block', fontWeight: 'bold' }).text('Biến (key)'),\n          $('<div/>').css({ width: '37%', display: 'inline-block', fontWeight: 'bold' }).text('Tên hiển thị'),\n          $('<div/>').css({ width: '18%', display: 'inline-block', fontWeight: 'bold' }).text('Đơn vị'),\n          $('<div/>').css({ width: '18%', display: 'inline-block', fontWeight: 'bold' }).text('Độ chia'),\n        ),\n        addItem: function (container, _index, data) {\n          data = data || {};\n          var row = $('<div/>').css({ display: 'flex', gap: '4px' }).appendTo(container);\n\n          var keyInput = $('<input/>', {\n            type: 'text',\n            placeholder: 'VD: Ua',\n          })\n            .css({ width: '18%' })\n            .val(data.key || '')\n            .appendTo(row);\n\n          var nameInput = $('<input/>', {\n            type: 'text',\n            placeholder: 'VD: Phase A Voltage',\n          })\n            .css({ width: '38%' })\n            .val(data.name || '')\n            .appendTo(row);\n\n          var unitInput = $('<input/>', {\n            type: 'text',\n            placeholder: 'VD: V, A, kW...',\n          })\n            .css({ width: '18%' })\n            .val(data.unit || '')\n            .appendTo(row);\n\n          var divInput = $('<input/>', {\n            type: 'number',\n            step: 'any',\n            placeholder: 'VD: 1000',\n          })\n            .css({ width: '18%' })\n            .val(data.div !== undefined && data.div !== null ? data.div : 1)\n            .appendTo(row);\n\n          container.data('_inputs', {\n            keyInput: keyInput,\n            nameInput: nameInput,\n            unitInput: unitInput,\n            divInput: divInput,\n          });\n        },\n      });\n\n      (metrics || []).forEach(function (m) {\n        $list.editableList('addItem', m);\n      });\n    }\n\n    function metricsListGetValue($list) {\n      var result = [];\n      $list.editableList('items').each(function () {\n        var inputs = $(this).data('_inputs');\n        if (!inputs) return;\n        var key = (inputs.keyInput.val() || '').trim();\n        if (!key) return;\n        result.push({\n          key: key,\n          name: (inputs.nameInput.val() || '').trim() || key,\n          unit: (inputs.unitInput.val() || '').trim(),\n          div: parseFloat(inputs.divInput.val()) || 1,\n        });\n      });\n      return result;\n    }\n\n    RED.nodes.registerType('dongtien-insert', {\n      category: 'Dong Tien',\n      color: '#a6bbcf',\n      defaults: {\n        name: { value: '' },\n        deviceType: { value: 'ilec_mfm300' },\n        factory: { value: 'Dong Tien Paper Long An', required: true },\n        transformer: { value: '3000KVA' },\n        parentSystem: { value: 'MCC XEO' },\n        subSystem: { value: '' },\n        device: { value: 'iLEC MFM300', required: true },\n        measurement: { value: 'electric_measurement', required: true },\n        db: { value: 'dongtien', required: true },\n        precision: { value: 'ns' },\n        shiftVar: { value: 'shift' },\n        metrics: { value: DONGTIEN_DEVICE_TEMPLATES.ilec_mfm300.metrics },\n      },\n      inputs: 1,\n      outputs: 1,\n      icon: 'font-awesome/fa-bolt',\n      paletteLabel: 'dongtien-insert',\n      label: function () {\n        return this.name || this.device || 'dongtien-insert';\n      },\n      labelStyle: function () {\n        return this.name ? 'node_label_italic' : '';\n      },\n      oneditprepare: function () {\n        var node = this;\n        var $list = $('#node-input-metrics-container');\n\n        metricsListInit($list, node.metrics);\n\n        $('#node-input-deviceType').on('change', function () {\n          var type = $(this).val();\n          if (type === 'custom') return; // không tự động ghi đè khi chọn \"Tuỳ chỉnh\"\n          var tpl = DONGTIEN_DEVICE_TEMPLATES[type];\n          if (tpl && !$('#node-input-device').val()) {\n            $('#node-input-device').val(tpl.device);\n          }\n        });\n\n        $('#node-load-default-metrics').on('click', function () {\n          var type = $('#node-input-deviceType').val();\n          var tpl = DONGTIEN_DEVICE_TEMPLATES[type];\n          if (!tpl) return;\n\n          if (\n            $list.editableList('length') > 0 &&\n            !window.confirm(\n              'Thao tác này sẽ thay thế toàn bộ bảng mapping hiện tại bằng mặc định của \"' +\n                type +\n                '\". Tiếp tục?',\n            )\n          ) {\n            return;\n          }\n\n          $list.editableList('empty');\n          tpl.metrics.forEach(function (m) {\n            $list.editableList('addItem', m);\n          });\n          if (tpl.device) {\n            $('#node-input-device').val(tpl.device);\n          }\n        });\n      },\n      oneditsave: function () {\n        var $list = $('#node-input-metrics-container');\n        this.metrics = metricsListGetValue($list);\n      },\n    });\n  })();\n</script>\n\n<script type=\"text/html\" data-template-name=\"dongtien-insert\">\n  <div class=\"form-row\">\n    <label for=\"node-input-name\"><i class=\"fa fa-tag\"></i> Tên node</label>\n    <input type=\"text\" id=\"node-input-name\" placeholder=\"VD: Insert iLEC MFM300\" />\n  </div>\n\n  <div class=\"form-row\">\n    <label for=\"node-input-deviceType\"><i class=\"fa fa-microchip\"></i> Loại đồng hồ</label>\n    <select id=\"node-input-deviceType\" style=\"width: 60%\">\n      <option value=\"ilec_mfm300\">iLEC MFM300</option>\n      <option value=\"arcel_acm96l_e4\">Arcel ACM 96L E4</option>\n      <option value=\"chint_pd7777\">CHINT PD7777</option>\n      <option value=\"custom\">Tuỳ chỉnh...</option>\n    </select>\n    <button type=\"button\" id=\"node-load-default-metrics\" class=\"red-ui-button\" style=\"margin-left: 6px\">\n      <i class=\"fa fa-download\"></i> Nạp mặc định\n    </button>\n  </div>\n\n  <div class=\"form-tips\">\n    <i class=\"fa fa-info-circle\"></i> Bấm <b>Nạp mặc định</b> để điền nhanh bảng mapping biến/tên/đơn vị/độ chia\n    theo loại đồng hồ đã chọn. Bạn vẫn có thể sửa/thêm/xoá tự do sau đó.\n  </div>\n\n  <hr />\n\n  <div class=\"form-row\">\n    <label for=\"node-input-device\"><i class=\"fa fa-tag\"></i> Tag \"device\"</label>\n    <input type=\"text\" id=\"node-input-device\" placeholder=\"VD: iLEC MFM300\" />\n  </div>\n\n  <div class=\"form-row\">\n    <label for=\"node-input-factory\"><i class=\"fa fa-industry\"></i> Tag \"factory\"</label>\n    <input type=\"text\" id=\"node-input-factory\" placeholder=\"VD: Dong Tien Paper Long An\" />\n  </div>\n\n  <div class=\"form-row\">\n    <label for=\"node-input-transformer\"><i class=\"fa fa-bolt\"></i> Tag \"transformer\"</label>\n    <input type=\"text\" id=\"node-input-transformer\" placeholder=\"VD: 3000KVA\" />\n  </div>\n\n  <div class=\"form-row\">\n    <label for=\"node-input-parentSystem\"><i class=\"fa fa-sitemap\"></i> Tag \"parent_system\"</label>\n    <input type=\"text\" id=\"node-input-parentSystem\" placeholder=\"VD: MCC XEO\" />\n  </div>\n\n  <div class=\"form-row\">\n    <label for=\"node-input-subSystem\"><i class=\"fa fa-cogs\"></i> Tag \"sub_system\"</label>\n    <input type=\"text\" id=\"node-input-subSystem\" placeholder=\"VD: MCC_1.3\" />\n  </div>\n\n  <hr />\n\n  <div class=\"form-row\" style=\"margin-bottom: 4px\">\n    <label style=\"width: auto\"><i class=\"fa fa-list\"></i> Mapping biến (field/tag)</label>\n  </div>\n  <div class=\"form-row node-input-metrics-row\" style=\"margin-bottom: 0\">\n    <ol id=\"node-input-metrics-container\" style=\"min-height: 250px\"></ol>\n  </div>\n\n  <hr />\n\n  <div class=\"form-row\">\n    <label for=\"node-input-measurement\"><i class=\"fa fa-database\"></i> Measurement</label>\n    <input type=\"text\" id=\"node-input-measurement\" placeholder=\"electric_measurement\" />\n  </div>\n\n  <div class=\"form-row\">\n    <label for=\"node-input-db\"><i class=\"fa fa-database\"></i> InfluxDB (msg.db)</label>\n    <input type=\"text\" id=\"node-input-db\" placeholder=\"dongtien\" />\n  </div>\n\n  <div class=\"form-row\">\n    <label for=\"node-input-precision\"><i class=\"fa fa-clock-o\"></i> Precision (msg.precision)</label>\n    <select id=\"node-input-precision\" style=\"width: 60%\">\n      <option value=\"ns\">ns</option>\n      <option value=\"us\">us</option>\n      <option value=\"ms\">ms</option>\n      <option value=\"s\">s</option>\n    </select>\n  </div>\n\n  <div class=\"form-row\">\n    <label for=\"node-input-shiftVar\"><i class=\"fa fa-globe\"></i> Global var \"shift\"</label>\n    <input type=\"text\" id=\"node-input-shiftVar\" placeholder=\"shift\" />\n  </div>\n</script>\n\n<script type=\"text/html\" data-help-name=\"dongtien-insert\">\n  <p>\n    Node dùng chung cho các đồng hồ đo điện (iLEC MFM300, Arcel ACM 96L E4, CHINT PD7777, hoặc tuỳ\n    chỉnh khác). Nhận dữ liệu thô từ PLC/Modbus, ánh xạ sang tên biến/đơn vị/độ chia đã cấu hình,\n    gắn metadata thiết bị (factory/transformer/parent_system/sub_system/device/shift) thành tag, và\n    xuất ra chuỗi InfluxDB Line Protocol.\n  </p>\n\n  <h3>Input</h3>\n  <dl class=\"message-properties\">\n    <dt>payload <span class=\"property-type\">object</span></dt>\n    <dd>\n      Có dạng <code>{ [machine_key]: [{ ts, values: { Ua: 220000, Ib: 15000, ... } }] }</code>.\n      Node lấy <code>machine_key</code> đầu tiên trong payload để dùng làm tag <code>machine</code>.\n    </dd>\n  </dl>\n\n  <h3>Output</h3>\n  <dl class=\"message-properties\">\n    <dt>payload <span class=\"property-type\">string</span></dt>\n    <dd>Chuỗi Line Protocol, mỗi dòng ứng với 1 biến khớp với bảng mapping đã cấu hình.</dd>\n    <dt>db <span class=\"property-type\">string</span></dt>\n    <dd>Tên database InfluxDB, dùng cho node ghi dữ liệu phía sau.</dd>\n    <dt>precision <span class=\"property-type\">string</span></dt>\n    <dd>Độ chính xác timestamp (mặc định \"ns\").</dd>\n  </dl>\n\n  <h3>Cấu hình</h3>\n  <ul>\n    <li><b>Loại đồng hồ</b>: chọn nhanh mẫu mapping có sẵn (iLEC MFM300 / Arcel ACM 96L E4 / CHINT PD7777) hoặc \"Tuỳ chỉnh\".</li>\n    <li><b>Nạp mặc định</b>: điền lại toàn bộ bảng mapping theo loại đồng hồ đã chọn.</li>\n    <li><b>Tag device/factory/transformer/parent_system/sub_system</b>: metadata phân cấp thiết bị, gắn vào mọi điểm dữ liệu.</li>\n    <li><b>Mapping biến</b>: bảng gồm 4 cột — biến (key trong <code>values</code>), tên hiển thị (tag <code>name</code>), đơn vị (tag <code>unit</code>), độ chia (chia giá trị thô để ra field <code>value</code>).</li>\n    <li><b>Global var \"shift\"</b>: tên biến global context chứa ca làm việc hiện tại (mặc định <code>shift</code>).</li>\n  </ul>\n</script>",
+        "finalize": "",
+        "libs": [],
+        "x": 2170,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75e0703392ed67b7",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "meterConfig": "578d22bf66e35f57",
+        "factory": "Dong Tien Paper Long An",
+        "transformer": "3000KVA",
+        "parentSystem": "MCC XEO",
+        "subSystem": "MCC_1.3",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2000,
+        "y": 380,
+        "wires": [
+            [
+                "c14480de3a256b68"
+            ]
+        ]
+    },
+    {
+        "id": "841a7de6e7e29320",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2235.599853515625,
+        "y": 376,
+        "wires": []
+    },
+    {
+        "id": "92da7ec13fb4cca0",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T18 MCC 1.3",
+        "mode": "link",
+        "links": [
+            "6b7c6f1d39c094f0"
+        ],
+        "x": 1365,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "6b7c6f1d39c094f0",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "link in 1",
+        "links": [
+            "92da7ec13fb4cca0"
+        ],
+        "x": 1105,
+        "y": 1620,
+        "wires": [
+            [
+                "55a687f37b5f1591"
+            ]
+        ]
+    },
+    {
+        "id": "55a687f37b5f1591",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T18 MCC 1.3",
+        "meterConfig": "578d22bf66e35f57",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "5000KVA",
+        "parentSystem": "ACB 4000A",
+        "subSystem": "MCC_1.3",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1270,
+        "y": 1620,
+        "wires": [
+            [
+                "ab4834eea6938d30"
+            ]
+        ]
+    },
+    {
+        "id": "ab4834eea6938d30",
+        "type": "http request",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1530,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc98bab27d60c648",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T24 MCC 1.4",
+        "mode": "link",
+        "links": [
+            "ecb0024f3682161e"
+        ],
+        "x": 1455,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ecb0024f3682161e",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T24 MCC 1.4",
+        "links": [
+            "cc98bab27d60c648"
+        ],
+        "x": 1105,
+        "y": 1700,
+        "wires": [
+            [
+                "3653ab2820c26c5f"
+            ]
+        ]
+    },
+    {
+        "id": "3653ab2820c26c5f",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T24 MCC 1.4",
+        "meterConfig": "578d22bf66e35f57",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "3000KVA",
+        "parentSystem": "ACB 5000A",
+        "subSystem": "MCC_1.4",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1270,
+        "y": 1700,
+        "wires": [
+            [
+                "ab4834eea6938d30"
+            ]
+        ]
+    },
+    {
+        "id": "05ef4f617b28c08c",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T35 MCC XEO",
+        "mode": "link",
+        "links": [
+            "71da45ff076e14d0"
+        ],
+        "x": 1555,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "71da45ff076e14d0",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T35 MCC XEO",
+        "links": [
+            "05ef4f617b28c08c",
+            "6d2ec3bd1c1d39b8"
+        ],
+        "x": 1105,
+        "y": 1760,
+        "wires": [
+            [
+                "be098bfbafadc5cd"
+            ]
+        ]
+    },
+    {
+        "id": "be098bfbafadc5cd",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T35 MCC XEO",
+        "meterConfig": "578d22bf66e35f57",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "3000KVA",
+        "parentSystem": "ACB 5000A",
+        "subSystem": "MCC_XEO",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1280,
+        "y": 1760,
+        "wires": [
+            [
+                "ab4834eea6938d30"
+            ]
+        ]
+    },
+    {
+        "id": "f8a30e5c59188bf0",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T41 Chan khong 1",
+        "mode": "link",
+        "links": [
+            "94828ad0124f48bf"
+        ],
+        "x": 1465,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "94828ad0124f48bf",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T41 Chan khong 1",
+        "links": [
+            "f8a30e5c59188bf0"
+        ],
+        "x": 1105,
+        "y": 1820,
+        "wires": [
+            [
+                "5d4590e2f47cceae"
+            ]
+        ]
+    },
+    {
+        "id": "5d4590e2f47cceae",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T41 Chan khong 1",
+        "meterConfig": "578d22bf66e35f57",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "3000KVA",
+        "parentSystem": "MCC XEO",
+        "subSystem": "Chan khong 1",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1290,
+        "y": 1820,
+        "wires": [
+            [
+                "ab4834eea6938d30"
+            ]
+        ]
+    },
+    {
+        "id": "77f6be208a18f3e5",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T42 Chan khong 2",
+        "mode": "link",
+        "links": [
+            "c2d2c934f6f888ce"
+        ],
+        "x": 1525,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "c2d2c934f6f888ce",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T42 Chan khong 2",
+        "links": [
+            "77f6be208a18f3e5"
+        ],
+        "x": 1105,
+        "y": 1880,
+        "wires": [
+            [
+                "dc19461ebf24e168"
+            ]
+        ]
+    },
+    {
+        "id": "dc19461ebf24e168",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T42 Chan khong 2",
+        "meterConfig": "578d22bf66e35f57",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "2500KVA",
+        "parentSystem": "ACB 4000A",
+        "subSystem": "Chan khong 2",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1290,
+        "y": 1880,
+        "wires": [
+            [
+                "ab4834eea6938d30"
+            ]
+        ]
+    },
+    {
+        "id": "8ebada47e4214bc0",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T43 Chan khong 3",
+        "mode": "link",
+        "links": [
+            "4a218d45a265148b"
+        ],
+        "x": 1585,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "4a218d45a265148b",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "link in 2",
+        "links": [
+            "8ebada47e4214bc0"
+        ],
+        "x": 1105,
+        "y": 1940,
+        "wires": [
+            [
+                "52916b9b62d21678"
+            ]
+        ]
+    },
+    {
+        "id": "52916b9b62d21678",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T43 Chan khong 3",
+        "meterConfig": "578d22bf66e35f57",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "3000KVA",
+        "parentSystem": "MCC XEO",
+        "subSystem": "Chan khong 3",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1290,
+        "y": 1940,
+        "wires": [
+            [
+                "ab4834eea6938d30"
+            ]
+        ]
+    },
+    {
+        "id": "0c38979bd6f31261",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T92 Sang cuon",
+        "mode": "link",
+        "links": [
+            "a2d788268ed8877c"
+        ],
+        "x": 1415,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "e0f26860f9a29cc6",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T92 Sang cuon",
+        "meterConfig": "4ee69f320815a52c",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "3000KVA",
+        "parentSystem": "MCC XEO",
+        "subSystem": "Sang cuon",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1300,
+        "y": 2040,
+        "wires": [
+            [
+                "8b4414d6a70eca16"
+            ]
+        ]
+    },
+    {
+        "id": "3373d3fd71b8395e",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T22 Thuy luc",
+        "mode": "link",
+        "links": [
+            "418eeace72587923"
+        ],
+        "x": 1535,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "a2d788268ed8877c",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T92 Sang cuon",
+        "links": [
+            "0c38979bd6f31261"
+        ],
+        "x": 1105,
+        "y": 2040,
+        "wires": [
+            [
+                "e0f26860f9a29cc6"
+            ]
+        ]
+    },
+    {
+        "id": "418eeace72587923",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T22 Thuy luc",
+        "links": [
+            "3373d3fd71b8395e",
+            "1814104aebee7667"
+        ],
+        "x": 1105,
+        "y": 2100,
+        "wires": [
+            [
+                "85524285db7aa682"
+            ]
+        ]
+    },
+    {
+        "id": "85524285db7aa682",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T22 Thuy luc",
+        "meterConfig": "4ee69f320815a52c",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "5000KVA",
+        "parentSystem": "MCC 1.3",
+        "subSystem": "Thuy luc",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1290,
+        "y": 2100,
+        "wires": [
+            [
+                "8b4414d6a70eca16"
+            ]
+        ]
+    },
+    {
+        "id": "8b4414d6a70eca16",
+        "type": "http request",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1510,
+        "y": 2060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "405861cc19e4fdd5",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T50 Truyen dong XEO",
+        "mode": "link",
+        "links": [
+            "20ae11259e2d6cd8"
+        ],
+        "x": 1415,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "20ae11259e2d6cd8",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T50 Truyen dong XEO",
+        "links": [
+            "405861cc19e4fdd5"
+        ],
+        "x": 1105,
+        "y": 2180,
+        "wires": [
+            [
+                "add53acef6f3ef07"
+            ]
+        ]
+    },
+    {
+        "id": "add53acef6f3ef07",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T50 Truyen dong XEO",
+        "meterConfig": "e4e795a54279aa8a",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "2500KVA",
+        "parentSystem": "ACB 4000A",
+        "subSystem": "Truyen dong XEO",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1320,
+        "y": 2180,
+        "wires": [
+            [
+                "a50fdd36b470358e"
+            ]
+        ]
+    },
+    {
+        "id": "a50fdd36b470358e",
+        "type": "http request",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1570,
+        "y": 2180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e4cd7d884aa292b",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô ép 4 dưới gối trong",
+        "mode": "link",
+        "links": [
+            "943abe021a335b96"
+        ],
+        "x": 1395,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "943abe021a335b96",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô ép 4 dưới gối trong",
+        "links": [
+            "5e4cd7d884aa292b"
+        ],
+        "x": 1815,
+        "y": 1620,
+        "wires": [
+            [
+                "e730a4523672ae68"
+            ]
+        ]
+    },
+    {
+        "id": "e730a4523672ae68",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô ép 4 dưới gối trong",
+        "meterConfig": "adb714bfbd202f11",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "",
+        "subSystem": "Vibration heat lô ép 4 dưới gối trong",
+        "measurement": "sensor_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2050,
+        "y": 1620,
+        "wires": [
+            [
+                "b0d05360cb52e20b"
+            ]
+        ]
+    },
+    {
+        "id": "b0d05360cb52e20b",
+        "type": "http request",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2310,
+        "y": 1620,
+        "wires": [
+            []
         ]
     },
     {
