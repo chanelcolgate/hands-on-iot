@@ -1197,37 +1197,37 @@
                 "key": "x-disp",
                 "name": "Displacement X",
                 "unit": "um",
-                "div": 1
+                "div": 10
             },
             {
                 "key": "y-disp",
                 "name": "Displacement Y",
                 "unit": "um",
-                "div": 1
+                "div": 10
             },
             {
                 "key": "z-disp",
                 "name": "Displacement Z",
                 "unit": "um",
-                "div": 1
+                "div": 10
             },
             {
                 "key": "x-accel",
                 "name": "Acceleration X",
-                "unit": "g",
-                "div": 100
+                "unit": "m/s^2",
+                "div": 10
             },
             {
                 "key": "y-accel",
                 "name": "Acceleration Y",
-                "unit": "g",
-                "div": 100
+                "unit": "m/s^2",
+                "div": 10
             },
             {
                 "key": "z-accel",
                 "name": "Acceleration Z",
-                "unit": "g",
-                "div": 100
+                "unit": "m/s^2",
+                "div": 10
             },
             {
                 "key": "x-freq",
@@ -9121,7 +9121,8 @@
         "y": 920,
         "wires": [
             [
-                "0ba8fa38d695ac32"
+                "0ba8fa38d695ac32",
+                "6f85213ac1de77e8"
             ]
         ]
     },
@@ -9150,7 +9151,8 @@
         "y": 960,
         "wires": [
             [
-                "af43092f06f14e92"
+                "af43092f06f14e92",
+                "286a8e964f537744"
             ]
         ]
     },
@@ -9179,7 +9181,8 @@
         "y": 995.800048828125,
         "wires": [
             [
-                "903692bc24e95c80"
+                "903692bc24e95c80",
+                "cad438e8a17897ad"
             ]
         ]
     },
@@ -9208,7 +9211,8 @@
         "y": 1040,
         "wires": [
             [
-                "b6349511cbfafb6a"
+                "b6349511cbfafb6a",
+                "a54edf201057fb05"
             ]
         ]
     },
@@ -9237,7 +9241,8 @@
         "y": 1080,
         "wires": [
             [
-                "6e65722f2505c495"
+                "6e65722f2505c495",
+                "16ac6d87ea9b39cc"
             ]
         ]
     },
@@ -10278,7 +10283,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{     \"q\": \"DROP MEASUREMENT electric_measurement\" }",
+        "payload": "{\"q\":\"DROP MEASUREMENT sensor_measurement\"}",
         "payloadType": "json",
         "x": 1280,
         "y": 120,
@@ -11150,6 +11155,61 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "6f85213ac1de77e8",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô ép 4 dưới gối ngoài",
+        "mode": "link",
+        "links": [],
+        "x": 1475,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "286a8e964f537744",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô ép 4 trên gối trong",
+        "mode": "link",
+        "links": [],
+        "x": 1565,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "cad438e8a17897ad",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô ép 4 trên gối ngoài",
+        "mode": "link",
+        "links": [],
+        "x": 1645,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "a54edf201057fb05",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô đá gối trong",
+        "mode": "link",
+        "links": [],
+        "x": 1615,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "16ac6d87ea9b39cc",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô đá gối ngoài",
+        "mode": "link",
+        "links": [],
+        "x": 1685,
+        "y": 1120,
+        "wires": []
     },
     {
         "id": "51f705db47c816b7",
