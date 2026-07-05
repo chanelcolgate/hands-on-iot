@@ -7,6 +7,12 @@ services:
       - "1890:1880"
     volumes:
       - ./data:/data
+      -  ../node-red-contrib-dongtien:/workspace/node-red-contrib-dongtien
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2m"
+        max-file: "1"
 
   influxdb:
     image: "influxdb:1.8.3"
@@ -18,6 +24,11 @@ services:
       - "influx-data:/var/lib/influxdb"
     environment:
       - INFLUXDB_BIND_ADDRESS=:8088
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2m"
+        max-file: "1"
 
   grafana:
     image: "grafana/grafana"
@@ -25,6 +36,25 @@ services:
       - "3090:3000"
     volumes:
       - "grafana-data:/var/lib/grafana"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2m"
+        max-file: "1"
+
+  eclipse-mosquitto:
+    image: "eclipse-mosquitto:latest"
+    restart: always
+    ports:
+      - "1893:1883"
+      - "9091:9001"
+    volumes:
+      - "./eclipse_mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2m"
+        max-file: "1"
 
 volumes:
   node-red-data:
