@@ -211,31 +211,31 @@
                 "name": "r_low_warning_2"
             },
             {
-                "addr": "DB634,R134",
+                "addr": "DB836,R134",
                 "name": "r_flow_actual_3"
             },
             {
-                "addr": "DB634,R726",
+                "addr": "DB836,R726",
                 "name": "r_flow_setpoint_3"
             },
             {
-                "addr": "DB634,R670",
+                "addr": "DB836,R670",
                 "name": "r_valve_setpoint_3"
             },
             {
-                "addr": "DB634,R794",
+                "addr": "DB836,R794",
                 "name": "r_high_alarm_3"
             },
             {
-                "addr": "DB634,R798",
+                "addr": "DB836,R798",
                 "name": "r_high_warning_3"
             },
             {
-                "addr": "DB634,R814",
+                "addr": "DB836,R814",
                 "name": "r_low_alarm_3"
             },
             {
-                "addr": "DB634,R810",
+                "addr": "DB836,R810",
                 "name": "r_low_warning_3"
             },
             {
@@ -8948,7 +8948,7 @@
         "connmode": "tsap",
         "adapter": "",
         "busaddr": 2,
-        "cycletime": 1000,
+        "cycletime": "1000",
         "timeout": 2000,
         "name": "He Xeo - He Truyen Dong",
         "vartable": [
@@ -9920,7 +9920,7 @@
         "connmode": "tsap",
         "adapter": "",
         "busaddr": 2,
-        "cycletime": 1000,
+        "cycletime": "1000",
         "timeout": "4000",
         "name": "He_Bot",
         "vartable": [
@@ -22653,6 +22653,7 @@
         "id": "5a161e9e3992c86e",
         "type": "debug",
         "z": "f262b7117ba90db7",
+        "d": true,
         "name": "debug 21",
         "active": false,
         "tosidebar": true,
@@ -22669,6 +22670,7 @@
         "id": "d3bb83259a90b7a7",
         "type": "s7 in",
         "z": "f262b7117ba90db7",
+        "d": true,
         "endpoint": "cab104e5afbb58fa",
         "mode": "all",
         "variable": "",
@@ -77255,8 +77257,8 @@
         "variable": "r_basic_weight_282",
         "diff": false,
         "name": "",
-        "x": 2770,
-        "y": 3260,
+        "x": 2370,
+        "y": 3280,
         "wires": [
             []
         ]
@@ -77630,6 +77632,447 @@
                 "da1ca72f249f68e5"
             ]
         ]
+    },
+    {
+        "id": "567e094e0ed9a6a8",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "Table Escalation Level",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2240,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "8db379fd3fca6ec6",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1780,
+        "y": 820,
+        "wires": [
+            [
+                "9d8a3c01a916fcdb"
+            ]
+        ]
+    },
+    {
+        "id": "9d8a3c01a916fcdb",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Table paper_production",
+        "query": "-- 1. Tạo bảng với cột thời gian chính là end_time (kiểu TIMESTAMPTZ có múi giờ)\nCREATE TABLE paper_production (\n    paper_grade VARCHAR(50),\n    customer TEXT,\n    gsm_target SMALLINT,\n    production_total REAL,\n    speed_target SMALLINT,\n    production_total_per_hour REAL,\n    duration SMALLINT,\n    start_time TIMESTAMPTZ NOT NULL -- Đổi tên từ start_time thành end_time\n);\n\n-- 2. Kích hoạt tính năng Hypertable của TimescaleDB dựa trên cột end_time\nSELECT create_hypertable('paper_production', 'start_time');",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1990,
+        "y": 820,
+        "wires": [
+            [
+                "567e094e0ed9a6a8"
+            ]
+        ]
+    },
+    {
+        "id": "792f301491c49d30",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "Table Escalation Level",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2220,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "d303f434a7d7e4ae",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1800,
+        "y": 880,
+        "wires": [
+            [
+                "ac9351b325fbeb3d"
+            ]
+        ]
+    },
+    {
+        "id": "ac9351b325fbeb3d",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Table Shift OnCall",
+        "query": "INSERT INTO paper_production (\n    start_time, \n    paper_grade, \n    customer, \n    gsm_target, \n    production_total, \n    speed_target, \n    production_total_per_hour, \n    duration\n) VALUES \n('2026-05-22 14:00:00+07:00', 'T3', 'YFY + MINH ANH ', 150, 125.00, 500, 2.67, 5),\n('2026-05-22 19:54:18+07:00', 'T3', 'IBOX + MIPAK + YFY + DEPAK ', 120, 127.00, 535, 18.12, 7),\n('2026-05-23 02:54:50+07:00', 'T3', 'MIPAK + DEPAK ', 140, 74.00, 535, 2.64, 3),\n('2026-05-23 06:24:52+07:00', 'T3', 'YFY + MIPAK + DEPAK ', 170, 83.00, 420, 1.66, 4),\n('2026-05-23 15:48:00+07:00', 'T3', 'YFY + MIPAK + DEPAK ', 170, 30.10, 460, 3.57, 1),\n('2026-05-23 17:09:49+07:00', 'T3', 'YFY + VIEPAK + NAM NINH + YUTO ', 150, 100.60, 535, 4.15, 4),\n('2026-05-23 21:36:19+07:00', 'T3', 'IBOX + MIPAK + YFY + DEPAK ', 120, 133.00, 535, 18.12, 7),\n('2026-05-24 04:56:43+07:00', 'T3', 'MIPAK + DEPAK + LAMIKA', 140, 112.00, 535, 2.64, 5),\n('2026-05-24 10:14:36+07:00', 'T3', 'OJITEX BẮC NINH ', 170, 27.00, 460, 3.57, 1),\n('2026-05-24 14:48:00+07:00', 'T3', 'YUTO + GREENZONE + AN THỊNH ', 200, 72.00, 400, 4.08, 3),\n('2026-05-24 17:59:19+07:00', 'T3', 'YFY ', 170, 35.00, 460, 3.57, 1),\n('2026-05-24 19:34:28+07:00', 'T3', 'MIPAK + DEPAK + PK ', 140, 80.00, 535, 2.64, 3),\n('2026-05-24 23:21:32+07:00', 'T3', 'DEPAK + MIPAK + OJITEX ', 120, 105.00, 535, 18.12, 5),\n('2026-05-25 14:48:00+07:00', 'T3', 'YFY + TIẾN THÀNH ', 170, 75.00, 460, 3.57, 3),\n('2026-05-25 18:11:53+07:00', 'T3', 'MIPAK   ', 140, 31.00, 535, 2.64, 1),\n('2026-05-25 19:39:52+07:00', 'T3', 'MIPAK + YFY + MITACO ', 120, 205.00, 535, 18.12, 11),\n('2026-05-26 06:58:41+07:00', 'T3', 'DYNAPAC + NAM NINH ', 150, 62.00, 535, 4.15, 2),\n('2026-05-26 09:42:55+07:00', 'T3', 'MIPAK ', 170, 35.00, 460, 3.57, 1),\n('2026-05-26 12:30:00+07:00', 'T3', 'MIPAK+ YFY +IBOXVINA+MITACO', 120, 246.00, 535, 18.12, 13),\n('2026-05-27 02:04:34+07:00', 'T3', 'YFY+KINH BẮC + AN THỊNH', 150, 107.00, 535, 4.15, 4),\n('2026-05-27 06:48:01+07:00', 'T3', 'MITACO +YFY + OJITEX BN', 170, 95.00, 460, 3.57, 4),\n('2026-05-27 11:06:16+07:00', 'T3', 'AN KHÁNH', 150, 26.00, 535, 4.15, 1),\n('2026-05-27 16:18:00+07:00', 'T3', 'YFY + OJITEX', 170, 62.00, 460, 3.57, 2),\n('2026-05-27 19:06:32+07:00', 'T3', 'THIÊN PHÚ  + HƯƠNG SEN ', 150, 62.00, 535, 4.15, 2),\n('2026-05-27 21:50:47+07:00', 'T3', 'KINH BẮC + PHÚ HƯNG ', 140, 45.00, 535, 2.64, 2),\n('2026-05-27 23:58:30+07:00', 'T3', 'MIPAK ', 120, 22.00, 535, 18.12, 1),\n('2026-05-28 01:11:21+07:00', 'M3', 'MIPAK  ', 90, 158.00, 535, 13.59, 11),\n('2026-05-28 12:48:56+07:00', 'M3', 'LAM SƠN', 115, 8.00, 535, 17.36, 0),\n('2026-05-28 13:16:34+07:00', 'T3', 'PACIFIC', 110, 200.00, 535, 16.61, 12),\n('2026-05-28 17:00:00+07:00', 'T3', 'PACIFIC', 110, 295.00, 535, 16.61, 17),\n('2026-05-28 18:00:00+07:00', 'M3', 'LAM SƠN', 115, 8.00, 535, 17.36, 0),\n('2026-05-29 10:45:38+07:00', 'M3', 'LAM SƠN', 115, 8.00, 535, 17.36, 0),\n('2026-05-29 11:13:16+07:00', 'T3', 'HƯƠNG SEN + MIPAK ', 123, 22.00, 535, 0.08, 1),\n('2026-05-29 12:24:20+07:00', 'T3', 'VĨ LÂM', 130, 53.00, 535, 1.13, 2),\n('2026-05-29 15:06:20+07:00', 'T3', 'NAM NINH + HỒNG ĐÀO ', 150, 31.00, 535, 4.15, 1),\n('2026-05-29 16:28:28+07:00', 'T3', 'YFY ', 175, 26.00, 460, 4.22, 1),\n('2026-05-30 15:00:00+07:00', 'K3H', 'MYS + MIPAK + GREENZONE + TIẾN THÀNH ', 230, 211.50, 340, 3.57, 9),\n('2026-05-31 00:59:25+07:00', 'K3H', 'MIPAK + YUTO + MYS + AN THỊNH', 200, 98.00, 380, 2.95, 4),\n('2026-05-31 05:45:12+07:00', 'K3H', 'MYS + MIPAK + GREENZONE + TIẾN THÀNH ', 230, 148.50, 340, 3.57, 7),\n('2026-05-31 12:46:05+07:00', 'T3', 'YFY ', 175, 26.00, 460, 4.22, 1),\n('2026-05-31 13:54:44+07:00', 'T3', 'YUTO  ', 200, 26.00, 400, 4.08, 1),\n('2026-06-01 13:00:00+07:00', 'K3N', 'SGB (THẠCH CAO)', 190, 204.00, 380, 1.88, 10),\n('2026-06-01 16:30:00+07:00', 'K3N', 'SGB (THẠCH CAO)', 190, 139.50, 360, 0.81, 7),\n('2026-06-01 23:26:12+07:00', 'M3', 'MIPAK ', 170, 8.00, 420, 1.66, 0),\n('2026-06-02 00:02:00+07:00', 'M3', 'MIPAK ', 170, 8.00, 420, 1.66, 0),\n('2026-06-02 00:25:49+07:00', 'T3', 'GREEN ZONE + YUTO + OJITEX HẢI PHÒNG + HONGPU+PHÚ CÔNG', 200, 107.00, 400, 4.08, 4),\n('2026-06-02 05:10:09+07:00', 'T3', 'OJITEX VĨNH PHÚC + YFY + SAO ĐỎ', 170, 13.00, 470, 4.05, 0),\n('2026-06-02 05:44:45+07:00', 'T3', 'OJITEX VĨNH PHÚC + YFY ', 150, 13.00, 535, 4.15, 0),\n('2026-06-02 06:19:11+07:00', 'M3', 'nan', 125, 38.00, 535, 0.38, 2),\n('2026-06-03 13:00:00+07:00', 'M3', 'MIPAK  + DEPAK ', 90, 242.00, 500, 12.70, 19),\n('2026-06-04 18:00:00+07:00', 'T3', ' MIPAK + TIẾN THÀNH ', 140, 53.00, 535, 2.64, 2),\n('2026-06-04 20:30:25+07:00', 'T3', 'YUTO + OJITEX+ GREEN ZONE + HOÀNG HẢI+YFY', 175, 174.00, 460, 4.22, 7),\n('2026-06-05 04:09:55+07:00', 'T3', 'OJITEX + AN THỊNH + YFY', 150, 125.00, 535, 4.15, 5),\n('2026-06-05 09:41:03+07:00', 'T3', 'IBOXVINA + MIPAK', 120, 36.00, 535, 18.12, 1),\n('2026-06-05 16:00:00+07:00', 'T3', 'IBOXVINA + MIPAK', 120, 67.20, 535, 18.12, 3),\n('2026-06-05 19:42:31+07:00', 'T3', 'PK + MIPAK', 140, 75.00, 535, 2.64, 3),\n('2026-06-05 23:15:23+07:00', 'T3', 'HOÀNG HẢI + YFY', 150, 52.00, 535, 4.15, 2),\n('2026-06-06 01:33:08+07:00', 'T3', 'YUTO', 170, 28.00, 470, 4.05, 1),\n('2026-06-06 02:47:38+07:00', 'T3', 'HOÀNG HẢI + GREEN ZONE + MIAPK', 200, 60.00, 400, 4.08, 2),\n('2026-06-06 05:27:04+07:00', 'T3', 'MINH ANH + GREEN ZONE + MIPAK', 170, 79.00, 470, 4.05, 3),\n('2026-06-06 08:57:15+07:00', 'T3', 'HOÀNG HẢI + YFY', 150, 52.00, 535, 4.15, 2),\n('2026-06-06 21:11:59+07:00', 'T3', 'THÀNH TIẾN + IBOXVINA + VIDACO', 100, 33.60, 535, 15.10, 2),\n('2026-06-06 23:25:30+07:00', 'T3', 'MIPAK', 120, 12.60, 535, 18.12, 0),\n('2026-06-07 00:07:14+07:00', 'T3', 'MIPAK + DEPAK ', 140, 117.00, 535, 2.64, 5),\n('2026-06-07 05:39:18+07:00', 'T3', 'YUTO + MIPAK + YFY', 170, 72.00, 470, 4.05, 3),\n('2026-06-07 08:50:52+07:00', 'T3', 'HỒNG ĐÀO + KINH BẮC ', 150, 53.00, 535, 4.15, 2),\n('2026-06-07 21:00:00+07:00', 'T3', 'TIẾN THÀNH + KOPAC + AN THỊNH ', 200, 58.00, 420, 5.21, 2),\n('2026-06-07 23:26:47+07:00', 'T3', 'MIPAK + OJITEX', 170, 27.00, 500, 5.49, 1),\n('2026-06-08 00:34:18+07:00', 'T3', ' HOÀNG HẢI + YFY ', 150, 116.00, 535, 4.15, 5),\n('2026-06-08 05:41:35+07:00', 'T3', 'MIPAK + DEPAK + MITACO ', 120, 103.00, 535, 18.12, 5),\n('2026-06-08 11:22:39+07:00', 'T3', 'KINH BẮC + HOÀNG HẢI + YFY ', 150, 144.00, 535, 4.15, 6),\n('2026-06-08 16:11:59+07:00', 'T3', 'YFY + YUTO + AN THỊNH + OJITEX ', 150, 81.70, 535, 4.15, 3),\n('2026-06-08 19:48:25+07:00', 'T3', 'OJITEX + MIPAK + HOÀNG HẢI ', 170, 191.00, 500, 5.49, 7),\n('2026-06-09 03:46:07+07:00', 'T3', 'MIPAK + DEPAK ', 140, 30.00, 535, 2.64, 1),\n('2026-06-09 15:18:00+07:00', 'T3', 'YFY + YUTO + AN THỊNH + OJITEX ', 150, 61.60, 535, 4.15, 2),\n('2026-06-09 18:01:10+07:00', 'T3', 'HOÀNG HẢI + IBOX + YFY ', 170, 95.00, 500, 5.49, 3),\n('2026-06-09 21:58:46+07:00', 'T3', 'TIẾN THÀNH + YUTO + GREENZONE ', 200, 71.00, 400, 4.08, 3),\n('2026-06-10 01:07:26+07:00', 'T3', 'OJITEX + AN THỊNH ', 170, 80.00, 500, 5.49, 3),\n('2026-06-10 04:27:31+07:00', 'T3', 'DEPAK + TIMICO ', 140, 66.00, 535, 2.64, 3),\n('2026-06-10 17:00:00+07:00', 'T3', 'YFY + YUTO + AN THỊNH + OJITEX ', 150, 178.00, 535, 4.15, 7),\n('2026-06-11 00:51:31+07:00', 'T3', 'KINH BẮC + TIẾN THÀNH + YFY ', 170, 90.00, 480, 4.53, 3),\n('2026-06-11 04:45:59+07:00', 'T3', 'TIẾN THÀNH + MIPAK ', 140, 62.00, 535, 2.64, 2),\n('2026-06-11 07:41:58+07:00', 'T3', 'MIPAK + DEPAK + MITACO + YFY + YUTO ', 120, 120.00, 535, 18.12, 6),\n('2026-06-11 15:30:00+07:00', 'T3', 'YFY + YUTO + AN THỊNH + OJITEX ', 150, 51.60, 535, 4.15, 2),\n('2026-06-11 17:46:41+07:00', 'T3', 'YFY + YUTO + AN THỊNH + OJITEX ', 150, 51.60, 535, 4.15, 2),\n('2026-06-11 20:03:22+07:00', 'T3', 'TIẾN THÀNH + MIPAK ', 140, 58.00, 535, 2.64, 2),\n('2026-06-12 15:30:00+07:00', 'T3', 'PACKCO + YFY + AN THỊNH + MINH ANH ', 150, 105.60, 535, 4.15, 4),\n('2026-06-12 20:09:44+07:00', 'T3', 'MIPAK  ', 170, 27.00, 480, 4.53, 1),\n('2026-06-12 21:20:04+07:00', 'T3', 'TNG + HOÀNG HẢI + MIPAK ', 200, 135.00, 420, 5.21, 5),\n('2026-06-13 03:01:43+07:00', 'T3', 'YFY  +MIPAK', 170, 62.00, 500, 5.49, 2),\n('2026-06-13 05:36:47+07:00', 'T3', 'PHÚ HƯNG + HOÀNG HẢI ', 140, 49.00, 535, 2.64, 2),\n('2026-06-13 07:55:52+07:00', 'T3', 'MIPAK +IBOX+DEPAK', 120, 100.00, 535, 18.12, 5),\n('2026-06-13 16:00:00+07:00', 'T3', 'MIPAK  +YFY+SAO ĐỎ', 170, 116.00, 480, 4.53, 5),\n('2026-06-13 21:02:12+07:00', 'T3', 'YFY + HỒNG ĐÀO + INTCO ', 150, 112.00, 535, 4.15, 4),\n('2026-06-14 01:58:53+07:00', 'T3', 'MIPAK ', 120, 63.00, 535, 18.12, 3),\n('2026-06-14 05:27:30+07:00', 'T3', 'YFY + HOÀNG HẢI + ANH QUANG', 150, 187.00, 535, 4.15, 8),\n('2026-06-14 13:42:52+07:00', 'T3', 'OJITEX BẮC NINH + YFY ', 170, 54.00, 480, 4.53, 2),\n('2026-06-14 16:03:33+07:00', 'T3', 'GREENZONE + MIPAK ', 200, 49.00, 420, 5.21, 2),\n('2026-06-14 18:07:33+07:00', 'T3', 'YFY ', 170, 44.00, 480, 4.53, 1),\n('2026-06-14 20:02:11+07:00', 'T3', 'VDACO + TIẾN THÀNH + HƯƠNG SEN ', 140, 126.00, 535, 2.64, 5),\n('2026-06-14 21:30:00+07:00', 'T3', 'VDACO + TIẾN THÀNH + HƯƠNG SEN ', 140, 61.60, 535, 2.64, 2),\n('2026-06-15 00:24:50+07:00', 'T3', 'OJITEX BẮC NINH + YFY ', 170, 53.00, 480, 4.53, 2),\n('2026-06-15 02:42:54+07:00', 'T3', 'GREENZONE + MIPAK ', 200, 84.00, 420, 5.21, 3),\n('2026-06-15 06:15:29+07:00', 'T3', 'YFY ', 170, 70.00, 480, 4.53, 3),\n('2026-06-15 09:17:51+07:00', 'T3', 'NAM NINH + YFY ', 150, 26.00, 535, 4.15, 1),\n('2026-06-15 20:00:00+07:00', 'T3', 'MIPAK + SAO ĐỎ ', 140, 31.00, 535, 2.64, 1),\n('2026-06-15 21:27:59+07:00', 'T3', 'AN THỊNH + HƯƠNG SEN + MINH ANH + YFY ', 150, 133.00, 535, 4.15, 5),\n('2026-06-16 03:20:18+07:00', 'T3', 'MIPAK + YUTO + KINH BẮC ', 170, 81.00, 480, 4.53, 3),\n('2026-06-16 06:51:19+07:00', 'T3', 'GREENZONE + YUTO + PHÚ CÔNG ', 200, 71.00, 420, 5.21, 2),\n('2026-06-16 09:51:00+07:00', 'T3', 'HOÀNG HẢI ', 225, 53.00, 420, 8.17, 1),\n('2026-06-16 11:50:14+07:00', 'M3', 'MIPAK ', 170, 8.00, 420, 1.66, 0),\n('2026-06-16 12:14:03+07:00', 'K3N', ' VIDACO ', 200, 50.00, 460, 7.47, 2),\n('2026-06-16 14:00:00+07:00', 'K3N', ' VIDACO ', 200, 54.00, 460, 7.47, 2),\n('2026-06-16 14:14:30+07:00', 'M3', 'MIPAK ', 170, 8.00, 420, 1.66, 0),\n('2026-06-16 14:38:19+07:00', 'K3H', 'MYS + MIPAK + GREENZONE + TIẾN THÀNH ', 160, 261.00, 340, 15.35, 17),\n('2026-06-16 16:10:05+07:00', 'M3', 'MIPAK ', 170, 8.00, 420, 1.66, 0),\n('2026-06-16 16:33:54+07:00', 'K3H', 'MYS + MIPAK + GREENZONE + TIẾN THÀNH ', 160, 260.00, 340, 15.35, 17),\n('2026-06-17 08:21:40+07:00', 'K3H', 'MIPAK + YUTO + MYS + AN THỊNH', 200, 706.00, 380, 2.95, 34),\n('2026-06-17 09:00:00+07:00', 'K3H', 'MIPAK + YUTO + MYS + AN THỊNH', 200, 724.00, 380, 2.95, 35),\n('2026-06-17 10:13:10+07:00', 'K3H', 'MIPAK + YUTO + MYS + AN THỊNH', 200, 706.00, 380, 2.95, 34),\n('2026-06-18 10:00:00+07:00', 'K3H', 'MIPAK + YUTO + MYS + AN THỊNH', 200, 294.80, 380, 2.95, 14),\n('2026-06-18 18:40:30+07:00', 'K3H', 'MYS + MIPAK + GREENZONE + TIẾN THÀNH ', 230, 500.00, 340, 3.57, 23),\n('2026-06-18 20:11:19+07:00', 'K3H', 'MYS + MIPAK + GREENZONE + TIẾN THÀNH ', 230, 500.00, 340, 3.57, 23),\n('2026-06-18 20:32:00+07:00', 'K3H', 'MYS + MIPAK + GREENZONE + TIẾN THÀNH ', 230, 500.00, 340, 3.57, 23),\n('2026-06-19 00:19:41+07:00', 'K3H', 'MYS + MIPAK + GREENZONE + TIẾN THÀNH ', 230, 246.00, 340, 3.57, 11),\n('2026-06-19 11:56:53+07:00', 'M3', 'HƯƠNG SEN + SAO ĐỎ ', 185, 8.00, 420, 3.43, 0),\n('2026-06-19 12:18:47+07:00', 'K3N', 'SGB (THẠCH CAO)', 190, 300.00, 380, 1.88, 15),\n('2026-06-19 14:30:00+07:00', 'K3H', 'MYS + MIPAK + GREENZONE + TIẾN THÀNH ', 230, 462.00, 340, 3.57, 21),\n('2026-06-19 18:17:35+07:00', 'M3', 'MIPAK ', 170, 8.00, 420, 1.66, 0),\n('2026-06-19 18:41:24+07:00', 'K3N', 'SGB (THẠCH CAO)', 190, 300.00, 380, 1.88, 15),\n('2026-06-19 19:48:24+07:00', 'M3', 'HƯƠNG SEN + SAO ĐỎ ', 185, 8.00, 420, 3.43, 0),\n('2026-06-19 20:09:05+07:00', 'M3', 'MIPAK ', 170, 8.00, 420, 1.66, 0),\n('2026-06-19 20:10:17+07:00', 'K3N', 'SGB (THẠCH CAO)', 190, 300.00, 380, 1.88, 15),\n('2026-06-19 20:32:54+07:00', 'K3N', 'SGB (THẠCH CAO)', 190, 300.00, 380, 1.88, 15),\n('2026-06-20 03:39:41+07:00', 'M3', 'HƯƠNG SEN + SAO ĐỎ ', 185, 8.00, 420, 3.43, 0),\n('2026-06-20 11:31:12+07:00', 'M3', 'HƯƠNG SEN + SAO ĐỎ ', 185, 8.00, 420, 3.43, 0),\n('2026-06-20 12:19:22+07:00', 'M3', 'HƯƠNG SEN + SAO ĐỎ ', 185, 8.00, 420, 3.43, 0),\n('2026-06-20 12:41:16+07:00', 'K3N', 'SGB (THẠCH CAO)', 190, 200.00, 380, 1.88, 10),\n('2026-06-20 22:55:12+07:00', 'M3', 'HƯƠNG SEN + SAO ĐỎ ', 185, 8.00, 420, 3.43, 0);",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1990,
+        "y": 880,
+        "wires": [
+            [
+                "792f301491c49d30"
+            ]
+        ]
+    },
+    {
+        "id": "06a6b8aac277bf39",
+        "type": "postgresql",
+        "z": "278f7766e1536901",
+        "name": "Lấy trưởng ca",
+        "query": "",
+        "postgreSQLConfig": "1483bf96ee7dbe4d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 2860,
+        "y": 4000,
+        "wires": [
+            [
+                "17ca699e48a663f5",
+                "78833a781c9ce88a"
+            ]
+        ]
+    },
+    {
+        "id": "6c46f61870ee49ed",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "query get gsm_plan",
+        "func": "// // Lấy mốc thời gian hiện tại (D)\n// let now = new Date();\n// let start_time_str = now.toISOString(); // Định dạng chuẩn: YYYY-MM-DDTHH:mm:ss.sssZ\n\n// // Tính mốc cuối ngày hôm sau (D+1 lúc 23:59:59)\n// let tomorrow_end = new Date();\n// tomorrow_end.setDate(now.getDate() + 1);\n// tomorrow_end.setHours(23, 59, 59, 999);\n// let end_time_str = tomorrow_end.toISOString();\n\n// Lấy mốc thời gian hiện tại (D)\n// Test dữ liệu từ 09/06/2026 đến hết 10/06/2026\nlet start_time_str = \"2026-06-09T00:00:00.000+07:00\";\nlet end_time_str = \"2026-06-10T23:59:59.999+07:00\";\n\n// Truyền dữ liệu định lượng thực tế từ PLC tạm thời vào context để khối sau dùng lại\nflow.set('current_plc_weight', msg.payload);\n\n// Tạo câu lệnh SQL động gửi cho khối Postgres\nmsg.query = `\nWITH timeline AS (\n    SELECT time_bucket_gapfill(\n        60000 * INTERVAL '1 millisecond',\n        start_time\n    ) AS time\n    FROM paper_production\n    WHERE\n        start_time BETWEEN\n            '2026-06-09T13:03:36.428Z'\n            AND '2026-06-10T21:19:42.726Z'\n    GROUP BY 1\n)\n\nSELECT\n    t.time,\n\n    p.paper_grade,\n    p.customer,\n    p.gsm_target,\n    p.speed_target,\n    p.production_total,\n    p.production_total_per_hour,\n    p.duration\n\nFROM timeline t\n\nLEFT JOIN LATERAL (\n    SELECT *\n    FROM paper_production\n    WHERE start_time <= t.time\n    ORDER BY start_time DESC\n    LIMIT 1\n) p ON TRUE\n\nORDER BY t.time;\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2630,
+        "y": 4000,
+        "wires": [
+            [
+                "06a6b8aac277bf39"
+            ]
+        ]
+    },
+    {
+        "id": "dff37c9eb0ede299",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "debug 157",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2790,
+        "y": 4060,
+        "wires": []
+    },
+    {
+        "id": "78833a781c9ce88a",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "query create gsm_plan",
+        "func": "const GSM_TOLERANCE = 15; // Sai số định lượng cơ học cho phép ±15 GSM\nconst plc_weight_raw = flow.get('current_plc_weight');\n\n// Lấy timestamp (ms) của điểm dữ liệu thực tế đang được test từ InfluxDB\nconst plc_timestamp = Number(flow.get('current_plc_time')); \nconst plans = msg.payload; // Danh sách mẻ từ Postgres\n\nlet final_paper_grade = \"UNKNOWN\";\nlet final_customer = \"UNKNOWN\";\nlet final_gsm_target = \"UNKNOWN\";\nlet is_transition = \"0\";\nlet gsm_realtime = Number(plc_weight_raw) || 0;\nlet is_running = gsm_realtime > 10 ? 1 : 0;\n\nif (plans && plans.length > 0) {\n    let matched_plan = null;\n\n    let scheduled_plan = null;\n    for (let i = 0; i < plans.length; i++) {\n        let plan_time = new Date(plans[i].time).getTime();\n        // Kiểm tra khớp chính xác block thời gian (phút)\n        if (Math.abs(plc_timestamp - plan_time) < 30000) { // Lệch dưới 30 giây\n            scheduled_plan = plans[i];\n            break;\n        }\n    }\n\n    // ISSUE 1:\n    if (plc_weight_raw === null || plc_weight_raw === undefined || gsm_realtime <= 10) {\n        if (scheduled_plan && scheduled_plan.gsm_target) {\n            // Nếu mất dữ liệu hoặc kế hoạch tương lai chưa chạy\n            // lấy thông tin theo lịch trình để bù khuyết\n            final_paper_grade = scheduled_plan.paper_grade || \"UNKNOWN\";\n            final_customer = scheduled_plan.customer || \"UNKNOWN\";\n            final_gsm_target = String(scheduled_plan.gsm_target);\n            gsm_realtime = scheduled_plan.gsm_target;\n            is_running = 1;\n            is_transition = \"0\";\n        } else {\n            final_paper_grade = \"MACHINE_STOPPED\";\n            final_customer = \"NO_PRODUCTION\";\n            final_gsm_target = \"0\";\n            is_running = 0;\n        }\n    }\n    // ISSUE 2:\n    else {\n        let min_distance = Infinity;\n        let best_matching_plan = null;\n\n        for (let i = 0; i < plans.length; i++) {\n            if (plans[i].gsm_target) {\n                let distance = Math.abs(gsm_realtime - plans[i].gsm_target);\n                if (distance < min_distance) {\n                    min_distance = distance;\n                    best_matching_plan = plans[i];\n                }\n            }\n        }\n\n        // Nếu tìm được mẻ có định lượng sát với thực tế hơn lịch trình hiện tại (Sai số trong vòng 5 GSM)\n        if (best_matching_plan && min_distance <= 5) {\n            matched_plan = best_matching_plan;\n\n            // Nếu mẻ tìm thấy khác với mẻ được lên lịch của phút này -> Xác đnhj đang nhảy mã sớm\n            if (scheduled_plan && scheduled_plan.customer !== matched_plan.customer) {\n                is_transition = \"1\";\n            } else {\n                is_transition = \"0\";\n            }\n        } else {\n            // Dự phòng: Nếu không nhảy mã, quay lại lấy mẻ theo lịch trình gốc nếu nằm trong sai số chung\n            matched_plan = scheduled_plan;\n            if (matched_plan && Math.abs(gsm_realtime - matched_plan.gsm_target) > 5) {\n                is_transition = \"1\"; // Định lượng giao động mạnh trong mẻ\n            }\n        }\n\n        // Gán dữ liệu sau đối chiếu\n        if (matched_plan && Math.abs(gsm_realtime - matched_plan.gsm_target) <= GSM_TOLERANCE) {\n            final_paper_grade = matched_plan.paper_grade || \"UNKNOWN\";\n            final_customer = matched_plan.customer || \"UNKNOWN\";\n            final_gsm_target = String(matched_plan.gsm_target);\n        } else {\n            final_paper_grade = \"UNKNOWN\";\n            final_customer = \"UNKNOWN\";\n            final_gsm_target = \"UNKNOWN\";\n            is_transition = \"0\";\n        }\n    }\n\n}\n\n// Đóng gói payload xuất ra theo chuẩn InfluxDB 1.x\nmsg.payload = [{\n    measurement: \"miza_realtime\",\n    tags: {\n        line: \"Máy giấy PM3\",\n        machine: \"Scanner\",\n        paper_grade: final_paper_grade,\n        customer: final_customer,\n        gsm_target: final_gsm_target,\n        is_transition: is_transition\n    },\n    fields: {\n        basic_weight: Number(gsm_realtime.toFixed(2)),\n        is_running: is_running\n    },\n    time: plc_timestamp // Ghi đè đúng timestamp thực tế của điểm test vào InfluxDB\n}];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2600,
+        "y": 4060,
+        "wires": [
+            [
+                "dff37c9eb0ede299"
+            ]
+        ]
+    },
+    {
+        "id": "3a5571bd4cefce31",
+        "type": "influxdb in",
+        "z": "278f7766e1536901",
+        "influxdb": "7bae9558da570038",
+        "name": "Định lượng",
+        "query": "SELECT mean(\"basic_weight\") \nFROM \"miza_realtime\" \nWHERE \n(\n    \"line\"::tag = 'Máy giấy PM3' \n    AND \"machine\"::tag = 'Scanner'\n) \nAND \n    time >= 1781010216428ms \n    and time <= 1781126382726ms \nGROUP BY \n    time(1m), \n    \"name\"::tag \nfill(null) \nORDER BY time ASC",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 2550,
+        "y": 3900,
+        "wires": [
+            [
+                "788222fc5752b161",
+                "d71cf0befa8dd151"
+            ]
+        ]
+    },
+    {
+        "id": "be3f8c9a589c5703",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "Test",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 2390,
+        "y": 3900,
+        "wires": [
+            [
+                "3a5571bd4cefce31"
+            ]
+        ]
+    },
+    {
+        "id": "d71cf0befa8dd151",
+        "type": "split",
+        "z": "278f7766e1536901",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 2710,
+        "y": 3900,
+        "wires": [
+            [
+                "7de4dd34d7a52bff"
+            ]
+        ]
+    },
+    {
+        "id": "7de4dd34d7a52bff",
+        "type": "delay",
+        "z": "278f7766e1536901",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2870,
+        "y": 3900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ca86a5b5474078e9",
+        "type": "function",
+        "z": "278f7766e1536901",
+        "name": "Get value",
+        "func": "flow.set('current_plc_weight', msg.payload.mean);\nflow.set('current_plc_time', msg.payload.time);\nmsg.payload = msg.payload.mean;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2440,
+        "y": 4000,
+        "wires": [
+            [
+                "6c46f61870ee49ed"
+            ]
+        ]
+    },
+    {
+        "id": "45adedcd6fe8c638",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "Test",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "169.5583953857422",
+        "payloadType": "num",
+        "x": 2370,
+        "y": 4060,
+        "wires": [
+            [
+                "6c46f61870ee49ed"
+            ]
+        ]
+    },
+    {
+        "id": "788222fc5752b161",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "debug 158",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2710,
+        "y": 3820,
+        "wires": []
+    },
+    {
+        "id": "17ca699e48a663f5",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "debug 159",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3050,
+        "y": 4000,
+        "wires": []
+    },
+    {
+        "id": "ecb25ff3227c090d",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "Test",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "169.5583953857422",
+        "payloadType": "num",
+        "x": 2370,
+        "y": 4120,
+        "wires": [
+            [
+                "78833a781c9ce88a"
+            ]
+        ]
+    },
+    {
+        "id": "7e9f2613c5168e2a",
+        "type": "influxdb in",
+        "z": "278f7766e1536901",
+        "influxdb": "7bae9558da570038",
+        "name": "Sản lượng thực tế",
+        "query": "SELECT cumulative_sum(\"ton\") AS \"Tổng sản lượng\"\nFROM (\n    SELECT\n        integral(\"ton_per_min\", 1m) AS \"ton\"\n    FROM (\n        SELECT\n            (\n                mean(\"reel_speed\") *\n                4.8 *\n                mean(\"basic_weight\") *\n                0.985\n            ) / 1000000 AS \"ton_per_min\"\n        FROM \"miza_realtime\"\n        WHERE\n            \"line\" = 'Máy giấy PM3'\n            AND \"machine\" = 'Scanner'\n            AND time >= 1781010507595ms and time <= 1781052860454ms\n            AND time <= now() - 30m\n        GROUP BY time(1m)\n        fill(none)\n    )\n    GROUP BY time(1m)\n    fill(0)\n)",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 2550,
+        "y": 4180,
+        "wires": [
+            [
+                "c9683c540ea9a278"
+            ]
+        ]
+    },
+    {
+        "id": "6b0d37e9b953fbb6",
+        "type": "inject",
+        "z": "278f7766e1536901",
+        "name": "Test",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 2370,
+        "y": 4180,
+        "wires": [
+            [
+                "7e9f2613c5168e2a"
+            ]
+        ]
+    },
+    {
+        "id": "c9683c540ea9a278",
+        "type": "debug",
+        "z": "278f7766e1536901",
+        "name": "debug 160",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2750,
+        "y": 4180,
+        "wires": []
     },
     {
         "id": "e2187250e7b22b53",
