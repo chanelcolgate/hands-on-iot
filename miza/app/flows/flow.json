@@ -6099,7 +6099,7 @@
                 "name": "r_wire_speed_282"
             },
             {
-                "addr": "DB102,R28",
+                "addr": "DB102,R32",
                 "name": "r_reel_speed_282"
             },
             {
@@ -12001,12 +12001,32 @@
                 "name": "r_high_alarm_102"
             },
             {
-                "addr": "DB2030,R670",
+                "addr": "DB2030,R134",
+                "name": "r_speed_actual_103"
+            },
+            {
+                "addr": "DB2030,R130",
                 "name": "r_speed_setpoint_103"
             },
             {
-                "addr": "DB2030,R392",
-                "name": "r_speed_actual_103"
+                "addr": "DB2030,R286",
+                "name": "r_valve_setpoint_103"
+            },
+            {
+                "addr": "DB2030,R140",
+                "name": "r_high_alarm_103"
+            },
+            {
+                "addr": "DB2030,R144",
+                "name": "r_high_warning_103"
+            },
+            {
+                "addr": "DB2030,R156",
+                "name": "r_low_warning_103"
+            },
+            {
+                "addr": "DB2030,R160",
+                "name": "r_low_alarm_103"
             },
             {
                 "addr": "DB1945,X310.0",
@@ -13275,6 +13295,13 @@
         "mappings": "[{\"field\":\"do_actual\",\"s7prefix\":\"r_do_actual\",\"useStats\":true},{\"field\":\"high_alarm\",\"s7prefix\":\"r_high_alarm\",\"useStats\":true},{\"field\":\"high_warning\",\"s7prefix\":\"r_high_warning\",\"useStats\":true},{\"field\":\"low_warning\",\"s7prefix\":\"r_low_warning\",\"useStats\":true},{\"field\":\"low_alarm\",\"s7prefix\":\"r_low_alarm\",\"useStats\":true}]"
     },
     {
+        "id": "6b987313e653a6c5",
+        "type": "miza-group-template",
+        "name": "Speed 2",
+        "color": "#ddaa99",
+        "mappings": "[{\"field\":\"speed_actual\",\"s7prefix\":\"r_speed_actual\",\"useStats\":true},{\"field\":\"speed_setpoint\",\"s7prefix\":\"r_speed_setpoint\",\"useStats\":true},{\"field\":\"valve_setpoint\",\"s7prefix\":\"r_valve_setpoint\",\"useStats\":true},{\"field\":\"high_alarm\",\"s7prefix\":\"r_high_alarm\",\"useStats\":true},{\"field\":\"high_warning\",\"s7prefix\":\"r_high_warning\",\"useStats\":true},{\"field\":\"low_warning\",\"s7prefix\":\"r_low_warning\",\"useStats\":true},{\"field\":\"low_alarm\",\"s7prefix\":\"r_low_alarm\",\"useStats\":true}]"
+    },
+    {
         "id": "b70436aa2c9e6eae",
         "type": "buffer-array",
         "z": "8973786ac9022d0f",
@@ -13378,7 +13405,7 @@
         "diff": false,
         "name": "",
         "x": 430,
-        "y": 360,
+        "y": 120,
         "wires": [
             [
                 "473bb9feddda52d3"
@@ -13398,7 +13425,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 360,
+        "y": 120,
         "wires": []
     },
     {
@@ -22662,8 +22689,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 280,
-        "y": 120,
+        "x": 600,
+        "y": 60,
         "wires": []
     },
     {
@@ -22676,8 +22703,8 @@
         "variable": "",
         "diff": false,
         "name": "",
-        "x": 120,
-        "y": 120,
+        "x": 440,
+        "y": 60,
         "wires": [
             [
                 "5a161e9e3992c86e"
@@ -24266,32 +24293,6 @@
         "wires": []
     },
     {
-        "id": "afc1cced563d7c03",
-        "type": "miza-s7-group",
-        "z": "f262b7117ba90db7",
-        "name": "",
-        "endpoint": "225494695b8dbe85",
-        "templateNode": "ed1ac2594c7541e9",
-        "groupIndex": "103",
-        "bufferLen": "10",
-        "throttle": "60",
-        "outputs": 6,
-        "x": 2500,
-        "y": 2480,
-        "wires": [
-            [
-                "44a01d8766186afe"
-            ],
-            [
-                "ef0829985a1e3f50"
-            ],
-            [],
-            [],
-            [],
-            []
-        ]
-    },
-    {
         "id": "37b8b7fa8d6da6b0",
         "type": "s7 in",
         "z": "f262b7117ba90db7",
@@ -24304,7 +24305,7 @@
         "y": 2480,
         "wires": [
             [
-                "afc1cced563d7c03"
+                "307b4770e9a57f4b"
             ]
         ]
     },
@@ -24323,7 +24324,7 @@
         "machine": "Điều khiển tần số tốc độ SIC10265",
         "label": "Tốc độ cài đặt",
         "x": 2780,
-        "y": 2460,
+        "y": 2400,
         "wires": [
             [
                 "54a2833dedfdf5b8"
@@ -24345,7 +24346,7 @@
         "machine": "Điều khiển tần số tốc độ SIC10265",
         "label": "Tốc độ thực tế",
         "x": 2770,
-        "y": 2500,
+        "y": 2360,
         "wires": [
             [
                 "54a2833dedfdf5b8"
@@ -29422,6 +29423,219 @@
         "wires": [
             [
                 "3fe705451743ed23"
+            ]
+        ]
+    },
+    {
+        "id": "56f42d4943bf02f3",
+        "type": "s7 in",
+        "z": "f262b7117ba90db7",
+        "endpoint": "2d1ab283960f157b",
+        "mode": "all",
+        "variable": "r_speed_setpoint_11",
+        "diff": false,
+        "name": "",
+        "x": 870,
+        "y": 120,
+        "wires": [
+            [
+                "38ccac3ab9e5513e"
+            ]
+        ]
+    },
+    {
+        "id": "38ccac3ab9e5513e",
+        "type": "debug",
+        "z": "f262b7117ba90db7",
+        "name": "debug 161",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "df1cb92da8587329",
+        "type": "s7 in",
+        "z": "f262b7117ba90db7",
+        "endpoint": "e72fd5a230ded939",
+        "mode": "all",
+        "variable": "r_speed_setpoint_11",
+        "diff": false,
+        "name": "",
+        "x": 810,
+        "y": 60,
+        "wires": [
+            [
+                "919ec43fa5f3a412"
+            ]
+        ]
+    },
+    {
+        "id": "919ec43fa5f3a412",
+        "type": "debug",
+        "z": "f262b7117ba90db7",
+        "name": "debug 162",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "307b4770e9a57f4b",
+        "type": "miza-s7-group",
+        "z": "f262b7117ba90db7",
+        "name": "",
+        "endpoint": "225494695b8dbe85",
+        "templateNode": "6b987313e653a6c5",
+        "groupIndex": "103",
+        "bufferLen": "10",
+        "throttle": "60",
+        "outputs": 7,
+        "x": 2510,
+        "y": 2480,
+        "wires": [
+            [
+                "ef0829985a1e3f50"
+            ],
+            [
+                "44a01d8766186afe"
+            ],
+            [
+                "12c166311622e60c"
+            ],
+            [
+                "ac83eab2e58ba1d0"
+            ],
+            [
+                "866dc7e5ac50bc1a"
+            ],
+            [
+                "dba90e0a3dd1d815"
+            ],
+            [
+                "37071fc75f47bfe4"
+            ]
+        ]
+    },
+    {
+        "id": "ac83eab2e58ba1d0",
+        "type": "miza-insert",
+        "z": "f262b7117ba90db7",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ bột",
+        "subsystem": "Hệ",
+        "section": "Hệ thống phân tán nhiệt",
+        "line": "Trục vít ép",
+        "machine": "Điều khiển tần số tốc độ SIC10265",
+        "label": "Cảnh báo đỏ trên",
+        "x": 2770,
+        "y": 2480,
+        "wires": [
+            [
+                "54a2833dedfdf5b8"
+            ]
+        ]
+    },
+    {
+        "id": "866dc7e5ac50bc1a",
+        "type": "miza-insert",
+        "z": "f262b7117ba90db7",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "high_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ bột",
+        "subsystem": "Hệ",
+        "section": "Hệ thống phân tán nhiệt",
+        "line": "Trục vít ép",
+        "machine": "Điều khiển tần số tốc độ SIC10265",
+        "label": "Cảnh báo vàng trên",
+        "x": 2770,
+        "y": 2520,
+        "wires": [
+            [
+                "54a2833dedfdf5b8"
+            ]
+        ]
+    },
+    {
+        "id": "dba90e0a3dd1d815",
+        "type": "miza-insert",
+        "z": "f262b7117ba90db7",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_warning",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ bột",
+        "subsystem": "Hệ",
+        "section": "Hệ thống phân tán nhiệt",
+        "line": "Trục vít ép",
+        "machine": "Điều khiển tần số tốc độ SIC10265",
+        "label": "Cảnh báo vàng dưới",
+        "x": 2770,
+        "y": 2560,
+        "wires": [
+            [
+                "54a2833dedfdf5b8"
+            ]
+        ]
+    },
+    {
+        "id": "37071fc75f47bfe4",
+        "type": "miza-insert",
+        "z": "f262b7117ba90db7",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "low_alarm",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ bột",
+        "subsystem": "Hệ",
+        "section": "Hệ thống phân tán nhiệt",
+        "line": "Trục vít ép",
+        "machine": "Điều khiển tần số tốc độ SIC10265",
+        "label": "Cảnh báo đỏ dưới",
+        "x": 2770,
+        "y": 2600,
+        "wires": [
+            [
+                "54a2833dedfdf5b8"
+            ]
+        ]
+    },
+    {
+        "id": "12c166311622e60c",
+        "type": "miza-insert",
+        "z": "f262b7117ba90db7",
+        "name": "",
+        "configNode": "eae630e2684fa51c",
+        "fieldName": "valve_setpoint",
+        "factory": "MIZA Nghi Sơn",
+        "system": "Hệ bột",
+        "subsystem": "Hệ",
+        "section": "Hệ thống phân tán nhiệt",
+        "line": "Trục vít ép",
+        "machine": "Điều khiển tần số tốc độ SIC10265",
+        "label": "Van điều khiển",
+        "x": 2780,
+        "y": 2440,
+        "wires": [
+            [
+                "54a2833dedfdf5b8"
             ]
         ]
     },
