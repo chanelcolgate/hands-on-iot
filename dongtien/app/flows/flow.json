@@ -863,6 +863,700 @@
                 "key": "Ia",
                 "name": "Phase A Current",
                 "unit": "A",
+                "div": 10
+            },
+            {
+                "key": "Ib",
+                "name": "Phase B Current",
+                "unit": "A",
+                "div": 10
+            },
+            {
+                "key": "Ic",
+                "name": "Phase C Current",
+                "unit": "A",
+                "div": 10
+            },
+            {
+                "key": "Pa",
+                "name": "Phase A Active Power",
+                "unit": "kW",
+                "div": 10
+            },
+            {
+                "key": "Pb",
+                "name": "Phase B Active Power",
+                "unit": "kW",
+                "div": 10
+            },
+            {
+                "key": "Pc",
+                "name": "Phase C Active Power",
+                "unit": "kW",
+                "div": 10
+            },
+            {
+                "key": "Pt",
+                "name": "Total Active Power",
+                "unit": "kW",
+                "div": 10
+            },
+            {
+                "key": "Qa",
+                "name": "Phase A Reactive Power",
+                "unit": "kVAR",
+                "div": 10
+            },
+            {
+                "key": "Qb",
+                "name": "Phase B Reactive Power",
+                "unit": "kVAR",
+                "div": 10
+            },
+            {
+                "key": "Qc",
+                "name": "Phase C Reactive Power",
+                "unit": "kVAR",
+                "div": 10
+            },
+            {
+                "key": "Qt",
+                "name": "Total Reactive Power",
+                "unit": "kVAR",
+                "div": 10
+            },
+            {
+                "key": "Sa",
+                "name": "Phase A Apparent Power",
+                "unit": "kVA",
+                "div": 10
+            },
+            {
+                "key": "Sb",
+                "name": "Phase B Apparent Power",
+                "unit": "kVA",
+                "div": 10
+            },
+            {
+                "key": "Sc",
+                "name": "Phase C Apparent Power",
+                "unit": "kVA",
+                "div": 10
+            },
+            {
+                "key": "St",
+                "name": "Total Apparent Power",
+                "unit": "kVA",
+                "div": 10
+            },
+            {
+                "key": "PFa",
+                "name": "Phase A Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFb",
+                "name": "Phase B Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFc",
+                "name": "Phase C Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFt",
+                "name": "Total Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "Freq",
+                "name": "Frequency",
+                "unit": "Hz",
+                "div": 100
+            },
+            {
+                "key": "ImpEp",
+                "name": "Total Import Active Energy",
+                "unit": "kWh",
+                "div": 1000
+            },
+            {
+                "key": "ExpEp",
+                "name": "Total Export Active Energy",
+                "unit": "kWh",
+                "div": 1000
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "e4e795a54279aa8a",
+        "type": "dongtien-meter-config",
+        "name": "CHINT PD7777",
+        "device": "CHINT PD7777",
+        "metrics": [
+            {
+                "key": "Ua",
+                "name": "Phase A Voltage",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Ub",
+                "name": "Phase B Voltage",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Uc",
+                "name": "Phase C Voltage",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Uab",
+                "name": "Line Voltage AB",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Ubc",
+                "name": "Line Voltage BC",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Uca",
+                "name": "Line Voltage CA",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Ia",
+                "name": "Phase A Current",
+                "unit": "A",
+                "div": 1
+            },
+            {
+                "key": "Ib",
+                "name": "Phase B Current",
+                "unit": "A",
+                "div": 1
+            },
+            {
+                "key": "Ic",
+                "name": "Phase C Current",
+                "unit": "A",
+                "div": 1
+            },
+            {
+                "key": "Pa",
+                "name": "Phase A Active Power",
+                "unit": "kW",
+                "div": 10
+            },
+            {
+                "key": "Pb",
+                "name": "Phase B Active Power",
+                "unit": "kW",
+                "div": 10
+            },
+            {
+                "key": "Pc",
+                "name": "Phase C Active Power",
+                "unit": "kW",
+                "div": 10
+            },
+            {
+                "key": "Pt",
+                "name": "Total Active Power",
+                "unit": "kW",
+                "div": 10
+            },
+            {
+                "key": "Qa",
+                "name": "Phase A Reactive Power",
+                "unit": "kVAR",
+                "div": 10
+            },
+            {
+                "key": "Qb",
+                "name": "Phase B Reactive Power",
+                "unit": "kVAR",
+                "div": 10
+            },
+            {
+                "key": "Qc",
+                "name": "Phase C Reactive Power",
+                "unit": "kVAR",
+                "div": 10
+            },
+            {
+                "key": "Qt",
+                "name": "Total Reactive Power",
+                "unit": "kVAR",
+                "div": 10
+            },
+            {
+                "key": "Sa",
+                "name": "Phase A Apparent Power",
+                "unit": "kVA",
+                "div": 10
+            },
+            {
+                "key": "Sb",
+                "name": "Phase B Apparent Power",
+                "unit": "kVA",
+                "div": 10
+            },
+            {
+                "key": "Sc",
+                "name": "Phase C Apparent Power",
+                "unit": "kVA",
+                "div": 10
+            },
+            {
+                "key": "St",
+                "name": "Total Apparent Power",
+                "unit": "kVA",
+                "div": 10
+            },
+            {
+                "key": "PFa",
+                "name": "Phase A Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFb",
+                "name": "Phase B Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFc",
+                "name": "Phase C Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "PFt",
+                "name": "Total Power Factor",
+                "unit": "None",
+                "div": 1000
+            },
+            {
+                "key": "Freq",
+                "name": "Frequency",
+                "unit": "Hz",
+                "div": 100
+            },
+            {
+                "key": "ImpEp",
+                "name": "Total Import Active Energy",
+                "unit": "MWh",
+                "div": 1
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "adb714bfbd202f11",
+        "type": "dongtien-meter-config",
+        "name": "Vibration & Temperature Sensor",
+        "device": "Vibration & Temperature Sensor",
+        "metrics": [
+            {
+                "key": "temperature",
+                "name": "Temperature",
+                "unit": "°C",
+                "div": 10
+            },
+            {
+                "key": "x-sped",
+                "name": "Velocity X",
+                "unit": "mm/s",
+                "div": 10
+            },
+            {
+                "key": "y-sped",
+                "name": "Velocity Y",
+                "unit": "mm/s",
+                "div": 10
+            },
+            {
+                "key": "z-sped",
+                "name": "Velocity Z",
+                "unit": "mm/s",
+                "div": 10
+            },
+            {
+                "key": "x-disp",
+                "name": "Displacement X",
+                "unit": "um",
+                "div": 10
+            },
+            {
+                "key": "y-disp",
+                "name": "Displacement Y",
+                "unit": "um",
+                "div": 10
+            },
+            {
+                "key": "z-disp",
+                "name": "Displacement Z",
+                "unit": "um",
+                "div": 10
+            },
+            {
+                "key": "x-accel",
+                "name": "Acceleration X",
+                "unit": "m/s^2",
+                "div": 10
+            },
+            {
+                "key": "y-accel",
+                "name": "Acceleration Y",
+                "unit": "m/s^2",
+                "div": 10
+            },
+            {
+                "key": "z-accel",
+                "name": "Acceleration Z",
+                "unit": "m/s^2",
+                "div": 10
+            },
+            {
+                "key": "x-freq",
+                "name": "Frequency X",
+                "unit": "Hz",
+                "div": 1
+            },
+            {
+                "key": "y-freq",
+                "name": "Frequency Y",
+                "unit": "Hz",
+                "div": 1
+            },
+            {
+                "key": "z-freq",
+                "name": "Frequency Z",
+                "unit": "Hz",
+                "div": 1
+            }
+        ],
+        "derivedMetrics": [
+            {
+                "key": "D_disp",
+                "name": "Displacement Magnitude",
+                "unit": "um",
+                "xKey": "x-disp",
+                "yKey": "y-disp",
+                "zKey": "z-disp"
+            },
+            {
+                "key": "V_disp",
+                "name": "Velocity Magnitude",
+                "unit": "mm/s",
+                "xKey": "x-sped",
+                "yKey": "y-sped",
+                "zKey": "z-sped"
+            },
+            {
+                "key": "A_disp",
+                "name": "Acceleration Magnitude",
+                "unit": "m/s^2",
+                "xKey": "x-accel",
+                "yKey": "y-accel",
+                "zKey": "z-accel"
+            }
+        ]
+    },
+    {
+        "id": "a5780702ce278cb1",
+        "type": "dongtien-meter-config",
+        "name": "Klemsan Klea 322p",
+        "device": "Klemsan Klea 322p",
+        "metrics": [
+            {
+                "key": "Ua",
+                "name": "Phase A Voltage",
+                "unit": "V",
+                "div": 1
+            },
+            {
+                "key": "Ub",
+                "name": "Phase B Voltage",
+                "unit": "V",
+                "div": 1
+            },
+            {
+                "key": "Uc",
+                "name": "Phase C Voltage",
+                "unit": "V",
+                "div": 1
+            },
+            {
+                "key": "Uab",
+                "name": "Line Voltage AB",
+                "unit": "V",
+                "div": 1
+            },
+            {
+                "key": "Ubc",
+                "name": "Line Voltage BC",
+                "unit": "V",
+                "div": 1
+            },
+            {
+                "key": "Uca",
+                "name": "Line Voltage CA",
+                "unit": "V",
+                "div": 1
+            },
+            {
+                "key": "Ia",
+                "name": "Phase A Current",
+                "unit": "A",
+                "div": 1
+            },
+            {
+                "key": "Ib",
+                "name": "Phase B Current",
+                "unit": "A",
+                "div": 1
+            },
+            {
+                "key": "Ic",
+                "name": "Phase C Current",
+                "unit": "A",
+                "div": 1
+            },
+            {
+                "key": "Pa",
+                "name": "Phase A Active Power",
+                "unit": "kW",
+                "div": 1000
+            },
+            {
+                "key": "Pb",
+                "name": "Phase B Active Power",
+                "unit": "kW",
+                "div": 1000
+            },
+            {
+                "key": "Pc",
+                "name": "Phase C Active Power",
+                "unit": "kW",
+                "div": 1000
+            },
+            {
+                "key": "Pt",
+                "name": "Total Active Power",
+                "unit": "kW",
+                "div": 1000
+            },
+            {
+                "key": "Qa",
+                "name": "Phase A Reactive Power",
+                "unit": "kVAR",
+                "div": 1000
+            },
+            {
+                "key": "Qb",
+                "name": "Phase B Reactive Power",
+                "unit": "kVAR",
+                "div": 1000
+            },
+            {
+                "key": "Qc",
+                "name": "Phase C Reactive Power",
+                "unit": "kVAR",
+                "div": 1000
+            },
+            {
+                "key": "Qt",
+                "name": "Total Reactive Power",
+                "unit": "kVAR",
+                "div": 1000
+            },
+            {
+                "key": "Sa",
+                "name": "Phase A Apparent Power",
+                "unit": "kVA",
+                "div": 1000
+            },
+            {
+                "key": "Sb",
+                "name": "Phase B Apparent Power",
+                "unit": "kVA",
+                "div": 1000
+            },
+            {
+                "key": "Sc",
+                "name": "Phase C Apparent Power",
+                "unit": "kVA",
+                "div": 1000
+            },
+            {
+                "key": "St",
+                "name": "Total Apparent Power",
+                "unit": "kVA",
+                "div": 1000
+            },
+            {
+                "key": "PFa",
+                "name": "Phase A Power Factor",
+                "unit": "None",
+                "div": 1
+            },
+            {
+                "key": "PFb",
+                "name": "Phase B Power Factor",
+                "unit": "None",
+                "div": 1
+            },
+            {
+                "key": "PFc",
+                "name": "Phase C Power Factor",
+                "unit": "None",
+                "div": 1
+            },
+            {
+                "key": "PFavg",
+                "name": "Average Power Factor",
+                "unit": "None",
+                "div": 1
+            },
+            {
+                "key": "Freqa",
+                "name": "Frequency A",
+                "unit": "Hz",
+                "div": 1
+            },
+            {
+                "key": "Freqb",
+                "name": "Frequency A",
+                "unit": "Hz",
+                "div": 1
+            },
+            {
+                "key": "Freqc",
+                "name": "Frequency A",
+                "unit": "Hz",
+                "div": 1
+            },
+            {
+                "key": "ImpEp",
+                "name": "Total Import Active Energy",
+                "unit": "kWh",
+                "div": 1
+            },
+            {
+                "key": "ImpEq",
+                "name": "Total Import Reactive Energy",
+                "unit": "kVARh",
+                "div": 1
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "25c7414f896c7331",
+        "type": "dongtien-meter-config",
+        "name": "SN-3000-WD-HW-N01",
+        "device": "SN-3000-WD-HW-N01",
+        "metrics": [
+            {
+                "key": "temperature",
+                "name": "Temperature",
+                "unit": "℃",
+                "div": 10
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "3b6d3d84af66aa9b",
+        "type": "dongtien-meter-config",
+        "name": "Yantai WFD",
+        "device": "Yantai WFD",
+        "metrics": [
+            {
+                "key": "int_positive_val",
+                "name": "Lượng nước tiêu thụ",
+                "unit": "m³",
+                "div": 1
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "28d20b27f093d79b",
+        "type": "dongtien-meter-config",
+        "name": "Supmea",
+        "device": "Supmea",
+        "metrics": [
+            {
+                "key": "totalForwad",
+                "name": "Lượng nước tiêu thụ",
+                "unit": "m³",
+                "div": 1
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "6a39a1d5eea0d077",
+        "type": "dongtien-meter-config",
+        "name": "Acrel ADW 300 ",
+        "device": "Acrel ADW 300 ",
+        "metrics": [
+            {
+                "key": "Ua",
+                "name": "Phase A Voltage",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Ub",
+                "name": "Phase B Voltage",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Uc",
+                "name": "Phase C Voltage",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Uab",
+                "name": "Line Voltage AB",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Ubc",
+                "name": "Line Voltage BC",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Uca",
+                "name": "Line Voltage CA",
+                "unit": "V",
+                "div": 10
+            },
+            {
+                "key": "Ia",
+                "name": "Phase A Current",
+                "unit": "A",
                 "div": 1000
             },
             {
@@ -991,263 +1685,8 @@
                 "unit": "kWh",
                 "div": 1000
             }
-        ]
-    },
-    {
-        "id": "e4e795a54279aa8a",
-        "type": "dongtien-meter-config",
-        "name": "CHINT PD7777",
-        "device": "CHINT PD7777",
-        "metrics": [
-            {
-                "key": "Ua",
-                "name": "Phase A Voltage",
-                "unit": "V",
-                "div": 10
-            },
-            {
-                "key": "Ub",
-                "name": "Phase B Voltage",
-                "unit": "V",
-                "div": 10
-            },
-            {
-                "key": "Uc",
-                "name": "Phase C Voltage",
-                "unit": "V",
-                "div": 10
-            },
-            {
-                "key": "Uab",
-                "name": "Line Voltage AB",
-                "unit": "V",
-                "div": 10
-            },
-            {
-                "key": "Ubc",
-                "name": "Line Voltage BC",
-                "unit": "V",
-                "div": 10
-            },
-            {
-                "key": "Uca",
-                "name": "Line Voltage CA",
-                "unit": "V",
-                "div": 10
-            },
-            {
-                "key": "Ia",
-                "name": "Phase A Current",
-                "unit": "A",
-                "div": 1000
-            },
-            {
-                "key": "Ib",
-                "name": "Phase B Current",
-                "unit": "A",
-                "div": 1000
-            },
-            {
-                "key": "Ic",
-                "name": "Phase C Current",
-                "unit": "A",
-                "div": 1000
-            },
-            {
-                "key": "Pa",
-                "name": "Phase A Active Power",
-                "unit": "kW",
-                "div": 10000
-            },
-            {
-                "key": "Pb",
-                "name": "Phase B Active Power",
-                "unit": "kW",
-                "div": 10000
-            },
-            {
-                "key": "Pc",
-                "name": "Phase C Active Power",
-                "unit": "kW",
-                "div": 10000
-            },
-            {
-                "key": "Pt",
-                "name": "Total Active Power",
-                "unit": "kW",
-                "div": 10000
-            },
-            {
-                "key": "Qa",
-                "name": "Phase A Reactive Power",
-                "unit": "kVAR",
-                "div": 10000
-            },
-            {
-                "key": "Qb",
-                "name": "Phase B Reactive Power",
-                "unit": "kVAR",
-                "div": 10000
-            },
-            {
-                "key": "Qc",
-                "name": "Phase C Reactive Power",
-                "unit": "kVAR",
-                "div": 10000
-            },
-            {
-                "key": "Qt",
-                "name": "Total Reactive Power",
-                "unit": "kVAR",
-                "div": 10000
-            },
-            {
-                "key": "Sa",
-                "name": "Phase A Apparent Power",
-                "unit": "kVA",
-                "div": 10000
-            },
-            {
-                "key": "Sb",
-                "name": "Phase B Apparent Power",
-                "unit": "kVA",
-                "div": 10000
-            },
-            {
-                "key": "Sc",
-                "name": "Phase C Apparent Power",
-                "unit": "kVA",
-                "div": 10000
-            },
-            {
-                "key": "St",
-                "name": "Total Apparent Power",
-                "unit": "kVA",
-                "div": 10000
-            },
-            {
-                "key": "PFa",
-                "name": "Phase A Power Factor",
-                "unit": "None",
-                "div": 1000
-            },
-            {
-                "key": "PFb",
-                "name": "Phase B Power Factor",
-                "unit": "None",
-                "div": 1000
-            },
-            {
-                "key": "PFc",
-                "name": "Phase C Power Factor",
-                "unit": "None",
-                "div": 1000
-            },
-            {
-                "key": "PFt",
-                "name": "Total Power Factor",
-                "unit": "None",
-                "div": 1000
-            },
-            {
-                "key": "Freq",
-                "name": "Frequency",
-                "unit": "Hz",
-                "div": 100
-            },
-            {
-                "key": "ImpEp",
-                "name": "Total Import Active Energy",
-                "unit": "kWh",
-                "div": 1
-            }
-        ]
-    },
-    {
-        "id": "adb714bfbd202f11",
-        "type": "dongtien-meter-config",
-        "name": "Vibration & Temperature Sensor",
-        "device": "Vibration & Temperature Sensor",
-        "metrics": [
-            {
-                "key": "temperature",
-                "name": "Temperature",
-                "unit": "°C",
-                "div": 10
-            },
-            {
-                "key": "x-sped",
-                "name": "Velocity X",
-                "unit": "mm/s",
-                "div": 10
-            },
-            {
-                "key": "y-sped",
-                "name": "Velocity Y",
-                "unit": "mm/s",
-                "div": 10
-            },
-            {
-                "key": "z-sped",
-                "name": "Velocity Z",
-                "unit": "mm/s",
-                "div": 10
-            },
-            {
-                "key": "x-disp",
-                "name": "Displacement X",
-                "unit": "um",
-                "div": 10
-            },
-            {
-                "key": "y-disp",
-                "name": "Displacement Y",
-                "unit": "um",
-                "div": 10
-            },
-            {
-                "key": "z-disp",
-                "name": "Displacement Z",
-                "unit": "um",
-                "div": 10
-            },
-            {
-                "key": "x-accel",
-                "name": "Acceleration X",
-                "unit": "m/s^2",
-                "div": 10
-            },
-            {
-                "key": "y-accel",
-                "name": "Acceleration Y",
-                "unit": "m/s^2",
-                "div": 10
-            },
-            {
-                "key": "z-accel",
-                "name": "Acceleration Z",
-                "unit": "m/s^2",
-                "div": 10
-            },
-            {
-                "key": "x-freq",
-                "name": "Frequency X",
-                "unit": "Hz",
-                "div": 1
-            },
-            {
-                "key": "y-freq",
-                "name": "Frequency Y",
-                "unit": "Hz",
-                "div": 1
-            },
-            {
-                "key": "z-freq",
-                "name": "Frequency Z",
-                "unit": "Hz",
-                "div": 1
-            }
-        ]
+        ],
+        "derivedMetrics": []
     },
     {
         "id": "b456d74cc49da9e0",
@@ -8390,11 +8829,61 @@
                 "t": "cont",
                 "v": "krXZKmuzxlpEHEXgPyfC",
                 "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "rtMvXXPOOSrmzAwQtehe",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "umQUnpNZnTePhmqlVoSG",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "dHzfDTkINqLApbZpbbDp",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "KrmYlZcZUSzDDlrsRxKf",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "tvFkBPqwYghWsxiCWuyp",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "XUYJfwAZMBhwEAUeaNnx",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "SbaqulbyAnYxRbyZxhgt",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "LxUyfVtZCFsSGzbxvAzt",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "aiklxrJdZVxURXxLihXO",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "SQxRHevxRPRyjaxFoUuz",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 5,
+        "outputs": 15,
         "x": 830,
         "y": 680,
         "wires": [
@@ -8412,6 +8901,36 @@
             ],
             [
                 "bc558b51688a3b2f"
+            ],
+            [
+                "82f35bb4bea7acf4"
+            ],
+            [
+                "43c734ce7522fe3b"
+            ],
+            [
+                "f1a574d5a36767a2"
+            ],
+            [
+                "5e2acbe74db0c812"
+            ],
+            [
+                "2f0f6a497574df96"
+            ],
+            [
+                "976e3d7c270a6640"
+            ],
+            [
+                "1c0beb0751e3ffa7"
+            ],
+            [
+                "fe1d036e2e85985a"
+            ],
+            [
+                "681dccfd531e93eb"
+            ],
+            [
+                "dba76f4d8132268e"
             ]
         ]
     },
@@ -9035,22 +9554,26 @@
                 "93d02b72ea713e52"
             ],
             [
-                "486b497f5c41a723"
+                "486b497f5c41a723",
+                "ce518a02b8352ef6"
             ],
             [
-                "0f0fb67435f5f552"
+                "0f0fb67435f5f552",
+                "3f81fa0dfe62180e"
             ],
             [
                 "b3b0c41bf18388ba"
             ],
             [
-                "375b6891cc01c4e9"
+                "375b6891cc01c4e9",
+                "0bcc0abc0c6ef34f"
             ],
             [
                 "1de1f46274a7d64b"
             ],
             [
-                "ba907d8198075902"
+                "ba907d8198075902",
+                "860a08757c7b3e98"
             ],
             [
                 "fd8c448dbb82cc97"
@@ -9059,10 +9582,12 @@
                 "47a809ea2c995d7f"
             ],
             [
-                "d702d6c19cf104cd"
+                "d702d6c19cf104cd",
+                "3543e8392b901091"
             ],
             [
-                "49cb397f416bad20"
+                "49cb397f416bad20",
+                "0f3c9006fd1a7ad9"
             ]
         ]
     },
@@ -10577,11 +11102,12 @@
         "links": [
             "92da7ec13fb4cca0"
         ],
-        "x": 1105,
-        "y": 1620,
+        "x": 1125,
+        "y": 2380,
         "wires": [
             [
-                "55a687f37b5f1591"
+                "55a687f37b5f1591",
+                "7522320a7b35d213"
             ]
         ]
     },
@@ -10599,8 +11125,8 @@
         "db": "dongtien",
         "precision": "ns",
         "shiftVar": "shift",
-        "x": 1270,
-        "y": 1620,
+        "x": 1290,
+        "y": 2380,
         "wires": [
             [
                 "ab4834eea6938d30"
@@ -10623,8 +11149,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1530,
-        "y": 1740,
+        "x": 1570,
+        "y": 2660,
         "wires": [
             []
         ]
@@ -10650,8 +11176,8 @@
         "links": [
             "cc98bab27d60c648"
         ],
-        "x": 1105,
-        "y": 1700,
+        "x": 1125,
+        "y": 2460,
         "wires": [
             [
                 "3653ab2820c26c5f"
@@ -10672,8 +11198,8 @@
         "db": "dongtien",
         "precision": "ns",
         "shiftVar": "shift",
-        "x": 1270,
-        "y": 1700,
+        "x": 1290,
+        "y": 2460,
         "wires": [
             [
                 "ab4834eea6938d30"
@@ -10699,11 +11225,10 @@
         "z": "06c2b55e1c9ea8bc",
         "name": "Điện T35 MCC XEO",
         "links": [
-            "05ef4f617b28c08c",
-            "6d2ec3bd1c1d39b8"
+            "05ef4f617b28c08c"
         ],
-        "x": 1105,
-        "y": 1760,
+        "x": 1125,
+        "y": 2520,
         "wires": [
             [
                 "be098bfbafadc5cd"
@@ -10724,8 +11249,8 @@
         "db": "dongtien",
         "precision": "ns",
         "shiftVar": "shift",
-        "x": 1280,
-        "y": 1760,
+        "x": 1300,
+        "y": 2520,
         "wires": [
             [
                 "ab4834eea6938d30"
@@ -10753,8 +11278,8 @@
         "links": [
             "f8a30e5c59188bf0"
         ],
-        "x": 1105,
-        "y": 1820,
+        "x": 1125,
+        "y": 2580,
         "wires": [
             [
                 "5d4590e2f47cceae"
@@ -10775,8 +11300,8 @@
         "db": "dongtien",
         "precision": "ns",
         "shiftVar": "shift",
-        "x": 1290,
-        "y": 1820,
+        "x": 1310,
+        "y": 2580,
         "wires": [
             [
                 "ab4834eea6938d30"
@@ -10804,8 +11329,8 @@
         "links": [
             "77f6be208a18f3e5"
         ],
-        "x": 1105,
-        "y": 1880,
+        "x": 1125,
+        "y": 2640,
         "wires": [
             [
                 "dc19461ebf24e168"
@@ -10826,8 +11351,8 @@
         "db": "dongtien",
         "precision": "ns",
         "shiftVar": "shift",
-        "x": 1290,
-        "y": 1880,
+        "x": 1310,
+        "y": 2640,
         "wires": [
             [
                 "ab4834eea6938d30"
@@ -10855,8 +11380,8 @@
         "links": [
             "8ebada47e4214bc0"
         ],
-        "x": 1105,
-        "y": 1940,
+        "x": 1125,
+        "y": 2700,
         "wires": [
             [
                 "52916b9b62d21678"
@@ -10877,8 +11402,8 @@
         "db": "dongtien",
         "precision": "ns",
         "shiftVar": "shift",
-        "x": 1290,
-        "y": 1940,
+        "x": 1310,
+        "y": 2700,
         "wires": [
             [
                 "ab4834eea6938d30"
@@ -10899,28 +11424,6 @@
         "wires": []
     },
     {
-        "id": "e0f26860f9a29cc6",
-        "type": "dongtien-insert",
-        "z": "06c2b55e1c9ea8bc",
-        "name": "Điện T92 Sang cuon",
-        "meterConfig": "4ee69f320815a52c",
-        "factory": "Giấy Đồng Tiến Long An",
-        "transformer": "3000KVA",
-        "parentSystem": "MCC XEO",
-        "subSystem": "Sang cuon",
-        "measurement": "electric_measurement",
-        "db": "dongtien",
-        "precision": "ns",
-        "shiftVar": "shift",
-        "x": 1300,
-        "y": 2040,
-        "wires": [
-            [
-                "8b4414d6a70eca16"
-            ]
-        ]
-    },
-    {
         "id": "3373d3fd71b8395e",
         "type": "link out",
         "z": "06c2b55e1c9ea8bc",
@@ -10932,83 +11435,6 @@
         "x": 1535,
         "y": 680,
         "wires": []
-    },
-    {
-        "id": "a2d788268ed8877c",
-        "type": "link in",
-        "z": "06c2b55e1c9ea8bc",
-        "name": "Điện T92 Sang cuon",
-        "links": [
-            "0c38979bd6f31261"
-        ],
-        "x": 1105,
-        "y": 2040,
-        "wires": [
-            [
-                "e0f26860f9a29cc6"
-            ]
-        ]
-    },
-    {
-        "id": "418eeace72587923",
-        "type": "link in",
-        "z": "06c2b55e1c9ea8bc",
-        "name": "Điện T22 Thuy luc",
-        "links": [
-            "3373d3fd71b8395e",
-            "1814104aebee7667"
-        ],
-        "x": 1105,
-        "y": 2100,
-        "wires": [
-            [
-                "85524285db7aa682"
-            ]
-        ]
-    },
-    {
-        "id": "85524285db7aa682",
-        "type": "dongtien-insert",
-        "z": "06c2b55e1c9ea8bc",
-        "name": "Điện T22 Thuy luc",
-        "meterConfig": "4ee69f320815a52c",
-        "factory": "Giấy Đồng Tiến Long An",
-        "transformer": "5000KVA",
-        "parentSystem": "MCC 1.3",
-        "subSystem": "Thuy luc",
-        "measurement": "electric_measurement",
-        "db": "dongtien",
-        "precision": "ns",
-        "shiftVar": "shift",
-        "x": 1290,
-        "y": 2100,
-        "wires": [
-            [
-                "8b4414d6a70eca16"
-            ]
-        ]
-    },
-    {
-        "id": "8b4414d6a70eca16",
-        "type": "http request",
-        "z": "06c2b55e1c9ea8bc",
-        "name": "",
-        "method": "POST",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1510,
-        "y": 2060,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "405861cc19e4fdd5",
@@ -11031,8 +11457,8 @@
         "links": [
             "405861cc19e4fdd5"
         ],
-        "x": 1105,
-        "y": 2180,
+        "x": 1785,
+        "y": 2480,
         "wires": [
             [
                 "add53acef6f3ef07"
@@ -11053,8 +11479,8 @@
         "db": "dongtien",
         "precision": "ns",
         "shiftVar": "shift",
-        "x": 1320,
-        "y": 2180,
+        "x": 2000,
+        "y": 2480,
         "wires": [
             [
                 "a50fdd36b470358e"
@@ -11077,8 +11503,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1570,
-        "y": 2180,
+        "x": 2250,
+        "y": 2480,
         "wires": [
             []
         ]
@@ -11108,7 +11534,8 @@
         "y": 1620,
         "wires": [
             [
-                "e730a4523672ae68"
+                "e730a4523672ae68",
+                "bb1724ec0b1026a1"
             ]
         ]
     },
@@ -11150,8 +11577,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 2310,
-        "y": 1620,
+        "x": 2370,
+        "y": 2020,
         "wires": [
             []
         ]
@@ -11162,7 +11589,9 @@
         "z": "06c2b55e1c9ea8bc",
         "name": "Vibration heat lô ép 4 dưới gối ngoài",
         "mode": "link",
-        "links": [],
+        "links": [
+            "20d1d6e26f734d99"
+        ],
         "x": 1475,
         "y": 840,
         "wires": []
@@ -11173,7 +11602,9 @@
         "z": "06c2b55e1c9ea8bc",
         "name": "Vibration heat lô ép 4 trên gối trong",
         "mode": "link",
-        "links": [],
+        "links": [
+            "c1e9f8867acfe711"
+        ],
         "x": 1565,
         "y": 840,
         "wires": []
@@ -11184,7 +11615,9 @@
         "z": "06c2b55e1c9ea8bc",
         "name": "Vibration heat lô ép 4 trên gối ngoài",
         "mode": "link",
-        "links": [],
+        "links": [
+            "c6d7b6f90d440762"
+        ],
         "x": 1645,
         "y": 840,
         "wires": []
@@ -11195,7 +11628,9 @@
         "z": "06c2b55e1c9ea8bc",
         "name": "Vibration heat lô đá gối trong",
         "mode": "link",
-        "links": [],
+        "links": [
+            "67bc1b5a3b6187d6"
+        ],
         "x": 1615,
         "y": 1120,
         "wires": []
@@ -11206,10 +11641,2300 @@
         "z": "06c2b55e1c9ea8bc",
         "name": "Vibration heat lô đá gối ngoài",
         "mode": "link",
-        "links": [],
+        "links": [
+            "3587e71a0b33dfd7"
+        ],
         "x": 1685,
         "y": 1120,
         "wires": []
+    },
+    {
+        "id": "7522320a7b35d213",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "bb1724ec0b1026a1",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1960,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "82f35bb4bea7acf4",
+        "type": "switch",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "T01 Nghien so dai",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "T12 Phan tan nhiet",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "T06 MCC 1.1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 870,
+        "y": 1520,
+        "wires": [
+            [
+                "569c30ecddaac5c4"
+            ],
+            [
+                "65a0dd125f316866"
+            ],
+            [
+                "628cbbd9476fc169"
+            ]
+        ]
+    },
+    {
+        "id": "569c30ecddaac5c4",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"T01 Nghien so dai\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1050,
+        "y": 1480,
+        "wires": [
+            [
+                "03ddf4a06ccc312f"
+            ]
+        ]
+    },
+    {
+        "id": "079d92de223c8026",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T01 Nghien so dai",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"T01 Nghien so dai\":[{\"ts\":1783929492000,\"values\":{\"ULNavg\":219.8332,\"It\":0,\"Pt\":0,\"Qt\":0,\"St\":0,\"Cosavg\":0,\"PFavg\":0,\"Uab\":380.7569,\"Ubc\":381.2079,\"Uca\":380.304,\"ULLavg\":380.7563,\"In\":0,\"THDUt\":5.087588,\"THDIt\":0,\"Ua\":219.2629,\"Ia\":0,\"Pa\":0,\"Qa\":0,\"Sa\":0,\"Cosa\":0,\"PFa\":0,\"Freqa\":50.18632,\"THDUa\":4.816567,\"THDIa\":0,\"Ub\":218.8407,\"Ib\":0,\"Pb\":0,\"Qb\":0,\"Sb\":0,\"Cosb\":0,\"PFb\":0,\"Freqb\":50.16114,\"THDUb\":5.242263,\"THDIb\":0,\"Uc\":221.3714,\"Ic\":0,\"Pc\":0,\"Qc\":0,\"Sc\":0,\"Cosc\":0,\"PFc\":0,\"Freqc\":50.16114,\"THDUc\":5.367986,\"THDIc\":0,\"ImpEp\":2338.586,\"ExpEp\":440.6803,\"ImpEq\":650.2522}}]}",
+        "payloadType": "json",
+        "x": 1460,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "389d427eda04626e",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "iLEC MFM300",
+        "info": "",
+        "x": 1170,
+        "y": 2280,
+        "wires": []
+    },
+    {
+        "id": "72e4b0f277eecb27",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "CHINT PD7777",
+        "info": "",
+        "x": 1840,
+        "y": 2400,
+        "wires": []
+    },
+    {
+        "id": "e0f26860f9a29cc6",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T92 Sang cuon",
+        "meterConfig": "4ee69f320815a52c",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "3000KVA",
+        "parentSystem": "MCC XEO",
+        "subSystem": "Sang cuon",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2680,
+        "y": 2420,
+        "wires": [
+            [
+                "8b4414d6a70eca16"
+            ]
+        ]
+    },
+    {
+        "id": "a2d788268ed8877c",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T92 Sang cuon",
+        "links": [
+            "0c38979bd6f31261"
+        ],
+        "x": 2485,
+        "y": 2420,
+        "wires": [
+            [
+                "e0f26860f9a29cc6"
+            ]
+        ]
+    },
+    {
+        "id": "418eeace72587923",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T22 Thuy luc",
+        "links": [
+            "3373d3fd71b8395e"
+        ],
+        "x": 2485,
+        "y": 2480,
+        "wires": [
+            [
+                "85524285db7aa682"
+            ]
+        ]
+    },
+    {
+        "id": "85524285db7aa682",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T22 Thuy luc",
+        "meterConfig": "6a39a1d5eea0d077",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "5000KVA",
+        "parentSystem": "MCC 1.3",
+        "subSystem": "Thuy luc",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2670,
+        "y": 2480,
+        "wires": [
+            [
+                "8b4414d6a70eca16"
+            ]
+        ]
+    },
+    {
+        "id": "8b4414d6a70eca16",
+        "type": "http request",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2890,
+        "y": 2440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "22b8746415450b41",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Acrel ACM 96L E4",
+        "info": "",
+        "x": 2550,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "d688a22cc80a559a",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Klemsan Klea 322p",
+        "info": "",
+        "x": 1090,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "03ddf4a06ccc312f",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T01 Nghien so dai",
+        "mode": "link",
+        "links": [
+            "7f2a4907c7078d3f"
+        ],
+        "x": 1225,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "152f9465a10de147",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Klemsan Klea 322p",
+        "info": "",
+        "x": 3110,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "7f2a4907c7078d3f",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T01 Nghien so dai",
+        "links": [
+            "03ddf4a06ccc312f"
+        ],
+        "x": 3085,
+        "y": 2400,
+        "wires": [
+            [
+                "a2c0069696dc60a0"
+            ]
+        ]
+    },
+    {
+        "id": "a2c0069696dc60a0",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T01 Nghien so dai",
+        "meterConfig": "a5780702ce278cb1",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "5000KVA",
+        "parentSystem": "MCC 1.1",
+        "subSystem": "Nghiền sớ dài",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 3270,
+        "y": 2400,
+        "wires": [
+            [
+                "85d498d9a9ae1923"
+            ]
+        ]
+    },
+    {
+        "id": "85d498d9a9ae1923",
+        "type": "http request",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 3510,
+        "y": 2400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "65a0dd125f316866",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"T12 Phan tan nhiet\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1050,
+        "y": 1520,
+        "wires": [
+            [
+                "1259569899ce9eaa"
+            ]
+        ]
+    },
+    {
+        "id": "b5c8ff6f887d0d1f",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T12 Phan tan nhiet",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"T12 Phan tan nhiet\":[{\"ts\":1783931472000,\"values\":{\"ImpEp\":1792.04,\"ExpEp\":196.3733,\"ImpEq\":561.1899,\"ULNavg\":218.1655,\"It\":0,\"Pt\":0,\"Qt\":0,\"St\":0,\"Cosavg\":0,\"PFavg\":0,\"Uab\":377.6731,\"Ubc\":378.1853,\"Uca\":377.7492,\"ULLavg\":377.8692,\"In\":0,\"THDUt\":5.219292,\"THDIt\":0,\"Ua\":217.6583,\"Ia\":0,\"Pa\":0,\"Qa\":0,\"Sa\":0,\"Cosa\":0,\"PFa\":0,\"Freqa\":49.96003,\"THDUa\":4.949255,\"THDIa\":0,\"Ub\":217.0717,\"Ib\":0,\"Pb\":0,\"Qb\":0,\"Sb\":0,\"Cosb\":0,\"PFb\":0,\"Freqb\":49.94756,\"THDUb\":5.232589,\"THDIb\":0,\"Uc\":219.8767,\"Ic\":0,\"Pc\":0,\"Qc\":0,\"Sc\":0,\"Cosc\":0,\"PFc\":0,\"Freqc\":49.94756,\"THDUc\":5.362875,\"THDIc\":0}}]}",
+        "payloadType": "json",
+        "x": 1470,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1259569899ce9eaa",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T12 Phan tan nhiet",
+        "mode": "link",
+        "links": [
+            "c278aeacc317c8f3"
+        ],
+        "x": 1225,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "c278aeacc317c8f3",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T12 Phan tan nhiet",
+        "links": [
+            "1259569899ce9eaa"
+        ],
+        "x": 3085,
+        "y": 2460,
+        "wires": [
+            [
+                "8f68f167e7e543f7"
+            ]
+        ]
+    },
+    {
+        "id": "8f68f167e7e543f7",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T12 Phan tan nhiet",
+        "meterConfig": "a5780702ce278cb1",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "5000KVA",
+        "parentSystem": "MCC 1.1",
+        "subSystem": "Phân tán nhiệt",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 3270,
+        "y": 2460,
+        "wires": [
+            [
+                "85d498d9a9ae1923"
+            ]
+        ]
+    },
+    {
+        "id": "628cbbd9476fc169",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"T06 MCC 1.1\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1050,
+        "y": 1560,
+        "wires": [
+            [
+                "a0b2520fdf8fdd08"
+            ]
+        ]
+    },
+    {
+        "id": "a0b2520fdf8fdd08",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T06 MCC 1.1",
+        "mode": "link",
+        "links": [
+            "d5bffacf8feb0675"
+        ],
+        "x": 1225,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "99e88e27b92575fd",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T06 MCC 1.1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"T06 MCC 1.1\":[{\"ts\":1783932012000,\"values\":{\"Ua\":2181504,\"Ub\":2174370,\"Uc\":2193009,\"ULNavg\":2182961,\"ULNubn\":84,\"Uab\":3772299,\"Ubc\":3782272,\"Uca\":3788443,\"ULLavg\":3781004,\"Zero-Seq-Vol\":0,\"ULLubn\":0,\"Ia\":8947200,\"Ib\":9008800,\"Ic\":9015200,\"Iavg\":8992533,\"Zero-Seq-Cur\":0,\"Iubn\":82,\"Pa\":1677600,\"Pb\":1698400,\"Pc\":1693600,\"Pt\":5069600,\"Qa\":996000,\"Qb\":974400,\"Qc\":1019200,\"Qt\":2989600,\"Sa\":1951200,\"Sb\":1958400,\"Sc\":1976800,\"St\":5886400,\"PFa\":859,\"PFb\":867,\"PFc\":856,\"PFt\":861,\"Freq\":5011,\"ImpEp-1\":2953961,\"ExpEp-1\":8369,\"ImpEq-1\":1851494,\"ExpEq-1\":3720,\"ImpEp\":2363169000,\"ExpEp\":6695200,\"ImpEq\":1481195000,\"ExpEq\":2976000}}]}",
+        "payloadType": "json",
+        "x": 1450,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5bffacf8feb0675",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T06 MCC 1.1",
+        "links": [
+            "a0b2520fdf8fdd08"
+        ],
+        "x": 1125,
+        "y": 2760,
+        "wires": [
+            [
+                "74789fbf6024eca3"
+            ]
+        ]
+    },
+    {
+        "id": "74789fbf6024eca3",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T06 MCC 1.1",
+        "meterConfig": "578d22bf66e35f57",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "5000KVA",
+        "parentSystem": "ACB 4000A",
+        "subSystem": "T06 MCC 1.1",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1290,
+        "y": 2760,
+        "wires": [
+            [
+                "ab4834eea6938d30"
+            ]
+        ]
+    },
+    {
+        "id": "43c734ce7522fe3b",
+        "type": "switch",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "T17 MCC 1.2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 1700,
+        "wires": [
+            [
+                "7bebc9d530839544"
+            ]
+        ]
+    },
+    {
+        "id": "7bebc9d530839544",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"T17 MCC 1.2\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1030,
+        "y": 1700,
+        "wires": [
+            [
+                "ae1d7fb31b0a71d9"
+            ]
+        ]
+    },
+    {
+        "id": "f874574ac5e7d47d",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T17 MCC 1.2",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"T17 MCC 1.2\":[{\"ts\":1783932632000,\"values\":{\"ImpEp-1\":7629861,\"ExpEp-1\":0,\"ImpEq-1\":4141196,\"ExpEq-1\":3,\"ImpEp\":1831167000,\"ExpEp\":0,\"ImpEq\":993887000,\"ExpEq\":720,\"Ua\":2176095,\"Ub\":2164167,\"Uc\":2173796,\"ULNavg\":2171352,\"ULNubn\":54,\"Uab\":3758781,\"Ubc\":3756789,\"Uca\":3767116,\"ULLavg\":3760895,\"Zero-Seq-Vol\":0,\"ULLubn\":0,\"Ia\":6001440,\"Ib\":6088320,\"Ic\":6063360,\"Iavg\":6041200,\"Zero-Seq-Cur\":0,\"Iubn\":146,\"Pa\":1147680,\"Pb\":1168800,\"Pc\":1149840,\"Pt\":3467520,\"Qa\":615840,\"Qb\":608160,\"Qc\":643680,\"Qt\":1858560,\"Sa\":1305840,\"Sb\":1317600,\"Sc\":1318320,\"St\":3941760,\"PFa\":876,\"PFb\":887,\"PFc\":876,\"PFt\":879,\"Freq\":5004}}]}",
+        "payloadType": "json",
+        "x": 1450,
+        "y": 1700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae1d7fb31b0a71d9",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T17 MCC 1.2",
+        "mode": "link",
+        "links": [
+            "f5d8c55880323449"
+        ],
+        "x": 1185,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "f5d8c55880323449",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T17 MCC 1.2",
+        "links": [
+            "ae1d7fb31b0a71d9"
+        ],
+        "x": 1125,
+        "y": 2820,
+        "wires": [
+            [
+                "47da866ec342f516"
+            ]
+        ]
+    },
+    {
+        "id": "47da866ec342f516",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện T17 MCC 1.2",
+        "meterConfig": "578d22bf66e35f57",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "5000KVA",
+        "parentSystem": "ACB 4000A",
+        "subSystem": "T17 MCC 1.2",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1290,
+        "y": 2820,
+        "wires": [
+            [
+                "ab4834eea6938d30"
+            ]
+        ]
+    },
+    {
+        "id": "f1a574d5a36767a2",
+        "type": "switch",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "May-Nen-Khi-BOT",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 1760,
+        "wires": [
+            [
+                "8a3d8b40edcfb6b6"
+            ]
+        ]
+    },
+    {
+        "id": "8a3d8b40edcfb6b6",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"May-Nen-Khi-BOT\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1030,
+        "y": 1760,
+        "wires": [
+            [
+                "0c3ddb9b777ce6bc"
+            ]
+        ]
+    },
+    {
+        "id": "d5a15eaece7f2a74",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "May-Nen-Khi-Bot",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"May-Nen-Khi-BOT\":[{\"ts\":1783933688000,\"values\":{\"Uab\":3748910,\"Ubc\":3755771,\"Uca\":3758849,\"ULLavg\":3754510,\"Zero-Seq-Vol\":0,\"ULLubn\":0}}]}",
+        "payloadType": "json",
+        "x": 1440,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0c3ddb9b777ce6bc",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện May-Nen-Khi-BOT",
+        "mode": "link",
+        "links": [
+            "dabb3b127817807e"
+        ],
+        "x": 1185,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "dabb3b127817807e",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện May-Nen-Khi-BOT",
+        "links": [
+            "0c3ddb9b777ce6bc"
+        ],
+        "x": 1125,
+        "y": 2880,
+        "wires": [
+            [
+                "32a12cf1fd67ae84"
+            ]
+        ]
+    },
+    {
+        "id": "32a12cf1fd67ae84",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện May-Nen-Khi-BOT",
+        "meterConfig": "578d22bf66e35f57",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "5000KVA",
+        "parentSystem": "MCC 1.3",
+        "subSystem": "Máy Nén Khí Bột",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1310,
+        "y": 2880,
+        "wires": [
+            [
+                "ab4834eea6938d30"
+            ]
+        ]
+    },
+    {
+        "id": "20d1d6e26f734d99",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô ép 4 dưới gối ngoài",
+        "links": [
+            "6f85213ac1de77e8"
+        ],
+        "x": 1815,
+        "y": 1720,
+        "wires": [
+            [
+                "f3508bbfc38309bc"
+            ]
+        ]
+    },
+    {
+        "id": "f3508bbfc38309bc",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô ép 4 dưới gối ngoài",
+        "meterConfig": "adb714bfbd202f11",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "",
+        "subSystem": "Vibration heat lô ép 4 dưới gối ngoài",
+        "measurement": "sensor_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2050,
+        "y": 1720,
+        "wires": [
+            [
+                "b0d05360cb52e20b"
+            ]
+        ]
+    },
+    {
+        "id": "c1e9f8867acfe711",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô ép 4 trên gối trong",
+        "links": [
+            "286a8e964f537744"
+        ],
+        "x": 1815,
+        "y": 1780,
+        "wires": [
+            [
+                "9bc92d732b82fa58"
+            ]
+        ]
+    },
+    {
+        "id": "9bc92d732b82fa58",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô ép 4 trên gối trong",
+        "meterConfig": "adb714bfbd202f11",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "",
+        "subSystem": "Vibration heat lô ép 4 trên gối trong",
+        "measurement": "sensor_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2040,
+        "y": 1780,
+        "wires": [
+            [
+                "b0d05360cb52e20b"
+            ]
+        ]
+    },
+    {
+        "id": "c6d7b6f90d440762",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô ép 4 trên gối ngoài",
+        "links": [
+            "cad438e8a17897ad"
+        ],
+        "x": 1815,
+        "y": 1840,
+        "wires": [
+            [
+                "0cdb89f092514f32"
+            ]
+        ]
+    },
+    {
+        "id": "0cdb89f092514f32",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô ép 4 trên gối ngoài",
+        "meterConfig": "adb714bfbd202f11",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "",
+        "subSystem": "Vibration heat lô ép 4 trên gối ngoài",
+        "measurement": "sensor_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2040,
+        "y": 1840,
+        "wires": [
+            [
+                "b0d05360cb52e20b"
+            ]
+        ]
+    },
+    {
+        "id": "67bc1b5a3b6187d6",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô đá gối trong",
+        "links": [
+            "a54edf201057fb05"
+        ],
+        "x": 1815,
+        "y": 1900,
+        "wires": [
+            [
+                "49cf9aa6d420eccb"
+            ]
+        ]
+    },
+    {
+        "id": "49cf9aa6d420eccb",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô đá gối trong",
+        "meterConfig": "adb714bfbd202f11",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "",
+        "subSystem": "Vibration heat lô đá gối trong",
+        "measurement": "sensor_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2020,
+        "y": 1900,
+        "wires": [
+            [
+                "b0d05360cb52e20b"
+            ]
+        ]
+    },
+    {
+        "id": "3587e71a0b33dfd7",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô đá gối ngoài",
+        "links": [
+            "16ac6d87ea9b39cc"
+        ],
+        "x": 1815,
+        "y": 1960,
+        "wires": [
+            [
+                "d0f23a54b9590adf"
+            ]
+        ]
+    },
+    {
+        "id": "d0f23a54b9590adf",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Vibration heat lô đá gối ngoài",
+        "meterConfig": "adb714bfbd202f11",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "",
+        "subSystem": "Vibration heat lô đá gối ngoài",
+        "measurement": "sensor_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2020,
+        "y": 1960,
+        "wires": [
+            [
+                "b0d05360cb52e20b"
+            ]
+        ]
+    },
+    {
+        "id": "3f81fa0dfe62180e",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô ép 4 dưới gối ngoài",
+        "mode": "link",
+        "links": [
+            "8fd3cc941a280a4a"
+        ],
+        "x": 1375,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "ce518a02b8352ef6",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô ép 4 dưới gối trong",
+        "mode": "link",
+        "links": [
+            "b6de46785890bc4f"
+        ],
+        "x": 1435,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "0bcc0abc0c6ef34f",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô ép 4 trên gối ngoài",
+        "mode": "link",
+        "links": [
+            "b23f02299b718493"
+        ],
+        "x": 1495,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "860a08757c7b3e98",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô ép 4 trên gối trong",
+        "mode": "link",
+        "links": [
+            "11513cf9617e610f"
+        ],
+        "x": 1565,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "3543e8392b901091",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô đá gối ngoài",
+        "mode": "link",
+        "links": [
+            "b584673b43c98c50"
+        ],
+        "x": 1625,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "0f3c9006fd1a7ad9",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô đá gối trong",
+        "mode": "link",
+        "links": [
+            "1df0b304f19bd92e"
+        ],
+        "x": 1685,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "8fd3cc941a280a4a",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô ép 4 dưới gối ngoài",
+        "links": [
+            "3f81fa0dfe62180e"
+        ],
+        "x": 1815,
+        "y": 2040,
+        "wires": [
+            [
+                "b295b822ce8bb88e"
+            ]
+        ]
+    },
+    {
+        "id": "b6de46785890bc4f",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô ép 4 dưới gối trong",
+        "links": [
+            "ce518a02b8352ef6"
+        ],
+        "x": 1815,
+        "y": 2100,
+        "wires": [
+            [
+                "a305f6d9a0f92c46"
+            ]
+        ]
+    },
+    {
+        "id": "b23f02299b718493",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô ép 4 trên gối ngoài",
+        "links": [
+            "0bcc0abc0c6ef34f"
+        ],
+        "x": 1815,
+        "y": 2160,
+        "wires": [
+            [
+                "83aed747a624a680"
+            ]
+        ]
+    },
+    {
+        "id": "11513cf9617e610f",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô ép 4 trên gối trong",
+        "links": [
+            "860a08757c7b3e98"
+        ],
+        "x": 1815,
+        "y": 2220,
+        "wires": [
+            [
+                "bf46eb3d18ab520e"
+            ]
+        ]
+    },
+    {
+        "id": "b584673b43c98c50",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô đá gối ngoài",
+        "links": [
+            "3543e8392b901091"
+        ],
+        "x": 1815,
+        "y": 2280,
+        "wires": [
+            [
+                "4b567b156f92f0d8"
+            ]
+        ]
+    },
+    {
+        "id": "1df0b304f19bd92e",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô đá gối trong",
+        "links": [
+            "0f3c9006fd1a7ad9"
+        ],
+        "x": 1815,
+        "y": 2340,
+        "wires": [
+            [
+                "f6a79ba8bcb2106b"
+            ]
+        ]
+    },
+    {
+        "id": "b295b822ce8bb88e",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô ép 4 dưới gối ngoài",
+        "meterConfig": "25c7414f896c7331",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "Temperature lô ép 4 dưới gối ngoài",
+        "subSystem": "",
+        "measurement": "sensor_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2040,
+        "y": 2040,
+        "wires": [
+            [
+                "b0d05360cb52e20b"
+            ]
+        ]
+    },
+    {
+        "id": "a305f6d9a0f92c46",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô ép 4 dưới gối trong",
+        "meterConfig": "25c7414f896c7331",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "Temperature lô ép 4 dưới gối trong",
+        "subSystem": "",
+        "measurement": "sensor_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2040,
+        "y": 2100,
+        "wires": [
+            [
+                "b0d05360cb52e20b"
+            ]
+        ]
+    },
+    {
+        "id": "83aed747a624a680",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô ép 4 trên gối ngoài",
+        "meterConfig": "25c7414f896c7331",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "Temperature lô ép 4 trên gối ngoài",
+        "subSystem": "",
+        "measurement": "sensor_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2040,
+        "y": 2160,
+        "wires": [
+            [
+                "b0d05360cb52e20b"
+            ]
+        ]
+    },
+    {
+        "id": "bf46eb3d18ab520e",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô ép 4 trên gối trong",
+        "meterConfig": "25c7414f896c7331",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "Temperature lô ép 4 trên gối trong",
+        "subSystem": "",
+        "measurement": "sensor_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2040,
+        "y": 2220,
+        "wires": [
+            [
+                "b0d05360cb52e20b"
+            ]
+        ]
+    },
+    {
+        "id": "4b567b156f92f0d8",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô đá gối ngoài",
+        "meterConfig": "25c7414f896c7331",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "Temperature lô đá gối ngoài",
+        "subSystem": "",
+        "measurement": "sensor_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2020,
+        "y": 2280,
+        "wires": [
+            [
+                "b0d05360cb52e20b"
+            ]
+        ]
+    },
+    {
+        "id": "f6a79ba8bcb2106b",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Temperature lô đá gối trong",
+        "meterConfig": "25c7414f896c7331",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "Temperature lô đá gối trong",
+        "subSystem": "",
+        "measurement": "sensor_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2020,
+        "y": 2340,
+        "wires": [
+            [
+                "b0d05360cb52e20b"
+            ]
+        ]
+    },
+    {
+        "id": "5e2acbe74db0c812",
+        "type": "switch",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "LL-Nuoc-sach-BOT",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 1880,
+        "wires": [
+            [
+                "536738b0341bf195"
+            ]
+        ]
+    },
+    {
+        "id": "2f0f6a497574df96",
+        "type": "switch",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "LL-100-M3",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 1920,
+        "wires": [
+            [
+                "4d68ec760ab73913"
+            ]
+        ]
+    },
+    {
+        "id": "976e3d7c270a6640",
+        "type": "switch",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "LL-Muong-XEO",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 1960,
+        "wires": [
+            [
+                "5fa7a3a663b7437e"
+            ]
+        ]
+    },
+    {
+        "id": "1c0beb0751e3ffa7",
+        "type": "switch",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "LL-Nuoc-giat-men-XEO",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 2000,
+        "wires": [
+            [
+                "aef871d5cb8292e6"
+            ]
+        ]
+    },
+    {
+        "id": "fe1d036e2e85985a",
+        "type": "switch",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "LL-Vi-sinh-Nuoc-Thai",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 2040,
+        "wires": [
+            [
+                "b8b7e5cf3ad9cd38"
+            ]
+        ]
+    },
+    {
+        "id": "536738b0341bf195",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"LL-Nuoc-sach-BOT\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1030,
+        "y": 1880,
+        "wires": [
+            [
+                "c2a56a06c760c6b5"
+            ]
+        ]
+    },
+    {
+        "id": "4d68ec760ab73913",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"LL-100-M3\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1030,
+        "y": 1920,
+        "wires": [
+            [
+                "3d7e209b0f80acc5"
+            ]
+        ]
+    },
+    {
+        "id": "5fa7a3a663b7437e",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"LL-Muong-XEO\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1030,
+        "y": 1960,
+        "wires": [
+            [
+                "d822577406d8809a"
+            ]
+        ]
+    },
+    {
+        "id": "aef871d5cb8292e6",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"LL-Nuoc-giat-men-XEO\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1030,
+        "y": 2000,
+        "wires": [
+            [
+                "786cc4a1ee97fc6b"
+            ]
+        ]
+    },
+    {
+        "id": "b8b7e5cf3ad9cd38",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"LL-Vi-sinh-Nuoc-Thai\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1030,
+        "y": 2040,
+        "wires": [
+            [
+                "b035dae01f32eb21"
+            ]
+        ]
+    },
+    {
+        "id": "98af3615c75112ef",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng nước sạch hệ bột",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"LL-Nuoc-sach-BOT\":[{\"ts\":1783938313000,\"values\":{\"flow_unit\":1,\"cumulative_unit\":1,\"empty_alarm\":0,\"sys_alarm\":0,\"flow\":0,\"velocity\":-11.009,\"flow_percentage\":0,\"fluid_cond_raito\":0,\"int_positive_val\":41562,\"dec_positive_val\":0,\"int_negative_val\":3763,\"dec_negative_val\":0}}]}",
+        "payloadType": "json",
+        "x": 1500,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2a56a06c760c6b5",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước LL-Nuoc-sach-BOT",
+        "mode": "link",
+        "links": [
+            "508f60f583d159f2"
+        ],
+        "x": 1185,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "c4b2427af62583a5",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Yantai WFD",
+        "info": "",
+        "x": 1170,
+        "y": 3100,
+        "wires": []
+    },
+    {
+        "id": "bc66b96a4799de09",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng nước sạch hệ bột",
+        "meterConfig": "3b6d3d84af66aa9b",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "100M3",
+        "subSystem": "Nước LL-Nuoc-sach-BOT",
+        "measurement": "water_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1340,
+        "y": 3160,
+        "wires": [
+            [
+                "e743c0f13230dd3c"
+            ]
+        ]
+    },
+    {
+        "id": "508f60f583d159f2",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước LL-Nuoc-sach-BOT",
+        "links": [
+            "c2a56a06c760c6b5"
+        ],
+        "x": 1125,
+        "y": 3160,
+        "wires": [
+            [
+                "bc66b96a4799de09"
+            ]
+        ]
+    },
+    {
+        "id": "e743c0f13230dd3c",
+        "type": "http request",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1710,
+        "y": 3240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8136a90c4ff23fbc",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng bể 100 m3",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"LL-100-M3\":[{\"ts\":1783951212000,\"values\":{\"flow\":2030.1,\"velocity\":4.308,\"flow_percentage\":145,\"fluid_cond_raito\":1,\"int_positive_val\":179221,\"dec_positive_val\":0,\"int_negative_val\":96,\"dec_negative_val\":0,\"flow_unit\":1,\"cumulative_unit\":1,\"empty_alarm\":0,\"sys_alarm\":0}}]}",
+        "payloadType": "json",
+        "x": 1480,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "683ae48ae6f522ba",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng nước thải hệ xeo",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"ts\":1783952992000,\"values\":{\"flow_unit\":1,\"cumulative_unit\":1,\"empty_alarm\":0,\"sys_alarm\":0,\"flow\":0,\"velocity\":0,\"flow_percentage\":0,\"fluid_cond_raito\":1,\"int_positive_val\":21785,\"dec_positive_val\":0,\"int_negative_val\":48,\"dec_negative_val\":0}}]",
+        "payloadType": "json",
+        "x": 1500,
+        "y": 1960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "78782a7d0c4e496b",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng nước giặt mền hệ xeo",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"ts\":1783953202000,\"values\":{\"flow_unit\":5,\"cumulative_unit\":1,\"empty_alarm\":0,\"sys_alarm\":0,\"flow\":7.57,\"velocity\":1.073,\"flow_percentage\":21.62,\"fluid_cond_raito\":13,\"int_positive_val\":12666,\"dec_positive_val\":0,\"int_negative_val\":5,\"dec_negative_val\":0}}]",
+        "payloadType": "json",
+        "x": 1510,
+        "y": 2000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c6687c0e48edaf7",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng vi sinh nước thải hệ XLNT",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"LL-Vi-sinh-Nuoc-Thai\":[{\"ts\":1783953811000,\"values\":{\"totalForwad\":5681.529,\"totalReverse\":0,\"totalFlow\":5681.529,\"totalizerReset\":0,\"flowRate\":0,\"velocity\":0,\"flow_raito\":0,\"edp-value\":99,\"flowRateUnit\":99,\"EDPAlarm\":3}}]}",
+        "payloadType": "json",
+        "x": 1530,
+        "y": 2040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d7e209b0f80acc5",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng bể 100 m3",
+        "mode": "link",
+        "links": [
+            "451f3c8a3ad3434b"
+        ],
+        "x": 1185,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "451f3c8a3ad3434b",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng bể 100 m3",
+        "links": [
+            "3d7e209b0f80acc5"
+        ],
+        "x": 1125,
+        "y": 3240,
+        "wires": [
+            [
+                "ee22cbe03f13758c"
+            ]
+        ]
+    },
+    {
+        "id": "ee22cbe03f13758c",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng bể 100 m3",
+        "meterConfig": "3b6d3d84af66aa9b",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "",
+        "subSystem": "Lưu lượng bể 100 m3",
+        "measurement": "water_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1320,
+        "y": 3240,
+        "wires": [
+            [
+                "e743c0f13230dd3c"
+            ]
+        ]
+    },
+    {
+        "id": "d822577406d8809a",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng nước thải hệ xeo",
+        "mode": "link",
+        "links": [
+            "f2d32ee751abf1eb"
+        ],
+        "x": 1185,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "f2d32ee751abf1eb",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng nước thải hệ xeo",
+        "links": [
+            "d822577406d8809a"
+        ],
+        "x": 1125,
+        "y": 3300,
+        "wires": [
+            [
+                "22a89d745b8a86b6"
+            ]
+        ]
+    },
+    {
+        "id": "22a89d745b8a86b6",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng nước thải hệ xeo",
+        "meterConfig": "3b6d3d84af66aa9b",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "100M3",
+        "subSystem": "Lưu lượng nước thải hệ xeo",
+        "measurement": "water_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1340,
+        "y": 3300,
+        "wires": [
+            [
+                "e743c0f13230dd3c"
+            ]
+        ]
+    },
+    {
+        "id": "786cc4a1ee97fc6b",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng nước giặt mền hệ xeo",
+        "mode": "link",
+        "links": [
+            "b4040f85c90485ba"
+        ],
+        "x": 1185,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "b4040f85c90485ba",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng nước giặt mền hệ xeo",
+        "links": [
+            "786cc4a1ee97fc6b"
+        ],
+        "x": 1125,
+        "y": 3360,
+        "wires": [
+            [
+                "024693cc3864fadc"
+            ]
+        ]
+    },
+    {
+        "id": "024693cc3864fadc",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng nước giặt mền hệ xeo",
+        "meterConfig": "3b6d3d84af66aa9b",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "100M3",
+        "subSystem": "Lưu lượng nước giặt mền hệ xeo",
+        "measurement": "water_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1360,
+        "y": 3360,
+        "wires": [
+            [
+                "e743c0f13230dd3c"
+            ]
+        ]
+    },
+    {
+        "id": "b035dae01f32eb21",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng vi sinh nước thải hệ XLNT",
+        "mode": "link",
+        "links": [
+            "6fc387fb0c3f58a2"
+        ],
+        "x": 1185,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "6fc387fb0c3f58a2",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "link in 3",
+        "links": [
+            "b035dae01f32eb21"
+        ],
+        "x": 1125,
+        "y": 3420,
+        "wires": [
+            [
+                "4a7ad0b04bf9731c"
+            ]
+        ]
+    },
+    {
+        "id": "4a7ad0b04bf9731c",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng vi sinh nước thải hệ XLNT",
+        "meterConfig": "28d20b27f093d79b",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "100M3",
+        "subSystem": "Lưu lượng vi sinh nước thải hệ XLNT",
+        "measurement": "water_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1370,
+        "y": 3420,
+        "wires": [
+            [
+                "e743c0f13230dd3c"
+            ]
+        ]
+    },
+    {
+        "id": "681dccfd531e93eb",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "DTLA RSX 6",
+        "mode": "link",
+        "links": [
+            "06726c439916b9de"
+        ],
+        "x": 775,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "dba76f4d8132268e",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "DTLA RSX 7",
+        "mode": "link",
+        "links": [
+            "c78104c78de8fa56"
+        ],
+        "x": 775,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "06726c439916b9de",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "DTLA RSX 6",
+        "links": [
+            "681dccfd531e93eb"
+        ],
+        "x": 865,
+        "y": 2100,
+        "wires": [
+            [
+                "288c03417a98fe76"
+            ]
+        ]
+    },
+    {
+        "id": "c78104c78de8fa56",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "DTLA RSX 7",
+        "links": [
+            "dba76f4d8132268e"
+        ],
+        "x": 865,
+        "y": 2160,
+        "wires": [
+            [
+                "4c3428489c6caba7"
+            ]
+        ]
+    },
+    {
+        "id": "288c03417a98fe76",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"MAY_NEN_KHI_SO_2_HE_XEO\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 970,
+        "y": 2100,
+        "wires": [
+            [
+                "2070237fa303ca71"
+            ]
+        ]
+    },
+    {
+        "id": "4c3428489c6caba7",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"MAY_NEN_KHI_SO_1_HE_XEO\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 970,
+        "y": 2160,
+        "wires": [
+            [
+                "603e80e839974a2c"
+            ]
+        ]
+    },
+    {
+        "id": "0d06b115e7eaf6a7",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "MAY_NEN_KHI_SO_1_HE_XEO",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"MAY_NEN_KHI_SO_1_HE_XEO\":[{\"ts\":1784100735000,\"values\":{\"Ua\":2256506,\"Ub\":2263248,\"Uc\":2275625,\"ULNavg\":2265126,\"ULNubn\":84,\"Uab\":3914223,\"Ubc\":3930784,\"Uca\":3924952,\"ULLavg\":3923319,\"Zero-Seq-Vol\":0,\"ULLubn\":0,\"Ia\":1101520,\"Ib\":1092240,\"Ic\":1080720,\"Iavg\":1091493,\"Zero-Seq-Cur\":0,\"Iubn\":188,\"Pa\":203200,\"Pb\":200320,\"Pc\":210080,\"Pt\":612360,\"Qa\":-143080,\"Qb\":-139440,\"Qc\":-127800,\"Qt\":-408720,\"Sa\":248520,\"Sb\":248920,\"Sc\":247200,\"St\":744640,\"PFa\":817,\"PFb\":806,\"PFc\":847,\"PFt\":823,\"Freq\":4993,\"ImpEp-1\":171645,\"ExpEp-1\":0,\"ImpEq-1\":54,\"ExpEq-1\":130130,\"ImpEp\":6865800,\"ExpEp\":0,\"ImpEq\":2160,\"ExpEq\":5205200}}]}",
+        "payloadType": "json",
+        "x": 1490,
+        "y": 2160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9b466ff0b6f5ac5",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "MAY_NEN_KHI_SO_2_HE_XEO",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"MAY_NEN_KHI_SO_2_HE_XEO\":[{\"ts\":1784100881000,\"values\":{\"Uab\":3910216,\"Ubc\":3924074,\"Uca\":3920718,\"ULLavg\":3918336,\"Zero-Seq-Vol\":0,\"ULLubn\":0,\"Ia\":518400,\"Ib\":531200,\"Ic\":509840,\"Iavg\":521680,\"Zero-Seq-Cur\":0,\"Iubn\":290,\"Pa\":73200,\"Pb\":73480,\"Pc\":75760,\"Pt\":222440,\"Qa\":-91360,\"Qb\":-95120,\"Qc\":-87840,\"Qt\":-274320,\"Sa\":117200,\"Sb\":118040,\"Sc\":116000,\"St\":353280,\"PFa\":621,\"PFb\":621,\"PFc\":653,\"PFt\":629,\"Freq\":5001,\"ImpEp-1\":103064,\"ExpEp-1\":14,\"ImpEq-1\":32382,\"ExpEq-1\":3498,\"ImpEp\":4122560,\"ExpEp\":560,\"ImpEq\":1295280,\"ExpEq\":139920,\"Ua\":2252016,\"Ub\":2259504,\"Uc\":2271621,\"ULNavg\":2262250,\"ULNubn\":70}}]}",
+        "payloadType": "json",
+        "x": 1490,
+        "y": 2100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "603e80e839974a2c",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "MAY_NEN_KHI_SO_1_HE_XEO",
+        "mode": "link",
+        "links": [
+            "3eab282e72ae2cb0"
+        ],
+        "x": 1135,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "2070237fa303ca71",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "MAY_NEN_KHI_SO_2_HE_XEO",
+        "mode": "link",
+        "links": [
+            "3831c9730b0e5656"
+        ],
+        "x": 1135,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "af324a75defce8e3",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Máy Nén Khí 02 Hệ XEO",
+        "meterConfig": "578d22bf66e35f57",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "3000KVA",
+        "parentSystem": "MCC XEO",
+        "subSystem": "Máy Nén Khí 02 Hệ XEO",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1310,
+        "y": 2940,
+        "wires": [
+            [
+                "ab4834eea6938d30"
+            ]
+        ]
+    },
+    {
+        "id": "2ecfeb1308f2045f",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Máy Nén Khí 01 Hệ XEO",
+        "meterConfig": "578d22bf66e35f57",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "3000KVA",
+        "parentSystem": "MCC XEO",
+        "subSystem": "Máy Nén Khí 01 Hệ XEO",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1310,
+        "y": 3000,
+        "wires": [
+            [
+                "ab4834eea6938d30"
+            ]
+        ]
+    },
+    {
+        "id": "3831c9730b0e5656",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "MAY_NEN_KHI_SO_2_HE_XEO",
+        "links": [
+            "2070237fa303ca71"
+        ],
+        "x": 1125,
+        "y": 2940,
+        "wires": [
+            [
+                "af324a75defce8e3"
+            ]
+        ]
+    },
+    {
+        "id": "3eab282e72ae2cb0",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "MAY_NEN_KHI_SO_1_HE_XEO",
+        "links": [
+            "603e80e839974a2c"
+        ],
+        "x": 1125,
+        "y": 3000,
+        "wires": [
+            [
+                "2ecfeb1308f2045f"
+            ]
+        ]
     },
     {
         "id": "51f705db47c816b7",
