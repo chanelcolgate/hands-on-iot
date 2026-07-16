@@ -72,3 +72,31 @@ Use Provisioning + GitHub for Grafana:
 2. Save as copy at Dashboard
 3. Commit to GitHub
 4. Grafana auto pull dashboard in provisioning
+
+## Restart Container
+```bash
+npm install -g pm2
+chmod + x restart_container.sh
+pm2 start restart_container.sh \
+  --interpreter bash \
+  --name restart-container \
+  --cron "0 6 * * *" \
+  --no-autorestart
+pm2 save
+pm2 startup
+pm2 save
+pm2 logs
+```
+
+- Permission docker
+```bash
+whoami\ngroups
+sudo usermod -aG docker mind
+newgrp docker
+```
+
+- kill
+
+```bash
+pm2 kill
+```
