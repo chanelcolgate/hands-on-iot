@@ -405,12 +405,24 @@
                 "name": "pressure_out_21"
             },
             {
+                "addr": "DB700,R268",
+                "name": "r_flow_actual_21"
+            },
+            {
+                "addr": "DB700,R276",
+                "name": "r_speed_actual_21"
+            },
+            {
                 "addr": "DB700,R36",
                 "name": "flow_meter_22"
             },
             {
                 "addr": "DB700,R40",
                 "name": "pressure_in_22"
+            },
+            {
+                "addr": "DB700,R244",
+                "name": "r_level_actual_22"
             },
             {
                 "addr": "DB700,R44",
@@ -445,12 +457,24 @@
                 "name": "pressure_out_26"
             },
             {
+                "addr": "DB700,R264",
+                "name": "r_flow_actual_26"
+            },
+            {
+                "addr": "DB700,R272",
+                "name": "r_speed_actual_26"
+            },
+            {
                 "addr": "DB700,R76",
                 "name": "flow_meter_27"
             },
             {
                 "addr": "DB700,R80",
                 "name": "pressure_in_27"
+            },
+            {
+                "addr": "DB700,R240",
+                "name": "r_level_actual_27"
             },
             {
                 "addr": "DB700,R84",
@@ -483,6 +507,154 @@
             {
                 "addr": "DB700,R112",
                 "name": "pressure_out_31"
+            },
+            {
+                "addr": "DB700,R120",
+                "name": "r_flow_actual_32"
+            },
+            {
+                "addr": "DB700,R124",
+                "name": "r_pressure_actual_32"
+            },
+            {
+                "addr": "DB700,R128",
+                "name": "r_pressure_fs_vaccum_33"
+            },
+            {
+                "addr": "DB700,R132",
+                "name": "r_pressure_ms_vaccum_33"
+            },
+            {
+                "addr": "DB700,R136",
+                "name": "r_variation_fs_vaccum_33"
+            },
+            {
+                "addr": "DB700,R140",
+                "name": "r_variation_ms_vaccum_33"
+            },
+            {
+                "addr": "DB700,R144",
+                "name": "r_pressure_oil_vaccum_33"
+            },
+            {
+                "addr": "DB700,R148",
+                "name": "r_delta_pressure_oil_vaccum_33"
+            },
+            {
+                "addr": "DB700,R152",
+                "name": "r_current_vaccum_33"
+            },
+            {
+                "addr": "DB700,R208",
+                "name": "r_freq_vaccum_33"
+            },
+            {
+                "addr": "DB700,R220",
+                "name": "r_temp_oil_vaccum_33"
+            },
+            {
+                "addr": "DB700,R168",
+                "name": "r_pressure_fs_vaccum_34"
+            },
+            {
+                "addr": "DB700,R172",
+                "name": "r_pressure_ms_vaccum_34"
+            },
+            {
+                "addr": "DB700,R156",
+                "name": "r_variation_fs_vaccum_34"
+            },
+            {
+                "addr": "DB700,R160",
+                "name": "r_variation_ms_vaccum_34"
+            },
+            {
+                "addr": "DB700,R176",
+                "name": "r_pressure_oil_vaccum_34"
+            },
+            {
+                "addr": "DB700,R180",
+                "name": "r_delta_pressure_oil_vaccum_34"
+            },
+            {
+                "addr": "DB700,R164",
+                "name": "r_current_vaccum_34"
+            },
+            {
+                "addr": "DB700,R212",
+                "name": "r_freq_vaccum_34"
+            },
+            {
+                "addr": "DB700,R224",
+                "name": "r_temp_oil_vaccum_34"
+            },
+            {
+                "addr": "DB700,R196",
+                "name": "r_pressure_fs_vaccum_35"
+            },
+            {
+                "addr": "DB700,R184",
+                "name": "r_variation_fs_vaccum_35"
+            },
+            {
+                "addr": "DB700,R188",
+                "name": "r_variation_ms_vaccum_35"
+            },
+            {
+                "addr": "DB700,R200",
+                "name": "r_pressure_oil_vaccum_35"
+            },
+            {
+                "addr": "DB700,R204",
+                "name": "r_delta_pressure_oil_vaccum_35"
+            },
+            {
+                "addr": "DB700,R192",
+                "name": "r_current_vaccum_35"
+            },
+            {
+                "addr": "DB700,R216",
+                "name": "r_freq_vaccum_35"
+            },
+            {
+                "addr": "DB700,R228",
+                "name": "r_temp_oil_vaccum_35"
+            },
+            {
+                "addr": "DB700,R280",
+                "name": "r_pressure_actual_36"
+            },
+            {
+                "addr": "DB700,R288",
+                "name": "r_temp_actual_36"
+            },
+            {
+                "addr": "DB700,R284",
+                "name": "r_pressure_actual_37"
+            },
+            {
+                "addr": "DB700,R292",
+                "name": "r_temp_actual_37"
+            },
+            {
+                "addr": "DB700,R248",
+                "name": "r_speed_wire_38"
+            },
+            {
+                "addr": "DB700,R252",
+                "name": "r_speed_reel_38"
+            },
+            {
+                "addr": "DB700,R296",
+                "name": "r_basic_weight_38"
+            },
+            {
+                "addr": "DB700,R300",
+                "name": "r_moisture_38"
+            },
+            {
+                "addr": "DB700,X320.0",
+                "name": "b_paper_break_38"
             }
         ]
     },
@@ -1918,7 +2090,7 @@
         "type": "function",
         "z": "0d323cbb2919aca8",
         "name": "convert from time to shift",
-        "func": "let shift = \"Ca 1\";\n\nif (msg.payload >= 6 && msg.payload < 14) {\n    shift = \"Ca 1\";\n} else if (msg.payload >= 14 && msg.payload < 22) {\n    shift = \"Ca 2\";\n} else {\n    shift = \"Ca 3\";\n}\n\nglobal.set(\"shift\", shift);\nreturn msg;",
+        "func": "let shift = \"Ca 1\";\n\nif (msg.payload >= 7 && msg.payload < 19) {\n    shift = \"Ca 1\";\n} else {\n    shift = \"Ca 2\";\n}\n\nglobal.set(\"shift\", shift);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7320,8 +7492,8 @@
         "z": "62bd0f5f977b002a",
         "name": "Áp suất vào",
         "info": "",
-        "x": 150,
-        "y": 2180,
+        "x": 1130,
+        "y": 1920,
         "wires": []
     },
     {
@@ -7333,8 +7505,8 @@
         "variable": "pressure_in_21",
         "diff": false,
         "name": "",
-        "x": 160,
-        "y": 2240,
+        "x": 1140,
+        "y": 1980,
         "wires": [
             [
                 "03778920d3d57d03"
@@ -7353,8 +7525,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 570,
-        "y": 2240,
+        "x": 1550,
+        "y": 1980,
         "wires": [
             [
                 "3ecef8b092b7f1cf"
@@ -7375,8 +7547,8 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 780,
-        "y": 2240,
+        "x": 1760,
+        "y": 1980,
         "wires": []
     },
     {
@@ -7385,8 +7557,8 @@
         "z": "62bd0f5f977b002a",
         "name": "Áp suất ra",
         "info": "",
-        "x": 140,
-        "y": 2300,
+        "x": 1120,
+        "y": 2040,
         "wires": []
     },
     {
@@ -7398,8 +7570,8 @@
         "variable": "pressure_out_21",
         "diff": false,
         "name": "",
-        "x": 160,
-        "y": 2360,
+        "x": 1140,
+        "y": 2100,
         "wires": [
             [
                 "8f72ad0e01bdf137"
@@ -7418,8 +7590,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 2360,
+        "x": 1590,
+        "y": 2100,
         "wires": [
             [
                 "4b1f10411691ba03"
@@ -7440,8 +7612,8 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 820,
-        "y": 2360,
+        "x": 1800,
+        "y": 2100,
         "wires": []
     },
     {
@@ -7450,8 +7622,8 @@
         "z": "62bd0f5f977b002a",
         "name": "Stage BL Headbox Screen",
         "info": "",
-        "x": 370,
-        "y": 2180,
+        "x": 1350,
+        "y": 1920,
         "wires": []
     },
     {
@@ -7459,8 +7631,8 @@
         "type": "subflow:c95363a80fce05eb",
         "z": "62bd0f5f977b002a",
         "name": "",
-        "x": 380,
-        "y": 2240,
+        "x": 1360,
+        "y": 1980,
         "wires": [
             [
                 "a904810aef767517"
@@ -7472,8 +7644,8 @@
         "type": "subflow:c95363a80fce05eb",
         "z": "62bd0f5f977b002a",
         "name": "",
-        "x": 380,
-        "y": 2360,
+        "x": 1360,
+        "y": 2100,
         "wires": [
             [
                 "a78fd7167580be3b"
@@ -7617,7 +7789,7 @@
         "name": "Lưu lượng TL",
         "info": "",
         "x": 1270,
-        "y": 280,
+        "y": 440,
         "wires": []
     },
     {
@@ -7630,7 +7802,7 @@
         "diff": false,
         "name": "",
         "x": 1280,
-        "y": 340,
+        "y": 500,
         "wires": [
             [
                 "fef9b69fc75eebdf"
@@ -7650,7 +7822,7 @@
         "finalize": "",
         "libs": [],
         "x": 1690,
-        "y": 340,
+        "y": 500,
         "wires": [
             [
                 "8e98c5ccc4d0c59c"
@@ -7672,7 +7844,7 @@
         "org": "organisation",
         "bucket": "bucket",
         "x": 1900,
-        "y": 340,
+        "y": 500,
         "wires": []
     },
     {
@@ -7682,7 +7854,7 @@
         "name": "Áp suất ra TL",
         "info": "",
         "x": 1270,
-        "y": 400,
+        "y": 560,
         "wires": []
     },
     {
@@ -7695,7 +7867,7 @@
         "diff": false,
         "name": "",
         "x": 1280,
-        "y": 460,
+        "y": 620,
         "wires": [
             [
                 "fd4b7b940aeeeb22"
@@ -7715,7 +7887,7 @@
         "finalize": "",
         "libs": [],
         "x": 1710,
-        "y": 460,
+        "y": 620,
         "wires": [
             [
                 "676d90a807d62ed7"
@@ -7737,7 +7909,7 @@
         "org": "organisation",
         "bucket": "bucket",
         "x": 1920,
-        "y": 460,
+        "y": 620,
         "wires": []
     },
     {
@@ -7772,7 +7944,7 @@
         "z": "62bd0f5f977b002a",
         "name": "",
         "x": 1500,
-        "y": 340,
+        "y": 500,
         "wires": [
             [
                 "45fb0c422f8ea819"
@@ -7785,7 +7957,7 @@
         "z": "62bd0f5f977b002a",
         "name": "",
         "x": 1500,
-        "y": 460,
+        "y": 620,
         "wires": [
             [
                 "013d13ce2fe03efd"
@@ -7964,7 +8136,7 @@
         "z": "62bd0f5f977b002a",
         "name": "Áp suất vào",
         "info": "",
-        "x": 150,
+        "x": 1130,
         "y": 2680,
         "wires": []
     },
@@ -7977,7 +8149,7 @@
         "variable": "pressure_in_26",
         "diff": false,
         "name": "",
-        "x": 160,
+        "x": 1140,
         "y": 2740,
         "wires": [
             [
@@ -7997,7 +8169,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
+        "x": 1610,
         "y": 2740,
         "wires": [
             [
@@ -8019,7 +8191,7 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 840,
+        "x": 1820,
         "y": 2740,
         "wires": []
     },
@@ -8029,7 +8201,7 @@
         "z": "62bd0f5f977b002a",
         "name": "Stage TL Headbox Screen",
         "info": "",
-        "x": 410,
+        "x": 1390,
         "y": 2680,
         "wires": []
     },
@@ -8039,7 +8211,7 @@
         "z": "62bd0f5f977b002a",
         "name": "Áp suất ra",
         "info": "",
-        "x": 140,
+        "x": 1120,
         "y": 2800,
         "wires": []
     },
@@ -8049,10 +8221,10 @@
         "z": "62bd0f5f977b002a",
         "endpoint": "f51cf276bed06857",
         "mode": "single",
-        "variable": "pressure_out_23",
+        "variable": "pressure_out_26",
         "diff": false,
         "name": "",
-        "x": 160,
+        "x": 1140,
         "y": 2860,
         "wires": [
             [
@@ -8072,7 +8244,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
+        "x": 1610,
         "y": 2860,
         "wires": [
             [
@@ -8094,7 +8266,7 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 840,
+        "x": 1820,
         "y": 2860,
         "wires": []
     },
@@ -8103,7 +8275,7 @@
         "type": "subflow:c95363a80fce05eb",
         "z": "62bd0f5f977b002a",
         "name": "",
-        "x": 400,
+        "x": 1380,
         "y": 2740,
         "wires": [
             [
@@ -8116,7 +8288,7 @@
         "type": "subflow:c95363a80fce05eb",
         "z": "62bd0f5f977b002a",
         "name": "",
-        "x": 400,
+        "x": 1380,
         "y": 2860,
         "wires": [
             [
@@ -8759,6 +8931,3023 @@
         ]
     },
     {
+        "id": "1e211136bc530631",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Hơi",
+        "info": "",
+        "x": 130,
+        "y": 3920,
+        "wires": []
+    },
+    {
+        "id": "f217f85eebecb51f",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_flow_actual_32",
+        "diff": false,
+        "name": "",
+        "x": 160,
+        "y": 3980,
+        "wires": [
+            [
+                "4d8a1c72b1363048"
+            ]
+        ]
+    },
+    {
+        "id": "dce0e01daf3cfde0",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        flow_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Air\",\n        machine: \"Lưu lượng hơi tổng\",\n        device: \"Lưu lượng\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 3980,
+        "wires": [
+            [
+                "c2c10be44dd94ae5"
+            ]
+        ]
+    },
+    {
+        "id": "c2c10be44dd94ae5",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 780,
+        "y": 3980,
+        "wires": []
+    },
+    {
+        "id": "4d8a1c72b1363048",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 360,
+        "y": 3980,
+        "wires": [
+            [
+                "dce0e01daf3cfde0"
+            ]
+        ]
+    },
+    {
+        "id": "2a819fd7fd4dd7c5",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Áp suất hơi tổng",
+        "info": "",
+        "x": 160,
+        "y": 4060,
+        "wires": []
+    },
+    {
+        "id": "5e385c0b10211c50",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_pressure_actual_32",
+        "diff": false,
+        "name": "",
+        "x": 180,
+        "y": 4120,
+        "wires": [
+            [
+                "5d2bd9e21a047a03"
+            ]
+        ]
+    },
+    {
+        "id": "499c9c6f6b7a8a79",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        pressure_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Air\",\n        machine: \"Áp suất hơi tổng\",\n        device: \"Áp suất\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 4120,
+        "wires": [
+            [
+                "c116a028e6e420a5"
+            ]
+        ]
+    },
+    {
+        "id": "c116a028e6e420a5",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 820,
+        "y": 4120,
+        "wires": []
+    },
+    {
+        "id": "5d2bd9e21a047a03",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 400,
+        "y": 4120,
+        "wires": [
+            [
+                "499c9c6f6b7a8a79"
+            ]
+        ]
+    },
+    {
+        "id": "aa9d6422a6897db9",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Lưu lượng hơi tổng",
+        "info": "",
+        "x": 370,
+        "y": 3920,
+        "wires": []
+    },
+    {
+        "id": "a4bc15f621c974b6",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Chân không",
+        "info": "",
+        "x": 150,
+        "y": 4200,
+        "wires": []
+    },
+    {
+        "id": "3a637f6d2ba03c2c",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_pressure_fs_vaccum_33",
+        "diff": false,
+        "name": "",
+        "x": 190,
+        "y": 4260,
+        "wires": [
+            [
+                "470ba842805f1e37"
+            ]
+        ]
+    },
+    {
+        "id": "b3e3190e44f521df",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        pressure: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 1\",\n        device: \"Áp suất đầu vào bên tự do máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 4260,
+        "wires": [
+            [
+                "327081504149d58c"
+            ]
+        ]
+    },
+    {
+        "id": "327081504149d58c",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 960,
+        "y": 4700,
+        "wires": []
+    },
+    {
+        "id": "470ba842805f1e37",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 400,
+        "y": 4260,
+        "wires": [
+            [
+                "b3e3190e44f521df"
+            ]
+        ]
+    },
+    {
+        "id": "2a950620944e1a1b",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Chân không 1",
+        "info": "",
+        "x": 350,
+        "y": 4200,
+        "wires": []
+    },
+    {
+        "id": "56929e674b8b7e4e",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Áp suất đầu vào bên tự do máy chính",
+        "info": "",
+        "x": 610,
+        "y": 4200,
+        "wires": []
+    },
+    {
+        "id": "deb7d466201c44b4",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Áp suất đầu vào bên động cơ máy chính",
+        "info": "",
+        "x": 240,
+        "y": 4300,
+        "wires": []
+    },
+    {
+        "id": "d12d202b1f4073ae",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_pressure_ms_vaccum_33",
+        "diff": false,
+        "name": "",
+        "x": 200,
+        "y": 4360,
+        "wires": [
+            [
+                "d3c96f2970a3be29"
+            ]
+        ]
+    },
+    {
+        "id": "d3c96f2970a3be29",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 440,
+        "y": 4360,
+        "wires": [
+            [
+                "66a3bad1f1d91d17"
+            ]
+        ]
+    },
+    {
+        "id": "66a3bad1f1d91d17",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        pressure: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 1\",\n        device: \"Áp suất đầu vào bên động cơ máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 4360,
+        "wires": [
+            [
+                "327081504149d58c"
+            ]
+        ]
+    },
+    {
+        "id": "2f020df4591a9017",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Rung bên tự do hộp tăng tốc máy chính",
+        "info": "",
+        "x": 230,
+        "y": 4420,
+        "wires": []
+    },
+    {
+        "id": "25aefe8de9cc058c",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_variation_fs_vaccum_33",
+        "diff": false,
+        "name": "",
+        "x": 190,
+        "y": 4480,
+        "wires": [
+            [
+                "a4ace6243a783499"
+            ]
+        ]
+    },
+    {
+        "id": "a4ace6243a783499",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 440,
+        "y": 4480,
+        "wires": [
+            [
+                "a8a976dc4592bde5"
+            ]
+        ]
+    },
+    {
+        "id": "a8a976dc4592bde5",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        variation: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 1\",\n        device: \"Rung bên tự do hộp tăng tốc máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 4480,
+        "wires": [
+            [
+                "327081504149d58c"
+            ]
+        ]
+    },
+    {
+        "id": "105ef84e628c2aa4",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Rung bên động cơ hộp tăng tốc máy chính",
+        "info": "",
+        "x": 240,
+        "y": 4540,
+        "wires": []
+    },
+    {
+        "id": "6ba0b259255443d7",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_variation_ms_vaccum_33",
+        "diff": false,
+        "name": "",
+        "x": 200,
+        "y": 4600,
+        "wires": [
+            [
+                "3ca02536584ad559"
+            ]
+        ]
+    },
+    {
+        "id": "3ca02536584ad559",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 440,
+        "y": 4600,
+        "wires": [
+            [
+                "102ee3a9491e3975"
+            ]
+        ]
+    },
+    {
+        "id": "102ee3a9491e3975",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        variation: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 1\",\n        device: \"Rung bên động cơ hộp tăng tốc máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 4600,
+        "wires": [
+            [
+                "327081504149d58c"
+            ]
+        ]
+    },
+    {
+        "id": "49e0410ef2f7ebfe",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Áp suất dầu bôi trơn máy chính",
+        "info": "",
+        "x": 210,
+        "y": 4660,
+        "wires": []
+    },
+    {
+        "id": "656038830c767f27",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_pressure_oil_vaccum_33",
+        "diff": false,
+        "name": "",
+        "x": 190,
+        "y": 4720,
+        "wires": [
+            [
+                "5208f83d364d8976"
+            ]
+        ]
+    },
+    {
+        "id": "5208f83d364d8976",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 440,
+        "y": 4720,
+        "wires": [
+            [
+                "549b1b2cb7c21feb"
+            ]
+        ]
+    },
+    {
+        "id": "549b1b2cb7c21feb",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        pressure: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 1\",\n        device: \"Áp suất dầu bôi trơn máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 4720,
+        "wires": [
+            [
+                "327081504149d58c"
+            ]
+        ]
+    },
+    {
+        "id": "17725a682e2463cb",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Chênh áp dầu bôi trơn máy chính",
+        "info": "",
+        "x": 210,
+        "y": 4780,
+        "wires": []
+    },
+    {
+        "id": "2a8d1709d03bbd88",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_delta_pressure_oil_vaccum_33",
+        "diff": false,
+        "name": "",
+        "x": 210,
+        "y": 4840,
+        "wires": [
+            [
+                "f020b3b7e4eb86c7"
+            ]
+        ]
+    },
+    {
+        "id": "f020b3b7e4eb86c7",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 460,
+        "y": 4840,
+        "wires": [
+            [
+                "5d68aa24fe865647"
+            ]
+        ]
+    },
+    {
+        "id": "5d68aa24fe865647",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        delta_pressure: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 1\",\n        device: \"Chênh áp dầu bôi trơn máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 4840,
+        "wires": [
+            [
+                "327081504149d58c"
+            ]
+        ]
+    },
+    {
+        "id": "1c254dd4845f4517",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Dòng điện bơm chân không tuabin máy chính",
+        "info": "",
+        "x": 250,
+        "y": 4900,
+        "wires": []
+    },
+    {
+        "id": "880f8354f9143e12",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_current_vaccum_33",
+        "diff": false,
+        "name": "",
+        "x": 180,
+        "y": 4960,
+        "wires": [
+            [
+                "953d6e45614ecea0"
+            ]
+        ]
+    },
+    {
+        "id": "953d6e45614ecea0",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 460,
+        "y": 4960,
+        "wires": [
+            [
+                "b6d1d0bccda29bd7"
+            ]
+        ]
+    },
+    {
+        "id": "b6d1d0bccda29bd7",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        current: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 1\",\n        device: \"Dòng điện bơm chân không tuabin máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 4960,
+        "wires": [
+            [
+                "327081504149d58c"
+            ]
+        ]
+    },
+    {
+        "id": "f26822d2c0f6db9e",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Tần suất bơm chân không tuabin máy chính",
+        "info": "",
+        "x": 250,
+        "y": 5020,
+        "wires": []
+    },
+    {
+        "id": "979d37dff5e68116",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_freq_vaccum_33",
+        "diff": false,
+        "name": "",
+        "x": 170,
+        "y": 5080,
+        "wires": [
+            [
+                "8058d42a88e7b992"
+            ]
+        ]
+    },
+    {
+        "id": "8058d42a88e7b992",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 460,
+        "y": 5080,
+        "wires": [
+            [
+                "bcd50b286859f988"
+            ]
+        ]
+    },
+    {
+        "id": "bcd50b286859f988",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        freq: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 1\",\n        device: \"Tần suất bơm chân không tuabin máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 5080,
+        "wires": [
+            [
+                "327081504149d58c"
+            ]
+        ]
+    },
+    {
+        "id": "c38a56a9d76802da",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Nhiệt độ dầu bôi trơn máy chính",
+        "info": "",
+        "x": 210,
+        "y": 5140,
+        "wires": []
+    },
+    {
+        "id": "059b9a7273e33e94",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_temp_oil_vaccum_33",
+        "diff": false,
+        "name": "",
+        "x": 180,
+        "y": 5200,
+        "wires": [
+            [
+                "bd1c68722b203127"
+            ]
+        ]
+    },
+    {
+        "id": "bd1c68722b203127",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 460,
+        "y": 5200,
+        "wires": [
+            [
+                "4126868001834783"
+            ]
+        ]
+    },
+    {
+        "id": "4126868001834783",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        temp_oil: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 1\",\n        device: \"Nhiệt độ dầu bôi trơn máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 5200,
+        "wires": [
+            [
+                "327081504149d58c"
+            ]
+        ]
+    },
+    {
+        "id": "09c9fe9aa671e2d9",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Chân không",
+        "info": "",
+        "x": 1210,
+        "y": 4200,
+        "wires": []
+    },
+    {
+        "id": "03a537d075611121",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_pressure_fs_vaccum_34",
+        "diff": false,
+        "name": "",
+        "x": 1250,
+        "y": 4260,
+        "wires": [
+            [
+                "533e6bfc98b6afae"
+            ]
+        ]
+    },
+    {
+        "id": "ba4ab33be8fbf7d1",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        pressure: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 2\",\n        device: \"Áp suất đầu vào bên tự do máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 4260,
+        "wires": [
+            [
+                "4c7cf2b05f7406d1"
+            ]
+        ]
+    },
+    {
+        "id": "4c7cf2b05f7406d1",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 2020,
+        "y": 4700,
+        "wires": []
+    },
+    {
+        "id": "533e6bfc98b6afae",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1460,
+        "y": 4260,
+        "wires": [
+            [
+                "ba4ab33be8fbf7d1"
+            ]
+        ]
+    },
+    {
+        "id": "f1904d3e748919b3",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Chân không 2",
+        "info": "",
+        "x": 1410,
+        "y": 4200,
+        "wires": []
+    },
+    {
+        "id": "493f2cffc1c6288e",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Áp suất đầu vào bên tự do máy chính",
+        "info": "",
+        "x": 1670,
+        "y": 4200,
+        "wires": []
+    },
+    {
+        "id": "8b0693945d325bff",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Áp suất đầu vào bên động cơ máy chính",
+        "info": "",
+        "x": 1300,
+        "y": 4300,
+        "wires": []
+    },
+    {
+        "id": "e58ea31ec773aaba",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_pressure_ms_vaccum_34",
+        "diff": false,
+        "name": "",
+        "x": 1260,
+        "y": 4360,
+        "wires": [
+            [
+                "2012cc1fd1e7fb71"
+            ]
+        ]
+    },
+    {
+        "id": "2012cc1fd1e7fb71",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1500,
+        "y": 4360,
+        "wires": [
+            [
+                "e60466f8e6774453"
+            ]
+        ]
+    },
+    {
+        "id": "e60466f8e6774453",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        pressure: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 2\",\n        device: \"Áp suất đầu vào bên động cơ máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 4360,
+        "wires": [
+            [
+                "4c7cf2b05f7406d1"
+            ]
+        ]
+    },
+    {
+        "id": "b39d5092cde80193",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Rung bên tự do hộp tăng tốc máy chính",
+        "info": "",
+        "x": 1290,
+        "y": 4420,
+        "wires": []
+    },
+    {
+        "id": "a7465e95530705c2",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_variation_fs_vaccum_34",
+        "diff": false,
+        "name": "",
+        "x": 1250,
+        "y": 4480,
+        "wires": [
+            [
+                "b1cfb4227ad78225"
+            ]
+        ]
+    },
+    {
+        "id": "b1cfb4227ad78225",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1500,
+        "y": 4480,
+        "wires": [
+            [
+                "082b93103bd82c99"
+            ]
+        ]
+    },
+    {
+        "id": "082b93103bd82c99",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        variation: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 2\",\n        device: \"Rung bên tự do hộp tăng tốc máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 4480,
+        "wires": [
+            [
+                "4c7cf2b05f7406d1"
+            ]
+        ]
+    },
+    {
+        "id": "1abfd18de99b9e74",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Rung bên động cơ hộp tăng tốc máy chính",
+        "info": "",
+        "x": 1300,
+        "y": 4540,
+        "wires": []
+    },
+    {
+        "id": "38ad508b9893d99e",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_variation_ms_vaccum_34",
+        "diff": false,
+        "name": "",
+        "x": 1260,
+        "y": 4600,
+        "wires": [
+            [
+                "3ed2d7a4728cf3f5"
+            ]
+        ]
+    },
+    {
+        "id": "3ed2d7a4728cf3f5",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1500,
+        "y": 4600,
+        "wires": [
+            [
+                "d05cb15c43e23c12"
+            ]
+        ]
+    },
+    {
+        "id": "d05cb15c43e23c12",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        variation: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 2\",\n        device: \"Rung bên động cơ hộp tăng tốc máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 4600,
+        "wires": [
+            [
+                "4c7cf2b05f7406d1"
+            ]
+        ]
+    },
+    {
+        "id": "cc745440267f5761",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Áp suất dầu bôi trơn máy chính",
+        "info": "",
+        "x": 1270,
+        "y": 4660,
+        "wires": []
+    },
+    {
+        "id": "6b8795cf4eb16fd2",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_pressure_oil_vaccum_34",
+        "diff": false,
+        "name": "",
+        "x": 1250,
+        "y": 4720,
+        "wires": [
+            [
+                "507146b63e25be7c"
+            ]
+        ]
+    },
+    {
+        "id": "507146b63e25be7c",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1500,
+        "y": 4720,
+        "wires": [
+            [
+                "350762070971de56"
+            ]
+        ]
+    },
+    {
+        "id": "350762070971de56",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        pressure: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 2\",\n        device: \"Áp suất dầu bôi trơn máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 4720,
+        "wires": [
+            [
+                "4c7cf2b05f7406d1"
+            ]
+        ]
+    },
+    {
+        "id": "11a71f7b877078bd",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Chênh áp dầu bôi trơn máy chính",
+        "info": "",
+        "x": 1270,
+        "y": 4780,
+        "wires": []
+    },
+    {
+        "id": "7a944772881525f7",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_delta_pressure_oil_vaccum_34",
+        "diff": false,
+        "name": "",
+        "x": 1270,
+        "y": 4840,
+        "wires": [
+            [
+                "a20c819f57337549"
+            ]
+        ]
+    },
+    {
+        "id": "a20c819f57337549",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1520,
+        "y": 4840,
+        "wires": [
+            [
+                "dfdf0b558f529dcc"
+            ]
+        ]
+    },
+    {
+        "id": "dfdf0b558f529dcc",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        delta_pressure: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 2\",\n        device: \"Chênh áp dầu bôi trơn máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1720,
+        "y": 4840,
+        "wires": [
+            [
+                "4c7cf2b05f7406d1"
+            ]
+        ]
+    },
+    {
+        "id": "7cc2eb500bba98e5",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Dòng điện bơm chân không tuabin máy chính",
+        "info": "",
+        "x": 1310,
+        "y": 4900,
+        "wires": []
+    },
+    {
+        "id": "cd0f72708375b0b2",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_current_vaccum_34",
+        "diff": false,
+        "name": "",
+        "x": 1240,
+        "y": 4960,
+        "wires": [
+            [
+                "e01261c552a37d0e"
+            ]
+        ]
+    },
+    {
+        "id": "e01261c552a37d0e",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1520,
+        "y": 4960,
+        "wires": [
+            [
+                "5b4f8abeb31c7739"
+            ]
+        ]
+    },
+    {
+        "id": "5b4f8abeb31c7739",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        current: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 2\",\n        device: \"Dòng điện bơm chân không tuabin máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1720,
+        "y": 4960,
+        "wires": [
+            [
+                "4c7cf2b05f7406d1"
+            ]
+        ]
+    },
+    {
+        "id": "6ad38a28ddfa4835",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Tần suất bơm chân không tuabin máy chính",
+        "info": "",
+        "x": 1310,
+        "y": 5020,
+        "wires": []
+    },
+    {
+        "id": "2400d3f3cee52b48",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_freq_vaccum_34",
+        "diff": false,
+        "name": "",
+        "x": 1230,
+        "y": 5080,
+        "wires": [
+            [
+                "24684e43f6fef7f2"
+            ]
+        ]
+    },
+    {
+        "id": "24684e43f6fef7f2",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1520,
+        "y": 5080,
+        "wires": [
+            [
+                "edbdd9317b4d9399"
+            ]
+        ]
+    },
+    {
+        "id": "edbdd9317b4d9399",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        freq: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 2\",\n        device: \"Tần suất bơm chân không tuabin máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1720,
+        "y": 5080,
+        "wires": [
+            [
+                "4c7cf2b05f7406d1"
+            ]
+        ]
+    },
+    {
+        "id": "15b2e940fcf12c9f",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Nhiệt độ dầu bôi trơn máy chính",
+        "info": "",
+        "x": 1270,
+        "y": 5140,
+        "wires": []
+    },
+    {
+        "id": "7cc18902dfa8839d",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_temp_oil_vaccum_34",
+        "diff": false,
+        "name": "",
+        "x": 1240,
+        "y": 5200,
+        "wires": [
+            [
+                "a6662e718c32b0cd"
+            ]
+        ]
+    },
+    {
+        "id": "a6662e718c32b0cd",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1520,
+        "y": 5200,
+        "wires": [
+            [
+                "2809987dfc3adcea"
+            ]
+        ]
+    },
+    {
+        "id": "2809987dfc3adcea",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        temp_oil: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 2\",\n        device: \"Nhiệt độ dầu bôi trơn máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1720,
+        "y": 5200,
+        "wires": [
+            [
+                "4c7cf2b05f7406d1"
+            ]
+        ]
+    },
+    {
+        "id": "0a9133bb00eb1555",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Chân không",
+        "info": "",
+        "x": 2270,
+        "y": 4200,
+        "wires": []
+    },
+    {
+        "id": "c64135bc9f03a844",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_pressure_fs_vaccum_35",
+        "diff": false,
+        "name": "",
+        "x": 2310,
+        "y": 4260,
+        "wires": [
+            [
+                "23d434540ae63fa7"
+            ]
+        ]
+    },
+    {
+        "id": "5d464e1fe70196b0",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        pressure: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 3\",\n        device: \"Áp suất đầu vào bên tự do máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2710,
+        "y": 4260,
+        "wires": [
+            [
+                "6b928fdac8381bc4"
+            ]
+        ]
+    },
+    {
+        "id": "6b928fdac8381bc4",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 3080,
+        "y": 4700,
+        "wires": []
+    },
+    {
+        "id": "23d434540ae63fa7",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 2520,
+        "y": 4260,
+        "wires": [
+            [
+                "5d464e1fe70196b0"
+            ]
+        ]
+    },
+    {
+        "id": "756ac4864d98d5f7",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Chân không 3",
+        "info": "",
+        "x": 2470,
+        "y": 4200,
+        "wires": []
+    },
+    {
+        "id": "6a474a15ba8552e5",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Áp suất đầu vào bên tự do máy chính",
+        "info": "",
+        "x": 2730,
+        "y": 4200,
+        "wires": []
+    },
+    {
+        "id": "a61b426d195db959",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Rung bên tự do hộp tăng tốc máy chính",
+        "info": "",
+        "x": 2350,
+        "y": 4420,
+        "wires": []
+    },
+    {
+        "id": "abafdcadc9e84b93",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_variation_fs_vaccum_35",
+        "diff": false,
+        "name": "",
+        "x": 2310,
+        "y": 4480,
+        "wires": [
+            [
+                "36b90573d5ca9602"
+            ]
+        ]
+    },
+    {
+        "id": "36b90573d5ca9602",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 2560,
+        "y": 4480,
+        "wires": [
+            [
+                "0ae535b82a970fed"
+            ]
+        ]
+    },
+    {
+        "id": "0ae535b82a970fed",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        variation: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 3\",\n        device: \"Rung bên tự do hộp tăng tốc máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2770,
+        "y": 4480,
+        "wires": [
+            [
+                "6b928fdac8381bc4"
+            ]
+        ]
+    },
+    {
+        "id": "b1214258df79b0a1",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Rung bên động cơ hộp tăng tốc máy chính",
+        "info": "",
+        "x": 2360,
+        "y": 4540,
+        "wires": []
+    },
+    {
+        "id": "381c974554ac2e77",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_variation_ms_vaccum_35",
+        "diff": false,
+        "name": "",
+        "x": 2320,
+        "y": 4600,
+        "wires": [
+            [
+                "967c12f4ef7ea97e"
+            ]
+        ]
+    },
+    {
+        "id": "967c12f4ef7ea97e",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 2560,
+        "y": 4600,
+        "wires": [
+            [
+                "1995a8c2b3734a45"
+            ]
+        ]
+    },
+    {
+        "id": "1995a8c2b3734a45",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        variation: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 3\",\n        device: \"Rung bên động cơ hộp tăng tốc máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2770,
+        "y": 4600,
+        "wires": [
+            [
+                "6b928fdac8381bc4"
+            ]
+        ]
+    },
+    {
+        "id": "3c81603363983bd8",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Áp suất dầu bôi trơn máy chính",
+        "info": "",
+        "x": 2330,
+        "y": 4660,
+        "wires": []
+    },
+    {
+        "id": "a4652b80e57cfe00",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_pressure_oil_vaccum_35",
+        "diff": false,
+        "name": "",
+        "x": 2310,
+        "y": 4720,
+        "wires": [
+            [
+                "b71859e27abdce58"
+            ]
+        ]
+    },
+    {
+        "id": "b71859e27abdce58",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 2560,
+        "y": 4720,
+        "wires": [
+            [
+                "4e75a2c7baeb30ed"
+            ]
+        ]
+    },
+    {
+        "id": "4e75a2c7baeb30ed",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        pressure: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 3\",\n        device: \"Áp suất dầu bôi trơn máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2770,
+        "y": 4720,
+        "wires": [
+            [
+                "6b928fdac8381bc4"
+            ]
+        ]
+    },
+    {
+        "id": "a9c927577a2209c2",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Chênh áp dầu bôi trơn máy chính",
+        "info": "",
+        "x": 2330,
+        "y": 4780,
+        "wires": []
+    },
+    {
+        "id": "741e90e5c8d87217",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_delta_pressure_oil_vaccum_35",
+        "diff": false,
+        "name": "",
+        "x": 2330,
+        "y": 4840,
+        "wires": [
+            [
+                "9f55ee4a57982ad9"
+            ]
+        ]
+    },
+    {
+        "id": "9f55ee4a57982ad9",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 2580,
+        "y": 4840,
+        "wires": [
+            [
+                "3864e0645572fc67"
+            ]
+        ]
+    },
+    {
+        "id": "3864e0645572fc67",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        delta_pressure: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 3\",\n        device: \"Chênh áp dầu bôi trơn máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2780,
+        "y": 4840,
+        "wires": [
+            [
+                "6b928fdac8381bc4"
+            ]
+        ]
+    },
+    {
+        "id": "d3fed47f08d2d932",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Dòng điện bơm chân không tuabin máy chính",
+        "info": "",
+        "x": 2370,
+        "y": 4900,
+        "wires": []
+    },
+    {
+        "id": "06e97c1d0d578fcd",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_current_vaccum_35",
+        "diff": false,
+        "name": "",
+        "x": 2300,
+        "y": 4960,
+        "wires": [
+            [
+                "5496279a67bd431d"
+            ]
+        ]
+    },
+    {
+        "id": "5496279a67bd431d",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 2580,
+        "y": 4960,
+        "wires": [
+            [
+                "d5cd78de60a06471"
+            ]
+        ]
+    },
+    {
+        "id": "d5cd78de60a06471",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        current: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 3\",\n        device: \"Dòng điện bơm chân không tuabin máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2780,
+        "y": 4960,
+        "wires": [
+            [
+                "6b928fdac8381bc4"
+            ]
+        ]
+    },
+    {
+        "id": "38a34f47f437ee20",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Tần suất bơm chân không tuabin máy chính",
+        "info": "",
+        "x": 2370,
+        "y": 5020,
+        "wires": []
+    },
+    {
+        "id": "bd29e9009b083eb9",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_freq_vaccum_35",
+        "diff": false,
+        "name": "",
+        "x": 2290,
+        "y": 5080,
+        "wires": [
+            [
+                "d498f822144157e1"
+            ]
+        ]
+    },
+    {
+        "id": "d498f822144157e1",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 2580,
+        "y": 5080,
+        "wires": [
+            [
+                "53e0f24ae60f3fdb"
+            ]
+        ]
+    },
+    {
+        "id": "53e0f24ae60f3fdb",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        freq: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 3\",\n        device: \"Tần suất bơm chân không tuabin máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2780,
+        "y": 5080,
+        "wires": [
+            [
+                "6b928fdac8381bc4"
+            ]
+        ]
+    },
+    {
+        "id": "391c1cd9c3eb7a38",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Nhiệt độ dầu bôi trơn máy chính",
+        "info": "",
+        "x": 2330,
+        "y": 5140,
+        "wires": []
+    },
+    {
+        "id": "5cfd9c296721cf8c",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_temp_oil_vaccum_35",
+        "diff": false,
+        "name": "",
+        "x": 2300,
+        "y": 5200,
+        "wires": [
+            [
+                "2364f1055cb721f8"
+            ]
+        ]
+    },
+    {
+        "id": "2364f1055cb721f8",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 2580,
+        "y": 5200,
+        "wires": [
+            [
+                "0eeacb0911592b58"
+            ]
+        ]
+    },
+    {
+        "id": "0eeacb0911592b58",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        temp_oil: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Vaccum\",\n        machine: \"Chân không 3\",\n        device: \"Nhiệt độ dầu bôi trơn máy chính\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2780,
+        "y": 5200,
+        "wires": [
+            [
+                "6b928fdac8381bc4"
+            ]
+        ]
+    },
+    {
+        "id": "cf2229d69987974f",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Lưu lượng BL",
+        "info": "",
+        "x": 1270,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c1948e50aaafbdcd",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_level_actual_22",
+        "diff": false,
+        "name": "",
+        "x": 1280,
+        "y": 360,
+        "wires": [
+            [
+                "d6f5481b0f95e974"
+            ]
+        ]
+    },
+    {
+        "id": "c2f70393fae2270c",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        level_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"System Headbox BL\",\n        machine: \"62F03X1F2\",\n        device: \"Báo mức thùng dầu lớp đáy\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 360,
+        "wires": [
+            [
+                "5dcba9b7eb5383b8"
+            ]
+        ]
+    },
+    {
+        "id": "5dcba9b7eb5383b8",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1880,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "d6f5481b0f95e974",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1480,
+        "y": 360,
+        "wires": [
+            [
+                "c2f70393fae2270c"
+            ]
+        ]
+    },
+    {
+        "id": "dc547842892c989f",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Lưu lượng BL",
+        "info": "",
+        "x": 1270,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "56360e345c9e6e80",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_level_actual_27",
+        "diff": false,
+        "name": "",
+        "x": 1280,
+        "y": 760,
+        "wires": [
+            [
+                "0e37a2fdef01f2df"
+            ]
+        ]
+    },
+    {
+        "id": "00ee042f78228c78",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        level_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"System Headbox TL\",\n        machine: \"62F03X1F2\",\n        device: \"Báo mức thùng dầu lớp mặt\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 760,
+        "wires": [
+            [
+                "b6b3d64ef7b80a2c"
+            ]
+        ]
+    },
+    {
+        "id": "b6b3d64ef7b80a2c",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1880,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "0e37a2fdef01f2df",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1480,
+        "y": 760,
+        "wires": [
+            [
+                "00ee042f78228c78"
+            ]
+        ]
+    },
+    {
+        "id": "3ba321b91ad2ea65",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Lưu lượng xả cặn sàng trước lưới lớp đoạn 2 lớp đáy",
+        "info": "",
+        "x": 1260,
+        "y": 2180,
+        "wires": []
+    },
+    {
+        "id": "e5395eda57607755",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_flow_actual_21",
+        "diff": false,
+        "name": "",
+        "x": 1140,
+        "y": 2240,
+        "wires": [
+            [
+                "90bb83dde6131075"
+            ]
+        ]
+    },
+    {
+        "id": "0ba1e5379dfffb10",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        flow_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"System Stage BL Headbox Screen\",\n        machine: \"62F02F1F1\",\n        device: \"Lưu lượng xả cặn sàng trước lưới lớp đoạn 2 lớp đáy\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 2240,
+        "wires": [
+            [
+                "e641a91d6cb434f6"
+            ]
+        ]
+    },
+    {
+        "id": "e641a91d6cb434f6",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1800,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "90bb83dde6131075",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1360,
+        "y": 2240,
+        "wires": [
+            [
+                "0ba1e5379dfffb10"
+            ]
+        ]
+    },
+    {
+        "id": "102c08fe9e650b93",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Tốc độ quay bơm quạt lớp đáy",
+        "info": "",
+        "x": 1190,
+        "y": 2300,
+        "wires": []
+    },
+    {
+        "id": "2904652b07ba03d5",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_speed_actual_21",
+        "diff": false,
+        "name": "",
+        "x": 1150,
+        "y": 2360,
+        "wires": [
+            [
+                "3d740776cbfb89f3"
+            ]
+        ]
+    },
+    {
+        "id": "7dc4799aa44514fe",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        speed_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"System Stage BL Headbox Screen\",\n        machine: \"62F03X1P1\",\n        device: \"Tốc độ quay bơm quạt lớp đáy\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 2360,
+        "wires": [
+            [
+                "3db640916bfce9e5"
+            ]
+        ]
+    },
+    {
+        "id": "3db640916bfce9e5",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1800,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "3d740776cbfb89f3",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1360,
+        "y": 2360,
+        "wires": [
+            [
+                "7dc4799aa44514fe"
+            ]
+        ]
+    },
+    {
+        "id": "4e661a2a81aafb78",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Lưu lượng xả cặn máy sàng trước lưới lớp mặt",
+        "info": "",
+        "x": 1240,
+        "y": 2940,
+        "wires": []
+    },
+    {
+        "id": "66d599d97168b882",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_flow_actual_26",
+        "diff": false,
+        "name": "",
+        "x": 1140,
+        "y": 3000,
+        "wires": [
+            [
+                "60afa47bf062fcd5"
+            ]
+        ]
+    },
+    {
+        "id": "158e02eb410d5da8",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        flow_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"System Stage TL Headbox Screen\",\n        machine: \"62D01F1F1\",\n        device: \"Lưu lượng xả cặn máy sàng trước lưới lớp mặt\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 3000,
+        "wires": [
+            [
+                "3e16ac5e3dc78ffc"
+            ]
+        ]
+    },
+    {
+        "id": "3e16ac5e3dc78ffc",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1820,
+        "y": 3000,
+        "wires": []
+    },
+    {
+        "id": "60afa47bf062fcd5",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1380,
+        "y": 3000,
+        "wires": [
+            [
+                "158e02eb410d5da8"
+            ]
+        ]
+    },
+    {
+        "id": "215dc2874eda753c",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Tốc độ quay bơm quạt lớp mặt",
+        "info": "",
+        "x": 1190,
+        "y": 3060,
+        "wires": []
+    },
+    {
+        "id": "a04f24d13f62dae5",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_speed_actual_26",
+        "diff": false,
+        "name": "",
+        "x": 1150,
+        "y": 3120,
+        "wires": [
+            [
+                "b005c2edfbebac34"
+            ]
+        ]
+    },
+    {
+        "id": "12b5353bfa91620d",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        speed_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"System Stage TL Headbox Screen\",\n        machine: \"62D03X1P1\",\n        device: \"Tốc độ quay bơm quạt lớp mặt\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 3120,
+        "wires": [
+            [
+                "ffc688467c31da3a"
+            ]
+        ]
+    },
+    {
+        "id": "ffc688467c31da3a",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1820,
+        "y": 3120,
+        "wires": []
+    },
+    {
+        "id": "b005c2edfbebac34",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1380,
+        "y": 3120,
+        "wires": [
+            [
+                "12b5353bfa91620d"
+            ]
+        ]
+    },
+    {
+        "id": "25092935e8947132",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Nhóm sấy",
+        "info": "",
+        "x": 1120,
+        "y": 3240,
+        "wires": []
+    },
+    {
+        "id": "b5354422cf2411b4",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_pressure_actual_36",
+        "diff": false,
+        "name": "",
+        "x": 1160,
+        "y": 3300,
+        "wires": [
+            [
+                "51a89d79cb0bb93d"
+            ]
+        ]
+    },
+    {
+        "id": "b9307b1522d94124",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        pressure_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Nhóm sấy\",\n        machine: \"Trước sấy\",\n        device: \"Áp suất hơi trước sấy\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 3300,
+        "wires": [
+            [
+                "30df7e00e41aa726"
+            ]
+        ]
+    },
+    {
+        "id": "30df7e00e41aa726",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1820,
+        "y": 3300,
+        "wires": []
+    },
+    {
+        "id": "51a89d79cb0bb93d",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1380,
+        "y": 3300,
+        "wires": [
+            [
+                "b9307b1522d94124"
+            ]
+        ]
+    },
+    {
+        "id": "2bc09a46a891f7dd",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Áp suất hơi trước sấy",
+        "info": "",
+        "x": 1320,
+        "y": 3240,
+        "wires": []
+    },
+    {
+        "id": "ca06d451c837dbe6",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_temp_actual_36",
+        "diff": false,
+        "name": "",
+        "x": 1150,
+        "y": 3400,
+        "wires": [
+            [
+                "fa150e51873e0d6c"
+            ]
+        ]
+    },
+    {
+        "id": "bc9d738980e146cb",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        temp_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Nhóm sấy\",\n        machine: \"Trước sấy\",\n        device: \"Nhiệt độ chụp hơi trước sấy\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 3400,
+        "wires": [
+            [
+                "75b489429babf19a"
+            ]
+        ]
+    },
+    {
+        "id": "75b489429babf19a",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1820,
+        "y": 3400,
+        "wires": []
+    },
+    {
+        "id": "fa150e51873e0d6c",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1380,
+        "y": 3400,
+        "wires": [
+            [
+                "bc9d738980e146cb"
+            ]
+        ]
+    },
+    {
+        "id": "620e58d52f35a244",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Nhiệt độ chụp hơi trước sấy",
+        "info": "",
+        "x": 1180,
+        "y": 3360,
+        "wires": []
+    },
+    {
+        "id": "f640d4593d84671e",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_pressure_actual_37",
+        "diff": false,
+        "name": "",
+        "x": 1160,
+        "y": 3500,
+        "wires": [
+            [
+                "4697c9bff595606d"
+            ]
+        ]
+    },
+    {
+        "id": "7536d075b09ab45c",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        pressure_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Nhóm sấy\",\n        machine: \"Sau sấy\",\n        device: \"Áp suất hơi sau sấy\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 3500,
+        "wires": [
+            [
+                "8c7bb6795ad45ace"
+            ]
+        ]
+    },
+    {
+        "id": "8c7bb6795ad45ace",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1820,
+        "y": 3500,
+        "wires": []
+    },
+    {
+        "id": "4697c9bff595606d",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1380,
+        "y": 3500,
+        "wires": [
+            [
+                "7536d075b09ab45c"
+            ]
+        ]
+    },
+    {
+        "id": "ae402239600bfa0f",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Áp suất hơi sau sấy",
+        "info": "",
+        "x": 1150,
+        "y": 3460,
+        "wires": []
+    },
+    {
+        "id": "965821ddc0ed1758",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_temp_actual_37",
+        "diff": false,
+        "name": "",
+        "x": 1150,
+        "y": 3600,
+        "wires": [
+            [
+                "14998c14c77864e2"
+            ]
+        ]
+    },
+    {
+        "id": "aad96ee5fc969e9e",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        temp_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Nhóm sấy\",\n        machine: \"Sau sấy\",\n        device: \"Nhiệt độ chụp hơi sau sấy\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 3600,
+        "wires": [
+            [
+                "0495d9189de19ec0"
+            ]
+        ]
+    },
+    {
+        "id": "0495d9189de19ec0",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1820,
+        "y": 3600,
+        "wires": []
+    },
+    {
+        "id": "14998c14c77864e2",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1380,
+        "y": 3600,
+        "wires": [
+            [
+                "aad96ee5fc969e9e"
+            ]
+        ]
+    },
+    {
+        "id": "3a7e3da9f41a4578",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Nhiệt độ chụp hơi sau sấy",
+        "info": "",
+        "x": 1170,
+        "y": 3560,
+        "wires": []
+    },
+    {
+        "id": "adaa41cbb809ca89",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "OEE",
+        "info": "",
+        "x": 1110,
+        "y": 3700,
+        "wires": []
+    },
+    {
+        "id": "a458efbd58282f3b",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Tốc độ lưới",
+        "info": "",
+        "x": 1290,
+        "y": 3700,
+        "wires": []
+    },
+    {
+        "id": "6814fdd07c1d171c",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_speed_wire_38",
+        "diff": false,
+        "name": "",
+        "x": 1140,
+        "y": 3760,
+        "wires": [
+            [
+                "3f20048e707bda1c"
+            ]
+        ]
+    },
+    {
+        "id": "2028906b9677385a",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        speed_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"OEE\",\n        machine: \"PM6\",\n        device: \"Tốc độ lưới\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 3760,
+        "wires": [
+            [
+                "6ba160c78a33411b"
+            ]
+        ]
+    },
+    {
+        "id": "6ba160c78a33411b",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1820,
+        "y": 3760,
+        "wires": []
+    },
+    {
+        "id": "3f20048e707bda1c",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1380,
+        "y": 3760,
+        "wires": [
+            [
+                "2028906b9677385a"
+            ]
+        ]
+    },
+    {
+        "id": "d0d958dc150d035e",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_speed_reel_38",
+        "diff": false,
+        "name": "",
+        "x": 1140,
+        "y": 3860,
+        "wires": [
+            [
+                "f99dc5b0ca3a3a47"
+            ]
+        ]
+    },
+    {
+        "id": "9288059222162d90",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nglobal.set(\"speed_actual\", msg.payload);\nmsg.payload = [\n    {\n        speed_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"OEE\",\n        machine: \"PM6\",\n        device: \"Tốc độ đầu cuộn\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 3860,
+        "wires": [
+            [
+                "c1a2fb1604dc734c"
+            ]
+        ]
+    },
+    {
+        "id": "c1a2fb1604dc734c",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1820,
+        "y": 3860,
+        "wires": []
+    },
+    {
+        "id": "f99dc5b0ca3a3a47",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1380,
+        "y": 3860,
+        "wires": [
+            [
+                "9288059222162d90"
+            ]
+        ]
+    },
+    {
+        "id": "6fe89e8803512d7c",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Tốc độ đầu cuộn",
+        "info": "",
+        "x": 1140,
+        "y": 3820,
+        "wires": []
+    },
+    {
+        "id": "60013b53c5110b91",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_basic_weight_38",
+        "diff": false,
+        "name": "",
+        "x": 1150,
+        "y": 3960,
+        "wires": [
+            [
+                "4c0faacb68b91ae5"
+            ]
+        ]
+    },
+    {
+        "id": "c066330f6f9adf9c",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        basic_weight: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"OEE\",\n        machine: \"PM6\",\n        device: \"Định lượng\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 3960,
+        "wires": [
+            [
+                "5051d2eff490d8f1"
+            ]
+        ]
+    },
+    {
+        "id": "5051d2eff490d8f1",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1820,
+        "y": 3960,
+        "wires": []
+    },
+    {
+        "id": "4c0faacb68b91ae5",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1380,
+        "y": 3960,
+        "wires": [
+            [
+                "c066330f6f9adf9c"
+            ]
+        ]
+    },
+    {
+        "id": "1b5779fe45c9c09e",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Định lượng",
+        "info": "",
+        "x": 1120,
+        "y": 3920,
+        "wires": []
+    },
+    {
+        "id": "2e75f8e3ee65368e",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "r_moisture_38",
+        "diff": false,
+        "name": "",
+        "x": 1130,
+        "y": 4060,
+        "wires": [
+            [
+                "67e75a279bf49418"
+            ]
+        ]
+    },
+    {
+        "id": "724b08d8d781b5b0",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        moisture: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"OEE\",\n        machine: \"PM6\",\n        device: \"Độ ẩm\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 4060,
+        "wires": [
+            [
+                "d11ba877d0c899ca"
+            ]
+        ]
+    },
+    {
+        "id": "d11ba877d0c899ca",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1820,
+        "y": 4060,
+        "wires": []
+    },
+    {
+        "id": "67e75a279bf49418",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "x": 1380,
+        "y": 4060,
+        "wires": [
+            [
+                "724b08d8d781b5b0"
+            ]
+        ]
+    },
+    {
+        "id": "aad4c53242e8b511",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Độ ẩm",
+        "info": "",
+        "x": 1110,
+        "y": 4020,
+        "wires": []
+    },
+    {
+        "id": "492f0733d205cfac",
+        "type": "s7 in",
+        "z": "62bd0f5f977b002a",
+        "endpoint": "f51cf276bed06857",
+        "mode": "single",
+        "variable": "b_paper_break_38",
+        "diff": false,
+        "name": "",
+        "x": 1150,
+        "y": 4140,
+        "wires": [
+            [
+                "1e6390a429d905dd"
+            ]
+        ]
+    },
+    {
+        "id": "1e6390a429d905dd",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nlet speed_actual = Number(global.get(\"speed_actual\") || 0);\n\n// PLC trả về true/false\nlet b_paper_break = Boolean(msg.payload);\n\n// 0 = STOP\n// 1 = CRAWL\n// 2 = RUN\nlet machine_status = 0;\n\n// Availability\n// 0 = Down\n// 1 = Running\nlet b_status = 0;\n\n// Ưu tiên kiểm tra đứt giấy\nif (b_paper_break) {\n    // Có đứt giấy => máy không sản xuất\n    machine_status = 0;\n    b_status = 0;\n} else {\n    if (speed_actual >= 200) {\n        machine_status = 2;\n        b_status = 1;\n    } else if (speed_actual > 20) {\n        machine_status = 1;\n        b_status = 0;\n    } else {\n        machine_status = 0;\n        b_status = 0;\n    }\n}\nmsg.payload = [\n    {\n        b_run: machine_status,\n        b_status: b_status,\n        b_paper_break: b_paper_break,\n        shift_value: shift\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"OEE\",\n        machine: \"PM6\",\n        device: \"Tín hiệu chạy dừng máy xeo\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 4140,
+        "wires": [
+            [
+                "253632e2133dbeb0"
+            ]
+        ]
+    },
+    {
+        "id": "253632e2133dbeb0",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1580,
+        "y": 4140,
+        "wires": []
+    },
+    {
+        "id": "ba70bb60963c58d0",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Tín hiệu đứt giấy",
+        "info": "",
+        "x": 1140,
+        "y": 4100,
+        "wires": []
+    },
+    {
         "id": "9d9caf91fa2a534a",
         "type": "mqtt in",
         "z": "06c2b55e1c9ea8bc",
@@ -8791,7 +11980,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 850,
+        "x": 1070,
         "y": 1340,
         "wires": [
             []
@@ -8879,11 +12068,21 @@
                 "t": "cont",
                 "v": "SQxRHevxRPRyjaxFoUuz",
                 "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "TcblVamSMTtRMACZEwgW",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ujqyzLEElZcwNeAJsanA",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 15,
+        "outputs": 17,
         "x": 830,
         "y": 680,
         "wires": [
@@ -8931,6 +12130,12 @@
             ],
             [
                 "dba76f4d8132268e"
+            ],
+            [
+                "7a5806456ece3468"
+            ],
+            [
+                "aa2c60fae2a18222"
             ]
         ]
     },
@@ -11992,8 +15197,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 3510,
-        "y": 2400,
+        "x": 3630,
+        "y": 2460,
         "wires": [
             []
         ]
@@ -13347,7 +16552,7 @@
         "senderr": false,
         "headers": [],
         "x": 1710,
-        "y": 3240,
+        "y": 3340,
         "wires": [
             []
         ]
@@ -13630,12 +16835,12 @@
         "id": "6fc387fb0c3f58a2",
         "type": "link in",
         "z": "06c2b55e1c9ea8bc",
-        "name": "link in 3",
+        "name": "Nước lưu lượng vi sinh nước thải hệ XLNT",
         "links": [
             "b035dae01f32eb21"
         ],
-        "x": 1125,
-        "y": 3420,
+        "x": 1645,
+        "y": 3160,
         "wires": [
             [
                 "4a7ad0b04bf9731c"
@@ -13656,8 +16861,8 @@
         "db": "dongtien",
         "precision": "ns",
         "shiftVar": "shift",
-        "x": 1370,
-        "y": 3420,
+        "x": 1890,
+        "y": 3160,
         "wires": [
             [
                 "e743c0f13230dd3c"
@@ -13933,6 +17138,205 @@
         "wires": [
             [
                 "2ecfeb1308f2045f"
+            ]
+        ]
+    },
+    {
+        "id": "7a5806456ece3468",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "DTLA RSX 09",
+        "mode": "link",
+        "links": [
+            "5cfe5605b823fbdd"
+        ],
+        "x": 775,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "5cfe5605b823fbdd",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "DTLA RSX 09",
+        "links": [
+            "7a5806456ece3468"
+        ],
+        "x": 865,
+        "y": 2220,
+        "wires": [
+            [
+                "cb684878a9970bd6"
+            ]
+        ]
+    },
+    {
+        "id": "cb684878a9970bd6",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"Tram-PCCC\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 970,
+        "y": 2220,
+        "wires": [
+            [
+                "b5d5d180d636dede"
+            ]
+        ]
+    },
+    {
+        "id": "b5d5d180d636dede",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Trạm PCCC",
+        "mode": "link",
+        "links": [
+            "c11b4e0fa83e6b13"
+        ],
+        "x": 1135,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "c11b4e0fa83e6b13",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Trạm PCCC",
+        "links": [
+            "b5d5d180d636dede"
+        ],
+        "x": 1125,
+        "y": 3480,
+        "wires": [
+            [
+                "0f4001eb40e5a27d"
+            ]
+        ]
+    },
+    {
+        "id": "0f4001eb40e5a27d",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước Lưu lượng PCCC",
+        "meterConfig": "3b6d3d84af66aa9b",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "",
+        "subSystem": "Lưu lượng PCCC",
+        "measurement": "water_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1310,
+        "y": 3480,
+        "wires": [
+            [
+                "e743c0f13230dd3c"
+            ]
+        ]
+    },
+    {
+        "id": "3f0c28e371b105a5",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Supmea",
+        "info": "",
+        "x": 1680,
+        "y": 3100,
+        "wires": []
+    },
+    {
+        "id": "aa2c60fae2a18222",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "DTLA RS8",
+        "mode": "link",
+        "links": [
+            "e3cc5aedaca80922"
+        ],
+        "x": 775,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "e3cc5aedaca80922",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "DTLA RS8",
+        "links": [
+            "aa2c60fae2a18222"
+        ],
+        "x": 3085,
+        "y": 2540,
+        "wires": [
+            [
+                "4687a0cf11fcfb31"
+            ]
+        ]
+    },
+    {
+        "id": "788eb7656608aa0e",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Điện NLMT Xưởng",
+        "meterConfig": "a5780702ce278cb1",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "2500KVA",
+        "parentSystem": "ACB 4000A",
+        "subSystem": "NLMT Xưởng",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 3390,
+        "y": 2540,
+        "wires": [
+            [
+                "85d498d9a9ae1923"
+            ]
+        ]
+    },
+    {
+        "id": "4687a0cf11fcfb31",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"NLMT-Xuong\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 3210,
+        "y": 2540,
+        "wires": [
+            [
+                "788eb7656608aa0e"
             ]
         ]
     },
