@@ -6555,23 +6555,23 @@
                 "name": "r_low_warning_306"
             },
             {
-                "addr": "DB1485,R392",
-                "name": "r_pressure_actual_307"
+                "addr": "DB2162,R0",
+                "name": "r_temp_actual_307"
             },
             {
-                "addr": "DB1485,R432",
+                "addr": "DB2162,R10",
                 "name": "r_high_alarm_307"
             },
             {
-                "addr": "DB1485,R436",
+                "addr": "DB2162,R14",
                 "name": "r_high_warning_307"
             },
             {
-                "addr": "DB1485,R452",
+                "addr": "DB2162,R30",
                 "name": "r_low_alarm_307"
             },
             {
-                "addr": "DB1485,R448",
+                "addr": "DB2162,R26",
                 "name": "r_low_warning_307"
             }
         ]
@@ -117542,15 +117542,15 @@
         "z": "57b5da103676d68f",
         "name": "",
         "configNode": "eae630e2684fa51c",
-        "fieldName": "pressure_actual",
+        "fieldName": "temp_actual",
         "factory": "MIZA Nghi Sơn",
         "system": "Hệ xeo",
         "subsystem": "Hệ",
         "section": "Air",
         "line": "Air",
         "machine": "Nhiệt độ TIA 114040",
-        "label": "Áp thực tế",
-        "x": 4700,
+        "label": "Nhiệt độ thực tế",
+        "x": 4690,
         "y": 5560,
         "wires": [
             [
@@ -117652,17 +117652,19 @@
         "z": "57b5da103676d68f",
         "name": "",
         "endpoint": "e72fd5a230ded939",
-        "templateNode": "dea8e5bad9aaae14",
+        "templateNode": "fa1816cc8df575c8",
         "groupIndex": "307",
         "bufferLen": "10",
         "throttle": "60",
         "outputs": 7,
-        "x": 4360,
+        "x": 4380,
         "y": 5620,
         "wires": [
             [
                 "957db8a5fbbd02d6"
             ],
+            [],
+            [],
             [
                 "36601e3575a8608a"
             ],
@@ -117674,9 +117676,7 @@
             ],
             [
                 "d7c945bdd5259f39"
-            ],
-            [],
-            []
+            ]
         ]
     },
     {
