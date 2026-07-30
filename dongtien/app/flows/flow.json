@@ -1861,6 +1861,84 @@
         "derivedMetrics": []
     },
     {
+        "id": "6f8f18c82567cb6e",
+        "type": "dongtien-meter-config",
+        "name": "EMIC",
+        "device": "EMIC",
+        "metrics": [
+            {
+                "key": "Ua",
+                "name": "Phase A Voltage",
+                "unit": "V",
+                "div": 1000
+            },
+            {
+                "key": "Ub",
+                "name": "Phase B Voltage",
+                "unit": "V",
+                "div": 1000
+            },
+            {
+                "key": "Uc",
+                "name": "Phase C Voltage",
+                "unit": "V",
+                "div": 1000
+            },
+            {
+                "key": "Ia",
+                "name": "Phase A Current",
+                "unit": "A",
+                "div": 1000
+            },
+            {
+                "key": "Ib",
+                "name": "Phase B Current",
+                "unit": "A",
+                "div": 1000
+            },
+            {
+                "key": "Ic",
+                "name": "Phase C Current",
+                "unit": "A",
+                "div": 1000
+            },
+            {
+                "key": "Cos",
+                "name": "Power Factor",
+                "unit": "",
+                "div": 100
+            },
+            {
+                "key": "ExpEp",
+                "name": "Total Export Active Energy",
+                "unit": "kWh",
+                "div": 1
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "1947b4b3cc87941a",
+        "type": "dongtien-meter-config",
+        "name": "Supmea DAF",
+        "device": "Supmea DAF",
+        "metrics": [
+            {
+                "key": "totalForwad",
+                "name": "Lượng nước tiêu thụ",
+                "unit": "m³",
+                "div": 1
+            },
+            {
+                "key": "rate",
+                "name": "Lưu lượng",
+                "unit": "m³/h",
+                "div": 1
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
         "id": "b456d74cc49da9e0",
         "type": "throttle",
         "z": "c95363a80fce05eb",
@@ -12078,11 +12156,36 @@
                 "t": "cont",
                 "v": "ujqyzLEElZcwNeAJsanA",
                 "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "zaCIxHTLlPHvOVAGBXzW",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "mKSpeoZnjmdilmeawtvU",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "hxwKJkzmgumSStyGNzGY",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ECQTDTdbhSNOzUgCmaLO",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "iRkNQWkSZttxAnlikmyD",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 17,
+        "outputs": 22,
         "x": 830,
         "y": 680,
         "wires": [
@@ -12136,6 +12239,21 @@
             ],
             [
                 "aa2c60fae2a18222"
+            ],
+            [
+                "79880802ce1dd92e"
+            ],
+            [
+                "854177dedb6c8be6"
+            ],
+            [
+                "3fdb12f1f715507b"
+            ],
+            [
+                "712c30d75ee6a532"
+            ],
+            [
+                "2eafcc5e02f27226"
             ]
         ]
     },
@@ -12264,7 +12382,7 @@
         "joinerType": "str",
         "useparts": false,
         "accumulate": false,
-        "timeout": "60",
+        "timeout": "2",
         "count": "",
         "reduceRight": false,
         "reduceExp": "",
@@ -16316,7 +16434,7 @@
         "joinerType": "str",
         "useparts": false,
         "accumulate": false,
-        "timeout": "60",
+        "timeout": "2",
         "count": "",
         "reduceRight": false,
         "reduceExp": "",
@@ -16345,7 +16463,7 @@
         "joinerType": "str",
         "useparts": false,
         "accumulate": false,
-        "timeout": "60",
+        "timeout": "2",
         "count": "",
         "reduceRight": false,
         "reduceExp": "",
@@ -16374,7 +16492,7 @@
         "joinerType": "str",
         "useparts": false,
         "accumulate": false,
-        "timeout": "60",
+        "timeout": "2",
         "count": "",
         "reduceRight": false,
         "reduceExp": "",
@@ -16403,7 +16521,7 @@
         "joinerType": "str",
         "useparts": false,
         "accumulate": false,
-        "timeout": "60",
+        "timeout": "2",
         "count": "",
         "reduceRight": false,
         "reduceExp": "",
@@ -16839,7 +16957,7 @@
         "links": [
             "b035dae01f32eb21"
         ],
-        "x": 1645,
+        "x": 1905,
         "y": 3160,
         "wires": [
             [
@@ -16861,11 +16979,11 @@
         "db": "dongtien",
         "precision": "ns",
         "shiftVar": "shift",
-        "x": 1890,
+        "x": 2150,
         "y": 3160,
         "wires": [
             [
-                "e743c0f13230dd3c"
+                "570148f971ccf102"
             ]
         ]
     },
@@ -17256,7 +17374,7 @@
         "z": "06c2b55e1c9ea8bc",
         "name": "Supmea",
         "info": "",
-        "x": 1680,
+        "x": 1940,
         "y": 3100,
         "wires": []
     },
@@ -17337,6 +17455,527 @@
         "wires": [
             [
                 "788eb7656608aa0e"
+            ]
+        ]
+    },
+    {
+        "id": "79880802ce1dd92e",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "EMIC-XLNT",
+        "mode": "link",
+        "links": [
+            "43ecbad1b552faa2"
+        ],
+        "x": 775,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "f6c0afa9a2a2d9aa",
+        "type": "comment",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "EMIC",
+        "info": "",
+        "x": 3851,
+        "y": 2342,
+        "wires": []
+    },
+    {
+        "id": "43ecbad1b552faa2",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "EMIC-XLNT",
+        "links": [
+            "79880802ce1dd92e"
+        ],
+        "x": 3825,
+        "y": 2420,
+        "wires": [
+            [
+                "89ab8e20d004bd54"
+            ]
+        ]
+    },
+    {
+        "id": "89ab8e20d004bd54",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"EMIC-XLNT\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "2",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 3950,
+        "y": 2420,
+        "wires": [
+            [
+                "1014bfb8980da37b"
+            ]
+        ]
+    },
+    {
+        "id": "26b743e7637874b9",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "EMIC-XLNT",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"EMIC-XLNT\":[{\"ts\":1785339293000,\"values\":{\"ImpEp\":0,\"ImpEp-p1\":0,\"ImpEp-p2\":0,\"ImpEp-p3\":0,\"ExpEp\":554059,\"ExpEp-p1\":314149,\"ExpEp-p2\":98604,\"ExpEp-p3\":141305,\"ImpEq\":1,\"ExpEq\":336038,\"Ua\":228040,\"Ub\":223130,\"Uc\":229430,\"Ia\":156000,\"Ib\":158000,\"Ic\":159000,\"Cos\":940}}]}",
+        "payloadType": "json",
+        "x": 4350,
+        "y": 2420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1014bfb8980da37b",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "XLNT",
+        "meterConfig": "6f8f18c82567cb6e",
+        "factory": "Dong Tien Paper Long An",
+        "transformer": "2000KVA",
+        "parentSystem": "ACB 630A",
+        "subSystem": "XLNT",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 4090,
+        "y": 2420,
+        "wires": [
+            [
+                "345f093cdbaf2289"
+            ]
+        ]
+    },
+    {
+        "id": "345f093cdbaf2289",
+        "type": "http request",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 4290,
+        "y": 2520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "854177dedb6c8be6",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "EMIC-LoHoi",
+        "mode": "link",
+        "links": [
+            "40b354129fe117be"
+        ],
+        "x": 775,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "40b354129fe117be",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "EMIC-LoHoi",
+        "links": [
+            "854177dedb6c8be6"
+        ],
+        "x": 3825,
+        "y": 2480,
+        "wires": [
+            [
+                "a75b10264176370f"
+            ]
+        ]
+    },
+    {
+        "id": "a75b10264176370f",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"EMIC-LoHoi\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "2",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 3950,
+        "y": 2480,
+        "wires": [
+            [
+                "fd0f694b40d2923c"
+            ]
+        ]
+    },
+    {
+        "id": "fd0f694b40d2923c",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Lò hơi",
+        "meterConfig": "6f8f18c82567cb6e",
+        "factory": "Dong Tien Paper Long An",
+        "transformer": "5000KVA",
+        "parentSystem": "ACB 4000A",
+        "subSystem": "Lò hơi",
+        "measurement": "electric_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 4090,
+        "y": 2480,
+        "wires": [
+            [
+                "345f093cdbaf2289"
+            ]
+        ]
+    },
+    {
+        "id": "3fdb12f1f715507b",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "LL-Muong-lang-cat",
+        "mode": "link",
+        "links": [
+            "ddf1c0bda84d471c"
+        ],
+        "x": 615,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "570148f971ccf102",
+        "type": "http request",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2610,
+        "y": 3280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ddf1c0bda84d471c",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "LL-Muong-lang-cat",
+        "links": [
+            "3fdb12f1f715507b"
+        ],
+        "x": 1905,
+        "y": 3280,
+        "wires": [
+            [
+                "893c364179adf51e"
+            ]
+        ]
+    },
+    {
+        "id": "573d34fcc03b889c",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "LL-Muong-lang-cat",
+        "meterConfig": "28d20b27f093d79b",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "100M3",
+        "subSystem": "Lưu lượng mương lắng cát",
+        "measurement": "water_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2230,
+        "y": 3280,
+        "wires": [
+            [
+                "570148f971ccf102"
+            ]
+        ]
+    },
+    {
+        "id": "893c364179adf51e",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"LL-Muong-lang-cat\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "2",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 2030,
+        "y": 3280,
+        "wires": [
+            [
+                "573d34fcc03b889c"
+            ]
+        ]
+    },
+    {
+        "id": "712c30d75ee6a532",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "LL-Nuoc-cap-DAF",
+        "mode": "link",
+        "links": [
+            "8089b8fb1d0318a7"
+        ],
+        "x": 615,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "8089b8fb1d0318a7",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "LL-Nuoc-cap-DAF",
+        "links": [
+            "712c30d75ee6a532"
+        ],
+        "x": 1905,
+        "y": 3360,
+        "wires": [
+            [
+                "a1ca49476ff38cc0"
+            ]
+        ]
+    },
+    {
+        "id": "a1ca49476ff38cc0",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"LL-Nuoc-cap-DAF\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "2",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 2050,
+        "y": 3360,
+        "wires": [
+            [
+                "bdfb752bd38e3f5f"
+            ]
+        ]
+    },
+    {
+        "id": "aadc327378d1f04b",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước cấp DAF",
+        "meterConfig": "1947b4b3cc87941a",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "100M3",
+        "subSystem": "Nước cấp DAF",
+        "measurement": "water_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 2400,
+        "y": 3360,
+        "wires": [
+            [
+                "570148f971ccf102"
+            ]
+        ]
+    },
+    {
+        "id": "bdfb752bd38e3f5f",
+        "type": "function",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "function 1",
+        "func": "// 1. Lấy mảng dữ liệu gốc\nlet originalData = msg.payload[\"LL-Nuoc-cap-DAF\"];\n\n// 2. Tính toán giá trị total (833 + 17/100 = 833.17)\nlet intVal = originalData[0].values.int_positive_val || 0;\nlet decVal = originalData[0].values.dec_positive_val || 0;\nlet totalVal = intVal + (decVal / 100);\n\n// 3. Thêm/gán trực tiếp biến 'total' vào object values\noriginalData[0].values.totalForwad = totalVal;\n\n// 4. Bọc mảng lại vào key \"LL-Nuoc-cap-DAF\" như bạn mong muốn\nmsg.payload = {\n    \"LL-Nuoc-cap-DAF\": originalData\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2200,
+        "y": 3360,
+        "wires": [
+            [
+                "aadc327378d1f04b"
+            ]
+        ]
+    },
+    {
+        "id": "2eafcc5e02f27226",
+        "type": "link out",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "LL-Nuoc-nau-keo",
+        "mode": "link",
+        "links": [
+            "3111e3d86f97afb8"
+        ],
+        "x": 615,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "3111e3d86f97afb8",
+        "type": "link in",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "LL-Nuoc-nau-keo",
+        "links": [
+            "2eafcc5e02f27226"
+        ],
+        "x": 1125,
+        "y": 3560,
+        "wires": [
+            [
+                "4ff39d8ae950ac15"
+            ]
+        ]
+    },
+    {
+        "id": "4ff39d8ae950ac15",
+        "type": "join",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload[\"LL-Nuoc-nau-keo\"][0].values",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "2",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1250,
+        "y": 3560,
+        "wires": [
+            [
+                "3479fb57c133d0c9"
+            ]
+        ]
+    },
+    {
+        "id": "3479fb57c133d0c9",
+        "type": "function",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "function 2",
+        "func": "// 1. Lấy mảng dữ liệu gốc\nlet originalData = msg.payload[\"LL-Nuoc-nau-keo\"];\n\n// 2. Tính toán giá trị total (833 + 17/100 = 833.17)\nlet intVal = originalData[0].values.int_positive_val || 0;\nlet decVal = originalData[0].values.dec_positive_val || 0;\nlet totalVal = intVal + (decVal / 100);\n\n// 3. Thêm/gán trực tiếp biến 'total' vào object values\noriginalData[0].values.totalForwad = totalVal;\n\n// 4. Bọc mảng lại vào key \"LL-Nuoc-cap-DAF\" như bạn mong muốn\nmsg.payload = {\n    \"LL-Nuoc-nau-keo\": originalData\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 3560,
+        "wires": [
+            [
+                "6a03a69ede9bbb61"
+            ]
+        ]
+    },
+    {
+        "id": "6a03a69ede9bbb61",
+        "type": "dongtien-insert",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "Nước nấu keo",
+        "meterConfig": "28d20b27f093d79b",
+        "factory": "Giấy Đồng Tiến Long An",
+        "transformer": "",
+        "parentSystem": "100M3",
+        "subSystem": "Nước nấu keo",
+        "measurement": "water_measurement",
+        "db": "dongtien",
+        "precision": "ns",
+        "shiftVar": "shift",
+        "x": 1580,
+        "y": 3560,
+        "wires": [
+            [
+                "e743c0f13230dd3c"
             ]
         ]
     },
