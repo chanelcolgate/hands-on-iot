@@ -1906,7 +1906,7 @@
                 "key": "Cos",
                 "name": "Power Factor",
                 "unit": "",
-                "div": 100
+                "div": 1000
             },
             {
                 "key": "ExpEp",
@@ -1937,6 +1937,78 @@
             }
         ],
         "derivedMetrics": []
+    },
+    {
+        "id": "eb8bc5cc370ed092",
+        "type": "dongtien-meter-config",
+        "name": "EMIC 2",
+        "device": "EMIC 2",
+        "metrics": [
+            {
+                "key": "Ua",
+                "name": "Phase A Voltage",
+                "unit": "V",
+                "div": 1000
+            },
+            {
+                "key": "Ub",
+                "name": "Phase B Voltage",
+                "unit": "V",
+                "div": 1000
+            },
+            {
+                "key": "Uc",
+                "name": "Phase C Voltage",
+                "unit": "V",
+                "div": 1000
+            },
+            {
+                "key": "Ia",
+                "name": "Phase A Current",
+                "unit": "A",
+                "div": 1000
+            },
+            {
+                "key": "Ib",
+                "name": "Phase B Current",
+                "unit": "A",
+                "div": 1000
+            },
+            {
+                "key": "Ic",
+                "name": "Phase C Current",
+                "unit": "A",
+                "div": 1000
+            },
+            {
+                "key": "Cos",
+                "name": "Power Factor",
+                "unit": "",
+                "div": 1000
+            },
+            {
+                "key": "ImpEp",
+                "name": "Total Import Active Energy",
+                "unit": "kWh",
+                "div": 1
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "16806df30ed42c86",
+        "type": "influxdb",
+        "hostname": "172.26.2.12",
+        "port": "8090",
+        "protocol": "http",
+        "database": "miza_new",
+        "name": "miza",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
     },
     {
         "id": "b456d74cc49da9e0",
@@ -6296,11 +6368,143 @@
         "z": "0d323cbb2919aca8",
         "name": "",
         "scope": [
+            "e56c4c1d2d9eec04",
+            "da6ca2603b1304e2",
+            "ba9401d75a319daf",
             "d5bf613ed03df2f5",
-            "4ffa3173de66c95d"
+            "4ffa3173de66c95d",
+            "d8e5ff8aea09e9ae",
+            "78c8f526ab0f1dab",
+            "813104fb0979d416",
+            "94266165eb1dba84",
+            "87dffc4ede881b70",
+            "39ec06a74920c161",
+            "67c1756fab88ad32",
+            "0b27ba35db90a1fe",
+            "29b8af96124b3399",
+            "131fe2142550f8ca",
+            "e797597a2e225d3b",
+            "4ed4e262b71f8391",
+            "57052d4659ac8f3b",
+            "46111bf96c11ac9d",
+            "e40cd312789e119d",
+            "6d5732a3d0edbd21",
+            "9a5633ca73adc028",
+            "1429fb2a343441e5",
+            "02dcf9bd6db51270",
+            "f9ba48aad1ca2bec",
+            "6fc09b6ed964c10e",
+            "8f7e8fc878e6220d",
+            "e4125637a64474a7",
+            "68bc08cf8d8dc666",
+            "70a1b0464c085306",
+            "31bf483f3a788bf7",
+            "cfbb0b45acc0e032",
+            "5cfae12d6d8d24cc",
+            "34cf454df33c1d18",
+            "aa8cc0f7b9fc4fa0",
+            "589b914cda705d32",
+            "4efef45eebb1eb74",
+            "d0d88e7715358b93",
+            "0a15bdd3e6d82100",
+            "ad2d9d1781293527",
+            "712fd296fbe3f629",
+            "b9c7964e104fecb2",
+            "641233f562abc5cb",
+            "0e303a47c020b17b",
+            "524cf1d387312b35",
+            "65db7ebd50e6071b",
+            "af98ec639209375a",
+            "cd0a945a7303816d",
+            "5dd4dd58d8082b40",
+            "388e3ae366b03008",
+            "db64eb5e19fc196c",
+            "f0323735592ee0d2",
+            "6b5f7289026d1b1f",
+            "9d6d9335065ccf8b",
+            "a9c72ea46dee3571",
+            "cdd7bdb7ad595157",
+            "e28981f5bc6de151",
+            "6c751020811b6708",
+            "a91ca790af37a2dc",
+            "432a67beb1bbe3b0",
+            "4967419a643476be",
+            "884090151edd2c8c",
+            "eaafadfc8b783638",
+            "e7d795d47f373e5d",
+            "3ea167ec353e1026",
+            "0fefe79835e12db4",
+            "2d184f07e5c10f73",
+            "74dcae38b5a10129",
+            "dd8cdec8dd57448c",
+            "ca7afb33f5d1d8ab",
+            "6c65e3319f3b74b0",
+            "b220c980241da556",
+            "6c36ae1796e64045",
+            "08132581c7cabb73",
+            "2468c28694a48259",
+            "a6f1b712f4d9cebc",
+            "7ab376413091f912",
+            "625f0c368dc06926",
+            "a1e332cbc450cd3f",
+            "7a6aee36887755bc",
+            "2b0f81297f3eb78f",
+            "7e49e8c92c83b542",
+            "e3430ac5cfe5a4ef",
+            "8c9d1afd5c16f9e0",
+            "7915eb5d0ac6db57",
+            "3dadf575b7b0eed6",
+            "fbbb5917a3be646a",
+            "707cb4950545f337",
+            "cc22caea399c16fa",
+            "7855102785e86a45",
+            "afd223c18ae79f78",
+            "1392e6e45f14a76c",
+            "7908299b89c8496f",
+            "49cef92663813d66",
+            "bedc51ef172dbacd",
+            "d3c9bb35922cef36",
+            "3a63cd1adaaa7edb",
+            "b460a13bf247723a",
+            "7ad24e31b7de0ea1",
+            "7690522c3b6f80c0",
+            "22d4ae4fb50ef5f6",
+            "8cf8f8f3ac4f23f8",
+            "ee0b19b897fce3a8",
+            "38aabe7c7145cbe8",
+            "8794b68af3019bad",
+            "ae500731aebccfbe",
+            "322a8db34c69a1b8",
+            "fe5b4c1adefa9ebc",
+            "af7717e7682c801b",
+            "8143accf1d953cbc",
+            "baa90c8bf0df2e78",
+            "67e8f61ac2f60dfe",
+            "03647fc3efdce7f3",
+            "0d404e3e75a29cad",
+            "86929153de33b3d2",
+            "66c0c6be16d240d4",
+            "3c6a6b3bf633b95c",
+            "89839b277dbdc70e",
+            "3ac5b8bacf1422aa",
+            "f32a60d52a5efb73",
+            "c64d5a18044ff282",
+            "3a3e98b45d83da92",
+            "97877ccbfab60bc6",
+            "7748f0753612a81d",
+            "c7edf249feecd094",
+            "8ad19776c886e19f",
+            "b0394f8f2eaee133",
+            "0947595952100c43",
+            "a397d6f1cd5e73a5",
+            "a4c60f252e8217c9",
+            "cf4c31304dfb4c54",
+            "b599ba31c1a69fb7",
+            "04b13398e8072308",
+            "c67273fda2746378"
         ],
         "uncaught": false,
-        "x": 530,
+        "x": 540,
         "y": 7500,
         "wires": [
             [
@@ -6752,6 +6956,7 @@
         "id": "b41a5dbb899ec2c7",
         "type": "catch",
         "z": "62bd0f5f977b002a",
+        "d": true,
         "name": "",
         "scope": null,
         "uncaught": false,
@@ -6767,6 +6972,7 @@
         "id": "9a42162634acb93c",
         "type": "debug",
         "z": "62bd0f5f977b002a",
+        "d": true,
         "name": "debug 11",
         "active": true,
         "tosidebar": true,
@@ -7255,7 +7461,7 @@
         "type": "function",
         "z": "62bd0f5f977b002a",
         "name": "Insert data",
-        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        conc: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"System Machine Chest Back\",\n        machine: \"62E02B1\",\n        device: \"Nồng độ\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "func": "let shift = global.get(\"shift\");\nglobal.set(\"conc_actual\", msg.payload);\nmsg.payload = [\n    {\n        conc: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"System Machine Chest Back\",\n        machine: \"62E02B1\",\n        device: \"Nồng độ\",\n        shift: shift,\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7370,7 +7576,8 @@
         "y": 1760,
         "wires": [
             [
-                "ee9556189b8157c7"
+                "ee9556189b8157c7",
+                "625439ef4716e591"
             ]
         ]
     },
@@ -7381,7 +7588,7 @@
         "name": "Mức hồ",
         "info": "",
         "x": 130,
-        "y": 1820,
+        "y": 1980,
         "wires": []
     },
     {
@@ -7394,7 +7601,7 @@
         "diff": false,
         "name": "",
         "x": 140,
-        "y": 1860,
+        "y": 2020,
         "wires": [
             [
                 "f95ded24ae20812a"
@@ -7414,7 +7621,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 1860,
+        "y": 2020,
         "wires": [
             [
                 "cfc9d6482989cea3"
@@ -7428,7 +7635,7 @@
         "name": "Nồng độ",
         "info": "",
         "x": 140,
-        "y": 1920,
+        "y": 2080,
         "wires": []
     },
     {
@@ -7441,7 +7648,7 @@
         "diff": false,
         "name": "",
         "x": 160,
-        "y": 1980,
+        "y": 2140,
         "wires": [
             [
                 "d5e9fac8cea79678"
@@ -7461,7 +7668,7 @@
         "finalize": "",
         "libs": [],
         "x": 650,
-        "y": 1980,
+        "y": 2140,
         "wires": [
             [
                 "cfc9d6482989cea3"
@@ -7475,7 +7682,7 @@
         "name": "Lưu lượng",
         "info": "",
         "x": 140,
-        "y": 2040,
+        "y": 2200,
         "wires": []
     },
     {
@@ -7488,7 +7695,7 @@
         "diff": false,
         "name": "",
         "x": 160,
-        "y": 2100,
+        "y": 2260,
         "wires": [
             [
                 "18e56dda94d84a5f"
@@ -7508,7 +7715,7 @@
         "finalize": "",
         "libs": [],
         "x": 650,
-        "y": 2100,
+        "y": 2260,
         "wires": [
             [
                 "cfc9d6482989cea3"
@@ -7521,7 +7728,7 @@
         "z": "62bd0f5f977b002a",
         "name": "",
         "x": 414.1999816894531,
-        "y": 1860.2000732421875,
+        "y": 2020.2000732421875,
         "wires": [
             [
                 "225ca414a54a3129"
@@ -7534,7 +7741,7 @@
         "z": "62bd0f5f977b002a",
         "name": "",
         "x": 400,
-        "y": 1980,
+        "y": 2140,
         "wires": [
             [
                 "c3e389195b30eb81"
@@ -7547,7 +7754,7 @@
         "z": "62bd0f5f977b002a",
         "name": "",
         "x": 420,
-        "y": 2100,
+        "y": 2260,
         "wires": [
             [
                 "0a72282c0344d156"
@@ -7561,7 +7768,7 @@
         "name": "Machine Chest Top",
         "info": "",
         "x": 390,
-        "y": 1820,
+        "y": 1980,
         "wires": []
     },
     {
@@ -11680,7 +11887,7 @@
         "type": "function",
         "z": "62bd0f5f977b002a",
         "name": "Insert data",
-        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        speed_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"OEE\",\n        machine: \"PM6\",\n        device: \"Tốc độ lưới\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        speed_wire: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"OEE\",\n        machine: \"PM6\",\n        device: \"Tốc độ lưới\",\n        shift: shift,\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -11748,7 +11955,7 @@
         "type": "function",
         "z": "62bd0f5f977b002a",
         "name": "Insert data",
-        "func": "let shift = global.get(\"shift\");\nglobal.set(\"speed_actual\", msg.payload);\nmsg.payload = [\n    {\n        speed_actual: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"OEE\",\n        machine: \"PM6\",\n        device: \"Tốc độ đầu cuộn\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "func": "let shift = global.get(\"shift\");\nglobal.set(\"speed_actual\", msg.payload);\nmsg.payload = [\n    {\n        speed_reel: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"OEE\",\n        machine: \"PM6\",\n        device: \"Tốc độ đầu cuộn\",\n        shift: shift,\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -11817,7 +12024,7 @@
         "y": 3960,
         "wires": [
             [
-                "4c0faacb68b91ae5"
+                "c066330f6f9adf9c"
             ]
         ]
     },
@@ -11860,19 +12067,6 @@
         "wires": []
     },
     {
-        "id": "4c0faacb68b91ae5",
-        "type": "subflow:c95363a80fce05eb",
-        "z": "62bd0f5f977b002a",
-        "name": "",
-        "x": 1380,
-        "y": 3960,
-        "wires": [
-            [
-                "c066330f6f9adf9c"
-            ]
-        ]
-    },
-    {
         "id": "1b5779fe45c9c09e",
         "type": "comment",
         "z": "62bd0f5f977b002a",
@@ -11895,7 +12089,7 @@
         "y": 4060,
         "wires": [
             [
-                "67e75a279bf49418"
+                "724b08d8d781b5b0"
             ]
         ]
     },
@@ -11938,19 +12132,6 @@
         "wires": []
     },
     {
-        "id": "67e75a279bf49418",
-        "type": "subflow:c95363a80fce05eb",
-        "z": "62bd0f5f977b002a",
-        "name": "",
-        "x": 1380,
-        "y": 4060,
-        "wires": [
-            [
-                "724b08d8d781b5b0"
-            ]
-        ]
-    },
-    {
         "id": "aad4c53242e8b511",
         "type": "comment",
         "z": "62bd0f5f977b002a",
@@ -11982,7 +12163,7 @@
         "type": "function",
         "z": "62bd0f5f977b002a",
         "name": "Insert data",
-        "func": "let shift = global.get(\"shift\");\nlet speed_actual = Number(global.get(\"speed_actual\") || 0);\n\n// PLC trả về true/false\nlet b_paper_break = Boolean(msg.payload);\n\n// 0 = STOP\n// 1 = CRAWL\n// 2 = RUN\nlet machine_status = 0;\n\n// Availability\n// 0 = Down\n// 1 = Running\nlet b_status = 0;\n\n// Ưu tiên kiểm tra đứt giấy\nif (b_paper_break) {\n    // Có đứt giấy => máy không sản xuất\n    machine_status = 0;\n    b_status = 0;\n} else {\n    if (speed_actual >= 200) {\n        machine_status = 2;\n        b_status = 1;\n    } else if (speed_actual > 20) {\n        machine_status = 1;\n        b_status = 0;\n    } else {\n        machine_status = 0;\n        b_status = 0;\n    }\n}\nmsg.payload = [\n    {\n        b_run: machine_status,\n        b_status: b_status,\n        b_paper_break: b_paper_break,\n        shift_value: shift\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"OEE\",\n        machine: \"PM6\",\n        device: \"Tín hiệu chạy dừng máy xeo\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "func": "let shift = global.get(\"shift\");\nlet speed_actual = Number(global.get(\"speed_actual\") || 0);\n\n// PLC trả về true/false\nlet b_paper_break = Boolean(msg.payload);\n\n// 0 = STOP\n// 1 = CRAWL\n// 2 = RUN\nlet machine_status = 0;\n\n// Availability\n// 0 = Down\n// 1 = Running\nlet b_status = 0;\nlet speed_machine = 0;\n\n// Ưu tiên kiểm tra đứt giấy\nif (b_paper_break) {\n    // Có đứt giấy => máy không sản xuất\n    machine_status = 0;\n    b_status = 0;\n    speed_machine = 0;\n} else {\n    speed_machine = speed_actual;\n    if (speed_actual >= 200) {\n        machine_status = 2;\n        b_status = 1;\n    } else if (speed_actual > 20) {\n        machine_status = 1;\n        b_status = 0;\n    } else {\n        machine_status = 0;\n        b_status = 0;\n    }\n}\nmsg.payload = [\n    {\n        b_run: machine_status,\n        b_status: b_status,\n        b_paper_break: b_paper_break,\n        speed_machine: speed_machine,\n        shift_value: shift,\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"OEE\",\n        machine: \"PM6\",\n        device: \"Tín hiệu chạy dừng máy xeo\",\n        shift: shift,\n    }\n];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -12023,6 +12204,1156 @@
         "info": "",
         "x": 1140,
         "y": 4100,
+        "wires": []
+    },
+    {
+        "id": "fb51328cf8a06c9a",
+        "type": "influxdb in",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "",
+        "query": "SELECT mean(\"conc\") \nFROM \"dongtien_realtime\" \nWHERE (\n    \"factory\"::tag = 'Giấy Đồng Tiến Long An' \n    AND \"system\"::tag =~ /^System Machine Chest Back$/) \nAND \n    time >= 1780538402935ms  \n    and time <= 1785538799999ms  \nGROUP BY time(1m), \"device\"::tag, \"machine\"::tag fill(none) \nORDER BY time ASC\n\n",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 1220,
+        "y": 1560,
+        "wires": [
+            [
+                "c45945e7124427a6"
+            ]
+        ]
+    },
+    {
+        "id": "ebf144a5a4d5994d",
+        "type": "inject",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1020,
+        "y": 1560,
+        "wires": [
+            [
+                "fb51328cf8a06c9a",
+                "88cda6be9febba17"
+            ]
+        ]
+    },
+    {
+        "id": "c45945e7124427a6",
+        "type": "split",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 1410,
+        "y": 1560,
+        "wires": [
+            [
+                "45ba02fc9c9d0576"
+            ]
+        ]
+    },
+    {
+        "id": "45ba02fc9c9d0576",
+        "type": "delay",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1570,
+        "y": 1560,
+        "wires": [
+            [
+                "6047408659e7370c"
+            ]
+        ]
+    },
+    {
+        "id": "6047408659e7370c",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 3",
+        "func": "global.set(\"conc\", msg.payload.mean);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1740,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88cda6be9febba17",
+        "type": "influxdb in",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "",
+        "query": "SELECT mean(\"flow_out\") \nFROM \"dongtien_realtime\" \nWHERE \n(\n    \"factory\"::tag = 'Giấy Đồng Tiến Long An' \n    AND \"system\"::tag =~ /^System Machine Chest Back$/\n) AND \ntime >= 1780538402935ms  \nand time <= 1785538799999ms  \nGROUP BY time(1m), \"device\"::tag, \"machine\"::tag fill(none) \nORDER BY time ASC",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 1220,
+        "y": 1620,
+        "wires": [
+            [
+                "d37a9e28eacd67db"
+            ]
+        ]
+    },
+    {
+        "id": "d37a9e28eacd67db",
+        "type": "split",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 1410,
+        "y": 1620,
+        "wires": [
+            [
+                "930ba26dc034c89e"
+            ]
+        ]
+    },
+    {
+        "id": "930ba26dc034c89e",
+        "type": "delay",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1570,
+        "y": 1620,
+        "wires": [
+            [
+                "b82f295a339b7e4c"
+            ]
+        ]
+    },
+    {
+        "id": "b82f295a339b7e4c",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 4",
+        "func": "// Convert to Influx Line Protocol\nfunction escape_string(str) {\n    return str\n        .toString()\n        .replace(/\\s/g, \"\\\\ \")\n        .replace(/,/g, \"\\\\,\")\n        .replace(/=/g, \"\\\\=\");\n}\n\nlet shift = global.get(\"shift\");\n\nlet timestamp = new Date(msg.payload.time).getTime();\n\nif (isNaN(timestamp)) {\n    node.error(\"Timestamp không hợp lệ\");\n    return null;\n}\n\n// Lưu lượng (L/min)\nconst flowLpm = Number(msg.payload.mean);\n\n// Nồng độ (%)\nconst conc = Number(global.get(\"conc\"));\n\n// Kiểm tra dữ liệu\nif (isNaN(flowLpm) || isNaN(conc)) {\n    return null;\n}\n\n// Tính lưu lượng m3/h\nconst flowM3h = flowLpm * 60 / 1000;\n\n// Tính sản lượng bột khô (tấn/h)\nconst pulpTPH = flowM3h * conc / 100;\n\nlet tags = [\n    `factory=${escape_string(\"Giấy Đồng Tiến Long An\")}`,\n    `system=${escape_string(\"System Machine Chest Back\")}`,\n    `machine=${escape_string(\"PM6\")}`,\n    `device=${escape_string(\"Pulp\")}`,\n    `shift=${escape_string(shift)}`\n];\n\nlet fields = [\n    `pulpTPH=${pulpTPH}`\n];\n\n// Influx Line Protocol\nmsg.payload =\n    `dongtien_realtime,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`;\n\nmsg.db = \"dongtien\";\nmsg.precision = \"ms\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1740,
+        "y": 1620,
+        "wires": [
+            [
+                "2eac7c78935589d6"
+            ]
+        ]
+    },
+    {
+        "id": "2eac7c78935589d6",
+        "type": "http request",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1530,
+        "y": 1720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "625439ef4716e591",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\n\n// Lưu lượng (L/min)\nconst flowLpm = Number(msg.payload);\n\n// Nồng độ (%)\nconst conc = Number(global.get(\"conc_actual\"));\n\n// Kiểm tra dữ liệu\nif (isNaN(flowLpm) || isNaN(conc)) {\n    return null;\n}\n\n// Tính lưu lượng m3/h\nconst flowM3h = flowLpm * 60 / 1000;\n\n// Tính sản lượng bột khô (tấn/h)\nconst pulpTPH = flowM3h * conc / 100;\n\nmsg.payload = [\n    {\n        pulpTPH: pulpTPH\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"System Machine Chest Back\",\n        machine: \"PM6\",\n        device: \"Pulp\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1840,
+        "wires": [
+            [
+                "cfc9d6482989cea3"
+            ]
+        ]
+    },
+    {
+        "id": "dc78558603d59396",
+        "type": "influxdb in",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "",
+        "query": "SELECT \n    last(\"b_run\") \nFROM \"dongtien_realtime\" \nWHERE \n    time >= 1785801600000ms \nand time <= 1785888000999ms\nGROUP BY time(1m), \"device\"::tag fill(none)\nORDER BY time ASC",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 1240,
+        "y": 1380,
+        "wires": [
+            [
+                "c36e94f656a5e36d"
+            ]
+        ]
+    },
+    {
+        "id": "c64c4a1a42f4cd5f",
+        "type": "inject",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1060,
+        "y": 1380,
+        "wires": [
+            [
+                "dc78558603d59396",
+                "b148202bed6aaf60"
+            ]
+        ]
+    },
+    {
+        "id": "c36e94f656a5e36d",
+        "type": "split",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 1410,
+        "y": 1380,
+        "wires": [
+            [
+                "2aeffd52d009a033"
+            ]
+        ]
+    },
+    {
+        "id": "2aeffd52d009a033",
+        "type": "delay",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1570,
+        "y": 1380,
+        "wires": [
+            [
+                "3c849cc7e75f6cd3"
+            ]
+        ]
+    },
+    {
+        "id": "3c849cc7e75f6cd3",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 5",
+        "func": "// Convert to Influx Line Protocol\nfunction escape_string(str) {\n    return str\n        .toString()\n        .replace(/\\s/g, \"\\\\ \")\n        .replace(/,/g, \"\\\\,\")\n        .replace(/=/g, \"\\\\=\");\n}\n\nlet shift = global.get(\"shift\");\n\nlet timestamp = new Date(msg.payload.time).getTime();\n\nif (isNaN(timestamp)) {\n    node.error(\"Timestamp không hợp lệ\");\n    return null;\n}\n\n// Nồng độ (%)\nconst speed_reel = Number(global.get(\"speed_reel_2\"));\n\nlet speed_machine = 0;\n\nif (msg.payload.last == 0) {\n    speed_machine = 0;\n} else {\n    speed_machine = speed_reel;\n}\n\nlet tags = [\n    `factory=${escape_string(\"Giấy Đồng Tiến Long An\")}`,\n    `system=${escape_string(\"OEE\")}`,\n    `machine=${escape_string(\"PM6\")}`,\n    `device=${escape_string(\"Tín hiệu chạy dừng máy xeo\")}`,\n    `shift=${escape_string(shift)}`\n];\n\nlet fields = [\n    `speed_machine=${speed_machine}`\n];\n\n// Influx Line Protocol\nmsg.payload =\n    `dongtien_realtime,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`;\n\nmsg.db = \"dongtien\";\nmsg.precision = \"ms\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1740,
+        "y": 1380,
+        "wires": [
+            [
+                "f1b52070f70ef114"
+            ]
+        ]
+    },
+    {
+        "id": "f1b52070f70ef114",
+        "type": "http request",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1910,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b148202bed6aaf60",
+        "type": "influxdb in",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "",
+        "query": "SELECT \n    mean(\"speed_reel\") \nFROM \"dongtien_realtime\" \nWHERE \n(\n    \"machine\"::tag = 'PM6' \n    AND \"device\"::tag = 'Tốc độ đầu cuộn'\n) \nAND time >= 1785801600000ms \nand time <= 1785888000999ms \nGROUP BY time(1m) fill(none) \nORDER BY time ASC",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 1240,
+        "y": 1320,
+        "wires": [
+            [
+                "630906197ef945e4"
+            ]
+        ]
+    },
+    {
+        "id": "630906197ef945e4",
+        "type": "split",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 1430,
+        "y": 1320,
+        "wires": [
+            [
+                "18bbcbaafb0ce501"
+            ]
+        ]
+    },
+    {
+        "id": "18bbcbaafb0ce501",
+        "type": "delay",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1590,
+        "y": 1320,
+        "wires": [
+            [
+                "66bbd35172b15dc6"
+            ]
+        ]
+    },
+    {
+        "id": "66bbd35172b15dc6",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 6",
+        "func": "global.set(\"speed_reel_2\", msg.payload.mean);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1760,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a7127a77be2c0586",
+        "type": "inject",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 08 * * *",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2110,
+        "y": 1440,
+        "wires": [
+            [
+                "95f1cf816ce9eb8b"
+            ]
+        ]
+    },
+    {
+        "id": "0c03e88908c224a0",
+        "type": "influxdb in",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "Availability",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 2490,
+        "y": 1320,
+        "wires": [
+            [
+                "447624bbf5c68d5f"
+            ]
+        ]
+    },
+    {
+        "id": "6b1360d739322dca",
+        "type": "influxdb in",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "Sản lượng thực tế",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 2470,
+        "y": 1380,
+        "wires": [
+            [
+                "ebfa121a3f6570e7"
+            ]
+        ]
+    },
+    {
+        "id": "e58a1cad6e379764",
+        "type": "influxdb in",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "16806df30ed42c86",
+        "name": "Sản lượng thành phẩm",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 2490,
+        "y": 1440,
+        "wires": [
+            [
+                "95df66cb7c14596c"
+            ]
+        ]
+    },
+    {
+        "id": "ebfa121a3f6570e7",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 7",
+        "func": "global.set(\"sltt\", msg.payload[7].production);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2700,
+        "y": 1380,
+        "wires": [
+            [
+                "3ea106e91dc8587a"
+            ]
+        ]
+    },
+    {
+        "id": "447624bbf5c68d5f",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 8",
+        "func": "// Convert to Influx Line Protocol\nfunction escape_string(str) {\n    return str\n        .toString()\n        .replace(/\\s/g, \"\\\\ \")\n        .replace(/,/g, \"\\\\,\")\n        .replace(/=/g, \"\\\\=\");\n}\nmsg.payload = msg.payload[7];\nlet timestamp = new Date(msg.payload.time).getTime();\n\nif (isNaN(timestamp)) {\n    node.error(\"Timestamp không hợp lệ\");\n    return null;\n}\n\nlet actualProduction = Number(global.get(\"sltt\"));\n\nif (actualProduction < 1) {\n    actualProduction = 0;\n}\nconst finishedProduction = Number(global.get(\"sltp\"));\n\nlet quality = 0;\n\nif (\n    Number.isFinite(actualProduction) &&\n    Number.isFinite(finishedProduction) &&\n    actualProduction > 0\n) {\n    quality = +(finishedProduction / actualProduction * 100).toFixed(2);\n}\n\nlet oee = 0;\nlet performance = 100;\nconst availability = msg.payload.Availability;\n\nif (\n    Number.isFinite(availability) &&\n    Number.isFinite(performance) &&\n    Number.isFinite(quality)\n) {\n    oee = +(availability * performance * quality / 10000).toFixed(2);\n}\n\nconst run_time_min = +(1440 * availability / 100).toFixed(2);\nconst downtime_min = +(1440 - run_time_min).toFixed(2);\n\nlet tags = [\n    `factory=${escape_string(\"Giấy Đồng Tiến Long An\")}`,\n    `system=${escape_string(\"OEE\")}`,\n    `machine=${escape_string(\"PM6\")}`,\n    `paper_type=${escape_string(\"M6S\")}`,\n];\n\nlet fields = [\n    `availability=${availability}`,\n    `performance=${performance}`,\n    `quality=${quality}`,\n    `oee=${oee}`,\n    // `timestamp=${msg.payload.time}`\n];\n\nlet fields_2 = [\n    `finished_production=${finishedProduction}`,\n    `actual_production=${actualProduction}`,\n    `run_time_min=${run_time_min}`,\n    `downtime_min=${downtime_min}`,\n];\n\n// Influx Line Protocol\n// msg.payload =\n//     `paper_daily_oee,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`;\n\n// msg.db = \"dongtien\";\n// msg.precision = \"ms\";\n\n\nlet msgOEE = {\n    payload: `paper_daily_oee,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`,\n    db: \"dongtien\",\n    precision: \"ms\"\n};\n\nlet msgProduction  = {\n    payload: `paper_daily_production,${tags.join(\",\")} ${fields_2.join(\",\")} ${timestamp}`,\n    db: \"dongtien\",\n    precision: \"ms\"\n};\n// msg.payload = fields_2;\nreturn [[msgOEE, msgProduction]];\n// return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2780,
+        "y": 1320,
+        "wires": [
+            [
+                "a7f5f51e7fa259c5"
+            ]
+        ]
+    },
+    {
+        "id": "95df66cb7c14596c",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 9",
+        "func": "msg.payload.forEach(row => {\n    row.time = new Date(\n        new Date(row.time).getTime() + 7 * 60 * 60 * 1000\n    ).toISOString();\n});\nglobal.set(\"sltp\", msg.payload[7].sum);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2720,
+        "y": 1440,
+        "wires": [
+            [
+                "426370dc8e365ede"
+            ]
+        ]
+    },
+    {
+        "id": "e6a19547d759b240",
+        "type": "debug",
+        "z": "62bd0f5f977b002a",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2700,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "3ea106e91dc8587a",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 10",
+        "func": "const now = new Date();\n\nconst end = new Date(now);\nend.setHours(7, 0, 0, 0);\n\nif (now < end) {\n    end.setDate(end.getDate() - 1);\n}\n\nconst start = new Date(end);\nstart.setDate(start.getDate() - 7);\n\nmsg.query = `\nSELECT mean(\"hourly_A\") AS \"Availability\"\nFROM (\n    SELECT\n        mean(\"A\") AS \"hourly_A\"\n    FROM (\n        SELECT\n            mean(\"b_status\") * 100 AS \"A\"\n        FROM \"dongtien_realtime\"\n        WHERE\n            \"machine\" = 'PM6'\n            AND time >= ${start.getTime()}ms \n            and time <= ${end.getTime()}ms + 1d\n        GROUP BY time(1m)\n        fill(none)\n    )\n    GROUP BY time(1h)\n    fill(none)\n)\nWHERE \n    time >= ${start.getTime()}ms \n    and time <= ${end.getTime()}ms + 1d\nGROUP BY time(1d)\nfill(none)\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2270,
+        "y": 1320,
+        "wires": [
+            [
+                "0c03e88908c224a0"
+            ]
+        ]
+    },
+    {
+        "id": "426370dc8e365ede",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 11",
+        "func": "const now = new Date();\n\nconst end = new Date(now);\nend.setHours(7, 0, 0, 0);\n\nif (now < end) {\n    end.setDate(end.getDate() - 1);\n}\n\nconst start = new Date(end);\nstart.setDate(start.getDate() - 7);\n\nmsg.query = `\nSELECT SUM(\"hourly_production\") AS \"production\"\nFROM (\n    SELECT integral(\"ton_per_min\", 1m) AS \"hourly_production\"\n    FROM (\n        SELECT\n            (\n                mean(\"speed_machine\") *\n                4.6 *\n                mean(\"basic_weight\") *\n                0.97\n            ) / 1000000 AS \"ton_per_min\"\n        FROM \"dongtien_realtime\"\n        WHERE\n            \"machine\" = 'PM6'\n            AND time >= ${start.getTime()}ms\n            and time <= ${end.getTime()}ms + 1d\n        GROUP BY time(1m)\n        fill(0)\n    )\n    GROUP BY time(1h)\n    fill(0)\n)\nWHERE \n    time >= ${start.getTime()}ms\n    and time <= ${end.getTime()}ms + 1d\nGROUP BY time(1d)\nfill(none)\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2270,
+        "y": 1380,
+        "wires": [
+            [
+                "6b1360d739322dca"
+            ]
+        ]
+    },
+    {
+        "id": "95f1cf816ce9eb8b",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 12",
+        "func": "const now = new Date();\n\n// Mốc 07:00 gần nhất\nconst end = new Date(now);\nend.setHours(7, 0, 0, 999);\n\n// Nếu chưa tới 07:00 hôm nay thì lấy 07:00 hôm qua\nif (now < new Date(now.getFullYear(), now.getMonth(), now.getDate(), 7, 0, 0, 0)) {\n    end.setDate(end.getDate() - 1);\n}\n\n// Bắt đầu = 07:00 cách đây 7 ngày\nconst start = new Date(end);\nstart.setDate(start.getDate() - 8);\nstart.setMilliseconds(0);\n\nmsg.query = `\nSELECT \n    sum(\"weight\")  / 1000 \nFROM \"cut_roll_production\" \nWHERE \n    time >= ${start.getTime()}ms \n    and time <= ${end.getTime()}ms\nGROUP BY time(1d,-7h) fill(none) \nORDER BY time ASC\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2270,
+        "y": 1440,
+        "wires": [
+            [
+                "e58a1cad6e379764"
+            ]
+        ]
+    },
+    {
+        "id": "a7f5f51e7fa259c5",
+        "type": "http request",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2930,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aff6883cb1a37e22",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "spec",
+        "func": "const speed = msg.payload;\nconst bw = msg.actualBasicWeight;\n\nconst bwMap = Object.fromEntries(\n    bw.map(x => [\n        x.time,\n        x.mean\n    ])\n);\n\nconst merged = speed.map(x => ({\n    time: x.time,\n    actual_speed: x.mean,\n    actual_bw: bwMap[x.time]\n}));\n\nmsg.payload = merged;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2110,
+        "y": 1760,
+        "wires": [
+            [
+                "75852bfc0a2d7c8a"
+            ]
+        ]
+    },
+    {
+        "id": "d2a0a3f7ff349f28",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "lookup",
+        "func": "const bw = msg.payload.actual_bw;\n\n// Nếu tốc độ < 200 thì xem như bằng 0\nlet speed = Number(msg.payload.actual_speed);\nif (!Number.isFinite(speed) || speed < 200) {\n    speed = 0;\n}\n\n// Tìm BW gần nhất\nconst spec = msg.specTable.reduce((a, b) =>\n    Math.abs(a.bw - bw) < Math.abs(b.bw - bw) ? a : b\n);\n\n// Nếu máy không chạy thì không có tốc độ và năng suất định mức\nlet nominalSpeed = 0;\nlet nominalProduction = 0;\n\nif (speed > 0) {\n    nominalSpeed = Object.keys(spec.production_curve)\n        .map(Number)\n        .reduce((a, b) =>\n            Math.abs(a - speed) < Math.abs(b - speed) ? a : b\n        );\n\n    nominalProduction = spec.production_curve[nominalSpeed];\n}\n\nmsg.payload = {\n    nominal_bw: spec.bw,\n    nominal_speed: nominalSpeed,\n    nominal_production: nominalProduction,\n    power: spec.power,\n    steam: spec.steam,\n    water: spec.water,\n    time: msg.payload.time\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2630,
+        "y": 1760,
+        "wires": [
+            [
+                "5fec7564d04283cc"
+            ]
+        ]
+    },
+    {
+        "id": "4d318604e070950b",
+        "type": "inject",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1950,
+        "y": 1700,
+        "wires": [
+            [
+                "3723e5a5276f24d9"
+            ]
+        ]
+    },
+    {
+        "id": "3723e5a5276f24d9",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 13",
+        "func": "const now = new Date();\n\nconst end = new Date(now);\nend.setHours(0, 0, 0, 0);\n\nif (now < end) {\n    end.setDate(end.getDate()+1);\n}\n\nconst start = new Date(end);\nstart.setDate(start.getDate());\n\nmsg.query = `\nSELECT \n    mean(\"basic_weight\") \nFROM \"dongtien_realtime\" \nWHERE \n    time >= ${start.getTime()}ms \n    and time <= ${end.getTime()}ms + 1d\nGROUP BY time(1h), \"device\"::tag fill(none) \nORDER BY time ASC\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2130,
+        "y": 1700,
+        "wires": [
+            [
+                "9e740387227560c9"
+            ]
+        ]
+    },
+    {
+        "id": "9e740387227560c9",
+        "type": "influxdb in",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "Định lượng thực tế",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 2330,
+        "y": 1700,
+        "wires": [
+            [
+                "781f353383b4f755"
+            ]
+        ]
+    },
+    {
+        "id": "4afe3be3a5059c06",
+        "type": "debug",
+        "z": "62bd0f5f977b002a",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2140,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "781f353383b4f755",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 14",
+        "func": "msg.actualBasicWeight = msg.payload;\n// const now = new Date();\n\n// // Mốc 07:00 gần nhất\n// const end = new Date(now);\n// end.setHours(7, 0, 0, 999);\n\n// // Nếu chưa tới 07:00 hôm nay thì lấy 07:00 hôm qua\n// if (now < new Date(now.getFullYear(), now.getMonth(), now.getDate(), 7, 0, 0, 0)) {\n//     end.setDate(end.getDate() - 1);\n// }\n\n// // Bắt đầu = 07:00 cách đây 7 ngày\n// const start = new Date(end);\n// start.setDate(start.getDate() - 8);\n// start.setMilliseconds(0);\nconst now = new Date();\n\nconst end = new Date(now);\nend.setHours(0, 0, 0, 0);\n\nif (now < end) {\n    end.setDate(end.getDate());\n}\n\nconst start = new Date(end);\nstart.setDate(start.getDate());\nmsg.query = `\nSELECT \n    mean(\"speed_machine\") \nFROM \"dongtien_realtime\" \nWHERE \n    time >= ${start.getTime()}ms \n    and time <= ${end.getTime()}ms + 1d\nGROUP BY time(1h), \"device\"::tag fill(none) \nORDER BY time ASC\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2510,
+        "y": 1700,
+        "wires": [
+            [
+                "e3405ee708761566"
+            ]
+        ]
+    },
+    {
+        "id": "e3405ee708761566",
+        "type": "influxdb in",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "Tốc độ thực tế",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 2700,
+        "y": 1700,
+        "wires": [
+            [
+                "aff6883cb1a37e22"
+            ]
+        ]
+    },
+    {
+        "id": "fb3774fa054e245a",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "lookup",
+        "func": "const specTable = [\n{\n    bw: 90,\n    width: 4800,\n    power: 365,\n    steam: 1.90,\n    water: 3.50,\n    production_curve: {\n        415: 10.20,\n        420: 10.32,\n        425: 10.44,\n        430: 10.57,\n        435: 10.69,\n        440: 10.81,\n        445: 10.93,\n        450: 11.06,\n        460: 11.30,\n        470: 11.55,\n        480: 11.79\n    }\n},\n{\n    bw: 95,\n    width: 4800,\n    power: 365,\n    steam: 1.90,\n    water: 3.50,\n    production_curve: {\n        415: 10.76,\n        420: 10.89,\n        425: 11.02,\n        430: 11.15,\n        435: 11.28,\n        440: 11.41,\n        445: 11.54,\n        450: 11.67,\n        460: 11.93,\n        470: 12.19,\n        480: 12.45\n    }\n},\n{\n    bw: 100,\n    width: 4800,\n    power: 357,\n    steam: 1.85,\n    water: 3.40,\n    production_curve: {\n        415: 11.33,\n        420: 11.47,\n        425: 11.60,\n        430: 11.74,\n        435: 11.88,\n        440: 12.01,\n        445: 12.15,\n        450: 12.29,\n        460: 12.56,\n        470: 12.83,\n        480: 13.10\n    }\n},\n{\n    bw: 105,\n    width: 4800,\n    power: 357,\n    steam: 1.80,\n    water: 3.40,\n    production_curve: {\n        415: 11.90,\n        420: 12.04,\n        425: 12.18,\n        430: 12.33,\n        435: 12.47,\n        440: 12.61,\n        445: 12.76,\n        450: 12.90,\n        460: 13.19\n    }\n},\n{\n    bw: 110,\n    width: 4800,\n    power: 350,\n    steam: 1.75,\n    water: 3.30,\n    production_curve: {\n        400: 12.01,\n        405: 12.16,\n        410: 12.31,\n        415: 12.46,\n        420: 12.61,\n        425: 12.76,\n        430: 12.91,\n        435: 13.06,\n        440: 13.21,\n        445: 13.36,\n        450: 13.51\n    }\n},\n{\n    bw: 115,\n    width: 4800,\n    power: 350,\n    steam: 1.75,\n    water: 3.30,\n    production_curve: {\n        385: 12.09,\n        390: 12.24,\n        395: 12.40,\n        400: 12.56,\n        405: 12.71,\n        410: 12.87,\n        415: 13.03,\n        420: 13.19,\n        425: 13.34,\n        430: 13.50,\n        435: 13.66\n    }\n},\n{\n    bw: 120,\n    width: 4800,\n    power: 346,\n    steam: 1.70,\n    water: 3.30,\n    production_curve: {\n        370: 12.12,\n        375: 12.29,\n        380: 12.45,\n        385: 12.61,\n        390: 12.78,\n        395: 12.94,\n        400: 13.10,\n        405: 13.27,\n        410: 13.43,\n        415: 13.60,\n        420: 13.76\n    }\n},\n{\n    bw: 125,\n    width: 4800,\n    power: 343,\n    steam: 1.70,\n    water: 3.30,\n    production_curve: {\n        355: 12.11,\n        360: 12.29,\n        365: 12.46,\n        370: 12.63,\n        375: 12.80,\n        380: 12.97,\n        385: 13.14,\n        390: 13.31,\n        395: 13.48\n    }\n},\n{\n    bw: 130,\n    width: 4800,\n    power: 340,\n    steam: 1.65,\n    water: 3.30,\n    production_curve: {\n        340: 12.07,\n        345: 12.24,\n        350: 12.42,\n        355: 12.60,\n        360: 12.78,\n        365: 12.95,\n        370: 13.13,\n        375: 13.31,\n        380: 13.49\n    }\n},\n{\n    bw: 135,\n    width: 4800,\n    power: 340,\n    steam: 1.65,\n    water: 3.30,\n    production_curve: {\n        330: 12.16,\n        335: 12.35,\n        340: 12.53,\n        345: 12.71,\n        350: 12.90\n    }\n},\n{\n    bw: 140,\n    width: 4800,\n    power: 337,\n    steam: 1.65,\n    water: 3.25,\n    production_curve: {\n        315: 12.04,\n        320: 12.23,\n        325: 12.42,\n        330: 12.61,\n        335: 12.80,\n        340: 12.99,\n        345: 13.19,\n        350: 13.38\n    }\n},\n{\n    bw: 145,\n    width: 4800,\n    power: 335,\n    steam: 1.60,\n    water: 3.25,\n    production_curve: {\n        305: 12.07,\n        310: 12.27,\n        315: 12.47,\n        320: 12.67,\n        325: 12.87,\n        330: 13.06,\n        335: 13.26,\n        340: 13.46,\n        345: 13.66,\n        350: 13.85\n    }\n},\n{\n    bw: 150,\n    width: 4800,\n    power: 335,\n    steam: 1.60,\n    water: 3.25,\n    production_curve: {\n        300: 12.29,\n        305: 12.49,\n        310: 12.69,\n        315: 12.90,\n        320: 13.10,\n        325: 13.31,\n        330: 13.51,\n        335: 13.72\n    }\n}\n];\n\nmsg.specTable = specTable;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2510,
+        "y": 1760,
+        "wires": [
+            [
+                "d2a0a3f7ff349f28"
+            ]
+        ]
+    },
+    {
+        "id": "75852bfc0a2d7c8a",
+        "type": "split",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 2230,
+        "y": 1760,
+        "wires": [
+            [
+                "2613b9f14de2af80"
+            ]
+        ]
+    },
+    {
+        "id": "2613b9f14de2af80",
+        "type": "delay",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2370,
+        "y": 1760,
+        "wires": [
+            [
+                "fb3774fa054e245a"
+            ]
+        ]
+    },
+    {
+        "id": "5fec7564d04283cc",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "dump data",
+        "func": "// Convert to Influx Line Protocol\nfunction escape_string(str) {\n    return str\n        .toString()\n        .replace(/\\s/g, \"\\\\ \")\n        .replace(/,/g, \"\\\\,\")\n        .replace(/=/g, \"\\\\=\");\n}\n\nlet timestamp = new Date(msg.payload.time).getTime();\n\nif (isNaN(timestamp)) {\n    node.error(\"Timestamp không hợp lệ\");\n    return null;\n}\n\nlet tags = [\n    `factory=${escape_string(\"Giấy Đồng Tiến Long An\")}`,\n    `system=${escape_string(\"OEE\")}`,\n    `machine=${escape_string(\"PM6\")}`,\n];\n\nlet fields = [\n    `nominal_bw=${msg.payload.nominal_bw}`,\n    `nominal_speed=${msg.payload.nominal_speed}`,\n    `nominal_production=${msg.payload.nominal_production}`,\n    `power=${msg.payload.power}`,\n    `air=${msg.payload.steam}`,\n    `water=${msg.payload.water}`,\n];\n\nlet msg_nominal = {\n    payload: `paper_daily_nominal,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`,\n    db: \"dongtien\",\n    precision: \"ms\"\n};\n\nreturn [[msg_nominal]];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2150,
+        "y": 1820,
+        "wires": [
+            [
+                "5ae9d81df89ed138"
+            ]
+        ]
+    },
+    {
+        "id": "5ae9d81df89ed138",
+        "type": "http request",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2350,
+        "y": 1820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd7fbae3a74dbe7e",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 15",
+        "func": "const now = new Date();\n\nconst end = new Date(now);\nend.setHours(0, 0, 0, 0);\n\nif (now < end) {\n    end.setDate(end.getDate() - 1);\n}\n\nconst start = new Date(end);\nstart.setDate(start.getDate() - 7);\n\nmsg.query = `\nSELECT SUM(\"hourly_production\") AS \"nominal_production\"\nFROM (\n    SELECT integral(\"ton_per_min\", 1m) AS \"hourly_production\"\n    FROM (\n        SELECT\n            (\n                mean(\"nominal_speed\") *\n                4.6 *\n                mean(\"nominal_bw\")\n            ) / 1000000 AS \"ton_per_min\"\n        FROM \"paper_daily_nominal\"\n        WHERE\n            \"machine\" = 'PM6'\n            AND time >= ${start.getTime()}ms \n            and time <= ${end.getTime()}ms + 1d\n        GROUP BY time(1m)\n        fill(none)\n    )\n    GROUP BY time(1h)\n    fill(0)\n)\nWHERE\n    time >= ${start.getTime()}ms \n    and time <= ${end.getTime()}ms + 1d\nGROUP BY time(1d)\nfill(none)\n`;\nmsg.payload = {\n    start: start,\n    end: end\n}; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2290,
+        "y": 1180,
+        "wires": [
+            [
+                "d553f7839bcc27df"
+            ]
+        ]
+    },
+    {
+        "id": "d553f7839bcc27df",
+        "type": "influxdb in",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "Sản lượng kế hoạch",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 2500,
+        "y": 1260,
+        "wires": [
+            [
+                "e6a19547d759b240"
+            ]
+        ]
+    },
+    {
+        "id": "ba07161a052febd7",
+        "type": "inject",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2100,
+        "y": 1260,
+        "wires": [
+            [
+                "bd7fbae3a74dbe7e"
+            ]
+        ]
+    },
+    {
+        "id": "a1ae75e912458be5",
+        "type": "catch",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "scope": [
+            "4153dc8eb8eb8dcd",
+            "412225ca510b880e",
+            "07033573f00e96c8",
+            "ec1c863ed92f7479",
+            "61426f3aea48e501",
+            "c1d89cf1495348bd",
+            "2f2155fc9ed712c0",
+            "9dbbfcacc7be7a5e",
+            "ed6af60ac20127de",
+            "49aa5171fdbbd789",
+            "559cdb35c2a0db0e",
+            "900d3cfbddd1cde7",
+            "68465022958ccd3c",
+            "ce778d2f3ea7a2df",
+            "dbd27ab8162d2551",
+            "4099cef91c31f319",
+            "13ccde8b8244293b",
+            "d6acdf03b28b1576",
+            "8b41982d54615ce6",
+            "61a7618ffd2a49d4",
+            "2145e395ef5b869c",
+            "ece262d40c68d815",
+            "e96810c0f112448e",
+            "b1cf4541a021df4c",
+            "431d5204d8bbd219",
+            "5b1e824a321a7ee3",
+            "8d0fea105a5aafc8",
+            "446a6d3f5de7b21e",
+            "c59ef2915a62e116",
+            "33706d764038b0e4",
+            "ca5dfb01355f6f22",
+            "f7602fe66cb412fc",
+            "539c9d077b4c9eff",
+            "aac7706cb08363f7",
+            "f217f85eebecb51f",
+            "5e385c0b10211c50",
+            "3a637f6d2ba03c2c",
+            "d12d202b1f4073ae",
+            "25aefe8de9cc058c",
+            "6ba0b259255443d7",
+            "656038830c767f27",
+            "2a8d1709d03bbd88",
+            "880f8354f9143e12",
+            "979d37dff5e68116",
+            "059b9a7273e33e94",
+            "03a537d075611121",
+            "e58ea31ec773aaba",
+            "a7465e95530705c2",
+            "38ad508b9893d99e",
+            "7a944772881525f7",
+            "6b8795cf4eb16fd2",
+            "cd0f72708375b0b2",
+            "2400d3f3cee52b48",
+            "7cc18902dfa8839d",
+            "c64135bc9f03a844",
+            "381c974554ac2e77",
+            "abafdcadc9e84b93",
+            "a4652b80e57cfe00",
+            "741e90e5c8d87217",
+            "06e97c1d0d578fcd",
+            "bd29e9009b083eb9",
+            "5cfd9c296721cf8c",
+            "c1948e50aaafbdcd",
+            "56360e345c9e6e80",
+            "e5395eda57607755",
+            "2904652b07ba03d5",
+            "66d599d97168b882",
+            "a04f24d13f62dae5",
+            "b5354422cf2411b4",
+            "ca06d451c837dbe6",
+            "f640d4593d84671e",
+            "965821ddc0ed1758",
+            "6814fdd07c1d171c",
+            "d0d958dc150d035e",
+            "60013b53c5110b91",
+            "2e75f8e3ee65368e",
+            "492f0733d205cfac"
+        ],
+        "uncaught": false,
+        "x": 640,
+        "y": 20,
+        "wires": [
+            [
+                "b92b1b10eb08cf9d"
+            ]
+        ]
+    },
+    {
+        "id": "b92b1b10eb08cf9d",
+        "type": "debug",
+        "z": "62bd0f5f977b002a",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 60,
         "wires": []
     },
     {
@@ -17660,7 +18991,7 @@
         "type": "dongtien-insert",
         "z": "06c2b55e1c9ea8bc",
         "name": "Lò hơi",
-        "meterConfig": "6f8f18c82567cb6e",
+        "meterConfig": "eb8bc5cc370ed092",
         "factory": "Dong Tien Paper Long An",
         "transformer": "5000KVA",
         "parentSystem": "ACB 4000A",
@@ -17977,6 +19308,33 @@
             [
                 "e743c0f13230dd3c"
             ]
+        ]
+    },
+    {
+        "id": "4397dcc121e1bd53",
+        "type": "inject",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "EMIC-Lohoi",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"ts\":1785684266000,\"values\":{\"ImpEp\":969475,\"ImpEp-p1\":552098,\"ImpEp-p2\":172449,\"ImpEp-p3\":244927,\"ExpEp\":0,\"ExpEp-p1\":0,\"ExpEp-p2\":0,\"ExpEp-p3\":0,\"ImpEq\":254056,\"ExpEq\":526,\"Ua\":223500,\"Ub\":221930,\"Uc\":224010,\"Ia\":326400,\"Ib\":355200,\"Ic\":403200,\"Cos\":970}}]",
+        "payloadType": "json",
+        "x": 4490,
+        "y": 2520,
+        "wires": [
+            []
         ]
     },
     {
