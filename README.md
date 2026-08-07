@@ -100,3 +100,109 @@ newgrp docker
 ```bash
 pm2 kill
 ```
+
+Lỗi này xảy ra do file `pm2-mind.service` hiện tại vẫn đang dùng cấu hình cũ của PM2 (chế độ `Type=forking`) hoặc lệnh `ExecStart` gặp xung đột khi khởi động daemon.
+
+Khi `Type=forking` được khai báo, `systemd` bắt buộc phải thấy PM2 trả về đúng PID của daemon ngầm. Nếu PM2 khởi động không đúng quy trình đó, `systemd` sẽ đánh giá là vi phạm protocol và báo lỗi ngay.
+
+Hãy làm theo các bước dưới đây để **xóa sạch service bị lỗi và tạo lại một service chuẩn hoạt động 100%**:
+
+---
+
+## Bước 1: Khai báo lại app PM2 chuẩn (không có `--no-autorestart`)
+
+Đảm bảo app của bạn đã được thêm đúng cách và lưu lại dump file:
+
+```bash
+# 1. Xóa app cũ
+pm2 delete restart-container
+
+# 2. Thêm lại app chạy cron (BỎ cờ --no-autorestart)
+pm2 start restart_container.sh --interpreter bash --name restart-container --cron "0 6 * * *"
+
+# 3. Lưu trạng thái
+pm2 save
+
+```
+
+---
+
+## Bước 2: Dừng service lỗi và dọn dẹp startup cũ
+
+```bash
+# Dừng service đang bị fail
+sudo systemctl stop pm2-mind.service
+
+# Bỏ đăng ký startup cũ
+pm2 unstartup
+
+```
+
+---
+
+## Bước 3: Tạo lại file Service chuẩn cho `systemd`
+
+Mở file service bằng `nano`:
+
+```bash
+sudo nano /etc/systemd/system/pm2-mind.service
+
+```
+
+Xóa toàn bộ nội dung cũ trong file và **dán đoạn cấu hình chuẩn bên dưới vào** *(chế độ `Type=simple` giúp loại bỏ hoàn toàn lỗi protocol)*:
+
+```ini
+[Unit]
+Description=PM2 process manager
+After=network.target
+
+[Service]
+Type=simple
+User=mind
+WorkingDirectory=/home/mind
+Environment=PATH=/home/mind/.nvm/versions/node/v22.22.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Environment=PM2_HOME=/home/mind/.pm2
+
+ExecStart=/home/mind/.nvm/versions/node/v22.22.3/lib/node_modules/pm2/bin/pm2 sysmon
+ExecReload=/home/mind/.nvm/versions/node/v22.22.3/lib/node_modules/pm2/bin/pm2 reload all
+ExecStop=/home/mind/.nvm/versions/node/v22.22.3/lib/node_modules/pm2/bin/pm2 kill
+
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+```
+
+*(Lưu file: Nhấn `Ctrl + O` ➔ `Enter` ➔ Thoát bằng `Ctrl + X`)*
+
+---
+
+## Bước 4: Kích hoạt và chạy Service
+
+Nạp lại cấu hình `systemd` và bật service lên:
+
+```bash
+# Reload cấu hình systemd
+sudo systemctl daemon-reload
+
+# Bật tính năng tự khởi động cùng hệ thống
+sudo systemctl enable pm2-mind
+
+# Khởi chạy service ngay bây giờ
+sudo systemctl start pm2-mind
+
+```
+
+---
+
+## Bước 5: Kiểm tra kết quả
+
+Chạy lệnh kiểm tra trạng thái:
+
+```bash
+systemctl status pm2-mind.service
+
+```
+
+Lúc này, dòng trạng thái sẽ đổi thành **`Active: active (running)`** màu xanh lá cây. Bạn có thể kiểm tra danh sách bằng `pm2 list` hoặc khởi động lại máy để nghiệm thu!
