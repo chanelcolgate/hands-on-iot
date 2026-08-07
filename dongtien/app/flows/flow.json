@@ -12703,7 +12703,7 @@
         "retentionPolicy": "",
         "org": "organisation",
         "x": 2490,
-        "y": 1320,
+        "y": 1240,
         "wires": [
             [
                 "447624bbf5c68d5f"
@@ -12753,7 +12753,7 @@
         "type": "function",
         "z": "62bd0f5f977b002a",
         "name": "function 7",
-        "func": "global.set(\"sltt\", msg.payload[7].production);\nreturn msg;",
+        "func": "global.set(\"sltt\", msg.payload[6].production);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -12764,7 +12764,7 @@
         "y": 1380,
         "wires": [
             [
-                "3ea106e91dc8587a"
+                "bd7fbae3a74dbe7e"
             ]
         ]
     },
@@ -12773,7 +12773,7 @@
         "type": "function",
         "z": "62bd0f5f977b002a",
         "name": "function 8",
-        "func": "// Convert to Influx Line Protocol\nfunction escape_string(str) {\n    return str\n        .toString()\n        .replace(/\\s/g, \"\\\\ \")\n        .replace(/,/g, \"\\\\,\")\n        .replace(/=/g, \"\\\\=\");\n}\nmsg.payload = msg.payload[7];\nlet timestamp = new Date(msg.payload.time).getTime();\n\nif (isNaN(timestamp)) {\n    node.error(\"Timestamp không hợp lệ\");\n    return null;\n}\n\nlet actualProduction = Number(global.get(\"sltt\"));\n\nif (actualProduction < 1) {\n    actualProduction = 0;\n}\nconst finishedProduction = Number(global.get(\"sltp\"));\n\nlet quality = 0;\n\nif (\n    Number.isFinite(actualProduction) &&\n    Number.isFinite(finishedProduction) &&\n    actualProduction > 0\n) {\n    quality = +(finishedProduction / actualProduction * 100).toFixed(2);\n}\n\nlet oee = 0;\nlet performance = 100;\nconst availability = msg.payload.Availability;\n\nif (\n    Number.isFinite(availability) &&\n    Number.isFinite(performance) &&\n    Number.isFinite(quality)\n) {\n    oee = +(availability * performance * quality / 10000).toFixed(2);\n}\n\nconst run_time_min = +(1440 * availability / 100).toFixed(2);\nconst downtime_min = +(1440 - run_time_min).toFixed(2);\n\nlet tags = [\n    `factory=${escape_string(\"Giấy Đồng Tiến Long An\")}`,\n    `system=${escape_string(\"OEE\")}`,\n    `machine=${escape_string(\"PM6\")}`,\n    `paper_type=${escape_string(\"M6S\")}`,\n];\n\nlet fields = [\n    `availability=${availability}`,\n    `performance=${performance}`,\n    `quality=${quality}`,\n    `oee=${oee}`,\n    // `timestamp=${msg.payload.time}`\n];\n\nlet fields_2 = [\n    `finished_production=${finishedProduction}`,\n    `actual_production=${actualProduction}`,\n    `run_time_min=${run_time_min}`,\n    `downtime_min=${downtime_min}`,\n];\n\n// Influx Line Protocol\n// msg.payload =\n//     `paper_daily_oee,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`;\n\n// msg.db = \"dongtien\";\n// msg.precision = \"ms\";\n\n\nlet msgOEE = {\n    payload: `paper_daily_oee,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`,\n    db: \"dongtien\",\n    precision: \"ms\"\n};\n\nlet msgProduction  = {\n    payload: `paper_daily_production,${tags.join(\",\")} ${fields_2.join(\",\")} ${timestamp}`,\n    db: \"dongtien\",\n    precision: \"ms\"\n};\n// msg.payload = fields_2;\nreturn [[msgOEE, msgProduction]];\n// return msg;",
+        "func": "// Convert to Influx Line Protocol\nfunction escape_string(str) {\n    return str\n        .toString()\n        .replace(/\\s/g, \"\\\\ \")\n        .replace(/,/g, \"\\\\,\")\n        .replace(/=/g, \"\\\\=\");\n}\nmsg.payload = msg.payload[6];\nlet timestamp = new Date(msg.payload.time).getTime();\n\nif (isNaN(timestamp)) {\n    node.error(\"Timestamp không hợp lệ\");\n    return null;\n}\n\nlet actualProduction = Number(global.get(\"sltt\"));\n\nif (actualProduction < 1) {\n    actualProduction = 0;\n}\nconst finishedProduction = Number(global.get(\"sltp\"));\nconst planProduction = Number(global.get(\"slkh\"));\n\nlet quality = 0;\nlet performance = 0;\n\nif (\n    Number.isFinite(actualProduction) &&\n    Number.isFinite(finishedProduction) &&\n    actualProduction > 0\n) {\n    quality = +(finishedProduction / actualProduction * 100).toFixed(2);\n}\n\nif (\n    Number.isFinite(actualProduction) &&\n    Number.isFinite(planProduction) &&\n    planProduction > 0\n) {\n    performance = +(actualProduction / planProduction * 100).toFixed(2);\n}\n\nlet oee = 0;\n\nconst availability = msg.payload.Availability;\n\nif (\n    Number.isFinite(availability) &&\n    Number.isFinite(performance) &&\n    Number.isFinite(quality)\n) {\n    oee = +(availability * performance * quality / 10000).toFixed(2);\n}\n\nconst run_time_min = +(1440 * availability / 100).toFixed(2);\nconst downtime_min = +(1440 - run_time_min).toFixed(2);\n\nlet tags = [\n    `factory=${escape_string(\"Giấy Đồng Tiến Long An\")}`,\n    `system=${escape_string(\"OEE\")}`,\n    `machine=${escape_string(\"PM6\")}`,\n    `paper_type=${escape_string(\"M6S\")}`,\n];\n\nlet fields = [\n    `availability=${availability}`,\n    `performance=${performance}`,\n    `quality=${quality}`,\n    `oee=${oee}`,\n    // `timestamp=${msg.payload.time}`\n];\n\nlet fields_2 = [\n    `finished_production=${finishedProduction}`,\n    `actual_production=${actualProduction}`,\n    `run_time_min=${run_time_min}`,\n    `downtime_min=${downtime_min}`,\n];\n\n// Influx Line Protocol\n// msg.payload =\n//     `paper_daily_oee,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`;\n\n// msg.db = \"dongtien\";\n// msg.precision = \"ms\";\n\n\nlet msgOEE = {\n    payload: `paper_daily_oee,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`,\n    db: \"dongtien\",\n    precision: \"ms\"\n};\n\nlet msgProduction  = {\n    payload: `paper_daily_production,${tags.join(\",\")} ${fields_2.join(\",\")} ${timestamp}`,\n    db: \"dongtien\",\n    precision: \"ms\"\n};\n// msg.payload = fields_2;\nreturn [[msgOEE, msgProduction]];\n// return msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -12781,7 +12781,7 @@
         "finalize": "",
         "libs": [],
         "x": 2780,
-        "y": 1320,
+        "y": 1240,
         "wires": [
             [
                 "a7f5f51e7fa259c5"
@@ -12793,7 +12793,7 @@
         "type": "function",
         "z": "62bd0f5f977b002a",
         "name": "function 9",
-        "func": "msg.payload.forEach(row => {\n    row.time = new Date(\n        new Date(row.time).getTime() + 7 * 60 * 60 * 1000\n    ).toISOString();\n});\nglobal.set(\"sltp\", msg.payload[7].sum);\n\nreturn msg;",
+        "func": "msg.payload.forEach(row => {\n    row.time = new Date(\n        new Date(row.time).getTime() + 7 * 60 * 60 * 1000\n    ).toISOString();\n});\nglobal.set(\"sltp\", msg.payload[6].sum);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -12821,8 +12821,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2700,
-        "y": 1260,
+        "x": 2740,
+        "y": 1520,
         "wires": []
     },
     {
@@ -12838,7 +12838,7 @@
         "finalize": "",
         "libs": [],
         "x": 2270,
-        "y": 1320,
+        "y": 1240,
         "wires": [
             [
                 "0c03e88908c224a0"
@@ -13190,8 +13190,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2290,
-        "y": 1180,
+        "x": 2270,
+        "y": 1320,
         "wires": [
             [
                 "d553f7839bcc27df"
@@ -13210,39 +13210,10 @@
         "retentionPolicy": "",
         "org": "organisation",
         "x": 2500,
-        "y": 1260,
+        "y": 1320,
         "wires": [
             [
-                "e6a19547d759b240"
-            ]
-        ]
-    },
-    {
-        "id": "ba07161a052febd7",
-        "type": "inject",
-        "z": "62bd0f5f977b002a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 2100,
-        "y": 1260,
-        "wires": [
-            [
-                "bd7fbae3a74dbe7e"
+                "3d74e0136587a1b6"
             ]
         ]
     },
@@ -13355,6 +13326,77 @@
         "x": 760,
         "y": 60,
         "wires": []
+    },
+    {
+        "id": "3bd15e0333b635c5",
+        "type": "http request",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://172.26.2.12:8000/apioee/v2/oee/quality",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2370,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4b65320a91c793fb",
+        "type": "inject",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 07 * * *",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2170,
+        "y": 1520,
+        "wires": [
+            [
+                "3bd15e0333b635c5"
+            ]
+        ]
+    },
+    {
+        "id": "3d74e0136587a1b6",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 16",
+        "func": "global.set(\"slkh\", msg.payload[5].nominal_production);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2730,
+        "y": 1320,
+        "wires": [
+            [
+                "3ea106e91dc8587a"
+            ]
+        ]
     },
     {
         "id": "9d9caf91fa2a534a",
