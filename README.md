@@ -64,3 +64,15 @@ flow.get('count')
 global.set('count', 5)
 global.set('count')
 ```
+
+### Config Docker-Compose
+
+```bash
+docker update --restart always hands-on-iot-influxdb-1
+docker inspect hands-on-iot-influxdb-1 --format "{{.HostConfig.RestartPolicy.Name}}"
+```
+
+- Backup
+```bash
+sudo influxd backup --portable -host 172.26.1.11:8088 -database dongtien /mnt/d/backup_scg/DT
+```
