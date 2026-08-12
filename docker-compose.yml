@@ -37,6 +37,7 @@ services:
     container_name: renderer
     environment:
       - AUTH_TOKEN=mind
+      - RENDERING_TIMEOUT=30
     logging:
       driver: "json-file"
       options:
