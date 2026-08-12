@@ -55,9 +55,11 @@ services:
       - "./grafana/dashboards:/var/lib/grafana/dashboards"
     environment:
       - GF_SERVER_ROOT_URL=http://localhost:3090
+      - GF_SECURITY_ALLOW_EMBEDDING=true
       - GF_RENDERING_SERVER_URL=http://renderer:8081/render
       - GF_RENDERING_CALLBACK_URL=http://grafana:3000/
       - GF_RENDERING_RENDERER_TOKEN=mind
+      - GF_RENDERING_CLUSTERING_TIMEOUT=60
     depends_on:
       - renderer
     logging:
