@@ -1,0 +1,1607 @@
+[
+    {
+        "id": "87e2a62cf0ba2f65",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4152dadd83845af8",
+        "type": "caosu-pr-meter-config",
+        "name": "Khu Vực Cán Ù",
+        "device": "ECU02",
+        "metrics": [
+            {
+                "key": "mu_tap:b_run_mlm1",
+                "machineName": "Máy Lùa Mủ 01",
+                "tagValue": "b_run_mlm1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_mlm1",
+                "machineName": "Máy Lùa Mủ 01",
+                "tagValue": "r_freq_mlm1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_mlm2",
+                "machineName": "Máy Lùa Mủ 02",
+                "tagValue": "b_run_mlm2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_mlm2",
+                "machineName": "Máy Lùa Mủ 02",
+                "tagValue": "r_freq_mlm2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_mlm3",
+                "machineName": "Máy Lùa Mủ 03",
+                "tagValue": "b_run_mlm3",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_mlm3",
+                "machineName": "Máy Lùa Mủ 03",
+                "tagValue": "r_freq_mlm3",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_bttl1",
+                "machineName": "Băng Tải Cao Su Tiếp Liệu 01",
+                "tagValue": "b_run_bttl1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_bttl1",
+                "machineName": "Băng Tải Cao Su Tiếp Liệu 01",
+                "tagValue": "r_freq_bttl1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_cm1",
+                "machineName": "Cắt Miếng 01",
+                "tagValue": "b_run_cm1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_cm1",
+                "machineName": "Cắt Miếng 01",
+                "tagValue": "r_temp_cm1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_cm1",
+                "machineName": "Cắt Miếng 01",
+                "tagValue": "r_freq_cm1",
+                "fieldName": "value"
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "dc039c202d24f295",
+        "type": "caosu-pr-meter-config",
+        "name": "Khu Vực 01 Dây Chuyền Chính",
+        "device": "ECU02",
+        "metrics": [
+            {
+                "key": "mu_tap:b_run_mlm4",
+                "machineName": "Máy Lùa Mủ 04",
+                "tagValue": "b_run_mlm4",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_mlm4",
+                "machineName": "Máy Lùa Mủ 04",
+                "tagValue": "r_freq_mlm4",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_mlm5",
+                "machineName": "Máy Lùa Mủ 05",
+                "tagValue": "b_run_mlm5",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_mlm5",
+                "machineName": "Máy Lùa Mủ 05",
+                "tagValue": "r_freq_mlm5",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_mlm6",
+                "machineName": "Máy Lùa Mủ 06",
+                "tagValue": "b_run_mlm6",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_mlm6",
+                "machineName": "Máy Lùa Mủ 06",
+                "tagValue": "r_freq_mlm6",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_bttl2",
+                "machineName": "Băng Tải Cao Su Tiếp Liệu 02",
+                "tagValue": "b_run_bttl2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_bttl2",
+                "machineName": "Băng Tải Cao Su Tiếp Liệu 02",
+                "tagValue": "r_freq_bttl2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_cm2",
+                "machineName": "Cắt Miếng 02",
+                "tagValue": "b_run_cm2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_cm2",
+                "machineName": "Cắt Miếng 02",
+                "tagValue": "r_temp_cm2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_cm2",
+                "machineName": "Cắt Miếng 02",
+                "tagValue": "r_freq_cm2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_qm1",
+                "machineName": "Quậy Mủ 01",
+                "tagValue": "b_run_qm1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qm1",
+                "machineName": "Quậy Mủ 01",
+                "tagValue": "r_freq_qm1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_vt1",
+                "machineName": "Vít Tải 01",
+                "tagValue": "b_run_vt1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_vt1",
+                "machineName": "Vít Tải 01",
+                "tagValue": "r_freq_vt1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_cm3",
+                "machineName": "Cắt Miếng 03",
+                "tagValue": "b_run_cm3",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_cm3",
+                "machineName": "Cắt Miếng 03",
+                "tagValue": "r_temp_cm3",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_cm3",
+                "machineName": "Cắt Miếng 03",
+                "tagValue": "r_freq_cm3",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_qm2",
+                "machineName": "Quậy Mủ 02",
+                "tagValue": "b_run_qm2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qm2",
+                "machineName": "Quậy Mủ 02",
+                "tagValue": "r_freq_qm2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_vt2",
+                "machineName": "Vít Tải 02",
+                "tagValue": "b_run_vt2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_vt2",
+                "machineName": "Vít Tải 02",
+                "tagValue": "r_freq_vt2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_c3t1",
+                "machineName": "Cán Mủ 3 Trục 01",
+                "tagValue": "b_run_c3t1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_c3t1",
+                "machineName": "Cán Mủ 3 Trục 01",
+                "tagValue": "r_temp_c3t1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_c3t1",
+                "machineName": "Cán Mủ 3 Trục 01",
+                "tagValue": "r_freq_c3t1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_btcs1",
+                "machineName": "Băng Tải Cao Su 01",
+                "tagValue": "b_run_btcs1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_btcs1",
+                "machineName": "Băng Tải Cao Su 01",
+                "tagValue": "r_freq_btcs1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_ccs1",
+                "machineName": "Cán Cao Su C1",
+                "tagValue": "b_run_ccs1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_ccs1",
+                "machineName": "Cán Cao Su C1",
+                "tagValue": "r_temp_ccs1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_ccs1",
+                "machineName": "Cán Cao Su C1",
+                "tagValue": "r_freq_ccs1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_btcs2",
+                "machineName": "Băng Tải Cao Su 02",
+                "tagValue": "b_run_btcs2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_btcs2",
+                "machineName": "Băng Tải Cao Su 02",
+                "tagValue": "r_freq_btcs2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_ccs2",
+                "machineName": "Cán Cao Su C2",
+                "tagValue": "b_run_ccs2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_ccs2",
+                "machineName": "Cán Cao Su C2",
+                "tagValue": "r_temp_ccs2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_ccs2",
+                "machineName": "Cán Cao Su C2",
+                "tagValue": "r_freq_ccs2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_btcs3",
+                "machineName": "Băng Tải Cao Su 03",
+                "tagValue": "b_run_btcs3",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_btcs3",
+                "machineName": "Băng Tải Cao Su 03",
+                "tagValue": "r_freq_btcs3",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_tl1",
+                "machineName": "Tiếp Liệu 01",
+                "tagValue": "b_run_tl1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_tl1",
+                "machineName": "Tiếp Liệu 01",
+                "tagValue": "r_freq_tl1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_cc1",
+                "machineName": "Cán Cắt 01",
+                "tagValue": "b_run_cc1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_cc1",
+                "machineName": "Cán Cắt 01",
+                "tagValue": "r_temp_cc1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_cc1",
+                "machineName": "Cán Cắt 01",
+                "tagValue": "r_freq_cc1",
+                "fieldName": "value"
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "3075f0fcbe49e77d",
+        "type": "caosu-pr-meter-config",
+        "name": "Khu Vực 02 Dây Chuyền Chính",
+        "device": "ECU02",
+        "metrics": [
+            {
+                "key": "mu_tap:b_run_bc1",
+                "machineName": "BƠM CỐM 01",
+                "tagValue": "b_run_bc1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_vtn",
+                "machineName": "VÍT TẢI NGANG",
+                "tagValue": "b_run_vtn",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_vtn",
+                "machineName": "VÍT TẢI NGANG",
+                "tagValue": "r_freq_vtn",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_c3t2",
+                "machineName": "CÁN MỦ 3 TRỤC 02",
+                "tagValue": "b_run_c3t2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_c3t2",
+                "machineName": "CÁN MỦ 3 TRỤC 02",
+                "tagValue": "r_temp_c3t2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_c3t2",
+                "machineName": "CÁN MỦ 3 TRỤC 02",
+                "tagValue": "r_freq_c3t2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_btcs4",
+                "machineName": "BĂNG TẢI CAO SU 4",
+                "tagValue": "b_run_btcs4",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_btcs4",
+                "machineName": "BĂNG TẢI CAO SU 4",
+                "tagValue": "r_freq_btcs4",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_ccs3",
+                "machineName": "CÁN CAO SU C3",
+                "tagValue": "b_run_ccs3",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_ccs3",
+                "machineName": "CÁN CAO SU C3",
+                "tagValue": "r_temp_ccs3",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_ccs3",
+                "machineName": "CÁN CAO SU C3",
+                "tagValue": "r_freq_ccs3",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_btcs5",
+                "machineName": "BĂNG TẢI CAO SU 5",
+                "tagValue": "b_run_btcs5",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_btcs5",
+                "machineName": "BĂNG TẢI CAO SU 5",
+                "tagValue": "r_freq_btcs5",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_ccs4",
+                "machineName": "CÁN CAO SU C4",
+                "tagValue": "b_run_ccs4",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_ccs4",
+                "machineName": "CÁN CAO SU C4",
+                "tagValue": "r_temp_ccs4",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_ccs4",
+                "machineName": "CÁN CAO SU C4",
+                "tagValue": "r_freq_ccs4",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_btcs6",
+                "machineName": "BĂNG TẢI CAO SU 6",
+                "tagValue": "b_run_btcs6",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_btcs6",
+                "machineName": "BĂNG TẢI CAO SU 6",
+                "tagValue": "r_freq_btcs6",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_ccs5",
+                "machineName": "CÁN CAO SU C5",
+                "tagValue": "b_run_ccs5",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_ccs5",
+                "machineName": "CÁN CAO SU C5",
+                "tagValue": "r_temp_ccs5",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_ccs5",
+                "machineName": "CÁN CAO SU C5",
+                "tagValue": "r_freq_ccs5",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_btcs7",
+                "machineName": "BĂNG TẢI CAO SU 7",
+                "tagValue": "b_run_btcs7",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_btcs7",
+                "machineName": "BĂNG TẢI CAO SU 7",
+                "tagValue": "r_freq_btcs7",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_tl2",
+                "machineName": "TIẾP LIỆU 2",
+                "tagValue": "b_run_tl2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_tl2",
+                "machineName": "TIẾP LIỆU 2",
+                "tagValue": "r_freq_tl2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_cc2",
+                "machineName": "CÁN CẮT 02",
+                "tagValue": "b_run_cc2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_cc2",
+                "machineName": "CÁN CẮT 02",
+                "tagValue": "r_temp_cc2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_cc2",
+                "machineName": "CÁN CẮT 02",
+                "tagValue": "r_freq_cc2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_bc2",
+                "machineName": "BƠM CỐM 02",
+                "tagValue": "b_run_bc2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_sr",
+                "machineName": "SÀN RUNG",
+                "tagValue": "b_run_sr",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_sr",
+                "machineName": "SÀN RUNG",
+                "tagValue": "r_freq_sr",
+                "fieldName": "value"
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "c647779f3760eb9c",
+        "type": "caosu-pr-meter-config",
+        "name": "Khu Vực Lô Sấy",
+        "device": "ECU02",
+        "metrics": [
+            {
+                "key": "mu_tap:b_run_qc1",
+                "machineName": "QUẠT CHÍNH 01",
+                "tagValue": "b_run_qc1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_qc1",
+                "machineName": "QUẠT CHÍNH 01",
+                "tagValue": "r_temp_qc1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qc1",
+                "machineName": "QUẠT CHÍNH 01",
+                "tagValue": "r_freq_qc1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_qc2",
+                "machineName": "QUẠT CHÍNH 02",
+                "tagValue": "b_run_qc2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_qc2",
+                "machineName": "QUẠT CHÍNH 02",
+                "tagValue": "r_temp_qc2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qc2",
+                "machineName": "QUẠT CHÍNH 02",
+                "tagValue": "r_freq_qc2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_qk",
+                "machineName": "QUẠT KHÓI",
+                "tagValue": "b_run_qk",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qk",
+                "machineName": "QUẠT KHÓI",
+                "tagValue": "r_freq_qk",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_qn1",
+                "machineName": "QUẠT NGUỘI 01",
+                "tagValue": "b_run_qn1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qn1",
+                "machineName": "QUẠT NGUỘI 01",
+                "tagValue": "r_freq_qn1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_qn2",
+                "machineName": "QUẠT NGUỘI 02",
+                "tagValue": "b_run_qn2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qn2",
+                "machineName": "QUẠT NGUỘI 02",
+                "tagValue": "r_freq_qn2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_qhl",
+                "machineName": "QUẠT HỒI LƯU",
+                "tagValue": "b_run_qhl",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qhl",
+                "machineName": "QUẠT HỒI LƯU",
+                "tagValue": "r_freq_qhl",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_xdl",
+                "machineName": "XÍCH ĐẨY THÙNG",
+                "tagValue": "b_run_xdl",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_dd1",
+                "machineName": "ĐẦU ĐỐT 01",
+                "tagValue": "b_run_dd1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_dd2",
+                "machineName": "ĐẦU ĐỐT 02",
+                "tagValue": "b_run_dd2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_tkmm1",
+                "machineName": "THÁP KHỬ MÙI - MOTOR 01",
+                "tagValue": "b_run_tkmm1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_tkmm2",
+                "machineName": "THÁP KHỬ MÙI - MOTOR 02",
+                "tagValue": "b_run_tkmm2",
+                "fieldName": "value"
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "31b9e6978b25a932",
+        "type": "caosu-pr-meter-config",
+        "name": "Tổng",
+        "device": "ECU02",
+        "metrics": [
+            {
+                "key": "robot:counter",
+                "machineName": "Số bành mủ",
+                "tagValue": "robot:counter",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_flow_water",
+                "machineName": "Lượng Nước Tiêu Thụ",
+                "tagValue": "r_flow_water",
+                "fieldName": "value"
+            },
+            {
+                "key": "r_active_energy",
+                "machineName": "Điện Năng Tiêu Thụ",
+                "tagValue": "r_active_energy",
+                "fieldName": "value"
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "1aaff0fc302660fe",
+        "type": "mqtt-broker",
+        "name": "dongtien",
+        "broker": "14.225.168.113",
+        "port": "1338",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9125eb544805d51f",
+        "type": "caosu-pr-meter-config",
+        "name": "Hồ 1",
+        "device": "ECU01",
+        "metrics": [
+            {
+                "key": "danh_dong:r_ph_acid_ho_1",
+                "machineName": "PH acid",
+                "tagValue": "r_ph_acid_ho_1",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_mu_ho_1",
+                "machineName": "PH Mủ",
+                "tagValue": "r_ph_mu_ho_1",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_drc_ho_1",
+                "machineName": "DRC",
+                "tagValue": "r_drc_ho_1",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_muong_ho_1",
+                "machineName": "PH mương",
+                "tagValue": "r_ph_muong_ho_1",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_muc_ho_1",
+                "machineName": "Độ cao hồ",
+                "tagValue": "r_ph_muc_ho_1",
+                "fieldName": "value"
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "bcf7964dd6196679",
+        "type": "caosu-pr-meter-config",
+        "name": "Hồ 2",
+        "device": "ECU01",
+        "metrics": [
+            {
+                "key": "danh_dong:r_ph_acid_ho_2",
+                "machineName": "PH acid 2",
+                "tagValue": "r_ph_acid_ho_2",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_mu_ho_2",
+                "machineName": "PH Mủ 2",
+                "tagValue": "r_ph_mu_ho_2",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_drc_ho_2",
+                "machineName": "DRC 2",
+                "tagValue": "r_drc_ho_2",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_muong_ho_2",
+                "machineName": "PH mương 2",
+                "tagValue": "r_ph_muong_ho_2",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_muc_ho_2",
+                "machineName": "Độ cao hồ 2",
+                "tagValue": "r_ph_muc_ho_2",
+                "fieldName": "value"
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "bb9a960a7f02ddeb",
+        "type": "caosu-pr-meter-config",
+        "name": "Hồ 3",
+        "device": "ECU01",
+        "metrics": [
+            {
+                "key": "danh_dong:r_ph_acid_ho_3",
+                "machineName": "PH acid 3",
+                "tagValue": "r_ph_acid_ho_3",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_mu_ho_3",
+                "machineName": "PH Mủ 3",
+                "tagValue": "r_ph_mu_ho_3",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_drc_ho_3",
+                "machineName": "DRC 3",
+                "tagValue": "r_drc_ho_3",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_muong_ho_3",
+                "machineName": "PH mương 3",
+                "tagValue": "r_ph_muong_ho_3",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_muc_ho_3",
+                "machineName": "Độ cao hồ 3",
+                "tagValue": "r_ph_muc_ho_3",
+                "fieldName": "value"
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "91da4c99ab47b825",
+        "type": "caosu-pr-meter-config",
+        "name": "Hồ 4",
+        "device": "ECU01",
+        "metrics": [
+            {
+                "key": "danh_dong:r_ph_acid_ho_4",
+                "machineName": "PH acid 4",
+                "tagValue": "r_ph_acid_ho_4",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_mu_ho_4",
+                "machineName": "PH Mủ 4",
+                "tagValue": "r_ph_mu_ho_4",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_drc_ho_4",
+                "machineName": "DRC 4",
+                "tagValue": "r_drc_ho_4",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_muong_ho_4",
+                "machineName": "PH mương 4",
+                "tagValue": "r_ph_muong_ho_4",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_muc_ho_4",
+                "machineName": "Độ cao hồ 4",
+                "tagValue": "r_ph_muc_ho_4",
+                "fieldName": "value"
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "80b62c902f2feb39",
+        "type": "caosu-pr-meter-config",
+        "name": "Hồ 5",
+        "device": "ECU01",
+        "metrics": [
+            {
+                "key": "danh_dong:r_ph_acid_ho_5",
+                "machineName": "PH acid 5",
+                "tagValue": "r_ph_acid_ho_5",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_mu_ho_5",
+                "machineName": "PH Mủ 5",
+                "tagValue": "r_ph_mu_ho_5",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_drc_ho_5",
+                "machineName": "DRC 5",
+                "tagValue": "r_drc_ho_5",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_muong_ho_5",
+                "machineName": "PH mương 5",
+                "tagValue": "r_ph_muong_ho_5",
+                "fieldName": "value"
+            },
+            {
+                "key": "danh_dong:r_ph_muc_ho_5",
+                "machineName": "Độ cao hồ 5",
+                "tagValue": "r_ph_muc_ho_5",
+                "fieldName": "value"
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
+        "id": "ec4fde04bf5a914a",
+        "type": "influxdb",
+        "hostname": "influxdb",
+        "port": 8086,
+        "protocol": "http",
+        "database": "caosu_phu_rieng",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "dcf825554f6a2fe2",
+        "type": "inject",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"d\":[{\"tag\":\"robot:counter\",\"value\":606},{\"tag\":\"mu_tap:b_run_mlm1\",\"value\":1},{\"tag\":\"mu_tap:r_freq_mlm1\",\"value\":40.9},{\"tag\":\"mu_tap:b_run_mlm2\",\"value\":1},{\"tag\":\"mu_tap:r_freq_mlm2\",\"value\":44.57},{\"tag\":\"mu_tap:b_run_mlm3\",\"value\":1},{\"tag\":\"mu_tap:r_freq_mlm3\",\"value\":43.92},{\"tag\":\"mu_tap:b_run_bttl1\",\"value\":1},{\"tag\":\"mu_tap:r_freq_bttl1\",\"value\":46.58},{\"tag\":\"mu_tap:b_run_cm1\",\"value\":1},{\"tag\":\"mu_tap:r_temp_cm1\",\"value\":33.3},{\"tag\":\"mu_tap:r_freq_cm1\",\"value\":46.29},{\"tag\":\"mu_tap:b_run_mlm4\",\"value\":0},{\"tag\":\"mu_tap:r_freq_mlm4\",\"value\":0},{\"tag\":\"mu_tap:b_run_mlm5\",\"value\":0},{\"tag\":\"mu_tap:r_freq_mlm5\",\"value\":0},{\"tag\":\"mu_tap:b_run_mlm6\",\"value\":0},{\"tag\":\"mu_tap:r_freq_mlm6\",\"value\":0},{\"tag\":\"mu_tap:b_run_bttl2\",\"value\":0},{\"tag\":\"mu_tap:r_freq_bttl2\",\"value\":0},{\"tag\":\"mu_tap:b_run_cm2\",\"value\":0},{\"tag\":\"mu_tap:r_temp_cm2\",\"value\":31.1},{\"tag\":\"mu_tap:r_freq_cm2\",\"value\":0},{\"tag\":\"mu_tap:b_run_qm1\",\"value\":0},{\"tag\":\"mu_tap:r_freq_qm1\",\"value\":0},{\"tag\":\"mu_tap:b_run_vt1\",\"value\":0},{\"tag\":\"mu_tap:r_freq_vt1\",\"value\":0},{\"tag\":\"mu_tap:b_run_cm3\",\"value\":0},{\"tag\":\"mu_tap:r_temp_cm3\",\"value\":29.9},{\"tag\":\"mu_tap:r_freq_cm3\",\"value\":0},{\"tag\":\"mu_tap:b_run_qm2\",\"value\":0},{\"tag\":\"mu_tap:r_freq_qm2\",\"value\":0},{\"tag\":\"mu_tap:b_run_vt2\",\"value\":0},{\"tag\":\"mu_tap:r_freq_vt2\",\"value\":0},{\"tag\":\"mu_tap:b_run_c3t1\",\"value\":0},{\"tag\":\"mu_tap:r_temp_c3t1\",\"value\":32.2},{\"tag\":\"mu_tap:r_freq_c3t1\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs1\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs1\",\"value\":0},{\"tag\":\"mu_tap:b_run_ccs1\",\"value\":0},{\"tag\":\"mu_tap:r_temp_ccs1\",\"value\":32.4},{\"tag\":\"mu_tap:r_freq_ccs1\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs2\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs2\",\"value\":0},{\"tag\":\"mu_tap:b_run_ccs2\",\"value\":0},{\"tag\":\"mu_tap:r_temp_ccs2\",\"value\":33.7},{\"tag\":\"mu_tap:r_freq_ccs2\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs3\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs3\",\"value\":0},{\"tag\":\"mu_tap:b_run_tl1\",\"value\":0},{\"tag\":\"mu_tap:r_freq_tl1\",\"value\":0},{\"tag\":\"mu_tap:b_run_cc1\",\"value\":0},{\"tag\":\"mu_tap:r_temp_cc1\",\"value\":40.1},{\"tag\":\"mu_tap:r_freq_cc1\",\"value\":0},{\"tag\":\"mu_tap:b_run_bc1\",\"value\":0},{\"tag\":\"mu_tap:b_run_vtn\",\"value\":0},{\"tag\":\"mu_tap:r_freq_vtn\",\"value\":0},{\"tag\":\"mu_tap:b_run_c3t2\",\"value\":0},{\"tag\":\"mu_tap:r_temp_c3t2\",\"value\":31.2},{\"tag\":\"mu_tap:r_freq_c3t2\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs4\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs4\",\"value\":0},{\"tag\":\"mu_tap:b_run_ccs3\",\"value\":0},{\"tag\":\"mu_tap:r_temp_ccs3\",\"value\":31.9},{\"tag\":\"mu_tap:r_freq_ccs3\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs5\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs5\",\"value\":0},{\"tag\":\"mu_tap:b_run_ccs4\",\"value\":0},{\"tag\":\"mu_tap:r_temp_ccs4\",\"value\":32.4},{\"tag\":\"mu_tap:r_freq_ccs4\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs6\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs6\",\"value\":0},{\"tag\":\"mu_tap:b_run_ccs5\",\"value\":0},{\"tag\":\"mu_tap:r_temp_ccs5\",\"value\":33.4},{\"tag\":\"mu_tap:r_freq_ccs5\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs7\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs7\",\"value\":0},{\"tag\":\"mu_tap:b_run_tl2\",\"value\":0},{\"tag\":\"mu_tap:r_freq_tl2\",\"value\":0},{\"tag\":\"mu_tap:b_run_cc2\",\"value\":0},{\"tag\":\"mu_tap:r_temp_cc2\",\"value\":42.2},{\"tag\":\"mu_tap:r_freq_cc2\",\"value\":0},{\"tag\":\"mu_tap:b_run_bc2\",\"value\":0},{\"tag\":\"mu_tap:b_run_sr\",\"value\":0},{\"tag\":\"mu_tap:r_freq_sr\",\"value\":0},{\"tag\":\"mu_tap:b_run_qc1\",\"value\":1},{\"tag\":\"mu_tap:r_temp_qc1\",\"value\":0},{\"tag\":\"mu_tap:r_freq_qc1\",\"value\":50},{\"tag\":\"mu_tap:b_run_qc2\",\"value\":1},{\"tag\":\"mu_tap:r_temp_qc2\",\"value\":50},{\"tag\":\"mu_tap:r_freq_qc2\",\"value\":50},{\"tag\":\"mu_tap:b_run_qk\",\"value\":1},{\"tag\":\"mu_tap:r_freq_qk\",\"value\":40},{\"tag\":\"mu_tap:b_run_qn1\",\"value\":1},{\"tag\":\"mu_tap:r_freq_qn1\",\"value\":50},{\"tag\":\"mu_tap:b_run_qn2\",\"value\":0},{\"tag\":\"mu_tap:r_freq_qn2\",\"value\":0},{\"tag\":\"mu_tap:b_run_qhl\",\"value\":1},{\"tag\":\"mu_tap:r_freq_qhl\",\"value\":50},{\"tag\":\"mu_tap:b_run_xdl\",\"value\":0},{\"tag\":\"mu_tap:b_run_dd1\",\"value\":1},{\"tag\":\"mu_tap:b_run_dd2\",\"value\":1},{\"tag\":\"mu_tap:b_run_tkmm1\",\"value\":1},{\"tag\":\"mu_tap:b_run_tkmm2\",\"value\":1},{\"tag\":\"mu_tap:r_flow_water\",\"value\":4998.23},{\"tag\":\"mu_tap:r_active_energy0\",\"value\":0},{\"tag\":\"mu_tap:r_active_energy1\",\"value\":0},{\"tag\":\"mu_tap:r_active_energy2\",\"value\":2142},{\"tag\":\"mu_tap:r_active_energy3\",\"value\":32505},{\"tag\":\"r_active_energy\",\"value\":140410.62}],\"ts\":\"1787130440\"}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 700,
+        "wires": [
+            [
+                "0f9a04daf189e479",
+                "68ed982d4426b014",
+                "17dc99359dc31d4d",
+                "a3a3fbc09031461a",
+                "ceb8c0575610293f"
+            ]
+        ]
+    },
+    {
+        "id": "0f9a04daf189e479",
+        "type": "caosu-pr-insert",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Khu Vực Cán Ủ",
+        "meterConfig": "4152dadd83845af8",
+        "factory": "Nhà Máy Trung Tâm Phú Riềng",
+        "system": "Hệ Mủ Tạp",
+        "sub_system": "Khu Vực Cán Ủ",
+        "measurement": "caosu_measurement",
+        "db": "caosu_phu_rieng",
+        "precision": "ns",
+        "latitude": "11.6722896",
+        "longitude": "106.9048208",
+        "x": 420,
+        "y": 700,
+        "wires": [
+            [
+                "2e8c5b76c826f37b"
+            ]
+        ]
+    },
+    {
+        "id": "68ed982d4426b014",
+        "type": "caosu-pr-insert",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Khu Vực 01 Dây Chuyền Chính",
+        "meterConfig": "dc039c202d24f295",
+        "factory": "Nhà Máy Trung Tâm Phú Riềng",
+        "system": "Hệ Mủ Tạp",
+        "sub_system": "Khu Vực 01 Dây Chuyền Chính",
+        "measurement": "caosu_measurement",
+        "db": "caosu_phu_rieng",
+        "precision": "ns",
+        "latitude": "11.6722896",
+        "longitude": "106.9048208",
+        "x": 470,
+        "y": 780,
+        "wires": [
+            [
+                "2e8c5b76c826f37b"
+            ]
+        ]
+    },
+    {
+        "id": "17dc99359dc31d4d",
+        "type": "caosu-pr-insert",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Khu Vực 02 Dây Chuyền Chính",
+        "meterConfig": "3075f0fcbe49e77d",
+        "factory": "Nhà Máy Trung Tâm Phú Riềng",
+        "system": "Hệ Mủ Tạp",
+        "sub_system": "Khu Vực 02 Dây Chuyền Chính",
+        "measurement": "caosu_measurement",
+        "db": "caosu_phu_rieng",
+        "precision": "ns",
+        "latitude": "11.6722896",
+        "longitude": "106.9048208",
+        "x": 470,
+        "y": 860,
+        "wires": [
+            [
+                "2e8c5b76c826f37b"
+            ]
+        ]
+    },
+    {
+        "id": "a3a3fbc09031461a",
+        "type": "caosu-pr-insert",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Khu Vực Lô Sấy",
+        "meterConfig": "c647779f3760eb9c",
+        "factory": "Nhà Máy Trung Tâm Phú Riềng",
+        "system": "Hệ Mủ Tạp",
+        "sub_system": "Khu Vực Lô Sấy",
+        "measurement": "caosu_measurement",
+        "db": "caosu_phu_rieng",
+        "precision": "ns",
+        "latitude": "11.6722896",
+        "longitude": "106.9048208",
+        "x": 420,
+        "y": 940,
+        "wires": [
+            [
+                "2e8c5b76c826f37b"
+            ]
+        ]
+    },
+    {
+        "id": "ceb8c0575610293f",
+        "type": "caosu-pr-insert",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Tổng",
+        "meterConfig": "31b9e6978b25a932",
+        "factory": "Nhà Máy Trung Tâm Phú Riềng",
+        "system": "Hệ Mủ Tạp",
+        "sub_system": "Tổng",
+        "measurement": "caosu_measurement",
+        "db": "caosu_phu_rieng",
+        "precision": "ns",
+        "latitude": "11.6722896",
+        "longitude": "106.9048208",
+        "x": 390,
+        "y": 1020,
+        "wires": [
+            [
+                "2e8c5b76c826f37b"
+            ]
+        ]
+    },
+    {
+        "id": "8897cbef957ae4b0",
+        "type": "mqtt in",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "topic": "#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1aaff0fc302660fe",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 320,
+        "wires": [
+            [
+                "a8a978126324f6a0",
+                "d49951e21709dded"
+            ]
+        ]
+    },
+    {
+        "id": "a8a978126324f6a0",
+        "type": "switch",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "ECU01",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ECU02",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 230,
+        "y": 300,
+        "wires": [
+            [
+                "0b7f479bcaed2b87",
+                "5ca615e3b296e2f5",
+                "ba5d176d1ddcd5dd",
+                "1bb45b3319ac8483",
+                "599a93502ec92191"
+            ],
+            [
+                "0f9a04daf189e479",
+                "68ed982d4426b014",
+                "17dc99359dc31d4d",
+                "a3a3fbc09031461a",
+                "ceb8c0575610293f"
+            ]
+        ]
+    },
+    {
+        "id": "0b7f479bcaed2b87",
+        "type": "caosu-pr-insert",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Hồ 1",
+        "meterConfig": "9125eb544805d51f",
+        "factory": "Nhà Máy Trung Tâm Phú Riềng",
+        "system": "Hệ Đánh Đông",
+        "sub_system": "Hồ 1",
+        "measurement": "caosu_measurement",
+        "db": "caosu_phu_rieng",
+        "precision": "ms",
+        "latitude": "11.6722896",
+        "longitude": "106.9048208",
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "43889f9047061f87"
+            ]
+        ]
+    },
+    {
+        "id": "c582f04ff6a41a55",
+        "type": "inject",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "robot",
+                "v": "{\"d\":[{\"tag\":\"robot:counter\",\"value\":128},{\"tag\":\"mu_tap:b_run_mlm1\",\"value\":0},{\"tag\":\"mu_tap:r_freq_mlm1\",\"value\":0},{\"tag\":\"mu_tap:b_run_mlm2\",\"value\":0},{\"tag\":\"mu_tap:r_freq_mlm2\",\"value\":0},{\"tag\":\"mu_tap:b_run_mlm3\",\"value\":0},{\"tag\":\"mu_tap:r_freq_mlm3\",\"value\":0},{\"tag\":\"mu_tap:b_run_bttl1\",\"value\":0},{\"tag\":\"mu_tap:r_freq_bttl1\",\"value\":0},{\"tag\":\"mu_tap:b_run_cm1\",\"value\":0},{\"tag\":\"mu_tap:r_temp_cm1\",\"value\":28.5},{\"tag\":\"mu_tap:r_freq_cm1\",\"value\":0},{\"tag\":\"mu_tap:b_run_mlm4\",\"value\":0},{\"tag\":\"mu_tap:r_freq_mlm4\",\"value\":0},{\"tag\":\"mu_tap:b_run_mlm5\",\"value\":0},{\"tag\":\"mu_tap:r_freq_mlm5\",\"value\":0},{\"tag\":\"mu_tap:b_run_mlm6\",\"value\":0},{\"tag\":\"mu_tap:r_freq_mlm6\",\"value\":0},{\"tag\":\"mu_tap:b_run_bttl2\",\"value\":0},{\"tag\":\"mu_tap:r_freq_bttl2\",\"value\":0},{\"tag\":\"mu_tap:b_run_cm2\",\"value\":0},{\"tag\":\"mu_tap:r_temp_cm2\",\"value\":30.4},{\"tag\":\"mu_tap:r_freq_cm2\",\"value\":0},{\"tag\":\"mu_tap:b_run_qm1\",\"value\":1},{\"tag\":\"mu_tap:r_freq_qm1\",\"value\":33.39},{\"tag\":\"mu_tap:b_run_vt1\",\"value\":0},{\"tag\":\"mu_tap:r_freq_vt1\",\"value\":0},{\"tag\":\"mu_tap:b_run_cm3\",\"value\":1},{\"tag\":\"mu_tap:r_temp_cm3\",\"value\":31.7},{\"tag\":\"mu_tap:r_freq_cm3\",\"value\":50},{\"tag\":\"mu_tap:b_run_qm2\",\"value\":1},{\"tag\":\"mu_tap:r_freq_qm2\",\"value\":21.4},{\"tag\":\"mu_tap:b_run_vt2\",\"value\":0},{\"tag\":\"mu_tap:r_freq_vt2\",\"value\":0},{\"tag\":\"mu_tap:b_run_c3t1\",\"value\":0},{\"tag\":\"mu_tap:r_temp_c3t1\",\"value\":31},{\"tag\":\"mu_tap:r_freq_c3t1\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs1\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs1\",\"value\":0},{\"tag\":\"mu_tap:b_run_ccs1\",\"value\":0},{\"tag\":\"mu_tap:r_temp_ccs1\",\"value\":31.7},{\"tag\":\"mu_tap:r_freq_ccs1\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs2\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs2\",\"value\":0},{\"tag\":\"mu_tap:b_run_ccs2\",\"value\":0},{\"tag\":\"mu_tap:r_temp_ccs2\",\"value\":33.3},{\"tag\":\"mu_tap:r_freq_ccs2\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs3\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs3\",\"value\":0},{\"tag\":\"mu_tap:b_run_tl1\",\"value\":1},{\"tag\":\"mu_tap:r_freq_tl1\",\"value\":60},{\"tag\":\"mu_tap:b_run_cc1\",\"value\":1},{\"tag\":\"mu_tap:r_temp_cc1\",\"value\":49.2},{\"tag\":\"mu_tap:r_freq_cc1\",\"value\":49.95},{\"tag\":\"mu_tap:b_run_bc1\",\"value\":0},{\"tag\":\"mu_tap:b_run_vtn\",\"value\":0},{\"tag\":\"mu_tap:r_freq_vtn\",\"value\":0},{\"tag\":\"mu_tap:b_run_c3t2\",\"value\":0},{\"tag\":\"mu_tap:r_temp_c3t2\",\"value\":29.9},{\"tag\":\"mu_tap:r_freq_c3t2\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs4\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs4\",\"value\":0},{\"tag\":\"mu_tap:b_run_ccs3\",\"value\":0},{\"tag\":\"mu_tap:r_temp_ccs3\",\"value\":30.6},{\"tag\":\"mu_tap:r_freq_ccs3\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs5\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs5\",\"value\":0},{\"tag\":\"mu_tap:b_run_ccs4\",\"value\":0},{\"tag\":\"mu_tap:r_temp_ccs4\",\"value\":31.1},{\"tag\":\"mu_tap:r_freq_ccs4\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs6\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs6\",\"value\":0},{\"tag\":\"mu_tap:b_run_ccs5\",\"value\":0},{\"tag\":\"mu_tap:r_temp_ccs5\",\"value\":32.9},{\"tag\":\"mu_tap:r_freq_ccs5\",\"value\":0},{\"tag\":\"mu_tap:b_run_btcs7\",\"value\":0},{\"tag\":\"mu_tap:r_freq_btcs7\",\"value\":0},{\"tag\":\"mu_tap:b_run_tl2\",\"value\":1},{\"tag\":\"mu_tap:r_freq_tl2\",\"value\":48.46},{\"tag\":\"mu_tap:b_run_cc2\",\"value\":1},{\"tag\":\"mu_tap:r_temp_cc2\",\"value\":48.6},{\"tag\":\"mu_tap:r_freq_cc2\",\"value\":50},{\"tag\":\"mu_tap:b_run_bc2\",\"value\":0},{\"tag\":\"mu_tap:b_run_sr\",\"value\":0},{\"tag\":\"mu_tap:r_freq_sr\",\"value\":0},{\"tag\":\"mu_tap:b_run_qc1\",\"value\":1},{\"tag\":\"mu_tap:r_temp_qc1\",\"value\":0},{\"tag\":\"mu_tap:r_freq_qc1\",\"value\":50},{\"tag\":\"mu_tap:b_run_qc2\",\"value\":1},{\"tag\":\"mu_tap:r_temp_qc2\",\"value\":46.3},{\"tag\":\"mu_tap:r_freq_qc2\",\"value\":50},{\"tag\":\"mu_tap:b_run_qk\",\"value\":1},{\"tag\":\"mu_tap:r_freq_qk\",\"value\":40},{\"tag\":\"mu_tap:b_run_qn1\",\"value\":1},{\"tag\":\"mu_tap:r_freq_qn1\",\"value\":44.6},{\"tag\":\"mu_tap:b_run_qn2\",\"value\":1},{\"tag\":\"mu_tap:r_freq_qn2\",\"value\":50},{\"tag\":\"mu_tap:b_run_qhl\",\"value\":1},{\"tag\":\"mu_tap:r_freq_qhl\",\"value\":50},{\"tag\":\"mu_tap:b_run_xdl\",\"value\":0},{\"tag\":\"mu_tap:b_run_dd1\",\"value\":1},{\"tag\":\"mu_tap:b_run_dd2\",\"value\":1},{\"tag\":\"mu_tap:b_run_tkmm1\",\"value\":1},{\"tag\":\"mu_tap:b_run_tkmm2\",\"value\":1},{\"tag\":\"mu_tap:r_flow_water\",\"value\":6569.08},{\"tag\":\"mu_tap:r_active_energy0\",\"value\":0},{\"tag\":\"mu_tap:r_active_energy1\",\"value\":0},{\"tag\":\"mu_tap:r_active_energy2\",\"value\":2544},{\"tag\":\"mu_tap:r_active_energy3\",\"value\":-12570},{\"tag\":\"r_active_energy\",\"value\":166711.01}],\"ts\":\"1787796921\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"d\":[{\"tag\":\"danh_dong:r_ph_acid_ho_1\",\"value\":2.9},{\"tag\":\"danh_dong:r_ph_mu_ho_1\",\"value\":7},{\"tag\":\"danh_dong:r_drc_ho_1\",\"value\":20},{\"tag\":\"danh_dong:r_ph_muong_ho_1\",\"value\":5.7},{\"tag\":\"danh_dong:r_ph_muc_ho_1\",\"value\":2.78},{\"tag\":\"danh_dong:r_ph_acid_ho_2\",\"value\":2.9},{\"tag\":\"danh_dong:r_ph_mu_ho_2\",\"value\":6.6},{\"tag\":\"danh_dong:r_drc_ho_2\",\"value\":20},{\"tag\":\"danh_dong:r_ph_muong_ho_2\",\"value\":6.1},{\"tag\":\"danh_dong:r_ph_muc_ho_2\",\"value\":0.9},{\"tag\":\"danh_dong:r_ph_acid_ho_3\",\"value\":2.8},{\"tag\":\"danh_dong:r_ph_mu_ho_3\",\"value\":6.8},{\"tag\":\"danh_dong:r_drc_ho_3\",\"value\":20},{\"tag\":\"danh_dong:r_ph_muong_ho_3\",\"value\":6},{\"tag\":\"danh_dong:r_ph_muc_ho_3\",\"value\":0},{\"tag\":\"danh_dong:r_ph_acid_ho_4\",\"value\":2.9},{\"tag\":\"danh_dong:r_ph_mu_ho_4\",\"value\":7.25},{\"tag\":\"danh_dong:r_drc_ho_4\",\"value\":20},{\"tag\":\"danh_dong:r_ph_muong_ho_4\",\"value\":6},{\"tag\":\"danh_dong:r_ph_muc_ho_4\",\"value\":0.91},{\"tag\":\"danh_dong:r_ph_acid_ho_5\",\"value\":2.9},{\"tag\":\"danh_dong:r_ph_mu_ho_5\",\"value\":7},{\"tag\":\"danh_dong:r_drc_ho_5\",\"value\":20},{\"tag\":\"danh_dong:r_ph_muong_ho_5\",\"value\":6},{\"tag\":\"danh_dong:r_ph_muc_ho_5\",\"value\":0.63}],\"ts\":\"1787796466\"}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ca615e3b296e2f5",
+        "type": "caosu-pr-insert",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Hồ 2",
+        "meterConfig": "bcf7964dd6196679",
+        "factory": "Nhà Máy Trung Tâm Phú Riềng",
+        "system": "Hệ Đánh Đông",
+        "sub_system": "Hồ 2",
+        "measurement": "caosu_measurement",
+        "db": "caosu_phu_rieng",
+        "precision": "ns",
+        "latitude": "11.6722896",
+        "longitude": "106.9048208",
+        "x": 450,
+        "y": 320,
+        "wires": [
+            [
+                "43889f9047061f87"
+            ]
+        ]
+    },
+    {
+        "id": "ba5d176d1ddcd5dd",
+        "type": "caosu-pr-insert",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Hồ 3",
+        "meterConfig": "bb9a960a7f02ddeb",
+        "factory": "Nhà Máy Trung Tâm Phú Riềng",
+        "system": "Hệ Đánh Đông",
+        "sub_system": "Hồ 3",
+        "measurement": "caosu_measurement",
+        "db": "caosu_phu_rieng",
+        "precision": "ns",
+        "latitude": "11.6722896",
+        "longitude": "106.9048208",
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "43889f9047061f87"
+            ]
+        ]
+    },
+    {
+        "id": "1bb45b3319ac8483",
+        "type": "caosu-pr-insert",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Hồ 4",
+        "meterConfig": "91da4c99ab47b825",
+        "factory": "Nhà Máy Trung Tâm Phú Riềng",
+        "system": "Hệ Đánh Đông",
+        "sub_system": "Hồ 4",
+        "measurement": "caosu_measurement",
+        "db": "caosu_phu_rieng",
+        "precision": "ns",
+        "latitude": "11.6722896",
+        "longitude": "106.9048208",
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "43889f9047061f87"
+            ]
+        ]
+    },
+    {
+        "id": "599a93502ec92191",
+        "type": "caosu-pr-insert",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Hồ 5",
+        "meterConfig": "80b62c902f2feb39",
+        "factory": "Nhà Máy Trung Tâm Phú Riềng",
+        "system": "Hệ Đánh Đông",
+        "sub_system": "Hồ 5",
+        "measurement": "caosu_measurement",
+        "db": "caosu_phu_rieng",
+        "precision": "ns",
+        "latitude": "11.6722896",
+        "longitude": "106.9048208",
+        "x": 450,
+        "y": 500,
+        "wires": [
+            [
+                "43889f9047061f87"
+            ]
+        ]
+    },
+    {
+        "id": "43889f9047061f87",
+        "type": "http request",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 650,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2e8c5b76c826f37b",
+        "type": "http request",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 770,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac1e2ce4a1dc7f07",
+        "type": "inject",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Create Database",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"q\":\"CREATE DATABASE caosu_phu_rieng\"}",
+        "payloadType": "json",
+        "x": 760,
+        "y": 160,
+        "wires": [
+            [
+                "48ae0e7eeecefa7a"
+            ]
+        ]
+    },
+    {
+        "id": "48ae0e7eeecefa7a",
+        "type": "http request",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Create Database",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/query?q={{ payload.q }}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 970,
+        "y": 160,
+        "wires": [
+            [
+                "c4e008645c83c626"
+            ]
+        ]
+    },
+    {
+        "id": "c4e008645c83c626",
+        "type": "debug",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "af9ef6129a12ecdc",
+        "type": "inject",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Drop Database",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "db",
+                "v": "dongtien",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"q\":\"DROP MEASUREMENT caosu_phu_rieng\"}",
+        "payloadType": "json",
+        "x": 760,
+        "y": 240,
+        "wires": [
+            [
+                "b858cef8affa16b7"
+            ]
+        ]
+    },
+    {
+        "id": "b858cef8affa16b7",
+        "type": "http request",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Drop Database",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/query?db={{db}}&q={{ payload.q }}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 960,
+        "y": 240,
+        "wires": [
+            [
+                "012bac25e347815a"
+            ]
+        ]
+    },
+    {
+        "id": "012bac25e347815a",
+        "type": "debug",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "69cebc575d4b4c92",
+        "type": "debug",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "03859ece56097b6c",
+        "type": "inject",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "pu_load_short,host=server02,region=us-west value=0.55 1422568543702900257",
+        "payloadType": "str",
+        "x": 740,
+        "y": 320,
+        "wires": [
+            [
+                "a6a7e03f2c2626c7"
+            ]
+        ]
+    },
+    {
+        "id": "a6a7e03f2c2626c7",
+        "type": "http request",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Add Database",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://influxdb:8086/write?db=electric_measurement&precision=ns",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 960,
+        "y": 320,
+        "wires": [
+            [
+                "69cebc575d4b4c92"
+            ]
+        ]
+    },
+    {
+        "id": "0b37a2cf81fc8465",
+        "type": "debug",
+        "z": "87e2a62cf0ba2f65",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1300,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5be6ae89110fe8f2",
+        "type": "influxdb in",
+        "z": "87e2a62cf0ba2f65",
+        "influxdb": "ec4fde04bf5a914a",
+        "name": "cao_su_phu_rieng",
+        "query": "SELECT \n  last(\"value_cm1\") AS \"r_freq_cm1\",\n  last(\"value_cm2\") AS \"r_freq_cm2\"\nFROM (\n  SELECT \n    \"value\" AS \"value_cm1\" \n  FROM \"caosu_measurement\" \n  WHERE \"mapping_tag\"::tag = 'r_freq_cm1' \n    AND time >= 1787677200000ms AND time <= 1787763599999ms\n), (\n  SELECT \n    \"value\" AS \"value_cm2\" \n  FROM \"caosu_measurement\" \n  WHERE \"mapping_tag\"::tag = 'r_freq_cm2' \n    AND time >= 1787677200000ms AND time <= 1787763599999ms\n)\nGROUP BY time(1m) \nFILL(none)",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 1070,
+        "y": 540,
+        "wires": [
+            [
+                "0b37a2cf81fc8465"
+            ]
+        ]
+    },
+    {
+        "id": "e1d2feef212da787",
+        "type": "inject",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 820,
+        "y": 540,
+        "wires": [
+            [
+                "5be6ae89110fe8f2"
+            ]
+        ]
+    },
+    {
+        "id": "d49951e21709dded",
+        "type": "debug",
+        "z": "87e2a62cf0ba2f65",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 180,
+        "wires": []
+    }
+]
