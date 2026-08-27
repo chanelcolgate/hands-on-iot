@@ -930,6 +930,201 @@
         "rejectUnauthorized": true
     },
     {
+        "id": "2607d4c60f3c71b4",
+        "type": "caosu-pr-meter-config",
+        "name": "Khu Vực Lô Sấy 2",
+        "device": "ECU02",
+        "metrics": [
+            {
+                "key": "mu_tap:b_run_qc1",
+                "machineName": "QUẠT CHÍNH 01",
+                "tagValue": "b_run_qc1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_qc1",
+                "machineName": "QUẠT CHÍNH 01",
+                "tagValue": "r_temp_qc1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qc1",
+                "machineName": "QUẠT CHÍNH 01",
+                "tagValue": "r_freq_qc1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_qc2",
+                "machineName": "QUẠT CHÍNH 02",
+                "tagValue": "b_run_qc2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_qc2",
+                "machineName": "QUẠT CHÍNH 02",
+                "tagValue": "r_temp_qc2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qc2",
+                "machineName": "QUẠT CHÍNH 02",
+                "tagValue": "r_freq_qc2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_qk",
+                "machineName": "QUẠT KHÓI",
+                "tagValue": "b_run_qk",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qk",
+                "machineName": "QUẠT KHÓI",
+                "tagValue": "r_freq_qk",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_qn1",
+                "machineName": "QUẠT NGUỘI 01",
+                "tagValue": "b_run_qn1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qn1",
+                "machineName": "QUẠT NGUỘI 01",
+                "tagValue": "r_freq_qn1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_qn2",
+                "machineName": "QUẠT NGUỘI 02",
+                "tagValue": "b_run_qn2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qn2",
+                "machineName": "QUẠT NGUỘI 02",
+                "tagValue": "r_freq_qn2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_qhl",
+                "machineName": "QUẠT HỒI LƯU",
+                "tagValue": "b_run_qhl",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_freq_qhl",
+                "machineName": "QUẠT HỒI LƯU",
+                "tagValue": "r_freq_qhl",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_xdl",
+                "machineName": "XÍCH ĐẨY THÙNG",
+                "tagValue": "b_run_xdl",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_dd1",
+                "machineName": "ĐẦU ĐỐT 01",
+                "tagValue": "b_run_dd1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_dd2",
+                "machineName": "ĐẦU ĐỐT 02",
+                "tagValue": "b_run_dd2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_tkmm1",
+                "machineName": "THÁP KHỬ MÙI - MOTOR 01",
+                "tagValue": "b_run_tkmm1",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:b_run_tkmm2",
+                "machineName": "THÁP KHỬ MÙI - MOTOR 02",
+                "tagValue": "b_run_tkmm2",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_zone01",
+                "machineName": "NHIỆT ĐỘ VT HÚT ẨM",
+                "tagValue": "r_temp_zone01",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_zone02",
+                "machineName": "NHIỆT ĐỘ VT ĐIỂM RA ĐẦU ƯỚT",
+                "tagValue": "r_temp_zone02",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_zone03",
+                "machineName": "NHIỆT ĐỘ VT ĐIỂM GIỮA ĐẦU ƯỚT",
+                "tagValue": "r_temp_zone03",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_zone04",
+                "machineName": "NHIỆT ĐỘ VT ĐIỂM VÀO ĐẦU ƯỚT",
+                "tagValue": "r_temp_zone04",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_zone05",
+                "machineName": "NHIỆT ĐỘ VT ĐIỂM RA ĐẦU KHÔ",
+                "tagValue": "r_temp_zone05",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_zone06",
+                "machineName": "NHIỆT ĐỘ VT ĐIỂM GIỮA ĐẦU KHÔ",
+                "tagValue": "r_temp_zone06",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_zone07",
+                "machineName": "NHIỆT ĐỘ VT ĐIỂM VÀO ĐẦU KHÔ",
+                "tagValue": "r_temp_zone07",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_zone08",
+                "machineName": "NHIỆT ĐỘ VT ĐIỂM LÀM NGUỘI",
+                "tagValue": "r_temp_zone08",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_zone09",
+                "machineName": "NHIỆT ĐỘ VT ĐIỂM THÔNG HẦM 1",
+                "tagValue": "r_temp_zone09",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_zone10",
+                "machineName": "NHIỆT ĐỘ VT ĐIỂM THÔNG HẦM 2",
+                "tagValue": "r_temp_zone10",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_zone11",
+                "machineName": "NHIỆT ĐỘ VT ĐẦU ĐỐT ƯỚT (K)",
+                "tagValue": "r_temp_zone11",
+                "fieldName": "value"
+            },
+            {
+                "key": "mu_tap:r_temp_zone12",
+                "machineName": "NHIỆT ĐỘ VT ĐẦU ĐỐT KHÔ (K)",
+                "tagValue": "r_temp_zone12",
+                "fieldName": "value"
+            }
+        ],
+        "derivedMetrics": []
+    },
+    {
         "id": "dcf825554f6a2fe2",
         "type": "inject",
         "z": "87e2a62cf0ba2f65",
@@ -1529,14 +1724,14 @@
         "type": "debug",
         "z": "87e2a62cf0ba2f65",
         "name": "debug 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1300,
+        "x": 1500,
         "y": 540,
         "wires": []
     },
@@ -1545,17 +1740,18 @@
         "type": "influxdb in",
         "z": "87e2a62cf0ba2f65",
         "influxdb": "ec4fde04bf5a914a",
-        "name": "cao_su_phu_rieng",
-        "query": "SELECT \n  last(\"value_cm1\") AS \"r_freq_cm1\",\n  last(\"value_cm2\") AS \"r_freq_cm2\"\nFROM (\n  SELECT \n    \"value\" AS \"value_cm1\" \n  FROM \"caosu_measurement\" \n  WHERE \"mapping_tag\"::tag = 'r_freq_cm1' \n    AND time >= 1787677200000ms AND time <= 1787763599999ms\n), (\n  SELECT \n    \"value\" AS \"value_cm2\" \n  FROM \"caosu_measurement\" \n  WHERE \"mapping_tag\"::tag = 'r_freq_cm2' \n    AND time >= 1787677200000ms AND time <= 1787763599999ms\n)\nGROUP BY time(1m) \nFILL(none)",
+        "name": "Đánh Đông",
+        "query": "SELECT \n  last(\"v_1\") AS \"r_ph_acid_ho_1\",\n  last(\"v_2\") AS \"r_ph_mu_ho_1\",\n  last(\"v_3\") AS \"r_drc_ho_1\",\n  last(\"v_4\") AS \"r_ph_muong_ho_1\",\n  last(\"v_5\") AS \"r_ph_muc_ho_1\",\n  last(\"v_6\") AS \"r_ph_acid_ho_2\",\n  last(\"v_7\") AS \"r_ph_mu_ho_2\",\n  last(\"v_8\") AS \"r_drc_ho_2\",\n  last(\"v_9\") AS \"r_ph_muong_ho_2\",\n  last(\"v_10\") AS \"r_ph_muc_ho_2\",\n  last(\"v_11\") AS \"r_ph_acid_ho_3\",\n  last(\"v_12\") AS \"r_ph_mu_ho_3\",\n  last(\"v_13\") AS \"r_drc_ho_3\",\n  last(\"v_14\") AS \"r_ph_muong_ho_3\",\n  last(\"v_15\") AS \"r_ph_muc_ho_3\",\n  last(\"v_16\") AS \"r_ph_acid_ho_4\",\n  last(\"v_17\") AS \"r_ph_mu_ho_4\",\n  last(\"v_18\") AS \"r_drc_ho_4\",\n  last(\"v_19\") AS \"r_ph_muong_ho_4\",\n  last(\"v_20\") AS \"r_ph_muc_ho_4\",\n  last(\"v_21\") AS \"r_ph_acid_ho_5\",\n  last(\"v_22\") AS \"r_ph_mu_ho_5\",\n  last(\"v_23\") AS \"r_drc_ho_5\",\n  last(\"v_24\") AS \"r_ph_muong_ho_5\",\n  last(\"v_25\") AS \"r_ph_muc_ho_5\"\nFROM \n  (SELECT \"value\" AS \"v_1\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_acid_ho_1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_2\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_mu_ho_1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_3\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_drc_ho_1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_4\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_muong_ho_1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_5\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_muc_ho_1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_6\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_acid_ho_2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_7\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_mu_ho_2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_8\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_drc_ho_2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_9\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_muong_ho_2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_10\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_muc_ho_2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_11\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_acid_ho_3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_12\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_mu_ho_3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_13\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_drc_ho_3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_14\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_muong_ho_3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_15\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_muc_ho_3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_16\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_acid_ho_4' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_17\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_mu_ho_4' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_18\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_drc_ho_4' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_19\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_muong_ho_4' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_20\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_muc_ho_4' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_21\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_acid_ho_5' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_22\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_mu_ho_5' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_23\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_drc_ho_5' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_24\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_muong_ho_5' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_25\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_ph_muc_ho_5' AND time >= 1787677200000ms AND time <= 1787763599999ms)\nGROUP BY time(1m) \nFILL(none)",
         "rawOutput": false,
         "precision": "",
         "retentionPolicy": "",
         "org": "organisation",
-        "x": 1070,
+        "x": 1250,
         "y": 540,
         "wires": [
             [
-                "0b37a2cf81fc8465"
+                "0b37a2cf81fc8465",
+                "50d22846b239a24a"
             ]
         ]
     },
@@ -1580,7 +1776,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 820,
+        "x": 1020,
         "y": 540,
         "wires": [
             [
@@ -1603,5 +1799,252 @@
         "x": 380,
         "y": 180,
         "wires": []
+    },
+    {
+        "id": "50d22846b239a24a",
+        "type": "split",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 1250,
+        "y": 600,
+        "wires": [
+            [
+                "492868d672287876"
+            ]
+        ]
+    },
+    {
+        "id": "492868d672287876",
+        "type": "delay",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1410,
+        "y": 600,
+        "wires": [
+            [
+                "0ccb97bcc108fe1e"
+            ]
+        ]
+    },
+    {
+        "id": "312d9bf777f3aa2a",
+        "type": "debug",
+        "z": "87e2a62cf0ba2f65",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "0ccb97bcc108fe1e",
+        "type": "function",
+        "z": "87e2a62cf0ba2f65",
+        "name": "function 1",
+        "func": "// Lấy object dữ liệu từ msg.payload (nếu payload là chuỗi JSON thì tự động parse)\nconst input = typeof msg.payload === 'string' ? JSON.parse(msg.payload) : msg.payload;\n\nconst result = [];\n\n// Duyệt qua tất cả các key trong object đầu vào\nfor (const [key, value] of Object.entries(input)) {\n    // Bỏ qua trường \"time\" chỉ lấy các giá trị tag\n    if (key !== 'time' && value !== null && value !== undefined) {\n        result.push({\n            tag: `danh_dong:${key}`,\n            value: Number(value)\n        });\n    }\n}\n\n// Chuyển đổi timestamp ISO từ trường \"time\" sang dạng epoch seconds (hoặc dùng thời gian hiện tại nếu không có time)\nlet timestampSeconds;\nif (input.time) {\n    timestampSeconds = Math.floor(new Date(input.time).getTime() / 1000).toString();\n} else {\n    timestampSeconds = Math.floor(Date.now() / 1000).toString();\n}\n\n// Gán kết quả vào msg.payload\nmsg.payload = {\n    d: result,\n    ts: timestampSeconds\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1580,
+        "y": 600,
+        "wires": [
+            [
+                "312d9bf777f3aa2a"
+            ]
+        ]
+    },
+    {
+        "id": "7f31efe535a00456",
+        "type": "debug",
+        "z": "87e2a62cf0ba2f65",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "7504421bc8e51285",
+        "type": "influxdb in",
+        "z": "87e2a62cf0ba2f65",
+        "influxdb": "ec4fde04bf5a914a",
+        "name": "Mủ Tạp",
+        "query": "SELECT \n  last(\"v_1\") AS \"b_run_mlm1\",\n  last(\"v_2\") AS \"r_freq_mlm1\",\n  last(\"v_3\") AS \"b_run_mlm2\",\n  last(\"v_4\") AS \"r_freq_mlm2\",\n  last(\"v_5\") AS \"b_run_mlm3\",\n  last(\"v_6\") AS \"r_freq_mlm3\",\n  last(\"v_7\") AS \"b_run_bttl1\",\n  last(\"v_8\") AS \"r_freq_bttl1\",\n  last(\"v_9\") AS \"b_run_cm1\",\n  last(\"v_10\") AS \"r_temp_cm1\",\n  last(\"v_11\") AS \"r_freq_cm1\",\n  last(\"v_12\") AS \"b_run_mlm4\",\n  last(\"v_13\") AS \"r_freq_mlm4\",\n  last(\"v_14\") AS \"b_run_mlm5\",\n  last(\"v_15\") AS \"r_freq_mlm5\",\n  last(\"v_16\") AS \"b_run_mlm6\",\n  last(\"v_17\") AS \"r_freq_mlm6\",\n  last(\"v_18\") AS \"b_run_bttl2\",\n  last(\"v_19\") AS \"r_freq_bttl2\",\n  last(\"v_20\") AS \"b_run_cm2\",\n  last(\"v_21\") AS \"r_temp_cm2\",\n  last(\"v_22\") AS \"r_freq_cm2\",\n  last(\"v_23\") AS \"b_run_qm1\",\n  last(\"v_24\") AS \"r_freq_qm1\",\n  last(\"v_25\") AS \"b_run_vt1\",\n  last(\"v_26\") AS \"r_freq_vt1\",\n  last(\"v_27\") AS \"b_run_cm3\",\n  last(\"v_28\") AS \"r_temp_cm3\",\n  last(\"v_29\") AS \"r_freq_cm3\",\n  last(\"v_30\") AS \"b_run_qm2\",\n  last(\"v_31\") AS \"r_freq_qm2\",\n  last(\"v_32\") AS \"b_run_vt2\",\n  last(\"v_33\") AS \"r_freq_vt2\",\n  last(\"v_34\") AS \"b_run_c3t1\",\n  last(\"v_35\") AS \"r_temp_c3t1\",\n  last(\"v_36\") AS \"r_freq_c3t1\",\n  last(\"v_37\") AS \"b_run_btcs1\",\n  last(\"v_38\") AS \"r_freq_btcs1\",\n  last(\"v_39\") AS \"b_run_ccs1\",\n  last(\"v_40\") AS \"r_temp_ccs1\",\n  last(\"v_41\") AS \"r_freq_ccs1\",\n  last(\"v_42\") AS \"b_run_btcs2\",\n  last(\"v_43\") AS \"r_freq_btcs2\",\n  last(\"v_44\") AS \"b_run_ccs2\",\n  last(\"v_45\") AS \"r_temp_ccs2\",\n  last(\"v_46\") AS \"r_freq_ccs2\",\n  last(\"v_47\") AS \"b_run_btcs3\",\n  last(\"v_48\") AS \"r_freq_btcs3\",\n  last(\"v_49\") AS \"b_run_tl1\",\n  last(\"v_50\") AS \"r_freq_tl1\",\n  last(\"v_51\") AS \"b_run_cc1\",\n  last(\"v_52\") AS \"r_temp_cc1\",\n  last(\"v_53\") AS \"r_freq_cc1\",\n  last(\"v_54\") AS \"b_run_bc1\",\n  last(\"v_55\") AS \"b_run_vtn\",\n  last(\"v_56\") AS \"r_freq_vtn\",\n  last(\"v_57\") AS \"b_run_c3t2\",\n  last(\"v_58\") AS \"r_temp_c3t2\",\n  last(\"v_59\") AS \"r_freq_c3t2\",\n  last(\"v_60\") AS \"b_run_btcs4\",\n  last(\"v_61\") AS \"r_freq_btcs4\",\n  last(\"v_62\") AS \"b_run_ccs3\",\n  last(\"v_63\") AS \"r_temp_ccs3\",\n  last(\"v_64\") AS \"r_freq_ccs3\",\n  last(\"v_65\") AS \"b_run_btcs5\",\n  last(\"v_66\") AS \"r_freq_btcs5\",\n  last(\"v_67\") AS \"b_run_ccs4\",\n  last(\"v_68\") AS \"r_temp_ccs4\",\n  last(\"v_69\") AS \"r_freq_ccs4\",\n  last(\"v_70\") AS \"b_run_btcs6\",\n  last(\"v_71\") AS \"r_freq_btcs6\",\n  last(\"v_72\") AS \"b_run_ccs5\",\n  last(\"v_73\") AS \"r_temp_ccs5\",\n  last(\"v_74\") AS \"r_freq_ccs5\",\n  last(\"v_75\") AS \"b_run_btcs7\",\n  last(\"v_76\") AS \"r_freq_btcs7\",\n  last(\"v_77\") AS \"b_run_tl2\",\n  last(\"v_78\") AS \"r_freq_tl2\",\n  last(\"v_79\") AS \"b_run_cc2\",\n  last(\"v_80\") AS \"r_temp_cc2\",\n  last(\"v_81\") AS \"r_freq_cc2\",\n  last(\"v_82\") AS \"b_run_bc2\",\n  last(\"v_83\") AS \"b_run_sr\",\n  last(\"v_84\") AS \"r_freq_sr\",\n  last(\"v_85\") AS \"b_run_qc1\",\n  last(\"v_86\") AS \"r_temp_qc1\",\n  last(\"v_87\") AS \"r_freq_qc1\",\n  last(\"v_88\") AS \"b_run_qc2\",\n  last(\"v_89\") AS \"r_temp_qc2\",\n  last(\"v_90\") AS \"r_freq_qc2\",\n  last(\"v_91\") AS \"b_run_qk\",\n  last(\"v_92\") AS \"r_freq_qk\",\n  last(\"v_93\") AS \"b_run_qn1\",\n  last(\"v_94\") AS \"r_freq_qn1\",\n  last(\"v_95\") AS \"b_run_qn2\",\n  last(\"v_96\") AS \"r_freq_qn2\",\n  last(\"v_97\") AS \"b_run_qhl\",\n  last(\"v_98\") AS \"r_freq_qhl\",\n  last(\"v_99\") AS \"b_run_xdl\",\n  last(\"v_100\") AS \"b_run_dd1\",\n  last(\"v_101\") AS \"b_run_dd2\",\n  last(\"v_102\") AS \"b_run_tkmm1\",\n  last(\"v_103\") AS \"b_run_tkmm2\",\n  last(\"v_104\") AS \"robot:counter\",\n  last(\"v_105\") AS \"r_flow_water\",\n  last(\"v_106\") AS \"r_active_energy\"\nFROM \n  (SELECT \"value\" AS \"v_1\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_mlm1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_2\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_mlm1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_3\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_mlm2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_4\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_mlm2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_5\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_mlm3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_6\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_mlm3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_7\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_bttl1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_8\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_bttl1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_9\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_cm1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_10\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_cm1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_11\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_cm1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_12\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_mlm4' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_13\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_mlm4' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_14\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_mlm5' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_15\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_mlm5' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_16\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_mlm6' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_17\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_mlm6' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_18\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_bttl2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_19\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_bttl2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_20\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_cm2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_21\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_cm2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_22\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_cm2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_23\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_qm1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_24\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_qm1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_25\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_vt1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_26\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_vt1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_27\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_cm3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_28\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_cm3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_29\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_cm3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_30\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_qm2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_31\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_qm2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_32\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_vt2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_33\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_vt2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_34\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_c3t1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_35\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_c3t1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_36\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_c3t1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_37\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_btcs1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_38\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_btcs1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_39\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_ccs1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_40\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_ccs1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_41\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_ccs1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_42\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_btcs2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_43\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_btcs2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_44\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_ccs2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_45\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_ccs2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_46\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_ccs2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_47\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_btcs3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_48\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_btcs3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_49\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_tl1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_50\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_tl1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_51\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_cc1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_52\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_cc1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_53\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_cc1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_54\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_bc1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_55\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_vtn' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_56\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_vtn' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_57\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_c3t2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_58\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_c3t2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_59\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_c3t2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_60\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_btcs4' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_61\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_btcs4' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_62\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_ccs3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_63\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_ccs3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_64\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_ccs3' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_65\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_btcs5' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_66\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_btcs5' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_67\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_ccs4' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_68\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_ccs4' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_69\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_ccs4' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_70\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_btcs6' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_71\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_btcs6' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_72\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_ccs5' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_73\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_ccs5' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_74\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_ccs5' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_75\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_btcs7' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_76\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_btcs7' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_77\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_tl2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_78\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_tl2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_79\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_cc2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_80\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_cc2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_81\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_cc2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_82\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_bc2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_83\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_sr' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_84\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_sr' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_85\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_qc1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_86\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_qc1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_87\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_qc1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_88\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_qc2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_89\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_temp_qc2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_90\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_qc2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_91\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_qk' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_92\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_qk' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_93\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_qn1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_94\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_qn1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_95\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_qn2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_96\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_qn2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_97\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_qhl' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_98\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_freq_qhl' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_99\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_xdl' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_100\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_dd1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_101\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_dd2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_102\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_tkmm1' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_103\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'b_run_tkmm2' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_104\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'robot:counter' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_105\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_flow_water' AND time >= 1787677200000ms AND time <= 1787763599999ms),\n  (SELECT \"value\" AS \"v_106\" FROM \"caosu_measurement\" WHERE \"mapping_tag\"::tag = 'r_active_energy' AND time >= 1787677200000ms AND time <= 1787763599999ms)\nGROUP BY time(1m) \nFILL(none)",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 1240,
+        "y": 760,
+        "wires": [
+            [
+                "7f31efe535a00456",
+                "3c2c0e4c16b3ec43"
+            ]
+        ]
+    },
+    {
+        "id": "e994cc9c61abe899",
+        "type": "inject",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1020,
+        "y": 760,
+        "wires": [
+            [
+                "7504421bc8e51285"
+            ]
+        ]
+    },
+    {
+        "id": "3c2c0e4c16b3ec43",
+        "type": "split",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 1250,
+        "y": 820,
+        "wires": [
+            [
+                "97db8524372819f1"
+            ]
+        ]
+    },
+    {
+        "id": "97db8524372819f1",
+        "type": "delay",
+        "z": "87e2a62cf0ba2f65",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1410,
+        "y": 820,
+        "wires": [
+            [
+                "3e3fc5345bc1c1d6"
+            ]
+        ]
+    },
+    {
+        "id": "f1031135c15a7d1f",
+        "type": "debug",
+        "z": "87e2a62cf0ba2f65",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "3e3fc5345bc1c1d6",
+        "type": "function",
+        "z": "87e2a62cf0ba2f65",
+        "name": "function 2",
+        "func": "const input = typeof msg.payload === 'string' ? JSON.parse(msg.payload) : msg.payload;\n\nconst result = [];\n\n// Các key giữ nguyên prefix (không thêm mu_tap:)\nconst keepOriginalTagKeys = ['robot:counter', 'r_active_energy'];\n\nfor (const [key, value] of Object.entries(input)) {\n    if (key !== 'time' && value !== null && value !== undefined) {\n        // Xác định prefix dựa trên key\n        const tag = keepOriginalTagKeys.includes(key) ? key : `mu_tap:${key}`;\n\n        result.push({\n            tag: tag,\n            value: Number(value)\n        });\n    }\n}\n\n// Chuyển đổi timestamp ISO sang epoch seconds (dạng chuỗi)\nlet timestampSeconds;\nif (input.time) {\n    timestampSeconds = Math.floor(new Date(input.time).getTime() / 1000).toString();\n} else {\n    timestampSeconds = Math.floor(Date.now() / 1000).toString();\n}\n\nmsg.payload = {\n    d: result,\n    ts: timestampSeconds\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1580,
+        "y": 820,
+        "wires": [
+            [
+                "f1031135c15a7d1f"
+            ]
+        ]
+    },
+    {
+        "id": "0f7d342986989aae",
+        "type": "caosu-pr-insert",
+        "z": "87e2a62cf0ba2f65",
+        "name": "Khu Vực Lô Sấy 2",
+        "meterConfig": "2607d4c60f3c71b4",
+        "factory": "Nhà Máy Trung Tâm Phú Riềng",
+        "system": "Hệ Mủ Tạp",
+        "sub_system": "Khu Vực Lô Sấy",
+        "measurement": "caosu_measurement",
+        "db": "caosu_phu_rieng",
+        "precision": "ns",
+        "latitude": "11.6722896",
+        "longitude": "106.9048208",
+        "x": 430,
+        "y": 1100,
+        "wires": [
+            []
+        ]
     }
 ]
