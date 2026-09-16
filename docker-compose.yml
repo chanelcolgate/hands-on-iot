@@ -8,6 +8,15 @@ services:
     volumes:
       - ./data:/data
       -  ../node-red-contrib-dongtien:/workspace/node-red-contrib-dongtien
+    command: >
+      sh -c "
+      if [ ! -s /data/context/global/global.json ] || ! jq . /data/context/global/global.json >/dev/null 2>&1; then
+        echo '[INFO] global.json rong hoac loi syntax. Dang khoi tao lai...'
+        mkdir -p /data/context/global
+        echo '{}' > /data/context/global/global.json
+      fi
+      exec ./entrypoint.sh
+      "
     logging:
       driver: "json-file"
       options:
@@ -46,8 +55,36 @@ services:
         max-size: "2m"
         max-file: "1"
 
+          # grafana:
+          #   image: "grafana/grafana"
+          #   restart: always
+          #   ports:
+          #     - "3090:3000"
+          #   volumes:
+          #     - "grafana-data:/var/lib/grafana"
+          #     - "./grafana:/etc/grafana"
+          #     - "./grafana/dashboards:/var/lib/grafana/dashboards"
+          #   environment:
+          #     - GF_SERVER_ROOT_URL=http://localhost:3090
+          #     - GF_SECURITY_ALLOW_EMBEDDING=true
+          #     - GF_RENDERING_SERVER_URL=http://renderer:8081/render
+          #     - GF_RENDERING_CALLBACK_URL=http://grafana:3000/
+          #     - GF_RENDERING_RENDERER_TOKEN=mind
+          #     - GF_RENDERING_CLUSTERING_TIMEOUT=60
+          #     - TZ=Asia/Ho_Chi_Minh
+          #   depends_on:
+          #     - renderer
+          #   logging:
+          #     driver: "json-file"
+          #     options:
+          #       max-size: "2m"
+          #       max-file: "1"
+
   grafana:
-    image: "grafana/grafana"
+    build:
+      context: ./my-grafana
+      dockerfile: Dockerfile
+    container_name: grafana
     restart: always
     ports:
       - "3090:3000"
@@ -56,7 +93,7 @@ services:
       - "./grafana:/etc/grafana"
       - "./grafana/dashboards:/var/lib/grafana/dashboards"
     environment:
-      - GF_SERVER_ROOT_URL=http://localhost:3090
+      - GF_SERVER_ROOT_URL=http://localhost:3092
       - GF_SECURITY_ALLOW_EMBEDDING=true
       - GF_RENDERING_SERVER_URL=http://renderer:8081/render
       - GF_RENDERING_CALLBACK_URL=http://grafana:3000/
