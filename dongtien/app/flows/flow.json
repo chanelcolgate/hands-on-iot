@@ -24,6 +24,14 @@
         "env": []
     },
     {
+        "id": "7e2ffa1a84704d01",
+        "type": "tab",
+        "label": "telegram",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "547a59bae597a065",
         "type": "tab",
         "label": "IoT Mind",
@@ -346,6 +354,66 @@
             {
                 "addr": "DB700,R248",
                 "name": "level_24"
+            },
+            {
+                "addr": "DB700,R252",
+                "name": "r_current_motor_25"
+            },
+            {
+                "addr": "DB700,R256",
+                "name": "r_speed_motor_25"
+            },
+            {
+                "addr": "DB700,R260",
+                "name": "r_current_motor_1"
+            },
+            {
+                "addr": "DB700,R264",
+                "name": "r_speed_motor_1"
+            },
+            {
+                "addr": "DB700,R276",
+                "name": "r_concentration_1"
+            },
+            {
+                "addr": "DB700,R268",
+                "name": "r_current_motor_26"
+            },
+            {
+                "addr": "DB700,R272",
+                "name": "r_speed_motor_26"
+            },
+            {
+                "addr": "DB700,R280",
+                "name": "r_concentration_27"
+            },
+            {
+                "addr": "DB700,R288",
+                "name": "r_concentration_28"
+            },
+            {
+                "addr": "DB700,R292",
+                "name": "r_concentration_13"
+            },
+            {
+                "addr": "DB700,R296",
+                "name": "r_temp_motor1_26"
+            },
+            {
+                "addr": "DB700,R300",
+                "name": "r_temp_motor2_26"
+            },
+            {
+                "addr": "DB700,R304",
+                "name": "r_temp_motor3_26"
+            },
+            {
+                "addr": "DB700,R308",
+                "name": "r_temp_motor4_26"
+            },
+            {
+                "addr": "DB700,R312",
+                "name": "r_temp_motor5_26"
             }
         ]
     },
@@ -2011,6 +2079,48 @@
         "rejectUnauthorized": true
     },
     {
+        "id": "4fe8e1c554bc3f68",
+        "type": "telegram bot",
+        "botname": "deepfake",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "01f541be776ebb13",
+        "type": "influxdb",
+        "hostname": "103.178.233.134",
+        "port": "8090",
+        "protocol": "http",
+        "database": "dongtien",
+        "name": "dongtien-server",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
         "id": "b456d74cc49da9e0",
         "type": "throttle",
         "z": "c95363a80fce05eb",
@@ -2090,8 +2200,8 @@
         "z": "0d323cbb2919aca8",
         "name": "Áp suất vào",
         "info": "",
-        "x": 190,
-        "y": 140,
+        "x": 430,
+        "y": 20,
         "wires": []
     },
     {
@@ -2157,7 +2267,8 @@
         "y": 200,
         "wires": [
             [
-                "9dcd31a86d44a8ef"
+                "9dcd31a86d44a8ef",
+                "b371b946eedba9bb"
             ]
         ]
     },
@@ -2350,7 +2461,8 @@
         "y": 460,
         "wires": [
             [
-                "9dcd31a86d44a8ef"
+                "9dcd31a86d44a8ef",
+                "b371b946eedba9bb"
             ]
         ]
     },
@@ -2361,7 +2473,7 @@
         "name": "Hệ thống lọc nồng độ cao",
         "info": "",
         "x": 230,
-        "y": 100,
+        "y": 20,
         "wires": []
     },
     {
@@ -2446,7 +2558,8 @@
         "y": 760,
         "wires": [
             [
-                "7ad054204731984a"
+                "7ad054204731984a",
+                "f2f1e80bed469d87"
             ]
         ]
     },
@@ -2531,7 +2644,8 @@
         "y": 880,
         "wires": [
             [
-                "7ad054204731984a"
+                "7ad054204731984a",
+                "f2f1e80bed469d87"
             ]
         ]
     },
@@ -2568,7 +2682,8 @@
         "y": 1000,
         "wires": [
             [
-                "7ad054204731984a"
+                "7ad054204731984a",
+                "f2f1e80bed469d87"
             ]
         ]
     },
@@ -2605,7 +2720,8 @@
         "y": 1120,
         "wires": [
             [
-                "7ad054204731984a"
+                "7ad054204731984a",
+                "f2f1e80bed469d87"
             ]
         ]
     },
@@ -2714,7 +2830,8 @@
         "y": 1260,
         "wires": [
             [
-                "1b16a32c192e2ce4"
+                "1b16a32c192e2ce4",
+                "ff9ea0a51c3f4ca8"
             ]
         ]
     },
@@ -2806,7 +2923,8 @@
         "y": 1520,
         "wires": [
             [
-                "1b16a32c192e2ce4"
+                "1b16a32c192e2ce4",
+                "ff9ea0a51c3f4ca8"
             ]
         ]
     },
@@ -2849,7 +2967,8 @@
         "y": 1400,
         "wires": [
             [
-                "1b16a32c192e2ce4"
+                "1b16a32c192e2ce4",
+                "ff9ea0a51c3f4ca8"
             ]
         ]
     },
@@ -2922,7 +3041,8 @@
         "y": 1660,
         "wires": [
             [
-                "7eae5f74d4873845"
+                "7eae5f74d4873845",
+                "2056b94b4ca1fc8e"
             ]
         ]
     },
@@ -2987,7 +3107,8 @@
         "y": 1780,
         "wires": [
             [
-                "7eae5f74d4873845"
+                "7eae5f74d4873845",
+                "2056b94b4ca1fc8e"
             ]
         ]
     },
@@ -3070,7 +3191,8 @@
         "y": 1900,
         "wires": [
             [
-                "7eae5f74d4873845"
+                "7eae5f74d4873845",
+                "2056b94b4ca1fc8e"
             ]
         ]
     },
@@ -3130,7 +3252,8 @@
         "y": 2060,
         "wires": [
             [
-                "9c8de5e721294eb1"
+                "9c8de5e721294eb1",
+                "5aeef2a4179e0a03"
             ]
         ]
     },
@@ -3195,7 +3318,8 @@
         "y": 2180,
         "wires": [
             [
-                "9c8de5e721294eb1"
+                "9c8de5e721294eb1",
+                "5aeef2a4179e0a03"
             ]
         ]
     },
@@ -3278,7 +3402,8 @@
         "y": 2300,
         "wires": [
             [
-                "9c8de5e721294eb1"
+                "9c8de5e721294eb1",
+                "5aeef2a4179e0a03"
             ]
         ]
     },
@@ -3325,7 +3450,8 @@
         "y": 2420,
         "wires": [
             [
-                "9c8de5e721294eb1"
+                "9c8de5e721294eb1",
+                "5aeef2a4179e0a03"
             ]
         ]
     },
@@ -3408,7 +3534,8 @@
         "y": 2540,
         "wires": [
             [
-                "02db9d71701170d4"
+                "02db9d71701170d4",
+                "9e384cba4afe3513"
             ]
         ]
     },
@@ -3473,7 +3600,8 @@
         "y": 2660,
         "wires": [
             [
-                "02db9d71701170d4"
+                "02db9d71701170d4",
+                "9e384cba4afe3513"
             ]
         ]
     },
@@ -3520,7 +3648,8 @@
         "y": 2780,
         "wires": [
             [
-                "02db9d71701170d4"
+                "02db9d71701170d4",
+                "9e384cba4afe3513"
             ]
         ]
     },
@@ -3616,7 +3745,8 @@
         "y": 2900,
         "wires": [
             [
-                "02db9d71701170d4"
+                "02db9d71701170d4",
+                "9e384cba4afe3513"
             ]
         ]
     },
@@ -3686,7 +3816,8 @@
         "y": 3060,
         "wires": [
             [
-                "98fd60ea6daccee5"
+                "98fd60ea6daccee5",
+                "2762a5a36499adad"
             ]
         ]
     },
@@ -3761,7 +3892,8 @@
         "y": 3180,
         "wires": [
             [
-                "98fd60ea6daccee5"
+                "98fd60ea6daccee5",
+                "2762a5a36499adad"
             ]
         ]
     },
@@ -3808,7 +3940,8 @@
         "y": 3300,
         "wires": [
             [
-                "98fd60ea6daccee5"
+                "98fd60ea6daccee5",
+                "2762a5a36499adad"
             ]
         ]
     },
@@ -3855,7 +3988,8 @@
         "y": 3420,
         "wires": [
             [
-                "98fd60ea6daccee5"
+                "98fd60ea6daccee5",
+                "2762a5a36499adad"
             ]
         ]
     },
@@ -3954,7 +4088,8 @@
         "y": 3580,
         "wires": [
             [
-                "92a65c05a6975b34"
+                "92a65c05a6975b34",
+                "80943ef1978eff0b"
             ]
         ]
     },
@@ -4029,7 +4164,8 @@
         "y": 3700,
         "wires": [
             [
-                "92a65c05a6975b34"
+                "92a65c05a6975b34",
+                "80943ef1978eff0b"
             ]
         ]
     },
@@ -4076,7 +4212,8 @@
         "y": 3820,
         "wires": [
             [
-                "92a65c05a6975b34"
+                "92a65c05a6975b34",
+                "80943ef1978eff0b"
             ]
         ]
     },
@@ -4162,7 +4299,8 @@
         "y": 3960,
         "wires": [
             [
-                "6889f7470559368d"
+                "6889f7470559368d",
+                "1c7d52a477919e6b"
             ]
         ]
     },
@@ -4237,7 +4375,8 @@
         "y": 4080,
         "wires": [
             [
-                "6889f7470559368d"
+                "6889f7470559368d",
+                "1c7d52a477919e6b"
             ]
         ]
     },
@@ -4284,7 +4423,8 @@
         "y": 4200,
         "wires": [
             [
-                "6889f7470559368d"
+                "6889f7470559368d",
+                "1c7d52a477919e6b"
             ]
         ]
     },
@@ -4370,7 +4510,8 @@
         "y": 4320,
         "wires": [
             [
-                "b220c980241da556"
+                "b220c980241da556",
+                "816c1ebeeb139d64"
             ]
         ]
     },
@@ -4427,7 +4568,8 @@
         "y": 4440,
         "wires": [
             [
-                "b220c980241da556"
+                "b220c980241da556",
+                "816c1ebeeb139d64"
             ]
         ]
     },
@@ -4492,7 +4634,8 @@
         "y": 4560,
         "wires": [
             [
-                "b220c980241da556"
+                "b220c980241da556",
+                "816c1ebeeb139d64"
             ]
         ]
     },
@@ -4578,7 +4721,8 @@
         "y": 4700,
         "wires": [
             [
-                "65db7ebd50e6071b"
+                "65db7ebd50e6071b",
+                "9d40772ee9800359"
             ]
         ]
     },
@@ -4643,7 +4787,8 @@
         "y": 4820,
         "wires": [
             [
-                "388e3ae366b03008"
+                "388e3ae366b03008",
+                "9d40772ee9800359"
             ]
         ]
     },
@@ -4687,7 +4832,9 @@
         "x": 190,
         "y": 4940,
         "wires": [
-            []
+            [
+                "7ad24e31b7de0ea1"
+            ]
         ]
     },
     {
@@ -4706,7 +4853,8 @@
         "y": 4940,
         "wires": [
             [
-                "9d6d9335065ccf8b"
+                "9d6d9335065ccf8b",
+                "9d40772ee9800359"
             ]
         ]
     },
@@ -4781,7 +4929,8 @@
         "y": 5060,
         "wires": [
             [
-                "a91ca790af37a2dc"
+                "a91ca790af37a2dc",
+                "9d40772ee9800359"
             ]
         ]
     },
@@ -4846,7 +4995,8 @@
         "y": 5180,
         "wires": [
             [
-                "7ab376413091f912"
+                "7ab376413091f912",
+                "9d40772ee9800359"
             ]
         ]
     },
@@ -4911,7 +5061,8 @@
         "y": 5300,
         "wires": [
             [
-                "2b0f81297f3eb78f"
+                "2b0f81297f3eb78f",
+                "9d40772ee9800359"
             ]
         ]
     },
@@ -4976,7 +5127,8 @@
         "y": 5420,
         "wires": [
             [
-                "7915eb5d0ac6db57"
+                "7915eb5d0ac6db57",
+                "b2c1b29343573e2e"
             ]
         ]
     },
@@ -5061,7 +5213,8 @@
         "y": 5540,
         "wires": [
             [
-                "afd223c18ae79f78"
+                "afd223c18ae79f78",
+                "b2c1b29343573e2e"
             ]
         ]
     },
@@ -5116,7 +5269,8 @@
         "y": 5660,
         "wires": [
             [
-                "49cef92663813d66"
+                "49cef92663813d66",
+                "b2c1b29343573e2e"
             ]
         ]
     },
@@ -5171,7 +5325,8 @@
         "y": 5780,
         "wires": [
             [
-                "3a63cd1adaaa7edb"
+                "3a63cd1adaaa7edb",
+                "b2c1b29343573e2e"
             ]
         ]
     },
@@ -5214,7 +5369,9 @@
         "x": 380,
         "y": 4940,
         "wires": [
-            []
+            [
+                "6b5f7289026d1b1f"
+            ]
         ]
     },
     {
@@ -5325,7 +5482,8 @@
         "y": 5920,
         "wires": [
             [
-                "fe5b4c1adefa9ebc"
+                "fe5b4c1adefa9ebc",
+                "b2c1b29343573e2e"
             ]
         ]
     },
@@ -5400,7 +5558,8 @@
         "y": 6040,
         "wires": [
             [
-                "03647fc3efdce7f3"
+                "03647fc3efdce7f3",
+                "b2c1b29343573e2e"
             ]
         ]
     },
@@ -5495,7 +5654,8 @@
         "y": 6160,
         "wires": [
             [
-                "f32a60d52a5efb73"
+                "f32a60d52a5efb73",
+                "cff3f67fd3b3ee79"
             ]
         ]
     },
@@ -5550,7 +5710,8 @@
         "y": 6260,
         "wires": [
             [
-                "97877ccbfab60bc6"
+                "97877ccbfab60bc6",
+                "cff3f67fd3b3ee79"
             ]
         ]
     },
@@ -5605,7 +5766,8 @@
         "y": 6360,
         "wires": [
             [
-                "8ad19776c886e19f"
+                "8ad19776c886e19f",
+                "cff3f67fd3b3ee79"
             ]
         ]
     },
@@ -5660,7 +5822,8 @@
         "y": 6480,
         "wires": [
             [
-                "a397d6f1cd5e73a5"
+                "a397d6f1cd5e73a5",
+                "cff3f67fd3b3ee79"
             ]
         ]
     },
@@ -5764,7 +5927,8 @@
         "y": 6620,
         "wires": [
             [
-                "dbaefd0bd3cf855f"
+                "dbaefd0bd3cf855f",
+                "cff3f67fd3b3ee79"
             ]
         ]
     },
@@ -5842,7 +6006,8 @@
         "y": 6760,
         "wires": [
             [
-                "d8cf485e40d1b214"
+                "d8cf485e40d1b214",
+                "cff3f67fd3b3ee79"
             ]
         ]
     },
@@ -5930,7 +6095,8 @@
         "y": 6900,
         "wires": [
             [
-                "fc2c5d59f4b67113"
+                "fc2c5d59f4b67113",
+                "cff3f67fd3b3ee79"
             ]
         ]
     },
@@ -6008,7 +6174,8 @@
         "y": 7020,
         "wires": [
             [
-                "0fe0bfc468d2c6a2"
+                "0fe0bfc468d2c6a2",
+                "ab8c7ad46295e2be"
             ]
         ]
     },
@@ -6073,7 +6240,8 @@
         "y": 7160,
         "wires": [
             [
-                "5c169cbb0186bd06"
+                "5c169cbb0186bd06",
+                "ab8c7ad46295e2be"
             ]
         ]
     },
@@ -6174,7 +6342,8 @@
         "y": 7280,
         "wires": [
             [
-                "52e6e5e8e692e2c3"
+                "52e6e5e8e692e2c3",
+                "ab8c7ad46295e2be"
             ]
         ]
     },
@@ -6239,7 +6408,8 @@
         "y": 7420,
         "wires": [
             [
-                "8fc2700679dc699c"
+                "8fc2700679dc699c",
+                "ab8c7ad46295e2be"
             ]
         ]
     },
@@ -6340,7 +6510,8 @@
         "y": 7560,
         "wires": [
             [
-                "8b2a04218505d75d"
+                "8b2a04218505d75d",
+                "ab8c7ad46295e2be"
             ]
         ]
     },
@@ -6524,7 +6695,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
+        "x": 720,
         "y": 7500,
         "wires": []
     },
@@ -6581,7 +6752,8 @@
         "y": 7700,
         "wires": [
             [
-                "02d4b86c5cb10abe"
+                "02d4b86c5cb10abe",
+                "ab8c7ad46295e2be"
             ]
         ]
     },
@@ -6630,6 +6802,1307 @@
         ]
     },
     {
+        "id": "82dada0cd3d54d74",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_speed_motor_1",
+        "diff": false,
+        "name": "",
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "ec5a8b40917bdea2"
+            ]
+        ]
+    },
+    {
+        "id": "96e13993c94a5d61",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        flow_out: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống lọc nồng độ cao\",\n        machine: \"61B02P2S1\",\n        device: \"Tốc độ quay bơm bột\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 100,
+        "wires": [
+            [
+                "9dcd31a86d44a8ef",
+                "b371b946eedba9bb"
+            ]
+        ]
+    },
+    {
+        "id": "ec5a8b40917bdea2",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 380,
+        "y": 100,
+        "wires": [
+            [
+                "96e13993c94a5d61"
+            ]
+        ]
+    },
+    {
+        "id": "4e1353f94d8c8a0d",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        flow_out: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống lọc nồng độ cao\",\n        machine: \"61B02P2-M01\",\n        device: \"Dòng điện bơm bột\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 60,
+        "wires": [
+            [
+                "9dcd31a86d44a8ef",
+                "b371b946eedba9bb"
+            ]
+        ]
+    },
+    {
+        "id": "2f08cde8e07925ed",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_current_motor_1",
+        "diff": false,
+        "name": "",
+        "x": 210,
+        "y": 60,
+        "wires": [
+            [
+                "ee53770e82d59f6e"
+            ]
+        ]
+    },
+    {
+        "id": "ee53770e82d59f6e",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 420,
+        "y": 60,
+        "wires": [
+            [
+                "4e1353f94d8c8a0d"
+            ]
+        ]
+    },
+    {
+        "id": "df371b7d37ea28eb",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_concentration_1",
+        "diff": false,
+        "name": "",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "554a4776a734be34"
+            ]
+        ]
+    },
+    {
+        "id": "0fd3f0fdf41e0a10",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        flow_out: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống lọc nồng độ cao\",\n        machine: \"61B02P2Q1\",\n        device: \"Nồng độ máy\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 140,
+        "wires": [
+            [
+                "9dcd31a86d44a8ef",
+                "b371b946eedba9bb"
+            ]
+        ]
+    },
+    {
+        "id": "554a4776a734be34",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 420,
+        "y": 140,
+        "wires": [
+            [
+                "0fd3f0fdf41e0a10"
+            ]
+        ]
+    },
+    {
+        "id": "4b30f2a3350a162f",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_concentration_13",
+        "diff": false,
+        "name": "",
+        "x": 430,
+        "y": 4760,
+        "wires": [
+            [
+                "ae21df42f327f094"
+            ]
+        ]
+    },
+    {
+        "id": "fd2fa437f8e8378a",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        value: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống phân tán nhiệt\",\n        machine: \"61F03R1Q1\",\n        device: \"Nồng độ đầu ra\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 4760,
+        "wires": [
+            [
+                "b749225041a7a2b9",
+                "9d40772ee9800359"
+            ]
+        ]
+    },
+    {
+        "id": "b749225041a7a2b9",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1080,
+        "y": 4760,
+        "wires": []
+    },
+    {
+        "id": "ae21df42f327f094",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 660,
+        "y": 4760,
+        "wires": [
+            [
+                "fd2fa437f8e8378a"
+            ]
+        ]
+    },
+    {
+        "id": "f9dd61306b186070",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_current_motor_25",
+        "diff": false,
+        "name": "",
+        "x": 210,
+        "y": 7840,
+        "wires": [
+            [
+                "6c76c7b43433770a"
+            ]
+        ]
+    },
+    {
+        "id": "1341be8c292a1681",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        value: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống băng tải đầu vào\",\n        machine: \"61B01H1-M\",\n        device: \"Dòng điện băng tải\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 7840,
+        "wires": [
+            [
+                "a92e62e63956649b",
+                "c531e2cfe7ec2fc9"
+            ]
+        ]
+    },
+    {
+        "id": "a92e62e63956649b",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 900,
+        "y": 7840,
+        "wires": []
+    },
+    {
+        "id": "6c76c7b43433770a",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 440,
+        "y": 7840,
+        "wires": [
+            [
+                "1341be8c292a1681"
+            ]
+        ]
+    },
+    {
+        "id": "b578e705486e230f",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Băng tải đầu vào",
+        "info": "",
+        "x": 200,
+        "y": 7780,
+        "wires": []
+    },
+    {
+        "id": "8648d8d8a5cd584b",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Dòng điện băng tải",
+        "info": "",
+        "x": 390,
+        "y": 7780,
+        "wires": []
+    },
+    {
+        "id": "3c053a3e1c97e48d",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_speed_motor_25",
+        "diff": false,
+        "name": "",
+        "x": 210,
+        "y": 7920,
+        "wires": [
+            [
+                "af5c649dd5f84293"
+            ]
+        ]
+    },
+    {
+        "id": "f2139677eb896a10",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        value: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống băng tải đầu vào\",\n        machine: \"61B01H1S2\",\n        device: \"Tốc độ quay băng tải\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 7920,
+        "wires": [
+            [
+                "de959bd98721eea7",
+                "c531e2cfe7ec2fc9"
+            ]
+        ]
+    },
+    {
+        "id": "de959bd98721eea7",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 900,
+        "y": 7920,
+        "wires": []
+    },
+    {
+        "id": "af5c649dd5f84293",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 440,
+        "y": 7920,
+        "wires": [
+            [
+                "f2139677eb896a10"
+            ]
+        ]
+    },
+    {
+        "id": "9a431a679bc265af",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Tốc độ quay băng tải",
+        "info": "",
+        "x": 220,
+        "y": 7880,
+        "wires": []
+    },
+    {
+        "id": "6c7037344f1bec87",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_current_motor_26",
+        "diff": false,
+        "name": "",
+        "x": 1010,
+        "y": 120,
+        "wires": [
+            [
+                "5c6dc78e9508bd35"
+            ]
+        ]
+    },
+    {
+        "id": "45192e8868d8f339",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        value: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"61B02R1-M01\",\n        device: \"Dòng điện nghiền thủy lực\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 120,
+        "wires": [
+            [
+                "dc01c20a61c0abed",
+                "06ab93092eedc78e"
+            ]
+        ]
+    },
+    {
+        "id": "5c6dc78e9508bd35",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 1200,
+        "y": 120,
+        "wires": [
+            [
+                "45192e8868d8f339"
+            ]
+        ]
+    },
+    {
+        "id": "e4ad5c91080252c1",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Hệ thống thủy lực bột",
+        "info": "",
+        "x": 1020,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "25dc366e1211b306",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Dòng điện nghiền thủy lực",
+        "info": "",
+        "x": 1250,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9c7bbc03cc926058",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Tốc độ quay nghiền thủy lực",
+        "info": "",
+        "x": 1040,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "fcde6c592431533a",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_speed_motor_26",
+        "diff": false,
+        "name": "",
+        "x": 1010,
+        "y": 220,
+        "wires": [
+            [
+                "68dbb8f7804e60a7"
+            ]
+        ]
+    },
+    {
+        "id": "19a23ff2b51e015e",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        value: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"61B02R1S1\",\n        device: \"Tốc độ quay nghiền thủy lực\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 220,
+        "wires": [
+            [
+                "dc01c20a61c0abed",
+                "06ab93092eedc78e"
+            ]
+        ]
+    },
+    {
+        "id": "68dbb8f7804e60a7",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 1200,
+        "y": 220,
+        "wires": [
+            [
+                "19a23ff2b51e015e"
+            ]
+        ]
+    },
+    {
+        "id": "4f369f1026785338",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Nồng độ giấy đứt đến tháp chứa bột tạm thời",
+        "info": "",
+        "x": 1090,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "4606e00d09b840da",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_concentration_27",
+        "diff": false,
+        "name": "",
+        "x": 1010,
+        "y": 320,
+        "wires": [
+            [
+                "dfcf15a1c33fb7f5"
+            ]
+        ]
+    },
+    {
+        "id": "3824918b515b8f97",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        conc: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"Tháp chứa bột tạm thời\",\n        device: \"Nồng độ giấy đứt đến tháp chứa bột tạm thời\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 320,
+        "wires": [
+            [
+                "dc01c20a61c0abed",
+                "06ab93092eedc78e"
+            ]
+        ]
+    },
+    {
+        "id": "dfcf15a1c33fb7f5",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 1200,
+        "y": 320,
+        "wires": [
+            [
+                "3824918b515b8f97"
+            ]
+        ]
+    },
+    {
+        "id": "8ae3950d41da9d8a",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Nhiệt độ máy nghiền thủy lực 1",
+        "info": "",
+        "x": 1050,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "dc01c20a61c0abed",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1620,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "2fb7e5612f1ad2b5",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_temp_motor1_26",
+        "diff": false,
+        "name": "",
+        "x": 1010,
+        "y": 420,
+        "wires": [
+            [
+                "811363c1d914e3f0"
+            ]
+        ]
+    },
+    {
+        "id": "5a5f364800bc9ad7",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        value: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"61B02R1-T1\",\n        device: \"Nhiệt độ máy nghiền thủy lực 1\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 420,
+        "wires": [
+            [
+                "dc01c20a61c0abed",
+                "06ab93092eedc78e"
+            ]
+        ]
+    },
+    {
+        "id": "811363c1d914e3f0",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 1200,
+        "y": 420,
+        "wires": [
+            [
+                "5a5f364800bc9ad7"
+            ]
+        ]
+    },
+    {
+        "id": "8354f715bf19066a",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Nhiệt độ máy nghiền thủy lực 2",
+        "info": "",
+        "x": 1050,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "c611a950c9c16e3d",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_temp_motor2_26",
+        "diff": false,
+        "name": "",
+        "x": 1010,
+        "y": 520,
+        "wires": [
+            [
+                "2e524d0981f94b3c"
+            ]
+        ]
+    },
+    {
+        "id": "ed8f28bab6a93ddc",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        value: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"61B02R1-T2\",\n        device: \"Nhiệt độ máy nghiền thủy lực 2\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 520,
+        "wires": [
+            [
+                "dc01c20a61c0abed",
+                "06ab93092eedc78e"
+            ]
+        ]
+    },
+    {
+        "id": "2e524d0981f94b3c",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 1200,
+        "y": 520,
+        "wires": [
+            [
+                "ed8f28bab6a93ddc"
+            ]
+        ]
+    },
+    {
+        "id": "d4c028a907aae8cf",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Nhiệt độ máy nghiền thủy lực 3",
+        "info": "",
+        "x": 1050,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "21a4c47c8e03ed75",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_temp_motor3_26",
+        "diff": false,
+        "name": "",
+        "x": 1010,
+        "y": 620,
+        "wires": [
+            [
+                "4a05f1c2b7063f23"
+            ]
+        ]
+    },
+    {
+        "id": "e195129315d26ad8",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        value: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"61B02R1-T3\",\n        device: \"Nhiệt độ máy nghiền thủy lực 3\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 620,
+        "wires": [
+            [
+                "dc01c20a61c0abed",
+                "06ab93092eedc78e"
+            ]
+        ]
+    },
+    {
+        "id": "4a05f1c2b7063f23",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 1200,
+        "y": 620,
+        "wires": [
+            [
+                "e195129315d26ad8"
+            ]
+        ]
+    },
+    {
+        "id": "768479d7e37c9793",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Nhiệt độ máy nghiền thủy lực 4",
+        "info": "",
+        "x": 1050,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "0dc259c190777a3a",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_temp_motor4_26",
+        "diff": false,
+        "name": "",
+        "x": 1010,
+        "y": 720,
+        "wires": [
+            [
+                "e069308e57527d83"
+            ]
+        ]
+    },
+    {
+        "id": "626950131c57314c",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        value: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"61B02R1-T4\",\n        device: \"Nhiệt độ máy nghiền thủy lực 4\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 720,
+        "wires": [
+            [
+                "dc01c20a61c0abed",
+                "06ab93092eedc78e"
+            ]
+        ]
+    },
+    {
+        "id": "e069308e57527d83",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 1200,
+        "y": 720,
+        "wires": [
+            [
+                "626950131c57314c"
+            ]
+        ]
+    },
+    {
+        "id": "b691ae41e4d3db65",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Nhiệt độ máy nghiền thủy lực 5",
+        "info": "",
+        "x": 1050,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "07475596d3ab5099",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_temp_motor5_26",
+        "diff": false,
+        "name": "",
+        "x": 1010,
+        "y": 820,
+        "wires": [
+            [
+                "f720146d2444319e"
+            ]
+        ]
+    },
+    {
+        "id": "ccb304d1099ef0e0",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        value: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống thủy lực bột\",\n        machine: \"61B02R1-T5\",\n        device: \"Nhiệt độ máy nghiền thủy lực 5\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 820,
+        "wires": [
+            [
+                "dc01c20a61c0abed",
+                "06ab93092eedc78e"
+            ]
+        ]
+    },
+    {
+        "id": "f720146d2444319e",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 1200,
+        "y": 820,
+        "wires": [
+            [
+                "ccb304d1099ef0e0"
+            ]
+        ]
+    },
+    {
+        "id": "c3722347f47b5892",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Hệ thống cô đặc",
+        "info": "",
+        "x": 1000,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "f2d7b3116a4219a4",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "dongtien",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1620,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "1345e86050468ef1",
+        "type": "s7 in",
+        "z": "0d323cbb2919aca8",
+        "endpoint": "405788186aeb4b93",
+        "mode": "single",
+        "variable": "r_concentration_28",
+        "diff": false,
+        "name": "",
+        "x": 1010,
+        "y": 980,
+        "wires": [
+            [
+                "4ebf35f9be65383f"
+            ]
+        ]
+    },
+    {
+        "id": "804cf263326debfb",
+        "type": "function",
+        "z": "0d323cbb2919aca8",
+        "name": "Insert data",
+        "func": "let shift = global.get(\"shift\");\nmsg.payload = [\n    {\n        value: msg.payload\n    },\n    {\n        factory: \"Giấy Đồng Tiến Long An\",\n        system: \"Hệ thống cô đặc\",\n        machine: \"61F01P1Q1\",\n        device: \"Nồng độ đầu ra bơm bột\",\n        shift: shift,\n    }\n];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 980,
+        "wires": [
+            [
+                "f2d7b3116a4219a4",
+                "cdab871b9f71ed6a"
+            ]
+        ]
+    },
+    {
+        "id": "4ebf35f9be65383f",
+        "type": "subflow:c95363a80fce05eb",
+        "z": "0d323cbb2919aca8",
+        "name": "",
+        "x": 1200,
+        "y": 980,
+        "wires": [
+            [
+                "804cf263326debfb"
+            ]
+        ]
+    },
+    {
+        "id": "74169f48223cc36d",
+        "type": "comment",
+        "z": "0d323cbb2919aca8",
+        "name": "Nồng độ đầu ra bơm bột",
+        "info": "",
+        "x": 1230,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "b371b946eedba9bb",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 820,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f2f1e80bed469d87",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 840,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "ff9ea0a51c3f4ca8",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 840,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "2056b94b4ca1fc8e",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 900,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "5aeef2a4179e0a03",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 920,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "9e384cba4afe3513",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 880,
+        "y": 2720,
+        "wires": []
+    },
+    {
+        "id": "2762a5a36499adad",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 800,
+        "y": 3300,
+        "wires": []
+    },
+    {
+        "id": "80943ef1978eff0b",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 800,
+        "y": 3760,
+        "wires": []
+    },
+    {
+        "id": "1c7d52a477919e6b",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 800,
+        "y": 4140,
+        "wires": []
+    },
+    {
+        "id": "816c1ebeeb139d64",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 820,
+        "y": 4500,
+        "wires": []
+    },
+    {
+        "id": "9d40772ee9800359",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1160,
+        "y": 5000,
+        "wires": []
+    },
+    {
+        "id": "b2c1b29343573e2e",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1020,
+        "y": 5660,
+        "wires": []
+    },
+    {
+        "id": "cff3f67fd3b3ee79",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1080,
+        "y": 6460,
+        "wires": []
+    },
+    {
+        "id": "ab8c7ad46295e2be",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1180,
+        "y": 7320,
+        "wires": []
+    },
+    {
+        "id": "c531e2cfe7ec2fc9",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1160,
+        "y": 7880,
+        "wires": []
+    },
+    {
+        "id": "06ab93092eedc78e",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1640,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "cdab871b9f71ed6a",
+        "type": "influxdb out",
+        "z": "0d323cbb2919aca8",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1660,
+        "y": 1040,
+        "wires": []
+    },
+    {
         "id": "9c522ba0070225b9",
         "type": "comment",
         "z": "62bd0f5f977b002a",
@@ -6672,7 +8145,8 @@
         "y": 160,
         "wires": [
             [
-                "a8e39b5fad9a1509"
+                "a8e39b5fad9a1509",
+                "2c318b1557c8557f"
             ]
         ]
     },
@@ -6742,7 +8216,8 @@
         "y": 280,
         "wires": [
             [
-                "a8e39b5fad9a1509"
+                "a8e39b5fad9a1509",
+                "2c318b1557c8557f"
             ]
         ]
     },
@@ -6789,7 +8264,8 @@
         "y": 400,
         "wires": [
             [
-                "a8e39b5fad9a1509"
+                "a8e39b5fad9a1509",
+                "2c318b1557c8557f"
             ]
         ]
     },
@@ -6854,7 +8330,8 @@
         "y": 540,
         "wires": [
             [
-                "a8e39b5fad9a1509"
+                "a8e39b5fad9a1509",
+                "2c318b1557c8557f"
             ]
         ]
     },
@@ -6901,7 +8378,8 @@
         "y": 660,
         "wires": [
             [
-                "a8e39b5fad9a1509"
+                "a8e39b5fad9a1509",
+                "2c318b1557c8557f"
             ]
         ]
     },
@@ -6948,7 +8426,8 @@
         "y": 780,
         "wires": [
             [
-                "a8e39b5fad9a1509"
+                "a8e39b5fad9a1509",
+                "2c318b1557c8557f"
             ]
         ]
     },
@@ -7093,7 +8572,8 @@
         "y": 1000,
         "wires": [
             [
-                "d8f406685cb1d679"
+                "d8f406685cb1d679",
+                "40ee6fc5993a56ff"
             ]
         ]
     },
@@ -7168,7 +8648,8 @@
         "y": 1120,
         "wires": [
             [
-                "2c5c38d348b296ff"
+                "2c5c38d348b296ff",
+                "40ee6fc5993a56ff"
             ]
         ]
     },
@@ -7233,7 +8714,8 @@
         "y": 1240,
         "wires": [
             [
-                "90aefe9b3b45f52b"
+                "90aefe9b3b45f52b",
+                "40ee6fc5993a56ff"
             ]
         ]
     },
@@ -7298,7 +8780,8 @@
         "y": 1380,
         "wires": [
             [
-                "e097abdb29d6a8d4"
+                "e097abdb29d6a8d4",
+                "40ee6fc5993a56ff"
             ]
         ]
     },
@@ -7415,7 +8898,8 @@
         "y": 1520,
         "wires": [
             [
-                "cfc9d6482989cea3"
+                "cfc9d6482989cea3",
+                "3259636b5a70656a"
             ]
         ]
     },
@@ -7472,7 +8956,8 @@
         "y": 1640,
         "wires": [
             [
-                "cfc9d6482989cea3"
+                "cfc9d6482989cea3",
+                "3259636b5a70656a"
             ]
         ]
     },
@@ -7519,7 +9004,8 @@
         "y": 1760,
         "wires": [
             [
-                "cfc9d6482989cea3"
+                "cfc9d6482989cea3",
+                "3259636b5a70656a"
             ]
         ]
     },
@@ -7624,7 +9110,8 @@
         "y": 2020,
         "wires": [
             [
-                "cfc9d6482989cea3"
+                "cfc9d6482989cea3",
+                "3259636b5a70656a"
             ]
         ]
     },
@@ -7671,7 +9158,8 @@
         "y": 2140,
         "wires": [
             [
-                "cfc9d6482989cea3"
+                "cfc9d6482989cea3",
+                "3259636b5a70656a"
             ]
         ]
     },
@@ -7718,7 +9206,8 @@
         "y": 2260,
         "wires": [
             [
-                "cfc9d6482989cea3"
+                "cfc9d6482989cea3",
+                "3259636b5a70656a"
             ]
         ]
     },
@@ -7814,7 +9303,8 @@
         "y": 1980,
         "wires": [
             [
-                "3ecef8b092b7f1cf"
+                "3ecef8b092b7f1cf",
+                "52510fae29e2bf05"
             ]
         ]
     },
@@ -7879,7 +9369,8 @@
         "y": 2100,
         "wires": [
             [
-                "4b1f10411691ba03"
+                "4b1f10411691ba03",
+                "52510fae29e2bf05"
             ]
         ]
     },
@@ -7980,7 +9471,8 @@
         "y": 100,
         "wires": [
             [
-                "4bc6b399b551ad85"
+                "4bc6b399b551ad85",
+                "2688ae464cd8804f"
             ]
         ]
     },
@@ -8045,7 +9537,8 @@
         "y": 220,
         "wires": [
             [
-                "5fe5122e3b32141f"
+                "5fe5122e3b32141f",
+                "2688ae464cd8804f"
             ]
         ]
     },
@@ -8110,7 +9603,8 @@
         "y": 500,
         "wires": [
             [
-                "8e98c5ccc4d0c59c"
+                "8e98c5ccc4d0c59c",
+                "2688ae464cd8804f"
             ]
         ]
     },
@@ -8175,7 +9669,8 @@
         "y": 620,
         "wires": [
             [
-                "676d90a807d62ed7"
+                "676d90a807d62ed7",
+                "2688ae464cd8804f"
             ]
         ]
     },
@@ -8302,7 +9797,8 @@
         "y": 2500,
         "wires": [
             [
-                "f7fea39f77301e08"
+                "f7fea39f77301e08",
+                "ebefb4cf6c3aa632"
             ]
         ]
     },
@@ -8367,7 +9863,8 @@
         "y": 2620,
         "wires": [
             [
-                "16399a944a5bc92a"
+                "16399a944a5bc92a",
+                "ebefb4cf6c3aa632"
             ]
         ]
     },
@@ -8458,7 +9955,8 @@
         "y": 2740,
         "wires": [
             [
-                "acc8f301291bf307"
+                "acc8f301291bf307",
+                "a3964486d45aeaa8"
             ]
         ]
     },
@@ -8533,7 +10031,8 @@
         "y": 2860,
         "wires": [
             [
-                "975815b3c847f770"
+                "975815b3c847f770",
+                "a3964486d45aeaa8"
             ]
         ]
     },
@@ -8634,7 +10133,8 @@
         "y": 2980,
         "wires": [
             [
-                "45841cf0af1eea57"
+                "45841cf0af1eea57",
+                "82b3e35a32f92afd"
             ]
         ]
     },
@@ -8699,7 +10199,8 @@
         "y": 3100,
         "wires": [
             [
-                "c8ed4b7c9d246a6a"
+                "c8ed4b7c9d246a6a",
+                "82b3e35a32f92afd"
             ]
         ]
     },
@@ -8764,7 +10265,8 @@
         "y": 3220,
         "wires": [
             [
-                "fa3581193625328b"
+                "fa3581193625328b",
+                "82b3e35a32f92afd"
             ]
         ]
     },
@@ -8829,7 +10331,8 @@
         "y": 3340,
         "wires": [
             [
-                "6400327205cc9e95"
+                "6400327205cc9e95",
+                "82b3e35a32f92afd"
             ]
         ]
     },
@@ -8894,7 +10397,8 @@
         "y": 3460,
         "wires": [
             [
-                "71559ffa4ae7faec"
+                "71559ffa4ae7faec",
+                "82b3e35a32f92afd"
             ]
         ]
     },
@@ -8959,7 +10463,8 @@
         "y": 3580,
         "wires": [
             [
-                "bfab4955d8ec3b3b"
+                "bfab4955d8ec3b3b",
+                "82b3e35a32f92afd"
             ]
         ]
     },
@@ -9024,7 +10529,8 @@
         "y": 3700,
         "wires": [
             [
-                "44413dd1c9430619"
+                "44413dd1c9430619",
+                "82b3e35a32f92afd"
             ]
         ]
     },
@@ -9089,7 +10595,8 @@
         "y": 3820,
         "wires": [
             [
-                "ec8345b9b4dd9273"
+                "ec8345b9b4dd9273",
+                "ba533915711dfb9a"
             ]
         ]
     },
@@ -9258,7 +10765,8 @@
         "y": 3980,
         "wires": [
             [
-                "c2c10be44dd94ae5"
+                "c2c10be44dd94ae5",
+                "ba533915711dfb9a"
             ]
         ]
     },
@@ -9336,7 +10844,8 @@
         "y": 4120,
         "wires": [
             [
-                "c116a028e6e420a5"
+                "c116a028e6e420a5",
+                "ba533915711dfb9a"
             ]
         ]
     },
@@ -9424,7 +10933,8 @@
         "y": 4260,
         "wires": [
             [
-                "327081504149d58c"
+                "327081504149d58c",
+                "f5bf9006f5587169"
             ]
         ]
     },
@@ -9535,7 +11045,8 @@
         "y": 4360,
         "wires": [
             [
-                "327081504149d58c"
+                "327081504149d58c",
+                "f5bf9006f5587169"
             ]
         ]
     },
@@ -9595,7 +11106,8 @@
         "y": 4480,
         "wires": [
             [
-                "327081504149d58c"
+                "327081504149d58c",
+                "f5bf9006f5587169"
             ]
         ]
     },
@@ -9655,7 +11167,8 @@
         "y": 4600,
         "wires": [
             [
-                "327081504149d58c"
+                "327081504149d58c",
+                "f5bf9006f5587169"
             ]
         ]
     },
@@ -9715,7 +11228,8 @@
         "y": 4720,
         "wires": [
             [
-                "327081504149d58c"
+                "327081504149d58c",
+                "f5bf9006f5587169"
             ]
         ]
     },
@@ -9775,7 +11289,8 @@
         "y": 4840,
         "wires": [
             [
-                "327081504149d58c"
+                "327081504149d58c",
+                "f5bf9006f5587169"
             ]
         ]
     },
@@ -9835,7 +11350,8 @@
         "y": 4960,
         "wires": [
             [
-                "327081504149d58c"
+                "327081504149d58c",
+                "f5bf9006f5587169"
             ]
         ]
     },
@@ -9895,7 +11411,8 @@
         "y": 5080,
         "wires": [
             [
-                "327081504149d58c"
+                "327081504149d58c",
+                "cf916c45b9f7eb93"
             ]
         ]
     },
@@ -9955,7 +11472,8 @@
         "y": 5200,
         "wires": [
             [
-                "327081504149d58c"
+                "327081504149d58c",
+                "cf916c45b9f7eb93"
             ]
         ]
     },
@@ -10002,7 +11520,8 @@
         "y": 4260,
         "wires": [
             [
-                "4c7cf2b05f7406d1"
+                "4c7cf2b05f7406d1",
+                "b6ca27c25cb0cc9c"
             ]
         ]
     },
@@ -10113,7 +11632,8 @@
         "y": 4360,
         "wires": [
             [
-                "4c7cf2b05f7406d1"
+                "4c7cf2b05f7406d1",
+                "b6ca27c25cb0cc9c"
             ]
         ]
     },
@@ -10173,7 +11693,8 @@
         "y": 4480,
         "wires": [
             [
-                "4c7cf2b05f7406d1"
+                "4c7cf2b05f7406d1",
+                "b6ca27c25cb0cc9c"
             ]
         ]
     },
@@ -10233,7 +11754,8 @@
         "y": 4600,
         "wires": [
             [
-                "4c7cf2b05f7406d1"
+                "4c7cf2b05f7406d1",
+                "b6ca27c25cb0cc9c"
             ]
         ]
     },
@@ -10293,7 +11815,8 @@
         "y": 4720,
         "wires": [
             [
-                "4c7cf2b05f7406d1"
+                "4c7cf2b05f7406d1",
+                "b6ca27c25cb0cc9c"
             ]
         ]
     },
@@ -10353,7 +11876,8 @@
         "y": 4840,
         "wires": [
             [
-                "4c7cf2b05f7406d1"
+                "4c7cf2b05f7406d1",
+                "b6ca27c25cb0cc9c"
             ]
         ]
     },
@@ -10413,7 +11937,8 @@
         "y": 4960,
         "wires": [
             [
-                "4c7cf2b05f7406d1"
+                "4c7cf2b05f7406d1",
+                "b6ca27c25cb0cc9c"
             ]
         ]
     },
@@ -10473,7 +11998,8 @@
         "y": 5080,
         "wires": [
             [
-                "4c7cf2b05f7406d1"
+                "4c7cf2b05f7406d1",
+                "b6ca27c25cb0cc9c"
             ]
         ]
     },
@@ -10533,7 +12059,8 @@
         "y": 5200,
         "wires": [
             [
-                "4c7cf2b05f7406d1"
+                "4c7cf2b05f7406d1",
+                "b6ca27c25cb0cc9c"
             ]
         ]
     },
@@ -10580,7 +12107,8 @@
         "y": 4260,
         "wires": [
             [
-                "6b928fdac8381bc4"
+                "6b928fdac8381bc4",
+                "e2a2621f0b864681"
             ]
         ]
     },
@@ -10691,7 +12219,8 @@
         "y": 4480,
         "wires": [
             [
-                "6b928fdac8381bc4"
+                "6b928fdac8381bc4",
+                "e2a2621f0b864681"
             ]
         ]
     },
@@ -10751,7 +12280,8 @@
         "y": 4600,
         "wires": [
             [
-                "6b928fdac8381bc4"
+                "6b928fdac8381bc4",
+                "e2a2621f0b864681"
             ]
         ]
     },
@@ -10811,7 +12341,8 @@
         "y": 4720,
         "wires": [
             [
-                "6b928fdac8381bc4"
+                "6b928fdac8381bc4",
+                "e2a2621f0b864681"
             ]
         ]
     },
@@ -10871,7 +12402,8 @@
         "y": 4840,
         "wires": [
             [
-                "6b928fdac8381bc4"
+                "6b928fdac8381bc4",
+                "e2a2621f0b864681"
             ]
         ]
     },
@@ -10931,7 +12463,8 @@
         "y": 4960,
         "wires": [
             [
-                "6b928fdac8381bc4"
+                "6b928fdac8381bc4",
+                "e2a2621f0b864681"
             ]
         ]
     },
@@ -10991,7 +12524,8 @@
         "y": 5080,
         "wires": [
             [
-                "6b928fdac8381bc4"
+                "6b928fdac8381bc4",
+                "e2a2621f0b864681"
             ]
         ]
     },
@@ -11051,7 +12585,8 @@
         "y": 5200,
         "wires": [
             [
-                "6b928fdac8381bc4"
+                "6b928fdac8381bc4",
+                "e2a2621f0b864681"
             ]
         ]
     },
@@ -11098,7 +12633,8 @@
         "y": 360,
         "wires": [
             [
-                "5dcba9b7eb5383b8"
+                "5dcba9b7eb5383b8",
+                "2688ae464cd8804f"
             ]
         ]
     },
@@ -11176,7 +12712,8 @@
         "y": 760,
         "wires": [
             [
-                "b6b3d64ef7b80a2c"
+                "b6b3d64ef7b80a2c",
+                "2688ae464cd8804f"
             ]
         ]
     },
@@ -11254,7 +12791,8 @@
         "y": 2240,
         "wires": [
             [
-                "e641a91d6cb434f6"
+                "e641a91d6cb434f6",
+                "52510fae29e2bf05"
             ]
         ]
     },
@@ -11332,7 +12870,8 @@
         "y": 2360,
         "wires": [
             [
-                "3db640916bfce9e5"
+                "3db640916bfce9e5",
+                "52510fae29e2bf05"
             ]
         ]
     },
@@ -11410,7 +12949,8 @@
         "y": 3000,
         "wires": [
             [
-                "3e16ac5e3dc78ffc"
+                "3e16ac5e3dc78ffc",
+                "a3964486d45aeaa8"
             ]
         ]
     },
@@ -11488,7 +13028,8 @@
         "y": 3120,
         "wires": [
             [
-                "ffc688467c31da3a"
+                "ffc688467c31da3a",
+                "a3964486d45aeaa8"
             ]
         ]
     },
@@ -11566,7 +13107,8 @@
         "y": 3300,
         "wires": [
             [
-                "30df7e00e41aa726"
+                "30df7e00e41aa726",
+                "f5e95a33d373a0ab"
             ]
         ]
     },
@@ -11644,7 +13186,8 @@
         "y": 3400,
         "wires": [
             [
-                "75b489429babf19a"
+                "75b489429babf19a",
+                "f5e95a33d373a0ab"
             ]
         ]
     },
@@ -11722,7 +13265,8 @@
         "y": 3500,
         "wires": [
             [
-                "8c7bb6795ad45ace"
+                "8c7bb6795ad45ace",
+                "f5e95a33d373a0ab"
             ]
         ]
     },
@@ -11800,7 +13344,8 @@
         "y": 3600,
         "wires": [
             [
-                "0495d9189de19ec0"
+                "0495d9189de19ec0",
+                "f5e95a33d373a0ab"
             ]
         ]
     },
@@ -11898,7 +13443,8 @@
         "y": 3760,
         "wires": [
             [
-                "6ba160c78a33411b"
+                "6ba160c78a33411b",
+                "46bfe9855685bbca"
             ]
         ]
     },
@@ -11966,7 +13512,8 @@
         "y": 3860,
         "wires": [
             [
-                "c1a2fb1604dc734c"
+                "c1a2fb1604dc734c",
+                "46bfe9855685bbca"
             ]
         ]
     },
@@ -12044,7 +13591,8 @@
         "y": 3960,
         "wires": [
             [
-                "5051d2eff490d8f1"
+                "5051d2eff490d8f1",
+                "46bfe9855685bbca"
             ]
         ]
     },
@@ -12109,7 +13657,8 @@
         "y": 4060,
         "wires": [
             [
-                "d11ba877d0c899ca"
+                "d11ba877d0c899ca",
+                "46bfe9855685bbca"
             ]
         ]
     },
@@ -12174,7 +13723,8 @@
         "y": 4140,
         "wires": [
             [
-                "253632e2133dbeb0"
+                "253632e2133dbeb0",
+                "46bfe9855685bbca"
             ]
         ]
     },
@@ -12440,7 +13990,8 @@
         "y": 1840,
         "wires": [
             [
-                "cfc9d6482989cea3"
+                "cfc9d6482989cea3",
+                "3259636b5a70656a"
             ]
         ]
     },
@@ -12677,7 +14228,7 @@
             }
         ],
         "repeat": "",
-        "crontab": "00 08 * * *",
+        "crontab": "00 07 * * *",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
@@ -12706,7 +14257,8 @@
         "y": 1240,
         "wires": [
             [
-                "447624bbf5c68d5f"
+                "447624bbf5c68d5f",
+                "e6a19547d759b240"
             ]
         ]
     },
@@ -12725,7 +14277,8 @@
         "y": 1380,
         "wires": [
             [
-                "ebfa121a3f6570e7"
+                "ebfa121a3f6570e7",
+                "e6a19547d759b240"
             ]
         ]
     },
@@ -12744,7 +14297,8 @@
         "y": 1440,
         "wires": [
             [
-                "95df66cb7c14596c"
+                "95df66cb7c14596c",
+                "e6a19547d759b240"
             ]
         ]
     },
@@ -12753,7 +14307,7 @@
         "type": "function",
         "z": "62bd0f5f977b002a",
         "name": "function 7",
-        "func": "global.set(\"sltt\", msg.payload[6].production);\nreturn msg;",
+        "func": "global.set(\"sltt\", msg.payload[1].production);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -12773,7 +14327,7 @@
         "type": "function",
         "z": "62bd0f5f977b002a",
         "name": "function 8",
-        "func": "// Convert to Influx Line Protocol\nfunction escape_string(str) {\n    return str\n        .toString()\n        .replace(/\\s/g, \"\\\\ \")\n        .replace(/,/g, \"\\\\,\")\n        .replace(/=/g, \"\\\\=\");\n}\nmsg.payload = msg.payload[6];\nlet timestamp = new Date(msg.payload.time).getTime();\n\nif (isNaN(timestamp)) {\n    node.error(\"Timestamp không hợp lệ\");\n    return null;\n}\n\nlet actualProduction = Number(global.get(\"sltt\"));\n\nif (actualProduction < 1) {\n    actualProduction = 0;\n}\nconst finishedProduction = Number(global.get(\"sltp\"));\nconst planProduction = Number(global.get(\"slkh\"));\n\nlet quality = 0;\nlet performance = 0;\n\nif (\n    Number.isFinite(actualProduction) &&\n    Number.isFinite(finishedProduction) &&\n    actualProduction > 0\n) {\n    quality = +(finishedProduction / actualProduction * 100).toFixed(2);\n}\n\nif (\n    Number.isFinite(actualProduction) &&\n    Number.isFinite(planProduction) &&\n    planProduction > 0\n) {\n    performance = +(actualProduction / planProduction * 100).toFixed(2);\n}\n\nlet oee = 0;\n\nconst availability = msg.payload.Availability;\n\nif (\n    Number.isFinite(availability) &&\n    Number.isFinite(performance) &&\n    Number.isFinite(quality)\n) {\n    oee = +(availability * performance * quality / 10000).toFixed(2);\n}\n\nconst run_time_min = +(1440 * availability / 100).toFixed(2);\nconst downtime_min = +(1440 - run_time_min).toFixed(2);\n\nlet tags = [\n    `factory=${escape_string(\"Giấy Đồng Tiến Long An\")}`,\n    `system=${escape_string(\"OEE\")}`,\n    `machine=${escape_string(\"PM6\")}`,\n    `paper_type=${escape_string(\"M6S\")}`,\n];\n\nlet fields = [\n    `availability=${availability}`,\n    `performance=${performance}`,\n    `quality=${quality}`,\n    `oee=${oee}`,\n    // `timestamp=${msg.payload.time}`\n];\n\nlet fields_2 = [\n    `finished_production=${finishedProduction}`,\n    `actual_production=${actualProduction}`,\n    `run_time_min=${run_time_min}`,\n    `downtime_min=${downtime_min}`,\n];\n\n// Influx Line Protocol\n// msg.payload =\n//     `paper_daily_oee,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`;\n\n// msg.db = \"dongtien\";\n// msg.precision = \"ms\";\n\n\nlet msgOEE = {\n    payload: `paper_daily_oee,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`,\n    db: \"dongtien\",\n    precision: \"ms\"\n};\n\nlet msgProduction  = {\n    payload: `paper_daily_production,${tags.join(\",\")} ${fields_2.join(\",\")} ${timestamp}`,\n    db: \"dongtien\",\n    precision: \"ms\"\n};\n// msg.payload = fields_2;\nreturn [[msgOEE, msgProduction]];\n// return msg;",
+        "func": "// Convert to Influx Line Protocol\nfunction escape_string(str) {\n    return str\n        .toString()\n        .replace(/\\s/g, \"\\\\ \")\n        .replace(/,/g, \"\\\\,\")\n        .replace(/=/g, \"\\\\=\");\n}\nmsg.payload = msg.payload[1];\nlet timestamp = new Date(msg.payload.time).getTime();\n\nif (isNaN(timestamp)) {\n    node.error(\"Timestamp không hợp lệ\");\n    return null;\n}\n\nlet actualProduction = Number(global.get(\"sltt\"));\n\nif (actualProduction < 1) {\n    actualProduction = 0;\n}\nconst finishedProduction = Number(global.get(\"sltp\"));\nconst planProduction = Number(global.get(\"slkh\"));\n\nlet quality = 0;\nlet performance = 0;\n\nif (\n    Number.isFinite(actualProduction) &&\n    Number.isFinite(finishedProduction) &&\n    actualProduction > 0\n) {\n    quality = +(finishedProduction / actualProduction * 100).toFixed(2);\n}\n\nif (\n    Number.isFinite(actualProduction) &&\n    Number.isFinite(planProduction) &&\n    planProduction > 0\n) {\n    performance = +(actualProduction / planProduction * 100).toFixed(2);\n}\n\nlet oee = 0;\n\nconst availability = msg.payload.Availability;\n\nif (\n    Number.isFinite(availability) &&\n    Number.isFinite(performance) &&\n    Number.isFinite(quality)\n) {\n    oee = +(availability * performance * quality / 10000).toFixed(2);\n}\n\nconst run_time_min = +(1440 * availability / 100).toFixed(2);\nconst downtime_min = +(1440 - run_time_min).toFixed(2);\n\nlet tags = [\n    `factory=${escape_string(\"Giấy Đồng Tiến Long An\")}`,\n    `system=${escape_string(\"OEE\")}`,\n    `machine=${escape_string(\"PM6\")}`,\n    `paper_type=${escape_string(\"M6S\")}`,\n];\n\nlet fields = [\n    `availability=${availability}`,\n    `performance=${performance}`,\n    `quality=${quality}`,\n    `oee=${oee}`,\n    // `timestamp=${msg.payload.time}`\n];\n\nlet fields_2 = [\n    `finished_production=${finishedProduction}`,\n    `actual_production=${actualProduction}`,\n    `run_time_min=${run_time_min}`,\n    `downtime_min=${downtime_min}`,\n];\n\n// Influx Line Protocol\n// msg.payload =\n//     `paper_daily_oee,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`;\n\n// msg.db = \"dongtien\";\n// msg.precision = \"ms\";\n\n\nlet msgOEE = {\n    payload: `paper_daily_oee,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`,\n    db: \"dongtien\",\n    precision: \"ms\"\n};\n\nlet msgProduction  = {\n    payload: `paper_daily_production,${tags.join(\",\")} ${fields_2.join(\",\")} ${timestamp}`,\n    db: \"dongtien\",\n    precision: \"ms\"\n};\n// msg.payload = fields_2;\nreturn [[msgOEE, msgProduction]];\n// return msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -12783,9 +14337,7 @@
         "x": 2780,
         "y": 1240,
         "wires": [
-            [
-                "a7f5f51e7fa259c5"
-            ]
+            []
         ]
     },
     {
@@ -12793,7 +14345,7 @@
         "type": "function",
         "z": "62bd0f5f977b002a",
         "name": "function 9",
-        "func": "msg.payload.forEach(row => {\n    row.time = new Date(\n        new Date(row.time).getTime() + 7 * 60 * 60 * 1000\n    ).toISOString();\n});\nglobal.set(\"sltp\", msg.payload[6].sum);\n\nreturn msg;",
+        "func": "msg.payload.forEach(row => {\n    row.time = new Date(\n        new Date(row.time).getTime() + 7 * 60 * 60 * 1000\n    ).toISOString();\n});\nglobal.set(\"sltp\", msg.payload[1].sum);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -12821,7 +14373,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2740,
+        "x": 2700,
         "y": 1520,
         "wires": []
     },
@@ -12961,7 +14513,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "3600",
+        "repeat": "900",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
@@ -13213,7 +14765,8 @@
         "y": 1320,
         "wires": [
             [
-                "3d74e0136587a1b6"
+                "3d74e0136587a1b6",
+                "e6a19547d759b240"
             ]
         ]
     },
@@ -13331,11 +14884,11 @@
         "id": "3bd15e0333b635c5",
         "type": "http request",
         "z": "62bd0f5f977b002a",
-        "name": "",
+        "name": "GET FILE EXCEL",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://172.26.2.12:8000/apioee/v2/oee/quality",
+        "url": "http://103.178.233.134:8000/apioee/v2/oee/quality",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -13343,8 +14896,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 2370,
-        "y": 1520,
+        "x": 2270,
+        "y": 2020,
         "wires": [
             []
         ]
@@ -13364,14 +14917,14 @@
             }
         ],
         "repeat": "",
-        "crontab": "00 07 * * *",
+        "crontab": "59 06 * * *",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2170,
-        "y": 1520,
+        "x": 2050,
+        "y": 2020,
         "wires": [
             [
                 "3bd15e0333b635c5"
@@ -13383,7 +14936,7 @@
         "type": "function",
         "z": "62bd0f5f977b002a",
         "name": "function 16",
-        "func": "global.set(\"slkh\", msg.payload[5].nominal_production);\nreturn msg;",
+        "func": "global.set(\"slkh\", msg.payload[0].nominal_production);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13397,6 +14950,337 @@
                 "3ea106e91dc8587a"
             ]
         ]
+    },
+    {
+        "id": "9565d182a394ac80",
+        "type": "comment",
+        "z": "62bd0f5f977b002a",
+        "name": "Schedule",
+        "info": "",
+        "x": 2020,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "693dada9f9b755fc",
+        "type": "inject",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 06 * * *",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2050,
+        "y": 2080,
+        "wires": [
+            [
+                "20ec84163fa4dbb3"
+            ]
+        ]
+    },
+    {
+        "id": "20ec84163fa4dbb3",
+        "type": "http request",
+        "z": "62bd0f5f977b002a",
+        "name": "GET ENERGY ENV",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://103.178.233.134:8002/apioee/v1/energy/daily/scrape",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2280,
+        "y": 2080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c318b1557c8557f",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 840,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "40ee6fc5993a56ff",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 920,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "3259636b5a70656a",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 900,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "ebefb4cf6c3aa632",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 880,
+        "y": 2560,
+        "wires": []
+    },
+    {
+        "id": "82b3e35a32f92afd",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 860,
+        "y": 3280,
+        "wires": []
+    },
+    {
+        "id": "ba533915711dfb9a",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 820,
+        "y": 3920,
+        "wires": []
+    },
+    {
+        "id": "f5bf9006f5587169",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 960,
+        "y": 4620,
+        "wires": []
+    },
+    {
+        "id": "cf916c45b9f7eb93",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 940,
+        "y": 5160,
+        "wires": []
+    },
+    {
+        "id": "b6ca27c25cb0cc9c",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 2040,
+        "y": 4840,
+        "wires": []
+    },
+    {
+        "id": "46bfe9855685bbca",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1840,
+        "y": 4020,
+        "wires": []
+    },
+    {
+        "id": "f5e95a33d373a0ab",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1840,
+        "y": 3460,
+        "wires": []
+    },
+    {
+        "id": "a3964486d45aeaa8",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1840,
+        "y": 2940,
+        "wires": []
+    },
+    {
+        "id": "52510fae29e2bf05",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1840,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "2688ae464cd8804f",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1940,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e2a2621f0b864681",
+        "type": "influxdb out",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "01f541be776ebb13",
+        "name": "dongtien-server",
+        "measurement": "dongtien_realtime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 3080,
+        "y": 4640,
+        "wires": []
     },
     {
         "id": "9d9caf91fa2a534a",
@@ -13584,7 +15468,8 @@
                 "43c734ce7522fe3b"
             ],
             [
-                "f1a574d5a36767a2"
+                "f1a574d5a36767a2",
+                "d2ee7cc9e20bf32e"
             ],
             [
                 "5e2acbe74db0c812"
@@ -15802,8 +17687,7 @@
         "y": 2380,
         "wires": [
             [
-                "55a687f37b5f1591",
-                "7522320a7b35d213"
+                "55a687f37b5f1591"
             ]
         ]
     },
@@ -16230,8 +18114,7 @@
         "y": 1620,
         "wires": [
             [
-                "e730a4523672ae68",
-                "bb1724ec0b1026a1"
+                "e730a4523672ae68"
             ]
         ]
     },
@@ -16356,8 +18239,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1240,
-        "y": 2320,
+        "x": 1000,
+        "y": 2360,
         "wires": []
     },
     {
@@ -16372,8 +18255,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1960,
-        "y": 1660,
+        "x": 1280,
+        "y": 1800,
         "wires": []
     },
     {
@@ -17061,7 +18944,8 @@
         "y": 1760,
         "wires": [
             [
-                "8a3d8b40edcfb6b6"
+                "8a3d8b40edcfb6b6",
+                "bb1724ec0b1026a1"
             ]
         ]
     },
@@ -17079,7 +18963,7 @@
         "joinerType": "str",
         "useparts": false,
         "accumulate": false,
-        "timeout": "60",
+        "timeout": "2",
         "count": "",
         "reduceRight": false,
         "reduceExp": "",
@@ -17090,6 +18974,7 @@
         "y": 1760,
         "wires": [
             [
+                "bb1724ec0b1026a1",
                 "0c3ddb9b777ce6bc"
             ]
         ]
@@ -18414,7 +20299,8 @@
         "y": 2160,
         "wires": [
             [
-                "4c3428489c6caba7"
+                "4c3428489c6caba7",
+                "7522320a7b35d213"
             ]
         ]
     },
@@ -18461,7 +20347,7 @@
         "joinerType": "str",
         "useparts": false,
         "accumulate": false,
-        "timeout": "60",
+        "timeout": "10",
         "count": "",
         "reduceRight": false,
         "reduceExp": "",
@@ -19306,7 +21192,8 @@
         "y": 3560,
         "wires": [
             [
-                "3479fb57c133d0c9"
+                "3479fb57c133d0c9",
+                "1c894be39d531f49"
             ]
         ]
     },
@@ -19378,6 +21265,140 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "d2ee7cc9e20bf32e",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "1c894be39d531f49",
+        "type": "debug",
+        "z": "06c2b55e1c9ea8bc",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1460,
+        "y": 3660,
+        "wires": []
+    },
+    {
+        "id": "e4820328c702d62c",
+        "type": "telegram receiver",
+        "z": "7e2ffa1a84704d01",
+        "name": "",
+        "bot": "4fe8e1c554bc3f68",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": false,
+        "inputs": 0,
+        "handleallupdates": false,
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "f5689078067c6c19"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f5689078067c6c19",
+        "type": "debug",
+        "z": "7e2ffa1a84704d01",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "990d072e64a68c4a",
+        "type": "http in",
+        "z": "7e2ffa1a84704d01",
+        "name": "",
+        "url": "/grafana-alert",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 290,
+        "y": 360,
+        "wires": [
+            [
+                "ee3c0f1123464e67",
+                "4489f1c90f113cfc"
+            ]
+        ]
+    },
+    {
+        "id": "ee3c0f1123464e67",
+        "type": "function",
+        "z": "7e2ffa1a84704d01",
+        "name": "response webhook",
+        "func": "msg.payload = { status: \"received\" };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 360,
+        "wires": [
+            [
+                "1e08b52b27f57909"
+            ]
+        ]
+    },
+    {
+        "id": "1e08b52b27f57909",
+        "type": "http response",
+        "z": "7e2ffa1a84704d01",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "4489f1c90f113cfc",
+        "type": "debug",
+        "z": "7e2ffa1a84704d01",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 420,
+        "wires": []
     },
     {
         "id": "51f705db47c816b7",
