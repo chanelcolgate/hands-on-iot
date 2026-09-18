@@ -2424,7 +2424,8 @@
         "y": 320,
         "wires": [
             [
-                "9dcd31a86d44a8ef"
+                "9dcd31a86d44a8ef",
+                "b371b946eedba9bb"
             ]
         ]
     },
@@ -2578,7 +2579,7 @@
         "org": "organisation",
         "bucket": "bucket",
         "x": 820,
-        "y": 880,
+        "y": 820,
         "wires": []
     },
     {
@@ -7828,8 +7829,8 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 840,
-        "y": 940,
+        "x": 820,
+        "y": 900,
         "wires": []
     },
     {
