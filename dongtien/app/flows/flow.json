@@ -14568,23 +14568,6 @@
         ]
     },
     {
-        "id": "4afe3be3a5059c06",
-        "type": "debug",
-        "z": "62bd0f5f977b002a",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2140,
-        "y": 1900,
-        "wires": []
-    },
-    {
         "id": "781f353383b4f755",
         "type": "function",
         "z": "62bd0f5f977b002a",
@@ -14704,7 +14687,8 @@
         "y": 1820,
         "wires": [
             [
-                "5ae9d81df89ed138"
+                "5ae9d81df89ed138",
+                "d38efe18be60606c"
             ]
         ]
     },
@@ -14994,7 +14978,7 @@
         "id": "20ec84163fa4dbb3",
         "type": "http request",
         "z": "62bd0f5f977b002a",
-        "name": "GET ENERGY ENV",
+        "name": "GET ENERGY EVN",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
@@ -15281,6 +15265,529 @@
         "x": 3080,
         "y": 4640,
         "wires": []
+    },
+    {
+        "id": "893b35f6c09c6464",
+        "type": "inject",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 07 * * *",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "iso",
+        "payloadType": "date",
+        "x": 2050,
+        "y": 2140,
+        "wires": [
+            [
+                "caecf02a051abef5"
+            ]
+        ]
+    },
+    {
+        "id": "7c23c93f6c2d64ba",
+        "type": "http request",
+        "z": "62bd0f5f977b002a",
+        "name": "GET OEE",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2460,
+        "y": 2140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "caecf02a051abef5",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 17",
+        "func": "// 1. Lấy thời gian hiện tại\nconst now = new Date();\n\n// 2. Trừ đi 1 ngày để lấy \"ngày hôm qua\"\nnow.setDate(now.getDate() - 1);\n\n// 3. Format thành chuỗi YYYY-MM-DD theo múi giờ Việt Nam (Asia/Ho_Chi_Minh)\nconst yesterdayStr = now.toLocaleDateString('sv-SE', { timeZone: 'Asia/Ho_Chi_Minh' }); \n// Output dạng ISO date: \"2026-09-16\"\n\n// 4. Ghép vào URL gọi API\nmsg.url = `http://103.178.233.134:8002/apioee/v2/oee/all?from_day=${yesterdayStr}&to_day=${yesterdayStr}`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2250,
+        "y": 2140,
+        "wires": [
+            [
+                "7c23c93f6c2d64ba"
+            ]
+        ]
+    },
+    {
+        "id": "d38efe18be60606c",
+        "type": "http request",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://103.178.233.134:8090/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2350,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "653e0834d668d35f",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "nominal_speed",
+        "func": "const now = new Date();\n\nconst end = new Date(now);\nend.setHours(0, 0, 0, 0);\n\nif (now < end) {\n    end.setDate(end.getDate()+1);\n}\n\nconst start = new Date(end);\nstart.setDate(start.getDate());\n\nmsg.query = `\nSELECT \n    mean(\"nominal_speed\")\nFROM \"paper_daily_nominal\" \nWHERE \n    \"machine\"::tag = 'PM6' \n    AND time >= 1789603200000ms \n    and time <= 1789696148866ms \nGROUP BY time(1m) fill(none) \nORDER BY time ASC\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2280,
+        "y": 2340,
+        "wires": [
+            [
+                "0fd313bf1e9b3454"
+            ]
+        ]
+    },
+    {
+        "id": "0fd313bf1e9b3454",
+        "type": "influxdb in",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "Định lượng thực tế",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 2470,
+        "y": 2340,
+        "wires": [
+            [
+                "41cbba9ce6f302c4"
+            ]
+        ]
+    },
+    {
+        "id": "59c3992038b45433",
+        "type": "inject",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2080,
+        "y": 2340,
+        "wires": [
+            [
+                "653e0834d668d35f"
+            ]
+        ]
+    },
+    {
+        "id": "c8b19f34ba415433",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "nominal_bw",
+        "func": "const now = new Date();\n\nconst end = new Date(now);\nend.setHours(0, 0, 0, 0);\n\nif (now < end) {\n    end.setDate(end.getDate()+1);\n}\n\nconst start = new Date(end);\nstart.setDate(start.getDate());\n\nmsg.query = `\nSELECT \n    mean(\"nominal_bw\")\nFROM \"paper_daily_nominal\" \nWHERE \n    \"machine\"::tag = 'PM6' \n    AND time >= 1789603200000ms \n    and time <= 1789696148866ms \nGROUP BY time(1m) fill(none) \nORDER BY time ASC\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2270,
+        "y": 2400,
+        "wires": [
+            [
+                "ca9ab1af3be72f51"
+            ]
+        ]
+    },
+    {
+        "id": "ca9ab1af3be72f51",
+        "type": "influxdb in",
+        "z": "62bd0f5f977b002a",
+        "influxdb": "f0bd2e60724446a6",
+        "name": "Định lượng thực tế",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 2470,
+        "y": 2400,
+        "wires": [
+            [
+                "8366dd2940a96efa"
+            ]
+        ]
+    },
+    {
+        "id": "aea1ecc98e198879",
+        "type": "inject",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2080,
+        "y": 2400,
+        "wires": [
+            [
+                "c8b19f34ba415433"
+            ]
+        ]
+    },
+    {
+        "id": "a4a2f893d890e2bf",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "nominal_speed",
+        "func": "// Convert to Influx Line Protocol\nfunction escape_string(str) {\n    return str\n        .toString()\n        .replace(/\\s/g, \"\\\\ \")\n        .replace(/,/g, \"\\\\,\")\n        .replace(/=/g, \"\\\\=\");\n}\n\nlet timestamp = new Date(msg.payload.time).getTime();\n\nif (isNaN(timestamp)) {\n    node.error(\"Timestamp không hợp lệ\");\n    return null;\n}\n\nlet tags = [\n    `factory=${escape_string(\"Giấy Đồng Tiến Long An\")}`,\n    `system=${escape_string(\"OEE\")}`,\n    `machine=${escape_string(\"PM6\")}`,\n];\n\nlet fields = [\n    `nominal_speed=${msg.payload.mean}`,\n];\n\nlet msg_nominal = {\n    payload: `paper_daily_nominal,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`,\n    db: \"dongtien\",\n    precision: \"ms\"\n};\n\nreturn [[msg_nominal]];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2680,
+        "y": 2480,
+        "wires": [
+            [
+                "b448a461657ef4ef"
+            ]
+        ]
+    },
+    {
+        "id": "3c6a29e709eec6e1",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "nominal_bw",
+        "func": "// Convert to Influx Line Protocol\nfunction escape_string(str) {\n    return str\n        .toString()\n        .replace(/\\s/g, \"\\\\ \")\n        .replace(/,/g, \"\\\\,\")\n        .replace(/=/g, \"\\\\=\");\n}\n\nlet timestamp = new Date(msg.payload.time).getTime();\n\nif (isNaN(timestamp)) {\n    node.error(\"Timestamp không hợp lệ\");\n    return null;\n}\n\nlet tags = [\n    `factory=${escape_string(\"Giấy Đồng Tiến Long An\")}`,\n    `system=${escape_string(\"OEE\")}`,\n    `machine=${escape_string(\"PM6\")}`,\n];\n\nlet fields = [\n    `nominal_bw=${msg.payload.mean}`,\n];\n\nlet msg_nominal = {\n    payload: `paper_daily_nominal,${tags.join(\",\")} ${fields.join(\",\")} ${timestamp}`,\n    db: \"dongtien\",\n    precision: \"ms\"\n};\n\nreturn [[msg_nominal]];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2670,
+        "y": 2540,
+        "wires": [
+            [
+                "b448a461657ef4ef"
+            ]
+        ]
+    },
+    {
+        "id": "b024b97a3c01768f",
+        "type": "delay",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2430,
+        "y": 2480,
+        "wires": [
+            [
+                "a4a2f893d890e2bf"
+            ]
+        ]
+    },
+    {
+        "id": "f3f46d3f3a95ced1",
+        "type": "delay",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2430,
+        "y": 2540,
+        "wires": [
+            [
+                "3c6a29e709eec6e1"
+            ]
+        ]
+    },
+    {
+        "id": "41cbba9ce6f302c4",
+        "type": "split",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 2250,
+        "y": 2480,
+        "wires": [
+            [
+                "b024b97a3c01768f"
+            ]
+        ]
+    },
+    {
+        "id": "8366dd2940a96efa",
+        "type": "split",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 2250,
+        "y": 2540,
+        "wires": [
+            [
+                "f3f46d3f3a95ced1"
+            ]
+        ]
+    },
+    {
+        "id": "b448a461657ef4ef",
+        "type": "http request",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://103.178.233.134:8090/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2870,
+        "y": 2540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0efe6b339ac78324",
+        "type": "inject",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 07 * * *",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "iso",
+        "payloadType": "date",
+        "x": 2050,
+        "y": 2200,
+        "wires": [
+            [
+                "aeb03dd1fc9186e7"
+            ]
+        ]
+    },
+    {
+        "id": "d0a2b332e3e78636",
+        "type": "http request",
+        "z": "62bd0f5f977b002a",
+        "name": "GET USED -1D",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2480,
+        "y": 2200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aeb03dd1fc9186e7",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 18",
+        "func": "// 1. Lấy thời gian hiện tại\nconst now = new Date();\n\n// 2. Trừ đi 1 ngày để lấy \"ngày hôm qua\"\nnow.setDate(now.getDate() - 1);\n\n// 3. Format thành chuỗi YYYY-MM-DD theo múi giờ Việt Nam (Asia/Ho_Chi_Minh)\nconst yesterdayStr = now.toLocaleDateString('sv-SE', { timeZone: 'Asia/Ho_Chi_Minh' }); \n// Output dạng ISO date: \"2026-09-16\"\n\n// 4. Ghép vào URL gọi API\nmsg.url = `http://103.178.233.134:8002/apioee/v1/used/minus-1?from_day=${yesterdayStr}&to_day=${yesterdayStr}`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2250,
+        "y": 2200,
+        "wires": [
+            [
+                "d0a2b332e3e78636"
+            ]
+        ]
+    },
+    {
+        "id": "23eaa918a98c8147",
+        "type": "inject",
+        "z": "62bd0f5f977b002a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 07 * * *",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "iso",
+        "payloadType": "date",
+        "x": 2050,
+        "y": 2260,
+        "wires": [
+            [
+                "8125e25b46eb1a08"
+            ]
+        ]
+    },
+    {
+        "id": "e991dc1c66480ece",
+        "type": "http request",
+        "z": "62bd0f5f977b002a",
+        "name": "GET USED -1D",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2480,
+        "y": 2260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8125e25b46eb1a08",
+        "type": "function",
+        "z": "62bd0f5f977b002a",
+        "name": "function 19",
+        "func": "// 1. Lấy thời gian hiện tại\nconst now = new Date();\n\n// 2. Trừ đi 1 ngày để lấy \"ngày hôm qua\"\nnow.setDate(now.getDate() - 2);\n\n// 3. Format thành chuỗi YYYY-MM-DD theo múi giờ Việt Nam (Asia/Ho_Chi_Minh)\nconst yesterdayStr = now.toLocaleDateString('sv-SE', { timeZone: 'Asia/Ho_Chi_Minh' }); \n// Output dạng ISO date: \"2026-09-16\"\n\n// 4. Ghép vào URL gọi API\nmsg.url = `http://103.178.233.134:8002/apioee/v1/used/minus-2?from_day=${yesterdayStr}&to_day=${yesterdayStr}`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2250,
+        "y": 2260,
+        "wires": [
+            [
+                "e991dc1c66480ece"
+            ]
+        ]
     },
     {
         "id": "9d9caf91fa2a534a",
