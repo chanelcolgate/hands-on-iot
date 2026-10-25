@@ -1,0 +1,10 @@
+{
+  "kind": "Folder",
+  "apiVersion": "folder.grafana.app/v1",
+  "metadata": {
+    "name": "bg29cyg5z8kcgd"
+  },
+  "spec": {
+    "title": "Paper Machine Electric"
+  }
+}
