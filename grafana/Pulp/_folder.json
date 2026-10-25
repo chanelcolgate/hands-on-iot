@@ -1,0 +1,10 @@
+{
+  "kind": "Folder",
+  "apiVersion": "folder.grafana.app/v1",
+  "metadata": {
+    "name": "ag29b9pbbfi0wb"
+  },
+  "spec": {
+    "title": "Pulp"
+  }
+}
