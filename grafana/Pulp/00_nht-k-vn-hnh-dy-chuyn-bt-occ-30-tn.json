@@ -1,0 +1,1928 @@
+{
+  "apiVersion": "dashboard.grafana.app/v2",
+  "kind": "Dashboard",
+  "metadata": {
+    "name": "dbg29bbmbsxr7kb"
+  },
+  "spec": {
+    "annotations": [
+      {
+        "kind": "AnnotationQuery",
+        "spec": {
+          "builtIn": true,
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations \u0026 Alerts",
+          "query": {
+            "datasource": {
+              "name": "-- Grafana --"
+            },
+            "group": "grafana",
+            "kind": "DataQuery",
+            "spec": {},
+            "version": "v0"
+          }
+        }
+      }
+    ],
+    "cursorSync": "Off",
+    "editable": true,
+    "elements": {
+      "panel-4": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "efcw7rq55jfuoe"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "groupBy": [
+                          {
+                            "params": [
+                              "8h,-1h"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "system::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "shift::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "device::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "machine::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "table",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "temp"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            },
+                            {
+                              "params": [
+                                "temp"
+                              ],
+                              "type": "alias"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "factory::tag",
+                            "operator": "=",
+                            "value": "Giấy Đồng Tiến Long An"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": [
+                {
+                  "group": "filterByValue",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "filters": [
+                        {
+                          "config": {
+                            "id": "substring",
+                            "options": {
+                              "value": "System Mixing Chest"
+                            }
+                          },
+                          "fieldName": "system"
+                        },
+                        {
+                          "config": {
+                            "id": "substring",
+                            "options": {
+                              "value": "System Machine Chest"
+                            }
+                          },
+                          "fieldName": "system"
+                        },
+                        {
+                          "config": {
+                            "id": "substring",
+                            "options": {
+                              "value": "System Stage"
+                            }
+                          },
+                          "fieldName": "system"
+                        },
+                        {
+                          "config": {
+                            "id": "substring",
+                            "options": {
+                              "value": "System Headbox"
+                            }
+                          },
+                          "fieldName": "system"
+                        }
+                      ],
+                      "match": "any",
+                      "type": "exclude"
+                    }
+                  }
+                },
+                {
+                  "group": "organize",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {},
+                      "includeByName": {},
+                      "indexByName": {
+                        "Time": 0,
+                        "device": 3,
+                        "machine": 2,
+                        "mean": 5,
+                        "shift": 4,
+                        "system": 1
+                      },
+                      "renameByName": {}
+                    }
+                  }
+                },
+                {
+                  "group": "calculateField",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "alias": "metric",
+                      "mode": "reduceRow",
+                      "reduce": {
+                        "include": [
+                          "system",
+                          "machine",
+                          "device"
+                        ],
+                        "reducer": "allValues"
+                      }
+                    }
+                  }
+                },
+                {
+                  "group": "organize",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {
+                        "Time": true,
+                        "device": true,
+                        "machine": true,
+                        "metric": false,
+                        "shift": false,
+                        "system": true
+                      },
+                      "includeByName": {},
+                      "indexByName": {
+                        "Time": 0,
+                        "device": 3,
+                        "machine": 2,
+                        "metric": 4,
+                        "p_in": 6,
+                        "p_out": 7,
+                        "shift": 5,
+                        "system": 1
+                      },
+                      "orderBy": [
+                        {
+                          "desc": false,
+                          "type": "name"
+                        }
+                      ],
+                      "orderByMode": "manual",
+                      "renameByName": {}
+                    }
+                  }
+                },
+                {
+                  "group": "transpose",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "firstFieldName": "Field"
+                    }
+                  }
+                },
+                {
+                  "group": "organize",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {
+                        "1": false,
+                        "10": false,
+                        "11": false,
+                        "12": false,
+                        "13": false,
+                        "14": false,
+                        "15": false,
+                        "16": true,
+                        "17": true,
+                        "18": true,
+                        "19": false,
+                        "2": false,
+                        "20": false,
+                        "21": false,
+                        "22": false,
+                        "23": false,
+                        "24": false,
+                        "25": false,
+                        "26": false,
+                        "27": false,
+                        "28": false,
+                        "29": false,
+                        "3": false,
+                        "30": false,
+                        "31": false,
+                        "32": false,
+                        "33": false,
+                        "34": false,
+                        "35": false,
+                        "36": false,
+                        "37": false,
+                        "38": false,
+                        "39": false,
+                        "4": false,
+                        "40": false,
+                        "41": false,
+                        "42": false,
+                        "43": false,
+                        "44": false,
+                        "45": false,
+                        "46": false,
+                        "47": false,
+                        "48": false,
+                        "49": false,
+                        "5": false,
+                        "50": false,
+                        "51": false,
+                        "52": false,
+                        "53": false,
+                        "54": false,
+                        "55": true,
+                        "56": true,
+                        "57": true,
+                        "58": true,
+                        "59": true,
+                        "6": false,
+                        "60": true,
+                        "61": false,
+                        "62": false,
+                        "63": false,
+                        "64": false,
+                        "65": false,
+                        "66": false,
+                        "67": false,
+                        "68": false,
+                        "69": false,
+                        "7": false,
+                        "70": false,
+                        "71": false,
+                        "72": false,
+                        "73": false,
+                        "74": false,
+                        "75": false,
+                        "76": false,
+                        "77": false,
+                        "78": false,
+                        "79": false,
+                        "8": false,
+                        "80": false,
+                        "81": false,
+                        "9": false
+                      },
+                      "includeByName": {},
+                      "indexByName": {
+                        "1": 2,
+                        "10": 38,
+                        "11": 40,
+                        "12": 42,
+                        "13": 44,
+                        "14": 46,
+                        "15": 48,
+                        "16": 73,
+                        "17": 74,
+                        "18": 75,
+                        "19": 20,
+                        "2": 4,
+                        "20": 22,
+                        "21": 24,
+                        "22": 68,
+                        "23": 70,
+                        "24": 72,
+                        "25": 62,
+                        "26": 64,
+                        "27": 66,
+                        "28": 14,
+                        "29": 16,
+                        "3": 6,
+                        "30": 18,
+                        "31": 8,
+                        "32": 10,
+                        "33": 12,
+                        "34": 56,
+                        "35": 58,
+                        "36": 60,
+                        "37": 50,
+                        "38": 52,
+                        "39": 54,
+                        "4": 26,
+                        "40": 1,
+                        "41": 3,
+                        "42": 5,
+                        "43": 25,
+                        "44": 27,
+                        "45": 29,
+                        "46": 31,
+                        "47": 33,
+                        "48": 35,
+                        "49": 37,
+                        "5": 28,
+                        "50": 39,
+                        "51": 41,
+                        "52": 43,
+                        "53": 45,
+                        "54": 47,
+                        "55": 76,
+                        "56": 77,
+                        "57": 78,
+                        "58": 79,
+                        "59": 80,
+                        "6": 30,
+                        "60": 81,
+                        "61": 19,
+                        "62": 21,
+                        "63": 23,
+                        "64": 67,
+                        "65": 69,
+                        "66": 71,
+                        "67": 61,
+                        "68": 63,
+                        "69": 65,
+                        "7": 32,
+                        "70": 13,
+                        "71": 15,
+                        "72": 17,
+                        "73": 7,
+                        "74": 9,
+                        "75": 11,
+                        "76": 55,
+                        "77": 57,
+                        "78": 59,
+                        "79": 49,
+                        "8": 34,
+                        "80": 51,
+                        "81": 53,
+                        "9": 36,
+                        "Field": 0
+                      },
+                      "renameByName": {}
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "description": "",
+          "id": 4,
+          "links": [],
+          "title": "Nhiệt độ",
+          "vizConfig": {
+            "group": "table",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "fixedColor": "green",
+                    "mode": "fixed"
+                  },
+                  "custom": {
+                    "align": "left",
+                    "cellOptions": {
+                      "mode": "gradient",
+                      "type": "color-background"
+                    },
+                    "footer": {
+                      "reducers": []
+                    },
+                    "inspect": false,
+                    "wrapText": true
+                  },
+                  "mappings": [
+                    {
+                      "options": {
+                        "Ca 1": {
+                          "color": "green",
+                          "index": 0,
+                          "text": "Ca 1"
+                        },
+                        "Ca 2": {
+                          "color": "semi-dark-green",
+                          "index": 1,
+                          "text": "Ca 2"
+                        },
+                        "Ca 3": {
+                          "color": "dark-green",
+                          "index": 2,
+                          "text": "Ca 3"
+                        }
+                      },
+                      "type": "value"
+                    }
+                  ],
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "celsius"
+                },
+                "overrides": []
+              },
+              "options": {
+                "cellHeight": "lg",
+                "enablePagination": false,
+                "showHeader": true,
+                "sortBy": []
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
+      },
+      "panel-5": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "efcw7rq55jfuoe"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "groupBy": [
+                          {
+                            "params": [
+                              "8h,-1h"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "system::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "shift::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "device::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "machine::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "table",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "conc"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            },
+                            {
+                              "params": [
+                                "Nồng độ"
+                              ],
+                              "type": "alias"
+                            }
+                          ],
+                          [
+                            {
+                              "params": [
+                                "power"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            },
+                            {
+                              "params": [
+                                "Công suất"
+                              ],
+                              "type": "alias"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "factory::tag",
+                            "operator": "=",
+                            "value": "Giấy Đồng Tiến Long An"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": [
+                {
+                  "group": "filterByValue",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "filters": [
+                        {
+                          "config": {
+                            "id": "substring",
+                            "options": {
+                              "value": "Hệ thống máy nghiền"
+                            }
+                          },
+                          "fieldName": "system"
+                        }
+                      ],
+                      "match": "all",
+                      "type": "include"
+                    }
+                  }
+                },
+                {
+                  "group": "organize",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {},
+                      "includeByName": {},
+                      "indexByName": {
+                        "Time": 0,
+                        "device": 3,
+                        "machine": 2,
+                        "mean": 5,
+                        "shift": 4,
+                        "system": 1
+                      },
+                      "renameByName": {}
+                    }
+                  }
+                },
+                {
+                  "group": "calculateField",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "alias": "metric",
+                      "mode": "reduceRow",
+                      "reduce": {
+                        "include": [
+                          "system",
+                          "machine",
+                          "device"
+                        ],
+                        "reducer": "allValues"
+                      }
+                    }
+                  }
+                },
+                {
+                  "group": "organize",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {
+                        "Time": true,
+                        "device": true,
+                        "machine": true,
+                        "metric": false,
+                        "shift": false,
+                        "system": true
+                      },
+                      "includeByName": {},
+                      "indexByName": {
+                        "Time": 0,
+                        "device": 3,
+                        "machine": 2,
+                        "metric": 4,
+                        "p_in": 6,
+                        "p_out": 7,
+                        "shift": 5,
+                        "system": 1
+                      },
+                      "orderBy": [
+                        {
+                          "desc": false,
+                          "type": "name"
+                        }
+                      ],
+                      "orderByMode": "manual",
+                      "renameByName": {}
+                    }
+                  }
+                },
+                {
+                  "group": "transpose",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "firstFieldName": "Field"
+                    }
+                  }
+                },
+                {
+                  "group": "organize",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {
+                        "1": false,
+                        "10": false,
+                        "11": false,
+                        "12": false,
+                        "13": false,
+                        "14": false,
+                        "15": false,
+                        "16": true,
+                        "17": true,
+                        "18": true,
+                        "19": false,
+                        "2": false,
+                        "20": false,
+                        "21": false,
+                        "22": false,
+                        "23": false,
+                        "24": false,
+                        "25": false,
+                        "26": false,
+                        "27": false,
+                        "28": false,
+                        "29": false,
+                        "3": false,
+                        "30": false,
+                        "31": false,
+                        "32": false,
+                        "33": false,
+                        "34": false,
+                        "35": false,
+                        "36": false,
+                        "37": false,
+                        "38": false,
+                        "39": false,
+                        "4": false,
+                        "40": false,
+                        "41": false,
+                        "42": false,
+                        "43": false,
+                        "44": false,
+                        "45": false,
+                        "46": false,
+                        "47": false,
+                        "48": false,
+                        "49": false,
+                        "5": false,
+                        "50": false,
+                        "51": false,
+                        "52": false,
+                        "53": false,
+                        "54": false,
+                        "55": true,
+                        "56": true,
+                        "57": true,
+                        "58": true,
+                        "59": true,
+                        "6": false,
+                        "60": true,
+                        "61": false,
+                        "62": false,
+                        "63": false,
+                        "64": false,
+                        "65": false,
+                        "66": false,
+                        "67": false,
+                        "68": false,
+                        "69": false,
+                        "7": false,
+                        "70": false,
+                        "71": false,
+                        "72": false,
+                        "73": false,
+                        "74": false,
+                        "75": false,
+                        "76": false,
+                        "77": false,
+                        "78": false,
+                        "79": false,
+                        "8": false,
+                        "80": false,
+                        "81": false,
+                        "9": false
+                      },
+                      "includeByName": {},
+                      "indexByName": {
+                        "1": 4,
+                        "2": 5,
+                        "3": 6,
+                        "4": 1,
+                        "5": 2,
+                        "6": 3,
+                        "Field": 0
+                      },
+                      "renameByName": {}
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "description": "",
+          "id": 5,
+          "links": [],
+          "title": "Nồng độ, Công suất",
+          "vizConfig": {
+            "group": "table",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "fixedColor": "green",
+                    "mode": "fixed"
+                  },
+                  "custom": {
+                    "align": "left",
+                    "cellOptions": {
+                      "mode": "gradient",
+                      "type": "color-background"
+                    },
+                    "footer": {
+                      "reducers": []
+                    },
+                    "inspect": false,
+                    "wrapText": true
+                  },
+                  "mappings": [
+                    {
+                      "options": {
+                        "Ca 1": {
+                          "color": "green",
+                          "index": 0,
+                          "text": "Ca 1"
+                        },
+                        "Ca 2": {
+                          "color": "semi-dark-green",
+                          "index": 1,
+                          "text": "Ca 2"
+                        },
+                        "Ca 3": {
+                          "color": "dark-green",
+                          "index": 2,
+                          "text": "Ca 3"
+                        }
+                      },
+                      "type": "value"
+                    }
+                  ],
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "percent"
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byRegexp",
+                      "options": "^(1|2|3)$"
+                    },
+                    "properties": [
+                      {
+                        "id": "unit",
+                        "value": "kwatt"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "options": {
+                "cellHeight": "lg",
+                "enablePagination": false,
+                "showHeader": true,
+                "sortBy": []
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
+      },
+      "panel-6": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "efcw7rq55jfuoe"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "groupBy": [
+                          {
+                            "params": [
+                              "8h,-1h"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "system::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "shift::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "device::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "machine::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "table",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "level"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            },
+                            {
+                              "params": [
+                                "Nồng độ"
+                              ],
+                              "type": "alias"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "factory::tag",
+                            "operator": "=",
+                            "value": "Giấy Đồng Tiến Long An"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": [
+                {
+                  "group": "filterByValue",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "filters": [
+                        {
+                          "config": {
+                            "id": "substring",
+                            "options": {
+                              "value": "Tháp dump chest"
+                            }
+                          },
+                          "fieldName": "system"
+                        },
+                        {
+                          "config": {
+                            "id": "substring",
+                            "options": {
+                              "value": "SF chest"
+                            }
+                          },
+                          "fieldName": "system"
+                        },
+                        {
+                          "config": {
+                            "id": "substring",
+                            "options": {
+                              "value": "LF chest"
+                            }
+                          },
+                          "fieldName": "system"
+                        },
+                        {
+                          "config": {
+                            "id": "substring",
+                            "options": {
+                              "value": "Recovery Pulp chest"
+                            }
+                          },
+                          "fieldName": "machine"
+                        }
+                      ],
+                      "match": "any",
+                      "type": "include"
+                    }
+                  }
+                },
+                {
+                  "group": "organize",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {},
+                      "includeByName": {},
+                      "indexByName": {
+                        "Time": 0,
+                        "device": 3,
+                        "machine": 2,
+                        "mean": 5,
+                        "shift": 4,
+                        "system": 1
+                      },
+                      "renameByName": {}
+                    }
+                  }
+                },
+                {
+                  "group": "calculateField",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "alias": "metric",
+                      "mode": "reduceRow",
+                      "reduce": {
+                        "include": [
+                          "system",
+                          "machine",
+                          "device"
+                        ],
+                        "reducer": "allValues"
+                      }
+                    }
+                  }
+                },
+                {
+                  "group": "organize",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {
+                        "Time": true,
+                        "device": true,
+                        "machine": true,
+                        "metric": false,
+                        "shift": false,
+                        "system": true
+                      },
+                      "includeByName": {},
+                      "indexByName": {
+                        "Time": 0,
+                        "device": 3,
+                        "machine": 2,
+                        "metric": 4,
+                        "p_in": 6,
+                        "p_out": 7,
+                        "shift": 5,
+                        "system": 1
+                      },
+                      "orderBy": [
+                        {
+                          "desc": false,
+                          "type": "name"
+                        }
+                      ],
+                      "orderByMode": "manual",
+                      "renameByName": {}
+                    }
+                  }
+                },
+                {
+                  "group": "transpose",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "firstFieldName": "Field"
+                    }
+                  }
+                },
+                {
+                  "group": "organize",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {
+                        "1": false,
+                        "10": false,
+                        "11": false,
+                        "12": false,
+                        "13": false,
+                        "14": false,
+                        "15": false,
+                        "16": true,
+                        "17": true,
+                        "18": true,
+                        "19": false,
+                        "2": false,
+                        "20": false,
+                        "21": false,
+                        "22": false,
+                        "23": false,
+                        "24": false,
+                        "25": false,
+                        "26": false,
+                        "27": false,
+                        "28": false,
+                        "29": false,
+                        "3": false,
+                        "30": false,
+                        "31": false,
+                        "32": false,
+                        "33": false,
+                        "34": false,
+                        "35": false,
+                        "36": false,
+                        "37": false,
+                        "38": false,
+                        "39": false,
+                        "4": false,
+                        "40": false,
+                        "41": false,
+                        "42": false,
+                        "43": false,
+                        "44": false,
+                        "45": false,
+                        "46": false,
+                        "47": false,
+                        "48": false,
+                        "49": false,
+                        "5": false,
+                        "50": false,
+                        "51": false,
+                        "52": false,
+                        "53": false,
+                        "54": false,
+                        "55": true,
+                        "56": true,
+                        "57": true,
+                        "58": true,
+                        "59": true,
+                        "6": false,
+                        "60": true,
+                        "61": false,
+                        "62": false,
+                        "63": false,
+                        "64": false,
+                        "65": false,
+                        "66": false,
+                        "67": false,
+                        "68": false,
+                        "69": false,
+                        "7": false,
+                        "70": false,
+                        "71": false,
+                        "72": false,
+                        "73": false,
+                        "74": false,
+                        "75": false,
+                        "76": false,
+                        "77": false,
+                        "78": false,
+                        "79": false,
+                        "8": false,
+                        "80": false,
+                        "81": false,
+                        "9": false
+                      },
+                      "includeByName": {},
+                      "indexByName": {
+                        "1": 7,
+                        "10": 1,
+                        "11": 2,
+                        "12": 3,
+                        "2": 8,
+                        "3": 9,
+                        "4": 10,
+                        "5": 11,
+                        "6": 12,
+                        "7": 4,
+                        "8": 5,
+                        "9": 6,
+                        "Field": 0
+                      },
+                      "renameByName": {}
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "description": "",
+          "id": 6,
+          "links": [],
+          "title": "Mức hồ",
+          "vizConfig": {
+            "group": "table",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "fixedColor": "green",
+                    "mode": "fixed"
+                  },
+                  "custom": {
+                    "align": "left",
+                    "cellOptions": {
+                      "mode": "gradient",
+                      "type": "color-background"
+                    },
+                    "footer": {
+                      "reducers": []
+                    },
+                    "inspect": false,
+                    "wrapText": true
+                  },
+                  "mappings": [
+                    {
+                      "options": {
+                        "Ca 1": {
+                          "color": "green",
+                          "index": 0,
+                          "text": "Ca 1"
+                        },
+                        "Ca 2": {
+                          "color": "semi-dark-green",
+                          "index": 1,
+                          "text": "Ca 2"
+                        },
+                        "Ca 3": {
+                          "color": "dark-green",
+                          "index": 2,
+                          "text": "Ca 3"
+                        }
+                      },
+                      "type": "value"
+                    }
+                  ],
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "percent"
+                },
+                "overrides": []
+              },
+              "options": {
+                "cellHeight": "lg",
+                "enablePagination": false,
+                "showHeader": true,
+                "sortBy": []
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
+      },
+      "panel-7": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "efcw7rq55jfuoe"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "groupBy": [
+                          {
+                            "params": [
+                              "8h,-1h"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "system::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "shift::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "device::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "machine::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "query": "SELECT \n  mean(\"p_in\") AS \"Áp suất vào (kPa)\", \n  mean(\"p_out\") AS \"Áp suất ra (kPa)\",\n  (mean(\"p_in\") - mean(\"p_out\")) AS \"Chênh áp (kPa)\"\nFROM \"dongtien_realtime\" \nWHERE (\"factory\"::tag = 'Giấy Đồng Tiến Long An') AND $timeFilter \nGROUP BY \"system\"::tag, \"shift\"::tag \nfill(none)",
+                        "rawQuery": true,
+                        "resultFormat": "table",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "p_in"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            },
+                            {
+                              "params": [
+                                "p_in"
+                              ],
+                              "type": "alias"
+                            }
+                          ],
+                          [
+                            {
+                              "params": [
+                                "p_out"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            },
+                            {
+                              "params": [
+                                "p_out"
+                              ],
+                              "type": "alias"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "factory::tag",
+                            "operator": "=",
+                            "value": "Giấy Đồng Tiến Long An"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": [
+                {
+                  "group": "filterByValue",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "filters": [
+                        {
+                          "config": {
+                            "id": "substring",
+                            "options": {
+                              "value": "System Mixing Chest"
+                            }
+                          },
+                          "fieldName": "system"
+                        },
+                        {
+                          "config": {
+                            "id": "substring",
+                            "options": {
+                              "value": "System Machine Chest"
+                            }
+                          },
+                          "fieldName": "system"
+                        },
+                        {
+                          "config": {
+                            "id": "substring",
+                            "options": {
+                              "value": "System Stage"
+                            }
+                          },
+                          "fieldName": "system"
+                        },
+                        {
+                          "config": {
+                            "id": "substring",
+                            "options": {
+                              "value": "System Headbox"
+                            }
+                          },
+                          "fieldName": "system"
+                        }
+                      ],
+                      "match": "any",
+                      "type": "exclude"
+                    }
+                  }
+                },
+                {
+                  "group": "organize",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {},
+                      "includeByName": {},
+                      "indexByName": {
+                        "Time": 0,
+                        "device": 3,
+                        "machine": 2,
+                        "mean": 5,
+                        "shift": 4,
+                        "system": 1
+                      },
+                      "renameByName": {}
+                    }
+                  }
+                },
+                {
+                  "group": "calculateField",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "alias": "metric",
+                      "mode": "reduceRow",
+                      "reduce": {
+                        "include": [
+                          "system",
+                          "machine",
+                          "device"
+                        ],
+                        "reducer": "allValues"
+                      }
+                    }
+                  }
+                },
+                {
+                  "group": "organize",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {
+                        "Time": true,
+                        "device": true,
+                        "machine": true,
+                        "metric": false,
+                        "shift": false,
+                        "system": true
+                      },
+                      "includeByName": {},
+                      "indexByName": {
+                        "Time": 0,
+                        "device": 3,
+                        "machine": 2,
+                        "metric": 4,
+                        "p_in": 6,
+                        "p_out": 7,
+                        "shift": 5,
+                        "system": 1
+                      },
+                      "orderBy": [
+                        {
+                          "desc": false,
+                          "type": "name"
+                        }
+                      ],
+                      "orderByMode": "manual",
+                      "renameByName": {}
+                    }
+                  }
+                },
+                {
+                  "group": "transpose",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "firstFieldName": "Field"
+                    }
+                  }
+                },
+                {
+                  "group": "organize",
+                  "kind": "Transformation",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {
+                        "1": false,
+                        "10": false,
+                        "11": false,
+                        "12": false,
+                        "13": false,
+                        "14": false,
+                        "15": false,
+                        "16": false,
+                        "17": false,
+                        "18": false,
+                        "19": false,
+                        "2": false,
+                        "20": false,
+                        "21": false,
+                        "22": false,
+                        "23": false,
+                        "24": false,
+                        "25": false,
+                        "26": false,
+                        "27": false,
+                        "28": false,
+                        "29": false,
+                        "3": false,
+                        "30": false,
+                        "31": false,
+                        "32": false,
+                        "33": false,
+                        "34": false,
+                        "35": false,
+                        "36": false,
+                        "37": false,
+                        "38": false,
+                        "39": false,
+                        "4": false,
+                        "40": false,
+                        "41": false,
+                        "42": false,
+                        "43": false,
+                        "44": false,
+                        "45": false,
+                        "46": false,
+                        "47": false,
+                        "48": false,
+                        "49": false,
+                        "5": false,
+                        "50": false,
+                        "51": false,
+                        "52": false,
+                        "53": false,
+                        "54": false,
+                        "55": true,
+                        "56": true,
+                        "57": true,
+                        "58": true,
+                        "59": true,
+                        "6": false,
+                        "60": true,
+                        "61": false,
+                        "62": false,
+                        "63": false,
+                        "64": false,
+                        "65": false,
+                        "66": false,
+                        "67": false,
+                        "68": false,
+                        "69": false,
+                        "7": false,
+                        "70": false,
+                        "71": false,
+                        "72": false,
+                        "73": false,
+                        "74": false,
+                        "75": false,
+                        "76": false,
+                        "77": false,
+                        "78": false,
+                        "79": false,
+                        "8": false,
+                        "80": false,
+                        "81": false,
+                        "9": false
+                      },
+                      "includeByName": {},
+                      "indexByName": {
+                        "1": 1,
+                        "10": 23,
+                        "11": 21,
+                        "12": 19,
+                        "13": 7,
+                        "14": 17,
+                        "15": 2,
+                        "16": 10,
+                        "17": 12,
+                        "18": 14,
+                        "19": 16,
+                        "2": 9,
+                        "20": 26,
+                        "21": 28,
+                        "22": 6,
+                        "23": 4,
+                        "24": 24,
+                        "25": 22,
+                        "26": 20,
+                        "27": 8,
+                        "28": 18,
+                        "3": 11,
+                        "4": 13,
+                        "5": 15,
+                        "6": 25,
+                        "7": 27,
+                        "8": 5,
+                        "9": 3,
+                        "Field": 0
+                      },
+                      "orderBy": [],
+                      "orderByMode": "manual",
+                      "renameByName": {}
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "description": "",
+          "id": 7,
+          "links": [],
+          "title": "Áp suất",
+          "vizConfig": {
+            "group": "table",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "fixedColor": "green",
+                    "mode": "fixed"
+                  },
+                  "custom": {
+                    "align": "left",
+                    "cellOptions": {
+                      "mode": "gradient",
+                      "type": "color-background"
+                    },
+                    "footer": {
+                      "reducers": []
+                    },
+                    "inspect": false,
+                    "wrapText": true
+                  },
+                  "mappings": [
+                    {
+                      "options": {
+                        "Ca 1": {
+                          "color": "green",
+                          "index": 0,
+                          "text": "Ca 1"
+                        },
+                        "Ca 2": {
+                          "color": "semi-dark-green",
+                          "index": 1,
+                          "text": "Ca 2"
+                        },
+                        "Ca 3": {
+                          "color": "dark-green",
+                          "index": 2,
+                          "text": "Ca 3"
+                        }
+                      },
+                      "type": "value"
+                    }
+                  ],
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "pressurekpa"
+                },
+                "overrides": []
+              },
+              "options": {
+                "cellHeight": "lg",
+                "enablePagination": false,
+                "showHeader": true,
+                "sortBy": []
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
+      }
+    },
+    "layout": {
+      "kind": "RowsLayout",
+      "spec": {
+        "rows": [
+          {
+            "kind": "RowsLayoutRow",
+            "spec": {
+              "collapse": false,
+              "layout": {
+                "kind": "GridLayout",
+                "spec": {
+                  "items": [
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-7"
+                        },
+                        "height": 10,
+                        "width": 24,
+                        "x": 0,
+                        "y": 0
+                      }
+                    }
+                  ]
+                }
+              },
+              "title": "Áp suất"
+            }
+          },
+          {
+            "kind": "RowsLayoutRow",
+            "spec": {
+              "collapse": false,
+              "layout": {
+                "kind": "GridLayout",
+                "spec": {
+                  "items": [
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-4"
+                        },
+                        "height": 6,
+                        "width": 24,
+                        "x": 0,
+                        "y": 0
+                      }
+                    }
+                  ]
+                }
+              },
+              "title": "Nhiệt độ"
+            }
+          },
+          {
+            "kind": "RowsLayoutRow",
+            "spec": {
+              "collapse": false,
+              "layout": {
+                "kind": "GridLayout",
+                "spec": {
+                  "items": [
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-5"
+                        },
+                        "height": 8,
+                        "width": 24,
+                        "x": 0,
+                        "y": 0
+                      }
+                    }
+                  ]
+                }
+              },
+              "title": "Nồng độ công suất"
+            }
+          },
+          {
+            "kind": "RowsLayoutRow",
+            "spec": {
+              "collapse": false,
+              "layout": {
+                "kind": "GridLayout",
+                "spec": {
+                  "items": [
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-6"
+                        },
+                        "height": 8,
+                        "width": 24,
+                        "x": 0,
+                        "y": 0
+                      }
+                    }
+                  ]
+                }
+              },
+              "title": "Mức hồ"
+            }
+          }
+        ]
+      }
+    },
+    "links": [],
+    "liveNow": false,
+    "preload": false,
+    "tags": [],
+    "timeSettings": {
+      "autoRefresh": "",
+      "autoRefreshIntervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "fiscalYearStartMonth": 0,
+      "from": "now-24h+8h",
+      "hideTimepicker": false,
+      "timezone": "browser",
+      "to": "now"
+    },
+    "title": "00_Nhật ký vận hành dây chuyền bột OCC 30 tấn",
+    "variables": []
+  }
+}
