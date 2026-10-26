@@ -1,0 +1,10 @@
+{
+  "kind": "Folder",
+  "apiVersion": "folder.grafana.app/v1",
+  "metadata": {
+    "name": "dg2dfyju0jcw0c"
+  },
+  "spec": {
+    "title": "Tong_hop"
+  }
+}
