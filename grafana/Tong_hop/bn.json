@@ -1,0 +1,966 @@
+{
+  "apiVersion": "dashboard.grafana.app/v2",
+  "kind": "Dashboard",
+  "metadata": {
+    "name": "dag2dgouf3bojkb"
+  },
+  "spec": {
+    "annotations": [
+      {
+        "kind": "AnnotationQuery",
+        "spec": {
+          "builtIn": true,
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations \u0026 Alerts",
+          "query": {
+            "datasource": {
+              "name": "-- Grafana --"
+            },
+            "group": "grafana",
+            "kind": "DataQuery",
+            "spec": {},
+            "version": "v0"
+          }
+        }
+      }
+    ],
+    "cursorSync": "Off",
+    "editable": true,
+    "elements": {
+      "panel-13": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 13,
+          "links": [],
+          "title": "",
+          "transparent": true,
+          "vizConfig": {
+            "group": "text",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "plaintext",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "\u003cdiv style=\"width: 100%; height: 100%; min-height: 140px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #0d1117 0%, #161b22 100%); border: 2px solid #30363d; border-radius: 12px; padding: 16px; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1); font-family: 'Segoe UI', Roboto, sans-serif; box-sizing: border-radius; overflow: hidden;\"\u003e\n  \n  \u003c!-- DÒNG 1: TIÊU ĐỀ CHÍNH --\u003e\n  \u003cdiv style=\"font-size: clamp(20px, 3.5vw, 42px); font-weight: 800; color: #3fb950; text-transform: uppercase; letter-spacing: 1.5px; line-height: 1.1; text-shadow: 0 0 10px rgba(63, 185, 80, 0.5), 0 0 20px rgba(63, 185, 80, 0.3); margin: 0 0 2px 0;\"\u003e\n    BẢN ĐỒ VƯỜN CÂY\n  \u003c/div\u003e\n\n  \u003c!-- DÒNG 2: TÊN CÔNG TY (ĐÃ KÉO SÁT VÀ ĐIỀU CHỈNH CỠ CHỮ CHO CÂN ĐỐI) --\u003e\n  \u003cdiv style=\"font-size: clamp(16px, 2.5vw, 30px); font-weight: 700; color: #3fb950; text-transform: uppercase; letter-spacing: 1px; line-height: 1.2; text-shadow: 0 0 8px rgba(63, 185, 80, 0.4); margin: 0 0 6px 0;\"\u003e\n    CÔNG TY TNHH MTV CAO SU PHÚ RIỀNG\n  \u003c/div\u003e\n\n  \u003c!-- MÔ TẢ HỆ THỐNG PHÍA DƯỚI --\u003e\n  \u003cdiv style=\"font-size: clamp(10px, 1.1vw, 14px); font-weight: 500; color: #58a6ff; letter-spacing: 0.5px; margin-top: 4px;\"\u003e\n    Hệ Thống Theo Dõi Mủ Tạp \u0026 Tiêu Thụ Năng Lượng\n  \u003c/div\u003e\n\n\u003c/div\u003e",
+                "mode": "html"
+              }
+            },
+            "version": "13.2.0"
+          }
+        }
+      },
+      "panel-14": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 14,
+          "links": [],
+          "title": "",
+          "transparent": true,
+          "vizConfig": {
+            "group": "text",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "plaintext",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "\u003cstyle\u003e\r\n  .logo-marquee-wrapper {\r\n    width: 100%;\r\n    overflow: hidden;\r\n    position: relative;\r\n    padding: 20px 0;\r\n  }\r\n  .logo-marquee-track {\r\n    display: flex;\r\n    align-items: center;\r\n    width: max-content;\r\n    animation: logo-scroll 60s linear infinite;\r\n  }\r\n  .logo-marquee-track img {\r\n    height: 150px;\r\n    width: 150px;\r\n    object-fit: cover;\r\n    margin: 0 10px;\r\n    flex-shrink: 0;\r\n  }\r\n  .logo-round {\r\n    border-radius: 50%;\r\n  }\r\n  @keyframes logo-scroll {\r\n    0% { transform: translateX(0); }\r\n    100% { transform: translateX(-25%); }\r\n  }\r\n  .logo-marquee-wrapper:hover .logo-marquee-track {\r\n    animation-play-state: paused;\r\n  }\r\n\u003c/style\u003e\r\n\u003cdiv class=\"logo-marquee-wrapper\"\u003e\r\n  \u003cdiv class=\"logo-marquee-track\"\u003e\r\n    \u003c!-- Bộ 1 --\u003e\r\n    \u003cimg class=\"logo-round\" src=\"https://5.pik.vn/13d4d37c7af54a7d6d3ca51c75b87266eefbdaf453008d3aae86a5dfa86fec67.webp\"\u003e\r\n    \u003cimg class=\"logo-round\" src=\"https://5.pik.vn/6e5a03714a25e79af0c3e7059bf8d1681dac529f401b71bac57a9b769208e730.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/fac507425625f57fa0a08523c2e54473f45842010d27330a49fb5068e4f59dab.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/33b334510cad6a56a424efc4751bdb3f2c1a8177afa8538de330bf42ea1d26fc.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/8d4cb022ff7c74f190199a6a60cb3831699ae6cc228b731c07d67a2a03e087ac.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/e7a787ac47e8cb7d9bac948da60f63cbbd2c498bfc9e85299aaaa75fd05cced2.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/7be455a0f348ec753d7399102039a35ad953fa1f0f8623bce0fe8248924d7287.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/9f99e815954b217503fcdd202c81118519b17ddf37f8e48454a9f6884ec5de7c.webp\"\u003e\r\n    \u003cimg class=\"logo-round\" src=\"https://5.pik.vn/8796aefd45fd13849ecdeb6af7ae3b146b25c3a481abaf71f6847fff85a1732a.webp\"\u003e\r\n    \u003c!-- Bộ 2 --\u003e\r\n    \u003cimg class=\"logo-round\" src=\"https://5.pik.vn/13d4d37c7af54a7d6d3ca51c75b87266eefbdaf453008d3aae86a5dfa86fec67.webp\"\u003e\r\n    \u003cimg class=\"logo-round\" src=\"https://5.pik.vn/6e5a03714a25e79af0c3e7059bf8d1681dac529f401b71bac57a9b769208e730.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/fac507425625f57fa0a08523c2e54473f45842010d27330a49fb5068e4f59dab.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/33b334510cad6a56a424efc4751bdb3f2c1a8177afa8538de330bf42ea1d26fc.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/8d4cb022ff7c74f190199a6a60cb3831699ae6cc228b731c07d67a2a03e087ac.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/e7a787ac47e8cb7d9bac948da60f63cbbd2c498bfc9e85299aaaa75fd05cced2.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/7be455a0f348ec753d7399102039a35ad953fa1f0f8623bce0fe8248924d7287.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/9f99e815954b217503fcdd202c81118519b17ddf37f8e48454a9f6884ec5de7c.webp\"\u003e\r\n    \u003cimg class=\"logo-round\" src=\"https://5.pik.vn/8796aefd45fd13849ecdeb6af7ae3b146b25c3a481abaf71f6847fff85a1732a.webp\"\u003e\r\n    \u003c!-- Bộ 3 --\u003e\r\n    \u003cimg class=\"logo-round\" src=\"https://5.pik.vn/13d4d37c7af54a7d6d3ca51c75b87266eefbdaf453008d3aae86a5dfa86fec67.webp\"\u003e\r\n    \u003cimg class=\"logo-round\" src=\"https://5.pik.vn/6e5a03714a25e79af0c3e7059bf8d1681dac529f401b71bac57a9b769208e730.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/fac507425625f57fa0a08523c2e54473f45842010d27330a49fb5068e4f59dab.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/33b334510cad6a56a424efc4751bdb3f2c1a8177afa8538de330bf42ea1d26fc.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/8d4cb022ff7c74f190199a6a60cb3831699ae6cc228b731c07d67a2a03e087ac.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/e7a787ac47e8cb7d9bac948da60f63cbbd2c498bfc9e85299aaaa75fd05cced2.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/7be455a0f348ec753d7399102039a35ad953fa1f0f8623bce0fe8248924d7287.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/9f99e815954b217503fcdd202c81118519b17ddf37f8e48454a9f6884ec5de7c.webp\"\u003e\r\n    \u003cimg class=\"logo-round\" src=\"https://5.pik.vn/8796aefd45fd13849ecdeb6af7ae3b146b25c3a481abaf71f6847fff85a1732a.webp\"\u003e\r\n    \u003c!-- Bộ 4 --\u003e\r\n    \u003cimg class=\"logo-round\" src=\"https://5.pik.vn/13d4d37c7af54a7d6d3ca51c75b87266eefbdaf453008d3aae86a5dfa86fec67.webp\"\u003e\r\n    \u003cimg class=\"logo-round\" src=\"https://5.pik.vn/6e5a03714a25e79af0c3e7059bf8d1681dac529f401b71bac57a9b769208e730.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/fac507425625f57fa0a08523c2e54473f45842010d27330a49fb5068e4f59dab.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/33b334510cad6a56a424efc4751bdb3f2c1a8177afa8538de330bf42ea1d26fc.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/8d4cb022ff7c74f190199a6a60cb3831699ae6cc228b731c07d67a2a03e087ac.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/e7a787ac47e8cb7d9bac948da60f63cbbd2c498bfc9e85299aaaa75fd05cced2.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/7be455a0f348ec753d7399102039a35ad953fa1f0f8623bce0fe8248924d7287.webp\"\u003e\r\n    \u003cimg src=\"https://5.pik.vn/9f99e815954b217503fcdd202c81118519b17ddf37f8e48454a9f6884ec5de7c.webp\"\u003e\r\n    \u003cimg class=\"logo-round\" src=\"https://5.pik.vn/8796aefd45fd13849ecdeb6af7ae3b146b25c3a481abaf71f6847fff85a1732a.webp\"\u003e\r\n  \u003c/div\u003e\r\n\u003c/div\u003e",
+                "mode": "markdown"
+              }
+            },
+            "version": "13.2.0"
+          }
+        }
+      },
+      "panel-7": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": true,
+                    "query": {
+                      "datasource": {
+                        "name": "dfvrph51qij9cc"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "groupBy": [],
+                        "limit": "1",
+                        "measurement": "caosu_measurement",
+                        "orderByTime": "DESC",
+                        "policy": "default",
+                        "query": "SELECT \n    SUM(\"delta_value\") / 1000 AS \"energy\",\n    LAST(\"latitude\") AS \"energy_lat\",\n    LAST(\"longitude\") AS \"energy_lon\"\nFROM (\n    SELECT \n        NON_NEGATIVE_DERIVATIVE(LAST(\"value\"), 1h) AS \"delta_value\",\n        LAST(\"latitude\") AS \"latitude\",\n        LAST(\"longitude\") + 0.002 AS \"longitude\"\n    FROM \"caosu_measurement\"\n    WHERE (\n        \"system\"::tag = 'Hệ Mủ Tạp' \n        AND \"machine_name\"::tag = 'Điện Năng Tiêu Thụ'\n    )\n    AND $timeFilter\n    GROUP BY time(1h), \"machine_name\"::tag\n)\nWHERE $timeFilter\nGROUP BY time(7d, -7h), \"machine_name\"::tag fill(none)",
+                        "rawQuery": true,
+                        "resultFormat": "table",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "value"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                " / 1000"
+                              ],
+                              "type": "math"
+                            },
+                            {
+                              "params": [
+                                "energy"
+                              ],
+                              "type": "alias"
+                            }
+                          ],
+                          [
+                            {
+                              "params": [
+                                "latitude"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "energy_lat"
+                              ],
+                              "type": "alias"
+                            }
+                          ],
+                          [
+                            {
+                              "params": [
+                                "longitude"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "+0.002"
+                              ],
+                              "type": "math"
+                            },
+                            {
+                              "params": [
+                                "energy_lon"
+                              ],
+                              "type": "alias"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine_name::tag",
+                            "operator": "=",
+                            "value": "Điện Năng Tiêu Thụ"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": true,
+                    "query": {
+                      "datasource": {
+                        "name": "dfvrph51qij9cc"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "groupBy": [],
+                        "limit": "1",
+                        "measurement": "caosu_measurement",
+                        "orderByTime": "DESC",
+                        "policy": "default",
+                        "query": "SELECT \n    SUM(\"delta_value\") AS \"water\",\n    LAST(\"latitude\") AS \"water_latitude\",\n    LAST(\"longitude\") AS \"water_longitude\"\nFROM (\n    SELECT \n        NON_NEGATIVE_DERIVATIVE(LAST(\"value\"), 1h) AS \"delta_value\",\n        LAST(\"latitude\") AS \"latitude\",\n        LAST(\"longitude\") + 0.004 AS \"longitude\"\n    FROM \"caosu_measurement\"\n    WHERE (\n        \"system\"::tag = 'Hệ Mủ Tạp' \n        AND \"machine_name\"::tag = 'Lượng Nước Tiêu Thụ'\n    )\n    AND $timeFilter\n    GROUP BY time(1h), \"machine_name\"::tag\n)\nWHERE $timeFilter\nGROUP BY time(7d, -7h), \"machine_name\"::tag fill(none)",
+                        "rawQuery": true,
+                        "resultFormat": "table",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "value"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "water"
+                              ],
+                              "type": "alias"
+                            }
+                          ],
+                          [
+                            {
+                              "params": [
+                                "latitude"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "water_latitude"
+                              ],
+                              "type": "alias"
+                            }
+                          ],
+                          [
+                            {
+                              "params": [
+                                "longitude"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "+0.004"
+                              ],
+                              "type": "math"
+                            },
+                            {
+                              "params": [
+                                "water_longitude"
+                              ],
+                              "type": "alias"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine_name::tag",
+                            "operator": "=",
+                            "value": "Lượng Nước Tiêu Thụ"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "B"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": true,
+                    "query": {
+                      "datasource": {
+                        "name": "dfvrph51qij9cc"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "groupBy": [],
+                        "limit": "1",
+                        "measurement": "caosu_measurement",
+                        "orderByTime": "DESC",
+                        "policy": "default",
+                        "query": "SELECT \n    SUM(\"delta_value\") AS \"counter\",\n    LAST(\"latitude\") AS \"latitude\",\n    LAST(\"longitude\") AS \"longitude\"\nFROM (\n    SELECT \n        NON_NEGATIVE_DERIVATIVE(LAST(\"value\"), 1m) AS \"delta_value\",\n        LAST(\"latitude\") - 0.0016 AS \"latitude\",\n        LAST(\"longitude\") + 0.0015 AS \"longitude\"\n    FROM \"caosu_measurement\"\n    WHERE \n        \"system\"::tag = 'Hệ Mủ Tạp' \n        AND \"machine_name\"::tag = 'Số bành mủ'\n        AND $timeFilter\n    GROUP BY time(1m)\n)",
+                        "rawQuery": true,
+                        "resultFormat": "table",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "value"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "counter"
+                              ],
+                              "type": "alias"
+                            }
+                          ],
+                          [
+                            {
+                              "params": [
+                                "latitude"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "- 0.0016"
+                              ],
+                              "type": "math"
+                            }
+                          ],
+                          [
+                            {
+                              "params": [
+                                "longitude"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "+ 0.0015"
+                              ],
+                              "type": "math"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine_name::tag",
+                            "operator": "=",
+                            "value": "Số bành mủ"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "C"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "dfvrph51qij9cc"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "groupBy": [],
+                        "limit": "1",
+                        "measurement": "caosu_measurement",
+                        "orderByTime": "DESC",
+                        "policy": "default",
+                        "query": "SELECT \"value\", \"value\" FROM \"caosu_measurement\" WHERE (\"machine_name\"::tag = 'Lượng Nước Tiêu Thụ') AND $timeFilter GROUP BY \"latitude\", \"longitude\"",
+                        "rawQuery": false,
+                        "resultFormat": "table",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "value"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "energy"
+                              ],
+                              "type": "alias"
+                            }
+                          ],
+                          [
+                            {
+                              "params": [
+                                "latitude"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "-0.0005"
+                              ],
+                              "type": "math"
+                            },
+                            {
+                              "params": [
+                                "energy_lat1"
+                              ],
+                              "type": "alias"
+                            }
+                          ],
+                          [
+                            {
+                              "params": [
+                                "longitude"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "+0.0015"
+                              ],
+                              "type": "math"
+                            },
+                            {
+                              "params": [
+                                "energy_lon1"
+                              ],
+                              "type": "alias"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine_name::tag",
+                            "operator": "=",
+                            "value": "Điện Năng Tiêu Thụ"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "D"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": true,
+                    "query": {
+                      "datasource": {
+                        "name": "dfvrph51qij9cc"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "groupBy": [],
+                        "limit": "1",
+                        "measurement": "caosu_measurement",
+                        "orderByTime": "DESC",
+                        "policy": "default",
+                        "query": "SELECT \"value\" AS \"counter\", \"latitude\" - 0.0016, \"longitude\" + 0.0015 FROM \"caosu_measurement\" WHERE (\"machine_name\"::tag = 'Số bành mủ') AND $timeFilter ORDER BY time DESC LIMIT 1",
+                        "rawQuery": true,
+                        "resultFormat": "table",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "value"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "counter"
+                              ],
+                              "type": "alias"
+                            }
+                          ],
+                          [
+                            {
+                              "params": [
+                                "latitude"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "- 0.0016"
+                              ],
+                              "type": "math"
+                            }
+                          ],
+                          [
+                            {
+                              "params": [
+                                "longitude"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [
+                                "+ 0.0015"
+                              ],
+                              "type": "math"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine_name::tag",
+                            "operator": "=",
+                            "value": "Số bành mủ"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "E"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "cfw7v7e41yuioa"
+                      },
+                      "group": "yesoreyeram-infinity-datasource",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "columns": [
+                          {
+                            "selector": "geometry.coordinates.0",
+                            "text": "long",
+                            "type": "number"
+                          },
+                          {
+                            "selector": "geometry.coordinates.1",
+                            "text": "lat",
+                            "type": "number"
+                          },
+                          {
+                            "selector": "properties.name",
+                            "text": "name",
+                            "type": "string"
+                          }
+                        ],
+                        "filters": [],
+                        "format": "table",
+                        "global_query_id": "",
+                        "parser": "backend",
+                        "root_selector": "features[geometry.type = \"Point\"]\n",
+                        "source": "url",
+                        "type": "json",
+                        "url": "http://103.129.127.170:3090/public/geojson/nhanlo2026.geojson",
+                        "url_options": {
+                          "data": "",
+                          "method": "GET"
+                        }
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "F"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 7,
+          "links": [],
+          "title": "",
+          "transparent": true,
+          "vizConfig": {
+            "group": "geomap",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "fixedColor": "dark-yellow",
+                    "mode": "fixed"
+                  },
+                  "custom": {
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    }
+                  },
+                  "displayName": "Nhà Máy Trung Tâm Phú Riềng",
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  "unit": "m³ nước mủ tạp"
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "energy",
+                      "scope": "series"
+                    },
+                    "properties": [
+                      {
+                        "id": "unit",
+                        "value": "kWh"
+                      },
+                      {
+                        "id": "decimals",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "counter",
+                      "scope": "series"
+                    },
+                    "properties": [
+                      {
+                        "id": "unit",
+                        "value": "bành"
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "name",
+                      "scope": "series"
+                    },
+                    "properties": [
+                      {
+                        "id": "unit"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "options": {
+                "basemap": {
+                  "config": {
+                    "server": "custom",
+                    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/VNM_Boundaries_2022/FeatureServer"
+                  },
+                  "layer-tooltip": true,
+                  "name": "Layer 0",
+                  "noRepeat": false,
+                  "opacity": 1,
+                  "type": "esri-xyz"
+                },
+                "controls": {
+                  "mouseWheelZoom": true,
+                  "showAttribution": true,
+                  "showDebug": false,
+                  "showMeasure": false,
+                  "showScale": false,
+                  "showZoom": true
+                },
+                "layers": [
+                  {
+                    "config": {
+                      "server": "world-imagery"
+                    },
+                    "layer-tooltip": true,
+                    "name": "Layer 3",
+                    "opacity": 1,
+                    "tooltip": true,
+                    "type": "esri-xyz"
+                  },
+                  {
+                    "config": {
+                      "rules": [],
+                      "src": "public/geojson/vuoncay3.geojson",
+                      "style": {
+                        "color": {
+                          "fixed": "#00ffff"
+                        },
+                        "opacity": 1,
+                        "rotation": {
+                          "fixed": 0,
+                          "max": 360,
+                          "min": -360,
+                          "mode": "mod"
+                        },
+                        "size": {
+                          "fixed": 5,
+                          "max": 15,
+                          "min": 2
+                        },
+                        "symbol": {
+                          "fixed": "img/icons/marker/circle.svg",
+                          "mode": "fixed"
+                        },
+                        "symbolAlign": {
+                          "horizontal": "center",
+                          "vertical": "center"
+                        },
+                        "textConfig": {
+                          "fontSize": 12,
+                          "offsetX": 0,
+                          "offsetY": 0,
+                          "textAlign": "center",
+                          "textBaseline": "middle"
+                        }
+                      }
+                    },
+                    "layer-tooltip": false,
+                    "name": "Layer 6",
+                    "opacity": 1,
+                    "tooltip": true,
+                    "type": "geojson"
+                  },
+                  {
+                    "config": {
+                      "showLegend": false,
+                      "style": {
+                        "color": {
+                          "fixed": "#ff0000"
+                        },
+                        "opacity": 0,
+                        "rotation": {
+                          "fixed": 0,
+                          "max": 360,
+                          "min": -360,
+                          "mode": "mod"
+                        },
+                        "size": {
+                          "fixed": 5,
+                          "max": 15,
+                          "min": 2
+                        },
+                        "symbol": {
+                          "fixed": "img/icons/marker/circle.svg",
+                          "mode": "fixed"
+                        },
+                        "symbolAlign": {
+                          "horizontal": "center",
+                          "vertical": "center"
+                        },
+                        "text": {
+                          "field": "name",
+                          "fixed": "",
+                          "mode": "field"
+                        },
+                        "textConfig": {
+                          "fontSize": 12,
+                          "offsetX": 0,
+                          "offsetY": 0,
+                          "textAlign": "center",
+                          "textBaseline": "middle"
+                        }
+                      }
+                    },
+                    "filterData": {
+                      "id": "byRefId",
+                      "options": "F"
+                    },
+                    "location": {
+                      "latitude": "lat",
+                      "longitude": "long",
+                      "mode": "coords"
+                    },
+                    "name": "Layer 4",
+                    "tooltip": true,
+                    "type": "markers"
+                  },
+                  {
+                    "config": {
+                      "showLegend": false,
+                      "style": {
+                        "color": {
+                          "fixed": "yellow"
+                        },
+                        "opacity": 1,
+                        "rotation": {
+                          "fixed": 0,
+                          "max": 360,
+                          "min": -360,
+                          "mode": "mod"
+                        },
+                        "size": {
+                          "fixed": 30,
+                          "max": 15,
+                          "min": 2
+                        },
+                        "symbol": {
+                          "fixed": "img/icons/marker/star.svg",
+                          "mode": "fixed"
+                        },
+                        "symbolAlign": {
+                          "horizontal": "center",
+                          "vertical": "center"
+                        },
+                        "textConfig": {
+                          "fontSize": 12,
+                          "offsetX": 0,
+                          "offsetY": 0,
+                          "textAlign": "center",
+                          "textBaseline": "middle"
+                        }
+                      }
+                    },
+                    "filterData": {
+                      "id": "byRefId",
+                      "options": "D"
+                    },
+                    "location": {
+                      "latitude": "energy_lat1",
+                      "longitude": "energy_lon1",
+                      "mode": "coords"
+                    },
+                    "name": "Factory",
+                    "opacity": 1,
+                    "tooltip": true,
+                    "type": "markers"
+                  }
+                ],
+                "tooltip": {
+                  "mode": "details"
+                },
+                "view": {
+                  "allLayers": true,
+                  "dashboardVariable": false,
+                  "id": "coords",
+                  "lat": 11.7866,
+                  "lon": 107.0265,
+                  "noRepeat": false,
+                  "shared": false,
+                  "zoom": 11.5
+                }
+              }
+            },
+            "version": "13.2.0"
+          }
+        }
+      }
+    },
+    "layout": {
+      "kind": "GridLayout",
+      "spec": {
+        "items": [
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-13"
+              },
+              "height": 5,
+              "width": 24,
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-7"
+              },
+              "height": 21,
+              "width": 24,
+              "x": 0,
+              "y": 5
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-14"
+              },
+              "height": 14,
+              "width": 24,
+              "x": 0,
+              "y": 26
+            }
+          }
+        ]
+      }
+    },
+    "links": [],
+    "liveNow": false,
+    "preferences": {
+      "layout": {
+        "kind": "GridLayout",
+        "spec": {
+          "items": []
+        }
+      }
+    },
+    "preload": false,
+    "tags": [],
+    "timeSettings": {
+      "autoRefresh": "1m",
+      "autoRefreshIntervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "fiscalYearStartMonth": 0,
+      "from": "now-7d",
+      "hideTimepicker": false,
+      "timezone": "browser",
+      "to": "now"
+    },
+    "title": "Bản Đồ",
+    "variables": [
+      {
+        "kind": "IntervalVariable",
+        "spec": {
+          "auto": false,
+          "auto_count": 30,
+          "auto_min": "10s",
+          "current": {
+            "text": "1d",
+            "value": "1d"
+          },
+          "hide": "dontHide",
+          "label": "Theo",
+          "name": "d_interval",
+          "options": [
+            {
+              "selected": true,
+              "text": "1d",
+              "value": "1d"
+            },
+            {
+              "selected": false,
+              "text": "1h",
+              "value": "1h"
+            }
+          ],
+          "query": "1d,1h",
+          "refresh": "onTimeRangeChanged",
+          "skipUrlSync": false
+        }
+      }
+    ]
+  }
+}
