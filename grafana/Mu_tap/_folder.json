@@ -1,0 +1,10 @@
+{
+  "kind": "Folder",
+  "apiVersion": "folder.grafana.app/v1",
+  "metadata": {
+    "name": "ag2dfxi7x2ww0c"
+  },
+  "spec": {
+    "title": "Mu_tap"
+  }
+}
