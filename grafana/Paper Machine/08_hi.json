@@ -1,0 +1,1161 @@
+{
+  "apiVersion": "dashboard.grafana.app/v2",
+  "kind": "Dashboard",
+  "metadata": {
+    "name": "dfg2crevg5p98gb"
+  },
+  "spec": {
+    "annotations": [
+      {
+        "kind": "AnnotationQuery",
+        "spec": {
+          "builtIn": true,
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations \u0026 Alerts",
+          "query": {
+            "datasource": {
+              "name": "-- Grafana --"
+            },
+            "group": "grafana",
+            "kind": "DataQuery",
+            "spec": {},
+            "version": "v0"
+          }
+        }
+      }
+    ],
+    "cursorSync": "Off",
+    "editable": true,
+    "elements": {
+      "panel-1": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "efcw7rq55jfuoe"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_machine",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "machine::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "shift::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "flow_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine::tag",
+                            "operator": "=",
+                            "value": "Lưu lượng hơi tổng"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 1,
+          "links": [],
+          "title": "Lưu lượng hơi tổng",
+          "vizConfig": {
+            "group": "timeseries",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "axisBorderShow": false,
+                    "axisCenteredZero": false,
+                    "axisColorMode": "text",
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "barWidthFactor": 0.6,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "insertNulls": false,
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 0,
+                    "scaleDistribution": {
+                      "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "showValues": false,
+                    "spanNulls": false,
+                    "stacking": {
+                      "group": "A",
+                      "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                      "mode": "off"
+                    }
+                  },
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "t/h"
+                },
+                "overrides": []
+              },
+              "options": {
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "single",
+                  "sort": "none"
+                }
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
+      },
+      "panel-2": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "efcw7rq55jfuoe"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_machine",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "machine::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "shift::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "pressure_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine::tag",
+                            "operator": "=",
+                            "value": "Áp suất hơi tổng"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 2,
+          "links": [],
+          "title": "Áp suất hơi tổng",
+          "vizConfig": {
+            "group": "timeseries",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "axisBorderShow": false,
+                    "axisCenteredZero": false,
+                    "axisColorMode": "text",
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "barWidthFactor": 0.6,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "insertNulls": false,
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 0,
+                    "scaleDistribution": {
+                      "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "showValues": false,
+                    "spanNulls": false,
+                    "stacking": {
+                      "group": "A",
+                      "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                      "mode": "off"
+                    }
+                  },
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "pressurekpa"
+                },
+                "overrides": []
+              },
+              "options": {
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "single",
+                  "sort": "none"
+                }
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
+      },
+      "panel-3": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": true,
+                    "query": {
+                      "datasource": {
+                        "name": "efcw7rq55jfuoe"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_machine",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "machine::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "query": "SELECT integral(\"flow_actual\",1h) FROM \"dongtien_realtime\" WHERE (\"machine\"::tag = 'Lưu lượng hơi tổng') AND $timeFilter GROUP BY time($d_interval), \"machine\"::tag fill(none)",
+                        "rawQuery": true,
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "flow_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "integral"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine::tag",
+                            "operator": "=",
+                            "value": "Lưu lượng hơi tổng"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "efcw7rq55jfuoe"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_shift",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "machine::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "query": "SELECT sum(\"flow_actual\") / 60 AS \"water\"\nFROM \"dongtien_realtime\"\nWHERE\n    \"machine\"::tag = 'Lưu lượng hơi tổng'\n    AND $timeFilter\nGROUP BY time($d_interval), \"shift\"::tag\nfill(none)",
+                        "rawQuery": true,
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "flow_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "integral"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine::tag",
+                            "operator": "=",
+                            "value": "Lưu lượng hơi tổng"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "B"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 3,
+          "links": [],
+          "title": "Lưu lượng hơi tổng",
+          "vizConfig": {
+            "group": "timeseries",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "axisBorderShow": false,
+                    "axisCenteredZero": false,
+                    "axisColorMode": "text",
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 1,
+                    "barWidthFactor": 0.6,
+                    "drawStyle": "bars",
+                    "fillOpacity": 100,
+                    "gradientMode": "opacity",
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "insertNulls": false,
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 0,
+                    "scaleDistribution": {
+                      "type": "linear"
+                    },
+                    "showPoints": "always",
+                    "showValues": false,
+                    "spanNulls": false,
+                    "stacking": {
+                      "group": "A",
+                      "mode": "normal"
+                    },
+                    "thresholdsStyle": {
+                      "mode": "off"
+                    }
+                  },
+                  "min": 0,
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "masst"
+                },
+                "overrides": []
+              },
+              "options": {
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "multi",
+                  "sort": "none"
+                }
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
+      },
+      "panel-4": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "efcw7rq55jfuoe"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_machine",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "machine::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "query": "SELECT integral(\"flow_actual\",1h) FROM \"dongtien_realtime\" WHERE (\"machine\"::tag = 'Lưu lượng hơi tổng') AND $timeFilter GROUP BY time($d_interval), \"machine\"::tag fill(none)",
+                        "rawQuery": true,
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "flow_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "integral"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine::tag",
+                            "operator": "=",
+                            "value": "Lưu lượng hơi tổng"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": true,
+                    "query": {
+                      "datasource": {
+                        "name": "efcw7rq55jfuoe"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_shift",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "machine::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "query": "SELECT sum(\"flow_actual\") / 60 AS \"water\"\nFROM \"dongtien_realtime\"\nWHERE\n    \"machine\"::tag = 'Lưu lượng hơi tổng'\n    AND $timeFilter\nGROUP BY time($d_interval), \"shift\"::tag\nfill(none)",
+                        "rawQuery": true,
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "flow_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "integral"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine::tag",
+                            "operator": "=",
+                            "value": "Lưu lượng hơi tổng"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "B"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 4,
+          "links": [],
+          "title": "Lưu lượng hơi tổng",
+          "vizConfig": {
+            "group": "stat",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "min": 0,
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "dark-green",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  "unit": "masst"
+                },
+                "overrides": []
+              },
+              "options": {
+                "colorMode": "background",
+                "graphMode": "none",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "percentChangeColorMode": "standard",
+                "reduceOptions": {
+                  "calcs": [
+                    "lastNotNull"
+                  ],
+                  "fields": "",
+                  "values": false
+                },
+                "showPercentChange": false,
+                "textMode": "value_and_name",
+                "wideLayout": true
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
+      },
+      "panel-5": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "efcw7rq55jfuoe"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_machine",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "machine::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "query": "SELECT integral(\"flow_actual\",1h) FROM \"dongtien_realtime\" WHERE (\"machine\"::tag = 'Lưu lượng hơi tổng') AND $timeFilter GROUP BY time($d_interval), \"machine\"::tag fill(none)",
+                        "rawQuery": true,
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "flow_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "integral"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine::tag",
+                            "operator": "=",
+                            "value": "Lưu lượng hơi tổng"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": true,
+                    "query": {
+                      "datasource": {
+                        "name": "efcw7rq55jfuoe"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_shift",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "machine::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "query": "SELECT sum(\"flow_actual\") / 60 AS \"water\"\nFROM \"dongtien_realtime\"\nWHERE\n    \"machine\"::tag = 'Lưu lượng hơi tổng'\n    AND $timeFilter\nGROUP BY time($d_interval), \"shift\"::tag\nfill(none)",
+                        "rawQuery": true,
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "flow_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "integral"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine::tag",
+                            "operator": "=",
+                            "value": "Lưu lượng hơi tổng"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "B"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 5,
+          "links": [],
+          "title": "Lưu lượng hơi tổng",
+          "vizConfig": {
+            "group": "timeseries",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "axisBorderShow": false,
+                    "axisCenteredZero": false,
+                    "axisColorMode": "text",
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 1,
+                    "barWidthFactor": 0.6,
+                    "drawStyle": "bars",
+                    "fillOpacity": 100,
+                    "gradientMode": "opacity",
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "insertNulls": false,
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 0,
+                    "scaleDistribution": {
+                      "type": "linear"
+                    },
+                    "showPoints": "always",
+                    "showValues": false,
+                    "spanNulls": false,
+                    "stacking": {
+                      "group": "A",
+                      "mode": "normal"
+                    },
+                    "thresholdsStyle": {
+                      "mode": "off"
+                    }
+                  },
+                  "min": 0,
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "masst"
+                },
+                "overrides": []
+              },
+              "options": {
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "multi",
+                  "sort": "none"
+                }
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
+      }
+    },
+    "layout": {
+      "kind": "GridLayout",
+      "spec": {
+        "items": [
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-4"
+              },
+              "height": 9,
+              "width": 5,
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-5"
+              },
+              "height": 9,
+              "width": 19,
+              "x": 5,
+              "y": 0
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-3"
+              },
+              "height": 8,
+              "width": 24,
+              "x": 0,
+              "y": 9
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-1"
+              },
+              "height": 8,
+              "width": 12,
+              "x": 0,
+              "y": 17
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-2"
+              },
+              "height": 8,
+              "width": 12,
+              "x": 12,
+              "y": 17
+            }
+          }
+        ]
+      }
+    },
+    "links": [
+      {
+        "asDropdown": true,
+        "icon": "external link",
+        "includeVars": false,
+        "keepTime": true,
+        "tags": [
+          "Hệ Bột"
+        ],
+        "targetBlank": false,
+        "title": "Hệ Bột",
+        "tooltip": "",
+        "type": "dashboards",
+        "url": ""
+      },
+      {
+        "asDropdown": true,
+        "icon": "external link",
+        "includeVars": false,
+        "keepTime": true,
+        "tags": [
+          "Hệ Xeo"
+        ],
+        "targetBlank": false,
+        "title": "Hệ Xeo",
+        "tooltip": "",
+        "type": "dashboards",
+        "url": ""
+      }
+    ],
+    "liveNow": false,
+    "preload": false,
+    "tags": [
+      "Hệ Xeo"
+    ],
+    "timeSettings": {
+      "autoRefresh": "1m",
+      "autoRefreshIntervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "fiscalYearStartMonth": 0,
+      "from": "now-30d/d+7h",
+      "hideTimepicker": false,
+      "timezone": "Asia/Ho_Chi_Minh",
+      "to": "now/d+7h+1s"
+    },
+    "title": "08_Hơi",
+    "variables": [
+      {
+        "kind": "IntervalVariable",
+        "spec": {
+          "auto": false,
+          "auto_count": 30,
+          "auto_min": "10s",
+          "current": {
+            "text": "1d",
+            "value": "1d"
+          },
+          "hide": "dontHide",
+          "label": "d_interval",
+          "name": "d_interval",
+          "options": [
+            {
+              "selected": true,
+              "text": "1d",
+              "value": "1d"
+            },
+            {
+              "selected": false,
+              "text": "1h",
+              "value": "1h"
+            }
+          ],
+          "query": "1d,1h",
+          "refresh": "onTimeRangeChanged",
+          "skipUrlSync": false
+        }
+      }
+    ]
+  }
+}
