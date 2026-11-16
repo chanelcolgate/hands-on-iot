@@ -42,7 +42,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -172,7 +172,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -241,7 +241,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -366,7 +366,7 @@
                 "wideLayout": true
               }
             },
-            "version": "12.3.1"
+            "version": "13.2.1"
           }
         }
       },
@@ -383,7 +383,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -545,7 +545,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -695,26 +695,196 @@
           }
         }
       },
-      "panel-16": {
-        "kind": "LibraryPanel",
+      "panel-18": {
+        "kind": "Panel",
         "spec": {
-          "id": 16,
-          "libraryPanel": {
-            "name": "Điện năng tiêu thụ (kWh) State",
-            "uid": "aftygxp6qjh8gb"
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bg4h1q5l5clc0b"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_machine",
+                        "query": "SELECT SUM(\"hourly_consumption\") AS \"energy_consumption\"\nFROM (\n    SELECT NON_NEGATIVE_DERIVATIVE(LAST(\"value\"), 1h) AS \"hourly_consumption\"\n    FROM \"electric_measurement\"\n    WHERE (\n        \"machine\"::tag =~ /^$machine$/\n        AND \"name\"::tag = 'Total Import Active Energy'\n    )\n    AND $timeFilter\n    GROUP BY time(1h), \"name\"::tag, \"machine\"::tag, \"shift\"::tag fill(none)\n)\nWHERE $timeFilter\nGROUP BY time($d_interval), \"name\"::tag, \"machine\"::tag",
+                        "rawQuery": true,
+                        "resultFormat": "time_series"
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
           },
-          "title": "Điện năng tiêu thụ (kWh)"
+          "description": "",
+          "id": 18,
+          "links": [],
+          "title": "Điện năng tiêu thụ (kWh)",
+          "transparent": true,
+          "vizConfig": {
+            "group": "stat",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "decimals": 2,
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "dark-green",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  "unit": "kwatth"
+                },
+                "overrides": []
+              },
+              "options": {
+                "colorMode": "background",
+                "graphMode": "none",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "percentChangeColorMode": "standard",
+                "reduceOptions": {
+                  "calcs": [
+                    "lastNotNull"
+                  ],
+                  "fields": "",
+                  "values": false
+                },
+                "showPercentChange": false,
+                "textMode": "value_and_name",
+                "wideLayout": true
+              }
+            },
+            "version": "13.2.1"
+          }
         }
       },
-      "panel-17": {
-        "kind": "LibraryPanel",
+      "panel-19": {
+        "kind": "Panel",
         "spec": {
-          "id": 17,
-          "libraryPanel": {
-            "name": "Điện năng tiêu thụ (kWh)",
-            "uid": "dftyguwd82txcf"
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bg4h1q5l5clc0b"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_machine $tag_shift",
+                        "query": "SELECT SUM(\"hourly_consumption\") AS \"energy_consumption\"\nFROM (\n    SELECT NON_NEGATIVE_DERIVATIVE(LAST(\"value\"), 1h) AS \"hourly_consumption\"\n    FROM \"electric_measurement\"\n    WHERE (\n        \"machine\"::tag =~ /^$machine$/\n        AND \"name\"::tag = 'Total Import Active Energy'\n    )\n    AND $timeFilter\n    GROUP BY time(1h), \"name\"::tag, \"machine\"::tag, \"shift\"::tag fill(none)\n)\nWHERE $timeFilter\nGROUP BY time($d_interval), \"name\"::tag, \"machine\"::tag, \"shift\"::tag",
+                        "rawQuery": true,
+                        "resultFormat": "time_series"
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
           },
-          "title": "Điện năng tiêu thụ (kWh)"
+          "description": "",
+          "id": 19,
+          "links": [],
+          "title": "Điện năng tiêu thụ (kWh)",
+          "transparent": true,
+          "vizConfig": {
+            "group": "barchart",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "axisBorderShow": false,
+                    "axisCenteredZero": false,
+                    "axisColorMode": "text",
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "fillOpacity": 80,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "lineWidth": 1,
+                    "scaleDistribution": {
+                      "type": "linear"
+                    },
+                    "thresholdsStyle": {
+                      "mode": "off"
+                    }
+                  },
+                  "decimals": 2,
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  "unit": "kwatth"
+                },
+                "overrides": []
+              },
+              "options": {
+                "barRadius": 0,
+                "barWidth": 0.97,
+                "fullHighlight": false,
+                "groupWidth": 0.7,
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "orientation": "auto",
+                "showValue": "auto",
+                "stacking": "none",
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "single",
+                  "sort": "none"
+                },
+                "xTickLabelRotation": 0,
+                "xTickLabelSpacing": 0
+              }
+            },
+            "version": "13.2.1"
+          }
         }
       },
       "panel-2": {
@@ -730,7 +900,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -844,7 +1014,7 @@
                 "wideLayout": true
               }
             },
-            "version": "12.3.1"
+            "version": "13.2.1"
           }
         }
       },
@@ -861,7 +1031,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -974,7 +1144,7 @@
                 "wideLayout": true
               }
             },
-            "version": "12.3.1"
+            "version": "13.2.1"
           }
         }
       },
@@ -991,7 +1161,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -1121,7 +1291,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -1234,7 +1404,7 @@
                 "wideLayout": true
               }
             },
-            "version": "12.3.1"
+            "version": "13.2.1"
           }
         }
       },
@@ -1251,7 +1421,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -1364,7 +1534,7 @@
                 "wideLayout": true
               }
             },
-            "version": "12.3.1"
+            "version": "13.2.1"
           }
         }
       }
@@ -1400,7 +1570,7 @@
                       "spec": {
                         "element": {
                           "kind": "ElementReference",
-                          "name": "panel-16"
+                          "name": "panel-18"
                         },
                         "height": 10,
                         "width": 4,
@@ -1413,7 +1583,7 @@
                       "spec": {
                         "element": {
                           "kind": "ElementReference",
-                          "name": "panel-17"
+                          "name": "panel-19"
                         },
                         "height": 10,
                         "width": 20,
@@ -1457,7 +1627,7 @@
           {
             "kind": "RowsLayoutRow",
             "spec": {
-              "collapse": true,
+              "collapse": false,
               "layout": {
                 "kind": "GridLayout",
                 "spec": {
@@ -1524,7 +1694,7 @@
           {
             "kind": "RowsLayoutRow",
             "spec": {
-              "collapse": true,
+              "collapse": false,
               "layout": {
                 "kind": "GridLayout",
                 "spec": {
@@ -1565,7 +1735,7 @@
                         "height": 4,
                         "width": 24,
                         "x": 0,
-                        "y": 12
+                        "y": 8
                       }
                     },
                     {
@@ -1578,7 +1748,7 @@
                         "height": 4,
                         "width": 24,
                         "x": 0,
-                        "y": 20
+                        "y": 12
                       }
                     }
                   ]
@@ -1664,7 +1834,7 @@
           "options": [],
           "query": {
             "datasource": {
-              "name": "efcw7rq55jfuoe"
+              "name": "bg4h1q5l5clc0b"
             },
             "group": "influxdb",
             "kind": "DataQuery",
