@@ -6,7 +6,7 @@ set -e
 DOCKER=/usr/bin/docker
 
 # Container ID hoặc tên
-CONTAINER="eca"
+CONTAINER="da2"
 
 echo "======================================"
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Restart Docker Container"
