@@ -713,7 +713,6 @@
                       "group": "influxdb",
                       "kind": "DataQuery",
                       "spec": {
-                        "alias": "$tag_machine",
                         "query": "SELECT SUM(\"hourly_consumption\") AS \"energy_consumption\"\nFROM (\n    SELECT NON_NEGATIVE_DERIVATIVE(LAST(\"value\"), 1h) AS \"hourly_consumption\"\n    FROM \"electric_measurement\"\n    WHERE (\n        \"machine\"::tag =~ /^$machine$/\n        AND \"name\"::tag = 'Total Import Active Energy'\n    )\n    AND $timeFilter\n    GROUP BY time(1h), \"name\"::tag, \"machine\"::tag, \"shift\"::tag fill(none)\n)\nWHERE $timeFilter\nGROUP BY time($d_interval), \"name\"::tag, \"machine\"::tag",
                         "rawQuery": true,
                         "resultFormat": "time_series"
@@ -731,8 +730,7 @@
           "description": "",
           "id": 17,
           "links": [],
-          "title": "Điện năng tiêu thụ (kWh)",
-          "transparent": true,
+          "title": "New panel",
           "vizConfig": {
             "group": "stat",
             "kind": "VizConfig",
@@ -742,23 +740,25 @@
                   "color": {
                     "mode": "thresholds"
                   },
-                  "decimals": 2,
                   "thresholds": {
                     "mode": "absolute",
                     "steps": [
                       {
-                        "color": "dark-green",
+                        "color": "green",
                         "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
                       }
                     ]
-                  },
-                  "unit": "kwatth"
+                  }
                 },
                 "overrides": []
               },
               "options": {
-                "colorMode": "background",
-                "graphMode": "none",
+                "colorMode": "value",
+                "graphMode": "area",
                 "justifyMode": "auto",
                 "orientation": "auto",
                 "percentChangeColorMode": "standard",
@@ -770,7 +770,7 @@
                   "values": false
                 },
                 "showPercentChange": false,
-                "textMode": "value_and_name",
+                "textMode": "auto",
                 "wideLayout": true
               }
             },
@@ -887,7 +887,7 @@
           }
         }
       },
-      "panel-17": {
+      "panel-19": {
         "kind": "Panel",
         "spec": {
           "data": {
@@ -905,6 +905,7 @@
                       "group": "influxdb",
                       "kind": "DataQuery",
                       "spec": {
+                        "alias": "$tag_machine",
                         "query": "SELECT SUM(\"hourly_consumption\") AS \"energy_consumption\"\nFROM (\n    SELECT NON_NEGATIVE_DERIVATIVE(LAST(\"value\"), 1h) AS \"hourly_consumption\"\n    FROM \"electric_measurement\"\n    WHERE (\n        \"machine\"::tag =~ /^$machine$/\n        AND \"name\"::tag = 'Total Import Active Energy'\n    )\n    AND $timeFilter\n    GROUP BY time(1h), \"name\"::tag, \"machine\"::tag, \"shift\"::tag fill(none)\n)\nWHERE $timeFilter\nGROUP BY time($d_interval), \"name\"::tag, \"machine\"::tag",
                         "rawQuery": true,
                         "resultFormat": "time_series"
@@ -920,9 +921,10 @@
             }
           },
           "description": "",
-          "id": 17,
+          "id": 19,
           "links": [],
-          "title": "New panel",
+          "title": "Điện năng tiêu thụ (kWh)",
+          "transparent": true,
           "vizConfig": {
             "group": "stat",
             "kind": "VizConfig",
@@ -932,25 +934,23 @@
                   "color": {
                     "mode": "thresholds"
                   },
+                  "decimals": 2,
                   "thresholds": {
                     "mode": "absolute",
                     "steps": [
                       {
-                        "color": "green",
+                        "color": "dark-green",
                         "value": 0
-                      },
-                      {
-                        "color": "red",
-                        "value": 80
                       }
                     ]
-                  }
+                  },
+                  "unit": "kwatth"
                 },
                 "overrides": []
               },
               "options": {
-                "colorMode": "value",
-                "graphMode": "area",
+                "colorMode": "background",
+                "graphMode": "none",
                 "justifyMode": "auto",
                 "orientation": "auto",
                 "percentChangeColorMode": "standard",
@@ -962,7 +962,7 @@
                   "values": false
                 },
                 "showPercentChange": false,
-                "textMode": "auto",
+                "textMode": "value_and_name",
                 "wideLayout": true
               }
             },
@@ -1094,6 +1094,89 @@
                   "valueSize": 32
                 },
                 "textMode": "auto",
+                "wideLayout": true
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
+      },
+      "panel-20": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bg4h1q5l5clc0b"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_machine",
+                        "query": "SELECT SUM(\"hourly_consumption\") AS \"energy_consumption\"\nFROM (\n    SELECT NON_NEGATIVE_DERIVATIVE(LAST(\"value\"), 1h) AS \"hourly_consumption\"\n    FROM \"electric_measurement\"\n    WHERE (\n        \"machine\"::tag =~ /^$machine$/\n        AND \"name\"::tag = 'Total Import Active Energy'\n    )\n    AND $timeFilter\n    GROUP BY time(1h), \"name\"::tag, \"machine\"::tag, \"shift\"::tag fill(none)\n)\nWHERE $timeFilter\nGROUP BY time($d_interval), \"name\"::tag, \"machine\"::tag",
+                        "rawQuery": true,
+                        "resultFormat": "time_series"
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 20,
+          "links": [],
+          "title": "Điện năng tiêu thụ (kWh)",
+          "transparent": true,
+          "vizConfig": {
+            "group": "stat",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "decimals": 2,
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "dark-green",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  "unit": "kwatth"
+                },
+                "overrides": []
+              },
+              "options": {
+                "colorMode": "background",
+                "graphMode": "none",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "percentChangeColorMode": "standard",
+                "reduceOptions": {
+                  "calcs": [
+                    "lastNotNull"
+                  ],
+                  "fields": "",
+                  "values": false
+                },
+                "showPercentChange": false,
+                "textMode": "value_and_name",
                 "wideLayout": true
               }
             },
@@ -1684,6 +1767,32 @@
                         "height": 8,
                         "width": 12,
                         "x": 0,
+                        "y": 19
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-19"
+                        },
+                        "height": 10,
+                        "width": 4,
+                        "x": 12,
+                        "y": 19
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-20"
+                        },
+                        "height": 10,
+                        "width": 4,
+                        "x": 16,
                         "y": 19
                       }
                     }
