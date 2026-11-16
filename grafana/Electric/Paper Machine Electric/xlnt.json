@@ -42,7 +42,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -172,7 +172,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -241,7 +241,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -383,7 +383,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -545,7 +545,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -708,7 +708,7 @@
                     "hidden": true,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -789,7 +789,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -958,7 +958,7 @@
                     "hidden": true,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -1039,7 +1039,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -1182,7 +1182,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -1313,7 +1313,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
