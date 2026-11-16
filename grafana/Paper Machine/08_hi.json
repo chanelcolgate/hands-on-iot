@@ -42,7 +42,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -205,7 +205,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -368,7 +368,7 @@
                     "hidden": true,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -433,7 +433,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -502,7 +502,7 @@
           "links": [],
           "title": "Lưu lượng hơi tổng",
           "vizConfig": {
-            "group": "timeseries",
+            "group": "barchart",
             "kind": "VizConfig",
             "spec": {
               "fieldConfig": {
@@ -516,29 +516,16 @@
                     "axisColorMode": "text",
                     "axisLabel": "",
                     "axisPlacement": "auto",
-                    "barAlignment": 1,
-                    "barWidthFactor": 0.6,
-                    "drawStyle": "bars",
-                    "fillOpacity": 100,
-                    "gradientMode": "opacity",
+                    "fillOpacity": 80,
+                    "gradientMode": "none",
                     "hideFrom": {
                       "legend": false,
                       "tooltip": false,
                       "viz": false
                     },
-                    "insertNulls": false,
-                    "lineInterpolation": "linear",
                     "lineWidth": 1,
-                    "pointSize": 0,
                     "scaleDistribution": {
                       "type": "linear"
-                    },
-                    "showPoints": "always",
-                    "showValues": false,
-                    "spanNulls": false,
-                    "stacking": {
-                      "group": "A",
-                      "mode": "normal"
                     },
                     "thresholdsStyle": {
                       "mode": "off"
@@ -563,17 +550,26 @@
                 "overrides": []
               },
               "options": {
+                "barRadius": 0,
+                "barWidth": 0.97,
+                "fullHighlight": false,
+                "groupWidth": 0.7,
                 "legend": {
                   "calcs": [],
                   "displayMode": "list",
                   "placement": "bottom",
                   "showLegend": true
                 },
+                "orientation": "auto",
+                "showValue": "auto",
+                "stacking": "none",
                 "tooltip": {
                   "hideZeros": false,
-                  "mode": "multi",
+                  "mode": "single",
                   "sort": "none"
-                }
+                },
+                "xTickLabelRotation": 0,
+                "xTickLabelSpacing": 0
               }
             },
             "version": "13.2.1"
@@ -593,7 +589,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -658,7 +654,7 @@
                     "hidden": true,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -784,7 +780,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -849,7 +845,7 @@
                     "hidden": true,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
