@@ -991,75 +991,953 @@
             "version": "13.2.1"
           }
         }
+      },
+      "panel-6": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bg4h1q5l5clc0b"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_device",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "device::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "temp_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "factory::tag",
+                            "operator": "=",
+                            "value": "Giấy Đồng Tiến Long An"
+                          },
+                          {
+                            "condition": "AND",
+                            "key": "system::tag",
+                            "operator": "=~",
+                            "value": "/^$system$/"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": true,
+                    "query": {
+                      "datasource": {
+                        "name": "bg4h1q5l5clc0b"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_device",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "device::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "pressure_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "factory::tag",
+                            "operator": "=",
+                            "value": "Giấy Đồng Tiến Long An"
+                          },
+                          {
+                            "condition": "AND",
+                            "key": "system::tag",
+                            "operator": "=~",
+                            "value": "/^$system$/"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "B"
+                  }
+                }
+              ],
+              "queryOptions": {
+                "interval": "1m"
+              },
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 6,
+          "links": [],
+          "title": "Nhiệt độ",
+          "vizConfig": {
+            "group": "stat",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  "unit": "celsius"
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Áp suất vào"
+                    },
+                    "properties": [
+                      {
+                        "id": "unit",
+                        "value": "pressurekpa"
+                      },
+                      {
+                        "id": "displayName",
+                        "value": "Áp suất lên bột"
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Lưu lượng"
+                    },
+                    "properties": [
+                      {
+                        "id": "displayName",
+                        "value": "Lưu lượng hồi lưu"
+                      },
+                      {
+                        "id": "unit",
+                        "value": "flowlpm"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "options": {
+                "colorMode": "background",
+                "graphMode": "none",
+                "justifyMode": "center",
+                "orientation": "auto",
+                "percentChangeColorMode": "standard",
+                "reduceOptions": {
+                  "calcs": [
+                    "lastNotNull"
+                  ],
+                  "fields": "",
+                  "values": false
+                },
+                "showPercentChange": false,
+                "text": {
+                  "percentSize": 1,
+                  "valueSize": 32
+                },
+                "textMode": "auto",
+                "wideLayout": true
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
+      },
+      "panel-7": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": true,
+                    "query": {
+                      "datasource": {
+                        "name": "bg4h1q5l5clc0b"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_device",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "device::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "temp_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "factory::tag",
+                            "operator": "=",
+                            "value": "Giấy Đồng Tiến Long An"
+                          },
+                          {
+                            "condition": "AND",
+                            "key": "system::tag",
+                            "operator": "=~",
+                            "value": "/^$system$/"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bg4h1q5l5clc0b"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_device",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "device::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "pressure_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "factory::tag",
+                            "operator": "=",
+                            "value": "Giấy Đồng Tiến Long An"
+                          },
+                          {
+                            "condition": "AND",
+                            "key": "system::tag",
+                            "operator": "=~",
+                            "value": "/^$system$/"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "B"
+                  }
+                }
+              ],
+              "queryOptions": {
+                "interval": "1m"
+              },
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 7,
+          "links": [],
+          "title": "Áp suất",
+          "vizConfig": {
+            "group": "stat",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  "unit": "pressurekpa"
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Áp suất vào"
+                    },
+                    "properties": [
+                      {
+                        "id": "unit",
+                        "value": "pressurekpa"
+                      },
+                      {
+                        "id": "displayName",
+                        "value": "Áp suất lên bột"
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Lưu lượng"
+                    },
+                    "properties": [
+                      {
+                        "id": "displayName",
+                        "value": "Lưu lượng hồi lưu"
+                      },
+                      {
+                        "id": "unit",
+                        "value": "flowlpm"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "options": {
+                "colorMode": "background",
+                "graphMode": "none",
+                "justifyMode": "center",
+                "orientation": "auto",
+                "percentChangeColorMode": "standard",
+                "reduceOptions": {
+                  "calcs": [
+                    "lastNotNull"
+                  ],
+                  "fields": "",
+                  "values": false
+                },
+                "showPercentChange": false,
+                "text": {
+                  "percentSize": 1,
+                  "valueSize": 32
+                },
+                "textMode": "auto",
+                "wideLayout": true
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
+      },
+      "panel-8": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bg4h1q5l5clc0b"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_device",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "device::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "temp_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "factory::tag",
+                            "operator": "=",
+                            "value": "Giấy Đồng Tiến Long An"
+                          },
+                          {
+                            "condition": "AND",
+                            "key": "system::tag",
+                            "operator": "=~",
+                            "value": "/^$system$/"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {
+                "interval": "1m"
+              },
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 8,
+          "links": [],
+          "title": "Nhiệt độ",
+          "vizConfig": {
+            "group": "timeseries",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "axisBorderShow": false,
+                    "axisCenteredZero": false,
+                    "axisColorMode": "text",
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "barWidthFactor": 0.6,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "insertNulls": false,
+                    "lineInterpolation": "smooth",
+                    "lineWidth": 2,
+                    "pointSize": 0,
+                    "scaleDistribution": {
+                      "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "showValues": false,
+                    "spanNulls": false,
+                    "stacking": {
+                      "group": "A",
+                      "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                      "mode": "off"
+                    }
+                  },
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "celsius"
+                },
+                "overrides": []
+              },
+              "options": {
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "multi",
+                  "sort": "none"
+                }
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
+      },
+      "panel-9": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bg4h1q5l5clc0b"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_device",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "device::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "pressure_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "factory::tag",
+                            "operator": "=",
+                            "value": "Giấy Đồng Tiến Long An"
+                          },
+                          {
+                            "condition": "AND",
+                            "key": "system::tag",
+                            "operator": "=~",
+                            "value": "/^$system$/"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {
+                "interval": "1m"
+              },
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 9,
+          "links": [],
+          "title": "Áp suất",
+          "vizConfig": {
+            "group": "timeseries",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "axisBorderShow": false,
+                    "axisCenteredZero": false,
+                    "axisColorMode": "text",
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "barWidthFactor": 0.6,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "insertNulls": false,
+                    "lineInterpolation": "smooth",
+                    "lineWidth": 2,
+                    "pointSize": 0,
+                    "scaleDistribution": {
+                      "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "showValues": false,
+                    "spanNulls": false,
+                    "stacking": {
+                      "group": "A",
+                      "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                      "mode": "off"
+                    }
+                  },
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "pressurekpa"
+                },
+                "overrides": []
+              },
+              "options": {
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "multi",
+                  "sort": "none"
+                }
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
       }
     },
     "layout": {
-      "kind": "GridLayout",
+      "kind": "RowsLayout",
       "spec": {
-        "items": [
+        "rows": [
           {
-            "kind": "GridLayoutItem",
+            "kind": "RowsLayoutRow",
             "spec": {
-              "element": {
-                "kind": "ElementReference",
-                "name": "panel-4"
+              "collapse": false,
+              "layout": {
+                "kind": "GridLayout",
+                "spec": {
+                  "items": [
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-4"
+                        },
+                        "height": 9,
+                        "width": 5,
+                        "x": 0,
+                        "y": 0
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-5"
+                        },
+                        "height": 9,
+                        "width": 19,
+                        "x": 5,
+                        "y": 0
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-3"
+                        },
+                        "height": 8,
+                        "width": 24,
+                        "x": 0,
+                        "y": 9
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-1"
+                        },
+                        "height": 8,
+                        "width": 12,
+                        "x": 0,
+                        "y": 17
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-2"
+                        },
+                        "height": 8,
+                        "width": 12,
+                        "x": 12,
+                        "y": 17
+                      }
+                    }
+                  ]
+                }
               },
-              "height": 9,
-              "width": 5,
-              "x": 0,
-              "y": 0
+              "title": "Hơi"
             }
           },
           {
-            "kind": "GridLayoutItem",
+            "kind": "RowsLayoutRow",
             "spec": {
-              "element": {
-                "kind": "ElementReference",
-                "name": "panel-5"
+              "collapse": false,
+              "layout": {
+                "kind": "GridLayout",
+                "spec": {
+                  "items": [
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-6"
+                        },
+                        "height": 5,
+                        "width": 12,
+                        "x": 0,
+                        "y": 0
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-7"
+                        },
+                        "height": 5,
+                        "width": 12,
+                        "x": 12,
+                        "y": 0
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-8"
+                        },
+                        "height": 10,
+                        "width": 12,
+                        "x": 0,
+                        "y": 5
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-9"
+                        },
+                        "height": 10,
+                        "width": 12,
+                        "x": 12,
+                        "y": 5
+                      }
+                    }
+                  ]
+                }
               },
-              "height": 9,
-              "width": 19,
-              "x": 5,
-              "y": 0
-            }
-          },
-          {
-            "kind": "GridLayoutItem",
-            "spec": {
-              "element": {
-                "kind": "ElementReference",
-                "name": "panel-3"
-              },
-              "height": 8,
-              "width": 24,
-              "x": 0,
-              "y": 9
-            }
-          },
-          {
-            "kind": "GridLayoutItem",
-            "spec": {
-              "element": {
-                "kind": "ElementReference",
-                "name": "panel-1"
-              },
-              "height": 8,
-              "width": 12,
-              "x": 0,
-              "y": 17
-            }
-          },
-          {
-            "kind": "GridLayoutItem",
-            "spec": {
-              "element": {
-                "kind": "ElementReference",
-                "name": "panel-2"
-              },
-              "height": 8,
-              "width": 12,
-              "x": 12,
-              "y": 17
+              "title": "Quạt sấy"
             }
           }
         ]
@@ -1120,7 +1998,7 @@
       "timezone": "Asia/Ho_Chi_Minh",
       "to": "now/d+7h+1s"
     },
-    "title": "08_Hơi",
+    "title": "08_Bộ Phận Sấy",
     "variables": [
       {
         "kind": "IntervalVariable",
