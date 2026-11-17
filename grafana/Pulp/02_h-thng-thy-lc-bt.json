@@ -185,162 +185,6 @@
           }
         }
       },
-      "panel-3": {
-        "kind": "Panel",
-        "spec": {
-          "data": {
-            "kind": "QueryGroup",
-            "spec": {
-              "queries": [
-                {
-                  "kind": "PanelQuery",
-                  "spec": {
-                    "hidden": false,
-                    "query": {
-                      "datasource": {
-                        "name": "bg4h1q5l5clc0b"
-                      },
-                      "group": "influxdb",
-                      "kind": "DataQuery",
-                      "spec": {
-                        "alias": "$tag_device",
-                        "groupBy": [
-                          {
-                            "params": [
-                              "$__interval"
-                            ],
-                            "type": "time"
-                          },
-                          {
-                            "params": [
-                              "device::tag"
-                            ],
-                            "type": "tag"
-                          },
-                          {
-                            "params": [
-                              "none"
-                            ],
-                            "type": "fill"
-                          }
-                        ],
-                        "measurement": "dongtien_realtime",
-                        "orderByTime": "ASC",
-                        "policy": "default",
-                        "resultFormat": "time_series",
-                        "select": [
-                          [
-                            {
-                              "params": [
-                                "value"
-                              ],
-                              "type": "field"
-                            },
-                            {
-                              "params": [],
-                              "type": "last"
-                            }
-                          ]
-                        ],
-                        "tags": [
-                          {
-                            "key": "device::tag",
-                            "operator": "=",
-                            "value": "Dòng điện nghiền thủy lực"
-                          }
-                        ]
-                      },
-                      "version": "v0"
-                    },
-                    "refId": "A"
-                  }
-                }
-              ],
-              "queryOptions": {},
-              "transformations": []
-            }
-          },
-          "description": "",
-          "id": 3,
-          "links": [],
-          "title": "Dòng điện nghiền thủy lực",
-          "transparent": true,
-          "vizConfig": {
-            "group": "timeseries",
-            "kind": "VizConfig",
-            "spec": {
-              "fieldConfig": {
-                "defaults": {
-                  "color": {
-                    "mode": "palette-classic"
-                  },
-                  "custom": {
-                    "axisBorderShow": false,
-                    "axisCenteredZero": false,
-                    "axisColorMode": "text",
-                    "axisLabel": "",
-                    "axisPlacement": "auto",
-                    "barAlignment": 0,
-                    "barWidthFactor": 0.6,
-                    "drawStyle": "line",
-                    "fillOpacity": 0,
-                    "gradientMode": "none",
-                    "hideFrom": {
-                      "legend": false,
-                      "tooltip": false,
-                      "viz": false
-                    },
-                    "insertNulls": false,
-                    "lineInterpolation": "linear",
-                    "lineWidth": 1,
-                    "pointSize": 5,
-                    "scaleDistribution": {
-                      "type": "linear"
-                    },
-                    "showPoints": "auto",
-                    "showValues": false,
-                    "spanNulls": false,
-                    "stacking": {
-                      "group": "A",
-                      "mode": "none"
-                    },
-                    "thresholdsStyle": {
-                      "mode": "off"
-                    }
-                  },
-                  "decimals": 2,
-                  "min": 0,
-                  "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "color": "green",
-                        "value": 0
-                      }
-                    ]
-                  },
-                  "unit": "amp"
-                },
-                "overrides": []
-              },
-              "options": {
-                "legend": {
-                  "calcs": [],
-                  "displayMode": "list",
-                  "placement": "bottom",
-                  "showLegend": true
-                },
-                "tooltip": {
-                  "hideZeros": false,
-                  "mode": "multi",
-                  "sort": "none"
-                }
-              }
-            },
-            "version": "13.2.1"
-          }
-        }
-      },
       "panel-4": {
         "kind": "Panel",
         "spec": {
@@ -707,6 +551,174 @@
             "version": "13.2.1"
           }
         }
+      },
+      "panel-6": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bg4h1q5l5clc0b"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "$tag_name",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "name::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "electric_measurement",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "value"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "last"
+                            },
+                            {
+                              "params": [
+                                "* 1600"
+                              ],
+                              "type": "math"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine::tag",
+                            "operator": "=",
+                            "value": "T22 Thuy luc"
+                          },
+                          {
+                            "condition": "AND",
+                            "key": "name::tag",
+                            "operator": "=~",
+                            "value": "/.*Current.*/"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 6,
+          "links": [],
+          "title": "",
+          "transparent": true,
+          "vizConfig": {
+            "group": "timeseries",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "axisBorderShow": false,
+                    "axisCenteredZero": false,
+                    "axisColorMode": "text",
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "barWidthFactor": 0.6,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "insertNulls": false,
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 5,
+                    "scaleDistribution": {
+                      "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "showValues": false,
+                    "spanNulls": false,
+                    "stacking": {
+                      "group": "A",
+                      "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                      "mode": "off"
+                    }
+                  },
+                  "decimals": 2,
+                  "min": 0,
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  "unit": "amp"
+                },
+                "overrides": []
+              },
+              "options": {
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "multi",
+                  "sort": "none"
+                }
+              }
+            },
+            "version": "13.2.1"
+          }
+        }
       }
     },
     "layout": {
@@ -731,7 +743,7 @@
             "spec": {
               "element": {
                 "kind": "ElementReference",
-                "name": "panel-3"
+                "name": "panel-6"
               },
               "height": 8,
               "width": 12,
