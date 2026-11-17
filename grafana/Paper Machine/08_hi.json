@@ -1058,8 +1058,8 @@
                           {
                             "condition": "AND",
                             "key": "system::tag",
-                            "operator": "=~",
-                            "value": "/^$system$/"
+                            "operator": "=",
+                            "value": "Nhóm sấy"
                           }
                         ]
                       },
@@ -1361,8 +1361,8 @@
                           {
                             "condition": "AND",
                             "key": "system::tag",
-                            "operator": "=~",
-                            "value": "/^$system$/"
+                            "operator": "=",
+                            "value": "Nhóm sấy"
                           }
                         ]
                       },
@@ -1526,8 +1526,8 @@
                           {
                             "condition": "AND",
                             "key": "system::tag",
-                            "operator": "=~",
-                            "value": "/^$system$/"
+                            "operator": "=",
+                            "value": "Nhóm sấy"
                           }
                         ]
                       },
@@ -1691,8 +1691,8 @@
                           {
                             "condition": "AND",
                             "key": "system::tag",
-                            "operator": "=~",
-                            "value": "/^$system$/"
+                            "operator": "=",
+                            "value": "Nhóm sấy"
                           }
                         ]
                       },
