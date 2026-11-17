@@ -85,6 +85,7 @@
                             "type": "fill"
                           }
                         ],
+                        "limit": "1",
                         "measurement": "dongtien_realtime",
                         "orderByTime": "ASC",
                         "policy": "default",
@@ -99,7 +100,7 @@
                             },
                             {
                               "params": [],
-                              "type": "mean"
+                              "type": "last"
                             },
                             {
                               "params": [
@@ -202,8 +203,7 @@
                       "reduce": {
                         "include": [
                           "system",
-                          "machine",
-                          "device"
+                          "machine"
                         ],
                         "reducer": "allValues"
                       }
@@ -241,7 +241,9 @@
                         }
                       ],
                       "orderByMode": "manual",
-                      "renameByName": {}
+                      "renameByName": {
+                        "temp": "Nhiệt độ"
+                      }
                     }
                   }
                 },
@@ -543,13 +545,76 @@
                           },
                           {
                             "params": [
-                              "shift::tag"
+                              "machine::tag"
                             ],
                             "type": "tag"
                           },
                           {
                             "params": [
-                              "device::tag"
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "limit": "2",
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "table",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "conc"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "last"
+                            },
+                            {
+                              "params": [
+                                "Nồng độ"
+                              ],
+                              "type": "alias"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "factory::tag",
+                            "operator": "=",
+                            "value": "Giấy Đồng Tiến Long An"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bg4h1q5l5clc0b"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "groupBy": [
+                          {
+                            "params": [
+                              "1d"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "shift::tag"
                             ],
                             "type": "tag"
                           },
@@ -566,29 +631,12 @@
                             "type": "fill"
                           }
                         ],
+                        "limit": "2",
                         "measurement": "dongtien_realtime",
                         "orderByTime": "ASC",
                         "policy": "default",
                         "resultFormat": "table",
                         "select": [
-                          [
-                            {
-                              "params": [
-                                "conc"
-                              ],
-                              "type": "field"
-                            },
-                            {
-                              "params": [],
-                              "type": "mean"
-                            },
-                            {
-                              "params": [
-                                "Nồng độ"
-                              ],
-                              "type": "alias"
-                            }
-                          ],
                           [
                             {
                               "params": [
@@ -598,7 +646,7 @@
                             },
                             {
                               "params": [],
-                              "type": "mean"
+                              "type": "last"
                             },
                             {
                               "params": [
@@ -618,7 +666,7 @@
                       },
                       "version": "v0"
                     },
-                    "refId": "A"
+                    "refId": "B"
                   }
                 }
               ],
@@ -628,6 +676,7 @@
                   "group": "filterByValue",
                   "kind": "Transformation",
                   "spec": {
+                    "disabled": true,
                     "options": {
                       "filters": [
                         {
@@ -649,6 +698,7 @@
                   "group": "organize",
                   "kind": "Transformation",
                   "spec": {
+                    "disabled": true,
                     "options": {
                       "excludeByName": {},
                       "includeByName": {},
@@ -673,9 +723,8 @@
                       "mode": "reduceRow",
                       "reduce": {
                         "include": [
-                          "system",
                           "machine",
-                          "device"
+                          "shift"
                         ],
                         "reducer": "allValues"
                       }
@@ -690,9 +739,10 @@
                       "excludeByName": {
                         "Time": true,
                         "device": true,
+                        "last": true,
                         "machine": true,
                         "metric": false,
-                        "shift": false,
+                        "shift": true,
                         "system": true
                       },
                       "includeByName": {},
@@ -713,7 +763,9 @@
                         }
                       ],
                       "orderByMode": "manual",
-                      "renameByName": {}
+                      "renameByName": {
+                        "shift": "shift 1"
+                      }
                     }
                   }
                 },
@@ -730,7 +782,6 @@
                   "group": "organize",
                   "kind": "Transformation",
                   "spec": {
-                    "disabled": true,
                     "options": {
                       "excludeByName": {
                         "1": false,
@@ -817,12 +868,8 @@
                       },
                       "includeByName": {},
                       "indexByName": {
-                        "1": 4,
-                        "2": 5,
-                        "3": 6,
-                        "4": 1,
-                        "5": 2,
-                        "6": 3,
+                        "1": 2,
+                        "2": 1,
                         "Field": 0
                       },
                       "renameByName": {}
@@ -1094,8 +1141,7 @@
                       "reduce": {
                         "include": [
                           "system",
-                          "machine",
-                          "device"
+                          "machine"
                         ],
                         "reducer": "allValues"
                       }
