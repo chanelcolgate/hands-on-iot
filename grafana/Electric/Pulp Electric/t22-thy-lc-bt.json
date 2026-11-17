@@ -42,7 +42,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -155,7 +155,7 @@
                 "wideLayout": true
               }
             },
-            "version": "12.3.1"
+            "version": "13.2.1"
           }
         }
       },
@@ -172,7 +172,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -241,7 +241,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -366,7 +366,7 @@
                 "wideLayout": true
               }
             },
-            "version": "12.3.1"
+            "version": "13.2.1"
           }
         }
       },
@@ -383,7 +383,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -551,7 +551,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -697,7 +697,7 @@
                 }
               }
             },
-            "version": "12.3.1"
+            "version": "13.2.1"
           }
         }
       },
@@ -714,7 +714,7 @@
                     "hidden": true,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -795,7 +795,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -938,7 +938,7 @@
                     "hidden": true,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -1019,7 +1019,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -1188,7 +1188,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -1325,7 +1325,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -1444,7 +1444,7 @@
                 "wideLayout": true
               }
             },
-            "version": "12.3.1"
+            "version": "13.2.1"
           }
         }
       },
@@ -1461,7 +1461,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -1597,7 +1597,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -1716,7 +1716,7 @@
                 "wideLayout": true
               }
             },
-            "version": "12.3.1"
+            "version": "13.2.1"
           }
         }
       },
@@ -1733,7 +1733,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efcw7rq55jfuoe"
+                        "name": "bg4h1q5l5clc0b"
                       },
                       "group": "influxdb",
                       "kind": "DataQuery",
@@ -1852,7 +1852,7 @@
                 "wideLayout": true
               }
             },
-            "version": "12.3.1"
+            "version": "13.2.1"
           }
         }
       }
@@ -1972,7 +1972,7 @@
           {
             "kind": "RowsLayoutRow",
             "spec": {
-              "collapse": true,
+              "collapse": false,
               "layout": {
                 "kind": "GridLayout",
                 "spec": {
@@ -2012,7 +2012,7 @@
           {
             "kind": "RowsLayoutRow",
             "spec": {
-              "collapse": true,
+              "collapse": false,
               "layout": {
                 "kind": "GridLayout",
                 "spec": {
