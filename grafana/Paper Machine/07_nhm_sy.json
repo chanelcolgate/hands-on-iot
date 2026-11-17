@@ -942,7 +942,7 @@
       "timezone": "browser",
       "to": "now/d+7h+1s"
     },
-    "title": "07_Nhóm_Sấy",
+    "title": "07_Bộ Phận Sấy",
     "variables": [
       {
         "kind": "QueryVariable",
