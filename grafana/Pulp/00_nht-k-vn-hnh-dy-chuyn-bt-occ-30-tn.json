@@ -991,7 +991,7 @@
                             },
                             {
                               "params": [],
-                              "type": "mean"
+                              "type": "last"
                             },
                             {
                               "params": [
@@ -1246,7 +1246,16 @@
                         "8": 8,
                         "Field": 0
                       },
-                      "renameByName": {}
+                      "renameByName": {
+                        "1": "QIC 61F05P1Q1 ca 1",
+                        "2": "QIC 61F05P1Q1 ca 2",
+                        "3": "QIC 63B06P1Q1 ca 1",
+                        "4": "QIC 63B06P1Q1 ca 2",
+                        "5": "QIC 61D03P1Q1 ca 1",
+                        "6": "QIC 61D03P1Q1 ca 2",
+                        "7": "QIC 61B04P1Q1 ca 1",
+                        "8": "QIC 61B04P1Q1 ca 2"
+                      }
                     }
                   }
                 }
