@@ -633,7 +633,7 @@
           }
         }
       },
-      "panel-6": {
+      "panel-7": {
         "kind": "Panel",
         "spec": {
           "data": {
@@ -651,7 +651,7 @@
                       "group": "influxdb",
                       "kind": "DataQuery",
                       "spec": {
-                        "alias": "$tag_name",
+                        "alias": "$tag_device",
                         "groupBy": [
                           {
                             "params": [
@@ -661,7 +661,7 @@
                           },
                           {
                             "params": [
-                              "name::tag"
+                              "device::tag"
                             ],
                             "type": "tag"
                           },
@@ -672,7 +672,7 @@
                             "type": "fill"
                           }
                         ],
-                        "measurement": "electric_measurement",
+                        "measurement": "dongtien_realtime",
                         "orderByTime": "ASC",
                         "policy": "default",
                         "resultFormat": "time_series",
@@ -690,7 +690,7 @@
                             },
                             {
                               "params": [
-                                "* 1600"
+                                "* 7.5"
                               ],
                               "type": "math"
                             }
@@ -698,15 +698,9 @@
                         ],
                         "tags": [
                           {
-                            "key": "machine::tag",
+                            "key": "device::tag",
                             "operator": "=",
-                            "value": "T22 Thuy luc"
-                          },
-                          {
-                            "condition": "AND",
-                            "key": "name::tag",
-                            "operator": "=~",
-                            "value": "/.*Current.*/"
+                            "value": "Dòng điện nghiền thủy lực"
                           }
                         ]
                       },
@@ -721,9 +715,9 @@
             }
           },
           "description": "",
-          "id": 6,
+          "id": 7,
           "links": [],
-          "title": "",
+          "title": "Dòng điện nghiền thủy lực",
           "transparent": true,
           "vizConfig": {
             "group": "timeseries",
@@ -824,7 +818,7 @@
             "spec": {
               "element": {
                 "kind": "ElementReference",
-                "name": "panel-6"
+                "name": "panel-7"
               },
               "height": 8,
               "width": 12,
