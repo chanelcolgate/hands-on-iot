@@ -1574,6 +1574,8 @@
                         "measurement": "paper_daily_oee",
                         "orderByTime": "ASC",
                         "policy": "default",
+                        "query": "SELECT mean(\"OEE\") FROM \"paper_daily_oee\" WHERE $timeFilter GROUP BY time(1d,-7h) fill(none)",
+                        "rawQuery": true,
                         "resultFormat": "time_series",
                         "select": [
                           [
@@ -1653,26 +1655,52 @@
                 },
                 "overrides": [
                   {
-                    "__systemRef": "hideSeriesFrom",
                     "matcher": {
-                      "id": "byNames",
-                      "options": {
-                        "mode": "exclude",
-                        "names": [
-                          "OEE"
-                        ],
-                        "prefix": "All except:",
-                        "readOnly": true
-                      }
+                      "id": "byName",
+                      "options": "Performance",
+                      "scope": "series"
                     },
                     "properties": [
                       {
-                        "id": "custom.hideFrom",
-                        "value": {
-                          "legend": false,
-                          "tooltip": true,
-                          "viz": true
-                        }
+                        "id": "mappings",
+                        "value": [
+                          {
+                            "options": {
+                              "from": 100,
+                              "result": {
+                                "index": 0,
+                                "text": "100"
+                              },
+                              "to": 1000
+                            },
+                            "type": "range"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "OEE",
+                      "scope": "series"
+                    },
+                    "properties": [
+                      {
+                        "id": "mappings",
+                        "value": [
+                          {
+                            "options": {
+                              "from": 101,
+                              "result": {
+                                "index": 0,
+                                "text": "1"
+                              },
+                              "to": 1000000
+                            },
+                            "type": "range"
+                          }
+                        ]
                       }
                     ]
                   }
