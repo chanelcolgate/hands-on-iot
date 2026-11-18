@@ -433,12 +433,93 @@
                             "key": "device::tag",
                             "operator": "!=",
                             "value": "Nồng độ giấy đứt đến tháp chứa bột tạm thời"
+                          },
+                          {
+                            "condition": "AND",
+                            "key": "device::tag",
+                            "operator": "!=",
+                            "value": "Dòng điện nghiền thủy lực"
                           }
                         ]
                       },
                       "version": "v0"
                     },
                     "refId": "A"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bg4h1q5l5clc0b"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "    $tag_device",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "device::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "none"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "value"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "last"
+                            },
+                            {
+                              "params": [
+                                "* 7"
+                              ],
+                              "type": "math"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "system::tag",
+                            "operator": "=",
+                            "value": "Hệ thống thủy lực bột"
+                          },
+                          {
+                            "condition": "AND",
+                            "key": "device::tag",
+                            "operator": "=",
+                            "value": "Dòng điện nghiền thủy lực"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "B"
                   }
                 }
               ],
