@@ -977,7 +977,7 @@
       ],
       "fiscalYearStartMonth": 0,
       "from": "now/d",
-      "hideTimepicker": false,
+      "hideTimepicker": true,
       "timezone": "browser",
       "to": "now"
     },
