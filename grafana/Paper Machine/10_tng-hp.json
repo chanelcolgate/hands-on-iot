@@ -1361,7 +1361,58 @@
                   },
                   "unit": "masst"
                 },
-                "overrides": []
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byRegexp",
+                      "options": "/^*([ABC])$/",
+                      "scope": "series"
+                    },
+                    "properties": []
+                  },
+                  {
+                    "__systemRef": "hideSeriesFrom",
+                    "matcher": {
+                      "id": "byNames",
+                      "options": {
+                        "mode": "exclude",
+                        "names": [
+                          "Sản lượng theo kíp C",
+                          "Sản lượng theo kíp B",
+                          "Sản lượng theo kíp A",
+                          "Sản lượng ở đầu cuộn"
+                        ],
+                        "prefix": "All except:",
+                        "readOnly": true
+                      }
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.hideFrom",
+                        "value": {
+                          "legend": true,
+                          "tooltip": true,
+                          "viz": true
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Sản lượng ở đầu cuộn"
+                    },
+                    "properties": [
+                      {
+                        "id": "color",
+                        "value": {
+                          "fixedColor": "semi-dark-red",
+                          "mode": "fixed"
+                        }
+                      }
+                    ]
+                  }
+                ]
               },
               "options": {
                 "legend": {
@@ -4089,7 +4140,34 @@
                   },
                   "unit": "cuộn"
                 },
-                "overrides": []
+                "overrides": [
+                  {
+                    "__systemRef": "hideSeriesFrom",
+                    "matcher": {
+                      "id": "byNames",
+                      "options": {
+                        "mode": "exclude",
+                        "names": [
+                          "Tổn số cuộn cắt theo kíp A",
+                          "Tổn số cuộn cắt theo kíp B",
+                          "Tổn số cuộn cắt theo kíp C"
+                        ],
+                        "prefix": "All except:",
+                        "readOnly": true
+                      }
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.hideFrom",
+                        "value": {
+                          "legend": true,
+                          "tooltip": true,
+                          "viz": true
+                        }
+                      }
+                    ]
+                  }
+                ]
               },
               "options": {
                 "legend": {
