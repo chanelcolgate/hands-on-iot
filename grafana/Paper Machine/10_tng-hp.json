@@ -1032,7 +1032,7 @@
                 {
                   "kind": "PanelQuery",
                   "spec": {
-                    "hidden": false,
+                    "hidden": true,
                     "query": {
                       "datasource": {
                         "name": "bg4h1q5l5clc0b"
@@ -1098,6 +1098,77 @@
                       "version": "v0"
                     },
                     "refId": "A"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bg4h1q5l5clc0b"
+                      },
+                      "group": "influxdb",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "alias": "Sản lượng thực tế",
+                        "groupBy": [
+                          {
+                            "params": [
+                              "$__interval"
+                            ],
+                            "type": "time"
+                          },
+                          {
+                            "params": [
+                              "shift::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "device::tag"
+                            ],
+                            "type": "tag"
+                          },
+                          {
+                            "params": [
+                              "null"
+                            ],
+                            "type": "fill"
+                          }
+                        ],
+                        "measurement": "dongtien_realtime",
+                        "orderByTime": "ASC",
+                        "policy": "default",
+                        "query": "SELECT sum(\"weight\")  / 1000 FROM \"cut_roll_production\" WHERE (\"crew\"::tag = 'A' OR \"crew\"::tag = 'B' OR \"crew\"::tag = 'C') AND $timeFilter GROUP BY time($d_interval,-7h) fill(none)",
+                        "rawQuery": true,
+                        "resultFormat": "time_series",
+                        "select": [
+                          [
+                            {
+                              "params": [
+                                "speed_actual"
+                              ],
+                              "type": "field"
+                            },
+                            {
+                              "params": [],
+                              "type": "mean"
+                            }
+                          ]
+                        ],
+                        "tags": [
+                          {
+                            "key": "machine::tag",
+                            "operator": "=",
+                            "value": "PM6"
+                          }
+                        ]
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "C"
                   }
                 }
               ],
