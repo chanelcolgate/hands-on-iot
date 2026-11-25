@@ -1225,7 +1225,25 @@
                             }
                           ]
                         ],
-                        "tags": []
+                        "tags": [
+                          {
+                            "key": "crew::tag",
+                            "operator": "=",
+                            "value": "A"
+                          },
+                          {
+                            "condition": "OR",
+                            "key": "crew::tag",
+                            "operator": "=",
+                            "value": "B"
+                          },
+                          {
+                            "condition": "OR",
+                            "key": "crew::tag",
+                            "operator": "=",
+                            "value": "C"
+                          }
+                        ]
                       },
                       "version": "v0"
                     },
@@ -1361,58 +1379,7 @@
                   },
                   "unit": "masst"
                 },
-                "overrides": [
-                  {
-                    "matcher": {
-                      "id": "byRegexp",
-                      "options": "/^*([ABC])$/",
-                      "scope": "series"
-                    },
-                    "properties": []
-                  },
-                  {
-                    "__systemRef": "hideSeriesFrom",
-                    "matcher": {
-                      "id": "byNames",
-                      "options": {
-                        "mode": "exclude",
-                        "names": [
-                          "Sản lượng theo kíp C",
-                          "Sản lượng theo kíp B",
-                          "Sản lượng theo kíp A",
-                          "Sản lượng ở đầu cuộn"
-                        ],
-                        "prefix": "All except:",
-                        "readOnly": true
-                      }
-                    },
-                    "properties": [
-                      {
-                        "id": "custom.hideFrom",
-                        "value": {
-                          "legend": true,
-                          "tooltip": true,
-                          "viz": true
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "matcher": {
-                      "id": "byName",
-                      "options": "Sản lượng ở đầu cuộn"
-                    },
-                    "properties": [
-                      {
-                        "id": "color",
-                        "value": {
-                          "fixedColor": "semi-dark-red",
-                          "mode": "fixed"
-                        }
-                      }
-                    ]
-                  }
-                ]
+                "overrides": []
               },
               "options": {
                 "legend": {
@@ -4004,7 +3971,25 @@
                             }
                           ]
                         ],
-                        "tags": []
+                        "tags": [
+                          {
+                            "key": "crew::tag",
+                            "operator": "=",
+                            "value": "A"
+                          },
+                          {
+                            "condition": "OR",
+                            "key": "crew::tag",
+                            "operator": "=",
+                            "value": "B"
+                          },
+                          {
+                            "condition": "OR",
+                            "key": "crew::tag",
+                            "operator": "=",
+                            "value": "C"
+                          }
+                        ]
                       },
                       "version": "v0"
                     },
@@ -4140,34 +4125,7 @@
                   },
                   "unit": "cuộn"
                 },
-                "overrides": [
-                  {
-                    "__systemRef": "hideSeriesFrom",
-                    "matcher": {
-                      "id": "byNames",
-                      "options": {
-                        "mode": "exclude",
-                        "names": [
-                          "Tổn số cuộn cắt theo kíp A",
-                          "Tổn số cuộn cắt theo kíp B",
-                          "Tổn số cuộn cắt theo kíp C"
-                        ],
-                        "prefix": "All except:",
-                        "readOnly": true
-                      }
-                    },
-                    "properties": [
-                      {
-                        "id": "custom.hideFrom",
-                        "value": {
-                          "legend": true,
-                          "tooltip": true,
-                          "viz": true
-                        }
-                      }
-                    ]
-                  }
-                ]
+                "overrides": []
               },
               "options": {
                 "legend": {
